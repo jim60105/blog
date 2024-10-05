@@ -1,0 +1,18 @@
+@import "../themes/duckquill/sass/style.scss";
+@import "../themes/duckquill/sass/_variables.scss";
+
+@include theme-variables using ($theme) {
+  @if $theme == "dark" {
+    --bg-overlay: linear-gradient(rgb(0 0 0 / 75%), rgb(0 0 0));
+  } @else {
+    --bg-overlay: linear-gradient(
+      rgba(255, 255, 255, 0.885),
+      rgb(255 255 255 / 87%)
+    );
+  }
+}
+
+body {
+  background: var(--bg-overlay),
+    center / cover no-repeat fixed url("/card.webp");
+}
