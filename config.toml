@@ -1,15 +1,15 @@
 # The URL the site will be built for
-base_url = "https://blog.blog.com"
+base_url = "https://blog2.maki0419.com"
 
 # The site title and description; used in feeds by default.
-title = ""
-description = ""
+title = "琳的備忘手札"
+description = "軟體工程師是一種懶惰的生物，\n我們是為了未來的懶惰而努力。"
 
 # The default language; used in feeds.
 default_language = "en"
 
 # The site theme to use.
-theme = ""
+theme = "duckquill"
 
 # For overriding the default output directory `public`, set it to another value (e.g.: "docs")
 output_dir = "public"
@@ -20,7 +20,7 @@ preserve_dotfiles_in_output = false
 
 # When set to "true", the Sass files in the `sass` directory in the site root are compiled.
 # Sass files in theme directories are always compiled.
-compile_sass = false
+compile_sass = true
 
 # When set to "true", the generated HTML files are minified.
 minify_html = false
@@ -38,7 +38,7 @@ ignored_content = []
 ignored_static = []
 
 # When set to "true", a feed is automatically generated.
-generate_feeds = false
+generate_feeds = true
 
 # The filenames to use for the feeds. Used as the template filenames, too.
 # Defaults to ["atom.xml"], which has a built-in template that renders an Atom 1.0 feed.
@@ -47,7 +47,7 @@ feed_filenames = ["atom.xml"]
 
 # The number of articles to include in the feed. All items are included if
 # this limit is not set (the default).
-# feed_limit = 20
+feed_limit = 20
 
 # When set to "true", files in the `static` directory are hard-linked. Useful for large
 # static files. Note that for this to work, both `static` and the
@@ -56,7 +56,7 @@ feed_filenames = ["atom.xml"]
 hard_link_static = false
 
 # The default author for pages
-author = ""
+author = "陳鈞"
 
 # The taxonomies to be rendered for the site and their configuration of the default languages
 # Example:
@@ -67,7 +67,10 @@ author = ""
 #       {name = "authors"}, # Basic definition: no feed or pagination
 #     ]
 #
-taxonomies = []
+taxonomies = [
+    { name = "tags", feed = false },
+    { name = "categories", paginate_by = 10 },
+]
 
 # When set to "true", a search index is built from the pages and section
 # content for `default_language`.
@@ -97,7 +100,7 @@ render_emoji = false
 
 # Whether external links are to be opened in a new tab
 # If this is true, a `rel="noopener"` will always automatically be added for security reasons
-external_links_target_blank = false
+external_links_target_blank = true
 
 # Whether to set rel="nofollow" for all external links
 external_links_no_follow = false
@@ -140,17 +143,17 @@ anchors = "on"
 # Whether to remove date prefixes for page path slugs.
 # For example, content/posts/2016-10-08_a-post-with-dates.md => posts/a-post-with-dates
 # When true, content/posts/2016-10-08_a-post-with-dates.md => posts/2016-10-08-a-post-with-dates
-paths_keep_dates = false
+paths_keep_dates = true
 
 [search]
 # Whether to include the title of the page/section in the index
 include_title = true
 # Whether to include the description of the page/section in the index
-include_description = false
+include_description = true
 # Whether to include the RFC3339 datetime of the page in the search index
-include_date = false
+include_date = true
 # Whether to include the path of the page/section in the index (the permalink is always included)
-include_path = false
+include_path = true
 # Whether to include the rendered content of the page/section in the index
 include_content = true
 # At which code point to truncate the content to. Useful if you have a lot of pages and the index would
@@ -196,3 +199,121 @@ index_format = "elasticlunr_javascript"
 # author value will be available using {{ config.extra.author }} in templates
 #
 [extra]
+# Which theme should be used by default (light/dark).
+#
+# default_theme = "dark"
+#
+# Sets theme and browser theme color.
+# See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
+accent_color = "navy"
+# Ditto but for the dark theme.
+# If not set regular variant will be used.
+accent_color_dark = "lightcyan"
+# Whether to fix low contrast in text selection, checkboxes, etc.
+# Use only if the default doesn't provide enough contrast, e.g. the accent color is set to yellow.
+#
+# fix_contrast = true
+#
+# Ditto but for the dark theme.
+fix_contrast_dark = true
+# Whether to use fonts bundled with Duckquill instead of system ones.
+# Keep in mind that it also changes the style of headings.
+#
+# bundled_fonts = true
+#
+# Use emoji as a favicon.
+# Only one emoji is being rendered, everything else is truncated.
+#
+emoji_favicon = "🦆🪶"
+#
+# URL to website's issue tracker
+issues_url = "https://github.com/jim60105/blog/issues"
+# URL to website's source code
+source_url = "https://github.com/jim60105/blog"
+# Additional CSS styles; expects them to be in the "./static/" directory.
+# If you are using Sass it will be generated there automatically.
+#
+# styles = [
+#   "YOUR_STYLE.css",
+#   "ALSO_YOUR_STYLE.css"
+# ]
+#
+# Additional JavaScript scripts; expects them to be in the "./static/" directory.
+#
+# scripts = [
+#   "YOUR_SCRIPT.js",
+#   "ALSO_YOUR_SCRIPT.js"
+# ]
+#
+# Whether to show "copy code" button on all code blocks
+# that have the language set.
+# See https://www.getzola.org/documentation/content/syntax-highlighting/
+show_copy_button = true
+# Whether to show estimated read time in posts.
+# Calculated using the simple math: number of words ÷ words per minute.
+show_read_time = true
+#
+# words_per_minute = 200
+#
+# Whether to show a share button in articles.
+# Uses https://shareopenly.org.
+show_share_button = true
+# Whether to enable the KaTeX library for rendering LaTeX.
+# Note: This will make your page significantly heavier.
+# Instead, consider enabling it per page/section.
+# katex = true
+# Display outlines around all elements for debugging purposes
+# debug_layout = true
+
+[extra.nav]
+# Whether to show the Atom/RSS feed button in the nav
+show_feed = true
+# Whether to show the manual theme switcher in the nav
+show_theme_switcher = true
+# Whether to show the link to the source repository in the nav
+show_repo = true
+# Links used in the nav.
+# For local files use same link format as in Markdown,
+# i.e. "@/blog/_index.md".
+# See https://www.getzola.org/documentation/content/linking/#internal-links
+links = []
+
+[extra.footer]
+# Links used in the footer.
+# Same as the nav ones.
+links = []
+# Social links in the footer.
+# Any URL-encoded SVG can be used as an icon.
+# https://simpleicons.org is the recommended source of SVG icons.
+# For URL encoding use https://yoksel.github.io/url-encoder/.
+# Make sure that "external quotes" are set to "double".
+socials = [
+    { url = "https://github.com/jim60105", name = "GitHub", icon = "%3Csvg role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EGitHub%3C/title%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E" },
+    { url = "https://liker.social/@jim60105", name = "Mastodon", icon = "%3Csvg role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EMastodon%3C/title%3E%3Cpath d='M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.01 20.282 20.282 0 0 1-4.709.545c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054c1.517.363 3.072.546 4.632.546.376 0 .75 0 1.125-.01 1.57-.044 3.224-.124 4.768-.422.038-.008.077-.015.11-.024 2.435-.464 4.753-1.92 4.989-5.604.008-.145.03-1.52.03-1.67.002-.512.167-3.63-.024-5.545zm-3.748 9.195h-2.561V8.29c0-1.309-.55-1.976-1.67-1.976-1.23 0-1.846.79-1.846 2.35v3.403h-2.546V8.663c0-1.56-.617-2.35-1.848-2.35-1.112 0-1.668.668-1.67 1.977v6.218H4.822V8.102c0-1.31.337-2.35 1.011-3.12.696-.77 1.608-1.164 2.74-1.164 1.311 0 2.302.5 2.962 1.498l.638 1.06.638-1.06c.66-.999 1.65-1.498 2.96-1.498 1.13 0 2.043.395 2.74 1.164.675.77 1.012 1.81 1.012 3.12z'/%3E%3C/svg%3E" },
+    { url = "https://twitter.com/jim60105", name = "Twitter", icon = "%3Csvg role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3ETwitter%3C/title%3E%3Cpath d='M21.543 7.104c.015.211.015.423.015.636 0 6.507-4.954 14.01-14.01 14.01v-.003A13.94 13.94 0 0 1 0 19.539a9.88 9.88 0 0 0 7.287-2.041 4.93 4.93 0 0 1-4.6-3.42 4.916 4.916 0 0 0 2.223-.084A4.926 4.926 0 0 1 .96 9.167v-.062a4.887 4.887 0 0 0 2.235.616A4.928 4.928 0 0 1 1.67 3.148 13.98 13.98 0 0 0 11.82 8.292a4.929 4.929 0 0 1 8.39-4.49 9.868 9.868 0 0 0 3.128-1.196 4.941 4.941 0 0 1-2.165 2.724A9.828 9.828 0 0 0 24 4.555a10.019 10.019 0 0 1-2.457 2.549z'/%3E%3C/svg%3E" },
+]
+# Whether to show "© Title, YEAR"
+show_copyright = true
+# Whether to show "Powered by Zola and Duckquill"
+show_powered_by = true
+# Whether to show link to website source
+show_source = false
+# Custom copyright text
+#
+copyright = "Copyright © by 琳(jim60105) Since 2010."
+
+# Based on https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/
+#
+# Mastodon-powered commenting.
+# Values can be overridden in the front-matter, e.g.
+# for multi-author blogs or guest posts.
+#
+# These variables are also used for Mastodon verification,
+# the needed rel="me" link is set in the head based on these.
+[extra.comments]
+# Your Mastodon API host; instance that you have an account on.
+host = "liker.social"
+# Your Mastodon username; used to determine who the original poster is.
+user = "jim60105"
+# Whether to show the QR code to Mastodon post
+show_qr = true
