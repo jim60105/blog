@@ -7,7 +7,7 @@ draft = true
 aliases = []
 
 [taxonomies]
-tags = []
+tags = ["Android"]
 +++
 [![](http://2.bp.blogspot.com/-fc-aG8Yu6qg/VESEHexr5oI/AAAAAAAAKM4/dGCi93BRrso/s640/Screenshot_2014-10-20-09-14-54.png)](https://www.blogger.com/#)   
  創作動機   

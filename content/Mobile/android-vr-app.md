@@ -7,7 +7,7 @@ draft = false
 aliases = ["/2018/08/android-vr-app.html"]
 
 [taxonomies]
-tags = []
+tags = ["Android"]
 +++
 [![](https://2.bp.blogspot.com/-HKr8ERobMEE/W4S9M1tmp5I/AAAAAAAAL1c/bq9G8Lr4Z0szOzOe0EGZpaDWNqNOpxdMACEwYBhgL/s640/1.png)](https://2.bp.blogspot.com/-HKr8ERobMEE/W4S9M1tmp5I/AAAAAAAAL1c/bq9G8Lr4Z0szOzOe0EGZpaDWNqNOpxdMACEwYBhgL/s1600/1.png)
 
