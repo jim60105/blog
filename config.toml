@@ -221,7 +221,7 @@ fix_contrast_dark = true
 # Use emoji as a favicon.
 # Only one emoji is being rendered, everything else is truncated.
 #
-emoji_favicon = "🦆🪶"
+emoji_favicon = "🚀"
 #
 # URL to website's issue tracker
 issues_url = "https://github.com/jim60105/blog/issues"
