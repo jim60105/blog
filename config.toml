@@ -67,10 +67,7 @@ author = "陳鈞"
 #       {name = "authors"}, # Basic definition: no feed or pagination
 #     ]
 #
-taxonomies = [
-    { name = "tags", feed = false },
-    { name = "categories", paginate_by = 10 },
-]
+taxonomies = [{ name = "tags", feed = false }]
 
 # When set to "true", a search index is built from the pages and section
 # content for `default_language`.
@@ -269,9 +266,9 @@ show_share_button = true
 # Whether to show the Atom/RSS feed button in the nav
 show_feed = true
 # Whether to show the manual theme switcher in the nav
-show_theme_switcher = true
+show_theme_switcher = false
 # Whether to show the link to the source repository in the nav
-show_repo = true
+show_repo = false
 # Links used in the nav.
 # For local files use same link format as in Markdown,
 # i.e. "@/blog/_index.md".
