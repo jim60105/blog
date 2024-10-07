@@ -22,7 +22,10 @@
         "esbenp.prettier-vscode",
         "eliostruyf.vscode-front-matter",
         "karunamurti.tera",
-        "doggy8088.markdown-extension-pack"
+        "doggy8088.markdown-extension-pack",
+        "GitHub.copilot",
+        "eamodio.gitlens",
+        "tamasfe.even-better-toml"
       ]
     }
   },
