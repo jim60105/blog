@@ -1,13 +1,16 @@
 +++
 title = "FB回復裡發圖片教學文"
-description = ""
+description = "FB回復裡發圖片教學文"
 date = 2013-12-07T19:04:00.003Z
 updated = 2018-08-08T08:09:18.118Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = []
+tags = [ ]
+
+[extra]
+banner = "http://1.bp.blogspot.com/-Iy84bqLF8j8/UqNnVe3t4UI/AAAAAAAAC-g/Eus88Ky1Gkc/s640/2013-12-08+00+39+04.png"
 +++
 被某社團裡的某人詢問FB的回覆怎麼發圖片  
 這篇教學文就這麼誕生了....  
@@ -44,9 +47,9 @@ tags = []
   
 這一部分又分成兩個方法  
 1.手機→電腦→FB   
- (要有電腦，一般我採用此方法)  
+(要有電腦，一般我採用此方法)  
 2.手機→imgur→FB  
- (不用電腦，但是比較麻煩)  
+(不用電腦，但是比較麻煩)  
   
 \--  
 1.手機→電腦→FB  

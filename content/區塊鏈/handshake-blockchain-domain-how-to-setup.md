@@ -1,20 +1,23 @@
 +++
 title = "Handshake domain 區塊鏈網域 —— 如何設定網域"
-description = ""
+description = "Handshake domain 區塊鏈網域 —— 如何設定網域"
 date = 2022-03-05T20:37:00.011Z
 updated = 2022-12-15T20:31:35.247Z
 draft = false
-aliases = ["/2022/03/handshake-blockchain-domain-how-to-setup.html"]
+aliases = [ "/2022/03/handshake-blockchain-domain-how-to-setup.html" ]
 
 [taxonomies]
-tags = ["區塊鏈"]
+tags = [ "區塊鏈" ]
+
+[extra]
+banner = "https://img.maki0419.com/blog/blockchain-domain/handshake/preview.png"
 +++
-[![](https://img.maki0419.com/blog/blockchain-domain/handshake/preview.png) ](https://img.maki0419.com/blog/blockchain-domain/handshake/preview.png) 
+[![](https://img.maki0419.com/blog/blockchain-domain/handshake/preview.png) ](https://img.maki0419.com/blog/blockchain-domain/handshake/preview.png)
 
 > 前篇  
-> [Handshake domain 區塊鏈網域 —— 如何訪問網域](/2022/01/handshake-blockchain-domain-how-to-access.html) 
+> [Handshake domain 區塊鏈網域 —— 如何訪問網域](/2022/01/handshake-blockchain-domain-how-to-access.html)
 
- 在前兩篇我們成功競標到了網域，也設定好了環境使可訪問Handshake domain，這篇我們要實際寫DNS位置到鏈上，讓網站上線，最後會提及一些Namebase的加值服務，值得一試。
+在前兩篇我們成功競標到了網域，也設定好了環境使可訪問Handshake domain，這篇我們要實際寫DNS位置到鏈上，讓網站上線，最後會提及一些Namebase的加值服務，值得一試。
 
 ## 事前準備
 
@@ -44,7 +47,7 @@ Github提供的網址為:` https://<你的username>.github.io/sample-html/ `，�
 * 開一台VPS  
 > 請參考本文建置主機，安裝Docker環境  
 > [琳的備忘手札: \[Docker\] Linux主機之Docker安裝和ReveseProxy建置](/2020/11/linux-docker-setup-revese-proxy.html)  
- 配置新主機請參考此設定  
+配置新主機請參考此設定  
 [點擊放大 ![](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/5.png)](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/5.png)
 * 安裝BIND
    * docker pull sameersbn/bind
@@ -65,7 +68,7 @@ Github提供的網址為:` https://<你的username>.github.io/sample-html/ `，�
 * 由左側的Domain Manager選擇目標domain，Add Records  
 [![](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/9.png) ](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/9.png)
 * 新增兩條記錄，NS記錄和GLUE4記錄  
- 注意勿遺漏在網域後面的那個點(.)  
+注意勿遺漏在網域後面的那個點(.)  
 | NS    | ns1.chenchun.                 |
 |-------|-------------------------------|
 | GLUE4 | ns1.chenchun. 178.128.XXX.XXX |
@@ -82,7 +85,7 @@ Github提供的網址為:` https://<你的username>.github.io/sample-html/ `，�
 > 你可以選擇「網域託管在Namebase，並使用Namebase的DNS」、  
 > 「網域託管在Namebase，並指向私人DNS」、  
 > 「網域轉出至Bob Wallet」等不同的配置
-> 
+>
 > 本章節將示範「網域託管在Namebase，並指向私人DNS」的配置模式
 
 * 來到[Dashboard → Domain Manager](https://www.namebase.io/manage/owned?page=1) → Manage  
@@ -94,7 +97,7 @@ Github提供的網址為:` https://<你的username>.github.io/sample-html/ `，�
 ## 在Name Server上添加網域和Record
 
 > 參考資料  
-> [Deploying a DNS Server using Docker - SAMEER NAIK](http://www.damagehead.com/blog/2015/04/28/deploying-a-dns-server-using-docker/) 
+> [Deploying a DNS Server using Docker - SAMEER NAIK](http://www.damagehead.com/blog/2015/04/28/deploying-a-dns-server-using-docker/)
 
 * 左側「Server」→「BIND DNS Server」→「Create master zone」  
 [![](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/bind%20%282%29.png) ](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/bind%20%282%29.png)
@@ -125,24 +128,24 @@ Github提供的網址為:` https://<你的username>.github.io/sample-html/ `，�
 ## 將網域設定至Github Pages
 
 > 設定Github Pages的詳細官方文件請見此  
-> [Managing a custom domain for your GitHub Pages site - GitHub Docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) 
+> [Managing a custom domain for your GitHub Pages site - GitHub Docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
 
- 來到剛才的「Settings」→「Pages」頁面，在「Custom Domain」填入網域名稱  
- 這會在Repo根目錄建立一個「CNAME」檔  
+來到剛才的「Settings」→「Pages」頁面，在「Custom Domain」填入網域名稱  
+這會在Repo根目錄建立一個「CNAME」檔  
 
-[![](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/15.png) ](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/15.png) 
+[![](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/15.png) ](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/15.png)
 
- 不用理會下方的設定失敗，Github不能解析Handshake domains
+不用理會下方的設定失敗，Github不能解析Handshake domains
 
-[![](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/16.png) ](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/16.png) 
+[![](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/16.png) ](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/16.png)
 
 ## 結語
 
-[![](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/17.png) ](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/17.png) 
+[![](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/17.png) ](https://img.maki0419.com/blog/blockchain-domain/handshake/setup/17.png)
 
- 至此，Handshake domain介紹告一段落。本系列文從原理、競標、訪問，至設定都介紹了一輪，也實際演示下標了兩個網域並實際上架了一個網站。希望各位對Handshake domain都有了大致的了解。
+至此，Handshake domain介紹告一段落。本系列文從原理、競標、訪問，至設定都介紹了一輪，也實際演示下標了兩個網域並實際上架了一個網站。希望各位對Handshake domain都有了大致的了解。
 
- 但是，區塊鏈可還沒介紹完！下篇將繼續介紹Unstoppable Domains和Ethereum Name Service
+但是，區塊鏈可還沒介紹完！下篇將繼續介紹Unstoppable Domains和Ethereum Name Service
 
 ## 附註: Namebase的其它加值服務
 

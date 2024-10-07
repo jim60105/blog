@@ -1,6 +1,6 @@
 +++
 title = "[Koikatsu Sunshine] コイカツ！サンシャイン 中文安裝指南"
-description = ""
+description = "[Koikatsu Sunshine] コイカツ！サンシャイン 中文安裝指南"
 date = 2021-10-30T17:57:00.044Z
 updated = 2023-07-17T09:12:26.838Z
 draft = false
@@ -8,6 +8,9 @@ aliases = ["/2021/08/koikatsu-sunshine-bep5-plugin-guide.html"]
 
 [taxonomies]
 tags = ["Koikatu"]
+
+[extra]
+banner = "https://img.maki0419.com/blog/preview/kks_main0827b.png"
 +++
 > ※注意※  
 > 圖片都是舊版的，請看個示意就好  
@@ -19,9 +22,9 @@ tags = ["Koikatu"]
 
 ## 序言
 
- 此篇文章旨在列出所有Koikatsu Sunshine的插件清單，將會定期更新  
- 現時點各插件作者都在做更新，此清單並不完整  
- 文章最後更新時間:2021/10/31 
+此篇文章旨在列出所有Koikatsu Sunshine的插件清單，將會定期更新  
+現時點各插件作者都在做更新，此清單並不完整  
+文章最後更新時間:2021/10/31
 
 安裝順序簡述如下:
 1. 安裝主程式
@@ -29,27 +32,27 @@ tags = ["Koikatu"]
 3. 安裝所有必裝外掛
 4. 安裝所需之其它外掛
 
- 官方DLC的模組基本上都沒有順序問題，設計上是分離檔案；程式部份可能會有覆寫狀況  
+官方DLC的模組基本上都沒有順序問題，設計上是分離檔案；程式部份可能會有覆寫狀況  
 目前來說，Sunshine各DLC在安裝順序上沒有區別
 
- 其它外掛我會盡量寫上前置依賴，除了列在必裝清單上的東西  
+其它外掛我會盡量寫上前置依賴，除了列在必裝清單上的東西  
 就是被太多東西依賴我才會列為必裝  
 我就不再贅述，反正都給我必裝上去
 
 ## 主程式+各式DLC介紹
 
 > 以下DLC都需要主程式才能遊玩
-> 
+>
 > 免費更新請在CharaStudio和VR之後覆蓋套用
 
 * 主程式+付費DLC: [DLsite](https://www.dlsite.com/pro/work/=/product%5Fid/VJ015725.html) (下載版、數位版)
 * 免費DLC:  
- 官網:(要日本IP)  
+官網:(要日本IP)  
 <http://www.illusion.jp/preview/koikatsu%5Fsunshine/download.php>  
 <http://www.illusion.jp/preview/koikatsu%5Fsunshine%5Fex/download.php>  
 <http://www.illusion.jp/preview/charastudio/index.php#download>  
 <http://www.illusion.jp/preview/koikatsu%5Fsunshine/download%5Fvr.php>  
- 分流: (免費更新: 2022/02/10；CharaStudio: 2021/09/21；VR: 2021/10/29)  
+分流: (免費更新: 2022/02/10；CharaStudio: 2021/09/21；VR: 2021/10/29)  
 <https://mega.nz/folder/98YkVTpa#6tzx99sDwQbcTw929uLG1w>  
 | [![](https://img.maki0419.com/blog/UNInhXC.jpg)](https://img.maki0419.com/blog/UNInhXC.jpg) |  
 | ------------------------------------------------------------------------------------------- |  
@@ -69,21 +72,21 @@ tags = ["Koikatu"]
 ## 必裝外掛介紹
 
 > 如果遇到安裝問題，請參考這篇  
-> [コイカツ! 插件安裝方式、問題判斷及排除指南](https://blog.maki0419.com/2019/07/koikatu.html) 
+> [コイカツ! 插件安裝方式、問題判斷及排除指南](https://blog.maki0419.com/2019/07/koikatu.html)
 
 * [BepInEx v5.4.15](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.15): 這是最基礎的外掛框架，有了它其他東西才會生效  
- 這裡下載BepInEx\_x64\_5.\*.zip回來，把所有東西解壓進遊戲根目錄  
- 然後在遊戲根目錄新增一個資料夾叫做 "mods"，裡面放後述的sideloader mod  
+這裡下載BepInEx\_x64\_5.\*.zip回來，把所有東西解壓進遊戲根目錄  
+然後在遊戲根目錄新增一個資料夾叫做 "mods"，裡面放後述的sideloader mod  
 [![image](https://img.maki0419.com/blog/2019-12-01%2016%2002%2032.png)](https://img.maki0419.com/blog/2019-12-01%2016%2002%2032.png)  
     
 [![image](https://img.maki0419.com/blog/38600782_2052356328117301_4461874492536258560_o.jpg)](https://img.maki0419.com/blog/38600782%5F2052356328117301%5F4461874492536258560%5Fo.jpg)
 * [BepisPlugins.r16.9](https://github.com/IllusionMods/BepisPlugins/releases/tag/r16.9): 搭配上面這個的基礎外掛包  
- 下載KKS\_BepisPlugins\_r\*.zip回來後整個解壓進遊戲根目錄，建議參考壓縮檔資料夾結構放置，依賴後面提到的[XUnity.AutoTranslator](#XUnity%5FAutoTranslator)  
+下載KKS\_BepisPlugins\_r\*.zip回來後整個解壓進遊戲根目錄，建議參考壓縮檔資料夾結構放置，依賴後面提到的[XUnity.AutoTranslator](#XUnity%5FAutoTranslator)  
 [![image](https://img.maki0419.com/blog/2019-11-03%2020%2019%2006.png)](https://img.maki0419.com/blog/2019-11-03%2020%2019%2006.png)
 * [BepInEx.MessageCenter v1.1.1](https://github.com/BepInEx/BepInEx.Utility/releases/tag/r7): 將重要度為「Message」的訊息顯示在遊戲畫面頂端  
- 將BepInEx.MessageCenter\_v\*.zip載回來以後解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置
+將BepInEx.MessageCenter\_v\*.zip載回來以後解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置
 * [BepInEx.ConfigurationManager v16.3](https://github.com/BepInEx/BepInEx.ConfigurationManager/releases/tag/v16.3): 遊戲內設定修改器  
- 將BepInEx.ConfigurationManager\_v\*.zip載回來以後解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置
+將BepInEx.ConfigurationManager\_v\*.zip載回來以後解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置
 * Sideloader modpack [^](#sideloader%5Fmodpack):~~由DeathWeasel整理~~ 改由ScrewThisNoise整理的sideload mod包  
 > KKManager中，「Sideloader Modpack」資料夾是Koikatu和Koikatsu Sunshine共用，其內容是相同的  
 > 可以由Koikatu將此資料夾拷貝過來(或mklink junction)後再使用KKManager做更新，以節省時間、減輕伺服器負載  
@@ -94,26 +97,26 @@ tags = ["Koikatu"]
     此站內容(作者說)會和KKManager同步，這裡適合用來尋找單一mod  
 > 建議先從GDrive下載全部，再由KKManager做更新  
 > 之後更新以KKManager為主  
- sideloader modpack裡所有mod都是sideloader mod(又稱zipmod)  
- 他可以是「.zipmod」或「.zip」格式，並可以被各種壓縮軟體打開  
- 如果這個壓縮檔裡包含了manifest.xml，那他就是一個zipmod，把他放到mods文件夾下，不要解開  
+sideloader modpack裡所有mod都是sideloader mod(又稱zipmod)  
+他可以是「.zipmod」或「.zip」格式，並可以被各種壓縮軟體打開  
+如果這個壓縮檔裡包含了manifest.xml，那他就是一個zipmod，把他放到mods文件夾下，不要解開  
 直接放置如圖左，可使用子資料夾  
 [![image](https://img.maki0419.com/blog/2019-01-06%2021%2006%2008.png)](https://img.maki0419.com/blog/2019-01-06%2021%2006%2008.png)
 * [KKSAPI v1.28](https://github.com/IllusionMods/IllusionModdingAPI/releases/tag/v1.28): 超級多插件的依賴，他是一個遊戲的API介面，方便其它插件的開發作業  
- 將KKSAPI.v\*.zip載回來以後解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置  
+將KKSAPI.v\*.zip載回來以後解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置  
 [![image](https://img.maki0419.com/blog/2019-11-03%2020%2025%2037.png)](https://img.maki0419.com/blog/2019-11-03%2020%2025%2037.png)
 * [XUnity.AutoTranslator 4.20.0](https://github.com/bbepis/XUnity.AutoTranslator/releases/tag/v4.20.0) [^](#XUnity%5FAutoTranslator) 機器翻譯  
 **就算不啟用也一定要安裝**，BepisPlugins/Sideloader對他有依賴  
- 下載XUnity. AutoTranslator\-BepIn-5x\-\*.zip，解壓縮丟進遊戲根目錄  
- 可依照以下步驟關閉機器翻譯:
+下載XUnity. AutoTranslator\-BepIn-5x\-\*.zip，解壓縮丟進遊戲根目錄  
+可依照以下步驟關閉機器翻譯:
    1. 啟動一次遊戲，讓插件產生ini設定檔案，進到主畫面後再關閉遊戲
    2. 用文字編輯器開啟「根目錄\\BepInEx\\config\\AutoTranslatorConfig.ini」
    3. 找到\[TextFrameworks\]段落，將其下的選項全部改成False  
    [![image](https://img.maki0419.com/blog/2019-11-03%2021%2035%2052.png)](https://img.maki0419.com/blog/2019-11-03%2021%2035%2052.png)
 * [MoreAccessories\_v2.0.19](https://github.com/jalil49/MoreAccessories/releases/tag/2.0.19) 增加無限多的裝飾品洞  
- 這是jalil49搬運並修改了Joan6694的插件所做出的新版本，它的目標是「翻修」並取代所有遊戲中舊的MoreAccessories  
- 它讓儲存架構變得更直覺，但也弄壞了不少東西，尤其是在和舊版本的兼容上  
- 但既然KKSAPI依賴於它，你別無選擇  
+這是jalil49搬運並修改了Joan6694的插件所做出的新版本，它的目標是「翻修」並取代所有遊戲中舊的MoreAccessories  
+它讓儲存架構變得更直覺，但也弄壞了不少東西，尤其是在和舊版本的兼容上  
+但既然KKSAPI依賴於它，你別無選擇  
 順便說一句，這違反Joan的License，請避免這麼做
 
 ## 其他外掛介紹
@@ -158,7 +161,7 @@ tags = ["Koikatu"]
    * [Coordinate Capture Pose Unlock v1.1.0](/2020/06/koikatu-coordinate-capture-pose-unlock.html)  
    解除拍照服裝存檔時的姿勢限制
 * ☆[KKS\_UncensorSelector v3.11.4](https://github.com/IllusionMods/KK%5FPlugins#uncensorselector)
- (立體步兵補丁)[^](#UncensorSelector): 騎兵有馬，步兵(ry)，和kPlug衝突 
+(立體步兵補丁)[^](#UncensorSelector): 騎兵有馬，步兵(ry)，和kPlug衝突
    * 安裝[Koikatsu Overlay Mods最新版本](https://github.com/ManlyMarco/Illusion-Overlay-Mods/releases/latest)
    * 下載KKS\_UncensorSelector，解壓縮後整個丟進遊戲根目錄下
    * 由[Sideloader Modpack](#sideloader%5Fmodpack)中，將「Sideloader Modpack - KK\_UncensorSelector」資料夾下載下來，丟進「根目錄\\mods\\」之下  
@@ -320,14 +323,14 @@ tags = ["Koikatu"]
 * [StudioCharaSort r3](https://github.com/Madevil/Port%5FStudioCharaSort/releases/tag/r3) 設定Studio中人物列表、服裝列表的預設排序
 * [AdvIKPlugin v1.6.5](https://github.com/OrangeSpork/AdvIKPlugin/releases/tag/1.6.5) 讓角色在Studio IK模式可以旋轉肩膀，做出更自然的動作
 * ☆[VN\_Game\_Engine(VNGE) v32](https://mega.nz/#F!oiB2wAQK!ojGIzlAN-1B-263uUDEalQ!Jm5xAIbA) VN引擎，用來做文字選項遊戲和寫Script，語言是Python。  
- 相關插件: 將相關插件檔案(應為\*.py和一些附加內容)放入VNGE的「Console\\Lib\\」目錄下  
+相關插件: 將相關插件檔案(應為\*.py和一些附加內容)放入VNGE的「Console\\Lib\\」目錄下  
    * Scene Save State ([使用教學](https://mega.nz/#F!U2wADQRD!7Qzfk4D3qoU%5FZ0P26cgLLg)) 在Scene裡儲存角色狀態，讓你****用同一個人物去改變動作、位置等，取代複數的同一人物，以減輕電腦負擔**。  
    * VNText 這是[Studio Text Plugin](/2019/06/koikatu-studio-text-plugin.html)的VN Port  
    * VNAnime 制作關鍵幀動畫  
    * VNScene 制作VN (Virtual Novel)  
    * Pose, Face, Status, Hands libraries 以標籤、群組分類保存Pose等等  
    * Body and Face sliders 可以在Studio中簡單的修改角色身型數值  
- \==以上內建在VNGE中==  
+\==以上內建在VNGE中==  
    * [Auto Chara Moments 4.5](https://mega.nz/folder/oiB2wAQK#ojGIzlAN-1B-263uUDEalQ/file/puoRUCYR) 自動為選擇的角色卡&複數場景卡拍攝截圖，使用安裝教學詳見內文  
    * [MMD Director v2.2.1](https://mega.nz/folder/NQhG3IjA#rwyaVwE0O1t3pJe5Fefv2Q) ([ZOD發布帖和說明、教學](https://zodgame.xyz/forum.php?mod=viewthread&tid=235560)) 定位為MMD製作工具，不僅是播放VMD動作，而且能夠編輯關鍵幀並協調場景內的其他道具  
    * [KoiFighter!! 1.5](https://mega.nz/folder/oiB2wAQK#ojGIzlAN-1B-263uUDEalQ/file/oyw01baD) 在Studio中玩格Game！詳見連結內影片
@@ -355,7 +358,7 @@ tags = ["Koikatu"]
 * [GetTapped v0.2.0](https://github.com/01010101lzy/gettapped/releases/tag/gettapped-v0.2.0) 對觸控螢幕操作的修正，作者說只有在HScene做過測試
 * [FixKPlug v0.1.0](https://gist.github.com/01010101lzy/ae07055ecea02427c4144220ce6c44f6) 作者原話:A dirty hack for those who still want to dip in the mess of kPlug but don't want it to load every single card AND RESOLVING EXTENDED DATA before Free H starts.
 * ☆[Expression\_Control\_v0.2.6](https://mega.nz/file/VsgiGDwb#bCCdHHlzuhQcF4kkvbrtfOMJAOTwATS0b91ign-bzbk) 按L快速調整角色表情  
- 此為來自upillusion0498的KKS移植版，原作者為[56e4\_xXVv](https://ux.getuploader.com/56e4%5FxXVv/download/93)
+此為來自upillusion0498的KKS移植版，原作者為[56e4\_xXVv](https://ux.getuploader.com/56e4%5FxXVv/download/93)
 * [KK\_DisableKinematicsOnChangeAnime 0.0.1](https://ux.getuploader.com/56e4%5FxXVv/download/95) 在Studio選擇Anime動作時，自動disable IK和FK，和FKIK同時使用可能造成不遇期操作
 * [KK\_HCtrl 0.1.1](https://ux.getuploader.com/56e4%5FxXVv/download/96) 自動H插件，解放你的雙手
 * ☆[KK\_NodesConstraints 1.2.1](https://www.patreon.com/posts/hs-kk-ai-hs2-1-2-40763065) 允許使用者將原本無法連結的物體連結在一起([詳細說明](https://www.patreon.com/posts/26326273))
@@ -406,10 +409,10 @@ H鍵開車，Y鍵開啟多鏡頭，(Shift/Ctrl)+Y切換(前/後)一組鏡頭，�
 
 ### 人權
 
-[![image](https://img.maki0419.com/blog/2021-08-31%2002%2051%2044.png)](https://img.maki0419.com/blog/2021-08-31%2002%2051%2044.png) 
+[![image](https://img.maki0419.com/blog/2021-08-31%2002%2051%2044.png)](https://img.maki0419.com/blog/2021-08-31%2002%2051%2044.png)
 
-[![image](https://img.maki0419.com/blog/2023-07-16%2019%2049%2046.png)](https://img.maki0419.com/blog/2023-07-16%2019%2049%2046.png) 
+[![image](https://img.maki0419.com/blog/2023-07-16%2019%2049%2046.png)](https://img.maki0419.com/blog/2023-07-16%2019%2049%2046.png)
 
-[![image](https://img.maki0419.com/blog/KKS.jpg)](https://img.maki0419.com/blog/KKS.jpg) 
+[![image](https://img.maki0419.com/blog/KKS.jpg)](https://img.maki0419.com/blog/KKS.jpg)
 
 iscn://likecoin-chain/rtxrL8i4xKTDgZw8blO709mJWa-KdzDxwEkVnG1xpIM

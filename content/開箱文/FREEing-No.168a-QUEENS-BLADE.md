@@ -1,15 +1,18 @@
 +++
 title = "FREEing No.168a QUEEN'S BLADE 女皇之刃 冥土誘惑者 艾莉 "
-description = ""
+description = "FREEing No.168a QUEEN'S BLADE 女皇之刃 冥土誘惑者 艾莉 "
 date = 2013-10-06T14:20:00.001Z
 updated = 2020-08-30T17:00:30.200Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = ["開箱文"]
+tags = [ "開箱文" ]
+
+[extra]
+banner = "http://4.bp.blogspot.com/-voW5ieyFnwo/UlFv5lFfUtI/AAAAAAAAAsU/bZWHIMlAgz4/s400/DSC_0020.jpg"
 +++
-## FREEing No.168a QUEEN'S BLADE 女皇之刃 冥土誘惑者 艾莉 
+## FREEing No.168a QUEEN'S BLADE 女皇之刃 冥土誘惑者 艾莉
   
   
 ｷｬ━━━━(ﾟ∀ﾟ)━━━━!!
@@ -38,7 +41,7 @@ tags = ["開箱文"]
   
 [![](http://2.bp.blogspot.com/-pUE_LOEW1cI/UlFv7aqf-OI/AAAAAAAAAtA/uGAcE1Fdzwk/s400/DSC_0025.jpg)](http://2.bp.blogspot.com/-pUE%5FLOEW1cI/UlFv7aqf-OI/AAAAAAAAAtA/uGAcE1Fdzwk/s1600/DSC%5F0025.jpg)
 
- ↑支撐架神難用
+↑支撐架神難用
 
 [![](http://2.bp.blogspot.com/-fYgWFlhks2M/UlFv5v8A1MI/AAAAAAAAAsc/Cy5DHSTf1xY/s400/DSC_00200.jpg)](http://2.bp.blogspot.com/-fYgWFlhks2M/UlFv5v8A1MI/AAAAAAAAAsc/Cy5DHSTf1xY/s1600/DSC%5F00200.jpg)
 

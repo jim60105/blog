@@ -1,13 +1,16 @@
 +++
 title = "彰師機電 面試"
-description = ""
+description = "彰師機電 面試"
 date = 2012-04-15T09:24:00.000Z
 updated = 2016-03-12T11:25:14.581Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = []
+tags = [ ]
+
+[extra]
+banner = ""
 +++
 彰師機電面試，感覺還不賴  
 國立學校跟私立學校校地大小就是不一樣  

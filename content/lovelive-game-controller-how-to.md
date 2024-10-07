@@ -1,13 +1,16 @@
 +++
 title = "LoveLive大型控制器(ver.教學文)"
-description = ""
+description = "LoveLive大型控制器(ver.教學文)"
 date = 2014-05-28T21:15:00.001Z
 updated = 2021-03-27T02:56:17.206Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = []
+tags = [ ]
+
+[extra]
+banner = "https://3.bp.blogspot.com/-1Q0DRTrHQ7A/U4YlkOGgnGI/AAAAAAAAF10/0iIDcfemQsE/s1600/IMG_20140525_231941.jpg"
 +++
 \[所有圖片點開都有大圖\]  
 首先  
@@ -103,7 +106,7 @@ tags = []
 
 \--  
 **面板**  
- 接著處理木板  
+接著處理木板  
 我上網找到了這個盒子的dwg檔案:<http://goo.gl/pXpuwd>  
 不愧是五百多塊的盒子..  
   
@@ -119,7 +122,7 @@ tags = []
   
 [![](https://4.bp.blogspot.com/-LyV9UpwTFJY/U4Yye2iCliI/AAAAAAAAF7w/qKtM5C3763c/s1600/2014-05-29+02+58+43.png)](http://4.bp.blogspot.com/-LyV9UpwTFJY/U4Yye2iCliI/AAAAAAAAF7w/qKtM5C3763c/s1600/2014-05-29+02+58+43.png)
 
- ~~機械本科弄起來得心應手~~
+~~機械本科弄起來得心應手~~
 
 [![](https://1.bp.blogspot.com/-17JvzXEC7fw/U4YyeInaxNI/AAAAAAAAF7o/E8RBDioW2rc/s1600/2014-05-29+02+58+54.png)](http://1.bp.blogspot.com/-17JvzXEC7fw/U4YyeInaxNI/AAAAAAAAF7o/E8RBDioW2rc/s1600/2014-05-29+02+58+54.png)
 

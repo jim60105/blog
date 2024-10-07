@@ -1,6 +1,6 @@
 +++
 title = "[Koikatu / Koikatsu Sunshine] 存檔壓縮 (Save Load Compression)"
-description = ""
+description = "[Koikatu / Koikatsu Sunshine] 存檔壓縮 (Save Load Compression)"
 date = 2020-06-09T10:42:00.027Z
 updated = 2021-10-31T11:11:37.299Z
 draft = false
@@ -8,8 +8,11 @@ aliases = ["/2020/06/koikatu-save-load-compression.html"]
 
 [taxonomies]
 tags = ["Koikatu", "C#"]
+
+[extra]
+banner = "https://img.maki0419.com/blog/preview/demo18.png"
 +++
-[![](https://img.maki0419.com/blog/preview/demo18.png)](https://img.maki0419.com/blog/preview/demo18.png) 
+[![](https://img.maki0419.com/blog/preview/demo18.png)](https://img.maki0419.com/blog/preview/demo18.png)
 
   
 **> 經過壓縮的檔案不能在無此插件的遊戲中讀取**
@@ -31,7 +34,7 @@ tags = ["Koikatu", "C#"]
 * Koikatsu Sunshine:  
 支援遊戲啟動時的「由Koikatu升級存檔至Sunshine」功能，安裝插件後如常操作即可
 
-### **注意** 
+### **注意**
 
 * 要啟動儲存功能，必須要在Config中開啟兩個Enable
 * **經過壓縮的檔案無法在沒有此插件的遊戲中讀取**
@@ -41,13 +44,13 @@ tags = ["Koikatu", "C#"]
   
 ### 網頁版工具
 
-[![](https://img.maki0419.com/blog/demo18_3.png)](https://img.maki0419.com/blog/demo18%5F3.png) 
+[![](https://img.maki0419.com/blog/demo18_3.png)](https://img.maki0419.com/blog/demo18%5F3.png)
 
   
-[![](https://img.maki0419.com/blog/demo18_1.png)](https://img.maki0419.com/blog/demo18%5F1.png) 
+[![](https://img.maki0419.com/blog/demo18_1.png)](https://img.maki0419.com/blog/demo18%5F1.png)
 
   
-[![](https://img.maki0419.com/blog/demo18_2.png)](https://img.maki0419.com/blog/demo18%5F2.png) 
+[![](https://img.maki0419.com/blog/demo18_2.png)](https://img.maki0419.com/blog/demo18%5F2.png)
 
 我以Blazor wasm技術撰寫了網頁版工具: <https://slcweb.maki0419.com>
 
@@ -61,7 +64,7 @@ tags = ["Koikatu", "C#"]
 ##### Koikatu
 
 * コイカツ！ ダークネス (Koikatu! Darkness)  
- 這不相容於Steam Koikatsu Party
+這不相容於Steam Koikatsu Party
 * **BepInEx v5.3 (不支援v5.0.X)**
 
 ##### Koikatsu Sunshine

@@ -1,13 +1,16 @@
 +++
 title = "我的展示櫃~~(圖多殺貓)"
-description = ""
+description = "我的展示櫃~~(圖多殺貓)"
 date = 2014-10-13T00:36:00.003Z
 updated = 2016-03-12T11:29:27.212Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = ["開箱文"]
+tags = [ "開箱文" ]
+
+[extra]
+banner = "http://1.bp.blogspot.com/-iaV_-IesVNY/VDsAD7jiFPI/AAAAAAAAKB8/ytod-0nog0U/s1600/IMG_20141011_074730.jpg"
 +++
 [![](http://1.bp.blogspot.com/-iaV_-IesVNY/VDsAD7jiFPI/AAAAAAAAKB8/ytod-0nog0U/s1600/IMG_20141011_074730.jpg)](http://1.bp.blogspot.com/-iaV%5F-IesVNY/VDsAD7jiFPI/AAAAAAAAKB8/ytod-0nog0U/s1600/IMG%5F20141011%5F074730.jpg)
   

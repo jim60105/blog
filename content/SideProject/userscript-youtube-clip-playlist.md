@@ -1,22 +1,25 @@
 +++
 title = "[UserScript] Youtube影片截選播放清單 (Youtube Clip Playlist)"
-description = ""
+description = "[UserScript] Youtube影片截選播放清單 (Youtube Clip Playlist)"
 date = 2020-12-19T10:58:00.124Z
 updated = 2022-07-04T20:53:48.482Z
 draft = false
-aliases = ["/2020/12/userscript-youtube-clip-playlist.html"]
+aliases = [ "/2020/12/userscript-youtube-clip-playlist.html" ]
 
 [taxonomies]
-tags = ["JavaScript", "YouTube"]
+tags = [ "JavaScript", "Livestream" ]
+
+[extra]
+banner = "https://img.maki0419.com/blog/userscript-youtube-clip-playlist/preview.png"
 +++
 ## 前言
 
-![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/preview.png) 
+![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/preview.png)
 
 > 此專案已重寫為[Chrome擴充功能](/2022/06/chrome-extension-youtube-clip-playlist.html)
 
   
-![GitHub tag](https://img.shields.io/github/tag/jim60105/YoutubeClipPlaylist?style=for-the-badge) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/jim60105/Playlists/minify?label=PLAYLIST%20UPDATE&style=for-the-badge) ![GitHub](https://img.shields.io/github/license/jim60105/YoutubeClipPlaylist?style=for-the-badge) ![Tampermonkey](https://img.shields.io/static/v1?style=for-the-badge&message=Tampermonkey&color=00485B&logo=Tampermonkey&logoColor=FFFFFF&label=) ![YouTube](https://img.shields.io/static/v1?style=for-the-badge&message=YouTube&color=FF0000&logo=YouTube&logoColor=FFFFFF&label=) ![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=) 
+![GitHub tag](https://img.shields.io/github/tag/jim60105/YoutubeClipPlaylist?style=for-the-badge) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/jim60105/Playlists/minify?label=PLAYLIST%20UPDATE&style=for-the-badge) ![GitHub](https://img.shields.io/github/license/jim60105/YoutubeClipPlaylist?style=for-the-badge) ![Tampermonkey](https://img.shields.io/static/v1?style=for-the-badge&message=Tampermonkey&color=00485B&logo=Tampermonkey&logoColor=FFFFFF&label=) ![YouTube](https://img.shields.io/static/v1?style=for-the-badge&message=YouTube&color=FF0000&logo=YouTube&logoColor=FFFFFF&label=) ![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
 
 這是截選播放清單功能，專門設計來聽Vtuber的歌枠
 
@@ -29,18 +32,18 @@ tags = ["JavaScript", "YouTube"]
 
 ---
 
- 最近迷上幾位歌勢Vtuber，把她們的歌枠影片掛著當作業用BGM  
+最近迷上幾位歌勢Vtuber，把她們的歌枠影片掛著當作業用BGM  
 但做為BGM時，穿插在歌曲中間的談話聲總會把我的注意力拉走  
 後來看到一種標「歌枠切り抜き」的剪片，單純把歌枠中的歌曲剪出 ，這很接近我要的東西  
 但剪接影片重新上傳，這不是~~自稱~~程式設計師的做法 \_(:3 ⌒ﾞ)\_
 
-我想要的是以包含起始、結束時間之影片段為單位的播放清單 
+我想要的是以包含起始、結束時間之影片段為單位的播放清單
 
- 翻了Youtube API，有關「結束時間」的功能只有提供在embed player上頭，所以我最開始是打算寫個網頁  
+翻了Youtube API，有關「結束時間」的功能只有提供在embed player上頭，所以我最開始是打算寫個網頁  
 但很快就發現──因為版權關係，有些歌枠影片不開放站外播放，這功能不能由嵌入實現  
 若限定在Youtube網域執行，那麼就只能從瀏覧器端下手
 
- 所以最後就是\~\~油猴腳本**!**  
+所以最後就是\~\~油猴腳本**!**  
 
 ## 安裝步驟
 
@@ -68,7 +71,7 @@ tags = ["JavaScript", "YouTube"]
 > end=1880 &  
 > shuffle=1 &  
 > playlistinclude=quon &  
-> playlistexclude=member 
+> playlistexclude=member
 
 ### Google Drive網址格式
 
@@ -77,7 +80,7 @@ tags = ["JavaScript", "YouTube"]
 > end=1166 &  
 > shuffle=1 &  
 > playlistinclude=quon &  
-> playlistexclude=member 
+> playlistexclude=member
 
 ### 其它網址格式 (目前支援OneDrive、twitcasting)
 
@@ -87,7 +90,7 @@ tags = ["JavaScript", "YouTube"]
 > t=1470 &  
 > end=1653 &  
 > shuffle=1 &  
-> playlistinclude=twitcasting 
+> playlistinclude=twitcasting
 
 ### 參數
 
@@ -110,33 +113,33 @@ tags = ["JavaScript", "YouTube"]
 
 ## 啟動連結
 
-[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/bookmark.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/bookmark.png) 
+[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/bookmark.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/bookmark.png)
 
 > 目前非歌曲的內容只有「RadioQTama廣播」，其它人可以省略NotSongs排除
 
-| 說明                 | 連結                                                                                               |
-| ------------------ | ------------------------------------------------------------------------------------------------ |
-| 全清單 循序             | <https://www.youtube.com/?startplaylist>                                                         |
-| 全清單 隨機             | <https://www.youtube.com/?startplaylist&shuffle=1>                                               |
-| 久遠たま 全歌單循序         | <https://www.youtube.com/?startplaylist&playlistinclude=tama&playlistexclude=NotSongs>           |
-| 久遠たま 排除會限          | <https://www.youtube.com/?startplaylist&playlistinclude=tama&playlistexclude=member%5FNotSongs>  |
-| 久遠たま 全歌單隨機         | <https://www.youtube.com/?startplaylist&playlistinclude=tama&playlistexclude=NotSongs&shuffle=1> |
+| 說明                   | 連結                                                                                             |
+|----------------------|--------------------------------------------------------------------------------------------------|
+| 全清單 循序            | <https://www.youtube.com/?startplaylist>                                                         |
+| 全清單 隨機            | <https://www.youtube.com/?startplaylist&shuffle=1>                                               |
+| 久遠たま 全歌單循序      | <https://www.youtube.com/?startplaylist&playlistinclude=tama&playlistexclude=NotSongs>           |
+| 久遠たま 排除會限        | <https://www.youtube.com/?startplaylist&playlistinclude=tama&playlistexclude=member%5FNotSongs>  |
+| 久遠たま 全歌單隨機      | <https://www.youtube.com/?startplaylist&playlistinclude=tama&playlistexclude=NotSongs&shuffle=1> |
 | 久遠たま twitcasting歌單 | <https://www.youtube.com/?startplaylist&playlistinclude=twitcasting>                             |
-| RadioQTama 廣播      | <https://www.youtube.com/?startplaylist&playlistinclude=RadioQTama>                              |
-| 須多夜花 全歌單循序         | <https://www.youtube.com/?startplaylist&playlistinclude=yoruka>                                  |
-| 須多夜花 全歌單隨機         | <https://www.youtube.com/?startplaylist&playlistinclude=yoruka&shuffle=1>                        |
-| 間取かける 全歌單循序        | <https://www.youtube.com/?startplaylist&playlistinclude=kakeru>                                  |
-| 間取かける 全歌單隨機        | <https://www.youtube.com/?startplaylist&playlistinclude=kakeru&shuffle=1>                        |
-| 薬袋アルマ 全歌單循序        | <https://www.youtube.com/?startplaylist&playlistinclude=aruma>                                   |
-| 薬袋アルマ 全歌單隨機        | <https://www.youtube.com/?startplaylist&playlistinclude=aruma&shuffle=1>                         |
-| 伊冬ユナ 全歌單循序         | <https://www.youtube.com/?startplaylist&playlistinclude=ItouYuna>                                |
-| 伊冬ユナ 全歌單隨機         | <https://www.youtube.com/?startplaylist&playlistinclude=ItouYuna&shuffle=1>                      |
-| 羽宮くぅ 全歌單循序         | <https://www.youtube.com/?startplaylist&playlistinclude=HaneMiya>                                |
-| 羽宮くぅ 全歌單隨機         | <https://www.youtube.com/?startplaylist&playlistinclude=HaneMiya&shuffle=1>                      |
-| 町田ちま 全歌單循序         | <https://www.youtube.com/?startplaylist&playlistinclude=MachitaChima>                            |
-| 町田ちま 全歌單隨機         | <https://www.youtube.com/?startplaylist&playlistinclude=MachitaChima&shuffle=1>                  |
-| 牧野白 全歌單循序          | <https://www.youtube.com/?startplaylist&playlistinclude=MakinoShiro>                             |
-| 牧野白 全歌單隨機          | <https://www.youtube.com/?startplaylist&playlistinclude=MakinoShiro&shuffle=1>                   |
+| RadioQTama 廣播        | <https://www.youtube.com/?startplaylist&playlistinclude=RadioQTama>                              |
+| 須多夜花 全歌單循序    | <https://www.youtube.com/?startplaylist&playlistinclude=yoruka>                                  |
+| 須多夜花 全歌單隨機    | <https://www.youtube.com/?startplaylist&playlistinclude=yoruka&shuffle=1>                        |
+| 間取かける 全歌單循序     | <https://www.youtube.com/?startplaylist&playlistinclude=kakeru>                                  |
+| 間取かける 全歌單隨機     | <https://www.youtube.com/?startplaylist&playlistinclude=kakeru&shuffle=1>                        |
+| 薬袋アルマ 全歌單循序     | <https://www.youtube.com/?startplaylist&playlistinclude=aruma>                                   |
+| 薬袋アルマ 全歌單隨機     | <https://www.youtube.com/?startplaylist&playlistinclude=aruma&shuffle=1>                         |
+| 伊冬ユナ 全歌單循序      | <https://www.youtube.com/?startplaylist&playlistinclude=ItouYuna>                                |
+| 伊冬ユナ 全歌單隨機      | <https://www.youtube.com/?startplaylist&playlistinclude=ItouYuna&shuffle=1>                      |
+| 羽宮くぅ 全歌單循序      | <https://www.youtube.com/?startplaylist&playlistinclude=HaneMiya>                                |
+| 羽宮くぅ 全歌單隨機      | <https://www.youtube.com/?startplaylist&playlistinclude=HaneMiya&shuffle=1>                      |
+| 町田ちま 全歌單循序      | <https://www.youtube.com/?startplaylist&playlistinclude=MachitaChima>                            |
+| 町田ちま 全歌單隨機      | <https://www.youtube.com/?startplaylist&playlistinclude=MachitaChima&shuffle=1>                  |
+| 牧野白 全歌單循序      | <https://www.youtube.com/?startplaylist&playlistinclude=MakinoShiro>                             |
+| 牧野白 全歌單隨機      | <https://www.youtube.com/?startplaylist&playlistinclude=MakinoShiro&shuffle=1>                   |
 
 ## TamperMonkey UI選單
 
@@ -145,7 +148,7 @@ tags = ["JavaScript", "YouTube"]
 在Youtube網站下點開TamperMonkey選單，單擊「Start Playlist」  
 這相當於**啟動連結—全清單循序 (https://www.youtube.com/?startplaylist)**  
 
-[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/UI1.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/UI1.png) 
+[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/UI1.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/UI1.png)
 
   
 ### 禁用歌單功能
@@ -153,18 +156,18 @@ tags = ["JavaScript", "YouTube"]
 在個別播放清單上單擊可以啟用、禁用該播放清單  
 若你完全不聽廣播，可以把RadioQTamaList禁用，再去使用全循序/隨機播放功能  
 
-[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/UI2.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/UI2.png) 
+[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/UI2.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/UI2.png)
 
 ## 歌單(Playlist)
 
- 目前內建[久遠たま](https://www.youtube.com/channel/UCBC7vYFNQoGPupe5NxPG4Bw)、[須多夜花](https://www.youtube.com/channel/UCuy-kZJ7HWwUU-eKv0zUZFQ)、[間取かける](https://www.youtube.com/channel/UCiLt4FLjMXszLOh5ISi1oqw)、[薬袋アルマ](https://www.youtube.com/channel/UCD1QOCJIAPsMKMvRSXjLahw)、[伊冬ユナ](https://www.youtube.com/channel/UCYbzeYnRZuw7fZKrgu2bgtw)、[羽宮くぅ](https://www.youtube.com/channel/UC4-EyORUDI%5FkyckQFmW3P7A)、[町田ちま](https://www.youtube.com/channel/UCo7TRj3cS-f%5F1D9ZDmuTsjw)、[牧野白](https://www.youtube.com/channel/UCbZcxNKrC0a6IZYBowvzAUg)的歌單  
- 如果想要參與編寫，請參考[此repo](https://github.com/jim60105/Playlists)的合作模式  
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge) 
+目前內建[久遠たま](https://www.youtube.com/channel/UCBC7vYFNQoGPupe5NxPG4Bw)、[須多夜花](https://www.youtube.com/channel/UCuy-kZJ7HWwUU-eKv0zUZFQ)、[間取かける](https://www.youtube.com/channel/UCiLt4FLjMXszLOh5ISi1oqw)、[薬袋アルマ](https://www.youtube.com/channel/UCD1QOCJIAPsMKMvRSXjLahw)、[伊冬ユナ](https://www.youtube.com/channel/UCYbzeYnRZuw7fZKrgu2bgtw)、[羽宮くぅ](https://www.youtube.com/channel/UC4-EyORUDI%5FkyckQFmW3P7A)、[町田ちま](https://www.youtube.com/channel/UCo7TRj3cS-f%5F1D9ZDmuTsjw)、[牧野白](https://www.youtube.com/channel/UCbZcxNKrC0a6IZYBowvzAUg)的歌單  
+如果想要參與編寫，請參考[此repo](https://github.com/jim60105/Playlists)的合作模式  
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)
 
 ### 歌單格式
 
- 歌單的格式是JSON with comment  
- 在[這裡](https://github.com/jim60105/Playlists/blob/master/Playlists.jsonc)有總表，標示清單名稱、標籤、位置，並載入[個別歌單](https://github.com/jim60105/Playlists/blob/master/QuonTama/QuonTamaSongList.jsonc) 
+歌單的格式是JSON with comment  
+在[這裡](https://github.com/jim60105/Playlists/blob/master/Playlists.jsonc)有總表，標示清單名稱、標籤、位置，並載入[個別歌單](https://github.com/jim60105/Playlists/blob/master/QuonTama/QuonTamaSongList.jsonc)
 
 每個陣列中儲存以下項目: \[VideoID, StartTime, EndTime, Title?, SubSrc?\]
 
@@ -176,14 +179,14 @@ tags = ["JavaScript", "YouTube"]
 Youtube:OneDrive:TwitCasting ツイキャス:
 
 > 對於有密碼鎖的影片，請延伸閱讀  
-> [TwitCasting每次播放都要求輸入密碼？不要一直問我！](/2022/01/twitcasting-cookie.html) 
+> [TwitCasting每次播放都要求輸入密碼？不要一直問我！](/2022/01/twitcasting-cookie.html)
 
 ## 字幕
 
- 此工具支援載入WebVTT字幕(.vtt)、ASS字幕(.ass)，請將字幕直鏈傳入歌單之SubSrc欄位  
+此工具支援載入WebVTT字幕(.vtt)、ASS字幕(.ass)，請將字幕直鏈傳入歌單之SubSrc欄位  
 
 > 我在[RadioQTama播放清單](https://www.youtube.com/?startplaylist&playlistinclude=RadioQTama)中使用了來自[アルバート](https://twitter.com/alubto)的翻譯字幕，是直接由[他的repo](https://gitlab.com/alubaato/tama-subs)取得內容  
 > 我使用了一支[.Net Core程式](https://github.com/jim60105/Playlists/blob/master/QuonTama/CreateRadioQTamaSubtitles/CreateRadioQTamaSubtitles/Program.cs)和[Github Workflow](https://github.com/jim60105/Playlists/blob/master/.github/workflows/CreateRadioQTamaSubtitles.yml)做CI  
 > 定時由他的gitlab取得ass直鏈，並重寫歌單
 
-[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/sub.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/sub.png) 
+[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/sub.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/sub.png)

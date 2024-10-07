@@ -1,21 +1,24 @@
 +++
 title = "[Docker] Youtube直播錄影伺服器建置"
-description = ""
+description = "[Docker] Youtube直播錄影伺服器建置"
 date = 2020-11-23T21:37:00.083Z
 updated = 2023-03-07T01:58:58.902Z
 draft = false
-aliases = ["/2020/11/docker-youtube-dl-auto-recording-live-dl.html"]
+aliases = [ "/2020/11/docker-youtube-dl-auto-recording-live-dl.html" ]
 
 [taxonomies]
-tags = ["Container", "YouTube"]
+tags = [ "Docker", "Livestream" ]
+
+[extra]
+banner = "https://img.maki0419.com/blog/youtube-dl-auto-recording/preview.png"
 +++
 ##  前言
 
-[![](https://img.maki0419.com/blog/youtube-dl-auto-recording/preview.png)](https://img.maki0419.com/blog/youtube-dl-auto-recording/preview.png) 
+[![](https://img.maki0419.com/blog/youtube-dl-auto-recording/preview.png)](https://img.maki0419.com/blog/youtube-dl-auto-recording/preview.png)
 
   
- 本文希望建置起能永久自動運作的Youtube直播備份機  
- 本專案包含三個部份: 
+本文希望建置起能永久自動運作的Youtube直播備份機  
+本專案包含三個部份:
 
 * youtube-dl-server: 這是一個網頁UI界面，可以手動執行下載
 * live-dl: 直播中錄播，用來對應版權砲、下播即砍，等等的狀況
@@ -70,12 +73,12 @@ nginx Server (Reverse Proxy) (SSL證書申請、Renew)
 請完成此文的建置章節  
 
 > 琳的備忘手札 \[Docker\] Linux主機之Docker安裝和ReveseProxy建置  
-> </2020/11/linux-docker-setup-revese-proxy.html> 
+> </2020/11/linux-docker-setup-revese-proxy.html>
 
 另外，本專案完全可以部屬在Windows10機器上，以圖為證  
 請自行轉換所有步驟在Windows執行
 
-[![](https://img.maki0419.com/blog/youtube-dl-auto-recording/youtube-dl-win.png)](https://img.maki0419.com/blog/youtube-dl-auto-recording/youtube-dl-win.png) 
+[![](https://img.maki0419.com/blog/youtube-dl-auto-recording/youtube-dl-win.png)](https://img.maki0419.com/blog/youtube-dl-auto-recording/youtube-dl-win.png)
 
 ###  live-dl、youtube-dl-server建置
 
@@ -98,12 +101,12 @@ cp .env_sample .env && vim .env
 * 編輯`config_live-dl.yml` 在map下建立名稱對應表，此表用於自動錄播時的資料夾建立  
 vim config_live-dl.yml
 * 參考`Monitor/tama.sh` 建立要做自動錄影的頻道，所有Monitor資料夾下的檔案都會被執行  
- (資料夾內可以建立多個.sh檔)  
- 請自行為不同頻道替換Youtube URL和Channel Name的內容  
- 目前內建的直播錄影設定的是[久遠たま](https://www.youtube.com/channel/UCBC7vYFNQoGPupe5NxPG4Bw)的頻道  
+(資料夾內可以建立多個.sh檔)  
+請自行為不同頻道替換Youtube URL和Channel Name的內容  
+目前內建的直播錄影設定的是[久遠たま](https://www.youtube.com/channel/UCBC7vYFNQoGPupe5NxPG4Bw)的頻道  
 cp Monitor/tama.sh Monitor/{{Channel Name}}.sh  
 vim Monitor/{{Channel Name}}.sh  
- 內容  
+內容  
 `nohup /bin/bash live-dl {{Youtube URL}} &>/youtube-dl/logs/live-dl-{{Channel Name}}.$(date +%d%b%y-%H%M%S).log &`
 * 給所有`*.sh`執行權限  
 find ./ -type f -iname "*.sh" -exec chmod +x {} \;
@@ -114,7 +117,7 @@ docker ps -a
 [![](https://img.maki0419.com/blog/dockerAndReverseProxy/11.png)](https://img.maki0419.com/blog/dockerAndReverseProxy/11.png)
 * 檢查SSL是否成功  
 docker logs proxy_le -f  
- 注意紅框處，這樣就是成功  
+注意紅框處，這樣就是成功  
 [![](https://img.maki0419.com/blog/dockerAndReverseProxy/12.png)](https://img.maki0419.com/blog/dockerAndReverseProxy/12.png)
 * 將SSL申請改為正式申請  
 > 注意  
@@ -124,10 +127,10 @@ docker logs proxy_le -f
 >  
 > 或者，若你不需要SSL就把`proxy_le`container停掉  
 vim .env  
- 第一行`LETSENCRYPT_TEST`改為`false`  
- 重做compose  
+第一行`LETSENCRYPT_TEST`改為`false`  
+重做compose  
 docker-compose down && docker compose up -d  
- 檢查是否有成功要到正式證書  
+檢查是否有成功要到正式證書  
 注意紅框處，已沒有\_test\_字樣  
 [![](https://img.maki0419.com/blog/dockerAndReverseProxy/13.png)](https://img.maki0419.com/blog/dockerAndReverseProxy/13.png)
 * 檢查自動錄影是否正常  
@@ -147,7 +150,7 @@ ls ../YoutubeRecordings/logs
 
 vim docker-compose.yml
 
-[![](https://img.maki0419.com/blog/youtube-dl-auto-recording/backupdl1.png)](https://img.maki0419.com/blog/youtube-dl-auto-recording/backupdl1.png) 
+[![](https://img.maki0419.com/blog/youtube-dl-auto-recording/backupdl1.png)](https://img.maki0419.com/blog/youtube-dl-auto-recording/backupdl1.png)
 
 * 編輯.env檔案，填入要下載的頻道和連接字串  
 vim .env  
@@ -164,10 +167,10 @@ docker-compose logs -f
 
 ##  附註: 下載會員限定影片
 
- 此專案支援以youtube-dl的cookies file方式登入，**可以**下載會限影片  
+此專案支援以youtube-dl的cookies file方式登入，**可以**下載會限影片  
 (youtube-dl的帳密登入從2019 bug到現在都沒有修好)  
 
-[![](https://img.maki0419.com/blog/youtube-dl-auto-recording/youtube-dl-member.png)](https://img.maki0419.com/blog/youtube-dl-auto-recording/youtube-dl-member.png) 
+[![](https://img.maki0419.com/blog/youtube-dl-auto-recording/youtube-dl-member.png)](https://img.maki0419.com/blog/youtube-dl-auto-recording/youtube-dl-member.png)
 
 * 安裝瀏覧器擴充功能，以匯出Netscape HTTP Cookie File  
    * Chrome: [Get cookies.txt LOCALLY](https://chrome.google.com/webstore/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc)  
@@ -180,12 +183,12 @@ docker-compose logs -f
 > 注意  
 > 此cookies file包含了你的Youtube登入授權  
 > 任何人只要取得這個檔案，即可由你的身份登入Youtube  
-> 請**務必妥善保管，把它當成你的帳號密碼看待** 
+> 請**務必妥善保管，把它當成你的帳號密碼看待**
 
 ## 附註: 不部屬之單次執行live-dl
 
- 若要單次執行而不部屬，可直接docker run  
-我有build了image在此:<https://github.com/users/jim60105/packages/container/package/live-dl> 
+若要單次執行而不部屬，可直接docker run  
+我有build了image在此:<https://github.com/users/jim60105/packages/container/package/live-dl>
 
 例如
 
@@ -195,8 +198,8 @@ docker run --rm
         ghcr.io/jim60105/live-dl https://www.youtube.com/watch?v=GDOQTShjTQs
 
 此格式如下  
- 將{{}}填入你的內容，若不需要登入就不用傳入cookies file  
-cookies file之相關說明請見[上一節](#%E9%99%84%E8%A8%BB-%E4%B8%8B%E8%BC%89%E6%9C%83%E5%93%A1%E9%99%90%E5%AE%9A%E5%BD%B1%E7%89%87) 
+將{{}}填入你的內容，若不需要登入就不用傳入cookies file  
+cookies file之相關說明請見[上一節](#%E9%99%84%E8%A8%BB-%E4%B8%8B%E8%BC%89%E6%9C%83%E5%93%A1%E9%99%90%E5%AE%9A%E5%BD%B1%E7%89%87)
 
 docker run --rm
         -v {{影片儲存資料夾}}:/youtube-dl

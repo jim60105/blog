@@ -1,22 +1,25 @@
 +++
 title = "[Docker] Backup-dl - 備份Youtube影片至Azure Blob Storage"
-description = ""
+description = "[Docker] Backup-dl - 備份Youtube影片至Azure Blob Storage"
 date = 2021-06-06T18:06:00.015Z
 updated = 2021-10-31T10:57:22.346Z
 draft = false
-aliases = ["/2021/06/backup-dl.html"]
+aliases = [ "/2021/06/backup-dl.html" ]
 
 [taxonomies]
-tags = ["C#", "Container", "YouTube"]
+tags = [ "C#", "Docker", "Livestream" ]
+
+[extra]
+banner = "https://img.maki0419.com/blog/backup-dl/preview.png"
 +++
 ## 簡介
 
-[![](https://img.maki0419.com/blog/backup-dl/preview.png)](https://img.maki0419.com/blog/backup-dl/preview.png) 
+[![](https://img.maki0419.com/blog/backup-dl/preview.png)](https://img.maki0419.com/blog/backup-dl/preview.png)
 
   
-![License](https://img.shields.io/github/license/jim60105/sound-buttons?style=for-the-badge) ![.NET Core](https://img.shields.io/static/v1?style=for-the-badge&message=.NET+Core&color=512BD4&logo=.NET&logoColor=FFFFFF&label=) ![Microsoft Azure](https://img.shields.io/static/v1?style=for-the-badge&message=Microsoft+Azure&color=0089D6&logo=Microsoft+Azure&logoColor=FFFFFF&label=) ![Docker](https://img.shields.io/static/v1?style=for-the-badge&message=Docker&color=2496ED&logo=Docker&logoColor=FFFFFF&label=) ![YouTube](https://img.shields.io/static/v1?style=for-the-badge&message=YouTube&color=FF0000&logo=YouTube&logoColor=FFFFFF&label=) 
+![License](https://img.shields.io/github/license/jim60105/sound-buttons?style=for-the-badge) ![.NET Core](https://img.shields.io/static/v1?style=for-the-badge&message=.NET+Core&color=512BD4&logo=.NET&logoColor=FFFFFF&label=) ![Microsoft Azure](https://img.shields.io/static/v1?style=for-the-badge&message=Microsoft+Azure&color=0089D6&logo=Microsoft+Azure&logoColor=FFFFFF&label=) ![Docker](https://img.shields.io/static/v1?style=for-the-badge&message=Docker&color=2496ED&logo=Docker&logoColor=FFFFFF&label=) ![YouTube](https://img.shields.io/static/v1?style=for-the-badge&message=YouTube&color=FF0000&logo=YouTube&logoColor=FFFFFF&label=)
 
- 此程式可以檢查Youtube頻道、播放清單，並備份影片至Azure Blob Storage  
+此程式可以檢查Youtube頻道、播放清單，並備份影片至Azure Blob Storage  
 這是一支.NET Core Console Application，並包裝為Linux Container  
 整合入我的「Youtube錄影伺服器 (Docker Compose)」，可搭配使用
 
@@ -25,7 +28,7 @@ tags = ["C#", "Container", "YouTube"]
 
 ### 下載
 
-[![](https://img.maki0419.com/blog/backup-dl/github.png)](https://github.com/users/jim60105/packages/container/package/backup-dl) 
+[![](https://img.maki0419.com/blog/backup-dl/github.png)](https://github.com/users/jim60105/packages/container/package/backup-dl)
 
 docker pull ghcr.io/jim60105/backup-dl:latest
 
@@ -64,7 +67,7 @@ docker pull ghcr.io/jim60105/backup-dl:latest
 
 #### 上傳
 
-[![](https://img.maki0419.com/blog/backup-dl/storage.png)](https://img.maki0419.com/blog/backup-dl/storage.png) 
+[![](https://img.maki0419.com/blog/backup-dl/storage.png)](https://img.maki0419.com/blog/backup-dl/storage.png)
 
 * 上傳至[Azure Blob Storage](https://azure.microsoft.com/zh-tw/services/storage/blobs/)
 * 影片上傳為封存存取層 ([存取層的官方說明文件](https://docs.microsoft.com/zh-tw/azure/storage/blobs/storage-blob-storage-tiers))

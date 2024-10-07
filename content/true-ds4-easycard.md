@@ -1,13 +1,16 @@
 +++
 title = "還在等預購? 看看我的真．DS4悠遊卡"
-description = ""
+description = "還在等預購? 看看我的真．DS4悠遊卡"
 date = 2020-06-10T08:42:00.021Z
 updated = 2022-01-25T19:22:07.617Z
 draft = false
-aliases = ["/2020/06/ds4.html"]
+aliases = [ "/2020/06/ds4.html" ]
 
 [taxonomies]
-tags = []
+tags = [ ]
+
+[extra]
+banner = "https://img.maki0419.com/blog/DS4/preview.jpg"
 +++
 [![](https://img.maki0419.com/blog/DS4/preview.jpg)](https://img.maki0419.com/blog/DS4/preview.jpg)
 
@@ -24,7 +27,7 @@ tags = []
   
 你的願望我都聽到了!   
 
- 現在讓我隆重介紹: 真．DS4悠遊卡!
+現在讓我隆重介紹: 真．DS4悠遊卡!
 
 [![](https://img.maki0419.com/blog/DS4/preview.jpg)](https://img.maki0419.com/blog/DS4/preview.jpg)
 

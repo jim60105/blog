@@ -1,28 +1,31 @@
 +++
 title = "[Docker] Opencart購物網站建置"
-description = ""
+description = "[Docker] Opencart購物網站建置"
 date = 2020-08-27T04:36:00.100Z
 updated = 2021-10-31T11:08:31.463Z
 draft = false
 aliases = ["/2020/08/docker-opencart.html"]
 
 [taxonomies]
-tags = ["Container"]
+tags = ["Docker"]
+
+[extra]
+banner = "https://img.maki0419.com/blog/opencart/preview.jpg"
 +++
 ##  前言
 
-[![](https://img.maki0419.com/blog/opencart/preview.jpg)](https://img.maki0419.com/blog/opencart/preview.jpg) 
+[![](https://img.maki0419.com/blog/opencart/preview.jpg)](https://img.maki0419.com/blog/opencart/preview.jpg)
 
   
-[![](https://img.maki0419.com/blog/opencart/opencart-logo.jpg)](https://www.opencart.com/) 
+[![](https://img.maki0419.com/blog/opencart/opencart-logo.jpg)](https://www.opencart.com/)
 
- Opencart是一套開源的購物網站方案，擴充性高、資源豐富。基本框架免錢，好用的收費模組很多，且台灣的支援度高。
+Opencart是一套開源的購物網站方案，擴充性高、資源豐富。基本框架免錢，好用的收費模組很多，且台灣的支援度高。
 
- 對於一般商家而言，個人較推薦在大型電商開賣場，像是Pchome、蝦皮、露天、Yahoo拍賣等  
+對於一般商家而言，個人較推薦在大型電商開賣場，像是Pchome、蝦皮、露天、Yahoo拍賣等  
 好處是建置簡單、曝光率高、客戶熟悉度高。重點是開場成本低，大多是採用賣出時抽成  
 自建商店的話，不只初始架站有一筆開銷，之後還有每個月的伺服器維護費....  
 
-說真的，沒有特殊需求別來折騰這個 (ㆆᴗㆆ) 
+說真的，沒有特殊需求別來折騰這個 (ㆆᴗㆆ)
 
 所謂的特殊需求是什麼呢，讓我舉幾個例子:  
 
@@ -32,14 +35,14 @@ tags = ["Container"]
 * 新客戶註冊採審核制
 * 對不同的客戶分組採用不同價格、不同優惠
 
- 不限於這些，還有許多在大型電商不能做到的事  
+不限於這些，還有許多在大型電商不能做到的事  
 自由度高，讓不少店家仍希望擁有自己的購物網站
 
- 本文以Docker技術，用最少的步驟讓你快速架起自己的Opencart購物網站  
+本文以Docker技術，用最少的步驟讓你快速架起自己的Opencart購物網站  
 
- 購物網站方案選擇也有不少，而我選用Opencart的理由非常簡單 ──[台灣有廠商](https://www.osec.tw/opencart.html)在收費維護。 
+購物網站方案選擇也有不少，而我選用Opencart的理由非常簡單 ──[台灣有廠商](https://www.osec.tw/opencart.html)在收費維護。
 
-[![](https://img.maki0419.com/blog/opencart/money.JPG)](https://img.maki0419.com/blog/opencart/money.JPG) 
+[![](https://img.maki0419.com/blog/opencart/money.JPG)](https://img.maki0419.com/blog/opencart/money.JPG)
 
 誒我是說真的，這不是業配 (((ﾟДﾟ;)))
 
@@ -47,13 +50,13 @@ tags = ["Container"]
 今天我們架站不用花錢，但萬一哪天站點出事無力解決，總不能雙手一攤Let it go吧?  
 你若不是資訊專家，最好給吃飯的工具留個保險  
 
- 另外還有幾個贏過其它方案的優點:  
+另外還有幾個贏過其它方案的優點:  
 * 台灣的幾家第三方支付([綠界](https://www.ecpay.com.tw/Service/Appcntr%5FShpcar)、[藍新](https://www.newebpay.com/website/Page/content/download%5Fapi#2)、[歐付寶](https://www.newebpay.com/website/Page/content/download%5Fapi#2)、[紅陽](https://github.com/RedSunTech/OpenCart)等)大都有對Opencart推出模組，很容易就能成功串接
 * 有[Facebook官方支援](https://www.facebook.com/business/help/1494437460610744)，可在右下角顯示Messenger聯絡圖標，還能同步上架到Facebook粉專商店
 * 核心語言是PHP；伺服器搭MySQL；推薦架在Apache或Nginx，說直白點就是核心確實不要錢
 * [有中文社群](https://www.facebook.com/groups/opencart.taiwan/)、[中文論壇](https://forum.opencart.com/viewforum.php?f=64)、[英文論壇](https://forum.opencart.com/)，各路大神們聚在一起~~，有疑難雜症能找人問~~
 
- 我不是大神，也不寫PHP  
+我不是大神，也不寫PHP  
 只是喜歡玩Docker架站，有問題請去上面找專家 ♥(´∀\` )人(甩鍋)
 
 ## 概觀
@@ -87,7 +90,7 @@ tags = ["Container"]
 
 ## 硬體架構
 
- 機器有兩台，放在我家的NAS做備份伺服器；Digital Ocean租的VPS做主要Server
+機器有兩台，放在我家的NAS做備份伺服器；Digital Ocean租的VPS做主要Server
 
 若不備份，Rsync Server就不是必須的。本文會講解不做備份的設定方式
 
@@ -99,13 +102,13 @@ WWW
 
 ## Main Server系統架構
 
- WWW  
- │  
- Reverse Proxy (nginx Server) (SSL證書申請、Renew)  
- ├ Jobber (Cron) (定時備份Docker volume，備份完送至rsync server)   
- ├ Opencart前台 (nginx Server)  
- │ ├ MariaDB資料庫 (網路只對Opencart前後台)  
- └ Opencart後台 (nginx Server)
+WWW  
+│  
+Reverse Proxy (nginx Server) (SSL證書申請、Renew)  
+├ Jobber (Cron) (定時備份Docker volume，備份完送至rsync server)   
+├ Opencart前台 (nginx Server)  
+│ ├ MariaDB資料庫 (網路只對Opencart前後台)  
+└ Opencart後台 (nginx Server)
 
 ##  DNS設定和Cache設定
 
@@ -140,7 +143,7 @@ DNS Record有三條，一條A指向SERVER\_IP，另倆CNAME指向A Record
 請完成此文的建置章節  
 
 > 琳的備忘手札 \[Docker\] Linux主機之Docker安裝和ReveseProxy建置  
-> </2020/11/linux-docker-setup-revese-proxy.html> 
+> </2020/11/linux-docker-setup-revese-proxy.html>
 
 ###  Opencart建置
 
@@ -179,17 +182,17 @@ docker ps -a
 [![](https://img.maki0419.com/blog/opencart/11.png)](https://img.maki0419.com/blog/opencart/11.png)
 * 檢查SSL是否成功  
 docker logs proxy_le -f  
- 注意紅框處，這樣就是成功  
+注意紅框處，這樣就是成功  
 [![](https://img.maki0419.com/blog/opencart/12.png)](https://img.maki0419.com/blog/opencart/12.png)
 * 將SSL申請改為正式申請  
 vim .env  
- 第一行`LETSENCRYPT_TEST`改為`false`  
+第一行`LETSENCRYPT_TEST`改為`false`  
 > ※注意  
 > 因為Let's Encrypt針對網域正式申請有次數限制，不論成功與否，做太多次就會鎖住  
 > 發布前一定要測試成功再轉正，並於申請成功後備份cert  
- 重做compose  
+重做compose  
 docker-compose down -v && docker compose up -d  
- 檢查是否有成功要到正式證書  
+檢查是否有成功要到正式證書  
 注意紅框處，已沒有\_test\_字樣  
 [![](https://img.maki0419.com/blog/opencart/13.png)](https://img.maki0419.com/blog/opencart/13.png)  
 > **注意: SSL更新失敗**  
@@ -219,12 +222,12 @@ docker-compose down -v && docker compose up -d
    [![](https://img.maki0419.com/blog/opencart/rsync4.png)](https://img.maki0419.com/blog/opencart/rsync4.png)
 * 回到Main Server，修改upload.sh的設定  
 cp shellScript/upload.sh_sample shellScript/upload.sh && vim shellScript/upload.sh  
- 最後兩行修改如下，填入你的RSYNC\_SERVER\_IP和PORT  
+最後兩行修改如下，填入你的RSYNC\_SERVER\_IP和PORT  
 su - root -c "ssh-keyscan -p 你的PORT 你的RSYNC_SERVER_IP >> ~/.ssh/known_hosts"  
 su - root -c "sshpass -f /run/secrets/rsyncpass rsync -e 'ssh -p 你的PORT' -avz --no-p --no-g /backup/ rsync@你的RSYNC_SERVER_IP::NetBackup/shop/"
 * 將shellScript下的檔案權限都改為可執行  
 chmod 744 shellScript/* && ls -al shellScript/  
- root權限應為rwx  
+root權限應為rwx  
 [![](https://img.maki0419.com/blog/opencart/14.png)](https://img.maki0419.com/blog/opencart/14.png)
 * 設定rsync server的ssh密碼，填入Rsync Server上rsync使用者的密碼  
 echo "你的密碼" > ~/ssh.pas
@@ -233,27 +236,27 @@ chmod 600 ~/ssh.pas
 
 ### 備份  
 
- 測試定時備份功能，下面這段的意思是  
+測試定時備份功能，下面這段的意思是  
 「在名為docker-opencart\_jobber\_1的container中，執行jobber test指令，測試名為Backup的定時工作」  
 
 docker exec -it docker-opencart_jobber_1 jobber test Backup
 
 Stderr會報說下載了docker image和加入SSH-Key, 但只要有輸出rsync資訊就是成功  
 
-[![](https://img.maki0419.com/blog/opencart/15.png)](https://img.maki0419.com/blog/opencart/15.png) 
+[![](https://img.maki0419.com/blog/opencart/15.png)](https://img.maki0419.com/blog/opencart/15.png)
 
- 也別忘了到Rsync Server確認檔案是否存在
+也別忘了到Rsync Server確認檔案是否存在
 
-[![](https://img.maki0419.com/blog/opencart/rsync5.png)](https://img.maki0419.com/blog/opencart/rsync5.png) 
+[![](https://img.maki0419.com/blog/opencart/rsync5.png)](https://img.maki0419.com/blog/opencart/rsync5.png)
 
 > ※提醒  
 > upload.sh不能在host直接執行，因為密碼檔是以docker secrets的方式處理  
 > 此路徑在host不存在
 
   
- 我做了簡易的log，記錄下執行時間和IP
+我做了簡易的log，記錄下執行時間和IP
 
-[![](https://img.maki0419.com/blog/opencart/16.png)](https://img.maki0419.com/blog/opencart/16.png) 
+[![](https://img.maki0419.com/blog/opencart/16.png)](https://img.maki0419.com/blog/opencart/16.png)
 
 ### 還原  
 
@@ -264,7 +267,7 @@ Stderr會報說下載了docker image和加入SSH-Key, 但只要有輸出rsync資
 假若前面有申請了新的正式SSL證書想要保留，留下reverseproxy字樣的備份不覆蓋
 * 執行Restore  
 ./shellScript/restore.sh && ./shellScript/startContainer.sh  
- 若restore後不希望自啟動，去掉&&和其後那一段  
+若restore後不希望自啟動，去掉&&和其後那一段  
 > ※提醒  
 > restore邏輯  
 >   1. 由tag為opencart和proxy的現存volume中取得清單  
@@ -286,16 +289,16 @@ Stderr會報說下載了docker image和加入SSH-Key, 但只要有輸出rsync資
 註: 這是在2020年8月測試可用的版號，僅供參考  
 docker-compose file內用的是latest，拉下來可能會不同
 
-| 服務     | 版本                |
-|----------|---------------------|
-| Opencart | v3.0.3.2 台灣優化版 |
-| DB       | MariaDB v10.5.5     |
-| Web      | Nginx v1.19.2       |
-| PHP      | v7.3-fpm            |
+| 服務       | 版本              |
+| -------- | --------------- |
+| Opencart | v3.0.3.2 台灣優化版  |
+| DB       | MariaDB v10.5.5 |
+| Web      | Nginx v1.19.2   |
+| PHP      | v7.3-fpm        |
 
 ## 附註: 修改Opencart網址
 
- 此專案在每次docker-compose up時都會修改網址設定，使之使用寫在.env的環境變數設定  
+此專案在每次docker-compose up時都會修改網址設定，使之使用寫在.env的環境變數設定  
 謹將修改記錄在此  
 
 後台
@@ -346,10 +349,10 @@ code
   
 ## 附註: 現有Opencart網站移用
 
- 此專案中的nginx web server，其網站檔案是放在volume之下的upload資料夾中  
- 每次up時會檢查是否有upload資料夾存在，不存在就做初始化，所以一定要將網站放在upload下
+此專案中的nginx web server，其網站檔案是放在volume之下的upload資料夾中  
+每次up時會檢查是否有upload資料夾存在，不存在就做初始化，所以一定要將網站放在upload下
 
- 假設要複製的既有網站資料位在host的/html；mysqldump出的既有db sql file位在host的/opencart.sql  
+假設要複製的既有網站資料位在host的/html；mysqldump出的既有db sql file位在host的/opencart.sql  
 請讓資料結構如下
 
 > /html  

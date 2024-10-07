@@ -1,19 +1,22 @@
 +++
 title = "學網開MC伺服計畫─Teamviewer開VPN"
-description = ""
+description = "學網開MC伺服計畫─Teamviewer開VPN"
 date = 2013-04-01T11:45:00.005Z
 updated = 2020-08-30T17:38:37.775Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = []
+tags = [ ]
+
+[extra]
+banner = "http://2.bp.blogspot.com/-OMI4-zI9nA8/UVlwFRVgzlI/AAAAAAAAAe8/6xYHnKT9iJc/s320/1.JPG"
 +++
 ## 學網開MC伺服計畫─Teamviewer開VPN  
 最後我用了HAMACHI...
   
   
- 學網開伺服沒什麼困難的，這個部分是為了讓外網的也能連進來所做的。故跟伺服器同一區網(同學校)的不用這麼做。**XP小畫家難用之傷眼注意!!wwwww**
+學網開伺服沒什麼困難的，這個部分是為了讓外網的也能連進來所做的。故跟伺服器同一區網(同學校)的不用這麼做。**XP小畫家難用之傷眼注意!!wwwww**
 
   
 1.下載Teamviewer:
@@ -35,9 +38,9 @@ tags = []
 [![](http://1.bp.blogspot.com/-ZEoMw0vD1X0/UVlwFTzo4dI/AAAAAAAAAe4/3RhY-13Hptk/s320/3.JPG)](http://1.bp.blogspot.com/-ZEoMw0vD1X0/UVlwFTzo4dI/AAAAAAAAAe4/3RhY-13Hptk/s1600/3.JPG)
   
   
- 3.向對方(也就是我ww)索取伺服器端ID，填入下圖上方紅框  
- 4.選擇VPN  
- 5.連線:  
+3.向對方(也就是我ww)索取伺服器端ID，填入下圖上方紅框  
+4.選擇VPN  
+5.連線:  
   
   
 [![](http://3.bp.blogspot.com/-AfEiR_bUJtQ/UVlwIBvsqVI/AAAAAAAAAfY/yzTckpY8FmQ/s320/%E6%9C%AA%E5%91%BD%E5%90%8D.jpg)](http://3.bp.blogspot.com/-AfEiR%5FbUJtQ/UVlwIBvsqVI/AAAAAAAAAfY/yzTckpY8FmQ/s1600/%E6%9C%AA%E5%91%BD%E5%90%8D.jpg)

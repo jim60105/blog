@@ -1,13 +1,16 @@
 +++
 title = "換手機~"
-description = ""
+description = "換手機~"
 date = 2010-11-20T06:31:00.000Z
 updated = 2016-03-12T11:25:14.593Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = []
+tags = [ ]
+
+[extra]
+banner = "http://f11.wretch.yimg.com/jim70212/3/1724965163.jpg"
 +++
 幾天前我換手機了  
   

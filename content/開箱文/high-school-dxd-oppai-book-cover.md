@@ -1,19 +1,22 @@
 +++
 title = "ドラゴンマガジン11月号 + 「ハイスクールD×D」おっぱいブックカバー 開箱"
-description = ""
+description = "ドラゴンマガジン11月号 + 「ハイスクールD×D」おっぱいブックカバー 開箱"
 date = 2014-10-05T08:17:00.000Z
 updated = 2020-08-30T16:59:40.861Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = ["開箱文"]
+tags = [ "開箱文" ]
+
+[extra]
+banner = "http://4.bp.blogspot.com/-K0RTDUzYwGo/VDD99s9OQ8I/AAAAAAAAKEQ/VnRUXjKaLYY/s640/BxzVHrqCQAAlUym.jpg"
 +++
 [![](http://4.bp.blogspot.com/-K0RTDUzYwGo/VDD99s9OQ8I/AAAAAAAAKEQ/VnRUXjKaLYY/s640/BxzVHrqCQAAlUym.jpg)](http://4.bp.blogspot.com/-K0RTDUzYwGo/VDD99s9OQ8I/AAAAAAAAKEQ/VnRUXjKaLYY/s1600/BxzVHrqCQAAlUym.jpg)
 
 標題這行日文直翻就是  
 DRAGON MAGAZINE 11月號 +  
- "惡魔高校D×D"歐派書套  
+"惡魔高校D×D"歐派書套  
   
 歐派書套呢wwwwwwwwwwwwwwwwwwwwwww  
 上個月看到覺得超有才就手滑了，這還是我第一次購入日文雜誌  

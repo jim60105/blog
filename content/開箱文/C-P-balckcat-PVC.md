@@ -1,13 +1,16 @@
 +++
 title = "代理版 壽屋 C P 黏土人 我的妹妹不可能那麼可愛 黑貓 PVC"
-description = ""
+description = "代理版 壽屋 C P 黏土人 我的妹妹不可能那麼可愛 黑貓 PVC"
 date = 2014-05-06T16:19:00.000Z
 updated = 2020-08-30T17:00:23.662Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = ["開箱文"]
+tags = [ "開箱文" ]
+
+[extra]
+banner = "http://1.bp.blogspot.com/-w9vaIs7917A/U2kDxFNM7pI/AAAAAAAAFso/rBeoR5GC2_M/s1600/IMG_20140506_203412.jpg"
 +++
 前兩天入的新玩具
 
@@ -95,7 +98,7 @@ tags = ["開箱文"]
 
   
 艾莉:什麼?!!竟然把我的鬼火給..  
- 你究竟是什麼人?!!  
+你究竟是什麼人?!!  
 
 [![](http://1.bp.blogspot.com/-btFJ0E3-NSM/U2kFbAWFAaI/AAAAAAAAFto/-VeGHvtzy2w/s1600/IMG_20140506_221738.jpg)](http://1.bp.blogspot.com/-btFJ0E3-NSM/U2kFbAWFAaI/AAAAAAAAFto/-VeGHvtzy2w/s1600/IMG%5F20140506%5F221738.jpg)
 

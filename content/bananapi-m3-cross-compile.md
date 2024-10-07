@@ -1,13 +1,16 @@
 +++
 title = "Bananapi 香蕉派M3 Cross Compile 教學"
-description = ""
+description = "Bananapi 香蕉派M3 Cross Compile 教學"
 date = 2016-03-22T18:47:00.002Z
 updated = 2020-11-24T14:56:53.456Z
 draft = false
-aliases = ["/2016/03/bananapi-m3-cross-compile.html"]
+aliases = [ "/2016/03/bananapi-m3-cross-compile.html" ]
 
 [taxonomies]
-tags = ["bananapi"]
+tags = [ "bananapi" ]
+
+[extra]
+banner = "https://1.bp.blogspot.com/-qXx5Z1dZZPA/VvHvJz2hUsI/AAAAAAAAK9k/7hA6_Vmas_g3W_mw6p5Mo_FnPGdT_FJcw/s640/IMG_20160323_091652.jpg"
 +++
 ##  前言
 
@@ -27,7 +30,7 @@ Linux jim-Ubuntu 4.2.0-34-generic #39-Ubuntu SMP Thu Mar 10 22:13:01 UTC 2016 x8
 ## 編譯BPI-M3-bsp
 
 > BSP 是 “Board Support Package”，板级支持包的意思，包含了编译内核，U-boot等等所需要的一切工具，至于U-Boot，你可以理解为Linux下的Grub或者Windows下的NT OS Loader。
-> 
+>
 > ──引用至[這裡](http://forum.lemaker.org/cn/thread-426-1-1.html)
 
 建立bsp存放資料夾，並git clone回來： <https://github.com/BPI-SINOVOIP/BPI-M3-bsp>  
@@ -61,7 +64,7 @@ sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 zlib1g:i386
 
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install build-essential u-boot-tools binutils-arm-linux-gnueabihf gcc-4.7-arm-linux-gnueabihf-base g++-4.7-arm-linux-gnueabihf gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi cpp-arm-linux-gnueabihf libusb-1.0-0 libusb-1.0-0-dev git wget fakeroot kernel-package zlib1g-dev libncurses5-dev 
+sudo apt-get install build-essential u-boot-tools binutils-arm-linux-gnueabihf gcc-4.7-arm-linux-gnueabihf-base g++-4.7-arm-linux-gnueabihf gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi cpp-arm-linux-gnueabihf libusb-1.0-0 libusb-1.0-0-dev git wget fakeroot kernel-package zlib1g-dev libncurses5-dev
 
   
 開始編譯  
@@ -77,37 +80,37 @@ sudo apt-get install build-essential u-boot-tools binutils-arm-linux-gnueabihf g
 
 This tool support following BPI board(s):
 ------------------------------------------
- 1. BPI_M3_720P
- 2. BPI_M3_1080P
- 3. BPI_M3_LCD7
- 4. BPI_M3_USB_720P
- 5. BPI_M3_USB_1080P
- 6. BPI_M3_USB_LCD7
+1. BPI_M3_720P
+2. BPI_M3_1080P
+3. BPI_M3_LCD7
+4. BPI_M3_USB_720P
+5. BPI_M3_USB_1080P
+6. BPI_M3_USB_LCD7
 ------------------------------------------
 Please choose a target(1-6): 3
 
 
- Now configuring...
+Now configuring...
 
 BPI_M3_LCD7 configured. Now run `make`
 
- Configure success!
+Configure success!
 
   
 接著選擇要執行的動作，選1  
 
 This tool support following building mode(s):
 --------------------------------------------------------------------------------
- 1. Build all, uboot and kernel and pack to download images.
- 2. Build uboot only.
- 3. Build kernel only.
- 4. kernel configure.
- 5. Build rootfs for linux, and copy target files to output
+1. Build all, uboot and kernel and pack to download images.
+2. Build uboot only.
+3. Build kernel only.
+4. kernel configure.
+5. Build rootfs for linux, and copy target files to output
   ROOTFS=/xxx/rootfs.tar.gz
   This is optinal, default using rootfs/linux/default_linux_rootfs.tar.gz.
- 6. Pack the builds to target download image, this step must execute after u-boot,
+6. Pack the builds to target download image, this step must execute after u-boot,
     kernel and rootfs build out
- 7. Clean all build.
+7. Clean all build.
 --------------------------------------------------------------------------------
 Please choose a mode(1-6): 1
 
@@ -150,7 +153,7 @@ umount /dev/sdf*
 清空裝置  
 
 sudo fdisk /dev/sdf
-p 
+p
 d
 w
 sync

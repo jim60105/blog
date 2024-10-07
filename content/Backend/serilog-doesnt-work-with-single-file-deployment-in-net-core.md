@@ -1,19 +1,22 @@
 +++
 title = "使用.NET Core的單一檔案部署時，Serilog不運作。你也可能以為你的程式不運作。"
-description = ""
+description = "使用.NET Core的單一檔案部署時，Serilog不運作。你也可能以為你的程式不運作。"
 date = 2022-03-02T16:03:00.016Z
 updated = 2023-06-10T20:40:23.433Z
 draft = false
-aliases = ["/2022/03/net-coreserilog.html"]
+aliases = [ "/2022/03/net-coreserilog.html" ]
 
 [taxonomies]
-tags = ["備忘"]
+tags = [ ]
+
+[extra]
+banner = "https://img.maki0419.com/blog/serilog/preview.png"
 +++
 > 2023/06/11 更新:  
 > 現在起它會報個錯誤給你！🤘  
-> 參考: <https://github.com/serilog/serilog-settings-configuration/pull/353> 
+> 參考: <https://github.com/serilog/serilog-settings-configuration/pull/353>
 
-[![](https://img.maki0419.com/blog/serilog/preview.png) ](https://img.maki0419.com/blog/serilog/preview.png) 
+[![](https://img.maki0419.com/blog/serilog/preview.png) ](https://img.maki0419.com/blog/serilog/preview.png)
 
 > 操你媽的大地雷，氣到我來發一篇文
 
@@ -53,9 +56,9 @@ tags = ["備忘"]
 * [這個issue](https://github.com/serilog/serilog/issues/1558#issuecomment-812678179)
 * [Serilog其中一個套件依賴的README中的一行小字](https://github.com/serilog/serilog-settings-configuration/#net-50-single-file-applications)  
 [![](https://img.maki0419.com/blog/serilog/doc.png) ](https://img.maki0419.com/blog/serilog/doc.png)  
- 寫得這麼清楚真是謝謝你了，若沒有這行字我還不知道怎麼跟客戶交差
+寫得這麼清楚真是謝謝你了，若沒有這行字我還不知道怎麼跟客戶交差
 
- 最雷的是Serilog不會報錯，他就默默的，給你黑視窗，完全沒有畫面  
+最雷的是Serilog不會報錯，他就默默的，給你黑視窗，完全沒有畫面  
 你會經歷  
 把自己的code查一次  
 →花一堆時間釐清程式為什麼不運作  
@@ -69,7 +72,7 @@ tags = ["備忘"]
 而且我正在寫Windows Service，[官方指南](https://docs.microsoft.com/zh-tw/dotnet/core/extensions/windows-service#publish-the-app)寫著推薦用單檔部署，我一直以為是哪裡弄錯沒成功啟動服務  
 這兩件事湊在一起真他媽的雷到誇張
 
-> [![](https://img.maki0419.com/blog/serilog/finger.gif) ](https://img.maki0419.com/blog/serilog/finger.gif) 
-> 
+> [![](https://img.maki0419.com/blog/serilog/finger.gif) ](https://img.maki0419.com/blog/serilog/finger.gif)
+>
 >  
 > 幹

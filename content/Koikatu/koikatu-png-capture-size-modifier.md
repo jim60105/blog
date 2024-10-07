@@ -1,6 +1,6 @@
 +++
 title = "[Koikatu / Koikatsu Sunshine] PNG存檔尺寸調整工具 (PNG Capture Size Modifier)"
-description = ""
+description = "[Koikatu / Koikatsu Sunshine] PNG存檔尺寸調整工具 (PNG Capture Size Modifier)"
 date = 2020-02-16T17:08:00.021Z
 updated = 2021-10-31T11:14:02.021Z
 draft = false
@@ -8,10 +8,13 @@ aliases = ["/2020/02/koikatu-png-capture-size-modifier.html"]
 
 [taxonomies]
 tags = ["Koikatu", "C#"]
-+++
-[![](https://img.maki0419.com/blog/preview/demo11.png)](https://img.maki0419.com/blog/preview/demo11.png) 
 
-[![](https://img.maki0419.com/blog/demo11-1.png)](https://img.maki0419.com/blog/demo11-1.png) 
+[extra]
+banner = "https://img.maki0419.com/blog/preview/demo11.png"
++++
+[![](https://img.maki0419.com/blog/preview/demo11.png)](https://img.maki0419.com/blog/preview/demo11.png)
+
+[![](https://img.maki0419.com/blog/demo11-1.png)](https://img.maki0419.com/blog/demo11-1.png)
 
   
 > 這個插件會給你更大的預覧圖像，預設值每個存檔將會增加約1.5MB  
@@ -42,7 +45,7 @@ tags = ["Koikatu", "C#"]
 ##### Koikatu
 
 * コイカツ！ ダークネス (Koikatu! Darkness)  
- 這不相容於Steam Koikatsu Party
+這不相容於Steam Koikatsu Party
 * **BepInEx v5.1** (不支援v5.0.X)
 
 ##### Koikatsu Sunshine

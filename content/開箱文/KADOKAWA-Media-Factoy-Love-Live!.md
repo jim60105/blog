@@ -1,13 +1,16 @@
 +++
-title = "KADOKAWA Media Factoy \"Love Live!\" 軟膠吊飾集 再販 開箱文"
-description = ""
+title = 'KADOKAWA Media Factoy "Love Live!" 軟膠吊飾集 再販 開箱文'
+description = 'KADOKAWA Media Factoy "Love Live!" 軟膠吊飾集 再販 開箱文'
 date = 2014-06-18T17:58:00.002Z
 updated = 2020-08-30T17:00:20.963Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = ["開箱文"]
+tags = [ "開箱文" ]
+
+[extra]
+banner = "http://2.bp.blogspot.com/-DsR6-5ApQ7s/U6HQb17G9SI/AAAAAAAAGJo/Ja2lO55Rvnw/s1600/IMG_20140618_165903.jpg"
 +++
 幾個月前不知道受了什麼刺激就下標了(\*´ 艸 \`)  
 我那時候竟然沒付錢阿阿阿阿阿阿阿阿阿阿  

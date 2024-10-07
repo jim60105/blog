@@ -1,15 +1,18 @@
 +++
 title = "Osu!歌曲推薦"
-description = ""
+description = "Osu!歌曲推薦"
 date = 2013-07-10T16:57:00.002Z
 updated = 2021-01-24T09:45:15.876Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = []
+tags = [ ]
+
+[extra]
+banner = ""
 +++
-#### 
+####
 
 最近迷上玩Osu!...
 

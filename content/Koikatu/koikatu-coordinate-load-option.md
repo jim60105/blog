@@ -1,6 +1,6 @@
 +++
 title = "[Koikatu / Koikatsu Sunshine] 服裝卡選擇性載入插件 (Coordinate Load Option)"
-description = ""
+description = "[Koikatu / Koikatsu Sunshine] 服裝卡選擇性載入插件 (Coordinate Load Option)"
 date = 2019-03-24T18:08:00.082Z
 updated = 2024-10-03T06:22:49.482Z
 draft = false
@@ -8,8 +8,11 @@ aliases = ["/2019/03/koikatu-coordinate-load-option.html"]
 
 [taxonomies]
 tags = ["Koikatu", "C#"]
+
+[extra]
+banner = "https://img.maki0419.com/blog/preview/demo1-2.png"
 +++
-![](https://img.maki0419.com/blog/preview/demo1-2.png) 
+![](https://img.maki0419.com/blog/preview/demo1-2.png)
 
   
 ## 主要功能
@@ -56,7 +59,7 @@ tags = ["Koikatu", "C#"]
 而IllusionModdingAPI設計為「在Maker中**只會**載入一個角色」，這導致依賴於它的插件無法成功初始化假人。  
 如果你碰到問題請試著安裝[IllusionFixes.NullChecks](https://github.com/IllusionMods/IllusionFixes/releases/latest)，它可以簡單的繞過問題。因假人不使用到其它未支援的插件資料，它們的初始化失敗並不影響到換衣成果。  
   
-**IllusionFixes.NullChecks並不是此插件的依賴，但它可以繞過IllusionModdingAPI的設計缺陷。** 
+**IllusionFixes.NullChecks並不是此插件的依賴，但它可以繞過IllusionModdingAPI的設計缺陷。**
 
   
 ### 其它飾品功能插件 (絕大多數為Madevil製)
@@ -76,23 +79,23 @@ tags = ["Koikatu", "C#"]
 * madevil.kk.AAAPK
 
 > 給其它開發者
-> 
+>
 > ---
-> 
+>
 > 如果需要**擴充**此清單，請修改CoordinateLoadOption的Configuration Setting: "Plugin that bound accessories options"  
 > 填入其它插件的GUID，以逗點「,」分隔
 
   
 ### Coordinate Load ended unexpectedly.
 
-請確認環境滿足[「支援插件」](#支援插件)所寫條件  
+請確認環境滿足[「支援插件」](#%E6%94%AF%E6%8F%B4%E6%8F%92%E4%BB%B6)所寫條件  
 很重要所以我再寫一遍
 
 > Coordinate Load ended unexpectedly.
-> 
+>
 > ---
-> 
-> 請確認環境滿足[「支援插件」](#支援插件)所寫條件
+>
+> 請確認環境滿足[「支援插件」](#%E6%94%AF%E6%8F%B4%E6%8F%92%E4%BB%B6)所寫條件
 
   
 ## 衝突插件
@@ -101,17 +104,17 @@ tags = ["Koikatu", "C#"]
 * Koikatu Studio Coordinate Load Option (列為不兼容，此為插件更名，請移除此舊插件)
 
 > 關於 KK\_CoordinateLoadOption 和 KK\_ClothesLoadOption 之差異說明
-> 
+>
 > ---
-> 
+>
 > KK\_ClothesLoadOption (56e4\_xXVv): 實作了遊戲內服裝、飾品資料的拆分讀取  
-> KK\_CoordinateLoadOption (**我**): 實作了遊戲內服裝、飾品資料的拆分讀取，除此之外也處理[支援插件](#支援插件)的插件資料，包括 HairAccessoryCustomizer 數據、 Material Editor 數據、 More\_Accessories 數據等
-> 
+> KK\_CoordinateLoadOption (**我**): 實作了遊戲內服裝、飾品資料的拆分讀取，除此之外也處理[支援插件](#%E6%94%AF%E6%8F%B4%E6%8F%92%E4%BB%B6)的插件資料，包括 HairAccessoryCustomizer 數據、 Material Editor 數據、 More\_Accessories 數據等
+>
 > 在 KK 的原始設計中，服裝卡一次只能讀入一整套，並且大多數的插件也是搭建在此設計之上。為了實現部份讀取，我只能在外部拆分各支援插件的儲存資料。實際上，本插件的大部份程式碼都是在實作和其它插件之間的兼容處理，而這也是為什麼它在支援插件的版本不匹配時容易發生故障。
-> 
+>
 > 至於 56e4\_xXVv 開發的 KK\_ClothesLoadOption 狀況就不一樣了，它完全沒有處理任何插件資料。你的插件資料依然是以整套服裝為單位在讀寫，符合其它插件開發者的設計，自然也就有可能較少出現錯誤紅字。但是沒有錯誤不代表沒有發生問題，因為你的插件資料和遊戲服裝並不匹配。
-> 
-> 我相信你只有在兩種情境之下會發現它工作得更好: 當你的遊戲中不存在任何[支援插件](#支援插件)時；以及你不會判斷你的插件資料是否缺失時。
+>
+> 我相信你只有在兩種情境之下會發現它工作得更好: 當你的遊戲中不存在任何[支援插件](#%E6%94%AF%E6%8F%B4%E6%8F%92%E4%BB%B6)時；以及你不會判斷你的插件資料是否缺失時。
 
 ## 需求依賴
 

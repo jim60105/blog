@@ -1,13 +1,16 @@
 +++
 title = "LoveLive大型控制器"
-description = ""
+description = "LoveLive大型控制器"
 date = 2014-05-28T19:16:00.008Z
 updated = 2021-03-27T02:59:07.739Z
 draft = false
-aliases = ["/2014/05/lovelive.html"]
+aliases = [ "/2014/05/lovelive.html" ]
 
 [taxonomies]
-tags = []
+tags = [ ]
+
+[extra]
+banner = "https://1.bp.blogspot.com/-6kWocbpm90c/U4YnY3ZYV4I/AAAAAAAAF7E/mJ_tX7xWiq4/s1600/IMG_20140528_040854.jpg"
 +++
 [![](https://1.bp.blogspot.com/-6kWocbpm90c/U4YnY3ZYV4I/AAAAAAAAF7E/mJ_tX7xWiq4/s1600/IMG_20140528_040854.jpg)](http://1.bp.blogspot.com/-6kWocbpm90c/U4YnY3ZYV4I/AAAAAAAAF7E/mJ%5FtX7xWiq4/s1600/IMG%5F20140528%5F040854.jpg)
 
@@ -104,7 +107,7 @@ tags = []
 
 \--  
 **面板**  
- 接著處理木板  
+接著處理木板  
 我上網找到了這個盒子的dwg檔案:<http://goo.gl/pXpuwd>  
 不愧是五百多塊的盒子..  
   
@@ -120,7 +123,7 @@ tags = []
   
 [![](https://4.bp.blogspot.com/-LyV9UpwTFJY/U4Yye2iCliI/AAAAAAAAF7w/qKtM5C3763c/s1600/2014-05-29+02+58+43.png)](http://4.bp.blogspot.com/-LyV9UpwTFJY/U4Yye2iCliI/AAAAAAAAF7w/qKtM5C3763c/s1600/2014-05-29+02+58+43.png)
 
- ~~機械本科弄起來得心應手~~
+~~機械本科弄起來得心應手~~
 
 [![](https://1.bp.blogspot.com/-17JvzXEC7fw/U4YyeInaxNI/AAAAAAAAF7o/E8RBDioW2rc/s1600/2014-05-29+02+58+54.png)](http://1.bp.blogspot.com/-17JvzXEC7fw/U4YyeInaxNI/AAAAAAAAF7o/E8RBDioW2rc/s1600/2014-05-29+02+58+54.png)
 
@@ -177,7 +180,7 @@ tags = []
 畫好以後就是切木板  
 \--  
 **切木板**  
- 這時我跑去問我的外公  
+這時我跑去問我的外公  
 他老人家啥都有  
 \---系統訊息---  
 魯蛇獲得: 電鋸組\*1  

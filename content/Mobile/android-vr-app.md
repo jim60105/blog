@@ -1,13 +1,16 @@
 +++
 title = "Android VR 影片APP 分享推薦"
-description = ""
+description = "Android VR 影片APP 分享推薦"
 date = 2018-08-28T06:43:00.009Z
 updated = 2020-11-24T14:56:53.458Z
 draft = false
 aliases = ["/2018/08/android-vr-app.html"]
 
 [taxonomies]
-tags = ["Android"]
+tags = []
+
+[extra]
+banner = "https://2.bp.blogspot.com/-HKr8ERobMEE/W4S9M1tmp5I/AAAAAAAAL1c/bq9G8Lr4Z0szOzOe0EGZpaDWNqNOpxdMACEwYBhgL/s640/1.png"
 +++
 [![](https://2.bp.blogspot.com/-HKr8ERobMEE/W4S9M1tmp5I/AAAAAAAAL1c/bq9G8Lr4Z0szOzOe0EGZpaDWNqNOpxdMACEwYBhgL/s640/1.png)](https://2.bp.blogspot.com/-HKr8ERobMEE/W4S9M1tmp5I/AAAAAAAAL1c/bq9G8Lr4Z0szOzOe0EGZpaDWNqNOpxdMACEwYBhgL/s1600/1.png)
 
@@ -108,7 +111,7 @@ VeeR VR比較著重在社群的部分，來源都是使用者上傳，也是少�
 
 [![](https://2.bp.blogspot.com/-n85I2GTeqaQ/W4TsVtUIDtI/AAAAAAAAL3c/cj0hclsvsQcWN1rRiKVf1vdHCWQejzUegCLcBGAs/s1600/WPgPoyHF.jpg)](https://2.bp.blogspot.com/-n85I2GTeqaQ/W4TsVtUIDtI/AAAAAAAAL3c/cj0hclsvsQcWN1rRiKVf1vdHCWQejzUegCLcBGAs/s1600/WPgPoyHF.jpg)
 
-最後發車啦\~\~這網站不像PornHub一樣有做APP，採取直接在網站上播放的方式。這兩個情色網站最大的問題，就是播放並不流暢。LAG到倒槍。幸好vrporn提供影片下載，建議下載後再觀看。下載時選擇Smart Phone即可，不知為何，更好的影片版本常遇到無法播放的問題。很多影片自己有做鏡片變形，但是不一定符合你的VR眼鏡，我建議使用 VaR's VR播放器 去調整變形量會比較舒適。  
+最後發車啦\~\~這網站不像PornHub一樣有做APP，採取直接在網站上播放的方式。這兩個情色網站最大的問題，就是播放並不流暢。LAG到倒槍。幸好vrporn提供影片下載，建議下載後再觀看。下載時選擇Smart Phone即可，不知為何，更好的影片版本常遇到無法播放的問題。很多影片自己有做鏡片變形，但是不一定符合你的VR眼鏡，我建議使用[VaR's VR播放器](#var's-vr-video-player)去調整變形量會比較舒適。  
 順帶一提，這位Lewd Fraggy在[這裡](https://vrporn.com/waifu-sex-simulator-vr-3-0/)發了~~車~~一個看起來很酷的軟體，但是我沒有做測試。
 
 | [![](https://1.bp.blogspot.com/-wYxmcbmiP48/W4P1Xrf02GI/AAAAAAAAL0o/aBwbScw3au8wquIrfJP0R4LKXZfKgZTJQCPcBGAYYCw/s640/DSC06988.JPG)](https://1.bp.blogspot.com/-wYxmcbmiP48/W4P1Xrf02GI/AAAAAAAAL0o/aBwbScw3au8wquIrfJP0R4LKXZfKgZTJQCPcBGAYYCw/s1600/DSC06988.JPG) |

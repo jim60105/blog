@@ -1,21 +1,26 @@
 +++
 title = "Youtube iframe嵌入錯誤: 「無法播放影片 在 YouTube 上觀看」"
-description = ""
+description = "Youtube iframe嵌入錯誤: 「無法播放影片 在 YouTube 上觀看」"
 date = 2022-09-24T23:47:00.021Z
 updated = 2022-12-16T10:59:52.849Z
 draft = false
-aliases = ["/2022/09/youtube-iframe-embed-Video-unavailable-Watch-on-YouTube.html"]
+aliases = [
+  "/2022/09/youtube-iframe-embed-Video-unavailable-Watch-on-YouTube.html"
+]
 
 [taxonomies]
-tags = ["JavaScript", "YouTube"]
+tags = [ "JavaScript", "Livestream" ]
+
+[extra]
+banner = "https://img.maki0419.com/blog/youtube-video-unavailable/preview.png"
 +++
-[![](https://img.maki0419.com/blog/youtube-video-unavailable/preview.png)](https://img.maki0419.com/blog/youtube-video-unavailable/preview.png) 
+[![](https://img.maki0419.com/blog/youtube-video-unavailable/preview.png)](https://img.maki0419.com/blog/youtube-video-unavailable/preview.png)
 
 > 這個錯誤的英文訊息為「Video unavailable Watch on YouTube」
 
 ## Youtube iframe嵌入錯誤: 「無法播放影片 在 YouTube 上觀看」
 
- Youtube iframe 嵌入在「某些影片」無法顯示，出現如圖的灰畫面，這些影片的共通點是「原影片有(音樂)版權宣告」。
+Youtube iframe 嵌入在「某些影片」無法顯示，出現如圖的灰畫面，這些影片的共通點是「原影片有(音樂)版權宣告」。
 
 而且我在`ng serve` 的 localhost 開發是正常的，部署到 **Azure Static Web Apps** 站台後才有問題。
 
@@ -24,7 +29,7 @@ tags = ["JavaScript", "YouTube"]
 
 ## 釐清問題
 
- Youtube iframe 大概(?)會檢查`referer` 標頭決定要不要理你，請確認以下幾點
+Youtube iframe 大概(?)會檢查`referer` 標頭決定要不要理你，請確認以下幾點
 
 * iframe 向 Youtube 取得文件的 request header 存在`referer` 標頭
 * request 是走 https
@@ -39,22 +44,22 @@ tags = ["JavaScript", "YouTube"]
 
 ## 解決問題
 
-[![](https://img.maki0419.com/blog/youtube-video-unavailable/2022-09-25 07 35 45.png)](https://img.maki0419.com/blog/youtube-video-unavailable/2022-09-25 07 35 45.png) 
+[![](https://img.maki0419.com/blog/youtube-video-unavailable/2022-09-25 07 35 45.png)](https://img.maki0419.com/blog/youtube-video-unavailable/2022-09-25 07 35 45.png)
 
 我的狀況是缺少了 `referer` header。
 
- 一般來說瀏覧器的 Referrer-Policy 預設為 `strict-origin-when-cross-origin`，會送出`referer` header 才對...但我的網站「被」配置為了 `same-origin`。兇手除了 Azure Static Web Apps 站台還能是誰?
+一般來說瀏覧器的 Referrer-Policy 預設為 `strict-origin-when-cross-origin`，會送出`referer` header 才對...但我的網站「被」配置為了 `same-origin`。兇手除了 Azure Static Web Apps 站台還能是誰?
 
- 那麼解法也很明朗了，在 `index.html` 加上`meta` tag:
+那麼解法也很明朗了，在 `index.html` 加上`meta` tag:
 
-> [![](https://img.maki0419.com/blog/serilog/finger.gif) ](https://img.maki0419.com/blog/serilog/finger.gif) 
-> 
+> [![](https://img.maki0419.com/blog/serilog/finger.gif) ](https://img.maki0419.com/blog/serilog/finger.gif)
+>
 >  
 > 為什麼我寫「大概(?)」  
 > 因為沒有錯誤訊息沒有文件~~沒有證據~~啊  
 > 叫我通靈王啦  
 >  
-> [找到證據啦！](https://github.com/Azure/static-web-apps/issues/2#issuecomment-907507087) 
+> [找到證據啦！](https://github.com/Azure/static-web-apps/issues/2#issuecomment-907507087)
 
 ## 參考文件
 

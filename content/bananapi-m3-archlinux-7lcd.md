@@ -1,13 +1,16 @@
 +++
 title = "Bananapi 香蕉派M3 ArchLinux 支援BPI7吋LCD輸出之鏡像"
-description = ""
+description = "Bananapi 香蕉派M3 ArchLinux 支援BPI7吋LCD輸出之鏡像"
 date = 2016-03-12T13:33:00.003Z
 updated = 2020-11-24T14:56:53.459Z
 draft = false
-aliases = ["/2016/03/bananapi-m3-archlinux-7lcd.html"]
+aliases = [ "/2016/03/bananapi-m3-archlinux-7lcd.html" ]
 
 [taxonomies]
-tags = ["bananapi"]
+tags = [ "bananapi" ]
+
+[extra]
+banner = "https://2.bp.blogspot.com/-uTvS5VOfIT8/VuQVZ4Fry4I/AAAAAAAAK8I/KDxmvPaKVKMU2wuSYEv86VkO_WZN94W1w/s640/IMG_20160312_142441.jpg"
 +++
 [![](https://2.bp.blogspot.com/-uTvS5VOfIT8/VuQVZ4Fry4I/AAAAAAAAK8I/KDxmvPaKVKMU2wuSYEv86VkO_WZN94W1w/s640/IMG_20160312_142441.jpg)](https://2.bp.blogspot.com/-uTvS5VOfIT8/VuQVZ4Fry4I/AAAAAAAAK8I/KDxmvPaKVKMU2wuSYEv86VkO%5FWZN94W1w/s1600/IMG%5F20160312%5F142441.jpg)
   
@@ -35,18 +38,18 @@ Google: <https://drive.google.com/open?id=0B-LfCSS6uQyuOUlSaHJIV0EwY0k>
 
 dd if=arch_LCD7_20160312.img of=/dev/sdx bs=1M
 
-(覆蓋/dev/sdx為你的記憶卡位置) 
+(覆蓋/dev/sdx為你的記憶卡位置)
 
-詳見: <https://bananapi.gitbooks.io/bpi-m3/content/howtoburnlinuximagetoemmc.html> 
+詳見: <https://bananapi.gitbooks.io/bpi-m3/content/howtoburnlinuximagetoemmc.html>
 
   
-寫入完成後，請用resize2fs擴大/dev/sdx2之容量為記憶卡最大大小 
+寫入完成後，請用resize2fs擴大/dev/sdx2之容量為記憶卡最大大小
 
-方法詳見: <http://banoffeepiserver.com/resize-the-root-file-system-partition.html> 
+方法詳見: <http://banoffeepiserver.com/resize-the-root-file-system-partition.html>
 
 ## 已知問題
 
-那個藍底螢幕不知道怎麼調啊\~ 
+那個藍底螢幕不知道怎麼調啊\~
 
 ## 參考資料
 

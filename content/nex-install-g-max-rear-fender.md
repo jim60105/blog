@@ -1,13 +1,16 @@
 +++
 title = "NEX上水冷G-MAX150 新版後土除"
-description = ""
+description = "NEX上水冷G-MAX150 新版後土除"
 date = 2014-03-13T17:03:00.003Z
 updated = 2020-10-21T22:04:27.054Z
 draft = false
-aliases = ["/2014/03/nexg-max200.html"]
+aliases = [ "/2014/03/nexg-max200.html" ]
 
 [taxonomies]
-tags = []
+tags = [ ]
+
+[extra]
+banner = "http://4.bp.blogspot.com/-gV2-82QEVis/UyHjiJvVxfI/AAAAAAAAFkc/Oglu93nv9bI/s1600/DSCN2899.JPG"
 +++
 後面圖片手機渣畫質見諒Orz  
   

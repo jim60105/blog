@@ -1,13 +1,16 @@
 +++
 title = "灌Win7時滑鼠鍵盤無法使用"
-description = ""
+description = "灌Win7時滑鼠鍵盤無法使用"
 date = 2017-02-04T12:48:00.006Z
 updated = 2021-01-24T09:44:25.863Z
 draft = false
-aliases = ["/2017/02/win7.html"]
+aliases = [ "/2017/02/win7.html" ]
 
 [taxonomies]
-tags = ["備忘"]
+tags = [ ]
+
+[extra]
+banner = "https://1.bp.blogspot.com/-nYZSca0psSM/WJXKJIg_u6I/AAAAAAAALHg/9qTq3QVlVPYFBTYke1HTrLfAPDDKv0xrACLcB/s1600/16462979_1440769079276032_4799561238389875984_o.jpg"
 +++
 [![](https://1.bp.blogspot.com/-nYZSca0psSM/WJXKJIg_u6I/AAAAAAAALHg/9qTq3QVlVPYFBTYke1HTrLfAPDDKv0xrACLcB/s1600/16462979_1440769079276032_4799561238389875984_o.jpg)](https://1.bp.blogspot.com/-nYZSca0psSM/WJXKJIg%5Fu6I/AAAAAAAALHg/9qTq3QVlVPYFBTYke1HTrLfAPDDKv0xrACLcB/s1600/16462979%5F1440769079276032%5F4799561238389875984%5Fo.jpg)
 
@@ -21,10 +24,10 @@ Google了一下，貌似是Win7沒有USB3.0驅動，而這台又沒有USB2.0插�
 > Win7由於沒有預載USB3.0驅動程式，版端上所有USB Port都無法使用.  
 > 可安裝Win7,但裝好後USB Port與USB鍵盤/滑鼠都無法使用而已,要自己想辦法裝USB3.0驅動程式.  
 > 驅動程式你會裝就可以用WIN7.  
-> 
+>
 > ── [拉杜紫 2015-08-21 14:07](https://www.mobile01.com/topicdetail.php?f=488&t=4506766&p=1#57140035)
 
- 以下直接放解答  
+以下直接放解答  
 
 > 其實可以用USB安裝拉....也不用去看那個複雜的教學笑  
 > 去下載這個就好了...  
@@ -41,5 +44,5 @@ Google了一下，貌似是Win7沒有USB3.0驅動，而這台又沒有USB2.0插�
 > 感謝ASRock讓我的腦袋變聰明了含情  
 >  
 > 家中的ASUS Maximus VIII HERO就是這樣裝的笑  
-> 
+>
 > ── [chousport 2015-10-19 08:18](https://www.mobile01.com/topicdetail.php?f=488&t=4506766&p=2#57867377)

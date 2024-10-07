@@ -1,13 +1,16 @@
 +++
 title = "WSL、PowerShell 設定備忘"
-description = ""
+description = "WSL、PowerShell 設定備忘"
 date = 2020-12-03T18:25:00.031Z
 updated = 2022-09-29T04:54:20.744Z
 draft = false
-aliases = ["/2020/12/wsl.html"]
+aliases = [ "/2020/12/wsl.html" ]
 
 [taxonomies]
-tags = ["備忘"]
+tags = [ ]
+
+[extra]
+banner = ""
 +++
 ## 前言   
 
@@ -17,11 +20,11 @@ tags = ["備忘"]
 
 ### 指南
 
-**做完:** <https://learn.microsoft.com/zh-tw/windows/wsl/install-manual> 
+**做完:** <https://learn.microsoft.com/zh-tw/windows/wsl/install-manual>
 
 ### 設定預設WSL
 
- 如果是從Docker安裝的WSL，那麼預設下`wsl`command時會進入Docker WSL中
+如果是從Docker安裝的WSL，那麼預設下`wsl`command時會進入Docker WSL中
 
 列出所有WSL，確認預設
 
@@ -29,7 +32,7 @@ wsl -l
 
 修改預設WSL
 
-wsl -s 
+wsl -s
 
 ## 在Windows↔WSL間傳檔
 
@@ -51,7 +54,7 @@ DistroName由`wsl -l`查詢 
   <https://blog.miniasp.com/post/2020/07/26/Multiple-Linux-Dev-Environment-build-on-WSL-2>
 
 
-## 
+##
   新版Powershell
 
 
@@ -118,7 +121,7 @@ DistroName由`wsl -l`查詢 
 這兩個都要修改
 
 
-### 
+###
   修改後字體在Loading時會瞬間改變、閃礫；由WSL使用vim時，字體會跳掉
 
 

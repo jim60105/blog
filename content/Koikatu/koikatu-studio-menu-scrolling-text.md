@@ -1,6 +1,6 @@
 +++
 title = "[Koikatu] Studio選單跑馬燈 (Studio Menu Scrolling Text)"
-description = ""
+description = "[Koikatu] Studio選單跑馬燈 (Studio Menu Scrolling Text)"
 date = 2020-09-05T15:51:00.019Z
 updated = 2021-10-31T11:07:35.342Z
 draft = false
@@ -8,8 +8,11 @@ aliases = ["/2020/09/koikatu-studio-menu-scrolling-text.html"]
 
 [taxonomies]
 tags = ["Koikatu", "C#"]
+
+[extra]
+banner = "https://img.maki0419.com/blog/preview/demo20.png"
 +++
-![](https://img.maki0419.com/blog/preview/demo20.png) 
+![](https://img.maki0419.com/blog/preview/demo20.png)
   
   
 * 在Studio的添加物品內，群組清單和分類清單文字添加滾動顯示功能
@@ -19,7 +22,7 @@ tags = ["Koikatu", "C#"]
   
 #### 自訂文字之說明
 
-[![](https://img.maki0419.com/blog/demo20-1.png)](https://img.maki0419.com/blog/demo20-1.png) 
+[![](https://img.maki0419.com/blog/demo20-1.png)](https://img.maki0419.com/blog/demo20-1.png)
 
 * 撰寫「.csv」文件，名稱隨意
 * 預設存放在「根目錄\\BepInEx\\plugins\\jim60105\\KK\_StudioMenuScrollingText」之下，此路徑可在Config更改
@@ -38,7 +41,7 @@ tags = ["Koikatu", "C#"]
 ####  需求依賴
 
 * コイカツ！ ダークネス (Koikatu! Darkness)  
- 這不相容於Steam Koikatsu Party
+這不相容於Steam Koikatsu Party
 * **BepInEx v5.3 (不支援v5.0.X)**
 
 ####  安裝方式

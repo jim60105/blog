@@ -1,13 +1,16 @@
 +++
 title = "[開箱] Banana Pi 香蕉派M3 各種體驗感想"
-description = ""
+description = "[開箱] Banana Pi 香蕉派M3 各種體驗感想"
 date = 2016-03-07T21:53:00.003Z
 updated = 2020-11-24T14:54:20.822Z
 draft = false
-aliases = ["/2016/03/banana-pi-m3.html"]
+aliases = [ "/2016/03/banana-pi-m3.html" ]
 
 [taxonomies]
-tags = ["開箱文", "bananapi"]
+tags = [ "開箱文", "bananapi" ]
+
+[extra]
+banner = "https://1.bp.blogspot.com/-W7ZwiM1LE3s/Vt3pX1Ip3wI/AAAAAAAAK74/pl2dsd4lKug/s640/12805737_1142003222485954_5516453877118792813_n.jpg"
 +++
 [![](https://1.bp.blogspot.com/-W7ZwiM1LE3s/Vt3pX1Ip3wI/AAAAAAAAK74/pl2dsd4lKug/s640/12805737_1142003222485954_5516453877118792813_n.jpg)](https://1.bp.blogspot.com/-W7ZwiM1LE3s/Vt3pX1Ip3wI/AAAAAAAAK74/pl2dsd4lKug/s1600/12805737%5F1142003222485954%5F5516453877118792813%5Fn.jpg)
 
@@ -114,7 +117,7 @@ tags = ["開箱文", "bananapi"]
   
 ## 結論:
 
- 目前我留下來的系統有兩個: Android LCD\_V2版+ArchLinux(純console)。Android拿來普通使用，Arch做備援Linux系統，畢竟Android不方便下command。期待官方繼續更新系統，讓其他Linux系統也能吃好吃滿\_(:3 」∠ )\_
+目前我留下來的系統有兩個: Android LCD\_V2版+ArchLinux(純console)。Android拿來普通使用，Arch做備援Linux系統，畢竟Android不方便下command。期待官方繼續更新系統，讓其他Linux系統也能吃好吃滿\_(:3 」∠ )\_
 
 | [![](https://2.bp.blogspot.com/-Z1fsHbEOGlk/Vt3ofZSxYeI/AAAAAAAAK70/6yIGvNLeKeI/s640/IMG_20160307_132539_HDR.jpg)](https://2.bp.blogspot.com/-Z1fsHbEOGlk/Vt3ofZSxYeI/AAAAAAAAK70/6yIGvNLeKeI/s1600/IMG%5F20160307%5F132539%5FHDR.jpg) |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

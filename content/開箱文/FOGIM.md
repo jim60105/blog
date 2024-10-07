@@ -1,13 +1,16 @@
 +++
 title = "FOGIM夾桌懸臂式液晶螢幕支架 開箱"
-description = ""
+description = "FOGIM夾桌懸臂式液晶螢幕支架 開箱"
 date = 2014-10-28T14:02:00.003Z
 updated = 2020-08-30T16:59:36.576Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = ["開箱文"]
+tags = [ "開箱文" ]
+
+[extra]
+banner = "http://3.bp.blogspot.com/-FYAQdv_uTVg/VE-dffGO-rI/AAAAAAAAKS0/Y1NLRElEq-E/s1600/IMG_20141028_192213.jpg"
 +++
 [![](http://3.bp.blogspot.com/-FYAQdv_uTVg/VE-dffGO-rI/AAAAAAAAKS0/Y1NLRElEq-E/s1600/IMG_20141028_192213.jpg)](http://3.bp.blogspot.com/-FYAQdv%5FuTVg/VE-dffGO-rI/AAAAAAAAKS0/Y1NLRElEq-E/s1600/IMG%5F20141028%5F192213.jpg)
 
@@ -20,21 +23,21 @@ tags = ["開箱文"]
   
 [![](http://4.bp.blogspot.com/-0JG4ZpMGj_E/VE-c_4XKTEI/AAAAAAAAKQ0/aIzoG2Wn5u0/s1600/IMG_20141028_162424.jpg)](http://4.bp.blogspot.com/-0JG4ZpMGj%5FE/VE-c%5F4XKTEI/AAAAAAAAKQ0/aIzoG2Wn5u0/s1600/IMG%5F20141028%5F162424.jpg)
 
- 超神速的PChome 24h\~\~  
+超神速的PChome 24h\~\~  
   
 [![](http://2.bp.blogspot.com/-bAEmVFpG0JM/VE-dIvaZ5_I/AAAAAAAAKRU/LCHhEYUECwE/s1600/IMG_20141028_162526.jpg)](http://2.bp.blogspot.com/-bAEmVFpG0JM/VE-dIvaZ5%5FI/AAAAAAAAKRU/LCHhEYUECwE/s1600/IMG%5F20141028%5F162526.jpg)
 
- 超大一個箱子裡面只放這一樣  
+超大一個箱子裡面只放這一樣  
   
   
 [![](http://2.bp.blogspot.com/-yd8B5AFmxkg/VE-dFvPaaRI/AAAAAAAAKRM/BfWHVHdvCFc/s1600/IMG_20141028_162658_2.jpg)](http://2.bp.blogspot.com/-yd8B5AFmxkg/VE-dFvPaaRI/AAAAAAAAKRM/BfWHVHdvCFc/s1600/IMG%5F20141028%5F162658%5F2.jpg)
 
- 箱子正面  
+箱子正面  
   
   
 [![](http://4.bp.blogspot.com/-g6o7uBDKgFw/VE-dJITm2gI/AAAAAAAAKRY/BE2Li5FhO-A/s1600/IMG_20141028_162728.jpg)](http://4.bp.blogspot.com/-g6o7uBDKgFw/VE-dJITm2gI/AAAAAAAAKRY/BE2Li5FhO-A/s1600/IMG%5F20141028%5F162728.jpg)
 
- 防震做的很不錯  
+防震做的很不錯  
 
 ## 組裝
 

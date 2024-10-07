@@ -1,19 +1,22 @@
 +++
 title = "瀏覧器影音自動播放之研究手札 (Chrome、Firefox)"
-description = ""
+description = "瀏覧器影音自動播放之研究手札 (Chrome、Firefox)"
 date = 2022-01-29T19:25:00.053Z
 updated = 2022-12-16T09:47:19.053Z
 draft = false
-aliases = ["/2022/01/media-autoplay-on-browser.html"]
+aliases = [ "/2022/01/media-autoplay-on-browser.html" ]
 
 [taxonomies]
-tags = ["JavaScript"]
+tags = [ "JavaScript" ]
+
+[extra]
+banner = "https://img.maki0419.com/blog/media-autoplay/preview.png"
 +++
-[![](https://img.maki0419.com/blog/media-autoplay/preview.png)](https://img.maki0419.com/blog/media-autoplay/preview.png) 
+[![](https://img.maki0419.com/blog/media-autoplay/preview.png)](https://img.maki0419.com/blog/media-autoplay/preview.png)
 
- 我在做[影片截選播放清單](https://blog.maki0419.com/2020/12/userscript-youtube-clip-playlist.html)時，遇到播放時會停住的問題，並發現在各瀏覽器、各網站的表現不同，用戶回報給我的狀況也都不同。我對這件事做了些研究，並撰寫下此文記錄。為了改善用戶體驗，瀏覽器正朝著更嚴格的自動播放政策發展。它的目的是讓用戶對播放有更大的控制權，並([Chrome稱](https://developer.chrome.com/blog/autoplay/#new-behaviors))讓有合法用途的出版商受益。
+我在做[影片截選播放清單](https://blog.maki0419.com/2020/12/userscript-youtube-clip-playlist.html)時，遇到播放時會停住的問題，並發現在各瀏覽器、各網站的表現不同，用戶回報給我的狀況也都不同。我對這件事做了些研究，並撰寫下此文記錄。為了改善用戶體驗，瀏覽器正朝著更嚴格的自動播放政策發展。它的目的是讓用戶對播放有更大的控制權，並([Chrome稱](https://developer.chrome.com/blog/autoplay/#new-behaviors))讓有合法用途的出版商受益。
 
- 這篇文章會提及Chrome、Firefox的自動播放規則，身為網站開發者我們該怎麼處理前端；身為用戶我們該怎麼手動允許特定網站的自動播放。
+這篇文章會提及Chrome、Firefox的自動播放規則，身為網站開發者我們該怎麼處理前端；身為用戶我們該怎麼手動允許特定網站的自動播放。
 
 ## 「阻擋自動播放」行為的明確定義
 
@@ -120,13 +123,13 @@ if (promise !== undefined) {
 
 
 >  延伸閱讀，請確認此章Chrome部落格給開發者的建議  
-> 
+>
 >  <https://developer.chrome.com/blog/autoplay/#best-practices-for-web-developers>  
-> 
+>
 >    
-> 
+>
 >  若你有用到iframe，也注意一下iframe-delegation這個章節  
-> 
+>
 >  <https://developer.chrome.com/blog/autoplay/#iframe-delegation>
 
 
@@ -226,7 +229,7 @@ if (promise !== undefined) {
 
 
 >  Day20 Autoplay 與 mute - iT 邦幫忙  
-> 
+>
 >  <https://ithelp.ithome.com.tw/articles/10218679>
 
 

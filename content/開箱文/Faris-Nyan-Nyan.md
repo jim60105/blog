@@ -1,15 +1,18 @@
 +++
 title = "菲利斯喵喵"
-description = ""
+description = "菲利斯喵喵"
 date = 2013-05-11T14:51:00.000Z
 updated = 2020-08-30T17:00:36.196Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = ["開箱文"]
+tags = [ "開箱文" ]
+
+[extra]
+banner = "http://4.bp.blogspot.com/-r44uhZCfpeo/UY5VbPwuyaI/AAAAAAAAAlk/eA1FwzAg3S0/s640/DSCN1772.JPG"
 +++
- 今天去安利美特買我妹的生日禮物，順便就敗了一包，想說不管抽到哪個都可以接受
+今天去安利美特買我妹的生日禮物，順便就敗了一包，想說不管抽到哪個都可以接受
 
   
 [![](http://4.bp.blogspot.com/-r44uhZCfpeo/UY5VbPwuyaI/AAAAAAAAAlk/eA1FwzAg3S0/s640/DSCN1772.JPG)](http://4.bp.blogspot.com/-r44uhZCfpeo/UY5VbPwuyaI/AAAAAAAAAlk/eA1FwzAg3S0/s1600/DSCN1772.JPG)

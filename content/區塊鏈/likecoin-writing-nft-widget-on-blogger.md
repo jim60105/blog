@@ -1,6 +1,6 @@
 +++
 title = "在Blogger或其它寫作平台放置LikeCoin Button、Writing NFT widget (半自動化)"
-description = ""
+description = "在Blogger或其它寫作平台放置LikeCoin Button、Writing NFT widget (半自動化)"
 date = 2022-12-14T13:04:00.017Z
 updated = 2023-11-05T07:31:32.294Z
 draft = false
@@ -8,16 +8,19 @@ aliases = ["/2022/12/likecoin-writing-nft-widget-on-blogger.html"]
 
 [taxonomies]
 tags = ["區塊鏈"]
+
+[extra]
+banner = "https://img.maki0419.com/blog/likecoin-writing-nft-widget/preview.png"
 +++
-[![](https://img.maki0419.com/blog/likecoin-writing-nft-widget/preview.png)](https://img.maki0419.com/blog/likecoin-writing-nft-widget/preview.png) 
+[![](https://img.maki0419.com/blog/likecoin-writing-nft-widget/preview.png)](https://img.maki0419.com/blog/likecoin-writing-nft-widget/preview.png)
 
 ## 前言
 
 我也加入 Writing NFT 的作者行列了！
 
- 這篇文章教各位在 Blogger 每篇文的文末自動產生 LikeCoin Button ，並且，只要在文章中加入 ISCN ，LikeCoin Button 就會變成 Writing NFT widget！
+這篇文章教各位在 Blogger 每篇文的文末自動產生 LikeCoin Button ，並且，只要在文章中加入 ISCN ，LikeCoin Button 就會變成 Writing NFT widget！
 
- 所謂的「半自動化」，是指你需要手動為文章產生 ISCN 並加入文章內，其餘都是自動化的喔！
+所謂的「半自動化」，是指你需要手動為文章產生 ISCN 並加入文章內，其餘都是自動化的喔！
 
 ## Widget 外觀
 
@@ -38,9 +41,9 @@ tags = ["區塊鏈"]
 
 ## 使用方式
 
-### 在沒有出版為 Writing NFT 的時候 
+### 在沒有出版為 Writing NFT 的時候
 
-它會顯示為讚賞按鈕，自動的，什麼都不用做！ 
+它會顯示為讚賞按鈕，自動的，什麼都不用做！
 
 ### 在出版為 Writing NFT 的時候
 
@@ -56,13 +59,13 @@ tags = ["區塊鏈"]
 iscn://likecoin-chain/iQ5NQdeCLXQ66evbflzBGgc908rbt0xlfH15cQLdlSQ/1
 
 > 各位理解後一定能記住它
-> 
+>
 > ---
-> 
+>
 > <div id="iscn" hidden\>iscn://likecoin-chain/iQ5NQdeCLXQ66evbflzBGgc908rbt0xlfH15cQLdlSQ/1
-> 
+>
 > ---
-> 
+>
 > 綠色： div 標籤本體，它是的形式  
 > 橘色： 這個標籤的 id，用做程式碼的識別，這 id 就叫做 iscn  
 > 黃色： hidden ，設定這個標籤在頁面上隱藏不顯示  

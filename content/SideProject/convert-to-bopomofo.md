@@ -1,13 +1,16 @@
 +++
 title = "手殘亂碼終結者"
-description = ""
+description = "手殘亂碼終結者"
 date = 2014-10-05T09:25:00.000Z
 updated = 2020-11-24T14:56:53.458Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = []
+tags = [ ]
+
+[extra]
+banner = "http://2.bp.blogspot.com/-3GMqXFZBTfs/VDEMQ7nOUvI/AAAAAAAAKEQ/pFqmBExciD8/s1600/2014-10-05%2B17%2B15%2B29.png"
 +++
 [![](http://2.bp.blogspot.com/-3GMqXFZBTfs/VDEMQ7nOUvI/AAAAAAAAKEQ/pFqmBExciD8/s1600/2014-10-05%2B17%2B15%2B29.png)](http://2.bp.blogspot.com/-3GMqXFZBTfs/VDEMQ7nOUvI/AAAAAAAAKEQ/pFqmBExciD8/s1600/2014-10-05%2B17%2B15%2B29.png)
 

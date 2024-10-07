@@ -1,13 +1,16 @@
 +++
 title = "YADI MEL-06W 行動電源 6000mAh開箱照"
-description = ""
+description = "YADI MEL-06W 行動電源 6000mAh開箱照"
 date = 2013-05-11T14:08:00.001Z
 updated = 2020-08-30T17:00:39.096Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = ["開箱文"]
+tags = [ "開箱文" ]
+
+[extra]
+banner = "http://2.bp.blogspot.com/-lAsfOl6wKrE/UY5M0JyVA_I/AAAAAAAAAjw/HwX1y0ZZlEU/s640/DSCN1778.JPG"
 +++
 #### 首先，我買這個沒有做過功課，而且還是網購。((←根本找死www
 

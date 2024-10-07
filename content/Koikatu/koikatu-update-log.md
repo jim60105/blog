@@ -1,6 +1,6 @@
 +++
 title = "[Koikatu] コイカツ！ 個人插件更新記錄"
-description = ""
+description = "[Koikatu] コイカツ！ 個人插件更新記錄"
 date = 2022-12-04T12:36:00.004Z
 updated = 2023-09-30T18:12:35.830Z
 draft = false
@@ -8,23 +8,26 @@ aliases = ["/2020/05/koikatu-update-log.html"]
 
 [taxonomies]
 tags = ["Koikatu"]
+
+[extra]
+banner = "https://img.maki0419.com/blog/preview/banner.png"
 +++
 ↑↑Last Update Time
 
   
-[![](https://img.maki0419.com/blog/preview/banner.png)](https://img.maki0419.com/blog/preview/banner.png) 
+[![](https://img.maki0419.com/blog/preview/banner.png)](https://img.maki0419.com/blog/preview/banner.png)
 
-[Github Commit History](https://github.com/jim60105/KK/commits/KKSunshine) 
+[Github Commit History](https://github.com/jim60105/KK/commits/KKSunshine)
 
   
- 此頁只做Log記錄用，請到下方鏈結尋找下載和其它資訊。  
+此頁只做Log記錄用，請到下方鏈結尋找下載和其它資訊。  
 このページはロギング専用です。  
 ダウンロードやその他の詳細については、このリンクにアクセスしてください。  
 This page is only for logging, please go to this link for download and other details.  
-[\>>> コイカツ！個人插件介紹匯整 <<<](/2020/05/personal-koikatu-plugin.html) 
+[\>>> コイカツ！個人插件介紹匯整 <<<](/2020/05/personal-koikatu-plugin.html)
 
   
-2023/10/01 
+2023/10/01
 
 ###  Studio Chara Only Load Body
 
@@ -33,10 +36,10 @@ PV.v23.10.01.0
 RV.v1.4.4
 
 * Add compatibility with AdditionalFKNodes  
- Currently there is no AdditionalFKNodes for KKS.  
- This update is to keep it consistent with the KK version.
+Currently there is no AdditionalFKNodes for KKS.  
+This update is to keep it consistent with the KK version.
 
-2023/10/01 
+2023/10/01
 
 ### **_Koikatu_** Studio Chara Only Load Body
 
@@ -48,7 +51,7 @@ RV.v1.3.11
 
 ---
 
-2022/12/04 
+2022/12/04
 
 ### Coordinate Load Option
 
@@ -63,7 +66,7 @@ RV.v1.4.7
 
 ---
 
-2022/11/04 
+2022/11/04
 
 ### Studio Save Workspace Order Fix
 
@@ -73,7 +76,7 @@ RV.v1.1.1
 
 * [Prevent crashes breaking studio save, for insurance](https://github.com/jim60105/KK/commit/8d11d1fee942d8fe20cb272e5606363a08e4054a) by ManlyMarco
 
-2022/11/04 
+2022/11/04
 
 ### **_Koikatu_**Studio Save Workspace Order Fix
 
@@ -83,7 +86,7 @@ RV.v1.0.2
 
 * [Prevent crashes breaking studio save, for insurance](https://github.com/jim60105/KK/commit/21b10f820364544661d8cd90a1bb1923cc5f30c6) by ManlyMarco
 
-2022/11/02 
+2022/11/02
 
 ### **_Koikatu_**Studio Chika Replacer
 
@@ -95,7 +98,7 @@ RV.v1.1.2
 
 ---
 
-2022/06/30 
+2022/06/30
 
 ### Coordinate Load Option
 
@@ -105,7 +108,7 @@ RV.v1.4.3
 
 * When boundAcc, adjust UI display to avoid misunderstanding.
 
-2022/06/30 
+2022/06/30
 
 ### **_Koikatu_** Studio Chara Only Load Body
 
@@ -117,7 +120,7 @@ RV.v1.3.10
 
 ---
 
-2022/05/08 
+2022/05/08
 
 ### **_Koikatu_** Coordinate Load Option
 
@@ -129,7 +132,7 @@ RV.v1.1.9
 
 ---
 
-2021/12/25 
+2021/12/25
 
 ### **_Koikatu_** Coordinate Load Option
 
@@ -141,7 +144,7 @@ RV.v1.1.8.1
 
 ---
 
-2021/12/24 
+2021/12/24
 
 ### Coordinate Load Option
 
@@ -154,7 +157,7 @@ RV.v1.4.2
 3. 移除MoreAcc相關的RemoveEmptyFromBackToFront功能
 4. 兼容KKS\_MoreOutfits
 
-2021/12/24 
+2021/12/24
 
 ### **_Koikatu_** Coordinate Load Option
 
@@ -166,7 +169,7 @@ RV.v1.1.8
 2. Fix NullRefException with HairAccCus Supports
 3. Fix changes on ABMX v4.4.4 (Also change the dependent version to v4.4.4)
 
-2021/12/24 
+2021/12/24
 
 ### Save Load Compression
 
@@ -177,7 +180,7 @@ RV.v1.6.0
 1. Chara、Coordinate、Scene的分別選項
 2. Change default settings
 
-2021/12/24 
+2021/12/24
 
 ### Studio Chara Only Load Body
 
@@ -189,7 +192,7 @@ RV.v1.4.3
 
 ---
 
-2021/10/30 
+2021/10/30
 
 ### Studio Chara Light Linked To Camera
 
@@ -200,7 +203,7 @@ RV.v1.2.0
 1. 升級至Koikatsu Sunshine
 2. 升級至.NET Standard 2.0
 
-2021/10/30 
+2021/10/30
 
 ### Studio Simple Color On Girls
 
@@ -211,7 +214,7 @@ RV.v1.3.0
 1. 升級至Koikatsu Sunshine
 2. 升級至.NET Standard 2.0
 
-2021/10/30 
+2021/10/30
 
 ### Studio Auto Close Loading Scene Window
 
@@ -222,7 +225,7 @@ RV.v1.1.1
 1. 升級至Koikatsu Sunshine
 2. 升級至.NET Standard 2.0
 
-2021/10/30 
+2021/10/30
 
 ### Studio Chika Replacer
 
@@ -233,7 +236,7 @@ RV.v1.2.0
 1. 升級至Koikatsu Sunshine
 2. 升級至.NET Standard 2.0
 
-2021/10/30 
+2021/10/30
 
 ### Studio Transgender Loading
 
@@ -244,7 +247,7 @@ RV.v1.1.0
 1. 升級至Koikatsu Sunshine
 2. 升級至.NET Standard 2.0
 
-2021/10/30 
+2021/10/30
 
 ### Studio Save Workspace Order Fix
 
@@ -255,7 +258,7 @@ RV.v1.1.0
 1. 升級至Koikatsu Sunshine
 2. 升級至.NET Standard 2.0
 
-2021/10/30 
+2021/10/30
 
 ### Studio Reflect FK Fix
 
@@ -266,7 +269,7 @@ RV.v1.1.0
 1. 升級至Koikatsu Sunshine
 2. 升級至.NET Standard 2.0
 
-2021/10/30 
+2021/10/30
 
 ### Studio Dual Screen
 
@@ -278,7 +281,7 @@ RV.v1.2.0
 2. 升級至.NET Standard 2.0
 3. 現在在重新Enable時會自動SetLock(false)
 
-2021/10/30 
+2021/10/30
 
 ### FBI Open Up
 
@@ -288,7 +291,7 @@ RV.v1.2.1
 
 1. 重新在原生環境(無插件環境)產生sample\_chara.png
 
-2021/10/30 
+2021/10/30
 
 ### Studio Text Plugin
 
@@ -299,7 +302,7 @@ RV.v1.2.0
 1. 升級至Koikatsu Sunshine
 2. 升級至.NET Standard 2.0
 
-2021/10/30 
+2021/10/30
 
 ### Studio Chara Only Load Body
 
@@ -311,7 +314,7 @@ RV.v1.4.2
 2. 調整依賴MoreAcc至2.0
 3. 升級至.NET Standard 2.0
 
-2021/10/30 
+2021/10/30
 
 ### Coordinate Load Option
 
@@ -325,7 +328,7 @@ RV.v1.3.1
 
 ---
 
-2021/08/31 
+2021/08/31
 
 ### Coordinate Load Option
 
@@ -337,7 +340,7 @@ RV.v1.2.2
 
 ---
 
-2021/08/30 
+2021/08/30
 
 ### Coordinate Load Option
 
@@ -348,7 +351,7 @@ RV.v1.2.1
 1. 升級至Koikatsu Sunshine
 2. 升級至.NET Standard 2.0
 
-2021/08/30 
+2021/08/30
 
 ### PNG Capture Size Modifier
 
@@ -359,7 +362,7 @@ RV.v1.6.1
 1. 升級至Koikatsu Sunshine
 2. 升級至.NET Standard 2.0
 
-2021/08/30 
+2021/08/30
 
 ### Save Load Compression
 
@@ -370,7 +373,7 @@ RV.v1.5.0
 1. 升級至Koikatsu Sunshine
 2. 升級至.NET Standard 2.0
 
-2021/08/30 
+2021/08/30
 
 ### Coordinate Capture Pose Unlock
 
@@ -381,7 +384,7 @@ RV.v1.1.0
 1. 升級至Koikatsu Sunshine
 2. 升級至.NET Standard 2.0
 
-2021/08/30 
+2021/08/30
 
 ### FBI Open Up
 
@@ -392,7 +395,7 @@ RV.v1.2.0
 1. 升級至Koikatsu Sunshine
 2. 升級至.NET Standard 2.0
 
-2021/08/30 
+2021/08/30
 
 ### Plugin List Tool
 
@@ -405,7 +408,7 @@ RV.v1.1.0
 
 ---
 
-2021/01/04 
+2021/01/04
 
 ### Coordinate Load Option
 
@@ -418,7 +421,7 @@ RV.v1.1.6
 
 ---
 
-2020/12/29 
+2020/12/29
 
 ### Save Load Compression Web
 
@@ -428,7 +431,7 @@ RV.v-.-.-
 
 1. Init: <https://slcweb.maki0419.com/>
 
-2020/12/29 
+2020/12/29
 
 ### Save Load Compression
 
@@ -442,7 +445,7 @@ RV.v1.4.0
 
 ---
 
-2020/12/25 
+2020/12/25
 
 ### Studio Menu Scrolling Text
 
@@ -450,12 +453,12 @@ PV.v20.12.25.0
 
 RV.v1.2.1
 
- 修正
+修正
 1. (中日文)字元長度計算問題
 
 ---
 
-2020/12/02 
+2020/12/02
 
 ### Coordinate Load Option
 
@@ -463,13 +466,13 @@ PV.v20.11.28.0
 
 RV.v1.1.5
 
- 修正:
+修正:
 1. 在無COBOC或HairAcc的環境之錯誤  
 (調整了幾個null check)
 
 ---
 
-2020/11/16 
+2020/11/16
 
 ### Coordinate Load Option
 
@@ -477,10 +480,10 @@ PV.v20.11.15.0
 
 RV.v1.1.4
 
- 調整:
+調整:
 1. **程式重構**，這在插件支援部份改了很多，希望我沒有弄壞什麼
 2. Extension log改為使用BepLogger
- 修正:
+修正:
 1. 在COBOC上的換衣邏輯錯誤，並補上換衣邏輯圖  
 [![](https://img.maki0419.com/blog/COBOC_Change_Logic.png)](https://img.maki0419.com/blog/COBOC%5FChange%5FLogic.png)
 2. 清空Acc會造成MaterialEditor資料丟失
@@ -494,7 +497,7 @@ RV.v1.1.4
 
 ---
 
-2020/10/15 
+2020/10/15
 
 ### Coordinate Load Option
 
@@ -502,7 +505,7 @@ PV.v20.10.15.0
 
 RV.v1.1.1
 
- 修正:
+修正:
 1. Maker中換衣時，HairAccData會覆寫至第一套(校內)並清空其它套服裝的問題
 2. Maker中，若原本的HairAccData有啟用ColorMatch，會在換完Acc後把飾品原生顏色回寫為HairMatchColor
 3. 清除飾品按鈕，最多會留下40個空格的問題
@@ -510,7 +513,7 @@ RV.v1.1.1
 
 ---
 
-2020/10/3 
+2020/10/3
 
 ### Coordinate Load Option
 
@@ -518,7 +521,7 @@ PV.v20.10.02.0
 
 RV.v1.1.0
 
- Maker UI修正:
+Maker UI修正:
 1. UI不再顯示於存檔窗格
 2. 如果沒有全勾原生的讀取toggle時，換衣會不完整
 3. 開啟UI時在讀取\\存檔窗格切換時，下方的toggle框之隱藏邏輯錯誤
@@ -529,7 +532,7 @@ RV.v1.1.0
 
 ---
 
-2020/09/10 
+2020/09/10
 
 ### What are you saying?
 
@@ -537,9 +540,9 @@ PV.v20.09.10.1
 
 RV.v1.0.0
 
- First Release
+First Release
 
-2020/09/10 
+2020/09/10
 
 ### Studio Menu Scrolling Text
 
@@ -547,9 +550,9 @@ PV.v20.09.10.0
 
 RV.v1.2.0
 
- 增加速度調節功能
+增加速度調節功能
 
-2020/09/10 
+2020/09/10
 
 ### Save Load Compression
 
@@ -557,12 +560,12 @@ PV.v20.09.07.0
 
 RV.v1.3.5
 
- 修改token使之能通過CharacterReplacer  
+修改token使之能通過CharacterReplacer  
 修改數處字串插值，用正確的方式做格式處理
 
 ---
 
-2020/09/04 
+2020/09/04
 
 ### Studio Menu Scrolling Text
 
@@ -570,9 +573,9 @@ PV.v20.09.05.0
 
 RV.v1.1.0
 
- First Release
+First Release
 
-2020/09/04 
+2020/09/04
 
 ### Studio Transgender Loading
 
@@ -580,14 +583,14 @@ PV.v20.08.30.0
 
 RV.v1.0.2
 
- 修正:
+修正:
 * 男轉女後，anim→狀態之乳首滑桿不會出現
 * 男轉女後，女體特有的調整項不會做動
 * 男轉女後，頭和頸小一圈；反之亦然
 
 ---
 
-2020/08/22 
+2020/08/22
 
 ### Chara Overlays Based On Coordinate
 
@@ -595,9 +598,9 @@ PV.v20.08.22.0
 
 RV.v1.3.8
 
- 修正在Studio中使用IrisSide時身體的白色錯誤
+修正在Studio中使用IrisSide時身體的白色錯誤
 
-2020/08/21 
+2020/08/21
 
 ### Save Load Compression
 
@@ -605,11 +608,11 @@ PV.v20.08.21.0
 
 RV.v1.3.4
 
- 修正壓縮完Compare時的UI文字Overflow問題
+修正壓縮完Compare時的UI文字Overflow問題
 
 ---
 
-2020/08/06 
+2020/08/06
 
 ### Coordinate Load Option
 
@@ -617,9 +620,9 @@ PV.v20.08.06.0
 
 RV.v1.0.1
 
- 原有的Studio Coordinate Load Option，改為可在Maker中執行 
+原有的Studio Coordinate Load Option，改為可在Maker中執行
 
-2020/08/06 
+2020/08/06
 
 ### ~~Studio Coordinate Load Option~~
 
@@ -629,7 +632,7 @@ RV.v-.-.-
 
 淘汰，以Coordinate Load Option取而代之
 
-2020/08/06 
+2020/08/06
 
 ### Studio Simple Color On Girls
 
@@ -640,7 +643,7 @@ RV.v1.2.0
 * 修正Extension中有關Field、Property、Method的方法，使之能在無IPAPatcher的環境執行
 * 新增:在男角色也新增「重置單色化顏色」功能，選項在Config中分開
 
-2020/08/06 
+2020/08/06
 
 ### PNG Capture Size Modifier
 
@@ -652,7 +655,7 @@ RV.v1.5.5
 * 修改Extension中有關圖像處理的部份
 * 新增Maker選窗列數上限
 
-2020/08/06 
+2020/08/06
 
 ### Studio Dual Screen
 
@@ -664,7 +667,7 @@ RV.v1.1.7
 * 修正Extension中有關Field、Property、Method的方法，使之能在無IPAPatcher的環境執行
 * 適配VMDPlay v0.2.4
 
-2020/08/06 
+2020/08/06
 
 ### Studio Transgender Loading
 
@@ -674,7 +677,7 @@ RV.v1.0.1
 
 * 修正Extension中有關Field、Property、Method的方法，使之能在無IPAPatcher的環境執行
 
-2020/08/06 
+2020/08/06
 
 ### Studio Chara Only Load Body
 
@@ -684,7 +687,7 @@ RV.v1.3.9
 
 * 修正Extension中有關Field、Property、Method的方法，使之能在無IPAPatcher的環境執行
 
-2020/08/06 
+2020/08/06
 
 ### Studio Reflect FK Fix
 
@@ -696,7 +699,7 @@ RV.v1.0.4
 * 修正Extension中有關Field、Property、Method的方法，使之能在無IPAPatcher的環境執行
 * 修改Extension中有關圖像處理的部份
 
-2020/08/06 
+2020/08/06
 
 ### Studio Text Plugin
 
@@ -707,7 +710,7 @@ RV.v1.1.6
 * 移除BepInEx.Harmony依賴，升級依賴下限至BepInEx5.1
 * 修正Extension中有關Field、Property、Method的方法，使之能在無IPAPatcher的環境執行
 
-2020/08/06 
+2020/08/06
 
 ### Studio Auto Close Loading Scene Window
 
@@ -719,7 +722,7 @@ RV.v1.0.4
 * 修正Extension中有關Field、Property、Method的方法，使之能在無IPAPatcher的環境執行
 * Code整理
 
-2020/08/06 
+2020/08/06
 
 ### Plugin List Tool
 
@@ -730,7 +733,7 @@ RV.v1.0.4
 * 修正Extension中有關Field、Property、Method的方法，使之能在無IPAPatcher的環境執行
 * 移除未使用的NuGet套件
 
-2020/08/06 
+2020/08/06
 
 ### FBI Open Up
 
@@ -741,7 +744,7 @@ RV.v1.1.3
 * 移除BepInEx.Harmony依賴，升級依賴下限至BepInEx5.1
 * 修正Extension中有關Field、Property、Method的方法，使之能在無IPAPatcher的環境執行
 
-2020/08/06 
+2020/08/06
 
 ### Chara Overlays Based On Coordinate
 
@@ -751,7 +754,7 @@ RV.v1.3.7
 
 * 修正Extension中有關Field、Property、Method的方法，使之能在無IPAPatcher的環境執行
 
-2020/08/06 
+2020/08/06
 
 ### Studio Chika Replacer
 
@@ -761,7 +764,7 @@ RV.v1.1.1
 
 * 移除BepInEx.Harmony依賴，升級依賴下限至BepInEx5.1
 
-2020/08/06 
+2020/08/06
 
 ### Studio Chara Light Linked To Camera
 
@@ -772,7 +775,7 @@ RV.v1.5.4
 * 移除BepInEx.Harmony依賴，升級依賴下限至BepInEx5.1
 * 修正Extension中有關Field、Property、Method的方法，使之能在無IPAPatcher的環境執行
 
-2020/08/06 
+2020/08/06
 
 ### Studio Save Workspace Order Fix
 
@@ -783,7 +786,7 @@ RV.v1.0.1
 * 移除BepInEx.Harmony依賴，升級依賴下限至BepInEx5.1
 * 修正Extension中有關Field、Property、Method的方法，使之能在無IPAPatcher的環境執行
 
-2020/08/06 
+2020/08/06
 
 ### Transparent Background
 
@@ -793,7 +796,7 @@ RV.v1.0.1
 
 * 移除BepInEx.Harmony依賴，升級依賴下限至BepInEx5.1
 
-2020/08/06 
+2020/08/06
 
 ### Save Load Compression
 
@@ -805,7 +808,7 @@ RV.v1.3.3
 * 修正Extension中有關Field、Property、Method的方法，使之能在無IPAPatcher的環境執行
 * 修改Extension中有關圖像處理的部份
 
-2020/08/06 
+2020/08/06
 
 ### Coordinate Capture Pose Unlock
 
@@ -818,7 +821,7 @@ RV.v1.0.1
 
 ---
 
-2020/07/29 
+2020/07/29
 
 ### PNG Capture Size Modifier
 
@@ -826,12 +829,12 @@ PV.v20.07.28.0
 
 RV.v1.5.4
 
- 修正  
+修正  
 * 升Bep5.1壞掉的東西
 * H Scene中開啟服裝選擇清單時的error
 * Maker中Chara Window的寬度偏差
 
-2020/07/29 
+2020/07/29
 
 ### Chara Overlays Based On Coordinate
 
@@ -839,12 +842,12 @@ PV.v20.07.27.0
 
 RV.v1.3.6
 
- 修正  
+修正  
 * Maker中，讀取角色時會受到服裝視窗skin toggle影響的問題
 * 在讀取「無CharaOverlay服裝」時IrisSide會初始化  
 (設計: Maker在coordinate中無插件資料時，無論有否勾上Load Skin toggle都不會做清空)
 
-2020/07/29 
+2020/07/29
 
 ### Studio Transgender Loading
 
@@ -854,7 +857,7 @@ RV.v1.0.0
 
 跨性別替換功能，取代全女插件StudioAllGirlsPlugin
 
-2020/07/29 
+2020/07/29
 
 ### ~~Studio All Girls Plugin~~
 
@@ -864,7 +867,7 @@ RV.v-.-.-
 
 淘汰，以Studio Transgender Loading取而代之
 
-2020/07/29 
+2020/07/29
 
 ### Studio Simple Color On Girls
 
@@ -872,9 +875,9 @@ PV.v20.07.27.1
 
 RV.v1.1.0
 
- 新增在讀入角色/讀入Scene時強制重置單色化顏色 的功能
+新增在讀入角色/讀入Scene時強制重置單色化顏色 的功能
 
-2020/07/29 
+2020/07/29
 
 ### Plugin List Tool
 
@@ -882,9 +885,9 @@ PV.v20.07.27.1
 
 RV.v1.0.3
 
- 修改路徑為相對路徑，對應「第一次產生Default Config時的路徑」為暫用路徑造成的問題
+修改路徑為相對路徑，對應「第一次產生Default Config時的路徑」為暫用路徑造成的問題
 
-2020/07/29 
+2020/07/29
 
 ### Studio Chara Only Load Body
 
@@ -892,9 +895,9 @@ PV.v20.07.27.1
 
 RV.v1.3.8
 
- 修正圖標，Code整理
+修正圖標，Code整理
 
-2020/07/29 
+2020/07/29
 
 ### Studio Coordinate Load Option
 
@@ -904,11 +907,11 @@ RV.v3.3.6
 
 適配MaterialEditor2.0.7、MoreAcc 1.1.0  
 KCOX和ABMX支援做了重寫  
-修正髮FK Bone問題 
+修正髮FK Bone問題
 
 ---
 
-2020/06/23 
+2020/06/23
 
 ### Studio Simple Color On Girls
 
@@ -916,13 +919,13 @@ PV.v20.06.23.0
 
 RV.v1.0.8
 
- 修正   
+修正   
 * 白雞雞問題
 * 會有兩個o\_body\_a的問題
 
 ---
 
-2020/06/09 
+2020/06/09
 
 ### Save Load Compression
 
@@ -930,9 +933,9 @@ PV.v20.06.10.0
 
 RV.v1.3.2
 
- 修正當資料夾中有錯誤存檔時，會無法顯示FileWindow內容的問題
+修正當資料夾中有錯誤存檔時，會無法顯示FileWindow內容的問題
 
-2020/06/09 
+2020/06/09
 
 ### PNG Capture Size Modifier
 
@@ -944,7 +947,7 @@ RV.v1.5.2
 * 可自訂分辨率位置、大小
 * 分辨率可單獨開啟
 
-2020/06/09 
+2020/06/09
 
 ### Coordinate Capture Pose Unlock
 
@@ -952,9 +955,9 @@ PV.v20.06.07.0
 
 RV.v1.0.0
 
- First Release
+First Release
 
-2020/06/09 
+2020/06/09
 
 ### Save Load Compression
 
@@ -962,9 +965,9 @@ PV.v20.06.09.0
 
 RV.v1.3.1
 
- First Release
+First Release
 
-2020/06/07 
+2020/06/07
 
 ### Studio Body Overwrite Script
 
@@ -972,11 +975,11 @@ PV.v20.05.30.0
 
 RV.v1.0.0.1
 
- 另存編碼 Big5 → UTF8
+另存編碼 Big5 → UTF8
 
 ---
 
-2020/05/31 
+2020/05/31
 
 ### Chara Overlays Based On Coordinate
 
@@ -984,4 +987,4 @@ PV.v20.05.30.0
 
 RV.v1.3.5
 
- 修正Studio中存檔時會報錯，因為多加了一個不需要的KKAPI.Studio.SaveLoad.StudioSaveLoadApi.SceneSave Event
+修正Studio中存檔時會報錯，因為多加了一個不需要的KKAPI.Studio.SaveLoad.StudioSaveLoadApi.SceneSave Event

@@ -1,15 +1,18 @@
 +++
 title = "MinIO 在 StatObject 時總是回傳權限不足 (Insufficient permissions)"
-description = ""
+description = "MinIO 在 StatObject 時總是回傳權限不足 (Insufficient permissions)"
 date = 2023-07-30T15:57:00.004Z
 updated = 2024-01-04T04:03:19.559Z
 draft = false
-aliases = ["/2023/07/minio-statobject-insufficient.html"]
+aliases = [ "/2023/07/minio-statobject-insufficient.html" ]
 
 [taxonomies]
-tags = ["Cloudflare"]
+tags = [ "Cloudflare" ]
+
+[extra]
+banner = "https://img.maki0419.com/blog/minio-statobject-insufficient/preview.webp"
 +++
-[![](https://img.maki0419.com/blog/minio-statobject-insufficient/preview.webp)](https://img.maki0419.com/blog/minio-statobject-insufficient/preview.webp) 
+[![](https://img.maki0419.com/blog/minio-statobject-insufficient/preview.webp)](https://img.maki0419.com/blog/minio-statobject-insufficient/preview.webp)
 
 (AIGC, PNG Info^)
 
@@ -17,23 +20,23 @@ tags = ["Cloudflare"]
 
 程序猿: 今天天氣晴朗，是個適合在家踩地雷的好日子😎
 
- 這次中雷的前提是**「使用Cloudflare 做為 MinIO 的網域 Proxy，並開啟 Cache 功能」**。
+這次中雷的前提是**「使用Cloudflare 做為 MinIO 的網域 Proxy，並開啟 Cache 功能」**。
 
- 我不知道其它的 S3-like storage 會不會發生，但既然 [MinIO SDK 上的 issue](https://github.com/minio/minio-js/issues/842) 因「Our sdks are validated for highest s3 compatibility so it does not require any fix in the SDK.」而關閉，應該是都會發生吧... 
+我不知道其它的 S3-like storage 會不會發生，但既然 [MinIO SDK 上的 issue](https://github.com/minio/minio-js/issues/842) 因「Our sdks are validated for highest s3 compatibility so it does not require any fix in the SDK.」而關閉，應該是都會發生吧...
 
 ## TL;DR 先說結論
 
- 在 Cloudflare 上新增 CacheRule，將整個網域 Bypass cache。
+在 Cloudflare 上新增 CacheRule，將整個網域 Bypass cache。
 
-[![](https://img.maki0419.com/blog/minio-statobject-insufficient/cf.png)](https://img.maki0419.com/blog/minio-statobject-insufficient/cf.png) 
+[![](https://img.maki0419.com/blog/minio-statobject-insufficient/cf.png)](https://img.maki0419.com/blog/minio-statobject-insufficient/cf.png)
 
 ## 遇到問題
 
- 我正在寫 [Recorder.moe](https://github.com/Recorder-moe) 專案，實作接 MinIO 伺服器作為 Object Storage。其中有一段邏輯使用 StatObject 檢查影片檔案是否存在，而它一直報錯權限不足。
+我正在寫 [Recorder.moe](https://github.com/Recorder-moe) 專案，實作接 MinIO 伺服器作為 Object Storage。其中有一段邏輯使用 StatObject 檢查影片檔案是否存在，而它一直報錯權限不足。
 
- 當然，我來回的檢查了 MinIO 上的權限設定，並把 [MinIO doc](https://min.io/docs/minio/linux/administration/identity-access-management/policy-based-access-control.html) 仔細讀過了一次，確認了我的權限設定並沒有錯。
+當然，我來回的檢查了 MinIO 上的權限設定，並把 [MinIO doc](https://min.io/docs/minio/linux/administration/identity-access-management/policy-based-access-control.html) 仔細讀過了一次，確認了我的權限設定並沒有錯。
 
- 接著，我使用 [mc (minio client)](https://min.io/docs/minio/linux/reference/minio-mc.html) 登入了 root account，並執行了以下的 command:  
+接著，我使用 [mc (minio client)](https://min.io/docs/minio/linux/reference/minio-mc.html) 登入了 root account，並執行了以下的 command:  
 
 jim60105 ~ ❯❯❯ mc ls minio/livestream-recorder/videos/
 [2023-07-29 21:48:20 CST] 6.1GiB STANDARD _0mKSCIcuiy4.mp4
@@ -63,12 +66,12 @@ mc.exe:  Unable to stat `minio/livestream-recorder/videos/_aPI2iLpATvQ.mp4`. Ins
 >    Same problem here, we were using statObject in our platform, now we started
 >    using cloudflare and it stopped working.
 >  
-> 
+>
 >  
 >    The "it is not a bug, it is a feature" is documented in cloudflare:  
 > [      https://developers.cloudflare.com/cache/best-practices/cache-behavior/#interaction-of-head-requests-with-cache    ](https://developers.cloudflare.com/cache/best-practices/cache-behavior/#interaction-of-head-requests-with-cache)
 >  
-> 
+>
 >  
 >    
 >      I think the problem could be in the HEAD and GET endpoints not working in
@@ -89,7 +92,7 @@ Cloudflare 的 document 寫了這些
 >  
 >    Cloudflare converts HEAD requests to GET requests for cacheable requests.
 >  
-> 
+>
 >  
 >    When you make a HEAD request for a cacheable resource and Cloudflare does
 >      not have that resource in the edge cache, a cache miss happens.

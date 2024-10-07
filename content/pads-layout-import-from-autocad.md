@@ -1,6 +1,6 @@
 +++
 title = "PADS LAYOUT 複雜板框繪製 - 從AUTOCAD導入"
-description = ""
+description = "PADS LAYOUT 複雜板框繪製 - 從AUTOCAD導入"
 date = 2013-10-09T00:50:00.004Z
 updated = 2020-11-24T14:56:53.456Z
 draft = false
@@ -8,6 +8,9 @@ aliases = ["/2013/10/pads-layout-autocad.html"]
 
 [taxonomies]
 tags = []
+
+[extra]
+banner = "http://4.bp.blogspot.com/-tRv_moNThgc/UlScjBC_yLI/AAAAAAAAAtg/qMs0ti0UVic/s640/%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E.jpg"
 +++
 這是教學文兼說明文，免得將來自己忘記 \_(-ω-\`\_)⌒)\_  
   
@@ -55,7 +58,7 @@ OK，開始(ง •̀\_•́)ง
 
   
 5.出現"取點待命中..."後回到剛剛開的AutoCAD檔案，將"外板框"的所有"端點"點選一遍。請從原點開始，這張圖的左下角  
- ((外板框即圖中高亮標示處  
+((外板框即圖中高亮標示處  
 
 [![](http://1.bp.blogspot.com/-MBmDq9ZKoHg/UlShKj4lvrI/AAAAAAAAAuM/Ta88Eg1qzmY/s640/2013-10-09+08+18+00.png)](http://1.bp.blogspot.com/-MBmDq9ZKoHg/UlShKj4lvrI/AAAAAAAAAuM/Ta88Eg1qzmY/s1600/2013-10-09+08+18+00.png)
   

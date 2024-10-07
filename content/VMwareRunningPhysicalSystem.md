@@ -1,6 +1,6 @@
 +++
 title = "以VMware運行實體系統(並非轉虛擬)"
-description = ""
+description = "以VMware運行實體系統(並非轉虛擬)"
 date = 2015-02-28T04:13:00.002Z
 updated = 2020-11-24T14:56:53.459Z
 draft = false
@@ -8,13 +8,16 @@ aliases = ["/2015/02/VMwareRunningPhysicalSystem.html"]
 
 [taxonomies]
 tags = []
+
+[extra]
+banner = "https://4.bp.blogspot.com/-jaH8otuNfZY/VPFDP8VlJoI/AAAAAAAAKnE/ojEZdLlzFPg/s1600/2015-02-28%2B07%2B35%2B58.png"
 +++
 [![](https://4.bp.blogspot.com/-jaH8otuNfZY/VPFDP8VlJoI/AAAAAAAAKnE/ojEZdLlzFPg/s1600/2015-02-28%2B07%2B35%2B58.png)](http://4.bp.blogspot.com/-jaH8otuNfZY/VPFDP8VlJoI/AAAAAAAAKnE/ojEZdLlzFPg/s1600/2015-02-28%2B07%2B35%2B58.png)
   
   
 ## 寫作緣由
 
- 跟辦公室環境有關，個人每天有數小時必須使用公司的公用電腦。那台電腦大家都在用，桌面堆滿不知名連結/資料夾，就像肉O器的正正正正正一樣(X  
+跟辦公室環境有關，個人每天有數小時必須使用公司的公用電腦。那台電腦大家都在用，桌面堆滿不知名連結/資料夾，就像肉O器的正正正正正一樣(X  
 所以我就拿了一顆行動硬碟灌了Arch帶著走\~((自己的老婆自己顧( ･ิω･ิ)  
 回家要調教系統總是得把電腦開開關關，Del連打，感覺總有一天硬碟會被我操壞(\`・ω・´)  
 就開始研究"Win7"←"VMware"←"實體Arch"的運行可能性  
@@ -52,7 +55,7 @@ Client:裝在硬碟中的Arch
 ((小技巧:pacman後面加上"--needed"參數可節省很多時間))  
   
   
-1.安裝編譯環境: 
+1.安裝編譯環境:
 
 > sudo pacman -S base-devel net-tools linux-headers
 
@@ -205,7 +208,7 @@ CPU&RAM的部分自己斟酌，給太小裡面會很LAG，給太大外面會很L
 
 > sudo mkdir /mnt/vmware
 
-2-2.將Shared Folders掛上去: 
+2-2.將Shared Folders掛上去:
 
 > #這三行每次掛載都要執行  
 > vmware-hgfsclient #顯示可掛載的目錄  

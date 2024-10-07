@@ -1,6 +1,6 @@
 +++
 title = "[Koikatu] コイカツ！ 中文安裝指南"
-description = ""
+description = "[Koikatu] コイカツ！ 中文安裝指南"
 date = 2022-02-09T06:20:00.024Z
 updated = 2023-07-16T12:12:37.444Z
 draft = false
@@ -8,28 +8,31 @@ aliases = ["/2020/09/koikatu-bep5-plugin-guide.html"]
 
 [taxonomies]
 tags = ["Koikatu"]
+
+[extra]
+banner = "https://img.maki0419.com/blog/preview/CharaStudio-2020-02-04-03-45-01-Render.JPG"
 +++
 > ※注意※  
 > 本篇指南為對應MoreAccessories **v1.1.0**的最終版本號  
-> 
+>
 > MoreAccessories(以下簡稱MoreAcc)是飾品增加插件，給你第20格之後的飾品  
 > MoreAcc v2.0是jalil49違反原作者Joan6694的License所做出的山寨版本  
 > 並且由於KKAPI從v1.26起改為使用MoreAcc v2.0，導致依賴像病毒一樣的擴散
-> 
+>
 > **截至文章更新日，除了搞爆插件依賴以外，MoreAcc v2.0沒有任何有價值的新機能**  
 > 我決定將此文章定版號為支援MoreAccessories v1.1.0的最終版本  
 > 請注意所有標註的版本號和連結，它們是能配合運作的版本號  
-> 
+>
 > Koikatu已經是四年前的老遊戲了，讓它留在穩定版本  
 > 至於想要新東西的人，去看看新作Sunshine吧！
 
 | [![](https://img.maki0419.com/blog/preview/CharaStudio-2020-02-04-03-45-01-Render.JPG)](https://img.maki0419.com/blog/preview/CharaStudio-2020-02-04-03-45-01-Render.JPG) |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| (角色是我家的，但是原始Scene不是我做的)                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| (角色是我家的，但是原始Scene不是我做的)                                                                                                                                                   |
 
 ## 序言
 
- 此篇文章旨在列出所有Koikatu的插件清單，文章最後更新時間: 2022/02/09
+此篇文章旨在列出所有Koikatu的插件清單，文章最後更新時間: 2022/02/09
 
   
 安裝順序簡述如下:
@@ -38,9 +41,9 @@ tags = ["Koikatu"]
 3. 安裝所有必裝外掛
 4. 安裝所需之其它外掛
 
- 官方DLC的模組基本上都沒有順序問題，設計上是分離檔案；程式部份會有覆寫狀況，而Darkness是最後一版程式更新，所以請最後裝
+官方DLC的模組基本上都沒有順序問題，設計上是分離檔案；程式部份會有覆寫狀況，而Darkness是最後一版程式更新，所以請最後裝
 
- 其它外掛我會盡量寫上前置依賴，除了列在必裝清單上的東西  
+其它外掛我會盡量寫上前置依賴，除了列在必裝清單上的東西  
 就是被太多東西依賴我才會列為必裝  
 我就不再贅述，反正都裝上去
 
@@ -58,14 +61,14 @@ tags = ["Koikatu"]
 > 別拿KKP的問題來問我，問就是丟掉
 
 * 免費DLC:  
- 分流:<https://mega.nz/#!YZIQXCBT!EehC3TtWZUnr-5B2Q9CMWRXlKq5t4yrHSulthLXXHC4>  
- 官網:<http://www.illusion.jp/preview/koikatu/download/update.php> (要日本IP)  
+分流:<https://mega.nz/#!YZIQXCBT!EehC3TtWZUnr-5B2Q9CMWRXlKq5t4yrHSulthLXXHC4>  
+官網:<http://www.illusion.jp/preview/koikatu/download/update.php> (要日本IP)  
 分流只有koikatu\_02plus\_cdp0201hbtks\_all ，有玩VR要去官網下載koikatu\_03vr\_d0531hg  
-| [![](https://img.maki0419.com/blog/UNInhXC.jpg)](https://img.maki0419.com/blog/UNInhXC.jpg) |
-|---------------------------------------------------------------------------------------------|
-| <https://imgur.com/UNInhXC>使用方法，圖片點擊放大                                            |
+| [![](https://img.maki0419.com/blog/UNInhXC.jpg)](https://img.maki0419.com/blog/UNInhXC.jpg) |  
+| ------------------------------------------------------------------------------------------- |  
+| <https://imgur.com/UNInhXC>使用方法，圖片點擊放大                                                      |
 * 其他官方特典包:  
- (補充: 性格追加パック內附的泳裝有包含在免費更新中，並不算是特典)
+(補充: 性格追加パック內附的泳裝有包含在免費更新中，並不算是特典)
    * コイカツ！ (Koikatu!) 相關特典
       * コイカツ！ オフィシャル予約特典 軍服 (軍服)
       * コイカツ！ オフィシャル早期予約特典 セクシーランジェリー (貓咪內衣)
@@ -89,7 +92,7 @@ tags = ["Koikatu"]
 > ※安裝注意:Darkness必須要最後安裝，且Darkness被諸多插件列為依賴  
 > 意即若未安裝Darkness，以下許多插件就不會正常運作  
 > 我們沒什麼理由不從最完整的版本開始開發  
-> 
+>
 > | [![](https://img.maki0419.com/blog/2019-12-08%2004%2016%2045.png)](https://img.maki0419.com/blog/2019-12-08%2004%2016%2045.png) |
 > | ------------------------------------------------------------------------------------------------------------------------------- |
 > | Darkness主程式資訊                                                                                                                   |
@@ -97,52 +100,52 @@ tags = ["Koikatu"]
 ## 必裝外掛介紹
 
 > 特別注意: 如果你從BepInEx 4.X要升級上來，請參考這篇   
-> [コイカツ! BepInEx框架 v4.X→v5.X升級指南](https://blog.maki0419.com/2019/11/koikatsu-bepinex-upgrade-guide.html) 
-> 
+> [コイカツ! BepInEx框架 v4.X→v5.X升級指南](https://blog.maki0419.com/2019/11/koikatsu-bepinex-upgrade-guide.html)
+>
 > 如果遇到安裝問題，請參考這篇  
-> [コイカツ! 插件安裝方式、問題判斷及排除指南](https://blog.maki0419.com/2019/07/koikatu.html) 
+> [コイカツ! 插件安裝方式、問題判斷及排除指南](https://blog.maki0419.com/2019/07/koikatu.html)
 
 > 如果想知道我個人使用的插件清單和版本號，[請在這裡取得](https://cloud.maki0419.com/s/i7Q9aBNWx9SPiw6)   
 > 這是以Plugin List Tool所產生，並即時同步
 
 * [BepInEx v5.4.18](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.18): 這是最基礎的外掛框架，有了它其他東西才會生效  
- 這裡下載BepInEx\_x64\_5.4.\*.zip回來，把所有東西解壓進遊戲根目錄  
- 然後在遊戲根目錄新增一個資料夾叫做 "mods"，裡面放後述的sideloader mod  
+這裡下載BepInEx\_x64\_5.4.\*.zip回來，把所有東西解壓進遊戲根目錄  
+然後在遊戲根目錄新增一個資料夾叫做 "mods"，裡面放後述的sideloader mod  
 [![image](https://img.maki0419.com/blog/2019-12-01%2016%2002%2032.png)](https://img.maki0419.com/blog/2019-12-01%2016%2002%2032.png)  
     
 [![image](https://img.maki0419.com/blog/38600782_2052356328117301_4461874492536258560_o.jpg)](https://img.maki0419.com/blog/38600782%5F2052356328117301%5F4461874492536258560%5Fo.jpg)
 * [BepisPlugins.r16.8.1](https://github.com/IllusionMods/BepisPlugins/releases/tag/r16.8.1): 搭配上面這個外掛的基礎外掛包  
- 下載KK\_BepisPlugins\_r\*.zip回來後整個解壓進遊戲根目錄，建議參考壓縮檔資料夾結構放置，依賴後面提到的 XUnity.AutoTranslator
+下載KK\_BepisPlugins\_r\*.zip回來後整個解壓進遊戲根目錄，建議參考壓縮檔資料夾結構放置，依賴後面提到的[XUnity.AutoTranslator](#XUnity%5FAutoTranslator)  
 [![image](https://img.maki0419.com/blog/2019-11-03%2020%2019%2006.png)](https://img.maki0419.com/blog/2019-11-03%2020%2019%2006.png)
 * [BepInEx.BepInEx4Upgrader v1.0.0.0](https://github.com/BepInEx/BepInEx.BepInEx4Upgrader/releases/tag/v1.0.0.0): BepInEx v4插件的自動升級器  
- 將BepInEx.BepIn4Patcher.dll放在「根目錄\\BepInEx\\patchers」，注意路徑  
+將BepInEx.BepIn4Patcher.dll放在「根目錄\\BepInEx\\patchers」，注意路徑  
 [![image](https://img.maki0419.com/blog/2019-12-01%2016%2056%2004.png)](https://img.maki0419.com/blog/2019-12-01%2016%2056%2004.png)
 * [BepInEx.MessageCenter v1.1.1](https://github.com/BepInEx/BepInEx.Utility/releases/tag/r5): 將重要度為「Message」的訊息顯示在遊戲畫面頂端  
- 將BepInEx.MessageCenter\_v\*.zip載回來以後解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置
+將BepInEx.MessageCenter\_v\*.zip載回來以後解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置
 * [BepInEx.ConfigurationManager v16.4](https://github.com/BepInEx/BepInEx.ConfigurationManager/releases/tag/v16.4): 遊戲內設定修改器  
- 將BepInEx.ConfigurationManager\_v\*.zip載回來以後解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置
+將BepInEx.ConfigurationManager\_v\*.zip載回來以後解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置
 * [BepInEx.IPALoaderX v1.2.4](https://github.com/BepInEx/IPALoaderX/releases/tag/v1.2.4) Bepinex 5版本的IPALoader  
- 將Bepinex.IPALoader.v\*.zip解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置
-* Sideloader modpack:~~由DeathWeasel整理~~ 改由ScrewThisNoise整理的sideload mod包  
-   1. 使用[KKManager](#其他工具)來做自動更新  
+將Bepinex.IPALoader.v\*.zip解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置
+* Sideloader modpack [^](#sideloader%5Fmodpack):~~由DeathWeasel整理~~ 改由ScrewThisNoise整理的sideload mod包  
+   1. 使用[KKManager](#other%5Ftools)來做自動更新  
    2. 從此[Google Drive](https://drive.google.com/drive/folders/1j1ZH7WunkEqvwr2YDLDF7JyutlzuyZDX)下載  
     請注意，GDrive的更新時程並不明確，可能會不同步。  
    3. 由這個下載站取得: <https://sideload.betterrepack.com/>  
     此站內容(作者說)會和KKManager同步，這裡適合用來尋找單一mod  
 > 建議先從GDrive下載全部，再由KKManager做更新  
 > 之後更新以KKManager為主  
- sideloader modpack裡所有mod都是sideloader mod(又稱zipmod)  
- 他可以是「.zipmod」或「.zip」格式，並可以被各種壓縮軟體打開  
- 如果這個壓縮檔裡包含了manifest.xml，那他就是一個zipmod，把他放到mods文件夾下，不要解開  
+sideloader modpack裡所有mod都是sideloader mod(又稱zipmod)  
+他可以是「.zipmod」或「.zip」格式，並可以被各種壓縮軟體打開  
+如果這個壓縮檔裡包含了manifest.xml，那他就是一個zipmod，把他放到mods文件夾下，不要解開  
 直接放置如圖左，可使用子資料夾  
 [![image](https://img.maki0419.com/blog/2019-01-06%2021%2006%2008.png)](https://img.maki0419.com/blog/2019-01-06%2021%2006%2008.png)
 * [KKAPI v1.25](https://github.com/IllusionMods/IllusionModdingAPI/releases/tag/v1.25): 超級多插件的依賴，他是一個程序API接口  
- 將KKAPI\_1.25.zip載回來以後解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置  
+將KKAPI\_1.25.zip載回來以後解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置  
 [![image](https://img.maki0419.com/blog/2019-11-03%2020%2025%2037.png)](https://img.maki0419.com/blog/2019-11-03%2020%2025%2037.png)
-* [XUnity.AutoTranslator 4.21.0](https://github.com/bbepis/XUnity.AutoTranslator/releases/tag/v4.21.0) 機器翻譯  
+* [XUnity.AutoTranslator 4.21.0](https://github.com/bbepis/XUnity.AutoTranslator/releases/tag/v4.21.0) [^](#XUnity%5FAutoTranslator) 機器翻譯  
 **就算不啟用也一定要安裝**，BepisPlugins/Sideloader對他有依賴  
- 下載XUnity. AutoTranslator\-BepIn-5x\-\*.zip，解壓縮丟進遊戲根目錄  
- 可依照以下步驟關閉機器翻譯:
+下載XUnity. AutoTranslator\-BepIn-5x\-\*.zip，解壓縮丟進遊戲根目錄  
+可依照以下步驟關閉機器翻譯:
    1. 啟動一次遊戲，讓插件產生ini設定檔案，進到主畫面後再關閉遊戲
    2. 用文字編輯器開啟「根目錄\\BepInEx\\config\\AutoTranslatorConfig.ini」
    3. 找到\[TextFrameworks\]段落，將其下的選項全部改成False  
@@ -156,18 +159,18 @@ tags = ["Koikatu"]
 
 2019/10/23經歷了一次BepInEx 4→5的重要框架升級，從此插件分為三種安裝方式:   
 * BepInEx 5插件:  
- 直接將\*.dll等檔案放置於「根目錄/BepInEx/plugins/」之下，例如「C:\\illusion\\Koikatu\\BepInEx\\plugins」  
- BepInEx 5開始插件支援子資料夾，可以放置在BepInEx/plugins底下的任何多層資料夾內，但推薦參考原始壓縮檔之結構放置
+直接將\*.dll等檔案放置於「根目錄/BepInEx/plugins/」之下，例如「C:\\illusion\\Koikatu\\BepInEx\\plugins」  
+BepInEx 5開始插件支援子資料夾，可以放置在BepInEx/plugins底下的任何多層資料夾內，但推薦參考原始壓縮檔之結構放置
 * BepInEx 4插件:  
 需要BepInEx4Upgrader，這能將之自動升級為「符合BepInEx5框架的BepInEx4插件」  
- 之後將\*.dll等檔案放置於「根目錄/BepInEx/」之下，例如「C:\\illusion\\Koikatu\\BepInEx」
+之後將\*.dll等檔案放置於「根目錄/BepInEx/」之下，例如「C:\\illusion\\Koikatu\\BepInEx」
 * IPA:  
- 直接將\*.dll等檔案放置於「根目錄/Plugins/」之下，例如「C:\\illusion\\Koikatu\\Plugins」  
- 需要IPALoaderX，運作有機會異常，若遇到錯誤請移除該個別插件
+直接將\*.dll等檔案放置於「根目錄/Plugins/」之下，例如「C:\\illusion\\Koikatu\\Plugins」  
+需要IPALoaderX，運作有機會異常，若遇到錯誤請移除該個別插件
 
- 所有在2019/10/23以前發布的BepInEx插件皆是BepInEx 4插件，而在那之後的請參考各插件Readme。 本文將三種插件分別標示，請**特別注意插件種類**   
+所有在2019/10/23以前發布的BepInEx插件皆是BepInEx 4插件，而在那之後的請參考各插件Readme。 本文將三種插件分別標示，請**特別注意插件種類**   
 
-> 更多詳細敘述請參考[コイカツ！ BepInEx v5.X之資料夾結構說明](https://blog.maki0419.com/2019/11/koikatsu-bepinex-upgrade-guide.html#details) 
+> 更多詳細敘述請參考[コイカツ！ BepInEx v5.X之資料夾結構說明](https://blog.maki0419.com/2019/11/koikatsu-bepinex-upgrade-guide.html#details)
 
 ###  BepInEx 5插件
 
@@ -224,7 +227,7 @@ tags = ["Koikatu"]
    * 下載並安裝[KK\_UncensorSelector.v3.11.4](https://github.com/IllusionMods/KK%5FPlugins/releases/tag/v207)
    * 下載並安裝[BetterPenetration v4.5.0](https://github.com/Animal42069/BetterPenetration/releases/tag/4.5.0)  
     它在那裡加了碰撞器，能提供動態開合。注意，必須完整安裝，否則你可能會看到裙子裡有空氣雞雞！
-   * 由 Sideloader Modpack 中，將「Sideloader Modpack - KK\_UncensorSelector」資料夾下載下來，丟進「根目錄\\mods\\」之下  
+   * 由[Sideloader Modpack](#sideloader%5Fmodpack)中，將「Sideloader Modpack - KK\_UncensorSelector」資料夾下載下來，丟進「根目錄\\mods\\」之下  
    [![image](https://img.maki0419.com/blog/uncensor.png)](https://img.maki0419.com/blog/uncensor.png)
    * 在CharaMaker裡的「身體>全體」選單下方可以選擇模組，設定完記得儲存卡片
    * 在F1裡可以設定「當角色Uncensor未設定」時要顯示的預設模組，也可以選擇「隨機(Random)」選項  
@@ -312,7 +315,7 @@ tags = ["Koikatu"]
    * StudioCharaSort 工作室人物卡瀏覽視窗的排列紀錄
    * ☆SMAP 大量增加角色飾品可用的親屬點，取代KK\_MoreAccessoryParents
    * AccGotHigh 捏人的飾品列表介面, 滑鼠移到槽位按鈕時對應的飾品以高亮效果顯示；設定調成Number Mode能更方便的看出飾品貼圖位置
- \==以下標示為測試作品==
+\==以下標示為測試作品==
    * ABMXHelper 匯出/匯入角色的 abmx 資料
    * ☆AccessoryClothesDynamicBoneSupport 修復 AccessoryClothes 的 DynamicBone 和 ModBoneImplantor 支援，需要ModBoneImplantor v1.1
    * DynamicBoneEditorBatchSettings 匯出/匯入/批次設定角色的 DynamicBoneEditor 資料
@@ -435,14 +438,14 @@ tags = ["Koikatu"]
 * [KK\_MoanSoftly v1.0](https://www.patreon.com/posts/32405964) H戰鬥時的呻吟音量會隨著戰鬥進度改變
 * [Koikatu ClothingStateMenuv3.0.1](https://www.patreon.com/posts/clothingstatemen-37378336) CharaMaker中加上服裝狀態操作選單，可以半脫、隱藏身體，右下角可以勾選啟閉功能。和ClothingStateMenuX選一個用就好
 * ☆[Koikatu VN\_Game\_Engine(VNGE) v33](https://mega.nz/folder/oiB2wAQK#ojGIzlAN-1B-263uUDEalQ/folder/Jm5xAIbA) VN引擎，用來做文字選項遊戲和寫Script，語言是Python。  
- 相關插件: 將相關插件檔案(應為\*.py和一些附加內容)放入VNGE的「Console\\Lib\\」目錄下
+相關插件: 將相關插件檔案(應為\*.py和一些附加內容)放入VNGE的「Console\\Lib\\」目錄下
    * Scene Save State ([使用教學](https://mega.nz/#F!U2wADQRD!7Qzfk4D3qoU%5FZ0P26cgLLg)) 在Scene裡儲存角色狀態，讓你****用同一個人物去改變動作、位置等，取代複數的同一人物，以減輕電腦負擔**。
    * VNText 這是[Koikatu Studio Text Plugin](/2019/06/koikatu-studio-text-plugin.html)的VN Port
    * VNAnime 制作關鍵幀動畫
    * VNScene 制作VN (Virtual Novel)
    * Pose, Face, Status, Hands libraries 以標籤、群組分類保存Pose等等
    * Body and Face sliders 可以在Studio中簡單的修改角色身型數值
- \==以上內建在VNGE中==
+\==以上內建在VNGE中==
    * [Auto Chara Moments 4.5](https://mega.nz/folder/oiB2wAQK#ojGIzlAN-1B-263uUDEalQ/file/puoRUCYR) 自動為選擇的角色卡&複數場景卡拍攝截圖，使用安裝教學詳見內文，200%幫你拍歪
    * [MMD Director v2.3.1](https://mega.nz/folder/NQhG3IjA#rwyaVwE0O1t3pJe5Fefv2Q) ([ZOD發布帖和說明、教學](https://zodgame.xyz/forum.php?mod=viewthread&tid=235560)) 定位為MMD製作工具，不僅是播放VMD動作，而且能夠編輯關鍵幀並協調場景內的其他道具
    * [KoiFighter!! 1.5](https://mega.nz/folder/oiB2wAQK#ojGIzlAN-1B-263uUDEalQ/file/oyw01baD) 在Studio中玩格Game！詳見連結內影片
@@ -487,7 +490,7 @@ tags = ["Koikatu"]
 H鍵開車，Y鍵開啟多鏡頭，(Shift/Ctrl)+Y切換(前/後)一組鏡頭，並把Menu Icon變得世界小
 * [AdvIKPlugin v1.6.8](https://github.com/OrangeSpork/AdvIKPlugin/releases/tag/1.6.8) 他在IK上多做了些微妙的功能。它bug時可能會讓你婆變成長頸鹿，最好是別用
 * ~~KK\_PantyRobber v0.2 [upillusion0321](http://uppervolta-3d.net/illu/upload.php) 在校園裡使出和真的「竊盜」~~  
- 在非日文語系有bug
+在非日文語系有bug
 * ~~[Koikatu Bra\_Push-Up\_Mod(KK\_Kiyase)\_v0.2.1](https://ux.getuploader.com/56e4%5FxXVv/download/97) 穿奶罩時會把奶子往內擠一些，奶罩不是裝飾品惹。~~  
 被Pushup plugin取代
 * ~~[KK\_ClothesLoadOption v0.2.2](https://ux.getuploader.com/56e4%5FxXVv/download/94) 載入服裝卡片時，可以選擇要載入的細項，並不處理包括Material Editor在內的所有插件資料~~  
@@ -539,18 +542,18 @@ H鍵開車，Y鍵開啟多鏡頭，(Shift/Ctrl)+Y切換(前/後)一組鏡頭，�
 * [KK\_GaugeSlider 0.2.2](https://ux.getuploader.com/56e4%5FxXVv/download/81) 讓以下幾個數值可編輯: 移動中的主角狀態、移動/對話場景的H感度、H時的男\\女感度
 * [KK\_Crawl 0.0.1](https://ux.getuploader.com/56e4%5FxXVv/download/76) 主遊戲移動場景的第一人稱視角插件，快捷鍵見Readme
 * [DirectorNeoKK](https://www.patreon.com/kantoku2018/posts)  
- 注意，**這是一個收費外掛**，在[作者的Patreon](https://www.patreon.com/kantoku2018/posts)贊助3美元/月可以拿到。
+注意，**這是一個收費外掛**，在[作者的Patreon](https://www.patreon.com/kantoku2018/posts)贊助3美元/月可以拿到。
 * [KoikPlugins(kPlug) v2.X](javascript:void%280%29 "你只會被相容性搞死自己") (這個我沒用過，也並不推薦使用)  
- 這是一個閉源收費插件，他對本篇遊戲的改變非常大，增加很多新體驗，但是和其他數個外掛有衝突  
- 建議重新安裝在另一乾淨的遊戲環境，然後依照說明書只裝相容插件，免得發生不預期狀況  
- 請下載以後打開檔案內的kPlugManual.html，依照指示安裝使用，那是說明書
+這是一個閉源收費插件，他對本篇遊戲的改變非常大，增加很多新體驗，但是和其他數個外掛有衝突  
+建議重新安裝在另一乾淨的遊戲環境，然後依照說明書只裝相容插件，免得發生不預期狀況  
+請下載以後打開檔案內的kPlugManual.html，依照指示安裝使用，那是說明書
 
 ## 其他工具
 
 * ☆[Koikatu KKManager v0.18](https://www.patreon.com/posts/kkmanager-v0-14-41869238) Koikatu的人物卡和mod管理器，支援sideloader mod的自動更新
 * [Plugin Data Reader](https://plugindatareader.maki0419.com/)  
 [![](https://img.maki0419.com/blog/preview/PluginDataReader.png)](https://img.maki0419.com/blog/preview/PluginDataReader.png)  
- 此工具網站可以檢查角色卡所使用的plugin和mod，[這裡有說明書](/2021/11/plugin-data-reader.html)。 這是我寫der
+此工具網站可以檢查角色卡所使用的plugin和mod，[這裡有說明書](/2021/11/plugin-data-reader.html)。 這是我寫der
 * [fix registry & start.bat](https://mega.nz/file/JxxSVbrB#ENq3QFi%5FoWUittxqtuZu5ilvDkdRAF5AwV0Xpt2JG%5FY) ([英Discord發布](https://discordapp.com/channels/447114928785063977/447115303449657354/506071304726642706))註冊表修理batch。移動遊戲目錄後，務必將它放在目錄下執行一次
 * [Koikatu 100% SaveData](http://www.mediafire.com/file/wqmi262icfp1q1v/Koikatu%5F-%5F100%2525%5FSave.rar/file) 100%存檔，覆蓋注意
 * [IllusionLaunchers v3.0.0](https://github.com/IllusionMods/IllusionLaunchers/releases/tag/v3.2.0) 佬外做的啟動器，可方便的開啟遊戲資料夾，帶有註冊表修理功能。除此之外沒什麼用，建議用原版那個就夠了。
@@ -582,13 +585,13 @@ H鍵開車，Y鍵開啟多鏡頭，(Shift/Ctrl)+Y切換(前/後)一組鏡頭，�
 * Pixiv  
 [角色配佈TAG: キャラ配布(コイカツ)](https://www.pixiv.net/tags/%E3%82%AD%E3%83%A3%E3%83%A9%E9%85%8D%E5%B8%83%28%E3%82%B3%E3%82%A4%E3%82%AB%E3%83%84%29)  
 [Studio Scene配佈TAG: シーン配布(コイカツ!)](https://www.pixiv.net/tags/%E3%82%B7%E3%83%BC%E3%83%B3%E9%85%8D%E5%B8%83%28%E3%82%B3%E3%82%A4%E3%82%AB%E3%83%84!%29)  
- Pixiv圖站，請注意要開啟原png圖檔再下載
+Pixiv圖站，請注意要開啟原png圖檔再下載
 * BepisDB  
 <https://db.bepis.io/>  
- Bepis開的存檔搜刮網站，他會定期去Pixiv、Discord各大發佈站爬蟲。  
- 他要求作者們「主動」向他回報盜卡，並以自己會撤下盜卡為榮。  
- 請各位創作者們勤加上網站巡邏，替你自己回報盜卡，並等待bepis的施捨。  
- 按照bepis的說法，至少有20位受害者很滿意這個流程，所以這是你們該做的。  
+Bepis開的存檔搜刮網站，他會定期去Pixiv、Discord各大發佈站爬蟲。  
+他要求作者們「主動」向他回報盜卡，並以自己會撤下盜卡為榮。  
+請各位創作者們勤加上網站巡邏，替你自己回報盜卡，並等待bepis的施捨。  
+按照bepis的說法，至少有20位受害者很滿意這個流程，所以這是你們該做的。  
 [![image](https://img.maki0419.com/blog/bepisdb.png)](https://img.maki0419.com/blog/bepisdb.png)  
 [如果你想知道事情始末，請點這個連結](https://jim60105.github.io/discord-dm-20210825/)  
 [這是bepis對我個人的指控](https://jim60105.github.io/discord-bepisdb-rumor-20220512/)  
@@ -599,16 +602,16 @@ H鍵開車，Y鍵開啟多鏡頭，(Shift/Ctrl)+Y切換(前/後)一組鏡頭，�
 > ¯\\\_(ツ)\_/¯
 * Illusion Game Cards  
 <https://illusioncards.booru.org/index.php?page=post&s=list&tags=koikatsu>  
- I社卡片分享站，關鍵字請下koikatsu或koikatsu scene
+I社卡片分享站，關鍵字請下koikatsu或koikatsu scene
 * kenzato Booru  
 <https://kenzato.uk/booru/category/KK>  
- 另一個卡片分享站
+另一個卡片分享站
 * Koikatu Wiki  
 <https://wiki.anime-sharing.com/hgames/index.php?title=Koikatu>  
- 基本的操作教學，注目Studio的部分
+基本的操作教學，注目Studio的部分
 
 ### 人權
 
-[![](https://img.maki0419.com/blog/2019-10-13%2020%2027%2016.png)](https://img.maki0419.com/blog/2019-10-13%2020%2027%2016.png) 
+[![](https://img.maki0419.com/blog/2019-10-13%2020%2027%2016.png)](https://img.maki0419.com/blog/2019-10-13%2020%2027%2016.png)
 
 iscn://likecoin-chain/wNXXrjwe\_0oKckEePztstQcK8ywEuL4XXbJRttN598Q

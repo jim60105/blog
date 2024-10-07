@@ -1,6 +1,6 @@
 +++
 title = "[Koikatu / Koikatsu Sunshine] Studio 儲存工作區順序修正 (Studio Save Workspace Order Fix)"
-description = ""
+description = "[Koikatu / Koikatsu Sunshine] Studio 儲存工作區順序修正 (Studio Save Workspace Order Fix)"
 date = 2020-05-16T05:43:00.011Z
 updated = 2021-10-31T11:12:40.737Z
 draft = false
@@ -8,8 +8,11 @@ aliases = ["/2020/05/koikatu-studio-save-workspace-order-fix.html"]
 
 [taxonomies]
 tags = ["Koikatu", "C#"]
+
+[extra]
+banner = "https://img.maki0419.com/blog/preview/demo16.png"
 +++
-[![](https://img.maki0419.com/blog/preview/demo16.png)](https://img.maki0419.com/blog/preview/demo16.png) 
+[![](https://img.maki0419.com/blog/preview/demo16.png)](https://img.maki0419.com/blog/preview/demo16.png)
 
   
 * 以Studio的存檔邏輯，工作區中，在第一層之物件排序是以加入順序儲存  
@@ -24,7 +27,7 @@ tags = ["Koikatu", "C#"]
 ##### Koikatu
 
 * コイカツ！ ダークネス (Koikatu! Darkness)  
- 這不相容於Steam Koikatsu Party
+這不相容於Steam Koikatsu Party
 * **BepInEx v5.1 (不支援v5.0.X)**
 * BepisPlugins r15
 

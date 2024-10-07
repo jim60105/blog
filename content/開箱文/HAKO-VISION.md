@@ -1,13 +1,16 @@
 +++
 title = "HAKO VISION 視覺彩盒 初音未來 不專業開箱"
-description = ""
+description = "HAKO VISION 視覺彩盒 初音未來 不專業開箱"
 date = 2014-08-22T00:32:00.004Z
 updated = 2020-08-30T16:59:44.119Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = ["開箱文"]
+tags = [ "開箱文" ]
+
+[extra]
+banner = "http://2.bp.blogspot.com/-fAD4xjVkMAk/U_aGmG4uz6I/AAAAAAAAKEQ/gtDKqLscmQA/s640/IMG_20140821_195014.jpg"
 +++
 [![](http://2.bp.blogspot.com/-fAD4xjVkMAk/U_aGmG4uz6I/AAAAAAAAKEQ/gtDKqLscmQA/s640/IMG_20140821_195014.jpg)](http://2.bp.blogspot.com/-fAD4xjVkMAk/U%5FaGmG4uz6I/AAAAAAAAKEQ/gtDKqLscmQA/s1600/IMG%5F20140821%5F195014.jpg)
 

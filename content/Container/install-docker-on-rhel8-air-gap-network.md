@@ -1,15 +1,18 @@
 +++
 title = "在 RHEL 8.8 離線安裝 Docker"
-description = ""
+description = "在 RHEL 8.8 離線安裝 Docker"
 date = 2024-07-06T15:02:00.003Z
 updated = 2024-09-07T20:12:04.194Z
 draft = false
-aliases = ["/2024/07/install-docker-on-rhel8-air-gap-network.html"]
+aliases = [ "/2024/07/install-docker-on-rhel8-air-gap-network.html" ]
 
 [taxonomies]
-tags = ["Container"]
+tags = [ "Docker" ]
+
+[extra]
+banner = "https://img.maki0419.com/blog/air-gap-docker/preview.png"
 +++
-[![](https://img.maki0419.com/blog/air-gap-docker/preview.png)](https://img.maki0419.com/blog/air-gap-docker/preview.png) 
+[![](https://img.maki0419.com/blog/air-gap-docker/preview.png)](https://img.maki0419.com/blog/air-gap-docker/preview.png)
 
 [Made with Flux.1-dev](https://civitai.com/images/28256320)   
 
@@ -35,9 +38,9 @@ Podman 也沒什麼不好，就只是客戶會撞牆在權限跟權限跟權限�
 ## 下載 Docker 離線安裝包
 
 > Docker 官方手冊
-> 
+>
 > ---
-> 
+>
 > <https://docs.docker.com/engine/install/rhel/#install-from-a-package>
 
 * 到這個網站 <https://download.docker.com/linux/rhel/>
@@ -63,9 +66,9 @@ docker save -o nginx.tar nginx
 ## 安裝 RHEL
 
 > Red Hat 官方手冊
-> 
+>
 > ---
-> 
+>
 > <https://docs.redhat.com/en/documentation/red%5Fhat%5Fenterprise%5Flinux/8/html-single/performing%5Fa%5Fstandard%5Frhel%5F8%5Finstallation/index>
 
 開機時 F11 進 One-shot boot menu，選擇 RHEL 開機 USB
@@ -73,7 +76,7 @@ docker save -o nginx.tar nginx
 * 注意若要創建其它用戶時 _**必須**_ 授予 sudo 權限
 * 硬碟配置選 Custom，並將 `/var` 切大一點，docker 佔空間的檔案會存在這
 
-[![](https://img.maki0419.com/blog/air-gap-docker/7.jpg)](https://img.maki0419.com/blog/air-gap-docker/7.jpg) 
+[![](https://img.maki0419.com/blog/air-gap-docker/7.jpg)](https://img.maki0419.com/blog/air-gap-docker/7.jpg)
 
 其餘依照客戶需求做設定，安裝完成後重啟
 
@@ -85,14 +88,14 @@ mount /dev/sdb1 /mnt
 cd /mnt
 ls -alh
 
-[![](https://img.maki0419.com/blog/air-gap-docker/8.png)](https://img.maki0419.com/blog/air-gap-docker/8.png) 
+[![](https://img.maki0419.com/blog/air-gap-docker/8.png)](https://img.maki0419.com/blog/air-gap-docker/8.png)
 
 ### 移除衝突套件 (for RHEL 8)
 
 > install docker-ce on redhat 8 - Stack Overflow
-> 
+>
 > ---
-> 
+>
 > <https://stackoverflow.com/a/60153726/8706033>
 
 dnf module disable container-tools
@@ -107,7 +110,7 @@ dnf install ./libcgroup(tab 按出檔案名)
 
 dnf install ./(用 tab 依序按出所有檔案)
 
-[![](https://img.maki0419.com/blog/air-gap-docker/9.png)](https://img.maki0419.com/blog/air-gap-docker/9.png) 
+[![](https://img.maki0419.com/blog/air-gap-docker/9.png)](https://img.maki0419.com/blog/air-gap-docker/9.png)
 
 ### 啟用 docker
 

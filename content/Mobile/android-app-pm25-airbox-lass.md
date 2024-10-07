@@ -1,15 +1,18 @@
 +++
 title = "[Android App] PM2.5 環境空氣顯示器 ( Airbox 、 LASS 等民間Maker站點 )"
-description = ""
+description = "[Android App] PM2.5 環境空氣顯示器 ( Airbox 、 LASS 等民間Maker站點 )"
 date = 2019-01-09T07:57:00.009Z
 updated = 2020-11-24T14:56:53.458Z
 draft = false
 aliases = ["/2019/01/android-app-pm25-airbox-lass.html"]
 
 [taxonomies]
-tags = ["Android"]
+tags = []
+
+[extra]
+banner = "https://3.bp.blogspot.com/-ZHW_AFOFLAU/XDWtXA-gUvI/AAAAAAAAL8A/d2iC9j9j9yw4fKau0TGkHtc7TebRAwztgCLcBGAs/s2340/lung.png"
 +++
-[![](https://3.bp.blogspot.com/-ZHW_AFOFLAU/XDWtXA-gUvI/AAAAAAAAL8A/d2iC9j9j9yw4fKau0TGkHtc7TebRAwztgCLcBGAs/s2340/lung.png)](https://3.bp.blogspot.com/-ZHW%5FAFOFLAU/XDWtXA-gUvI/AAAAAAAAL8A/d2iC9j9j9yw4fKau0TGkHtc7TebRAwztgCLcBGAs/s1600/lung.png) 
+[![](https://3.bp.blogspot.com/-ZHW_AFOFLAU/XDWtXA-gUvI/AAAAAAAAL8A/d2iC9j9j9yw4fKau0TGkHtc7TebRAwztgCLcBGAs/s2340/lung.png)](https://3.bp.blogspot.com/-ZHW%5FAFOFLAU/XDWtXA-gUvI/AAAAAAAAL8A/d2iC9j9j9yw4fKau0TGkHtc7TebRAwztgCLcBGAs/s1600/lung.png)
 
   
 ###  前言
@@ -56,7 +59,7 @@ App Inventer沒有類似Multi-thread之類的功能可以使用，非常頭痛�
 苦思一晚，最後使用Clock Interval搭配List shift的方式做呼叫，變相達成一樣的效果。
 
   
-[![](https://1.bp.blogspot.com/-FFIULlGdnYU/XDWr5r8mo2I/AAAAAAAAL7w/Hyy4rJBwXN0gmgb9BcxyKZjxMy9OeZRiwCLcBGAs/s400/%25E6%2588%2591%25E5%25A4%25AA%25E4%25BB%2596%25E5%25AA%25BD%25E7%259A%2584%25E6%25A9%259F%25E6%2599%25BA%25E4%25BA%2586.png)](https://1.bp.blogspot.com/-FFIULlGdnYU/XDWr5r8mo2I/AAAAAAAAL7w/Hyy4rJBwXN0gmgb9BcxyKZjxMy9OeZRiwCLcBGAs/s1600/%25E6%2588%2591%25E5%25A4%25AA%25E4%25BB%2596%25E5%25AA%25BD%25E7%259A%2584%25E6%25A9%259F%25E6%2599%25BA%25E4%25BA%2586.png) 
+[![](https://1.bp.blogspot.com/-FFIULlGdnYU/XDWr5r8mo2I/AAAAAAAAL7w/Hyy4rJBwXN0gmgb9BcxyKZjxMy9OeZRiwCLcBGAs/s400/%25E6%2588%2591%25E5%25A4%25AA%25E4%25BB%2596%25E5%25AA%25BD%25E7%259A%2584%25E6%25A9%259F%25E6%2599%25BA%25E4%25BA%2586.png)](https://1.bp.blogspot.com/-FFIULlGdnYU/XDWr5r8mo2I/AAAAAAAAL7w/Hyy4rJBwXN0gmgb9BcxyKZjxMy9OeZRiwCLcBGAs/s1600/%25E6%2588%2591%25E5%25A4%25AA%25E4%25BB%2596%25E5%25AA%25BD%25E7%259A%2584%25E6%25A9%259F%25E6%2599%25BA%25E4%25BA%2586.png)
 
   
 現在這App完全融入我的日常生活。
@@ -66,4 +69,4 @@ App Inventer沒有類似Multi-thread之類的功能可以使用，非常頭痛�
 搭配上畢業專題做的空氣品質通報，我感覺整個人都變乾淨了。
 
   
-[![](https://2.bp.blogspot.com/-aorWIxCiGYA/XDWsunXHPgI/AAAAAAAAL74/AKg-jIiDMhklpRPfcBa8LfHJJ8TViKavQCLcBGAs/s400/%25E4%25B8%25A6%25E6%25B2%2592%25E6%259C%2589%2B%25E5%259F%25BA%25E5%25BE%25B72.jpg)](https://2.bp.blogspot.com/-aorWIxCiGYA/XDWsunXHPgI/AAAAAAAAL74/AKg-jIiDMhklpRPfcBa8LfHJJ8TViKavQCLcBGAs/s1600/%25E4%25B8%25A6%25E6%25B2%2592%25E6%259C%2589%2B%25E5%259F%25BA%25E5%25BE%25B72.jpg) 
+[![](https://2.bp.blogspot.com/-aorWIxCiGYA/XDWsunXHPgI/AAAAAAAAL74/AKg-jIiDMhklpRPfcBa8LfHJJ8TViKavQCLcBGAs/s400/%25E4%25B8%25A6%25E6%25B2%2592%25E6%259C%2589%2B%25E5%259F%25BA%25E5%25BE%25B72.jpg)](https://2.bp.blogspot.com/-aorWIxCiGYA/XDWsunXHPgI/AAAAAAAAL74/AKg-jIiDMhklpRPfcBa8LfHJJ8TViKavQCLcBGAs/s1600/%25E4%25B8%25A6%25E6%25B2%2592%25E6%259C%2589%2B%25E5%259F%25BA%25E5%25BE%25B72.jpg)

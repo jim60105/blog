@@ -1,17 +1,20 @@
 +++
 title = "[Chrome Extension] Youtube影片截選播放清單 (Youtube Clip Playlist)"
-description = ""
+description = "[Chrome Extension] Youtube影片截選播放清單 (Youtube Clip Playlist)"
 date = 2022-06-29T16:50:00.018Z
 updated = 2024-04-08T14:52:45.753Z
 draft = false
-aliases = ["/2022/06/chrome-extension-youtube-clip-playlist.html"]
+aliases = [ "/2022/06/chrome-extension-youtube-clip-playlist.html" ]
 
 [taxonomies]
-tags = ["JavaScript", "YouTube"]
+tags = [ "JavaScript", "Livestream" ]
+
+[extra]
+banner = "https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/preview.png"
 +++
 ## 前言
 
-![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/preview.png) 
+![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/preview.png)
 
   
 ![GitHub tag](https://img.shields.io/github/tag/jim60105/YoutubeClipPlaylist?style=for-the-badge) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/jim60105/YoutubeClipPlaylist?style=for-the-badge) ![LICENSE](https://img.shields.io/github/license/jim60105/YoutubeClipPlaylist?style=for-the-badge)  
@@ -31,19 +34,19 @@ tags = ["JavaScript", "YouTube"]
 
 ## 安裝方法
 
- 參照[這篇文章](https://blog.maki0419.com/2022/01/media-autoplay-on-browser.html)，設定下方網域的允許自動播放 
+參照[這篇文章](https://blog.maki0419.com/2022/01/media-autoplay-on-browser.html)，設定下方網域的允許自動播放
 * `https://www.youtube.com:443`
 * `https://onedrive.live.com:443`
 * `https://gothuedutw-my.sharepoint.com:443`
 * `https://twitcasting.tv:443`
 * `https://drive.google.com:443`
 
-[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/autoplay.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/autoplay.png) 
+[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/autoplay.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/autoplay.png)
 
 > 安裝瀏覧器擴充功能
-> 
+>
 > ---
-> 
+>
 > [Chrome Web Store](https://chrome.google.com/webstore/detail/kdlhjpdoaabhpolkaghkjklfcdfjapkh)
 
 ## 彈窗 UI 選單
@@ -55,9 +58,9 @@ tags = ["JavaScript", "YouTube"]
 * 單擊中間的紅色播放按鈕，播放**所有**播放清單
 * 單擊播放清單列表，播放**單一**播放清單
 
-[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/UI.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/UI.png) 
+[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/UI.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/UI.png)
 
-[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/UI2.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/UI2.png) 
+[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/UI2.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/UI2.png)
 
   
 ### 禁用歌單功能
@@ -69,15 +72,15 @@ tags = ["JavaScript", "YouTube"]
 
 ## 歌單(Playlist)
 
- 目前內建[久遠たま](https://www.youtube.com/channel/UCBC7vYFNQoGPupe5NxPG4Bw)、[間取かける](https://www.youtube.com/channel/UCiLt4FLjMXszLOh5ISi1oqw)、[薬袋アルマ](https://www.youtube.com/channel/UCD1QOCJIAPsMKMvRSXjLahw)、[須多夜花](https://www.youtube.com/channel/UCuy-kZJ7HWwUU-eKv0zUZFQ)、[伊冬ユナ](https://www.youtube.com/channel/UCYbzeYnRZuw7fZKrgu2bgtw)、[YOSHIKA⁂Ch.](https://www.youtube.com/c/YOSHIKA-Ch)的歌單
+目前內建[久遠たま](https://www.youtube.com/channel/UCBC7vYFNQoGPupe5NxPG4Bw)、[間取かける](https://www.youtube.com/channel/UCiLt4FLjMXszLOh5ISi1oqw)、[薬袋アルマ](https://www.youtube.com/channel/UCD1QOCJIAPsMKMvRSXjLahw)、[須多夜花](https://www.youtube.com/channel/UCuy-kZJ7HWwUU-eKv0zUZFQ)、[伊冬ユナ](https://www.youtube.com/channel/UCYbzeYnRZuw7fZKrgu2bgtw)、[YOSHIKA⁂Ch.](https://www.youtube.com/c/YOSHIKA-Ch)的歌單
 
- 如果想要編寫歌單，請參考[此repo](https://github.com/jim60105/Playlists)  
- 你也可以fork此repo，從頭寫你自己的！![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge) 
+如果想要編寫歌單，請參考[此repo](https://github.com/jim60105/Playlists)  
+你也可以fork此repo，從頭寫你自己的！![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)
 
 ### 歌單格式
 
- 歌單的格式是JSON with comment  
- 這裡有[總表](https://github.com/jim60105/Playlists/blob/master/Playlists.jsonc)，標示清單名稱、標籤、位置，並載入[個別歌單](https://github.com/jim60105/Playlists/blob/master/QuonTama/QuonTamaSongList.jsonc) 
+歌單的格式是JSON with comment  
+這裡有[總表](https://github.com/jim60105/Playlists/blob/master/Playlists.jsonc)，標示清單名稱、標籤、位置，並載入[個別歌單](https://github.com/jim60105/Playlists/blob/master/QuonTama/QuonTamaSongList.jsonc)
 
 每個陣列中儲存以下項目: \[VideoID, StartTime, EndTime, Title?, SubSrc?\]
 
@@ -88,7 +91,7 @@ tags = ["JavaScript", "YouTube"]
 * SubSrc?: 必須用雙引號包住，為字串型態，可選
 
 > 對於 Twitcasting 有密碼鎖的影片，請延伸閱讀  
-> [TwitCasting每次播放都要求輸入密碼？不要一直問我！](/2022/01/twitcasting-cookie.html) 
+> [TwitCasting每次播放都要求輸入密碼？不要一直問我！](/2022/01/twitcasting-cookie.html)
 
 ## 歌詞、字幕
 
@@ -105,15 +108,15 @@ tags = ["JavaScript", "YouTube"]
 
 [![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/lyric.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/lyric.png)  
 
- ↓啟用後↓
+↓啟用後↓
 
-[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/play.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/play.png) 
+[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/play.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/play.png)
 
 ### ASS字幕功能
 
- 此工具支援載入WebVTT字幕(.vtt)、ASS字幕(.ass)、lrc歌詞(.lrc)，可將字幕直鏈傳入歌單之SubSrc欄位  
+此工具支援載入WebVTT字幕(.vtt)、ASS字幕(.ass)、lrc歌詞(.lrc)，可將字幕直鏈傳入歌單之SubSrc欄位  
 
-[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/Sub.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/Sub.png) 
+[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/Sub.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/ChromeWebStore/Sub.png)
 
 ## 參數說明
 
@@ -121,7 +124,7 @@ tags = ["JavaScript", "YouTube"]
 
 > https://www.youtube.com/?  
 > startplaylist &  
-> playlist=QuonTamaSongList 
+> playlist=QuonTamaSongList
 
 ### Youtube網址格式
 
@@ -131,7 +134,7 @@ tags = ["JavaScript", "YouTube"]
 > end=1880 &  
 > shuffle=1 &  
 > playlistinclude=quon &  
-> playlistexclude=member 
+> playlistexclude=member
 
 ### Google Drive網址格式
 
@@ -140,7 +143,7 @@ tags = ["JavaScript", "YouTube"]
 > end=1166 &  
 > shuffle=1 &  
 > playlistinclude=quon &  
-> playlistexclude=member 
+> playlistexclude=member
 
 ### 其它網址格式 (目前支援OneDrive、twitcasting)
 
@@ -150,7 +153,7 @@ tags = ["JavaScript", "YouTube"]
 > t=1470 &  
 > end=1653 &  
 > shuffle=1 &  
-> playlistinclude=twitcasting 
+> playlistinclude=twitcasting
 
 ### 參數
 
@@ -180,6 +183,6 @@ tags = ["JavaScript", "YouTube"]
 ## LICENSE
 
 ![LICENSE](https://img.shields.io/github/license/jim60105/YoutubeClipPlaylist?style=for-the-badge)  
- 此工具以 GPLv3 License 開源
+此工具以 GPLv3 License 開源
 
 iscn://likecoin-chain/2fdhShCP5c6UejXKF9ZOwwl4v1cZPyp8RrbzcYpjt\_o

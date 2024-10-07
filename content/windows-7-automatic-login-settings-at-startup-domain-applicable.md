@@ -1,13 +1,16 @@
 +++
 title = "WINDOWS 7開機時自動登入設定 (網域適用)"
-description = ""
+description = "WINDOWS 7開機時自動登入設定 (網域適用)"
 date = 2017-10-23T01:39:00.006Z
 updated = 2021-01-24T09:44:01.677Z
 draft = false
-aliases = ["/2017/10/windows-7.html"]
+aliases = [ "/2017/10/windows-7.html" ]
 
 [taxonomies]
-tags = ["備忘"]
+tags = [ ]
+
+[extra]
+banner = ""
 +++
 Win+R: Regedit  
 HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon  

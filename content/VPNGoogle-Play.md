@@ -1,6 +1,6 @@
 +++
 title = "在\"台灣\"用VPN下載\"日本\"Google Play上遊戲的教學"
-description = ""
+description = "在\"台灣\"用VPN下載\"日本\"Google Play上遊戲的教學"
 date = 2014-06-12T17:44:00.006Z
 updated = 2020-11-24T14:56:53.456Z
 draft = true
@@ -8,6 +8,9 @@ aliases = []
 
 [taxonomies]
 tags = []
+
+[extra]
+banner = "http://2.bp.blogspot.com/-l_wX1kRu_R8/U5nfhEt6PpI/AAAAAAAAGEs/Iv6WhbvaEsI/s1600/2014-06-13+01+11+48.png"
 +++
 如果你沒有電腦的話，請直接上一頁離開謝謝  
   

@@ -1,66 +1,69 @@
 +++
 title = "[Docker 專案] 一行指令運行 Stable Diffusion WebUI 和 Kohya's GUI"
-description = ""
+description = "[Docker 專案] 一行指令運行 Stable Diffusion WebUI 和 Kohya's GUI"
 date = 2024-03-11T15:35:00.026Z
 updated = 2024-09-07T20:30:18.239Z
 draft = false
-aliases = ["/2024/03/docker-stable-diffusion-webui-kohyas-gui.html"]
+aliases = [ "/2024/03/docker-stable-diffusion-webui-kohyas-gui.html" ]
 
 [taxonomies]
-tags = ["AI", "Container"]
+tags = [ "AI", "Docker" ]
+
+[extra]
+banner = "https://img.maki0419.com/blog/preview/docker-stable-diffusion-webui-kohyass.jpg"
 +++
-[![](https://img.maki0419.com/blog/preview/docker-stable-diffusion-webui-kohyass.jpg)](https://img.maki0419.com/blog/preview/docker-stable-diffusion-webui-kohyass.jpg) 
+[![](https://img.maki0419.com/blog/preview/docker-stable-diffusion-webui-kohyass.jpg)](https://img.maki0419.com/blog/preview/docker-stable-diffusion-webui-kohyass.jpg)
 
 ↑ Stable Diffusion 最有名的圖片是[一個太空人騎馬](https://zh.wikipedia.org/zh-tw/File:A%5Fphotograph%5Fof%5Fan%5Fastronaut%5Friding%5Fa%5Fhorse%5F2022-08-28.png)。我們用 Docker，讓他騎個鯨魚🐋！
 
- 每次只要遇到 Python 專案，我在運行前一定先看有沒有提供 Dockerfile。
+每次只要遇到 Python 專案，我在運行前一定先看有沒有提供 Dockerfile。
 
 Why?
 
- 你有沒有遇過安裝了 Python 2.7, 3.8, 3.9, 3.11，然後新程式只能跑在 3.10。  
- 重點是還不一定能升級，裝好了 Python 3.11 不代表你可以跑 3.8, 3.9, 3.10 的程式！  
- Python Developer 裝這麼多版本不累嗎😅  
+你有沒有遇過安裝了 Python 2.7, 3.8, 3.9, 3.11，然後新程式只能跑在 3.10。  
+重點是還不一定能升級，裝好了 Python 3.11 不代表你可以跑 3.8, 3.9, 3.10 的程式！  
+Python Developer 裝這麼多版本不累嗎😅  
 
- 我知道你會說 conda，玩 Python 的人不可能沒用過[Anaconda](https://www.anaconda.com/)，它用來解決這惱人的依頼問題，讓你方便地換個程式就切換一套運行環境。  
- 這發明很棒，真的，「先有需求」才有供給對吧😏
+我知道你會說 conda，玩 Python 的人不可能沒用過[Anaconda](https://www.anaconda.com/)，它用來解決這惱人的依頼問題，讓你方便地換個程式就切換一套運行環境。  
+這發明很棒，真的，「先有需求」才有供給對吧😏
 
 直到有一天 C 槽被各版本的 Python、各程式專屬的 environment 給佔滿  
 我最終決定把它們全都砍了，從此以後打死不在本機裝 Python  
 通通給我到容器🐋裡去吧！
 
 > 不方便開發?
-> 
+>
 > ---
-> 
+>
 > 開發需求推薦[devcontainer](https://code.visualstudio.com/learn/develop-cloud/containers)  
 > 專案做好 `.devcontainer` 設定檔 & 一鍵建立 GitHub CodeSpaces  
 > Python 開發體驗一級棒👍  
 >  
-> ......前提是你懂 Docker 
+> ......前提是你懂 Docker
 
- 說回今天的主題，**Stable Diffusion WebUI** 和 **Kohya's GUI**，這兩套程式都有前人做了容器化。  
- 我過往看過 Dockerfile 後認為「有最佳化的餘地，但沒什麼大問題」並直接使用了一段時間。
+說回今天的主題，**Stable Diffusion WebUI** 和 **Kohya's GUI**，這兩套程式都有前人做了容器化。  
+我過往看過 Dockerfile 後認為「有最佳化的餘地，但沒什麼大問題」並直接使用了一段時間。
 
 前兩週比較有空閒，於是來貢獻貢獻所學，重寫了更好的 Dockerfile。
 
 [bmaltais/kohya\_ss](https://github.com/bmaltais/kohya%5Fss) 已經 PR 回原專案，現在[master branch 上面的 Dockerfile](https://github.com/bmaltais/kohya%5Fss/blob/master/Dockerfile) 是我重寫的  
-[AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) 不接受 Dockerfile，我是放在[自己的 GitHub，並做了整套的 CI](https://github.com/jim60105/docker-stable-diffusion-webui) 
+[AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) 不接受 Dockerfile，我是放在[自己的 GitHub，並做了整套的 CI](https://github.com/jim60105/docker-stable-diffusion-webui)
 
- 文章開始以前先讓我展示一下我的「最佳化」到底好在哪裡。  
- 講技術估計讀者不想聽，我們就簡單看個映像容量就好:
+文章開始以前先讓我展示一下我的「最佳化」到底好在哪裡。  
+講技術估計讀者不想聽，我們就簡單看個映像容量就好:
 
 > 更新 2024/04/26:
-> 
+>
 > ---
-> 
+>
 > 我最終將 kohya-ss-gui 縮減到了 10.3GB，並且幫 `bmaltais` 建了 [docker build CI](https://github.com/bmaltais/kohya%5Fss/blob/master/.github/workflows/docker%5Fpublish.yml)  
 > 它現在會自動建置映像並推送至 [ghcr.io/bmaltais/kohya-ss-gui](https://github.com/bmaltais/kohya%5Fss/pkgs/container/kohya-ss-gui)
 
- Stable Diffusion WebUI 的對照組[是它](https://github.com/AbdBarho/stable-diffusion-webui-docker)。  
- 前人寫得很不錯，是很棒的參考🙏
+Stable Diffusion WebUI 的對照組[是它](https://github.com/AbdBarho/stable-diffusion-webui-docker)。  
+前人寫得很不錯，是很棒的參考🙏
 
- 想了解技術的人推薦把我的 Dockerfile 拿來讀一次，相信能讓你有所收獲。  
- 也歡迎至[Mastodon](https://liker.social/@jim60105) 來找我，我樂意向你解釋每一行為何這樣子設計。
+想了解技術的人推薦把我的 Dockerfile 拿來讀一次，相信能讓你有所收獲。  
+也歡迎至[Mastodon](https://liker.social/@jim60105) 來找我，我樂意向你解釋每一行為何這樣子設計。
 
 ## 🏁 簡介 Stable Diffusion WebUI 和 Kohya's GUI
 
@@ -68,40 +71,40 @@ Why?
 
 [Stable Diffusion](https://zh.wikipedia.org/zh-tw/Stable%5FDiffusion) 是一個強大的 AI 影像生成模型，由 Stability AI 開發。它能根據文字描述生成高品質、多樣化的圖像。而 [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) 開源專案為這個模型創造了一個簡單易用的介面，強大的擴充框架讓其生態系蓬勃發展。
 
-[![](https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/screenshot.png)](https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/screenshot.png) 
+[![](https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/screenshot.png)](https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/master/screenshot.png)
 
 ### Kohya's GUI
 
 [bmaltais/kohya\_ss](https://github.com/bmaltais/kohya%5Fss) 是將 [kohya-ss/sd-scripts](https://github.com/kohya-ss/sd-scripts) 打包起來的 Gradio GUI 專案，能讓使用者用簡單易用的網頁介面去訓練適用於 Stable Diffusion 的繪圖模型。
 
 > 如果你不認識它們，推薦先看這篇影片
-> 
+>
 > ---
 
 ## 🚀 準備好讓你的 Docker 支援 GPU
 
 ### Windows
 
- 只要完成安裝[**Docker Desktop**](https://www.docker.com/products/docker-desktop/)、[**CUDA Toolkit**](https://developer.nvidia.com/cuda-downloads)、[**NVIDIA Windows Driver**](https://www.nvidia.com.tw/Download/index.aspx)，並確保 Docker 是使用[**WSL2**](https://docs.docker.com/desktop/wsl/#turn-on-docker-desktop-wsl-2) 運行，那麼你就準備好了。
+只要完成安裝[**Docker Desktop**](https://www.docker.com/products/docker-desktop/)、[**CUDA Toolkit**](https://developer.nvidia.com/cuda-downloads)、[**NVIDIA Windows Driver**](https://www.nvidia.com.tw/Download/index.aspx)，並確保 Docker 是使用[**WSL2**](https://docs.docker.com/desktop/wsl/#turn-on-docker-desktop-wsl-2) 運行，那麼你就準備好了。
 
- 以下官方文件提供參考  
+以下官方文件提供參考  
 <https://docs.nvidia.com/cuda/wsl-user-guide/index.html#nvidia-compute-software-support-on-wsl-2>  
-<https://docs.docker.com/desktop/wsl/use-wsl/#gpu-support> 
+<https://docs.docker.com/desktop/wsl/use-wsl/#gpu-support>
 
 > 延伸閱讀
-> 
+>
 > ---
-> 
+>
 > Will 保哥有一篇專文介紹  
-> [如何在 Windows 的 Docker Desktop 中啟用 NVIDIA CUDA 支援 (GPU)](https://blog.miniasp.com/post/2024/02/28/Enable-GPU-NVIDIA-CUDA-Support-for-Docker-Desktop-on-Windows) 
+> [如何在 Windows 的 Docker Desktop 中啟用 NVIDIA CUDA 支援 (GPU)](https://blog.miniasp.com/post/2024/02/28/Enable-GPU-NVIDIA-CUDA-Support-for-Docker-Desktop-on-Windows)
 
 ### Linux, OSX
 
- 請安裝 NVIDIA GPU 驅動程式  
-<https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html> 
+請安裝 NVIDIA GPU 驅動程式  
+<https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html>
 
- 並按照此指南安裝 NVIDIA Container Toolkit  
-<https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html> 
+並按照此指南安裝 NVIDIA Container Toolkit  
+<https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html>
 
 ## 🖥️ 如何使用這個專案
 
@@ -116,24 +119,24 @@ Why?
 標題說的一行指令就是下面這行啦😉  
 docker compose up -d
 3. 在 <http://localhost:7860> 訪問 Web UI。  
- (瀏覽器不會自動啟動！)
+(瀏覽器不會自動啟動！)
 
 > 模型和設置將被儲存在目錄 `./data`  
-> 在預設情況下，輸出的圖片將儲存在`./data/output` 
+> 在預設情況下，輸出的圖片將儲存在`./data/output`
 
 ## 🛠️ 建置指南
 
-> Git clone 儲存庫時使用 `--recursive` 來包含子模組 
-> 
+> Git clone 儲存庫時使用 `--recursive` 來包含子模組
+>
 > git clone --recursive https://github.com/jim60105/docker-stable-diffusion-webui.git
 
- 使用以下指令建置映像。
+使用以下指令建置映像。
 
 docker compose up -d --build
 
 > 若你使用舊版的 Docker 客戶端，請在建置時[啟用 BuildKit 模式](https://docs.docker.com/build/buildkit/#getting-started)。這是因為我使用了 `COPY --link` 功能，該功能在 Buildx v0.8 中被導入並可增強建置效能。隨著 Docker Engine 23.0 和 Docker Desktop 4.19 的推出，Buildx 已成為預設的建置客戶端。  
 >  
-> 因此，在使用最新版本時不必擔心這個問題喔！ 
+> 因此，在使用最新版本時不必擔心這個問題喔！
 
 ## 🔄 從現有的設定檔遷移
 
@@ -163,9 +166,9 @@ docker run -v ".:/app" -it busybox sh -c "chown -R 1001:0 /app/data && chmod -R 
 
   
 > 延伸閱讀
-> 
+>
 > ---
-> 
+>
 > * [琳的備忘手札: \[Docker\] Linux主機之Docker安裝和ReveseProxy建置](/2020/11/linux-docker-setup-revese-proxy.html)
 > * [琳的備忘手札: AI翻譯解鎖——日文網路小說無障礙閱讀體驗](/2023/05/Unlocking-AI-Translation-Barrier-free-Reading-Experience-of-Japanese-Web-Novels.html)
 

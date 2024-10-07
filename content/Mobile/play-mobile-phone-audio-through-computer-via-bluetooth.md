@@ -1,13 +1,16 @@
 +++
 title = "透過藍牙用電腦撥放手機音訊"
-description = ""
+description = "透過藍牙用電腦撥放手機音訊"
 date = 2014-06-16T09:55:00.000Z
 updated = 2020-11-24T14:56:53.459Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = []
+tags = [ ]
+
+[extra]
+banner = "http://4.bp.blogspot.com/--ys5iZ7u6vs/U57AcHb9OqI/AAAAAAAAGHI/6j0q5p0iPys/s1600/IMG_20140616_171103.jpg"
 +++
   
 

@@ -1,13 +1,16 @@
 +++
 title = "以Google試算表作為簡易資料庫(下)--資料庫的讀取"
-description = ""
+description = "以Google試算表作為簡易資料庫(下)--資料庫的讀取"
 date = 2015-06-26T07:22:00.005Z
 updated = 2021-01-30T16:25:02.776Z
 draft = false
-aliases = ["/2015/06/google-database2.html"]
+aliases = [ "/2015/06/google-database2.html" ]
 
 [taxonomies]
-tags = ["Google Apps Script"]
+tags = [ "Google Apps Script" ]
+
+[extra]
+banner = "https://1.bp.blogspot.com/-_RISMX-7gQE/VYz6jQe5ELI/AAAAAAAAKxo/sClrGuKdqmY/s1600/2015-06-26%2B15%2B06%2B35.JPG"
 +++
 ## 續篇
 
@@ -46,20 +49,20 @@ tags = ["Google Apps Script"]
 [![](https://2.bp.blogspot.com/-d4VBq4_81NI/VYz0woXQBbI/AAAAAAAAKvs/W9kARed8Zuo/s1600/2015-06-26%2B13%2B13%2B48.JPG)](http://2.bp.blogspot.com/-d4VBq4%5F81NI/VYz0woXQBbI/AAAAAAAAKvs/W9kARed8Zuo/s1600/2015-06-26%2B13%2B13%2B48.JPG)
 
   
- 將專案命名，並改成doGet(e)  
+將專案命名，並改成doGet(e)  
   
   
 [![](https://3.bp.blogspot.com/-wwgN2RAzhLc/VYz0ws6fFqI/AAAAAAAAKvo/WvWHb6mB3nc/s1600/2015-06-26%2B13%2B15%2B00.JPG)](http://3.bp.blogspot.com/-wwgN2RAzhLc/VYz0ws6fFqI/AAAAAAAAKvo/WvWHb6mB3nc/s1600/2015-06-26%2B13%2B15%2B00.JPG)
 
   
- 從上篇建立的程式碼上半部直接複製過來改\~  
+從上篇建立的程式碼上半部直接複製過來改\~  
 參數只需要留一個number  
   
   
 [![](https://3.bp.blogspot.com/-DgR112gaRnE/VYz0wnaYqPI/AAAAAAAAKvw/v-p6hE4BXbk/s1600/2015-06-26%2B13%2B16%2B38.JPG)](http://3.bp.blogspot.com/-DgR112gaRnE/VYz0wnaYqPI/AAAAAAAAKvw/v-p6hE4BXbk/s1600/2015-06-26%2B13%2B16%2B38.JPG)
 
   
- 接著是程式主體:比對到正確資訊後將資料輸出  
+接著是程式主體:比對到正確資訊後將資料輸出  
 此處我採用循序比對法，簡單明瞭  
 若資料量過多，請自己選用適合的演算法  
 ※注意陣列是zero-based，跟行數不同※  
@@ -68,7 +71,7 @@ tags = ["Google Apps Script"]
 [![](https://4.bp.blogspot.com/-G6-fTBr4log/VYz0zcf1TqI/AAAAAAAAKwE/wToeQENvZKw/s1600/2015-06-26%2B13%2B34%2B06.JPG)](http://4.bp.blogspot.com/-G6-fTBr4log/VYz0zcf1TqI/AAAAAAAAKwE/wToeQENvZKw/s1600/2015-06-26%2B13%2B34%2B06.JPG)
 
   
- 加上沒找到的狀況  
+加上沒找到的狀況  
 並且直接把return塞進迴圈  
   
   
@@ -83,33 +86,33 @@ tags = ["Google Apps Script"]
 [![](https://4.bp.blogspot.com/-eChbd08Ud4o/VYz0zW2WKZI/AAAAAAAAKwA/UXG9aQMiYoc/s1600/2015-06-26%2B13%2B35%2B00.JPG)](http://4.bp.blogspot.com/-eChbd08Ud4o/VYz0zW2WKZI/AAAAAAAAKwA/UXG9aQMiYoc/s1600/2015-06-26%2B13%2B35%2B00.JPG)
 
   
- debug程式碼內容照舊，只是參數只送一個座號  
+debug程式碼內容照舊，只是參數只送一個座號  
 紅框處兩個按鍵都可以執行  
   
   
 [![](https://4.bp.blogspot.com/-FH9BD0iLS0o/VYz00q0O6kI/AAAAAAAAKwU/LPqNFZjuQk8/s1600/2015-06-26%2B14%2B21%2B26.JPG)](http://4.bp.blogspot.com/-FH9BD0iLS0o/VYz00q0O6kI/AAAAAAAAKwU/LPqNFZjuQk8/s1600/2015-06-26%2B14%2B21%2B26.JPG)
 
   
- 執行結束後來看看結果，打開執行紀錄查看  
+執行結束後來看看結果，打開執行紀錄查看  
   
   
 [![](https://4.bp.blogspot.com/-zX6xU1eSkq4/VYz006JswlI/AAAAAAAAKwY/hwsQ2cLLALY/s1600/2015-06-26%2B14%2B21%2B52.JPG)](http://4.bp.blogspot.com/-zX6xU1eSkq4/VYz006JswlI/AAAAAAAAKwY/hwsQ2cLLALY/s1600/2015-06-26%2B14%2B21%2B52.JPG)
 
   
- 紅框處顯示有正確抓到資料\~\~  
+紅框處顯示有正確抓到資料\~\~  
 一次成功爽･\*:.｡..｡.:\*･゜ヽ( ´∀｀)人(´∀｀ )ノ･゜ﾟ･\*:.｡..｡.:\*  
   
   
 [![](https://2.bp.blogspot.com/-St5x9Nnokts/VYz02denyqI/AAAAAAAAKwo/NLDgEs3tol8/s1600/2015-06-26%2B14%2B22%2B13.JPG)](http://2.bp.blogspot.com/-St5x9Nnokts/VYz02denyqI/AAAAAAAAKwo/NLDgEs3tol8/s1600/2015-06-26%2B14%2B22%2B13.JPG)
 
   
- 改成不存在的6，有成功顯示錯誤資訊  
+改成不存在的6，有成功顯示錯誤資訊  
   
   
 [![](https://4.bp.blogspot.com/-dlEKdguUgdc/VYz03CmgqYI/AAAAAAAAKw0/oZXPLxPrxb8/s1600/2015-06-26%2B14%2B22%2B50.JPG)](http://4.bp.blogspot.com/-dlEKdguUgdc/VYz03CmgqYI/AAAAAAAAKw0/oZXPLxPrxb8/s1600/2015-06-26%2B14%2B22%2B50.JPG)
 
   
- 將程式部屬為網路應用程式，詳細步驟看[上篇](/2015/06/google-database.html)  
+將程式部屬為網路應用程式，詳細步驟看[上篇](/2015/06/google-database.html)  
   
   
 [![](https://1.bp.blogspot.com/-KXEynBKRDSA/VYz02vs0fMI/AAAAAAAAKws/9VcpeMNXEOw/s1600/2015-06-26%2B14%2B24%2B04.JPG)](http://1.bp.blogspot.com/-KXEynBKRDSA/VYz02vs0fMI/AAAAAAAAKws/9VcpeMNXEOw/s1600/2015-06-26%2B14%2B24%2B04.JPG)
@@ -133,25 +136,25 @@ tags = ["Google Apps Script"]
     NO:   
 
   
- 接下來試試看查詢吧\~
+接下來試試看查詢吧\~
   
   
 [![](https://4.bp.blogspot.com/-aZOdbOeCIZQ/VYz093qEx_I/AAAAAAAAKxA/w40_dtDflXw/s1600/2015-06-26%2B14%2B29%2B54.JPG)](http://4.bp.blogspot.com/-aZOdbOeCIZQ/VYz093qEx%5FI/AAAAAAAAKxA/w40%5FdtDflXw/s1600/2015-06-26%2B14%2B29%2B54.JPG)
 
   
- 成功\~  
+成功\~  
   
   
 [![](https://3.bp.blogspot.com/-ypO2vWFVrCM/VYz0995nOOI/AAAAAAAAKxE/MYuvgS05KSU/s1600/2015-06-26%2B14%2B30%2B08.JPG)](http://3.bp.blogspot.com/-ypO2vWFVrCM/VYz0995nOOI/AAAAAAAAKxE/MYuvgS05KSU/s1600/2015-06-26%2B14%2B30%2B08.JPG)
 
   
- 輸入不存在的6  
+輸入不存在的6  
   
   
 [![](https://3.bp.blogspot.com/-lMMp2lCy5u0/VYz0-mBuKjI/AAAAAAAAKxI/UzJK1ZP4mCo/s1600/2015-06-26%2B14%2B30%2B32.JPG)](http://3.bp.blogspot.com/-lMMp2lCy5u0/VYz0-mBuKjI/AAAAAAAAKxI/UzJK1ZP4mCo/s1600/2015-06-26%2B14%2B30%2B32.JPG)
 
   
- 有顯示出不存在信息\~  
+有顯示出不存在信息\~  
   
   
 [![](https://2.bp.blogspot.com/-seG0lNYwe4w/VYz1BOLgfDI/AAAAAAAAKxY/VkCq7cjT6gU/s1600/2015-06-26%2B14%2B30%2B41.JPG)](http://2.bp.blogspot.com/-seG0lNYwe4w/VYz1BOLgfDI/AAAAAAAAKxY/VkCq7cjT6gU/s1600/2015-06-26%2B14%2B30%2B41.JPG)

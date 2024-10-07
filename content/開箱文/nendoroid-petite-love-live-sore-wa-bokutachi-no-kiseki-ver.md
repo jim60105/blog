@@ -1,13 +1,16 @@
 +++
 title = "ねんどろいどぷち ラブライブ！ それは僕たちの奇跡Ver. 正統開箱"
-description = ""
+description = "ねんどろいどぷち ラブライブ！ それは僕たちの奇跡Ver. 正統開箱"
 date = 2015-02-07T22:17:00.000Z
 updated = 2020-08-30T16:59:12.015Z
 draft = true
-aliases = []
+aliases = [ ]
 
 [taxonomies]
-tags = ["開箱文"]
+tags = [ "開箱文" ]
+
+[extra]
+banner = "http://2.bp.blogspot.com/-XeZQmHKzCzY/VNaDkU9NuMI/AAAAAAAAKiI/NCu_KkWw8sw/s640/IMG_20150207_091420.jpg"
 +++
 [![](http://2.bp.blogspot.com/-XeZQmHKzCzY/VNaDkU9NuMI/AAAAAAAAKiI/NCu_KkWw8sw/s640/IMG_20150207_091420.jpg)](http://2.bp.blogspot.com/-XeZQmHKzCzY/VNaDkU9NuMI/AAAAAAAAKiI/NCu%5FKkWw8sw/s1600/IMG%5F20150207%5F091420.jpg)
 

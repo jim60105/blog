@@ -1,13 +1,16 @@
 +++
 title = "以Google試算表作為簡易資料庫(上)--資料庫的建立及寫入"
-description = ""
+description = "以Google試算表作為簡易資料庫(上)--資料庫的建立及寫入"
 date = 2015-06-14T21:12:00.003Z
 updated = 2021-01-30T16:24:47.045Z
 draft = false
-aliases = ["/2015/06/google-database.html"]
+aliases = [ "/2015/06/google-database.html" ]
 
 [taxonomies]
-tags = ["Google Apps Script"]
+tags = [ "Google Apps Script" ]
+
+[extra]
+banner = "https://2.bp.blogspot.com/-cDNcx9gmJ88/VX9XmP94egI/AAAAAAAAKrs/GlTRRMQgG2w/s1600/2015-06-16%2B05%2B29%2B57.png"
 +++
 ## 前言
 
@@ -212,7 +215,7 @@ function doGet(e) {
   
 先嘗試對剛剛寫的doGet()進行debug
 
- 參數如圖
+參數如圖
   
   
 [![](https://1.bp.blogspot.com/-LYUVBLzDhWo/VX9Xq6JsCuI/AAAAAAAAKtQ/Hg-snt7I75w/s1600/2015-06-16%2B06%2B08%2B51.png)](http://1.bp.blogspot.com/-LYUVBLzDhWo/VX9Xq6JsCuI/AAAAAAAAKtQ/Hg-snt7I75w/s1600/2015-06-16%2B06%2B08%2B51.png)
@@ -260,7 +263,7 @@ debug時請善用
   
 像這裡可以看到執行時間
 
- 做大型Project需要優化可以參考
+做大型Project需要優化可以參考
   
   
 [![](https://3.bp.blogspot.com/-d1hwmKKoS8c/VX9XtQNB2XI/AAAAAAAAKuA/IoFtQGoq8I8/s1600/2015-06-16%2B06%2B13%2B25.png)](http://3.bp.blogspot.com/-d1hwmKKoS8c/VX9XtQNB2XI/AAAAAAAAKuA/IoFtQGoq8I8/s1600/2015-06-16%2B06%2B13%2B25.png)
@@ -323,7 +326,7 @@ debug時請善用
   
 範例網頁我就不一一講解了，簡而言之就是一個"會透過jquery送GET Request的網頁"。  
   
- 範例網頁如下，請全選複製覆蓋左半邊，將裡面的網址換成你的，再按提交代碼:
+範例網頁如下，請全選複製覆蓋左半邊，將裡面的網址換成你的，再按提交代碼:
     
 
     NO:   

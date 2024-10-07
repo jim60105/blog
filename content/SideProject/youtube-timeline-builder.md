@@ -1,15 +1,18 @@
 +++
 title = "[Excel & VBA] Youtube 歌單產生工具 (Youtube Timeline Builder)"
-description = ""
+description = "[Excel & VBA] Youtube 歌單產生工具 (Youtube Timeline Builder)"
 date = 2022-09-28T14:21:00.006Z
 updated = 2022-10-03T13:58:24.293Z
 draft = false
-aliases = ["/2022/09/youtube-timeline-builder.html"]
+aliases = [ "/2022/09/youtube-timeline-builder.html" ]
 
 [taxonomies]
-tags = ["YouTube"]
+tags = [ "Livestream" ]
+
+[extra]
+banner = "https://img.maki0419.com/blog/youtube-timeline-builder/preview.png"
 +++
-[![](https://img.maki0419.com/blog/youtube-timeline-builder/preview.png)](https://img.maki0419.com/blog/youtube-timeline-builder/preview.png) 
+[![](https://img.maki0419.com/blog/youtube-timeline-builder/preview.png)](https://img.maki0419.com/blog/youtube-timeline-builder/preview.png)
 
 這是用來編輯 Youtube 歌枠時間軸用的 Excel 工具  
 原本只能產出給我另一個專案 Youtube Clip Playlist 專用的 json 格式，現在加上了產出 「Google Sheet」、「Youtube 留言」 兩種格式  
@@ -29,12 +32,12 @@ end 參數用於標記歌曲結束時間
 
 > 請安裝 Chrome 擴充 [Youtube 影片截選播放清單 (Youtube Clip Playlist)](/2022/06/chrome-extension-youtube-clip-playlist.html) 以便在 Youtube 網頁上處理此參數
 
-[![](https://img.maki0419.com/blog/youtube-timeline-builder/1.png)](https://img.maki0419.com/blog/youtube-timeline-builder/1.png) 
+[![](https://img.maki0419.com/blog/youtube-timeline-builder/1.png)](https://img.maki0419.com/blog/youtube-timeline-builder/1.png)
 
-[![](https://img.maki0419.com/blog/youtube-timeline-builder/2.png)](https://img.maki0419.com/blog/youtube-timeline-builder/2.png) 
+[![](https://img.maki0419.com/blog/youtube-timeline-builder/2.png)](https://img.maki0419.com/blog/youtube-timeline-builder/2.png)
 
-[![](https://img.maki0419.com/blog/youtube-timeline-builder/3.png)](https://img.maki0419.com/blog/youtube-timeline-builder/3.png) 
+[![](https://img.maki0419.com/blog/youtube-timeline-builder/3.png)](https://img.maki0419.com/blog/youtube-timeline-builder/3.png)
 
 ## 下載位置
 
-<https://cloud.maki0419.com/s/RDFmcPoi3gZ6kmq> 
+<https://cloud.maki0419.com/s/RDFmcPoi3gZ6kmq>
