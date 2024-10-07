@@ -2,6 +2,8 @@
 @use "../themes/duckquill/sass/mods/modern-hr";
 @import "../themes/duckquill/sass/style.scss";
 @import "../themes/duckquill/sass/_variables.scss";
+@import "hide-scroll-bar";
+@import "likecoin";
 
 @include theme-variables using ($theme) {
   @if $theme == "dark" {
