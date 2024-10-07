@@ -74,4 +74,14 @@ h6 {
   hr {
     margin: 0.5em auto;
   }
+
+  #banner-container {
+    z-index: unset;
+    mask-image: linear-gradient(
+      #000000,
+      rgb(0 0 0 / 90%) 50%,
+      rgb(0 0 0 /60%) 70%,
+      rgb(0 0 0 / 0%)
+    );
+  }
 }
