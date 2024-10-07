@@ -12,7 +12,7 @@
   "forwardPorts": [1111],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "sudo apk add --no-cache zola && git submodule init && git submodule update",
+  "postCreateCommand": "apk update && apk add -u -X \"https://dl-cdn.alpinelinux.org/alpine/edge/main\" -X \"https://dl-cdn.alpinelinux.org/alpine/edge/community\" zola && git submodule init && git submodule update",
   "postAttachCommand": "zola serve --drafts --interface 0.0.0.0",
 
   // Configure tool-specific properties.
