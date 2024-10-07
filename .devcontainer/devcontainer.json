@@ -13,7 +13,7 @@
 
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "apk update && apk add -u -X \"https://dl-cdn.alpinelinux.org/alpine/edge/main\" -X \"https://dl-cdn.alpinelinux.org/alpine/edge/community\" zola && git submodule init && git submodule update",
-  "postAttachCommand": "zola serve --drafts --interface 0.0.0.0",
+  "postAttachCommand": "zola serve --drafts --interface 0.0.0.0 --base-url 127.0.0.1",
 
   // Configure tool-specific properties.
   "customizations": {
