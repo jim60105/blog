@@ -14,7 +14,7 @@ banner = "preview.png"
 +++
 <figure>
 
-  ![ai-batch-webpage-summary-assistant](138fd91c-a403-4117-a039-407a42d624d1.jpeg)
+  ![ai-batch-webpage-summary-assistant](138fd91c-a403-4117-a039-407a42d624d1.jpg)
   <figcaption><a href="https://civitai.com/images/25902592">Made with Flux.1-dev</a></figcaption>
 </figure>
 
@@ -80,4 +80,4 @@ banner = "preview.png"
 > 延伸閱讀
 >
 > ---
-> [告別 AI 幻覺：一個簡單方法提升你的 RAG 系統精準度](/2024/08/say-goodbye-to-ai-hallucinations-a-simple-method-to-Improve-the-accuracy-of-your-rag-system.html)
+> [告別 AI 幻覺：一個簡單方法提升你的 RAG 系統精準度](/AI/say-goodbye-to-ai-hallucinations-a-simple-method-to-improve-the-accuracy-of-your-rag-system)
