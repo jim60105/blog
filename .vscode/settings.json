@@ -12,5 +12,8 @@
         "OPRO",
         "tera",
         "webp"
-    ]
+    ],
+    "markdownlint.config": {
+        "MD033": false
+    }
 }
