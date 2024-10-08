@@ -9,7 +9,7 @@
   // "features": {},
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  "forwardPorts": [1111],
+  "forwardPorts": [1111, 1024],
 
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "apk update && apk add -u -X \"https://dl-cdn.alpinelinux.org/alpine/edge/main\" -X \"https://dl-cdn.alpinelinux.org/alpine/edge/community\" zola && git submodule init && git submodule update",
