@@ -126,7 +126,7 @@ skip_prefixes = []
 skip_anchor_prefixes = []
 
 # Treat internal link problems as either "error" or "warn", default is "error"
-internal_level = "warn"
+internal_level = "error"
 
 # Treat external link problems as either "error" or "warn", default is "error"
 external_level = "warn"
