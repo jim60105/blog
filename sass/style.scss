@@ -37,6 +37,9 @@ h6 {
   background: var(--bg-overlay);
   box-shadow: 0px 0px 25px 40px var(--bg-overlay);
 
+  // Fix content width
+  width: min(var(--container-width), 90vw);
+
   & > h1 {
     background: transparent;
     border-width: 0px;
