@@ -198,7 +198,7 @@ index_format = "elasticlunr_javascript"
 [extra]
 # Which theme should be used by default (light/dark).
 #
-# default_theme = "dark"
+default_theme = "dark"
 #
 # Sets theme and browser theme color.
 # See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
