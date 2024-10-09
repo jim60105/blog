@@ -34,20 +34,20 @@ h6 {
 }
 
 .container {
-  background: var(--bg-overlay);
   box-shadow: 0px 0px 25px 40px var(--bg-overlay);
+  background: var(--bg-overlay);
 
   // Fix content width
   width: min(var(--container-width), 90vw);
 
   & > h1 {
-    background: transparent;
     border-width: 0px;
-    text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff,
-      0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff;
+    background: transparent;
     color: black;
     font-family: var(--font-system-ui);
     text-align: center;
+    text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff,
+      0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff;
   }
 
   .float-right {
@@ -62,13 +62,13 @@ h6 {
   }
 
   blockquote {
-    border: 0.25rem solid var(--accent-color);
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 0.5em;
-    padding: 1em;
-    text-align: center;
     margin: 1em 2em;
+    border: 0.25rem solid var(--accent-color);
+    border-radius: 0.5em;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1em;
     color: var(--fg-color);
+    text-align: center;
 
     & > p {
       margin-block-start: 0.5em;

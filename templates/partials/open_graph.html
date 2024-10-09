@@ -1,13 +1,11 @@
 <meta property="og:site_name" content="{{ config.title }}" />
 <meta property="og:title" content="{% include 'partials/title.html' %}" />
 <meta
-  property="og:url"
-  content="{{ current_url | default(value='/') | safe }}"
-/>
+      property="og:url"
+      content="{{ current_url | default(value='/') | safe }}" />
 <meta
-  property="og:description"
-  content="{% include 'partials/description.html' %}"
-/>
+      property="og:description"
+      content="{% include 'partials/description.html' %}" />
 <meta property="og:image" content="{% include 'partials/card.html' %}" />
 
 <meta content="@jim60105" name="twitter:site" />

@@ -24,5 +24,8 @@
         "!**/.git",
         "!**/content - 複製",
         "!**/themes"
-    ]
+    ],
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    }
 }
