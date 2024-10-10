@@ -12,6 +12,9 @@ tags = [ "AI" ]
 [extra]
 banner = "preview.png"
 iscn = "iscn://likecoin-chain/KiZc2G9UmmW17_mYPhEh_CnnS_odvEiojeUuxxumqOc"
+
+[extra.comments]
+id = "113187155039935632"
 +++
 ![Automated Prompt Engineering](APE.png)
 
