@@ -52,7 +52,7 @@ Quill Sage 的強大能力來源於其背後的技術支持 —— **Claude 3.5 
 
 ### 如何用 AI 寫小說？ —— 揭開「垃圾小說產生器」的創意魔法！✨📚
 
-這篇文章介紹我的 Coze 助手「垃圾小說產生器」，[請在此閱讀部落格全文](/2024/09/ai-trash-novel-generator.html)。
+這篇文章介紹我的 Coze 助手「垃圾小說產生器」，[請在此閱讀部落格全文](/AI/trash-novel-generator)。
 
 請注意，文章成品已經過我的多次修改，和 AI 的輸出並不完全相同。
 
@@ -76,9 +76,9 @@ Quill Sage 的強大能力來源於其背後的技術支持 —— **Claude 3.5 
 
 接下來，我想與大家分享一些使用 Quill Sage 創作的實際成果。這些文章是我與 AI 助手共同努力的結晶，涵蓋了不同的主題和風格。通過這些文章，你可以親身感受 AI 輔助寫作的魅力，看看它如何幫助我表達想法、組織結構，以及呈現出吸引人的內容。<span class="hide">同時，你也可以回頭對比我更早期的文章，看看我當時的文字是多麼的...不吸引人。</span>
 
-* [告別 AI 幻覺：一個簡單方法提升你的 RAG 系統精準度——「摘要索引與全文參考方法」](/2024/08/say-goodbye-to-ai-hallucinations-a-simple-method-to-Improve-the-accuracy-of-your-rag-system.html)
-* [如何用 AI 寫小說？ —— 揭開「垃圾小說產生器」的創意魔法！✨📚](/2024/09/ai-trash-novel-generator.html)
-* [科技人的寫作革命：我如何用 AI 撰寫部落格 —— 「筆韻智匠 Quill Sage 🖋️✨」](/2024/09/ai-quill-sage.html)
+* [告別 AI 幻覺：一個簡單方法提升你的 RAG 系統精準度——「摘要索引與全文參考方法」](/AI/say-goodbye-to-ai-hallucinations-a-simple-method-to-improve-the-accuracy-of-your-rag-system)
+* [如何用 AI 寫小說？ —— 揭開「垃圾小說產生器」的創意魔法！✨📚](/AI/trash-novel-generator)
+* [科技人的寫作革命：我如何用 AI 撰寫部落格 —— 「筆韻智匠 Quill Sage 🖋️✨」](/AI/quill-sage)
 
 ## 總結
 
