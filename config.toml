@@ -248,7 +248,7 @@ source_url = "https://github.com/jim60105/blog"
 show_copy_button = true
 # Whether to show estimated read time in posts.
 # Calculated using the simple math: number of words ÷ words per minute.
-show_read_time = true
+show_read_time = false
 #
 # words_per_minute = 200
 #
