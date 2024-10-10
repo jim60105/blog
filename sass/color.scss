@@ -23,3 +23,8 @@ em {
 .primary {
   color: var(--accent-color);
 }
+
+p.hide,
+span.hide {
+  color: var(--fg-muted-3);
+}
