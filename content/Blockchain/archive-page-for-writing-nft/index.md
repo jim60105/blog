@@ -7,7 +7,7 @@ draft = false
 aliases = [ "/2022/12/archive-page-for-writing-nft.html" ]
 
 [taxonomies]
-tags = [ "區塊鏈" ]
+tags = [ "區塊鏈", "WritingNFT" ]
 
 [extra]
 iscn = "iscn://likecoin-chain/0TcWBncBjI36FAfqcjQnRpSnzVYMEJy56YD7fOCq--M/1"
