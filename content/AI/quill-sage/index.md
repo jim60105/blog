@@ -12,6 +12,9 @@ tags = [ "AI" ]
 [extra]
 banner = "cover.png"
 iscn = "iscn://likecoin-chain/rkWkfxsXyWuM5BDzf1V_nsFob7Bldl-gFUeqQke1uNc"
+
+  [extra.comments]
+  id = "113154728161931893"
 +++
 ![quill sage](cover.png)
 
