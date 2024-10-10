@@ -7,13 +7,11 @@ draft = false
 aliases = [ "/2022/01/handshake-blockchain-domain-how-to-access.html" ]
 
 [taxonomies]
-tags = [ "區塊鏈" ]
+tags = [ "區塊鏈", "Blockchain Domain" ]
 
 [extra]
-banner = "https://img.maki0419.com/blog/blockchain-domain/handshake/preview.png"
+banner = "preview.png"
 +++
-[![](https://img.maki0419.com/blog/blockchain-domain/handshake/preview.png) ](https://img.maki0419.com/blog/blockchain-domain/handshake/preview.png)
-
 > 前篇  
 > [Handshake domain 區塊鏈網域 —— 購買HNS、網域競標](/2022/01/handshake-blockchain-domain-auction.html)
 
@@ -31,7 +29,7 @@ Handshake的解析器有不少實作，[完整清單在此](https://learn.nameba
 
 網址: [hns.to](http://hns.to)
 
-[![](https://img.maki0419.com/blog/blockchain-domain/handshake/HNS_to.gif) ](https://img.maki0419.com/blog/blockchain-domain/handshake/HNS%5Fto.gif)
+[![](handshake/HNS_to.gif)](handshake/HNS%5Fto.gif)
 
 hns.to是一個Handshake的網關服務，它能以傳統DNS訪問，並代理Handshake網域的內容給你。在瀏覧器直接訪問 "hns.to/"+Handshake 網域，例如"[hns.to/welcome.nb/](http://hns.to/welcome.nb/)"，它會自動導向至<http://welcome.nb.hns.to/>，並返回 [welcome.nb/](http://welcome.nb/) 的內容給你。它很方便，但這一定不安全，所有流量都會經過它們家的伺服器。
 
@@ -41,7 +39,7 @@ hns.to是一個Handshake的網關服務，它能以傳統DNS訪問，並代理Ha
 
 網址: <https://chrome.google.com/webstore/detail/bob-extension/ogcmjchbmdichlfelhmceldndgmgpcem>
 
-[![](https://img.maki0419.com/blog/blockchain-domain/handshake/bob_extension.png) ](https://img.maki0419.com/blog/blockchain-domain/handshake/bob%5Fextension.png)
+[![](handshake/bob_extension.png)](handshake/bob%5Fextension.png)
 
 它是一個瀏覧器內錢包，[由社群維護](https://github.com/kyokan/bob-extension)。除了常見的和dapps互動以外，它還提供瀏覧器內proxy功能——將Chrome的DNS查詢導向到HNSD解析器。預設它會使用公開的HNSD主機，你可以在設定中改成指向你自己的解析器。
 
@@ -51,11 +49,11 @@ hns.to是一個Handshake的網關服務，它能以傳統DNS訪問，並代理Ha
 
 網址: <https://nextdns.io/zht>
 
-![](https://img.maki0419.com/blog/blockchain-domain/handshake/nextdns_logo.png)
+![](handshake/nextdns_logo.png)
 
 NextDNS公司是一家DNS解析器提供商，允許用戶設定DNS Filter以過濾DNS查詢。NextDNS 每月提供 30 萬筆查詢次數的免費額度，如果你需要更多流量，訂閱制為NT$70/月、NT$700/年。他們內建非常多的DNS過濾清單、追蹤清單，甚至有AdGuard的清單。最重要的，它們可以解析Handshake域名。
 
-[![](https://img.maki0419.com/blog/blockchain-domain/handshake/nextdns_handshake.png) ](https://img.maki0419.com/blog/blockchain-domain/handshake/nextdns%5Fhandshake.png)
+[![](handshake/nextdns_handshake.png)](handshake/nextdns%5Fhandshake.png)
 
 如果你不自己架設解析器，那麼NextDNS是最理想的選擇了，若你的用量不會超出免費額度的話。NextDNS網站有完整的設定教學，你可以把它設定在瀏覧器層級；電腦OS層級；或是路由器層級。NextDNS是一家頂尖的DNS提供商，而它們支援Handshake這件事，無疑是給Handshake社群帶來很大的肯定。
 
@@ -63,13 +61,13 @@ NextDNS公司是一家DNS解析器提供商，允許用戶設定DNS Filter以過
 > 不愧是小米手機，追蹤數據一半送美國、一半送大陸  
 > 中美大數據我兩邊都參與到了耶┌(。Д。)┐  
 >
-> [![](https://img.maki0419.com/blog/blockchain-domain/handshake/nextdns_mi.png) ](https://img.maki0419.com/blog/blockchain-domain/handshake/nextdns%5Fmi.png)
+> [![](handshake/nextdns_mi.png)](handshake/nextdns%5Fmi.png)
 
 ### HNSD - SPV light node
 
 網址: <https://github.com/handshake-org/hnsd>
 
-[![](https://img.maki0419.com/blog/blockchain-domain/handshake/preview.png) ](https://img.maki0419.com/blog/blockchain-domain/handshake/preview.png)
+[![](handshake/preview.png)](handshake/preview.png)
 
 HNSD由社群維護，是Handshake網路的SPV解析器。它會和其它HSD full node建立P2P網路，向其它full node詢問網域解析，並驗證獲得的回應。HNSD本身不儲存任何資料，只在DNS cache滿載時使用12MB的memory。
 
@@ -87,7 +85,7 @@ HNSD由社群維護，是Handshake網路的SPV解析器。它會和其它HSD ful
 
 網址: <https://github.com/handshake-org/hsd>
 
-[![](https://img.maki0419.com/blog/blockchain-domain/handshake/preview.png) ](https://img.maki0419.com/blog/blockchain-domain/handshake/preview.png)
+[![](handshake/preview.png)](handshake/preview.png)
 
 自行運行HSD完整節點當然是完全分散式、最隱私、且最安全的做法。你持有完整的區塊鏈，並且直接在上頭查找網域資訊。
 
@@ -116,7 +114,7 @@ CA驗證的主要目標是「讓客戶端確定其取得的網頁，是由被權
 在區塊鏈的世界中，鏈上的資訊是不可能假的。我們使用自簽憑證，將此憑證的雜湊寫到Handshake鏈上，並在網頁上提供此憑證。客戶端將憑證和鏈上寫的資訊作比對，以查覈此網頁是由網域擁有者所送出，「網頁沒有在中途被調包」。整個信任基礎由「權威認證的信任樹」改為「網頁確實來自網域所有者」。今天你來到`blog.maki0419/`看到了綠色鎖頭，你想知道的是這確實是我的網頁，而不是我有向權威繳保護費。DANE驗證的是更合理的信任基礎。
 
 > DNS-based Authentication of Named Entities (DANE)是一項網際網路安全協議，允許使用DNSSEC將通常用於TLS的X.509數位證書與域名綁定。它是在RFC6698中提出的，是一種在沒有CA的情況下驗證TLS客戶端和服務器實體的方法。  
->  
+>
 > 詳細探討請見外站連結  
 > DANE 的過去、現在與未來 - 財團法人台灣網路資訊中心部落格 | TWNIC Blog  
 > <https://blog.twnic.tw/2021/04/15/17961/>
