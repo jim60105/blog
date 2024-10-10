@@ -8,6 +8,7 @@
         "Arweave",
         "ASMR",
         "bain",
+        "chenchun",
         "cuda",
         "datetime",
         "Deepl",
@@ -17,6 +18,7 @@
         "eliostruyf",
         "esbenp",
         "FANZA",
+        "fullnode",
         "happydog",
         "Heiti",
         "HNSD",
@@ -36,9 +38,11 @@
         "syosetu",
         "tera",
         "torchaudio",
+        "Vickrey",
         "webp",
         "webscrapbook",
-        "whisperx"
+        "whisperx",
+        "whois"
     ],
     "markdownlint.config": {
         "MD033": false,

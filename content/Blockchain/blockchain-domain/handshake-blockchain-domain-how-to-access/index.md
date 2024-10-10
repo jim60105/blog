@@ -10,10 +10,12 @@ aliases = [ "/2022/01/handshake-blockchain-domain-how-to-access.html" ]
 tags = [ "區塊鏈", "Blockchain Domain" ]
 
 [extra]
-banner = "preview.png"
+card = "preview.png"
 +++
+![preview](preview.png)
+
 > 前篇  
-> [Handshake domain 區塊鏈網域 —— 購買HNS、網域競標](/2022/01/handshake-blockchain-domain-auction.html)
+> [Handshake domain 區塊鏈網域 —— 購買HNS、網域競標](/Blockchain/blockchain-domain/handshake-blockchain-domain-auction)
 
 在前篇我們成功把網域給標到手了！區塊鏈網域和其它常見的NFT可不一樣，它不只是個所有權憑證，它寫在鏈上的資訊還能導向我們的伺服器位置。Handshake domain是個已經有實作的專案，整個架構是能運行的。要把它使用起來，我們有兩個面向要設定，一邊是伺服器方；一邊是訪問方——伺服器方要起動一台DNS主機，並由鏈上指向它；訪問方要把自己的解析器替換為Handshake resolver。
 
