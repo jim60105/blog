@@ -1,6 +1,6 @@
 +++
 title = "告別 AI 幻覺：一個簡單方法提升你的 RAG 系統精準度——「摘要索引與全文參考方法」"
-description = "告別 AI 幻覺：一個簡單方法提升你的 RAG 系統精準度——「摘要索引與全文參考方法」"
+description = "這篇文章探討「摘要索引與全文參考方法」在 RAG 技術中改善「檢索結果不夠精準」和「Chunk 大小限制」兩個痛點，分析其優勢及實際案例。"
 date = 2024-08-31T14:04:00.015Z
 updated = 2024-09-11T10:15:21.869Z
 draft = false
@@ -15,8 +15,8 @@ tags = [ "AI" ]
 banner = "book.png"
 iscn = "iscn://likecoin-chain/glaRLMBBdqLeNQDKZFhhfLHA0aeZxUDYqpWwHs79_vc/2"
 
-[extra.comments]
-id = "113057619098316466"
+  [extra.comments]
+  id = "113057619098316466"
 +++
 <figure>
 

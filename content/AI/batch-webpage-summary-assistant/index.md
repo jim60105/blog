@@ -1,6 +1,6 @@
 +++
 title = "Batch Webpage Summary Assistant 批次網頁摘要助手"
-description = "Batch Webpage Summary Assistant 批次網頁摘要助手"
+description = "使用 Batch Webpage Summary Assistant 非常簡單。只需要輸入多行網頁 URL，它就會自動抓取這些網頁的內容，生成摘要，並返回包含 URL 和摘要的 json 輸出。在處理大量網頁資料的場景，這個工具能極大地簡化了摘要索引的知識庫建立過程。"
 date = 2024-08-31T19:42:00.006Z
 updated = 2024-09-16T09:45:59.711Z
 draft = false
