@@ -72,9 +72,9 @@ iscn = "iscn://likecoin-chain/TW11huUVHy5Bsg0S3prnXNNYKzj0iabfmREUOaGla1w/1"
       ```
 
   * ```bash
-      docker run --name bind -d --restart=always   
-         --publish 53:53/tcp --publish 53:53/udp --publish 10000:10000/tcp   
-         --volume /srv/docker/bind:/data   
+      docker run --name bind -d --restart=always \
+         --publish 53:53/tcp --publish 53:53/udp --publish 10000:10000/tcp \
+         --volume /srv/docker/bind:/data \
          sameersbn/bind
       ```
 
@@ -90,8 +90,9 @@ iscn = "iscn://likecoin-chain/TW11huUVHy5Bsg0S3prnXNNYKzj0iabfmREUOaGla1w/1"
 * 新增兩條記錄，NS 記錄和 GLUE4 記錄  
   **注意勿遺漏在網域後面的那個點 (.)**
 
-  | NS    | ns1.chenchun.                 |
+  |||
   |-------|-------------------------------|
+  | NS    | ns1.chenchun.                 |
   | GLUE4 | ns1.chenchun. 178.128.XXX.XXX |
 
    > Handshake records 的詳細說明請見此  
@@ -127,8 +128,9 @@ iscn = "iscn://likecoin-chain/TW11huUVHy5Bsg0S3prnXNNYKzj0iabfmREUOaGla1w/1"
   ![](/Blockchain/blockchain-domain/handshake/setup/bind%20%282%29.png)
 * 填寫如圖，按 Create  
 
-  | Domain name                          | chenchun    |
+  |||
   |--------------------------------------|-------------|
+  | Domain name                          | chenchun    |
   | Master server                        | ns.chenchun |
   | Use zone template?                   | Yes         |
   | Add reverses for template addresses? | No          |
@@ -137,8 +139,9 @@ iscn = "iscn://likecoin-chain/TW11huUVHy5Bsg0S3prnXNNYKzj0iabfmREUOaGla1w/1"
 
 * 選擇「Address」，填寫如圖，按 Create
 
-  | Name    | ns.chenchun     |
+  |||
   |---------|-----------------|
+  | Name    | ns.chenchun     |
   | Address | 178.128.XXX.XXX |
 
   ![](/Blockchain/blockchain-domain/handshake/setup/bind%20%284%29.png)  
@@ -146,8 +149,9 @@ iscn = "iscn://likecoin-chain/TW11huUVHy5Bsg0S3prnXNNYKzj0iabfmREUOaGla1w/1"
 
 * 選擇「Name Alias」，填寫如圖，按 Create  
 
-  | Name      | color                                           |
+  |||
   |-----------|-------------------------------------------------|
+  | Name      | color                                           |
   | Real Name | <你的 username>.github.io. (注意最後面有一個點！) |
 
   ![](/Blockchain/blockchain-domain/handshake/setup/bind%20%286%29.png)  
