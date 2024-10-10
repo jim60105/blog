@@ -1,22 +1,31 @@
 {
     "cSpell.words": [
         "AIGC",
+        "alphapolis",
+        "APIKEY",
+        "arthub",
+        "Deepl",
         "devcontainers",
         "duckquill",
         "eliostruyf",
         "esbenp",
         "Heiti",
         "iscn",
+        "KAKUYOMU",
         "karunamurti",
         "likecoin",
         "Livestream",
+        "openai",
         "OPRO",
         "privatebin",
+        "Stylebot",
+        "syosetu",
         "tera",
         "webp"
     ],
     "markdownlint.config": {
-        "MD033": false
+        "MD033": false,
+        "MD040": false
     },
     "markdownlint.lintWorkspaceGlobs": [
         "**/*.{md,mkd,mdwn,mdown,markdown,markdn,mdtxt,mdtext,workbook}",
