@@ -14,6 +14,7 @@ aliases = [
 tags = [ "AI" ]
 
 [extra]
+card = "preview.jpg"
 iscn = "iscn://likecoin-chain/eSjhLqDYXgHdvTrcgWw-XkLtgCjso_PJJmZ3v768Ao0/1"
 
   [extra.comments]

@@ -12,6 +12,9 @@ tags = [ "區塊鏈" ]
 [extra]
 iscn = "iscn://likecoin-chain/0TcWBncBjI36FAfqcjQnRpSnzVYMEJy56YD7fOCq--M/1"
 card = "preview.png"
+
+  [extra.comments]
+  id = "109532306623570043"
 +++
 ![archive-page-for-writing-nft](preview.png)
 

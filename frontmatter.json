@@ -72,7 +72,14 @@
               "type": "boolean"
             },
             {
+              "title": "Card",
+              "description": "SEO image for the post.",
+              "name": "card",
+              "type": "image"
+            },
+            {
               "title": "Banner",
+              "description": "Banner image for the post. Also used as the SEO image if Card not set.",
               "name": "banner",
               "type": "image",
               "isPreviewImage": true
