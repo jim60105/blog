@@ -1,0 +1,25 @@
+strong {
+  color: var(--yellow-fg);
+  font-weight: normal;
+}
+
+em {
+  color: var(--accent-color);
+  margin-inline: 0.25em;
+}
+
+.success {
+  color: var(--green-fg);
+}
+
+.danger {
+  color: var(--red-fg);
+}
+
+.warning {
+  color: var(--yellow-fg);
+}
+
+.primary {
+  color: var(--accent-color);
+}
