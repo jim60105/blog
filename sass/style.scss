@@ -4,6 +4,7 @@
 @import "../themes/duckquill/sass/_variables.scss";
 @import "hide-scroll-bar";
 @import "likecoin";
+@import "color";
 
 @include theme-variables using ($theme) {
   @if $theme == "dark" {
