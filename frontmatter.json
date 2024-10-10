@@ -112,6 +112,24 @@
               "description": "Displays a disclaimer message.",
               "name": "disclaimer",
               "type": "string"
+            },
+            {
+              "title": "ISCN",
+              "description": "ISCN of the writing NFT.",
+              "name": "iscn",
+              "type": "string"
+            },
+            {
+              "title": "comments",
+              "name": "comments",
+              "type": "fields",
+              "fields": [
+                {
+                  "title": "Mastodon post id",
+                  "name": "id",
+                  "type": "number"
+                }
+              ]
             }
           ]
         }
