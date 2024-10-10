@@ -3,7 +3,9 @@
         "AIGC",
         "alphapolis",
         "APIKEY",
+        "ardrive",
         "arthub",
+        "Arweave",
         "ASMR",
         "bain",
         "cuda",
@@ -16,6 +18,7 @@
         "esbenp",
         "FANZA",
         "Heiti",
+        "IPFS",
         "iscn",
         "KAKUYOMU",
         "karunamurti",
@@ -30,6 +33,7 @@
         "tera",
         "torchaudio",
         "webp",
+        "webscrapbook",
         "whisperx"
     ],
     "markdownlint.config": {
