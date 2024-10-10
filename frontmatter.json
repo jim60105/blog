@@ -96,19 +96,19 @@
               "type": "boolean"
             },
             {
-              "title": "Archived",
+              "title": "Archived message",
               "description": "Displays an archived message",
-              "name": "archived",
+              "name": "archive",
               "type": "string"
             },
             {
-              "title": "Trigger",
+              "title": "Trigger Warning message",
               "description": "Displays a trigger warning message.",
               "name": "trigger",
               "type": "string"
             },
             {
-              "title": "Disclaimer",
+              "title": "Disclaimer message",
               "description": "Displays a disclaimer message.",
               "name": "disclaimer",
               "type": "string"
