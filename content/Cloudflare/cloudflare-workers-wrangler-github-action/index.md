@@ -10,9 +10,7 @@ aliases = [ ]
 tags = [ "JavaScript", "Cloudflare" ]
 
 [extra]
-banner = "https://img.maki0419.com/blog/cloudflare-workers/preview.png"
 +++
-[![](https://img.maki0419.com/blog/cloudflare-workers/preview.png)](https://img.maki0419.com/blog/cloudflare-workers/preview.png)
 
 ## 簡介wrangler
 
@@ -75,6 +73,7 @@ wrangler whoami
 ### 編譯、偵錯
 
 這些指令要**在專案目錄下執行**
+
 * build: 編譯專案，這會檢查你的_wrangler.toml_檔案，並執行編譯、打包
 * dev: 在本機上啟動一個server，並在HTTP request傳入時執行Worker  
 它可以將request轉發到Cloudflare的服務器、你的網域、或其它定義的主機用做測試
@@ -86,7 +85,7 @@ wrangler whoami
 
 ## 讓我們寫個範例專案——隨機路由
 
-這個範例我們來做一個隨機路由功能:   
+這個範例我們來做一個隨機路由功能:
 訪問 `https://img.example.com/random.png` 時，隨機由一堆圖片中選一張回傳
 
 ## Workers Sites
@@ -111,4 +110,4 @@ wrangler whoami
 
 ### Commit推送至Github
 
-###  github action觸發: wangler打包並推送至cloudflare
+### github action觸發: wangler打包並推送至cloudflare
