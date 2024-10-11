@@ -3,9 +3,14 @@ strong {
   font-weight: normal;
 }
 
+div.statement-container.disclaimer strong {
+  color: inherit;
+  font-weight: inherit;
+}
+
 em {
-  color: var(--accent-color);
   margin-inline: 0.25em;
+  color: var(--accent-color);
 }
 
 .success {
