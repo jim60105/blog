@@ -14,6 +14,7 @@ tags = [ "AI" ]
 [extra]
 banner = "book.png"
 iscn = "iscn://likecoin-chain/glaRLMBBdqLeNQDKZFhhfLHA0aeZxUDYqpWwHs79_vc/2"
+featured = true
 
   [extra.comments]
   id = "113057619098316466"

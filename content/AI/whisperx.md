@@ -13,6 +13,7 @@ tags = [ "AI", "Docker" ]
 iscn = """
 iscn://likecoin-chain/i6XMdfLq3nGAU_inrEqxpsDKOlCbHyUkwJZLl-U1aXk
 """
+hot = true
 
   [extra.comments]
   id = "111330195388066336"
