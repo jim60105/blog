@@ -62,7 +62,7 @@ h6 {
     font-size: var(--font-size-large);
   }
 
-  blockquote {
+  blockquote:not(.note, .tip, .important, .warning, .caution) {
     margin: 1em 2em;
     border: 0.25rem solid var(--accent-color);
     border-radius: 0.5em;
