@@ -37,7 +37,7 @@ featured = true
 
 <embed type="image/svg+xml" src="../dns_owner.svg" />
 
-在進入正題之前，我想先介紹一下 DNS 是如何運作的，請見上圖\
+在進入正題之前，我想先介紹一下 DNS 是如何運作的，請見上圖  
 舉例來說，假設 client 端查詢 `www.happydog.com`，其對應為 `77.77.77.77`，是一台網頁伺服器的 IP
 
 1. 客戶端向解析器詢問 `www.happydog.com`
@@ -67,8 +67,8 @@ featured = true
 
 Handshake domain 使用的是頂級域名層級，每個人在這裡取得的域名是和 com、org 同級。Handshake 考慮到兼容，已將現有的頂級域名做保留，不會和傳統的域名系統衝突。Handshake 的解析器已有實作，稱為 [HNSD](https://github.com/handshake-org/hnsd)。當客戶端詢問 Handshake domain 時，它會去鏈上查；當客戶端詢問傳統 TLD 域名時，它會向上游的解析器查詢。
 
-來模擬，client 端查詢 `www.happydog`，假設其對應為 `77.77.77.77`，是一台網頁伺服器的 IP\
-注意，happydog 並不是 ICANN 發出的頂級域名之一，它會被視為 Handshake domain 去鏈上查詢\
+來模擬，client 端查詢 `www.happydog`，假設其對應為 `77.77.77.77`，是一台網頁伺服器的 IP  
+注意，happydog 並不是 ICANN 發出的頂級域名之一，它會被視為 Handshake domain 去鏈上查詢  
 ([Handshake domain 上確實有這個域名](https://www.namebase.io/domains/happydog)，可惜不是我的\~)
 
 1. 客戶端向 Handshake 解析器詢問 `www.happydog`
@@ -101,10 +101,10 @@ IPFS 上的網頁和鏈上的 IPFS CID 一定是由網站擁有者上傳，而�
 
 這很美好，但<span class="danger">它完全和現有的 DNS 系統不相同</span>。客戶端必須支援查詢 UD、ENS domain，且要能顯示 IPFS 內容。它回應的並不是一個 IP 位置，如果你的服務並不是單純的靜態網頁或 Web3 網頁，那麼也不適用。**事實上 UD 和 ENS 主要是矚目在虛擬錢包位址的對應**，IPFS 網頁只算是附加價值。但我是個網頁工程師，所以嘛...
 
-> IPFS 不是區塊鏈，是分散式網路儲存系統\
+> IPFS 不是區塊鏈，是分散式網路儲存系統  
 > 雖不精確，但你可以想成是沒有 tracker 的 BT
 >
-> 本文不探討 IPFS，詳細請閱讀這篇站外文章\
+> 本文不探討 IPFS，詳細請閱讀這篇站外文章  
 > [IPFS 問與答 | 人生這部戲 | Frank Shi](https://www.frank.hk/blog/ipfs-q-and-a/)
 
 ## 比較
@@ -130,7 +130,7 @@ IPFS 上的網頁和鏈上的 IPFS CID 一定是由網站擁有者上傳，而�
   > 2024/10/10 更新:  
   > [Unstoppable Domains 全面和 Polygon 合作](https://support.unstoppabledomains.com/support/solutions/articles/48001200584-learn-more-about-our-l2-scaling-solution-and-what-it-means-for-you)；[ENSv2 宣佈將轉移到 Layer 2](https://blog.ens.domains/post/ensv2)，這些是它們為了對應過高的 gas fees 所做出的策略。狀況已改善很多，請自行查閱最新資訊。
 
-* Unstoppable Domains 是一次性付費買斷，價格以... 熱門度? 而定\
+* Unstoppable Domains 是一次性付費買斷，價格以... 熱門度? 而定  
   Ethereum Name Service 按年續費，價格以網域字串長度而定 (5 字元以上 USD 5 / 年；4 字元 USD 160 / 年；3 字元 USD 640 / 年)
 
 ## 結語
@@ -139,5 +139,5 @@ IPFS 上的網頁和鏈上的 IPFS CID 一定是由網站擁有者上傳，而�
 
 不過按年續費也不一定是壞事啦，至少能看到他們為了持續賺錢而讓 ENS 專案活著的未來。沒熱度而死去的區塊鏈專案可是不計其數呢。
 
-> 下篇\
+> 下篇  
 > [Handshake domain 區塊鏈網域 —— 購買 HNS、網域競標](../handshake-blockchain-domain-auction)

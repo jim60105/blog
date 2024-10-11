@@ -18,7 +18,7 @@ iscn = "iscn://likecoin-chain/dIW1ALSDI9yVxlh8an4X9uOzlwB7bp2gBPPWMPz6--8/1"
 +++
 ![preview](preview.png)
 
-> 前篇\
+> 前篇  
 > [Handshake domain 區塊鏈網域 —— 購買 HNS、網域競標](/Blockchain/blockchain-domain/handshake-blockchain-domain-auction)
 
 在前篇我們成功把網域給標到手了！區塊鏈網域和其它常見的 NFT 可不一樣，它不只是個所有權憑證，它寫在鏈上的資訊還能導向我們的伺服器位置。Handshake domain 是個已經有實作的專案，整個架構是能運行的。要把它使用起來，我們有兩個面向要設定，一邊是伺服器方；一邊是訪問方 —— 伺服器方要起動一台 DNS 主機，並由鏈上指向它；訪問方要把自己的解析器替換為 Handshake resolver。
@@ -64,8 +64,8 @@ NextDNS 公司是一家 DNS 解析器提供商，允許用戶設定 DNS Filter �
 
 <span class="success">如果你不自己架設解析器，那麼 NextDNS 是最理想的選擇了</span>，若你的用量不會超出免費額度的話。NextDNS 網站有完整的設定教學，你可以把它設定在瀏覧器層級；電腦 OS 層級；或是路由器層級。NextDNS 是一家頂尖的 DNS 提供商，而它們支援 Handshake 這件事，無疑是給 Handshake 社群帶來很大的肯定。
 
-> 題外話，我個人目前使用 NextDNS 做手機的 DNS Filter\
-> 不愧是小米手機，追蹤數據一半送美國、一半送大陸\
+> 題外話，我個人目前使用 NextDNS 做手機的 DNS Filter  
+> 不愧是小米手機，追蹤數據一半送美國、一半送大陸  
 > 中美大數據我兩邊都參與到了耶┌(。Д。)┐
 >
 > ![](/Blockchain/blockchain-domain/handshake/nextdns_mi.png)
@@ -117,12 +117,12 @@ CA 驗證的主要目標是「讓客戶端確定其取得的網頁，是由被�
 
 > DNS-based Authentication of Named Entities (DANE) 是一項網際網路安全協議，允許使用 DNSSEC 將通常用於 TLS 的 X.509 數位證書與域名綁定。它是在 RFC6698 中提出的，是一種在沒有 CA 的情況下驗證 TLS 客戶端和服務器實體的方法。
 >
-> 詳細探討請見外站連結\
-> DANE 的過去、現在與未來 - 財團法人台灣網路資訊中心部落格 | TWNIC Blog\
+> 詳細探討請見外站連結  
+> DANE 的過去、現在與未來 - 財團法人台灣網路資訊中心部落格 | TWNIC Blog  
 > <https://blog.twnic.tw/2021/04/15/17961/>
 
-> 要在 Handshake 實作 DANE 驗證請讀以下這篇文章，文內講得非常詳細\
-> [Building a secure website on your Handshake TLD | by Matthew Zipkin | Medium](https://matthewzipkin.medium.com/building-a-secure-website-on-your-handshake-tld-a8922a950a4f)\
+> 要在 Handshake 實作 DANE 驗證請讀以下這篇文章，文內講得非常詳細  
+> [Building a secure website on your Handshake TLD | by Matthew Zipkin | Medium](https://matthewzipkin.medium.com/building-a-secure-website-on-your-handshake-tld-a8922a950a4f)  
 > 對，真有夠複雜
 
 此文撰文時點，<span class="danger">主流瀏覧器都不支援 DANE 驗證</span>，客戶端要[另起一台 Proxy 來驗](https://github.com/buffrr/letsdane)。這讓我覺得，在 Handshake 尚未流行的現階段配置 DANE 的意義還不夠大。**目前我個人只使用簡單的自簽憑證，確保連線有透過 TLS 加密而已。**
@@ -135,5 +135,5 @@ CA 驗證的主要目標是「讓客戶端確定其取得的網頁，是由被�
 
 下一篇講講我們身為伺服器方，如何來設定第一個 Handshake domain，實際操作架設一個站點起來。
 
-> 下篇\
+> 下篇  
 > [Handshake domain 區塊鏈網域 —— 如何設定網域](/Blockchain/blockchain-domain/handshake-blockchain-domain-how-to-setup)
