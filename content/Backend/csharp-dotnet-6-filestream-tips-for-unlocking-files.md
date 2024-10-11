@@ -7,12 +7,10 @@ draft = true
 aliases = [ ]
 
 [taxonomies]
-tags = [ "C#" ]
+tags = [ ".NET Core", "C#" ]
 
 [extra]
-banner = "https://img.maki0419.com/blog/demo21.png"
 +++
-[![](https://img.maki0419.com/blog/demo21.png)](https://img.maki0419.com/blog/demo21.png)
 
 > System.IO.IOException: The process cannot access the file 'ooxx' because it is being used by another process.
 
@@ -21,5 +19,3 @@ banner = "https://img.maki0419.com/blog/demo21.png"
 不像Windows是獨占鎖，Linux上是諮詢鎖，兩個平台對於鎖定的設計概念不一樣，Linux生態系的程式可能會在不太必要時鎖住檔案，讓其它程式自行決定是否遵守鎖定。
 
 .NET Core把這個鎖定轉譯為C#的時候，把它轉成了獨佔鎖定，導致FileStream在打開檔案時報錯。
-
-這是。
