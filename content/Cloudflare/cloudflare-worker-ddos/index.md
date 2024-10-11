@@ -72,5 +72,5 @@ Worker 是以請求次數計價的，它被 DDOS 觸發本身就是問題，必�
 >
 > ---
 >
-> * [[個人專案\] 網頁計數器徽章 View Counter Badge —— 瀏覧數別再送人啦！以 Cloudflare Workers D1 實作適合純前端網頁的計數器](/2023/11/view-counter-badge-cloudflare-workers-d1.html)
-> * [[個人專案\] 以 Cloudflare Pages 打造低成本高流量的即時投票系統 (Cloudflare Pages, Pages Functions, Cloudflare D1)](/2024/01/cloudflare-pages.html)
+> * [[個人專案\] 網頁計數器徽章 View Counter Badge —— 瀏覧數別再送人啦！以 Cloudflare Workers D1 實作適合純前端網頁的計數器](/SideProject/view-counter-badge-cloudflare-workers-d1)
+> * [[個人專案\] 以 Cloudflare Pages 打造低成本高流量的即時投票系統 (Cloudflare Pages, Pages Functions, Cloudflare D1)](/Cloudflare/cloudflare-pages)
