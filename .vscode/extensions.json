@@ -4,8 +4,13 @@
         "eliostruyf.vscode-front-matter",
         "karunamurti.tera",
         "doggy8088.markdown-extension-pack",
+        "GitHub.copilot",
         "tamasfe.even-better-toml",
         "streetsidesoftware.code-spell-checker",
-        "doggy8088.pangu2"
+        "doggy8088.pangu2",
+        "WakaTime.vscode-wakatime",
+        "doggy8088.git-extension-pack",
+        "GitHub.copilot-chat",
+        "onesdev.vscode-paste-image-plus"
     ]
 }
