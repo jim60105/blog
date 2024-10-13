@@ -52,5 +52,5 @@ card = "card.jpg"
 >
 > ---
 >
-> * [[個人專案\] 網頁計數器徽章 View Counter Badge —— 瀏覧數別再送人啦！以 Cloudflare Workers D1 實作適合純前端網頁的計數器](/SideProject/view-counter-badge-cloudflare-workers-d1)
-> * [[經驗分享\] 我的 Cloudflare Worker 被進行外部壓力測試，俗稱DDOS 😠](/Cloudflare/cloudflare-worker-ddos)
+> * [\[個人專案\] 網頁計數器徽章 View Counter Badge —— 瀏覧數別再送人啦！以 Cloudflare Workers D1 實作適合純前端網頁的計數器](/SideProject/view-counter-badge-cloudflare-workers-d1)
+> * [\[經驗分享\] 我的 Cloudflare Worker 被進行外部壓力測試，俗稱DDOS 😠](/Cloudflare/cloudflare-worker-ddos)
