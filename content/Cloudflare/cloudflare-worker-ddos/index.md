@@ -11,6 +11,7 @@ tags = [ "Cloudflare" ]
 
 [extra]
 card = "preview.png"
+poor = true
 +++
 
 [![](preview.png)](preview.png)

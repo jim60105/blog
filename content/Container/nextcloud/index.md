@@ -1,6 +1,6 @@
 +++
 title = "[Docker] Nextcloud 自有雲建置"
-description = "以 Docker 建置 Nextcloud，作為檔案主機 或圖片主機使用"
+description = "以 Docker 建置 Nextcloud，作為檔案主機或圖片主機使用"
 date = 2020-07-03T21:38:00.163Z
 updated = "2024-10-13T17:44:41.166Z"
 draft = false
@@ -361,7 +361,7 @@ Stderr 會報說下載了 docker image 和加入 SSH-Key, 但只要有輸出 rsy
 
 [![](rsync5.png)](rsync5.png)
 
-<div class="hide align-right">爆了 (´ﾟдﾟ`)</div>
+<span class="hide align-right">爆了 (´ﾟдﾟ`)</span>
 
 {% alert(note=true) %}
 **upload.sh 不能在 host 直接執行**，因為密碼檔是以 docker secrets 的方式處理，此路徑在 host 不存在。
