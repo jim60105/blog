@@ -12,11 +12,10 @@ tags = ["Docker"]
 [extra]
 banner = "https://img.maki0419.com/blog/opencart/preview.jpg"
 +++
-##  前言
+## 前言
 
 [![](https://img.maki0419.com/blog/opencart/preview.jpg)](https://img.maki0419.com/blog/opencart/preview.jpg)
 
-  
 [![](https://img.maki0419.com/blog/opencart/opencart-logo.jpg)](https://www.opencart.com/)
 
 Opencart是一套開源的購物網站方案，擴充性高、資源豐富。基本框架免錢，好用的收費模組很多，且台灣的支援度高。
@@ -51,6 +50,7 @@ Opencart是一套開源的購物網站方案，擴充性高、資源豐富。基
 你若不是資訊專家，最好給吃飯的工具留個保險  
 
 另外還有幾個贏過其它方案的優點:  
+
 * 台灣的幾家第三方支付([綠界](https://www.ecpay.com.tw/Service/Appcntr%5FShpcar)、[藍新](https://www.newebpay.com/website/Page/content/download%5Fapi#2)、[歐付寶](https://www.newebpay.com/website/Page/content/download%5Fapi#2)、[紅陽](https://github.com/RedSunTech/OpenCart)等)大都有對Opencart推出模組，很容易就能成功串接
 * 有[Facebook官方支援](https://www.facebook.com/business/help/1494437460610744)，可在右下角顯示Messenger聯絡圖標，還能同步上架到Facebook粉專商店
 * 核心語言是PHP；伺服器搭MySQL；推薦架在Apache或Nginx，說直白點就是核心確實不要錢
@@ -90,7 +90,7 @@ Opencart是一套開源的購物網站方案，擴充性高、資源豐富。基
 
 ## 硬體架構
 
-機器有兩台，放在我家的NAS做備份伺服器；Digital Ocean租的VPS做主要Server
+機器有兩台，放在我家的NAS做備份伺服器；DigitalOcean租的VPS做主要Server
 
 若不備份，Rsync Server就不是必須的。本文會講解不做備份的設定方式
 
@@ -98,39 +98,37 @@ Opencart是一套開源的購物網站方案，擴充性高、資源豐富。基
 
 WWW  
 
-└ Digital Ocean Droplet (Main Server)
+└ DigitalOcean Droplet (Main Server)
 
 ## Main Server系統架構
 
 WWW  
 │  
 Reverse Proxy (nginx Server) (SSL證書申請、Renew)  
-├ Jobber (Cron) (定時備份Docker volume，備份完送至rsync server)   
+├ Jobber (Cron) (定時備份Docker volume，備份完送至rsync server)
 ├ Opencart前台 (nginx Server)  
 │ ├ MariaDB資料庫 (網路只對Opencart前後台)  
 └ Opencart後台 (nginx Server)
 
-##  DNS設定和Cache設定
+## DNS設定和Cache設定
 
 我使用Cloudflare做DNS和Cache  
 若用其它DNS商請略過Cache設定
 
-  
 SSL和PageRule設定如此是為了讓Let's Encrypt能成功訪問，請留意
 
-  
 DNS Record有三條，一條A指向SERVER\_IP，另倆CNAME指向A Record  
 
 * DNS  
-   * A: `opencart.domain.com` → SERVER\_IP (DNS Only)  
-   * CNAME: `shop.domain.com` →`opencart.domain.com` (Proxied)  
-   * CNAME: `shopadmin.domain.com` →`opencart.domain.com` (Proxied)
+  * A: `opencart.domain.com` → SERVER\_IP (DNS Only)  
+  * CNAME: `shop.domain.com` →`opencart.domain.com` (Proxied)  
+  * CNAME: `shopadmin.domain.com` →`opencart.domain.com` (Proxied)
 * SSL/TLS  
-   * Always Use HTTPS: **Off**  
-   * HTTP Strict Transport Security (HSTS):**Disabled**  
-   * Automatic HTTPS Rewrites: (Can enable if needed)
+  * Always Use HTTPS: **Off**  
+  * HTTP Strict Transport Security (HSTS):**Disabled**  
+  * Automatic HTTPS Rewrites: (Can enable if needed)
 * Caching  
-   * Caching Level: Standard
+  * Caching Level: Standard
 * Page Rule  
    1. `*domain.com/.well-known/acme-challenge*`  
          * **Disable Everything**  
@@ -145,34 +143,34 @@ DNS Record有三條，一條A指向SERVER\_IP，另倆CNAME指向A Record
 > 琳的備忘手札 \[Docker\] Linux主機之Docker安裝和ReveseProxy建置  
 > </2020/11/linux-docker-setup-revese-proxy.html>
 
-###  Opencart建置
+### Opencart建置
 
 * cd到root家目錄  
 cd
 * git clone專案  
-git clone https://github.com/jim60105/docker-Opencart-tw.git
+git clone <https://github.com/jim60105/docker-Opencart-tw.git>
 * 進入docker-opencart資料夾  
 cd docker-Opencart-tw
 * 填入.env檔案  
 cp .env_sample .env && vim .env  
 [![](https://img.maki0419.com/blog/opencart/10.png)](https://img.maki0419.com/blog/opencart/10.png)  
-   * `LETSENCRYPT_TEST`: 此為設定申請測試SSL證書，現在給true，**最後上線前才改false**  
-   * `LETSENCRYPT_EMAIL`: Let's Encrypt在證書到期時通知你用的email，不會透過這個做驗證。同時用於Opencart Admin帳號，建議正確填入。  
-   * `HOST`: 網站前台網域  
-   * `HOST_ADMIN`: 網站後台管理界面網域  
-   * `MYSQL_ROOT_PASSWORD`: Database的root密碼  
-   * `MYSQL_PASSWORD`: Opencart程式專用帳號的Database密碼  
-   * `OPENCART_TW`: Opencart的下載網址，由[OSEC.tw](https://www.osec.tw/opencart.html)取得  
-   * `OPENCART_ADMIN`: 創建後台Opencart管理員帳號  
-   * `OPENCART_ADMIN_PASSWD`: 創建後台Opencart管理員密碼
+  * `LETSENCRYPT_TEST`: 此為設定申請測試SSL證書，現在給true，**最後上線前才改false**  
+  * `LETSENCRYPT_EMAIL`: Let's Encrypt在證書到期時通知你用的email，不會透過這個做驗證。同時用於Opencart Admin帳號，建議正確填入。  
+  * `HOST`: 網站前台網域  
+  * `HOST_ADMIN`: 網站後台管理界面網域  
+  * `MYSQL_ROOT_PASSWORD`: Database的root密碼  
+  * `MYSQL_PASSWORD`: Opencart程式專用帳號的Database密碼  
+  * `OPENCART_TW`: Opencart的下載網址，由[OSEC.tw](https://www.osec.tw/opencart.html)取得  
+  * `OPENCART_ADMIN`: 創建後台Opencart管理員帳號  
+  * `OPENCART_ADMIN_PASSWD`: 創建後台Opencart管理員密碼
 * 修改jobber部份:  
-   * 你有Rsync Server，且會按照本文設定  
+  * 你有Rsync Server，且會按照本文設定  
    →建立\~/ssh.pas檔案過build，密碼我們後面再填入  
    touch ~/ssh.pas  
-   * 你沒有Rsync Server，定時備份後留在Main Server就好  
+  * 你沒有Rsync Server，定時備份後留在Main Server就好  
    →編輯docker-compose.yml，刪除JOB\_COMMAND1的後半段、secrets相關內容  
    [![](https://img.maki0419.com/blog/opencart/18.jpg)](https://img.maki0419.com/blog/opencart/18.jpg)  
-   * 你完全不想執行備份  
+  * 你完全不想執行備份  
    →編輯docker-compose.yml，刪除secrets相關內容和整個jobber  
    [![](https://img.maki0419.com/blog/opencart/17.jpg)](https://img.maki0419.com/blog/opencart/17.jpg)
 * 起機囉\~\~  
@@ -187,6 +185,7 @@ docker logs proxy_le -f
 * 將SSL申請改為正式申請  
 vim .env  
 第一行`LETSENCRYPT_TEST`改為`false`  
+
 > ※注意  
 > 因為Let's Encrypt針對網域正式申請有次數限制，不論成功與否，做太多次就會鎖住  
 > 發布前一定要測試成功再轉正，並於申請成功後備份cert  
@@ -199,7 +198,7 @@ docker-compose down -v && docker compose up -d
 > Opencart架設完成後，請保持此「Use SSL」選項為「否」  
 > SSL更新驗證會透過NonSSL進行，此設定會導致驗證失敗  
 > SSL自動跳轉請[透過Cloudflare設定](#dnsSetting)  
->  
+> 
 > [![](https://img.maki0419.com/blog/opencart/SSL.png)](https://img.maki0419.com/blog/opencart/SSL.png)
 
 ## Rsync Server設定和備份還原
@@ -207,16 +206,16 @@ docker-compose down -v && docker compose up -d
 ### Rsync Server設定  
 
 * Synology rsync server設定
-   * Rsync是DSM內建功能，開啟「控制台→檔案服務→rsync」  
+  * Rsync是DSM內建功能，開啟「控制台→檔案服務→rsync」  
    啟動rsync服務，port可改(或者由上層的router，外自訂轉內22)  
    [![](https://img.maki0419.com/blog/opencart/rsync1.png)](https://img.maki0419.com/blog/opencart/rsync1.png)
-   * 「使用者帳號→新增使用者」  
+  * 「使用者帳號→新增使用者」  
    使用者名**必須為rsync**，密碼記起來  
    [![](https://img.maki0419.com/blog/opencart/rsync2.png)](https://img.maki0419.com/blog/opencart/rsync2.png)
-   * 設定NetBackup為可讀寫，其餘禁止  
+  * 設定NetBackup為可讀寫，其餘禁止  
    (這rsync專用的共用資料夾**必須名為NetBackup**)  
    [![](https://img.maki0419.com/blog/opencart/rsync3.png)](https://img.maki0419.com/blog/opencart/rsync3.png)
-   * 使用者建立後，選中rsync使用者「編輯」→「應用程式」頁籤  
+  * 使用者建立後，選中rsync使用者「編輯」→「應用程式」頁籤  
    全選禁止，再選中「rsync服務→針對IP設定」  
    「允許清單→新增IP位址→單一主機」，填入Main Server的IP  
    [![](https://img.maki0419.com/blog/opencart/rsync4.png)](https://img.maki0419.com/blog/opencart/rsync4.png)
@@ -253,7 +252,6 @@ Stderr會報說下載了docker image和加入SSH-Key, 但只要有輸出rsync資
 > upload.sh不能在host直接執行，因為密碼檔是以docker secrets的方式處理  
 > 此路徑在host不存在
 
-  
 我做了簡易的log，記錄下執行時間和IP
 
 [![](https://img.maki0419.com/blog/opencart/16.png)](https://img.maki0419.com/blog/opencart/16.png)
@@ -263,25 +261,29 @@ Stderr會報說下載了docker image和加入SSH-Key, 但只要有輸出rsync資
 * 把備份檔案放回Main Server的/backup資料夾下  
 這部份沒有特別建立管道，我是以區網Samba連到NAS，再拖曳進MobaXterm的SFTP傳輸  
 因為安全性考量，我不希望建立能自動從我家NAS輸出資料的管道  
-    
+
 假若前面有申請了新的正式SSL證書想要保留，留下reverseproxy字樣的備份不覆蓋
+
 * 執行Restore  
 ./shellScript/restore.sh && ./shellScript/startContainer.sh  
 若restore後不希望自啟動，去掉&&和其後那一段  
+
 > ※提醒  
 > restore邏輯  
->   1. 由tag為opencart和proxy的現存volume中取得清單  
->   2. 去/backup資料夾找檔案做複原  
+>
+> 1. 由tag為opencart和proxy的現存volume中取得清單  
+> 2. 去/backup資料夾找檔案做複原  
 > 故運行前**要先有volume存在**，意即必須得先docker-compose up一次建立volume，後做restore  
 > ※提醒  
 > renameVolume.sh的用法如下  
 >  
 > renameVolume.sh oldVolumeName newVolumeName  
->  
+> 
 > rename邏輯  
->   1. 如果新volume不存在就建立，否則清空延用volume  
->   2. 將舊volume的檔案傳到新的volume  
->   3. 砍掉舊的volume  
+>
+> 1. 如果新volume不存在就建立，否則清空延用volume  
+> 2. 將舊volume的檔案傳到新的volume  
+> 3. 砍掉舊的volume  
 > 在建立的過程中不會帶有backup.sh需要的label，所以要由docker-compose up來建立
 
 ## 附註: 本專案測試版號
@@ -305,14 +307,14 @@ docker-compose file內用的是latest，拉下來可能會不同
 
 docker exec -it docker-opencart-tw_web_admin_1 vi /var/www/html/upload/admin/config.php
 
-原始:   
+原始:
 
 // HTTP
-define('HTTP_SERVER', 'http://shop.domain.com/admin/');
-define('HTTP_CATALOG', 'http://shop.domain.com/');
+define('HTTP_SERVER', '<http://shop.domain.com/admin/>');
+define('HTTP_CATALOG', '<http://shop.domain.com/>');
 // HTTPS
-define('HTTPS_SERVER', 'http://shop.domain.com/admin/');
-define('HTTPS_CATALOG', 'http://shop.domain.com/');
+define('HTTPS_SERVER', '<http://shop.domain.com/admin/>');
+define('HTTPS_CATALOG', '<http://shop.domain.com/>');
 
 前幾行被我修改如下:  
 
@@ -330,12 +332,12 @@ code在此
 
 docker exec -it docker-opencart-tw_web_admin_1 vi /var/www/html/upload/config.php
 
-原始:   
+原始:
 
 // HTTP
-define('HTTP_SERVER', 'http://shop.domain.com/');
+define('HTTP_SERVER', '<http://shop.domain.com/>');
 // HTTPS
-define('HTTPS_SERVER', 'http://shop.domain.com/');
+define('HTTPS_SERVER', '<http://shop.domain.com/>');
 
 修改如下:  
 
@@ -346,7 +348,6 @@ define('HTTPS_SERVER', 'http://'.getenv('HOST').'/');
 
 code
 
-  
 ## 附註: 現有Opencart網站移用
 
 此專案中的nginx web server，其網站檔案是放在volume之下的upload資料夾中  
@@ -367,8 +368,8 @@ code
 > └php.ini  
 > /opencart.sql  
 
-  
 先完成此[架設](#%E6%9E%B6%E8%A8%AD)章節，至能訪問預設網站  
+
 * 修改權限  
 chown -R www-data /html && chmod -R 755 /html
 * 把檔案複寫入container  
@@ -383,5 +384,3 @@ mysql -p opencart < /opencart.sql && rm /opencart.sql
 > 提醒，這裡進入bash後再操作mysql是資訊安全考量  
 > 如果無視的話，sql部份能用這樣的一條處理完  
 > docker exec -i docker-opencart-tw\_db\_1 mysql -p密碼 opencart < /opencart.sql
-
-  

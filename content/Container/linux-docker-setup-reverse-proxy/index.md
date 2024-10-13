@@ -42,12 +42,13 @@ Reverse Proxy (反向代理)，可以比喻為一棟樓的大門管理員
 3. git clone 下 Reverse Proxy 之建置檔案
 4. docker-compose up -d
 
-## 建置
+## 建置 {#build}
 
-### Linux 主機
+### Linux 主機 {#DigitalOcean}
 
 * 起一台 Linux 做 Main Server，理論上任何能裝 Docker 的 arm64 linux 都行  
-  <aside><a href="https://www.digitalocean.com/?refcode=ac52b09a7f63&amp;utm_campaign=Referral_Invite&amp;utm_medium=Referral_Program&amp;utm_source=badge"><img alt="DigitalOcean Referral Badge" src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg"/></a></aside> 我個人是用 <a href="https://m.do.co/c/ac52b09a7f63" id="DigitalOcean" name="DigitalOcean" target="_blank"><b><span style="-webkit-text-stroke: 0.05em rgb(0,105,255); color: white;">Digital Ocean</span></b></a>，最便宜的方案每個月 6 美元 (4 美元的方案請略過它)  
+
+  <aside><a href="https://www.digitalocean.com/?refcode=ac52b09a7f63&amp;utm_campaign=Referral_Invite&amp;utm_medium=Referral_Program&amp;utm_source=badge">{{ image(url="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg", alt="DigitalOcean Referral Badge") }}</a></aside> 我個人是用 <a href="https://m.do.co/c/ac52b09a7f63" target="_blank"><b><span style="-webkit-text-stroke: 0.05em rgb(0,105,255); color: white;">DigitalOcean</span></b></a>，最便宜的方案每個月 6 美元 (4 美元的方案請略過它)  
 
   這是老牌的主機商，在業界有信譽有口碑，比國內的主機商穩定得多  
   亞洲可選的資料中心在新加坡，對台灣連線速度佳，沒有什麼奇怪的問題  
