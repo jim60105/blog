@@ -196,7 +196,7 @@ docker compose up -d --build
 >
 > ---
 >
-> * [\[Docker\] Linux主機之Docker安裝和 ReverseProxy 建置](/2020/11/linux-docker-setup-revese-proxy.html)
+> * [\[Docker\] Linux主機之Docker安裝和 ReverseProxy 建置](/Container/linux-docker-setup-reverse-proxy)
 > * [琳的備忘手札: AI翻譯解鎖——日文網路小說無障礙閱讀體驗](/AI/unlocking-ai-translation-barrier-free-reading-experience-of-japanese-web-novels)
 
 <script src="https://liker.social/embed.js" async="async"></script>
