@@ -82,6 +82,20 @@ h6 {
     margin: 0.5em auto;
   }
 
+  aside {
+    --shimmer: rgb(
+      from var(--accent-color) r g b / calc(var(--color-opacity) * 2)
+    );
+    background-image: linear-gradient(
+      to right,
+      var(--fg-muted-1) 50%,
+      var(--shimmer) 75%,
+      var(--fg-muted-1) 100%
+    );
+    background-size: 200%;
+    background-color: unset;
+  }
+
   #banner-container {
     z-index: unset;
     mask-image: linear-gradient(
