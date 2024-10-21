@@ -1,6 +1,6 @@
 +++
 title = "在 Docker container 中執行 sudo 時，環境變數沒有生效"
-description = "在 Docker container 中執行 sudo 時，環境變數沒有生效"
+description = "在 Docker container 中執行 sudo 時，環境變數沒有被傳入。"
 date = 2022-03-10T21:22:00.019Z
 updated = 2022-03-10T21:40:39.239Z
 draft = false
@@ -8,7 +8,7 @@ aliases = [ "/2022/03/sudo-in-docker-container-env-not-passed-in.html" ]
 extra = { }
 
 [taxonomies]
-tags = [ "Docker", "Linux" ]
+tags = [ "Container", "Docker", "Linux" ]
 +++
 
 這是一篇備忘，其實標題就是關鍵了  

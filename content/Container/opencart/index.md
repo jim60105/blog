@@ -1,13 +1,13 @@
 +++
 title = "[Docker] Opencart 購物網站建置"
-description = "[Docker] Opencart 購物網站建置"
+description = "Opencart是一套開源的購物網站方案，擴充性高、資源豐富。本文以Docker技術，用最少的步驟讓你快速架起自己的Opencart購物網站。"
 date = 2020-08-27T04:36:00.100Z
 updated = 2021-10-31T11:08:31.463Z
 draft = false
-aliases = ["/2020/08/docker-opencart.html"]
+aliases = [ "/2020/08/docker-opencart.html" ]
 
 [taxonomies]
-tags = ["Docker"]
+tags = [ "Container", "Docker" ]
 
 [extra]
 banner = "preview.jpg"

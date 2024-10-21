@@ -1,6 +1,6 @@
 +++
 title = "在 Azure Blob Storage 啟用 206 Partial Content 以支援 mp4 串流播放"
-description = "在 Azure Blob Storage 啟用 206 Partial Content 以支援 mp4 串流播放"
+description = "我正在開發一個網頁上的影片播放器，使用套件來播放儲存在 Azure Blob Storage 的 mp4 檔案。雖然影片可以成功從頭播放，但是卻無法從指定的時間開始播放，並且拉動時間軸時也無法進行跳轉。Storage 未回應 206 Partial Content。這篇文章將說明如何解決此問題。"
 date = 2023-01-15T11:21:00.005Z
 updated = 2023-01-16T05:12:26.999Z
 draft = false
