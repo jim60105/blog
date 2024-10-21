@@ -27,7 +27,7 @@ hot = true
 > —— [維基百科](https://zh.wikipedia.org/zh-tw/Nextcloud)
 
 <aside>
-{{ image(url="Nextcloud.png", alt="Nextcloud") }}
+{{ image(url="Nextcloud.png", alt="Nextcloud logo") }}
 </aside>
 
 我的 blogger 日瀏覧量約 1000 人次，其中 1/4 是來自大陸牆內，因為眾所周知的原因，他們看不到 blogger 上 google 伺服器的圖片 (過牆請見[附註](#Wall))
