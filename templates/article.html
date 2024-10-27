@@ -5,6 +5,13 @@ macros_translate::translate(key="date_format", default="%B %d, %Y", language_str
 	{%- set date_locale = macros_translate::translate(key="date_locale", default="en_US", language_strings=language_strings)
 -%}
 	{%- set rel_attributes = macros_rel_attributes::rel_attributes() | trim -%}
+
+	{%- if page.extra.toc_ordered or section.extra.toc_ordered or config.extra.toc_ordered -%}
+		{%- set list_element = "ol" -%}
+	{%- else -%}
+		{%- set list_element = "ul" -%}
+	{%- endif -%}
+
 	<article>
 		{%- if page.extra.banner -%}
 			<div id="banner-container">
@@ -73,7 +80,56 @@ macros_translate::translate(key="date_format", default="%B %d, %Y", language_str
 			{%- endif %}
 		</div>
 
+		<div id="buttons-container">
+			{%- if config.extra.toc or config.extra.toc and page.toc | length > 0 -%}
+				<details id="toc" class="closable">
+					<summary title="{{ macros_translate::translate(key='table_of_contents', default='Table of Contents', language_strings=language_strings) }}">
+						<i class="icon"></i>
+					</summary>
+					<div id="toc-dropdown">
+						<strong>{{ macros_translate::translate(key="table_of_contents", default="Table of Contents", language_strings=language_strings) }}</strong>
+						<div>
+							<{{list_element}}>
+								{%- for h1 in page.toc -%}
+									<li>
+										<a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+										{%- if h1.children -%}
+											<{{list_element}}>
+												{%- for h2 in h1.children -%}
+													<li>
+														<a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+													</li>
+												{%- endfor -%}
+											</{{list_element}}>
+										{%- endif -%}
+									</li>
+								{%- endfor -%}
+							</{{list_element}}>
+						</div>
+					</div>
+				</details>
+			{%- endif -%}
+			<a id="go-to-top" href="#top" title="{{ macros_translate::translate(key='go_to_top', default='Go to Top', language_strings=language_strings) }}">
+				<i class="icon"></i>
+			</a>
+			{%- if config.extra.show_share_button -%}
+				<a id="share" href="https://shareopenly.org/share/?url={{ page.permalink }}&text={{ page.description | urlencode }}" rel="{{ rel_attributes }}" title="{{ macros_translate::translate(key='share', default='Share', language_strings=language_strings) }}">
+					<i class="icon"></i>
+				</a>
+			{%- endif -%}
+			{%- if config.extra.issues_url -%}
+				<a id="issue" href="{{ config.extra.issues_url }}" rel="{{ rel_attributes }}" title="{{ macros_translate::translate(key='file_an_issue', default='File an Issue', language_strings=language_strings) }}">
+					<i class="icon"></i>
+				</a>
+			{%- endif -%}
+		</div>
+
 		{%- include "partials/statements.html" -%}
+
+		{%- if page.extra.toc_inline or config.extra.toc_inline -%}
+			{%- include "partials/toc.html" -%}
+		{%- endif -%}
+
 		{{ page.content | safe }}
 		{%- if config.extra.likerid or page.extra.iscn -%}
 			{% include "partials/likecoin.html" %}
@@ -83,50 +139,6 @@ macros_translate::translate(key="date_format", default="%B %d, %Y", language_str
 	{%- if page.extra.comments.id -%}
 		{% include "partials/comments.html" %}
 	{%- endif -%}
-	<div id="buttons-container">
-		{%- if page.toc -%}
-			<details id="toc" class="closable">
-				<summary title="{{ macros_translate::translate(key='table_of_contents', default='Table of Contents', language_strings=language_strings) }}">
-					<i class="icon"></i>
-				</summary>
-				<div id="toc-dropdown">
-					<strong>{{ macros_translate::translate(key="table_of_contents", default="Table of Contents",
-        language_strings=language_strings) }}</strong>
-					<div>
-						<ul>
-							{%- for h1 in page.toc -%}
-								<li>
-									<a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
-									{%- if h1.children -%}
-										<ul>
-											{%- for h2 in h1.children -%}
-												<li>
-													<a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
-												</li>
-											{%- endfor -%}
-										</ul>
-									{%- endif -%}
-								</li>
-							{%- endfor -%}
-						</ul>
-					</div>
-				</div>
-			</details>
-		{%- endif -%}
-		<a id="go-to-top" href="#top" title="{{ macros_translate::translate(key='go_to_top', default='Go to Top', language_strings=language_strings) }}">
-			<i class="icon"></i>
-		</a>
-		{%- if config.extra.show_share_button -%}
-			<a id="share" href="https://shareopenly.org/share/?url={{ page.permalink }}&text={{ page.description | urlencode }}" rel="{{ rel_attributes }}" title="{{ macros_translate::translate(key='share', default='Share', language_strings=language_strings) }}">
-				<i class="icon"></i>
-			</a>
-		{%- endif -%}
-		{%- if config.extra.issues_url -%}
-			<a id="issue" href="{{ config.extra.issues_url }}" rel="{{ rel_attributes }}" title="{{ macros_translate::translate(key='file_an_issue', default='File an Issue', language_strings=language_strings) }}">
-				<i class="icon"></i>
-			</a>
-		{%- endif -%}
-	</div>
 
 	{%- if page.lower or page.higher -%}
 		<hr/>
