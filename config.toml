@@ -259,6 +259,55 @@ show_share_button = true
 # Note: This will make your page significantly heavier.
 # Instead, consider enabling it per page/section.
 # katex = true
+#
+# Whether to render table of contents on all pages.
+# Will not be rendered if page doesn't have any headings.
+# Can be set per page/section.
+toc = true
+#
+# Whether to render inline table of contents at the top of all pages,
+# in addition to floating quick navigation buttons.
+# Can be set per page/section.
+toc_inline = true
+#
+# Whether to use numbered (ordered) list for table of contents.
+# Can be set per page/section.
+# toc_ordered = true
+#
+# Whether to use Content Security Policy.
+# Keep in mind that although this can potentially increase security,
+# it can break some stuff, in which case you will need to set custom policy.
+# csp = [
+#     { directive = "font-src", domains = [
+#         "'self'",
+#         "data:",
+#     ] },
+#     { directive = "img-src", domains = [
+#         "'self'",
+#         "https:",
+#         "data:",
+#     ] },
+#     { directive = "media-src", domains = [
+#         "'self'",
+#         "https:",
+#         "data:",
+#     ] },
+#     { directive = "script-src", domains = [
+#         "'self'",
+#         "'unsafe-inline'",
+#     ] },
+#     { directive = "style-src", domains = [
+#         "'self'",
+#         "'unsafe-inline'",
+#     ] },
+#     { directive = "frame-src", domains = [
+#         "https://player.vimeo.com",
+#         "https://www.youtube-nocookie.com",
+#     ] },
+#     { directive = "connect-src", domains = [
+#         "https:",
+#     ] },
+# ]
 # Display outlines around all elements for debugging purposes
 # debug_layout = true
 
