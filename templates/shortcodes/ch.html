@@ -1,0 +1,5 @@
+{%- if element -%}
+<{{ element }} class="hide">{{ body }}</{{ element }}>
+{%- else -%}
+<span class="hide">{{ body }}</span>
+{%- endif -%}
