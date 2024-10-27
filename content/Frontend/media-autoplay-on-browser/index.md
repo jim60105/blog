@@ -1,6 +1,6 @@
 +++
 title = "瀏覧器影音自動播放之研究手札 (Chrome、Firefox)"
-description = "瀏覧器影音自動播放之研究手札 (Chrome、Firefox)"
+description = "為了改善用戶體驗，瀏覽器正朝著更嚴格的自動播放政策發展。它的目的是讓用戶對播放有更大的控制權。這篇文章會提及Chrome、Firefox的自動播放規則、網站開發者該怎麼處理前端；用戶該怎麼手動允許特定網站的自動播放。 "
 date = 2022-01-29T19:25:00.053Z
 updated = 2022-12-16T09:47:19.053Z
 draft = false
@@ -12,17 +12,20 @@ tags = [ "JavaScript" ]
 [extra]
 card = "preview.png"
 iscn = "iscn://likecoin-chain/bc90szsMlh6oskq44wAPlhoXk5Ja_s3HilwziYp5irM/1"
+
+  [extra.comments]
+  id = "113378510553160945"
 +++
 
 ![瀏覧器影音自動播放之研究手札](preview.png)
 
 我在做[影片截選播放清單](https://blog.maki0419.com/2020/12/userscript-youtube-clip-playlist.html)時，遇到播放時會停住的問題，並發現在各瀏覽器、各網站的表現不同，用戶回報給我的狀況也都不同。我對這件事做了些研究，並撰寫下此文記錄。為了改善用戶體驗，瀏覽器正朝著更嚴格的自動播放政策發展。它的目的是讓用戶對播放有更大的控制權，並 ([Chrome 稱](https://developer.chrome.com/blog/autoplay/#new-behaviors)) 讓有合法用途的出版商受益。
 
-這篇文章會提及 Chrome、Firefox 的自動播放規則，身為**網站開發者**我們該怎麼處理前端；身為**用戶**我們該怎麼手動允許特定網站的自動播放。
+這篇文章會提及 Chrome、Firefox 的自動播放規則，身為*網站開發者*我們該怎麼處理前端；身為*用戶*我們該怎麼手動允許特定網站的自動播放。
 
 ## 「阻擋自動播放」行為的明確定義
 
-**「自動播放 (Autoplay)」是指在用戶沒有明確要求開始播放的情況下，導致音頻開始播放的任何功能。** 這既包括 *使用 HTML 屬性來自動播放媒體* ，也包括在沒有互動就 *使用 JavaScript 程式開始播放。*
+**「自動播放 (Autoplay)」是指在用戶沒有明確要求開始播放的情況下，導致音頻開始播放的任何功能。** 這既包括*使用 HTML 屬性來自動播放媒體*，也包括在沒有互動就*使用 JavaScript 程式開始播放。*
 
 換句話說
 
@@ -35,11 +38,11 @@ iscn = "iscn://likecoin-chain/bc90szsMlh6oskq44wAPlhoXk5Ja_s3HilwziYp5irM/1"
 
 ## Chrome 的自動播放規則
 
-- 始終允許靜音影片的自動播放
-- 在以下條件允許自動播放:
-  - 使用者當前已經與該 domain 進行了互動、點擊
-  - 在桌面裝置上，使用者的 Media Engagement Index 已經超過閾值，也代表用戶以前曾在此網站播放多次帶聲音的媒體
-  - 在手機裝置上，使用者已將該網站加到他們的手機主畫面上，或在桌面裝置上安裝為 [PWA](https://developer.mozilla.org/zh-TW/docs/Web/Progressive%5Fweb%5Fapps)
+- 始終{{ cg(body="允許")}}*靜音影片*的自動播放
+- 在以下條件{{ cg(body="允許")}}自動播放:
+  - 使用者當前已經與該 domain 進行了**互動、點擊**
+  - 在<mark>桌面裝置</mark>上，使用者的 **Media Engagement Index 已經超過閾值**，也代表用戶以前曾在此網站播放多次帶聲音的媒體
+  - 在<mark>手機裝置</mark>上，使用者**已將該網站加到他們的手機主畫面上**，或在<mark>桌面裝置</mark>上**安裝為 [PWA](https://developer.mozilla.org/zh-TW/docs/Web/Progressive%5Fweb%5Fapps)**
 - 使用者可以針對個別網站添加例外
 - 上層可以將自動播放權限傳遞給他們的 iframe
 
@@ -56,7 +59,7 @@ iscn = "iscn://likecoin-chain/bc90szsMlh6oskq44wAPlhoXk5Ja_s3HilwziYp5irM/1"
 - 有影片的該頁籤是 active
 - 影片的大小必須大於 200px \* 140px
 
-簡單來說，你看越久影片，該網站分數就越高。而當它超過一定值，就會啟動自動播放。
+簡單來說，**你看越久影片，該網站分數就越高。而當它超過一定值，就會啟動自動播放。**
 
 Chrome 使用者可以訪問 `about://media-engagement` 查看自己的 MEI。
 
@@ -64,9 +67,12 @@ Chrome 使用者可以訪問 `about://media-engagement` 查看自己的 MEI。
 
 Firefox 的自動播放預設為「封鎖音訊」，即允許靜音影片的自動播放。此跨站預設值可由使用者自行修改。
 
-- 「封鎖音訊」:  允許靜音影片的自動播放，封鎖其它影片的自動播放，直到使用者當前已經與該 domain 進行了互動、點擊 (這是預設值)
-- 「封鎖影音內容」: 封鎖所有影片的自動播放，即使它是靜音影片
-- 「允許自動播放影音內容」: 字面意思，全面允許自動播放
+| 選項 | 意義 |
+| --- | --- |
+| 封鎖音訊 | {{ cg(body="允許") }}*靜音影片*的自動播放，{{ cr(body="封鎖") }}其它影片的自動播放，直到使用者進行了**互動、點擊** (預設值) |
+| 封鎖影音內容 | 全面{{ cr(body="封鎖") }}所有影片的自動播放，即使它是*靜音影片* |
+| 允許自動播放影音內容 | 全面{{ cg(body="允許") }}自動播放 |
+
 - 使用者可以針對個別網站添加例外
 - 上層可以將自動播放權限傳遞給他們的 iframe
 
@@ -74,7 +80,7 @@ Firefox 的自動播放預設為「封鎖音訊」，即允許靜音影片的自
 
 兩條路
 
-- 靜音播放，並顯示按鈕要使用者手動按 unmute。這個「按按鈕」的行為是互動，會允許音頻播放。Facebook, Instagram, Twitter, YouTube 都是這麼做。
+- {{ cr(body="靜音播放") }}，並顯示按鈕要使用者手動按 unmute。這個「按按鈕」的行為是互動，會允許音頻播放。Facebook, Instagram, Twitter, YouTube 都是這麼做。
 
   ```html
   <video id="video" muted autoplay>
@@ -87,7 +93,7 @@ Firefox 的自動播放預設為「封鎖音訊」，即允許靜音影片的自
   </script>
   ```
 
-- 對 video 元素 play ()，並處理 fallback，請使用者手動點擊。  
+- 對 video 元素 play ()，{{ cr(body="並處理 fallback") }}，請使用者手動點擊。
 
   ```javascript
   var promise = document.querySelector('video').play();
@@ -132,7 +138,7 @@ Firefox 的自動播放預設為「封鎖音訊」，即允許靜音影片的自
 
 [![](2.png)](2.png)
 
-在 siteDetails 頁往下捲，找到 🔊音訊 ，選擇 允許
+在 siteDetails 頁往下捲，找到 🔊音訊 ，選擇{{ cg(body="允許") }}
 
 [![](3.png)](3.png)
 
@@ -148,7 +154,7 @@ Firefox 的自動播放預設為「封鎖音訊」，即允許靜音影片的自
 
 [![](5.png)](5.png)
 
-在「對所有網站的預設行為:」下拉選單中，選中你想要的預設行為，三選項的[詳細意義見此](#firefox)
+在「對所有網站的預設行為:」下拉選單中，選中你想要的預設行為，三個選項的[詳細意義見此](#firefox)
 
 [![](6.png)](6.png)
 
