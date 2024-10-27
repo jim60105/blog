@@ -20,7 +20,7 @@ card = "azcli-to-rest-api.png"
 這是一個關於優化 Dockerfile 和 Azure Blob Storage 上傳流程的實戰故事，希望能對你有所啟發。
 
 <span class="hide">對，標題和介紹是 GPT-4 寫的，下面才是正文😉</span>
-
+<!--more-->
 ---
 
 我在 [Recorder.moe](https://github.com/Recorder-moe) 專案裡有一個環節是要把錄製完成的影片上傳到 Azure Blob Storage。

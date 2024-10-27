@@ -44,7 +44,7 @@ iscn = "iscn://likecoin-chain/CZQlYkJAHJ8aJ6F-1V6YnLlaBze4qZDKD_lGtdPjKNo/1"
 > 這個助手在 Coze 以 GPT-4o mini 計價  
 > 30 次 = (由我付錢的 20 次 + 免費帳號自帶的 10 次)  
 > [具體定價以 Coze.com 解釋為準](https://www.coze.com/docs/guides/message%5Fcredits?%5Flang=zh)
-
+<!--more-->
 ## 「垃圾小說產生器」是什麼？
 
 ### AI 驅動的全自動小說創作工具

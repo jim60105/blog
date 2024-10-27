@@ -40,7 +40,7 @@ banner = "preview.jpg"
 不限於這些，還有許多在大型電商不能做到的事  
 <span class="success">自由度高</span>，讓不少店家仍希望擁有自己的購物網站
 
-本文以 Docker 技術，用<span class="success">最少的步驟</span>讓你快速架起自己的 Opencart 購物網站
+本文以 Docker 技術，用<span class="success">最少的步驟</span>讓你快速架起自己的 Opencart 購物網站<!--more-->
 
 購物網站方案選擇也有不少，而我選用 Opencart 的理由非常簡單 ── [台灣有廠商](https://www.osec.tw/opencart.html)在收費維護。
 

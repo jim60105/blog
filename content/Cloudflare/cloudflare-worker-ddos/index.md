@@ -20,7 +20,7 @@ poor = true
 每日十萬次在下午兩點被用完？我的用量沒這麼狂，肯定有事情發生了。
 
 ![](1.png#full-bleed)
-
+<!--more-->
 ## 發生了什麼
 
 進到 Worker Dashboard 後注意到<span class="danger">其中一支 Worker 被觸發了 251.22k 次</span>。  

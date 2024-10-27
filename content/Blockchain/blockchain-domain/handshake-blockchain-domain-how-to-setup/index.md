@@ -22,7 +22,7 @@ iscn = "iscn://likecoin-chain/TW11huUVHy5Bsg0S3prnXNNYKzj0iabfmREUOaGla1w/1"
 > 前篇  
 > [Handshake domain 區塊鏈網域 —— 如何訪問網域](/Blockchain/blockchain-domain/handshake-blockchain-domain-how-to-access)
 
-在前兩篇我們成功競標到了網域，也設定好了環境使可訪問 Handshake domain，這篇我們要實際寫 DNS 位置到鏈上，讓網站上線，最後會提及一些 Namebase 的加值服務，值得一試。
+在前兩篇我們成功競標到了網域，也設定好了環境使可訪問 Handshake domain，這篇我們要實際寫 DNS 位置到鏈上，讓網站上線，最後會提及一些 Namebase 的加值服務，值得一試。<!--more-->
 
 ## 事前準備
 

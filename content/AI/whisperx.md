@@ -27,7 +27,7 @@ hot = true
 嗯，我 N87 聽不懂日文...
 
 這種小眾的東西網路上也沒有譯文，就試了試當紅的 AI 語音辨識 + 翻譯，成果還不賴。  
-這篇文章想分享我發現的好東西 —— WhisperX。
+這篇文章想分享我發現的好東西 —— WhisperX。<!--more-->
 
 ## WhisperX: Automatic Speech Recognition with Word-level Timestamps (Diarization)
 

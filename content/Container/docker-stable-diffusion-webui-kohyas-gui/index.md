@@ -53,7 +53,7 @@ Python Developer 裝這麼多版本不累嗎😅
 
 [bmaltais/kohya\_ss](https://github.com/bmaltais/kohya%5Fss) 已經 PR 回原專案，現在 [master branch 上面的 Dockerfile](https://github.com/bmaltais/kohya%5Fss/blob/master/Dockerfile) 是我重寫的  
 [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) 不接受 Dockerfile，我是放在[自己的 GitHub，並做了整套的 CI](https://github.com/jim60105/docker-stable-diffusion-webui)
-
+<!--more-->
 文章開始以前先讓我展示一下<span class="success">我的「最佳化」到底好在哪裡</span>。  
 講技術估計讀者不想聽，我們就簡單看個 **映像容量** 就好:
 

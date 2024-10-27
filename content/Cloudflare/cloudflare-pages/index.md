@@ -26,7 +26,7 @@ card = "card.jpg"
 
 我就在想，要以這個需求來規劃一個小專案的話我會使用什麼技術實現它。然後就當作練練手...
 
-這是一個以概念驗證和學習為目的而做的專案，目標是建構一個<span class="success">低成本、高流量</span>的<span class="success">即時</span>投票系統。投票只是一種簡單的應用，你可以把它代換為任何使用**網頁前後端和資料庫**的應用場景。
+這是一個以概念驗證和學習為目的而做的專案，目標是建構一個<span class="success">低成本、高流量</span>的<span class="success">即時</span>投票系統。投票只是一種簡單的應用，你可以把它代換為任何使用**網頁前後端和資料庫**的應用場景。<!--more-->
 
 我選用了[Cloudflare Pages](https://developers.cloudflare.com/pages)、[Cloudflare Page Functions](https://developers.cloudflare.com/pages/functions/)、以及[Cloudflare D1](https://developers.cloudflare.com/d1/) 來達到這個目標。
 

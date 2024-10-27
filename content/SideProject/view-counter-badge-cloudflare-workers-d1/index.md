@@ -37,7 +37,7 @@ iscn = "iscn://likecoin-chain/QtqpvBsnP3QM8w-GOALiQOHdgZzkY52bd1vg73Gj3D4/"
 不不不，現在我就告訴你如何在 Cloudflare 上以 Worker 和 D1 Database 實現計數器功能，<span class="success">不用維護伺服器</span>且<span class="success">免費</span>！你將擁有程式碼和數字的控制權，<span class="success">保護你的網站，保護你的用戶</span>。
 
 這是一個純雲端的解決方案，很適合用在純前端應用程式或是任何類型的網頁。  
-專案是回傳 SVG badge，但是簡單修改就能變成回傳數字做為 API 使用([範例](https://github.com/sound-buttons/worker-click-counter))，泛用性非常高。
+專案是回傳 SVG badge，但是簡單修改就能變成回傳數字做為 API 使用([範例](https://github.com/sound-buttons/worker-click-counter))，泛用性非常高。<!--more-->
 
 不過它並不是完全免費，Free plan 有著每日 _100,000_ 次的上限。  
 若你的網站有著超過 _十萬次_ 的日瀏覧量，請訂閱 Paid plan (5 美元/月) 以提升至每日 _五千萬次_。  

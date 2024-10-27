@@ -34,7 +34,7 @@ archive = "我已經全面改用另一套工具——[「筆韻智匠 Quill Sage
 > ~~---~~
 > ~~[\[個人專案\] Recorder.moe 錄影服務，讓你再也不會錯過 Vtuber 直播](/2023/04/Recorder-moe-Never-miss-a-Vtuber-stream-again.html)~~  
 > 因為專案服務調整，這篇文章已移除
-
+<!--more-->
 ## 開工
 
 首先，我把專案的 [FAQ 原始碼](https://beta.recorder.moe/faq)整個餵了進去，要他產生大綱。我也沒怎麼整理，你能看到內容很醜。

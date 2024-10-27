@@ -32,7 +32,7 @@ disclaimer = "本文於 2021 年撰寫時是使用 Service Workers 格式，[現
 * Cloudflare Workers 入門 ─ 簡介
 * ~~Cloudflare Workers 進階 ─ Wrangler 簡介和 Github Action 串接部屬 (還沒寫!)~~
 
-Cloudflare Workers 是個還算新的產品，中文教學並不多，謹將我的研究成果小記在此。
+Cloudflare Workers 是個還算新的產品，中文教學並不多，謹將我的研究成果小記在此。<!--more-->
 
 ## 簡介 Cloudflare Worker
 
