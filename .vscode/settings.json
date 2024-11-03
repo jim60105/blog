@@ -44,6 +44,7 @@
         "iscn",
         "KAKUYOMU",
         "karunamurti",
+        "katex",
         "keyrings",
         "kohya",
         "Kohya's",
@@ -51,6 +52,8 @@
         "LETSENCRYPT",
         "likecoin",
         "likerid",
+        "linenos",
+        "linenostart",
         "Livestream",
         "maki",
         "minio",
@@ -77,11 +80,21 @@
         "TWNIC",
         "unmute",
         "Vickrey",
+        "webm",
         "webp",
         "webscrapbook",
         "webui",
         "whisperx",
         "whois"
+    ],
+    "cSpell.ignorePaths":[
+        "package-lock.json",
+        "node_modules",
+        "vscode-extension",
+        ".git/objects",
+        ".vscode",
+        ".vscode-insiders",
+        "**/demo.md"
     ],
     "markdownlint.config": {
         "MD033": false,
