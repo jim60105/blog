@@ -65,6 +65,7 @@
         "privatebin",
         "Proxied",
         "pyannote",
+        "referer",
         "reverseproxy",
         "sharingpath",
         "Soundbutton",
