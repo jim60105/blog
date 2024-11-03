@@ -7,7 +7,7 @@ draft = false
 aliases = [ "/2022/01/auto-monitor-youtube-download.html" ]
 
 [taxonomies]
-tags = [ "Docker", "Livestream", "Twitch", "Youtube", "TwitCasting" ]
+tags = [ "Container", "Livestream", "Twitch", "Youtube", "TwitCasting" ]
 
 [extra]
 iscn = "iscn://likecoin-chain/Zyffo_xXdY9tey8jRREjFiwTdw8rntU6nCsa3t60rRk/1"
@@ -21,20 +21,20 @@ iscn = "iscn://likecoin-chain/Zyffo_xXdY9tey8jRREjFiwTdw8rntU6nCsa3t60rRk/1"
 
 此篇不會寫詳細步驟，請閱讀各專案的說明以完成設定
 
-> 以下所有服務皆使用 Docker 部署  
-> 請確保你已經[安裝好 Docker 環境](https://docs.docker.com/get-docker/)再繼續閱讀
+{% alert(important=true) %}
+以下所有服務皆使用 Docker 部署  
+請確保你已經[安裝好 Docker 環境](https://docs.docker.com/get-docker/)再繼續閱讀
+{% end %}
 
 > 延伸閱讀
 >
 > ---
->
 > 本文的專案都是建立在前篇介紹過的工具之上  
 > [影片下載、轉檔筆記 (Youtube 、 Twitch 、 TwitCasting 、 Twitter Spaces 音訊空間 、 ffmpeg)](/2022/01/youtube-download-ytdlp-ffmpeg.html)
 
 > 延伸閱讀
 >
 > ---
->
 > 如果要租 VPS 主機，請參考這篇的前半部份  
 > [\[Docker\] Linux 主機之 Docker 安裝和 ReverseProxy 建置](/Container/linux-docker-setup-reverse-proxy)
 
