@@ -51,4 +51,10 @@ card = "azcli-to-rest-api.png"
 
 本文改寫自我的嘟文
 
-<iframe allowfullscreen="allowfullscreen" class="mastodon-embed" src="https://liker.social/@jim60105/111732530470295993/embed" style="border: 0; width: 80%;"></iframe><script async="async" src="https://liker.social/embed.js"></script>
+{{mastodon(id="111732530470295993")}}
+
+<style>
+    iframe.mastodon-embed {
+        width: 100%;
+    }
+</style>

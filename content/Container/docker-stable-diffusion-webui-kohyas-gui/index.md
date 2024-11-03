@@ -57,7 +57,7 @@ Python Developer 裝這麼多版本不累嗎😅
 文章開始以前先讓我展示一下<span class="success">我的「最佳化」到底好在哪裡</span>。  
 講技術估計讀者不想聽，我們就簡單看個 **映像容量** 就好:
 
-<iframe src="https://liker.social/@jim60105/111950889726976110/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe>
+{{mastodon(id="111950889726976110")}}
 
 > 更新 2024/04/26:
 >
@@ -65,7 +65,7 @@ Python Developer 裝這麼多版本不累嗎😅
 > 我最終將 kohya-ss-gui 縮減到了 <span class="success">10.3GB</span>，並且幫 `bmaltais` 建了 [docker build CI](https://github.com/bmaltais/kohya%5Fss/blob/master/.github/workflows/docker%5Fpublish.yml)  
 > 它現在會自動建置映像並推送至 [ghcr.io/bmaltais/kohya-ss-gui](https://github.com/bmaltais/kohya%5Fss/pkgs/container/kohya-ss-gui)
 
-<iframe src="https://liker.social/@jim60105/112075659835894219/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe>
+{{mastodon(id="112075659835894219")}}
 
 Stable Diffusion WebUI 的對照組[是它](https://github.com/AbdBarho/stable-diffusion-webui-docker)。  
 前人寫得很不錯，是很棒的參考🙏
@@ -199,4 +199,8 @@ docker compose up -d --build
 > * [\[Docker\] Linux主機之Docker安裝和 ReverseProxy 建置](/Container/linux-docker-setup-reverse-proxy)
 > * [琳的備忘手札: AI翻譯解鎖——日文網路小說無障礙閱讀體驗](/AI/unlocking-ai-translation-barrier-free-reading-experience-of-japanese-web-novels)
 
-<script src="https://liker.social/embed.js" async="async"></script>
+<style>
+   iframe.mastodon-embed{
+      width: 80%;
+   }
+</style>

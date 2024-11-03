@@ -150,7 +150,7 @@ iscn = "iscn://likecoin-chain/CZQlYkJAHJ8aJ6F-1V6YnLlaBze4qZDKD_lGtdPjKNo/1"
 
 記得在分享時加上 `#AIGC` `#AI文學` 之類的標籤，讓更多人能看到你的創作。誰知道呢，你可能會在網上找到一群志同道合的 AI 文學愛好者！
 
-<iframe src="https://liker.social/@jim60105/113143487530749034/embed" class="mastodon-embed" style="max-width: 100%; border: 0;" allowfullscreen="allowfullscreen"></iframe><script src="https://liker.social/embed.js" async="async"></script>
+{{mastodon(id="113143487530749034")}}
 
 > 我也在這裡分享自己的有趣作品，觀迎參觀看看😋
 >
