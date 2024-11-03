@@ -72,7 +72,7 @@ IROA 擁有另一個 VTuber 身份，[久遠たま](https://www.youtube.com/c/Qu
   {{ youtube(id="NIS1CFTQ5W0") }}
 * 2021/11/5  
   在 TwitCasting 進行初配信直播 (原影片已轉私人)  
-  ~~<https://twitcasting.tv/iroa\\_kuma/movie/708454726>~~  
+  ~~<https://twitcasting.tv/iroa_kuma/movie/708454726>~~  
 * 2021/11/5  
   TwitCasting 初配信發推時用到 #くぉんたま 的 tag  
   [![](kusa2.png)](kusa2.png)
