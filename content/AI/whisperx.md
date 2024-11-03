@@ -7,7 +7,7 @@ draft = false
 aliases = [ "/2023/10/whisperx-ai.html" ]
 
 [taxonomies]
-tags = [ "AI", "Docker" ]
+tags = [ "AI" ]
 
 [extra]
 iscn = """

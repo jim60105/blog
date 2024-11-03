@@ -8,7 +8,7 @@ aliases = [ "/2022/03/sudo-in-docker-container-env-not-passed-in.html" ]
 extra = { }
 
 [taxonomies]
-tags = [ "Container", "Docker", "Linux" ]
+tags = [ "Container", "Linux" ]
 +++
 
 這是一篇備忘，其實標題就是關鍵了  

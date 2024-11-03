@@ -7,7 +7,7 @@ draft = false
 aliases = [ "/2020/08/docker-opencart.html" ]
 
 [taxonomies]
-tags = [ "Container", "Docker" ]
+tags = [ "Container" ]
 
 [extra]
 banner = "preview.jpg"

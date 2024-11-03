@@ -7,7 +7,7 @@ draft = false
 aliases = [ "/2020/07/docker-nextcloud.html" ]
 
 [taxonomies]
-tags = [ "Container", "Docker" ]
+tags = [ "Container" ]
 
 [extra]
 card = "preview.jpg"

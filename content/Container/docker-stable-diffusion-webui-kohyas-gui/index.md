@@ -7,7 +7,7 @@ draft = false
 aliases = [ "/2024/03/docker-stable-diffusion-webui-kohyas-gui.html" ]
 
 [taxonomies]
-tags = [ "AI", "Container", "Docker" ]
+tags = [ "AI", "Container" ]
 
 [extra]
 banner = "preview.jpg"
