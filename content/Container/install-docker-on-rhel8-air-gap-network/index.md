@@ -7,7 +7,7 @@ draft = false
 aliases = [ "/2024/07/install-docker-on-rhel8-air-gap-network.html" ]
 
 [taxonomies]
-tags = [ "Docker", "RHEL", "Linux" ]
+tags = [ "Docker", "Linux", "RHEL/Fedora" ]
 
 [extra]
 banner = "preview.png"
