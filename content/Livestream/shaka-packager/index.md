@@ -10,11 +10,12 @@ aliases = [ "/2024/07/shaka-packager.html" ]
 tags = [ ]
 
 [extra]
-banner = "https://img.maki0419.com/blog/shaka-packager/preview.png"
+banner = "preview.png"
 +++
-[![](https://img.maki0419.com/blog/shaka-packager/preview.png)](https://img.maki0419.com/blog/shaka-packager/preview.png)
-
-[Made with Flux.1-dev](https://civitai.com/posts/6321883)   
+<figure>
+{{ image(url="preview.png") }}
+<figcaption><a href="https://civitai.com/posts/6321883" target="_blank">Made with Flux.1-dev</figcaption>
+</figure>
 
 ## 前言
 
@@ -25,13 +26,14 @@ banner = "https://img.maki0419.com/blog/shaka-packager/preview.png"
 > 我只是說明如何用你手上的鑰匙把鎖打開，**沒有鑰匙的人打不開鎖**
 
 > 在開始以前請確認:
+>
 > * 你可以在網頁中播放影片
 > * 影片使用[shaka-packager](https://github.com/shaka-project/shaka-packager) 技術加密
 > * 你能取得 License Server 的 Clear Key Response 內容
 
 ## Before Start: 如何得知影片是以 shaka-packager 加密
 
-[![](https://img.maki0419.com/blog/shaka-packager/1.png)](https://img.maki0419.com/blog/shaka-packager/1.png)
+[![hex](1.png)](1.png)
 
 ## 取得加解密軟體
 
@@ -46,7 +48,7 @@ banner = "https://img.maki0419.com/blog/shaka-packager/preview.png"
 本例中是 1\_1063.webm  
 將 webm 檔案下載: 右鍵 → Open in new tab
 
-> ![](https://img.maki0419.com/blog/shaka-packager/2.png)
+> ![206](2.png)
 >
 > 圖中有好幾個 webm 是因為 206 partial content download  
 > 事實上它是在載同一個檔案的不同部份
@@ -59,15 +61,15 @@ banner = "https://img.maki0419.com/blog/shaka-packager/preview.png"
 
 重點是其中的 Key ID (kid) 和 Key (k)
 
-[![](https://img.maki0419.com/blog/shaka-packager/3.png)](https://img.maki0419.com/blog/shaka-packager/3.png)
+[![clear key request](3.png)](3.png)
 
-## 將 CleayKey 轉換為 hex 格式
+## 將 ClearKey 轉換為 hex 格式
 
 使用[online **base64 to hex converter**](https://cryptii.com/pipes/base64-to-hex) 將 Clear Key 轉換為 **32 碼**的 hex 格式，Key Id 和 Key 都要轉換
 
 解碼使用 Base64URL，詳見[wiki](https://zh.wikipedia.org/zh-tw/Base64#URL)
 
-[![](https://img.maki0419.com/blog/shaka-packager/4.png)](https://img.maki0419.com/blog/shaka-packager/4.png)
+[![online base64 to hex converter](4.png)](4.png)
 
 ## 使用 packager 解密影片
 
@@ -76,14 +78,16 @@ banner = "https://img.maki0419.com/blog/shaka-packager/preview.png"
 * `{EncryptedWebmFile}` 替換為加密影片路徑
 * `{HexKeyID}`、`{HexKey}` 替換為前步驟轉出的 32 碼 Hex 字串
 * `{stream_selector}` 替換為 `audio`,`video`, `text`，視影片內容而定  
-stream\_selector (stream):  
-Required field with value ‘audio’, ‘video’, ‘text’ or stream number (zero based).[_ref_](https://shaka-project.github.io/shaka-packager/html/documentation.html#stream-descriptors)
+
+> stream_selector (stream):
+> Required field with value ‘audio’, ‘video’, ‘text’ or stream number (zero based).
+> [_ref_](https://shaka-project.github.io/shaka-packager/html/documentation.html#stream-descriptors)
 
 ```pwsh
 packager.exe input={EncryptedWebmFile},output=out.webm,stream_selector={stream_selector} --enable_raw_key_decryption --keys key_id={HexKeyID}:key={HexKey}
 ```
 
-[![](https://img.maki0419.com/blog/shaka-packager/5.png)](https://img.maki0419.com/blog/shaka-packager/5.png)
+[![command](5.png)](5.png)
 
 ## 參考資料
 
