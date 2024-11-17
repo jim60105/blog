@@ -7,10 +7,13 @@ draft = false
 aliases = [ "/2024/07/shaka-packager.html" ]
 
 [taxonomies]
-tags = [ ]
+tags = [ "Livestream" ]
 
 [extra]
 banner = "preview.png"
+disclaimer = """
+此筆記沒有任何「破解」要素<br>
+我只是說明如何用你手上的鑰匙把鎖打開，<b>沒有鑰匙的人打不開鎖</b>"""
 +++
 <figure>
 {{ image(url="preview.png") }}
@@ -20,16 +23,13 @@ banner = "preview.png"
 ## 前言
 
 寫得很簡略，是給未來的我讀的筆記  
-~~看不懂不要問我，我懶得答~~
+{{ch(body="看不懂不要問我，我懶得答")}}
 
-> 此筆記沒有任何「破解」要素  
-> 我只是說明如何用你手上的鑰匙把鎖打開，**沒有鑰匙的人打不開鎖**
+在開始以前請確認:
 
-> 在開始以前請確認:
->
-> * 你可以在網頁中播放影片
-> * 影片使用[shaka-packager](https://github.com/shaka-project/shaka-packager) 技術加密
-> * 你能取得 License Server 的 Clear Key Response 內容
+* 你可以在網頁中播放影片
+* 影片使用 [shaka-packager](https://github.com/shaka-project/shaka-packager) 技術加密
+* 你能取得 License Server 的 Clear Key Response 內容
 
 ## Before Start: 如何得知影片是以 shaka-packager 加密
 
@@ -57,7 +57,7 @@ banner = "preview.png"
 
 在下載檔案的附近尋找 Clear Key request
 
-本例網頁是使用[Shaka-player](https://github.com/shaka-project/shaka-player)，它問回來的 Clear Key 格式如下
+本例網頁是使用 [Shaka-player](https://github.com/shaka-project/shaka-player)，它問回來的 Clear Key 格式如下
 
 重點是其中的 Key ID (kid) 和 Key (k)
 
@@ -65,9 +65,9 @@ banner = "preview.png"
 
 ## 將 ClearKey 轉換為 hex 格式
 
-使用[online **base64 to hex converter**](https://cryptii.com/pipes/base64-to-hex) 將 Clear Key 轉換為 **32 碼**的 hex 格式，Key Id 和 Key 都要轉換
+使用 [online **base64 to hex converter**](https://cryptii.com/pipes/base64-to-hex) 將 Clear Key 轉換為 **32 碼**的 hex 格式，Key Id 和 Key 都要轉換
 
-解碼使用 Base64URL，詳見[wiki](https://zh.wikipedia.org/zh-tw/Base64#URL)
+解碼使用 Base64URL，詳見 [wiki](https://zh.wikipedia.org/zh-tw/Base64#URL)
 
 [![online base64 to hex converter](4.png)](4.png)
 
