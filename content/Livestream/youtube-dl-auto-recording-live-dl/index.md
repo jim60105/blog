@@ -7,7 +7,7 @@ draft = false
 aliases = [ "/2020/11/docker-youtube-dl-auto-recording-live-dl.html" ]
 
 [taxonomies]
-tags = [ "Container", "Livestream", "Youtube" ]
+tags = [ "Container", "Livestream", "Youtube", "yt-dlp" ]
 
 [extra]
 card = "preview.png"

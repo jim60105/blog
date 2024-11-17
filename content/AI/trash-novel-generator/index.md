@@ -7,7 +7,7 @@ draft = false
 aliases = [ "/2024/09/ai-trash-novel-generator.html" ]
 
 [taxonomies]
-tags = [ "AI" ]
+tags = [ "AI", "Novel" ]
 
 [extra]
 banner = "banner.png"

@@ -7,14 +7,7 @@ draft = false
 aliases = [ "/2022/01/youtube-download-ytdlp-ffmpeg.html" ]
 
 [taxonomies]
-tags = [
-  "ffmpeg",
-  "Livestream",
-  "TwitCasting",
-  "Twitch",
-  "Youtube",
-  "yt-dlp"
-]
+tags = [ "Livestream", "TwitCasting", "Twitch", "Youtube", "yt-dlp" ]
 
 [extra]
 card = "ytdlp.png"

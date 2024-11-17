@@ -7,7 +7,14 @@ draft = false
 aliases = [ "/2021/06/backup-dl.html" ]
 
 [taxonomies]
-tags = [ "C#", "Container", "Livestream", "Youtube", "Azure" ]
+tags = [
+  "Azure",
+  "C#",
+  "Container",
+  "Livestream",
+  "Youtube",
+  "yt-dlp"
+]
 
 [extra]
 card = "preview.png"

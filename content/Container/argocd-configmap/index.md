@@ -7,7 +7,7 @@ draft = false
 aliases = [ "/2023/12/argocd-configmap.html" ]
 
 [taxonomies]
-tags = [ "K8s", "ArgoCD", "Container" ]
+tags = [ "Container", "K8s" ]
 
 [extra]
 card = "preview.png"

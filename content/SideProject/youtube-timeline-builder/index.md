@@ -7,7 +7,7 @@ draft = false
 aliases = [ "/2022/09/youtube-timeline-builder.html" ]
 
 [taxonomies]
-tags = [ "Excel", "Livestream", "Youtube", "VB" ]
+tags = [ "Excel", "Livestream", "Youtube" ]
 
 [extra]
 banner = "preview.png"

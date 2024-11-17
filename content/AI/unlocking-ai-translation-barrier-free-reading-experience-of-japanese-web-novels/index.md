@@ -11,7 +11,7 @@ aliases = [
 ]
 
 [taxonomies]
-tags = [ "AI" ]
+tags = [ "AI", "Novel" ]
 
 [extra]
 card = "preview.jpg"

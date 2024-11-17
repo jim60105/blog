@@ -7,7 +7,14 @@ draft = false
 aliases = [ "/2022/01/auto-monitor-youtube-download.html" ]
 
 [taxonomies]
-tags = [ "Container", "Livestream", "Twitch", "Youtube", "TwitCasting" ]
+tags = [
+  "Container",
+  "Livestream",
+  "TwitCasting",
+  "Twitch",
+  "Youtube",
+  "yt-dlp"
+]
 
 [extra]
 iscn = "iscn://likecoin-chain/Zyffo_xXdY9tey8jRREjFiwTdw8rntU6nCsa3t60rRk/1"
