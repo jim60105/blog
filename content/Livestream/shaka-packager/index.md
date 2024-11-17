@@ -83,7 +83,7 @@ disclaimer = """
 > Required field with value ‘audio’, ‘video’, ‘text’ or stream number (zero based).
 > [_ref_](https://shaka-project.github.io/shaka-packager/html/documentation.html#stream-descriptors)
 
-```pwsh
+```powershell
 packager.exe input={EncryptedWebmFile},output=out.webm,stream_selector={stream_selector} --enable_raw_key_decryption --keys key_id={HexKeyID}:key={HexKey}
 ```
 
