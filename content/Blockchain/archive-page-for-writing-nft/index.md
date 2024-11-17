@@ -23,7 +23,7 @@ card = "preview.png"
 透過 [NFT Portal](https://app.like.co/nft/url) 出版 Writing NFT 時，我發現它的網頁爬蟲功能有一點點的不完美。
 
 * 它有自己的一套機制去抓出網頁中的「文章內容」  
-這能<span class="success">有效降低檔案容量減少開銷</span>，但<span class="danger">機制並非100%適合所有網頁版型</span><span class="hide">，而且就...不那麼美</span>
+這能<span class="success">有效降低檔案容量減少開銷</span>，但<span class="danger">機制並非100%適合所有網頁版型</span><span class="spoiler">，而且就...不那麼美</span>
 * <span class="danger"><b>外部連結資源</b>並未上傳至 IPFS、Arweave</span>，這些資源從原始位置刪除掉就沒有了  
 如果你的圖片在不同的網址 (像Blogger預設就是)，它們就是外部連結資源
 * 外部連結的站台若有 [CORS (Cross-Origin Resource Sharing)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)、[CSP(Content Security Policy)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) 設定，或者圖片站台有 [Hotlink Protection](https://support.cloudflare.com/hc/en-us/articles/200170026-Understanding-Cloudflare-Hotlink-Protection) 功能，這些資源將無法被存取  

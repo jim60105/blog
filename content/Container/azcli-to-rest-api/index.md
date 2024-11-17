@@ -19,7 +19,7 @@ card = "azcli-to-rest-api.png"
 
 這是一個關於優化 Dockerfile 和 Azure Blob Storage 上傳流程的實戰故事，希望能對你有所啟發。
 
-<span class="hide">對，標題和介紹是 GPT-4 寫的，下面才是正文😉</span>
+<span class="spoiler">對，標題和介紹是 GPT-4 寫的，下面才是正文😉</span>
 <!--more-->
 ---
 
@@ -38,7 +38,7 @@ card = "azcli-to-rest-api.png"
 我透過 multi-stage build 來安裝並丟掉了 cache 和 compiled bytecode 來降低容量。  
 但即使我這樣調整完，它仍然要 **795.62 MB**。
 
-最後我放棄使用 azure-cli，改為[呼叫 REST api](https://learn.microsoft.com/zh-tw/rest/api/storageservices/put-blob)。我的需求其實很單純，就只是上傳個檔案而已，並不需要這麼強大<span class="hide">肥大</span>的工具。
+最後我放棄使用 azure-cli，改為[呼叫 REST api](https://learn.microsoft.com/zh-tw/rest/api/storageservices/put-blob)。我的需求其實很單純，就只是上傳個檔案而已，並不需要這麼強大<span class="spoiler">肥大</span>的工具。
 
 而[這個解決方案](https://github.com/Recorder-moe/azure-uploader/blob/master/azure-uploader.sh#L49)的 image 尺寸是 —— <span class="success">36.4 MB</span>！
 

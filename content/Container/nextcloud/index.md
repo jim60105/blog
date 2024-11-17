@@ -34,7 +34,7 @@ hot = true
 
 我想所有站長都知道圖片的重要，一但失去圖片，文章看起來就是垃圾。
 
-<span class="hide">不要誤會，我不是針對你</span>  
+<span class="spoiler">不要誤會，我不是針對你</span>  
 說起圖片站，常見到的像是 imgur、upload.cc、Flickr
 
 前兩個確定牆了，Flickr Pro 據說能過，但樹大招風 (ry
@@ -82,7 +82,7 @@ hot = true
 
 * 初級以上的 linux 操作基礎
 * 有自己的主機或 NAS，沒有可以[現在租](/Container/linux-docker-setup-reverse-proxy#DigitalOcean) (不然你檔案想放哪裡?)
-* **會在意中國大陸看不到圖片的 blogger 站長** <span class="hide">我</span>
+* **會在意中國大陸看不到圖片的 blogger 站長** <span class="spoiler">我</span>
 
 ## 流程簡述
 
@@ -361,7 +361,7 @@ Stderr 會報說下載了 docker image 和加入 SSH-Key, 但只要有輸出 rsy
 
 [![](rsync5.png)](rsync5.png)
 
-<span class="hide align-right">爆了 (´ﾟдﾟ`)</span>
+<span class="spoiler align-right">爆了 (´ﾟдﾟ`)</span>
 
 {% alert(note=true) %}
 **upload.sh 不能在 host 直接執行**，因為密碼檔是以 docker secrets 的方式處理，此路徑在 host 不存在。

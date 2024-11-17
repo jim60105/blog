@@ -180,12 +180,12 @@ Namebase 同時是競標 Handshake 網域的兩個管道之一，它把所有東
   <span class="danger">程式沒有阻擋，但只有在完成同步以後所有的查詢、操作才會正確！</span>  
   ![](/Blockchain/blockchain-domain/handshake/Bob/1.png)
   ![](/Blockchain/blockchain-domain/handshake/Bob/2.png)
-* 在此，我以 chenchun 作示範 <span class="hide">(這是我名字護照拼音)</span>  
+* 在此，我以 chenchun 作示範 <span class="spoiler">(這是我名字護照拼音)</span>  
   可以看到此網域是 Available，但並沒有人啟動過競標流程，讓我來 Start Auction  
   ![](/Blockchain/blockchain-domain/handshake/Bob/3.png)
   ![](/Blockchain/blockchain-domain/handshake/Bob/4.png)
 * 接下來要等待 Open Auction 完成，進入 Bidding Period 再回來下標  
-  一個 Block 平均花費 10 分鐘，可以大略算下要等待多久<span class="hide">，這次我等了 6 小時多</span>  
+  一個 Block 平均花費 10 分鐘，可以大略算下要等待多久<span class="spoiler">，這次我等了 6 小時多</span>  
   ![](/Blockchain/blockchain-domain/handshake/Bob/5.png)
 * 進入 Bidding Period 後回來出價，我出價 80 HNS，並不添加盲注
 

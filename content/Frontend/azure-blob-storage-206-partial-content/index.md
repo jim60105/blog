@@ -50,13 +50,13 @@ az storage account blob-service-properties update --default-service-version 2021
 
 開什麼玩笑，堂堂 Azure 不支援 Partial Content?
 
-我查了一下，這問題在兩年前有人問過: [Stack Overflow](https://stackoverflow.com/q/61672811/8706033) ，下方的三個解答<span class="hide">罕見的</span>都是正確的。  
+我查了一下，這問題在兩年前有人問過: [Stack Overflow](https://stackoverflow.com/q/61672811/8706033) ，下方的三個解答<span class="spoiler">罕見的</span>都是正確的。  
 做了更多功課後，我發現其實這有寫在 doc: [Microsoft Learn](https://learn.microsoft.com/en-us/rest/api/storageservices/Versioning-for-the-Azure-Storage-Services?redirectedfrom=MSDN#for-general-purpose-storage-accounts)  
 
 > If an anonymous request to a general-purpose storage account does not specify the x-ms-version header, and the default version for the service has not been set using Set Blob Service Properties, then the service uses the earliest possible version to process the request. However, if the container was made public with a Set Container ACL operation performed using version 2009-09-19 or newer, then the request is processed using version 2009-09-19.
 
 簡而言之，**不是不支援，是預設沒支援**，你需要指定你要用新版本。  
-<span class="hide">這是 feature 不是 bug!</span>
+<span class="spoiler">這是 feature 不是 bug!</span>
 
 ## 解決問題
 

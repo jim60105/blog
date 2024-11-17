@@ -44,7 +44,7 @@ Python Developer 裝這麼多版本不累嗎😅
 > 專案做好 `.devcontainer` 設定檔 & 一鍵建立 GitHub CodeSpaces  
 > Python 開發體驗一級棒👍  
 >
-> <span class="hide">......前提是你懂 Docker</span>
+> <span class="spoiler">......前提是你懂 Docker</span>
 
 說回今天的主題，**Stable Diffusion WebUI** 和 **Kohya's GUI**，這兩套程式都有前人做了容器化。  
 我過往看過 Dockerfile 後認為「**有最佳化的餘地，但沒什麼大問題**」並直接使用了一段時間。

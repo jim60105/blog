@@ -58,7 +58,7 @@ banner = "preview.jpg"
 
 * 台灣的幾家第三方支付 ([綠界](https://www.ecpay.com.tw/Service/Appcntr%5FShpcar)、[藍新](https://www.newebpay.com/website/Page/content/download%5Fapi#2)、[歐付寶](https://www.newebpay.com/website/Page/content/download%5Fapi#2)、[紅陽](https://github.com/RedSunTech/OpenCart)等) 大都有對 Opencart 推出模組，很容易就能成功串接
 * 有 [Facebook 官方支援](https://www.facebook.com/business/help/1494437460610744)，可在右下角顯示 Messenger 聯絡圖標，還能同步上架到 Facebook 粉專商店
-* 核心語言是 PHP；伺服器搭 MySQL；推薦架在 Apache 或 Nginx<span class="hide">，說直白點就是核心確實不要錢</span>
+* 核心語言是 PHP；伺服器搭 MySQL；推薦架在 Apache 或 Nginx<span class="spoiler">，說直白點就是核心確實不要錢</span>
 * [有中文社群](https://www.facebook.com/groups/opencart.taiwan/)、[中文論壇](https://forum.opencart.com/viewforum.php?f=64)、[英文論壇](https://forum.opencart.com/)，各路大神們聚在一起，有疑難雜症能找人問
 
 我不是大神，也不寫 PHP  
@@ -535,5 +535,5 @@ code
 {% alert(note=true) %}
 這裡進入 bash 後再操作 mysql 是資訊安全考量  
 如果無視的話，sql 部份能用這樣的一條處理完  
-<span class="hide">docker exec -i docker-opencart-tw_db_1 mysql -p密碼 opencart < /opencart.sql</span>
+<span class="spoiler">docker exec -i docker-opencart-tw_db_1 mysql -p密碼 opencart < /opencart.sql</span>
 {% end %}

@@ -22,7 +22,7 @@ card = "card.jpg"
 <https://github.com/jim60105/simple-poll-system>
 
 我為什麼寫這個呢?  
-上週薬袋アルマ舉辦[Vtuber 紅白活動](https://youtu.be/qCrihRF4wvM)，前兩天的[會限直播](https://youtu.be/J6XPHfcUIgY)在和大家測試投票系統。當時發現現成的問卷服務都不合用，不是要<span class="hide">很多</span>錢就是不即時，而最後用了 Google Form。 雖然 Google Form 是當下最好的選擇，但它不夠客製化，像是直播當下的[紅組被顯示為藍色，而白組被顯示為紅色](https://youtu.be/qCrihRF4wvM?t=20455)、[無法內嵌投票結果在活動網頁上](https://kouhaku2023.wixsite.com/kouhaku2023/vote)等等。
+上週薬袋アルマ舉辦[Vtuber 紅白活動](https://youtu.be/qCrihRF4wvM)，前兩天的[會限直播](https://youtu.be/J6XPHfcUIgY)在和大家測試投票系統。當時發現現成的問卷服務都不合用，不是要<span class="spoiler">很多</span>錢就是不即時，而最後用了 Google Form。 雖然 Google Form 是當下最好的選擇，但它不夠客製化，像是直播當下的[紅組被顯示為藍色，而白組被顯示為紅色](https://youtu.be/qCrihRF4wvM?t=20455)、[無法內嵌投票結果在活動網頁上](https://kouhaku2023.wixsite.com/kouhaku2023/vote)等等。
 
 我就在想，要以這個需求來規劃一個小專案的話我會使用什麼技術實現它。然後就當作練練手...
 

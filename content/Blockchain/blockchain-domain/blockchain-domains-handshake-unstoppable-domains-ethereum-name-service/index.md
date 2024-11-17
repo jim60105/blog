@@ -55,7 +55,7 @@ featured = true
 
 下方的次級域名伺服器是<span class="success">由網站擁有者所管理</span>。例如本站的 `maki0419.com` 是由我所管理，我可以設定 blog 子網域指向何處。<span class="danger">使用者今天看到的網站明天可能對應到另一個 IP</span>，這些內容是可被我變動的，或者可能我被駭客入侵攻擊。後面我們會提到如何解決這個問題。
 
-根域名伺服器和權威域名伺服器是**由網路巨頭所管理**，<span class="danger">是整個 DNS 系統的中心化部份</span>。只要這幾台機器被劫持，它們可能會回應錯誤的 IP 位置，讓使用者無法瀏覧網站，或被導向錯誤的伺服器。<span class="danger">事實上這就是「DNS 污染」攻擊</span><span class="hide">，是大陸網友的日常生活。</span>
+根域名伺服器和權威域名伺服器是**由網路巨頭所管理**，<span class="danger">是整個 DNS 系統的中心化部份</span>。只要這幾台機器被劫持，它們可能會回應錯誤的 IP 位置，讓使用者無法瀏覧網站，或被導向錯誤的伺服器。<span class="danger">事實上這就是「DNS 污染」攻擊</span><span class="spoiler">，是大陸網友的日常生活。</span>
 
 所以呢，讓我們把右邊那塊上鏈
 
