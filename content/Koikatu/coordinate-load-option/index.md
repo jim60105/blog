@@ -15,7 +15,7 @@ iscn = "iscn://likecoin-chain/cdlnJ1pUNVS0PN3RI3I_D2twlb5ezIL4JqTGb5i2BtM/1"
 featured = true
 hot = true
 +++
-{{ video(url="../demo1.mp4", alt="Coordinate Load Option video") }}
+{{ video(url="../demo1.mp4", alt="Coordinate Load Option video", controls=true, loop=true, autoplay=true, muted=true) }}
 
 ## 主要功能
 
@@ -93,8 +93,6 @@ hot = true
 {% alert(caution=true) %}
 Coordinate Load ended unexpectedly.
 
----
-
 請確認環境滿足[「支援插件」](#compatible_plugins)所寫條件
 {% end %}
 
@@ -103,17 +101,19 @@ Coordinate Load ended unexpectedly.
 * KK\_**Clothes**LoadOption (列為不兼容，功能重覆，請將之移除)
 * Koikatu Studio Coordinate Load Option (列為不兼容，此為插件更名，請移除此舊插件)
 
-> 關於 KK\_**Coordinate**LoadOption 和 KK\_**Clothes**LoadOption 之差異說明
->
-> ---
-> KK\_ClothesLoadOption (56e4\_xXVv): 實作了遊戲內服裝、飾品資料的拆分讀取  
-> KK\_CoordinateLoadOption (**我**): 實作了遊戲內服裝、飾品資料的拆分讀取，除此之外也處理[支援插件](#compatible_plugins)的插件資料，包括 HairAccessoryCustomizer 數據、 Material Editor 數據、 More\_Accessories 數據等
->
-> 在 KK 的原始設計中，服裝卡一次只能讀入一整套，並且大多數的插件也是搭建在此設計之上。為了實現部份讀取，我只能在外部拆分各支援插件的儲存資料。實際上，本插件的大部份程式碼都是在實作和其它插件之間的兼容處理，而這也是為什麼它在支援插件的版本不匹配時容易發生故障。
->
-> 至於 56e4\_xXVv 開發的 KK\_ClothesLoadOption 狀況就不一樣了，{{cr(body="它完全沒有處理任何插件資料")}}。你的插件資料依然是以整套服裝為單位在讀寫，符合其它插件開發者的設計，自然也就有可能較少出現錯誤紅字。{{cr(body="但是沒有錯誤不代表沒有發生問題，因為你的插件資料和遊戲服裝並不匹配。")}}
->
-> 我相信你只有在兩種情境之下會發現它工作得更好: 當你的遊戲中不存在任何[支援插件](#compatible_plugins)時；以及你不會判斷你的插件資料是否缺失時。
+{% alert(note=true) %}
+關於 KK\_**Coordinate**LoadOption 和 KK\_**Clothes**LoadOption 之差異說明
+
+---
+KK\_ClothesLoadOption (56e4\_xXVv): 實作了遊戲內服裝、飾品資料的拆分讀取  
+KK\_CoordinateLoadOption (**我**): 實作了遊戲內服裝、飾品資料的拆分讀取，除此之外也處理[支援插件](#compatible_plugins)的插件資料，包括 HairAccessoryCustomizer 數據、 Material Editor 數據、 More\_Accessories 數據等
+
+在 KK 的原始設計中，服裝卡一次只能讀入一整套，並且大多數的插件也是搭建在此設計之上。為了實現部份讀取，我只能在外部拆分各支援插件的儲存資料。實際上，本插件的大部份程式碼都是在實作和其它插件之間的兼容處理，而這也是為什麼它在支援插件的版本不匹配時容易發生故障。
+
+至於 56e4\_xXVv 開發的 KK\_ClothesLoadOption 狀況就不一樣了，{{cr(body="它完全沒有處理任何插件資料")}}。你的插件資料依然是以整套服裝為單位在讀寫，符合其它插件開發者的設計，自然也就有可能較少出現錯誤紅字。{{cr(body="但是沒有錯誤不代表沒有發生問題，因為你的插件資料和遊戲服裝並不匹配。")}}
+
+我相信你只有在兩種情境之下會發現它工作得更好: 當你的遊戲中不存在任何[支援插件](#compatible_plugins)時；以及你沒有能力判斷你的插件資料是否缺失時。
+{% end %}
 
 ## 需求依賴
 
