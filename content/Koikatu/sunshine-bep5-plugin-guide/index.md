@@ -43,7 +43,7 @@ hot = true
 
 其它外掛我會盡量寫上前置依賴，除了列在必裝清單上的東西  
 就是被太多東西依賴我才會列為必裝  
-我就不再贅述，反正都給我必裝上去
+我就不再贅述，反正都給我必裝上去<!--more-->
 
 ## 主程式 + 各式 DLC 介紹
 
@@ -87,13 +87,13 @@ hot = true
   這裡下載 BepInEx\_x64\_5.\*.zip 回來，把所有東西解壓進遊戲根目錄  
   然後在遊戲根目錄新增一個資料夾叫做 "mods"，裡面放後述的 sideloader mod
 
-  [![image](2019-12-01%2016%2002%2032.png)](2019-12-01%2016%2002%2032.png)
+  [![image](../bep5-plugin-guide/2019-12-01%2016%2002%2032.png)](../bep5-plugin-guide/2019-12-01%2016%2002%2032.png)
 
-  [![image](38600782_2052356328117301_4461874492536258560_o.jpg)](38600782%5F2052356328117301%5F4461874492536258560%5Fo.jpg)
+  [![image](../bep5-plugin-guide/38600782_2052356328117301_4461874492536258560_o.jpg)](../bep5-plugin-guide/38600782%5F2052356328117301%5F4461874492536258560%5Fo.jpg)
 
 * [BepisPlugins.r16.9](https://github.com/IllusionMods/BepisPlugins/releases/tag/r16.9): 搭配上面這個的基礎外掛包  
   下載 KKS\_BepisPlugins\_r\*.zip 回來後整個解壓進遊戲根目錄，建議參考壓縮檔資料夾結構放置，依賴後面提到的 XUnity.AutoTranslator  
-  [![image](2019-11-03%2020%2019%2006.png)](2019-11-03%2020%2019%2006.png)
+  [![image](../bep5-plugin-guide/2019-11-03%2020%2019%2006.png)](../bep5-plugin-guide/2019-11-03%2020%2019%2006.png)
 * [BepInEx.MessageCenter v1.1.1](https://github.com/BepInEx/BepInEx.Utility/releases/tag/r7): 將重要度為「Message」的訊息顯示在遊戲畫面頂端  
   將 BepInEx.MessageCenter\_v\*.zip 載回來以後解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置
 * [BepInEx.ConfigurationManager v16.3](https://github.com/BepInEx/BepInEx.ConfigurationManager/releases/tag/v16.3): 遊戲內設定修改器  
@@ -111,11 +111,11 @@ hot = true
   他可以是「.zipmod」或「.zip」格式，並可以被各種壓縮軟體打開  
   如果這個壓縮檔裡包含了 manifest.xml，那他就是一個 zipmod，把他放到 mods 文件夾下，不要解開  
   直接放置如圖左，可使用子資料夾  
-  [![image](2019-01-06%2021%2006%2008.png)](2019-01-06%2021%2006%2008.png)
+  [![image](../bep5-plugin-guide/2019-01-06%2021%2006%2008.png)](../bep5-plugin-guide/2019-01-06%2021%2006%2008.png)
 
 * [KKSAPI v1.28](https://github.com/IllusionMods/IllusionModdingAPI/releases/tag/v1.28): 超級多插件的依賴，他是一個遊戲的 API 介面，方便其它插件的開發作業  
   將 KKSAPI.v\*.zip 載回來以後解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置  
-  [![image](2019-11-03%2020%2025%2037.png)](2019-11-03%2020%2025%2037.png)
+  [![image](../bep5-plugin-guide/2019-11-03%2020%2025%2037.png)](../bep5-plugin-guide/2019-11-03%2020%2025%2037.png)
 * [XUnity.AutoTranslator 4.20.0](https://github.com/bbepis/XUnity.AutoTranslator/releases/tag/v4.20.0) 機器翻譯  
   **就算不啟用也一定要安裝**，BepisPlugins/Sideloader 對他有依賴  
   下載 XUnity. AutoTranslator-BepIn-5x-\*.zip，解壓縮丟進遊戲根目錄  
@@ -123,7 +123,7 @@ hot = true
   1. 啟動一次遊戲，讓插件產生 ini 設定檔案，進到主畫面後再關閉遊戲
   2. 用文字編輯器開啟「根目錄 \BepInEx\config\AutoTranslatorConfig.ini」
   3. 找到 \[TextFrameworks] 段落，將其下的選項全部改成 False  
-     [![image](2019-11-03%2021%2035%2052.png)](2019-11-03%2021%2035%2052.png)
+     [![image](../bep5-plugin-guide/2019-11-03%2021%2035%2052.png)](../bep5-plugin-guide/2019-11-03%2021%2035%2052.png)
 * [MoreAccessories\_v2.0.19](https://github.com/jalil49/MoreAccessories/releases/tag/2.0.19) 增加無限多的裝飾品洞  
   這是 jalil49 搬運並修改了 Joan6694 的插件所做出的新版本，它的目標是「翻修」並取代所有遊戲中舊的 MoreAccessories  
   它讓儲存架構變得更直覺，但也弄壞了不少東西，尤其是在和舊版本的兼容上  
@@ -178,10 +178,10 @@ hot = true
   * 安裝 [Koikatsu Overlay Mods 最新版本](https://github.com/ManlyMarco/Illusion-Overlay-Mods/releases/latest)
   * 下載 KKS\_UncensorSelector，解壓縮後整個丟進遊戲根目錄下
   * 由 [Sideloader Modpack] 中，將「Sideloader Modpack - KK\_UncensorSelector」資料夾下載下來，丟進「根目錄 \mods\」之下  
-    [![image](uncensor.png)](uncensor.png)
+    [![image](../bep5-plugin-guide/uncensor.png)](../bep5-plugin-guide/uncensor.png)
   * 在 CharaMaker 裡的「身體 > 全體」選單下方可以選擇模組，設定完記得儲存卡片
   * 在 F1 裡可以設定「當角色 Uncensor 未設定」時要顯示的預設模組，也可以選擇「隨機 (Random)」選項  
-    [![image](2019-03-16%2018%2051%2040.png)](2019-03-16%2018%2051%2040.png)
+    [![image](../bep5-plugin-guide/2019-03-16%2018%2051%2040.png)](../bep5-plugin-guide/2019-03-16%2018%2051%2040.png)
 * [DeathWeasel1337/KK\_Plugins](https://github.com/DeathWeasel1337/KK%5FPlugins#kk%5Fplugins): 請下載 [2021/08/30 釋出的 KKS\_Plugins port](https://github.com/IllusionMods/KK%5FPlugins/releases/download/v201/KKS%5FPlugins.batch.zip)，然後再更新以下加了連結的更新版插件
   * [CharaMakerLoadedSound v1.0](https://github.com/IllusionMods/KK%5FPlugins/releases/tag/v210) Maker 載入完成時跳音效
   * [StudioSceneLoadedSound v1.1](https://github.com/IllusionMods/KK%5FPlugins/releases/tag/v206) Studio Scene 載入完成時跳音效
@@ -320,7 +320,7 @@ hot = true
   * 角色交換站: <http://upks.illusion.jp/list/chara> (要日本 IP)
   * SceneData 交換站: <http://upks.illusion.jp/list/scene> (要日本 IP)
 * コイカツ！(中文) - Discord 伺服器  
-  [![](join.png#no-hover)](https://discord.gg/UJEA9nr)
+  [![](../bep5-plugin-guide/join.png#no-hover)](https://discord.gg/UJEA9nr)
 * Koikatsu! 英文 Discord 伺服器  
   <https://discord.gg/hevygx6>
 * ZODGAME 論壇 - 恋活！Sunshine 版 (需邀請註冊)  
