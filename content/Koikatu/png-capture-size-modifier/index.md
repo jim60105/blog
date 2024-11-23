@@ -30,7 +30,7 @@ card = "../demo11.png"
 
 **請至設定中調整這些功能**
 
-#### 注意
+## 注意
 
 * 因為改變了存檔圖片尺寸，**強烈建議不要禁用 Studio SceneData 浮水印**，以利區分存檔 PNG 和普通截圖 PNG
 * **開啟浮水印角標時分辨率不可關閉**
@@ -40,22 +40,22 @@ card = "../demo11.png"
   將會使用 0\~9 和小寫 x  
   [![](ArialFont.png)](ArialFont.png)
 
-#### 需求依賴
+## 需求依賴
 
-##### Koikatu
+### Koikatu
 
 * コイカツ！ ダークネス (Koikatu! Darkness)  
   這不相容於 Steam Koikatsu Party
 * **BepInEx v5.1** (不支援 v5.0.X)
 
-##### Koikatsu Sunshine
+### Koikatsu Sunshine
 
 * **BepInEx v5.4.15**
 
-#### 安裝方式
+## 安裝方式
 
 * 將 \*.dll 放至「BepInEx/plugins/jim60105」資料夾之下
 
-#### 下載位置
+## 下載位置
 
 <https://cloud.maki0419.com/s/B7GYNikLxX6at65>

@@ -60,22 +60,22 @@ featured = true
 * 在做存檔分享時，若別人不想安裝插件，可以在此網頁解壓使用
 * 中 / 英文多國語系，依照瀏覧器語言設定切換
 
-### 需求依賴
+## 需求依賴
 
-#### Koikatu
+### Koikatu
 
 * コイカツ！ ダークネス (Koikatu! Darkness)  
   這不相容於 Steam Koikatsu Party
 * **BepInEx v5.3 (不支援 v5.0.X)**
 
-#### Koikatsu Sunshine
+### Koikatsu Sunshine
 
 * **BepInEx v5.4.15**
 
-### 安裝方式
+## 安裝方式
 
 參考壓縮檔結構，將文件放進「BepInEx/plugins/jim60105」資料夾之下
 
-### 下載位置
+## 下載位置
 
 <https://cloud.maki0419.com/s/agGygXXaqrLW37Q>
