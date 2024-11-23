@@ -1,24 +1,22 @@
 +++
 title = "[UserScript] Youtube影片截選播放清單 (Youtube Clip Playlist)"
-description = "[UserScript] Youtube影片截選播放清單 (Youtube Clip Playlist)"
+description = "這是截選播放清單功能，專門設計來聽Vtuber的歌枠。能設定歌曲起始時間、結束時間，並在播完單曲後播放下一首。把你的loop時數留給Vtuber本人，而不是烤肉man。"
 date = 2020-12-19T10:58:00.124Z
 updated = 2022-07-04T20:53:48.482Z
-draft = false
+draft = true
 aliases = [ "/2020/12/userscript-youtube-clip-playlist.html" ]
 
 [taxonomies]
 tags = [ "JavaScript", "Livestream" ]
 
 [extra]
-banner = "https://img.maki0419.com/blog/userscript-youtube-clip-playlist/preview.png"
 +++
 ## 前言
 
-![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/preview.png)
+![](preview.png)
 
 > 此專案已重寫為[Chrome擴充功能](/2022/06/chrome-extension-youtube-clip-playlist.html)
 
-  
 ![GitHub tag](https://img.shields.io/github/tag/jim60105/YoutubeClipPlaylist?style=for-the-badge) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/jim60105/Playlists/minify?label=PLAYLIST%20UPDATE&style=for-the-badge) ![GitHub](https://img.shields.io/github/license/jim60105/YoutubeClipPlaylist?style=for-the-badge) ![Tampermonkey](https://img.shields.io/static/v1?style=for-the-badge&message=Tampermonkey&color=00485B&logo=Tampermonkey&logoColor=FFFFFF&label=) ![YouTube](https://img.shields.io/static/v1?style=for-the-badge&message=YouTube&color=FF0000&logo=YouTube&logoColor=FFFFFF&label=) ![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
 
 這是截選播放清單功能，專門設計來聽Vtuber的歌枠
@@ -51,7 +49,7 @@ banner = "https://img.maki0419.com/blog/userscript-youtube-clip-playlist/preview
    * `https://www.youtube.com:443`  
    * `https://gothuedutw-my.sharepoint.com:443`  
    * `https://twitcasting.tv:443`  
-[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/autoplay.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/autoplay.png)
+[![](autoplay.png)](autoplay.png)
 2. 安裝瀏覧器擴充:[Tampermonkey](https://www.tampermonkey.net/)
 3. 安裝腳本:[Youtube Clip Playlist](https://github.com/jim60105/YoutubeClipPlaylist/raw/master/YoutubeClipPlaylist.user.js)
 4. 修改Tampermonkey設定，使之每次播放時都會重載歌單  
@@ -65,7 +63,7 @@ banner = "https://img.maki0419.com/blog/userscript-youtube-clip-playlist/preview
 
 ### Youtube網址格式
 
-> https://www.youtube.com/watch?  
+> <https://www.youtube.com/watch>?  
 > v=ETjgki1sSgc &  
 > t=1591 &  
 > end=1880 &  
@@ -75,7 +73,7 @@ banner = "https://img.maki0419.com/blog/userscript-youtube-clip-playlist/preview
 
 ### Google Drive網址格式
 
-> https://drive.google.com/file/d/13LaALYNOmdN3GfD7aeKreyzshdKX-Tvz/view?  
+> <https://drive.google.com/file/d/13LaALYNOmdN3GfD7aeKreyzshdKX-Tvz/view>?  
 > t=884 &  
 > end=1166 &  
 > shuffle=1 &  
@@ -86,7 +84,7 @@ banner = "https://img.maki0419.com/blog/userscript-youtube-clip-playlist/preview
 
 其它格式是以原網址直接當做VideoID傳入
 
-> https://twitcasting.tv/quon01tama/movie/688324697  
+> <https://twitcasting.tv/quon01tama/movie/688324697>  
 > t=1470 &  
 > end=1653 &  
 > shuffle=1 &  
@@ -111,9 +109,9 @@ banner = "https://img.maki0419.com/blog/userscript-youtube-clip-playlist/preview
 * 支援以鍵盤的媒體按鍵(Media Keys)操作「**下一首**」
 * 遮蔽「影片已暫停，要繼續觀賞嗎？」功能
 
-## 啟動連結
+## 啟動連結 {#url-start}
 
-[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/bookmark.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/bookmark.png)
+[![](bookmark.png)](bookmark.png)
 
 > 目前非歌曲的內容只有「RadioQTama廣播」，其它人可以省略NotSongs排除
 
@@ -141,22 +139,21 @@ banner = "https://img.maki0419.com/blog/userscript-youtube-clip-playlist/preview
 | 牧野白 全歌單循序      | <https://www.youtube.com/?startplaylist&playlistinclude=MakinoShiro>                             |
 | 牧野白 全歌單隨機      | <https://www.youtube.com/?startplaylist&playlistinclude=MakinoShiro&shuffle=1>                   |
 
-## TamperMonkey UI選單
+## TamperMonkey UI選單 {#ui-start}
 
 ### 啟動UI
 
 在Youtube網站下點開TamperMonkey選單，單擊「Start Playlist」  
-這相當於**啟動連結—全清單循序 (https://www.youtube.com/?startplaylist)**  
+這相當於**啟動連結—全清單循序 (<https://www.youtube.com/?startplaylist>)**  
 
-[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/UI1.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/UI1.png)
+[![](UI1.png)](UI1.png)
 
-  
 ### 禁用歌單功能
 
 在個別播放清單上單擊可以啟用、禁用該播放清單  
 若你完全不聽廣播，可以把RadioQTamaList禁用，再去使用全循序/隨機播放功能  
 
-[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/UI2.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/UI2.png)
+[![](UI2.png)](UI2.png)
 
 ## 歌單(Playlist)
 
@@ -189,4 +186,4 @@ Youtube:OneDrive:TwitCasting ツイキャス:
 > 我使用了一支[.Net Core程式](https://github.com/jim60105/Playlists/blob/master/QuonTama/CreateRadioQTamaSubtitles/CreateRadioQTamaSubtitles/Program.cs)和[Github Workflow](https://github.com/jim60105/Playlists/blob/master/.github/workflows/CreateRadioQTamaSubtitles.yml)做CI  
 > 定時由他的gitlab取得ass直鏈，並重寫歌單
 
-[![](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/sub.png)](https://img.maki0419.com/blog/userscript-youtube-clip-playlist/sub.png)
+[![](sub.png)](sub.png)

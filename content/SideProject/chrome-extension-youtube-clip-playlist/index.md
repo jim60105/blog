@@ -37,7 +37,7 @@ featured = true
 * 只要清單化起始 / 結束時間就完事，比剪片快得多
 * 因為沒有轉載、修改原影片，不會有版權爭議
 
-> 此專案曾是個[油猴腳本 (UserScript)](/2020/12/userscript-youtube-clip-playlist.html)，現已重寫為擴充功能
+> 此專案曾是個油猴腳本 (UserScript)，現已重寫為擴充功能
 
 ## 安裝方法
 
