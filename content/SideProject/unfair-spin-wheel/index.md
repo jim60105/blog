@@ -1,18 +1,23 @@
 +++
 title = "[個人專案] Unfair Spin Wheel - 不公平轉盤"
-description = "[個人專案] Unfair Spin Wheel - 不公平轉盤"
+description = "世界是不公平的，轉盤也是如此。一個可以讓你控制機率的轉盤遊戲。專案的初衷是提供給 Vtuber 進行「投入固定金額就有一次抽獎機會，投注次數越多，中獎率也會越高！」的直播抽獎活動。然而，現有的網路轉盤設計都是讓選項的倍率相同，操作起來不太方便。因此，我們需要一個不公平的轉盤來反映這個不公平的世界。"
 date = 2023-10-30T19:43:00.013Z
 updated = 2023-10-31T14:42:11.812Z
 draft = false
 aliases = [ "/2023/10/unfair-spin-wheel.html" ]
 
 [taxonomies]
-tags = [ "JavaScript" ]
+tags = [ "JavaScript", "Vue.js" ]
 
 [extra]
-banner = "https://img.maki0419.com/blog/UnfairSpinWheel/preview.png"
+banner = "preview.png"
+iscn = "iscn://likecoin-chain/TN9L2gESOgpnhq7nrU3HvZ5UT9BimIn0fTxo-e27ZaE/1"
+featured = true
+
+  [extra.comments]
+  id = "111325748147311930"
 +++
-[![](https://img.maki0419.com/blog/UnfairSpinWheel/preview.png)](https://img.maki0419.com/blog/UnfairSpinWheel/preview.png)
+[![](preview.png)](preview.png)
 
 > 世界是不公平的，轉盤也是如此。
 >
@@ -24,23 +29,23 @@ banner = "https://img.maki0419.com/blog/UnfairSpinWheel/preview.png"
 
 這是我的第一個 Vue.js 專案，和過往一樣，可以在 [GitHub](https://github.com/jim60105/UnfairSpinWheel) 上找到此專案的開源程式碼。
 
-專案的初衷是提供給 Vtuber 進行**「投入固定金額就有一次抽獎機會，投注次數越多，中獎率也會越高！」**的直播抽獎活動。然而，現有的網路轉盤設計都是讓選項的倍率相同，操作起來不太方便。因此，我們需要一個不公平的轉盤來反映這個不公平的世界。
+專案的初衷是提供給 Vtuber 進行 **「投入固定金額就有一次抽獎機會，投注次數越多，中獎率也會越高！」** 的直播抽獎活動。然而，現有的網路轉盤設計都是讓選項的倍率相同，操作起來不太方便。因此，我們需要一個不公平的轉盤來反映這個不公平的世界。
 
-這是一個開源、免費、無廣告的轉盤網站，**歡迎各位直播主自由使用🎉**。
+這是一個{{cg(body="開源、免費、無廣告")}}的轉盤網站，**歡迎各位直播主自由使用🎉**。
 
 以下是本專案 Readme 的中文版本，由於是以英文撰寫再翻回中文，文句有奇怪的地方請多包涵。
 
 ## 👀 特色 ✨
 
-[![](https://img.maki0419.com/blog/UnfairSpinWheel/1.png)](https://img.maki0419.com/blog/UnfairSpinWheel/1.png)
+[![](1.png)](1.png)
 
-[![](https://img.maki0419.com/blog/UnfairSpinWheel/2.png)](https://img.maki0419.com/blog/UnfairSpinWheel/2.png)
+[![](2.png)](2.png)
 
-[![](https://img.maki0419.com/blog/UnfairSpinWheel/3.png)](https://img.maki0419.com/blog/UnfairSpinWheel/3.png)
+[![](3.png)](3.png)
 
 ### ⚖️ 權重轉輪
 
-[![](https://img.maki0419.com/blog/UnfairSpinWheel/4.png)](https://img.maki0419.com/blog/UnfairSpinWheel/4.png)
+[![](4.png)](4.png)
 
 你可以設定每個項目在轉盤上的權重。
 
@@ -48,7 +53,7 @@ banner = "https://img.maki0419.com/blog/UnfairSpinWheel/preview.png"
 
 ### 📝 大量編輯模式
 
-[![](https://img.maki0419.com/blog/UnfairSpinWheel/5.png)](https://img.maki0419.com/blog/UnfairSpinWheel/5.png)
+[![](5.png)](5.png)
 
 使用大量編輯模式，導入大量項目變得輕而易舉。
 
@@ -56,7 +61,7 @@ banner = "https://img.maki0419.com/blog/UnfairSpinWheel/preview.png"
 
 ### 🔊 可自訂音效
 
-[![](https://img.maki0419.com/blog/UnfairSpinWheel/8.png)](https://img.maki0419.com/blog/UnfairSpinWheel/8.png)
+[![](8.png)](8.png)
 
 通過調整音效來自定義您的遊戲體驗！  
 雖然我們提供了一系列預載的聲音，但您也可以上傳自己的音效，使其真正獨一無二。
@@ -66,7 +71,7 @@ banner = "https://img.maki0419.com/blog/UnfairSpinWheel/preview.png"
 
 ### 💾 自動儲存資料
 
-![](https://img.maki0419.com/blog/UnfairSpinWheel/pouchdb.svg)
+![](pouchdb.svg)
 
 我使用強大的 **[PouchDB](https://pouchdb.com/)** 來處理你的所有資料！
 
@@ -74,7 +79,7 @@ banner = "https://img.maki0419.com/blog/UnfairSpinWheel/preview.png"
 
 ### 🔗 與朋友分享
 
-[![](https://img.maki0419.com/blog/UnfairSpinWheel/7.png)](https://img.maki0419.com/blog/UnfairSpinWheel/7.png)
+[![](7.png)](7.png)
 
 與朋友分享你的有趣轉盤！
 
@@ -83,7 +88,7 @@ banner = "https://img.maki0419.com/blog/UnfairSpinWheel/preview.png"
 
 ## 🎲 如何玩
 
-1. 要玩不公平轉盤遊戲，請前往我的網站[unfair.spin-wheel.click](https://unfair.spin-wheel.click/)。
+1. 要玩不公平轉盤遊戲，請前往網站 [unfair.spin-wheel.click](https://unfair.spin-wheel.click/)
 2. 一旦進入網站，點擊頁面右側的「<<」按鈕，即可打開側欄。
 3. 您可以根據自己的喜好調整每個項目的權重。
 4. 如果您想增加一些額外的趣味，別忘了在「設置」頁籤下自定義音效。
@@ -94,7 +99,7 @@ banner = "https://img.maki0419.com/blog/UnfairSpinWheel/preview.png"
 
 ### 今天晚餐吃啥？
 
-[![](https://img.maki0419.com/blog/UnfairSpinWheel/u1.png)](https://img.maki0419.com/blog/UnfairSpinWheel/u1.png)
+[![](u1.png)](u1.png)
 
 讓我來解決這個世紀難題：**今天晚餐吃啥？**
 
@@ -104,7 +109,7 @@ banner = "https://img.maki0419.com/blog/UnfairSpinWheel/preview.png"
 
 ### Youtuber 直播抽獎
 
-[![](https://img.maki0419.com/blog/UnfairSpinWheel/u2.png)](https://img.maki0419.com/blog/UnfairSpinWheel/u2.png)
+[![](u2.png)](u2.png)
 
 想要讓你的線上抽獎活動更具互動性和吸引力嗎？  
 不用再找了，就是不公平轉盤！
@@ -114,7 +119,7 @@ banner = "https://img.maki0419.com/blog/UnfairSpinWheel/preview.png"
 
 ### 世界人口轉盤
 
-[![](https://img.maki0419.com/blog/UnfairSpinWheel/u3.png)](https://img.maki0419.com/blog/UnfairSpinWheel/u3.png)
+[![](u3.png)](u3.png)
 
 如果你重生了，你會被老天爺分配到哪個國家呢？
 
@@ -130,7 +135,7 @@ banner = "https://img.maki0419.com/blog/UnfairSpinWheel/preview.png"
 > 當選項太多時，繪製轉盤會吃掉更多的資源。  
 > 而這可能會導致在某些手持設備上的幀率過低。
 
-### 還有更多...
+### 還有更多
 
 讓我知道你如何使用我的轉盤！
 
@@ -139,5 +144,3 @@ banner = "https://img.maki0419.com/blog/UnfairSpinWheel/preview.png"
 ## 📝 License
 
 本專案採用 AGPL-3.0 授權。詳細授權條款和使用條款請見[專案 GitHub](https://github.com/jim60105/UnfairSpinWheel#-license)。
-
-iscn://likecoin-chain/TN9L2gESOgpnhq7nrU3HvZ5UT9BimIn0fTxo-e27ZaE
