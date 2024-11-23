@@ -105,7 +105,7 @@ featured = true
 ### 自動歌詞功能
 
 此專案有一支排程程式，自動從網路上蒐集歌詞，請在 UI 的 Settings 頁啟用。  
-歌詞來源為 [網易雲音樂](https://music.163.com/)，以 Github Workflow 定時將播放清單使用的歌詞[轉存至 Github](https://github.com/jim60105/Lyrics/tree/lyrics)，然後再讓客戶端存取 Github。  
+歌詞來源為 [網易雲音樂](https://music.163.com/)，以 GitHub Workflow 定時將播放清單使用的歌詞[轉存至 GitHub](https://github.com/jim60105/Lyrics/tree/lyrics)，然後再讓客戶端存取 GitHub。  
 經過這層轉存，{{cg(body="你不會直接存取網易雲音樂站台")}}，請安心使用。
 
 > 注意，這是附加功能！  

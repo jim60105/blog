@@ -183,7 +183,7 @@ Youtube:OneDrive:TwitCasting ツイキャス:
 此工具支援載入WebVTT字幕(.vtt)、ASS字幕(.ass)，請將字幕直鏈傳入歌單之SubSrc欄位  
 
 > 我在[RadioQTama播放清單](https://www.youtube.com/?startplaylist&playlistinclude=RadioQTama)中使用了來自[アルバート](https://twitter.com/alubto)的翻譯字幕，是直接由[他的repo](https://gitlab.com/alubaato/tama-subs)取得內容  
-> 我使用了一支[.Net Core程式](https://github.com/jim60105/Playlists/blob/master/QuonTama/CreateRadioQTamaSubtitles/CreateRadioQTamaSubtitles/Program.cs)和[Github Workflow](https://github.com/jim60105/Playlists/blob/master/.github/workflows/CreateRadioQTamaSubtitles.yml)做CI  
+> 我使用了一支[.Net Core程式](https://github.com/jim60105/Playlists/blob/master/QuonTama/CreateRadioQTamaSubtitles/CreateRadioQTamaSubtitles/Program.cs)和[GitHub Workflow](https://github.com/jim60105/Playlists/blob/master/.github/workflows/CreateRadioQTamaSubtitles.yml)做CI  
 > 定時由他的gitlab取得ass直鏈，並重寫歌單
 
 [![](sub.png)](sub.png)

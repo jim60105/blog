@@ -24,13 +24,13 @@ disclaimer = "本文於 2021 年撰寫時是使用 Service Workers 格式，[現
 
 這幾天我寫了個[新的 random 功能](https://github.com/jim60105/worker-img%5Frouter#%E9%9A%A8%E6%A9%9F%E5%9C%96%E7%89%87%E5%8A%9F%E8%83%BD)，並趁這個機會把專案做了重構；改寫為 TypeScript；切割檔案，以 Webpack 打包部屬；將可變更的設定值改以環境變數傳遞，增加專案重用性
 
-同時還串上了現在很夯的 Github Action，在線上做打包推送去 Cloudflare  
+同時還串上了現在很夯的 GitHub Action，在線上做打包推送去 Cloudflare  
 我也花時間把 Worker 用的 CLI 工具──Wrangler 摸了一輪，搞定了 Worker debug 和收 log 流程
 
 本文預計分為兩篇
 
 * Cloudflare Workers 入門 ─ 簡介
-* ~~Cloudflare Workers 進階 ─ Wrangler 簡介和 Github Action 串接部屬 (還沒寫!)~~
+* ~~Cloudflare Workers 進階 ─ Wrangler 簡介和 GitHub Action 串接部屬 (還沒寫!)~~
 
 Cloudflare Workers 是個還算新的產品，中文教學並不多，謹將我的研究成果小記在此。<!--more-->
 

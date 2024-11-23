@@ -1,6 +1,6 @@
 +++
-title = "Cloudflare Workers進階 ─ wrangler簡介和Github Action串接"
-description = "Cloudflare Workers進階 ─ wrangler簡介和Github Action串接"
+title = "Cloudflare Workers進階 ─ wrangler簡介和GitHub Action串接"
+description = "Cloudflare Workers進階 ─ wrangler簡介和GitHub Action串接"
 date = 2021-10-31T11:01:00.000Z
 updated = 2024-01-04T04:02:39.168Z
 draft = true
@@ -66,8 +66,8 @@ wrangler whoami
 
 * init: 由現有專案初始化為Cloudflare Workers專案  
 **應該在專案目錄下執行**，主要用於產生_wrangler.toml_
-* generate: 由Github repo範本架構出Cloudflare Workers專案，我把它視為`git clone` \+ `wrangler init`  
-你可以在[這裡](https://developers.cloudflare.com/workers/get-started/quickstarts#templates)找到幾個官方範本，或是[在Github中搜尋](https://github.com/topics/cloudflare-workers?q=template)  
+* generate: 由GitHub repo範本架構出Cloudflare Workers專案，我把它視為`git clone` \+ `wrangler init`  
+你可以在[這裡](https://developers.cloudflare.com/workers/get-started/quickstarts#templates)找到幾個官方範本，或是[在GitHub中搜尋](https://github.com/topics/cloudflare-workers?q=template)  
 後面我們會用到此範本: <https://github.com/jim60105/worker-ts%5Ftemplate>
 
 ### 編譯、偵錯
@@ -98,9 +98,9 @@ wrangler whoami
 沒錯，Cloudflare它教你怎麼把整個網站搬上workers  
 但是記得回頭看一下Plan，[官方文件](https://developers.cloudflare.com/workers/platform/sites)提到了會套用KV用量限制，你很可能會用爆它  
 
-## 簡介Github Action
+## 簡介GitHub Action
 
-### Github Repo Secrets
+### GitHub Repo Secrets
 
 ## 範例專案說明
 
@@ -108,6 +108,6 @@ wrangler whoami
 
 ### 整個CD流程
 
-### Commit推送至Github
+### Commit推送至GitHub
 
 ### github action觸發: wangler打包並推送至cloudflare

@@ -1,6 +1,6 @@
 +++
-title = "Github Verified之GPG金鑰設定"
-description = "Github Verified之GPG金鑰設定"
+title = "GitHub Verified之GPG金鑰設定"
+description = "GitHub Verified之GPG金鑰設定"
 date = 2020-11-09T18:25:00.037Z
 updated = 2022-06-14T11:04:54.863Z
 draft = false
@@ -15,7 +15,7 @@ banner = "https://img.maki0419.com/blog/preview/gpg.png"
 [![](https://img.maki0419.com/blog/preview/gpg.png)](https://img.maki0419.com/blog/preview/gpg.png)
 
 最近我重新深入學習了git，並好好檢視了自己的github頁面  
-以前就注意到了這個酷炫的Verified標誌，在Github線上改README時會被自動加上，在本地commit就沒有  
+以前就注意到了這個酷炫的Verified標誌，在GitHub線上改README時會被自動加上，在本地commit就沒有  
 這個標誌能顯示此commit確實是由我做出，並不是別人冒名而做  
 
 這次我好好研究了下gpg金鑰的設定方法，並把流程記錄在此  
@@ -35,16 +35,13 @@ banner = "https://img.maki0419.com/blog/preview/gpg.png"
 
 gpg --list-secret-keys --keyid-format LONG
 
-  
 ## 產生金鑰
 
-> 注意: Github要求Key Size 必須是**4096** bits以上
-
+> 注意: GitHub要求Key Size 必須是**4096** bits以上
 
 gpg --full-generate-key
 
-  
-## 登錄公鑰至Github
+## 登錄公鑰至GitHub
 
 先確認剛產生的金鑰
 
@@ -52,37 +49,31 @@ gpg --list-secret-keys --keyid-format LONG
 
 以純文字產出公鑰，將之複製
 
-
 gpg --armor --export 你的金鑰ID
 
-至[Github的keys設定頁面](https://github.com/settings/keys)，將GPG key加入   
+至[GitHub的keys設定頁面](https://github.com/settings/keys)，將GPG key加入
   
 ## 設定使git預設執行簽章
-
 
 git config --global gpg.program "C:\Program Files (x86)\GnuPG\bin\gpg.exe"
 git config --global user.signingkey 你的金鑰ID
 git config --global commit.gpgsign true
 git config --global tag.gpgSign true
 
-  
 ## 備份金鑰
 
-金鑰產生後請妥善離線保管，這兩個檔案可用於複製金鑰至其它電腦上   
+金鑰產生後請妥善離線保管，這兩個檔案可用於複製金鑰至其它電腦上
 
 ### Output
-
 
 gpg --output mygpgkey_pub.gpg --armor --export 你的金鑰ID
 gpg --output mygpgkey_sec.gpg --armor --export-secret-key 你的金鑰ID
 
 ### Input
 
-
 gpg --import ./mygpgkey_pub.gpg
 gpg --allow-secret-key-import --import ./mygpgkey_sec.gpg
 
-  
 \>> 參考連結[https://www.debuntu.org/how-to-importexport-gpg-key-pair/](https://www.debuntu.org/how-to-importexport-gpg-key-pair/ )  
   
 ## 延長金鑰快取驗證之有效期
@@ -113,5 +104,5 @@ gpgconf --launch gpg-agent
 
 ## 參考連結
 
-* [Managing commit signature verification - Github Docs](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/managing-commit-signature-verification)
+* [Managing commit signature verification - GitHub Docs](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/managing-commit-signature-verification)
 * [如何使用 GPG (GnuPG) 對 Git Commit 與 Tag 進行簽章 - Will 保哥](https://blog.miniasp.com/post/2020/05/04/How-to-use-GPG-sign-git-commit-and-tag-object)

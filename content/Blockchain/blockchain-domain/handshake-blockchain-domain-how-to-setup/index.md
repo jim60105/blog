@@ -26,11 +26,11 @@ iscn = "iscn://likecoin-chain/TW11huUVHy5Bsg0S3prnXNNYKzj0iabfmREUOaGla1w/1"
 
 ## 事前準備
 
-在開始以前，我們需要有一個簡單的 Hello World 網站、一台網頁伺服器，和一台 Name Server。選擇很多，為了方便 Demo，我將使用 Github Pages 做為網頁和網頁伺服器，並在 DigitalOcean 租一台 VPS，安裝 BIND 以做為 NameServer。
+在開始以前，我們需要有一個簡單的 Hello World 網站、一台網頁伺服器，和一台 Name Server。選擇很多，為了方便 Demo，我將使用 GitHub Pages 做為網頁和網頁伺服器，並在 DigitalOcean 租一台 VPS，安裝 BIND 以做為 NameServer。
 
 ### 範例網頁伺服器
 
-* [建立 Github 帳號](https://github.com/)
+* [建立 GitHub 帳號](https://github.com/)
 * Fork 以下 Repo: <https://github.com/digitalocean/sample-html>
 
 > 我們不使用 DigitalOcean Apps 做網頁服務，因為它不支援 Handshake domain  
@@ -41,8 +41,8 @@ iscn = "iscn://likecoin-chain/TW11huUVHy5Bsg0S3prnXNNYKzj0iabfmREUOaGla1w/1"
 * 點左側的「Pages」，在右方選擇「main」這個 branch  
   ![](/Blockchain/blockchain-domain/handshake/setup/2.png)  
   ![](/Blockchain/blockchain-domain/handshake/setup/3.png)
-* 「Save」後等約兩分鐘，等 Github 將你的網站部署上去  
-  Github 提供的網址為:`https://<你的username>.github.io/sample-html/`，而我們後面要把它對應到 Handshake domain  
+* 「Save」後等約兩分鐘，等 GitHub 將你的網站部署上去  
+  GitHub 提供的網址為:`https://<你的username>.github.io/sample-html/`，而我們後面要把它對應到 Handshake domain  
   ![](/Blockchain/blockchain-domain/handshake/setup/4.png)
 
 ### 範例 Name Server
@@ -162,9 +162,9 @@ iscn = "iscn://likecoin-chain/TW11huUVHy5Bsg0S3prnXNNYKzj0iabfmREUOaGla1w/1"
 * 在主機上確認能否解析 `color.chenchun` 至 jim60105.github.io.  
   ![](/Blockchain/blockchain-domain/handshake/setup/bind%20%289%29.png)
 
-## 將網域設定至 Github Pages
+## 將網域設定至 GitHub Pages
 
-> 設定 Github Pages 的詳細官方文件請見此  
+> 設定 GitHub Pages 的詳細官方文件請見此  
 > [Managing a custom domain for your GitHub Pages site - GitHub Docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
 
 來到剛才的「Settings」→「Pages」頁面，在「Custom Domain」填入網域名稱  
@@ -172,7 +172,7 @@ iscn = "iscn://likecoin-chain/TW11huUVHy5Bsg0S3prnXNNYKzj0iabfmREUOaGla1w/1"
 
 ![](/Blockchain/blockchain-domain/handshake/setup/15.png)
 
-不用理會下方的設定失敗，Github 不能解析 Handshake domains
+不用理會下方的設定失敗，GitHub 不能解析 Handshake domains
 
 ![](/Blockchain/blockchain-domain/handshake/setup/16.png)
 

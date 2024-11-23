@@ -98,7 +98,7 @@ tags = [ "Koikatu", "Koikatsu Sunshine" ]
 ---
 
 <div style="text-align: center;">
-  <a href="https://github.com/jim60105/KK/commits/KKSunshine" target="_blank">Github Commit History</a>
+  <a href="https://github.com/jim60105/KK/commits/KKSunshine" target="_blank">GitHub Commit History</a>
 </div>
 
 ---
