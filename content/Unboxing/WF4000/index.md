@@ -10,7 +10,7 @@ aliases = ["/2014/08/WF4000.html"]
 tags = ["開箱文"]
 
 [extra]
-card="IMG_20140816_224013.jpg"
+card = "IMG_20140816_224013.jpg"
 +++
 
 ## 購入緣由
