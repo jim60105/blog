@@ -2,24 +2,23 @@
 title = "曬物~"
 description = "曬物~"
 date = 2011-11-12T06:46:00.001Z
-updated = 2022-01-10T06:47:13.958Z
+updated = 2011-11-12T06:46:00.001Z
 draft = false
 aliases = [ "/2011/11/blog-post.html" ]
 
 [taxonomies]
 tags = [ ]
-
-[extra]
-banner = "http://2e.zol-img.com.cn/product/70/980/ce79ay3QF9xRU.jpg"
 +++
 Yes!曬物!曬鍵盤!曬滑鼠!曬鍵鼠組!!  
 今日入手:**羅技G100遊戲鍵盤滑鼠組**&**羅技MK100鍵盤滑鼠組**
+
 **G100**
-**![](http://2e.zol-img.com.cn/product/70/980/ce79ay3QF9xRU.jpg)**
+![](ce79ay3QF9xRU.jpg)
+
 **MK100**
-**![](http://hardware.mydrivers.com/Img/20100507/06010109.jpg)**  
+
+![](06010109.jpg)  
 就是如此。  
-  
   
 恩，我還是解釋下好了..  
   
@@ -68,10 +67,9 @@ G1套裝可是一面倒的負評呢
 還有很多1元加購  
 數量有限，要買要快!  
 地點在:台南市東區北門路一段218號2樓  
-http://tw.mall.yahoo.com/store/jpgame  
+<http://tw.mall.yahoo.com/store/jpgame>  
   
 我已經去辦了，你還在等什麼!!  
 **\----------------------------------------------------**  
 咱抓到精髓了...  
-  
   
