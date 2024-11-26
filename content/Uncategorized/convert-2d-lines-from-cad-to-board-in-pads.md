@@ -2,25 +2,20 @@
 title = "如何將CAD中導入PADS的2D線轉為板框"
 description = "如何將CAD中導入PADS的2D線轉為板框"
 date = 2013-11-12T22:47:00.003Z
-updated = 2020-11-24T14:56:53.458Z
+updated = 2013-11-12T22:47:00.003Z
 draft = true
 aliases = [ ]
 
 [taxonomies]
 tags = [ ]
-
-[extra]
-banner = "http://www.dzjs.net/upimg/userup/0809/23091203JH.jpg"
 +++
 ## 出處:<http://www.dzjs.net/html/PCBjishu/2008/0923/3375.html>
 
 怕文章丟失故轉載，若有任何問題立刻刪除
 
-  
 步驟二使用合併而不是閉合
 
 AUTOCAD 新版有改版
-  
   
 越来越多的人用PADS 软件设计PCB，但它的板框设计一直困扰着许多PADS的使用者。  
 怎么将CAD 中导入PADS 的2D-Line 或PADS 自画的2D-Line 转为Board-Outline呢？ 各位观众，请看下面：
