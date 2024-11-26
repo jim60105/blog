@@ -2,15 +2,11 @@
 title = "換手機~"
 description = "換手機~"
 date = 2010-11-20T06:31:00.000Z
-updated = 2016-03-12T11:25:14.593Z
-draft = true
+updated = 2010-11-20T06:31:00.000Z
 aliases = [ ]
 
 [taxonomies]
 tags = [ ]
-
-[extra]
-banner = "http://f11.wretch.yimg.com/jim70212/3/1724965163.jpg"
 +++
 幾天前我換手機了  
   
@@ -28,7 +24,7 @@ banner = "http://f11.wretch.yimg.com/jim70212/3/1724965163.jpg"
   
 可惜的是不能換主題  
   
-[![](http://f11.wretch.yimg.com/jim70212/3/1724965163.jpg)](http://www.wretch.cc/album/show.php?i=jim70212&b=3&f=1724965163.jpg)  
+[![](1724965163.jpg)](1724965163.jpg)  
   
 兩個喇叭是我選它的主要原因  
   
