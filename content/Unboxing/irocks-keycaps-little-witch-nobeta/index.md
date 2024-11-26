@@ -26,6 +26,8 @@ PBT 質感不用贅述，表面的些微顆粒感摸起來很棒
 PBT 磨砂表面，在印刷後是有點霧  
 總之不會很嚴重，不做負面評價
 
+<iframe allow="encrypted-media" allowtransparency="true" frameborder="0" height="734" scrolling="auto" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FIROCKS.HQ%2Fposts%2F5030420573650370&amp;width=500" style="border: none; max-width: 500px; overflow: hidden; width: 100%;"></iframe>
+
 [![](DSC07194.PNG)](DSC07194.PNG)
 
 [![](DSC07199.PNG)](DSC07199.PNG)
