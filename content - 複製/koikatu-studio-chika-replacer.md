@@ -1,0 +1,48 @@
++++
+title = "[Koikatu / Koikatsu Sunshine] Studio千佳替換器 (Studio Chika Replacer)"
+description = "[Koikatu / Koikatsu Sunshine] Studio千佳替換器 (Studio Chika Replacer)"
+date = 2020-02-23T03:49:00.016Z
+updated = 2021-10-31T11:13:39.907Z
+draft = false
+aliases = ["/2020/02/koikatu-studio-chika-replacer.html"]
+
+[taxonomies]
+tags = ["Koikatu", "C#"]
+
+[extra]
+banner = "https://img.maki0419.com/blog/preview/demo12.gif"
++++
+[![](https://img.maki0419.com/blog/preview/demo12.gif)](https://img.maki0419.com/blog/preview/demo12.gif)
+
+  
+* 一鍵把Studio內的所有女角色都換成千佳(預設角色)，並保留原始人物的身形數據
+* 或可自訂要用來替換的角色
+* 可只替換選中的角色
+* 用選擇方式來替換時，可替換男角色
+  
+快捷鍵我故意設定得的很複雜，以免誤觸 (可在config修改)  
+全替換: **Enter + 右Shift + 左Shift + 左Ctrl**  
+選擇替換: **'(單引號) + 右Shift + 左Shift + 左Ctrl**  
+  
+#### 需求依賴
+
+##### Koikatu
+
+* コイカツ！ ダークネス (Koikatu! Darkness)  
+這不相容於Steam Koikatsu Party
+* **BepInEx v5.1 (不支援v5.0.X)**
+* BepisPlugins r15
+
+##### Koikatsu Sunshine
+
+* BepInEx v5.4.15
+* BepisPlugins r16.8.1
+  
+  
+#### 安裝方式
+
+* 將\*.dll放至「BepInEx/plugins/jim60105」資料夾之下
+  
+#### 下載位置
+
+<https://cloud.maki0419.com/s/SSKBAPHnWD46aB6>  
