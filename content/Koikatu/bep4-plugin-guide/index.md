@@ -24,7 +24,7 @@ archive = """
 </figure>
 
 ## 簡單說一下Koikatu怎麼裝起來，首先你要找齊這些東西
-
+<!-- more -->
 * 主程式 + 付費DLC: [官方DL版](https://dlshop.illu-member.jp/products/detail.php?product%5Fid=201) (下載版、數位版)  
   內含:  
   * コイカツ!(DL版)  

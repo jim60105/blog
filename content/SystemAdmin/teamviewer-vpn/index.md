@@ -17,7 +17,7 @@ tags = [ ]
 {{ch(body="最後我用了 HAMACHI...")}}
 
 學網開伺服沒什麼困難的，這個部分是為了讓外網的也能連進來所做的。故跟伺服器同一區網 (同學校) 的不用這麼做。**XP 小畫家難用之傷眼注意!!wwwww**
-
+<!-- more -->
 1. 下載 Teamviewer:  
    <http://download.teamviewer.com/download/TeamViewer%5FSetup%5Fzhtw.exe>
 

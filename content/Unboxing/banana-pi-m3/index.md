@@ -25,7 +25,7 @@ card = "12805737_1142003222485954_5516453877118792813_n.jpg"
   → 除了 Android，所有 [Linux 鏡像](http://www.banana-pi.org/download.html)都行 (個人推 Arch)
 * 想裝 Windows、OSX、Linux (含 X 介面)?  
   → 請按叉叉，另外去買台筆電。
-
+<!-- more -->
 ---
 
 ## 感想

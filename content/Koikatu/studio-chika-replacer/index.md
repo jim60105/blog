@@ -23,7 +23,7 @@ banner = "../demo12.gif"
 快捷鍵我故意設定得的很複雜，以免誤觸 (可在 config 修改)  
 全替換: **Enter + 右 Shift + 左 Shift + 左 Ctrl**  
 選擇替換: **'(單引號) + 右 Shift + 左 Shift + 左 Ctrl**
-
+<!-- more -->
 ## 需求依賴
 
 ### Koikatu

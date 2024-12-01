@@ -11,88 +11,6 @@ tags = [ "Koikatu", "Koikatsu Sunshine" ]
 
 [extra]
 +++
-
-<style>
-  .header > h3{
-    border-bottom: 0px;
-  }
-  
-  .container{
-    border: 1px solid #FFF;
-    background: #FFFFFF19;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 15px;
-  }
-
-  .container > .header{
-    background: #00000070;
-    border-radius: 10px 10px 0px 0px;
-    font-weight: bold;
-    margin: -15px -15px 14px -15px;
-    padding: 8px;
-    display: flex;
-    align-items: stretch;
-  }
-
-  .container > .content{
-    padding: 5px;
-  }
-
-  .header > .date{
-    width: 150px;
-    display: grid;
-    text-align: center;
-    border-right: 1px #666 solid;
-    font-weight: normal;
-    order:1;
-    white-space: nowrap;
-    align-content: center;
-  }
-
-  .header > .title{
-    padding: 0 2vw;
-    order:2;
-    flex: 1 1 auto;
-    display: grid;
-    align-content: center;
-  }
-
-  .header > .version{
-    color: darkgray;
-    text-align: right;
-    font-size: small;
-    order:3;
-    white-space: nowrap;
-  }
-
-  .version .releaseVersion{
-    color: #FFF;
-    font-size: x-large;
-  }
-
-  @media only screen and (max-width: 750px) {
-    .header > .title {
-      order: 4;
-      flex-basis: 100%;
-      text-align: center;
-    }
-
-    .container > .header {
-      flex-wrap: wrap;
-    }
-
-    .header > .date {
-      flex: 1 1 0%;
-    }
-
-    .header > .version {
-      text-align: center;
-      flex: 1 1 0%;
-    }
-  }
-</style>
-
 [![](banner.png)](banner.png)
 
 ---
@@ -109,7 +27,7 @@ tags = [ "Koikatu", "Koikatsu Sunshine" ]
   details.<br />
   <font size="6"><a href="/2020/05/personal-koikatu-plugin.html">&gt;&gt;&gt; コイカツ！個人插件介紹匯整 &lt;&lt;&lt;</a></font>
 </div>
-
+<!-- more -->
 ---
 
 <div class="container">
@@ -1198,3 +1116,84 @@ tags = [ "Koikatu", "Koikatsu Sunshine" ]
     Event
   </div>
 </div>
+
+<style>
+  .header > h3{
+    border-bottom: 0px;
+  }
+  
+  .container{
+    border: 1px solid #FFF;
+    background: #FFFFFF19;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .container > .header{
+    background: #00000070;
+    border-radius: 10px 10px 0px 0px;
+    font-weight: bold;
+    margin: -15px -15px 14px -15px;
+    padding: 8px;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .container > .content{
+    padding: 5px;
+  }
+
+  .header > .date{
+    width: 150px;
+    display: grid;
+    text-align: center;
+    border-right: 1px #666 solid;
+    font-weight: normal;
+    order:1;
+    white-space: nowrap;
+    align-content: center;
+  }
+
+  .header > .title{
+    padding: 0 2vw;
+    order:2;
+    flex: 1 1 auto;
+    display: grid;
+    align-content: center;
+  }
+
+  .header > .version{
+    color: darkgray;
+    text-align: right;
+    font-size: small;
+    order:3;
+    white-space: nowrap;
+  }
+
+  .version .releaseVersion{
+    color: #FFF;
+    font-size: x-large;
+  }
+
+  @media only screen and (max-width: 750px) {
+    .header > .title {
+      order: 4;
+      flex-basis: 100%;
+      text-align: center;
+    }
+
+    .container > .header {
+      flex-wrap: wrap;
+    }
+
+    .header > .date {
+      flex: 1 1 0%;
+    }
+
+    .header > .version {
+      text-align: center;
+      flex: 1 1 0%;
+    }
+  }
+</style>

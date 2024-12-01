@@ -31,6 +31,7 @@ poor = true
 </font>
 
 [![](preview.jpg)](preview.jpg)
+<!-- more -->
 
 材料只需要一支 DS4，和網路上能買到的悠遊卡模組
 

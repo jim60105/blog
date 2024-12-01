@@ -55,7 +55,7 @@ IROA 擁有另一個 VTuber 身份，[久遠たま](https://www.youtube.com/c/Qu
 {{ youtube(id="4DIzrQhcMu4") }}
 
 ---
-
+<!-- more -->
 ### 大事記、生草事記
 
 * 2021/10/31  

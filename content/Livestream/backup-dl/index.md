@@ -30,7 +30,7 @@ featured = true
 此程式可以**檢查 Youtube 頻道、播放清單，並備份影片至 Azure Blob Storage**  
 這是一支 .NET Core Console Application，並包裝為 Linux Container  
 整合入我的「Youtube 錄影伺服器 (Docker Compose)」，可搭配使用
-
+<!-- more -->
 ### 下載
 
 ```bash

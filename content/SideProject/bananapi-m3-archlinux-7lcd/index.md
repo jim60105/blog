@@ -28,7 +28,7 @@ OneDrive: <https://gothuedutw-my.sharepoint.com/:u:/g/personal/f03350001_go_thu_
 2. 搭配 "[2015-12-09-ArchLinuxARM-lite-bpi-m3-sd-emmc.img](http://forum.banana-pi.org/t/bpi-m3-new-image-archlinuxarm-lite-for-bpi-m3-20151209/850)" 進行 Cross-Compile
 3. 以官方 7 吋 LCD 進行畫面輸出
 4. 縮小 /dev/sdx2 之大小至 5.4G，確保 8G SD 卡都能裝的下
-
+<!-- more -->
 ## 使用方法
 
 * Windows:  

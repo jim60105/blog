@@ -26,7 +26,7 @@ featured = true
 [以 Google 試算表作為簡易資料庫 (上) —— 資料庫的建立及寫入](@/Database/google-spreadsheets-as-database/index.md)
 
 這篇我會簡化一些上篇做過的步驟，不會一一截圖示範，請適當的舉一反三\~
-
+<!-- more -->
 **※圖片若不易閱讀請點擊放大※**
 
 ## 步驟大綱

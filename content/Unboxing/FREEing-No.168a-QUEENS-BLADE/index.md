@@ -19,7 +19,7 @@ card = "DSC_0020.jpg"
 
 手機渣畫質我就不詳細開箱了  
 以下純粹自爽wwwwww  
-
+<!-- more -->
 [![](DSC_0020.jpg)](DSC%5F0020.jpg)
 
 [![](DSC_0021.jpg)](DSC%5F0021.jpg)

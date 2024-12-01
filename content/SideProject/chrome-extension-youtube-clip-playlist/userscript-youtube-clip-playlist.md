@@ -42,7 +42,7 @@ tags = [ "JavaScript", "Livestream" ]
 若限定在Youtube網域執行，那麼就只能從瀏覧器端下手
 
 所以最後就是\~\~油猴腳本**!**  
-
+<!-- more -->
 ## 安裝步驟
 
 1. 參照[這篇文章](https://blog.maki0419.com/2022/01/media-autoplay-on-browser.html)，設定下方三個網域的允許自動播放  

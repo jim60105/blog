@@ -26,7 +26,7 @@ card = "../demo15.jpg"
 {% alert(tip=true) %}
 Studio 中以 <kbd>O</kbd> 鍵觸發
 {% end %}
-
+<!-- more -->
 **衝突: Koikatu PushUp** 因其內部自己存了一份胸部數據，並會在儲存和切換時回寫
 
 ## 需求依賴

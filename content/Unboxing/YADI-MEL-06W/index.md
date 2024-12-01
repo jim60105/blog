@@ -17,7 +17,7 @@ card = "DSCN1778.JPG"
 <http://www.eclife.com.tw/payeasy/moreinfo%5F69049.htm>
 
 [![](DSCN1778.JPG)](DSCN1778.JPG)
-
+<!-- more -->
 塑膠膜別在意我怕之後要退沒有撕
 
 **申明:這東西NT299，感覺"不愧是299。"的樣子**

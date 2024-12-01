@@ -30,7 +30,7 @@ Youtube iframe 嵌入在「某些影片」無法顯示，出現如圖的灰畫�
 
 這是我在做 [sound-buttons](https://github.com/jim60105/sound-buttons) 專案時遇到的問題，卡了我好幾個月無法解決。  
 我一直以為這些影片就是被設定無法嵌入，直到我發現同一個影片別人的站台可以嵌入...只有我有問題？！
-
+<!-- more -->
 ## 釐清問題
 
 Youtube iframe 大概(?)會檢查 `referer` 標頭決定要不要理你，請確認以下幾點
