@@ -4,7 +4,10 @@ description = "將 Studio 角色光和視角間之旋轉值連動"
 date = 2020-03-12T17:22:00.016Z
 updated = 2021-10-31T11:13:17.122Z
 draft = false
-aliases = [ "/2020/03/koikatu-studio-chara-light-linked-to-camera.html" ]
+aliases = [
+  "/2020/03/koikatu-studio-chara-light-linked-to-camera.html",
+  "/2020/03/koikatubepinex-v5x-studio-studio-chara.html"
+]
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]

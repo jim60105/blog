@@ -4,7 +4,11 @@ description = "服裝卡讀取處，多一個選項盤可以選擇性載入服�
 date = 2019-03-24T18:08:00.082Z
 updated = 2024-10-03T06:22:49.482Z
 draft = false
-aliases = [ "/2019/03/koikatu-coordinate-load-option.html" ]
+aliases = [
+  "/2019/03/koikatu-coordinate-load-option.html",
+  "/2019/03/koikatustudiostudio-coordinate-load.html",
+  "/2019/03/koikatu-studio-coordinate-load-option.html"
+]
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]

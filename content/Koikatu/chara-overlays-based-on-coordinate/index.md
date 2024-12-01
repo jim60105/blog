@@ -4,7 +4,10 @@ description = "[Koikatu] 角色 Overlay 隨服裝變換 (Chara Overlays Based On
 date = 2020-01-14T15:58:00.029Z
 updated = 2021-11-16T01:07:20.463Z
 draft = false
-aliases = [ "/2020/01/koikatu-chara-overlays-based-on-coordinate.html" ]
+aliases = [
+  "/2020/01/koikatu-chara-overlays-based-on-coordinate.html",
+  "/2020/01/koikatubepinex-v5x-overlay-iris-overlay.html"
+]
 
 [taxonomies]
 tags = [ "Koikatu" ]

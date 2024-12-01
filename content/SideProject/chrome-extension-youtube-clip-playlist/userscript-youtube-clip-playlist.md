@@ -4,12 +4,14 @@ description = "這是截選播放清單功能，專門設計來聽Vtuber的歌�
 date = 2020-12-19T10:58:00.124Z
 updated = 2022-07-04T20:53:48.482Z
 draft = true
-aliases = [ "/2020/12/userscript-youtube-clip-playlist.html" ]
+aliases = [
+  "/2020/12/userscript-youtube-clip-playlist.html",
+  "/2020/10/userscript-youtube-end-param-handler.html"
+]
+extra = { }
 
 [taxonomies]
 tags = [ "JavaScript", "Livestream" ]
-
-[extra]
 +++
 ## 前言
 

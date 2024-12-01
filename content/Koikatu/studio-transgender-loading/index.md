@@ -4,7 +4,11 @@ description = "以此插件可以實現 Studio 跨性別替換角色功能。"
 date = 2019-04-14T07:41:00.021Z
 updated = 2021-12-30T09:34:38.989Z
 draft = false
-aliases = [ "/2019/04/koikatu-studio-transgender-loading.html" ]
+aliases = [
+  "/2019/04/koikatu-studio-transgender-loading.html",
+  "/2019/04/koikatu-studio-studio-all-girls-plugin.html",
+  "/2019/04/koikatu-studio-all-girls-plugin.html"
+]
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]

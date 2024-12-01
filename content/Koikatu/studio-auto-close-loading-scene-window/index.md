@@ -5,6 +5,7 @@ date = 2019-07-15T11:59:00.021Z
 updated = 2021-10-31T11:16:28.457Z
 draft = false
 aliases = [
+  "/2019/07/koikatu-studioscene-studio-auto-close.html",
   "/2019/07/koikatu-studio-auto-close-loading-scene-window.html"
 ]
 

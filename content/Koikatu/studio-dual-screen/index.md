@@ -4,7 +4,10 @@ description = "啟用 Studio 的第二顯示器功能，在 VMD 錄屏的同時�
 date = 2020-03-25T15:34:00.018Z
 updated = 2021-10-31T11:13:00.070Z
 draft = false
-aliases = [ "/2020/03/koikatu-studio-dual-screen.html" ]
+aliases = [
+  "/2020/03/koikatu-studio-dual-screen.html",
+  "/2020/03/koikatubepinex-v5x-studio-studio-dual.html"
+]
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]

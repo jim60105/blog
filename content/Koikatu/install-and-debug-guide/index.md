@@ -4,7 +4,10 @@ description = "[Koikatu] コイカツ！ 插件安裝方式、問題判斷及排
 date = 2019-07-09T08:20:00.054Z
 updated = 2022-12-16T10:49:51.007Z
 draft = false
-aliases = [ "/2019/07/koikatu-install-and-debug-guide.html" ]
+aliases = [
+  "/2019/07/koikatu-install-and-debug-guide.html",
+  "/2019/07/koikatu.html"
+]
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]

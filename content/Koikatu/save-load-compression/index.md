@@ -4,7 +4,10 @@ description = "使用 LZMA 對 CharaFile、CoordinateFile、Studio SceneData 存
 date = 2020-06-09T10:42:00.027Z
 updated = 2021-10-31T11:11:37.299Z
 draft = false
-aliases = [ "/2020/06/koikatu-save-load-compression.html" ]
+aliases = [
+  "/2020/06/koikatu-save-load-compression.html",
+  "/2020/06/koikatubepinex-v5x-save-load-compression.html"
+]
 
 [taxonomies]
 tags = [ "Koikatsu Sunshine", "Koikatu", "C#" ]

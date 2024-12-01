@@ -4,7 +4,10 @@ description = "此插件可依照原始角色，將她們轉變為小蘿莉。"
 date = 2020-01-05T10:22:00.015Z
 updated = 2022-12-16T13:01:59.379Z
 draft = false
-aliases = [ "/2020/01/koikatu-fbi-open-up.html" ]
+aliases = [
+  "/2020/01/koikatu-fbi-open-up.html",
+  "/2020/01/koikatubepinex-v5x-fbi-open-up.html"
+]
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]

@@ -4,7 +4,10 @@ description = "一鍵把 Studio 內的所有女角色都換成千佳(預設角�
 date = 2020-02-23T03:49:00.016Z
 updated = 2021-10-31T11:13:39.907Z
 draft = false
-aliases = [ "/2020/02/koikatu-studio-chika-replacer.html" ]
+aliases = [
+  "/2020/02/koikatu-studio-chika-replacer.html",
+  "/2020/02/koikatubepinex-v5x-studio-studio-chika.html"
+]
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]

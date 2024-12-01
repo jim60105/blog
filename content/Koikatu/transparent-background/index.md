@@ -4,7 +4,10 @@ description = "使 Koikatu 變為透明視窗和背景，可顯示和點擊視�
 date = 2020-05-23T16:15:00.015Z
 updated = 2021-10-31T11:11:57.159Z
 draft = false
-aliases = [ "/2020/05/koikatu-transparent-background.html" ]
+aliases = [
+  "/2020/05/koikatu-transparent-background.html",
+  "/2020/05/koikatubepinex-v5x-transparent.html"
+]
 
 [taxonomies]
 tags = [ "Koikatu" ]

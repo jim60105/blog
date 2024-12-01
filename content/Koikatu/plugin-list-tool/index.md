@@ -4,7 +4,10 @@ description = "此工具可導出當前遊戲中已加載的BepInEx插件和IPA�
 date = 2020-01-05T10:05:00.008Z
 updated = 2021-10-31T11:15:26.958Z
 draft = false
-aliases = [ "/2020/01/koikatu-plugin-list-tool.html" ]
+aliases = [
+  "/2020/01/koikatu-plugin-list-tool.html",
+  "/2020/01/koikatubepinex-v5x-plugin-list-tool.html"
+]
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]

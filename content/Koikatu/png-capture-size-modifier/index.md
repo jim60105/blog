@@ -4,7 +4,10 @@ description = "可調存檔 PNG 的拍照尺寸；可調 CharaMaker 中角色、
 date = 2020-02-16T17:08:00.021Z
 updated = 2021-10-31T11:14:02.021Z
 draft = false
-aliases = [ "/2020/02/koikatu-png-capture-size-modifier.html" ]
+aliases = [
+  "/2020/02/koikatu-png-capture-size-modifier.html",
+  "/2020/02/koikatubepinex-v5x-png-capture-size.html"
+]
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]

@@ -4,7 +4,10 @@ description = "一鍵覆寫角色身體"
 date = 2020-05-16T05:48:00.013Z
 updated = 2021-10-31T11:12:17.939Z
 draft = false
-aliases = [ "/2020/05/koikatu-studio-body-overwrite-script.html" ]
+aliases = [
+  "/2020/05/koikatu-studio-body-overwrite-script.html",
+  "/2020/05/koikatubepinex-v5x-studio-studio-body.html"
+]
 
 [taxonomies]
 tags = [ "C#", "Koikatu" ]

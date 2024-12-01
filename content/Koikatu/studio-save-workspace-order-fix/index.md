@@ -4,7 +4,10 @@ description = "修正使 Studio 工作區存檔時，第一層之物件排序以
 date = 2020-05-16T05:43:00.011Z
 updated = 2021-10-31T11:12:40.737Z
 draft = false
-aliases = [ "/2020/05/koikatu-studio-save-workspace-order-fix.html" ]
+aliases = [
+  "/2020/05/koikatu-studio-save-workspace-order-fix.html",
+  "/2020/05/koikatubepinex-v5x-studio-studio-save.html"
+]
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]

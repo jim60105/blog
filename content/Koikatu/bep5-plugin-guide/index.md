@@ -4,7 +4,11 @@ description = "此篇文章旨在列出所有Koikatu插件清單，並簡單點�
 date = 2022-02-09T06:20:00.024Z
 updated = 2022-02-09T06:20:00.024Z
 draft = false
-aliases = [ "/2020/09/koikatu-bep5-plugin-guide.html" ]
+aliases = [
+  "/2020/09/koikatu-bep5-plugin-guide.html",
+  "/2019/11/koikatu-V5.html",
+  "/2018/10/koikatu.html"
+]
 
 [taxonomies]
 tags = [ "Koikatu" ]

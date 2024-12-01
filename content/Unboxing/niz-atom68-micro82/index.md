@@ -4,7 +4,10 @@ description = "一起來看看我的主力鍵盤吧!"
 date = 2020-09-11T09:27:00.033Z
 updated = 2021-10-31T11:06:23.550Z
 draft = false
-aliases = [ "/2020/03/niz-atom68-micro82.html" ]
+aliases = [
+  "/2020/03/niz-atom68-micro82.html",
+  "/2020/03/niz-atom68.html"
+]
 
 [taxonomies]
 tags = [ "開箱文" ]
