@@ -323,6 +323,7 @@ links = [
         { url = "@/Livestream/_index.md", name = "Livestream" },
         { url = "@/Mobile/_index.md", name = "Mobile" },
         { url = "@/SideProject/_index.md", name = "SideProject" },
+        { url = "@/SystemAdmin/_index.md", name = "SystemAdmin" },
         { url = "@/Unboxing/_index.md", name = "Unboxing" },
         { url = "@/Uncategorized/_index.md", name = "Uncategorized" },
     ] },
