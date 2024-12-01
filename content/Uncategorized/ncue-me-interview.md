@@ -3,7 +3,6 @@ title = "彰師機電 面試"
 description = "彰師機電 面試"
 date = 2012-04-15T09:24:00.000Z
 updated = 2012-04-15T09:24:00.000Z
-draft = true
 aliases = [ ]
 
 [taxonomies]

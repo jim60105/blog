@@ -3,7 +3,6 @@ title = "手殘亂碼終結者"
 description = "手殘亂碼終結者"
 date = 2014-10-05T09:25:00.000Z
 updated = 2014-10-05T09:25:00.000Z
-draft = true
 aliases = [ ]
 
 [taxonomies]

@@ -2,15 +2,19 @@
 title = "[Android App] PM2.5 環境空氣顯示器 (Airbox、LASS 等民間Maker站點)"
 description = "[Android App] PM2.5 環境空氣顯示器 (Airbox、LASS 等民間Maker站點)"
 date = 2019-01-09T07:57:00.009Z
-updated = 2020-11-24T14:56:53.458Z
+updated = 2019-01-09T07:57:00.009Z
 draft = false
-aliases = ["/2019/01/android-app-pm25-airbox-lass.html"]
+aliases = [ "/2019/01/android-app-pm25-airbox-lass.html" ]
 
 [taxonomies]
-tags = []
+tags = [ "Android" ]
+
+[extra]
+card = "lung.png"
+featured = true
 +++
 
-### 前言
+## 前言
 
 <aside>
 {{ image(url="lung.png", no_hover=true, transparent=true) }}
@@ -21,17 +25,17 @@ tags = []
 就把 App 補齊了一些地圖功能，還有針對不知道測站名稱的一般使用者做了一些調整。  
 整個操作流程算是流暢，如果有哪裡不順歡迎反映。
 <!--more-->
-### Google Play
+## Google Play
 
 (太久沒更新被 Google Play 下架了)
 
 ~~<https://play.google.com/store/apps/details?id=appinventor.ai%5Fjim60105.air>~~
 
-### 個人雲端 (apk 和 AppInventor 原始碼)
+## 個人雲端 (apk 和 AppInventor 原始碼)
 
 <https://cloud.maki0419.com/s/oGLSLqn7b6aaWZa>
 
-### 功能描述
+## 功能描述
 
 1. 串接 「PM2.5 開放資料入口網站」 之自造社群資料做顯示
 2. 選擇測站的方式
@@ -41,7 +45,7 @@ tags = []
 3. 在地圖上呈現所有測站
    1. Marker 依照空氣狀況改變顏色顯示
 
-### 截圖
+## 截圖
 
 |||
 | ------------------- | ------------------- |
@@ -49,7 +53,7 @@ tags = []
 | [![](3.jpg)](3.jpg) | [![](4.jpg)](4.jpg) |
 | [![](5.jpg)](5.jpg) | [![](6.jpg)](6.jpg) |
 
-### 後記
+## 後記
 
 在撰寫的時候遇到一個值得一提的瓶頸: Map 載入時的效能問題
 

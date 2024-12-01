@@ -3,13 +3,11 @@ title = "學網開 MC 伺服計畫 ─ Teamviewer 開 VPN"
 description = "學網開 MC 伺服計畫 ─ Teamviewer 開 VPN"
 date = 2013-04-01T11:45:00.005Z
 updated = 2013-04-01T11:45:00.005Z
-draft = true
 aliases = [ ]
+extra = { }
 
 [taxonomies]
 tags = [ ]
-
-[extra]
 +++
 
 ## 學網開 MC 伺服計畫 ─ Teamviewer 開 VPN

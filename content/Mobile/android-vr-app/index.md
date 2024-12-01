@@ -7,7 +7,7 @@ draft = false
 aliases = [ "/2018/08/android-vr-app.html" ]
 
 [taxonomies]
-tags = [ ]
+tags = [ "Android" ]
 
 [extra]
 archive = "資訊過時，數款 App 已不存在了"
@@ -15,11 +15,11 @@ archive = "資訊過時，數款 App 已不存在了"
 
 [![](1.png)](1.png)
 
-### 前言
+## 前言
 
 上禮拜買了 VR 眼鏡後 ([VR 眼鏡 小宅 Z5 青春版 2018 新款 開箱](/2018/08/vr.html))，安裝了一堆 APP 嘗鮮，結果留下來的就只有圖中這些。其他的不是不能看，就是體驗比別人差。特別強調一下，很多 APP 沒中選並不是做得不好，而是在台灣觀看會 LAG 或沒影像，估計是跨海和版權鎖區的關係 (?)。評語非常主觀請不要太認真\~
 <!--more-->
-### [Fulldive VR](https://play.google.com/store/apps/details?id=in.fulldive.shell)
+## [Fulldive VR](https://play.google.com/store/apps/details?id=in.fulldive.shell)
 
 <aside>
 {{ image(url="unnamed.png", no_hover=true) }}
@@ -37,7 +37,7 @@ Fulldive VR 提供完整的沉浸式體驗，一開啟軟體就進入 Cardboard 
 <figcaption>搜尋功能很強大</figcaption>
 </figure>
 
-### [VeeR VR](https://play.google.com/store/apps/details?id=com.velotech.veer)
+## [VeeR VR](https://play.google.com/store/apps/details?id=com.velotech.veer)
 
 <aside>
 {{ image(url="061585aa5ce096efc5b00d8f8418154b15640654d.png", no_hover=true) }}
@@ -50,7 +50,7 @@ VeeR VR 比較著重在社群的部分，來源都是使用者上傳，也是少
 <figcaption>軟體介面很漂亮，不像Fulldive能在Cardboard模式選影片算是可惜了</figcaption>
 </figure>
 
-### ~~暴風魔鏡~~/[橙子 VR](http://app.mi.com/details?id=com.chengzivr.android)/[3D 播播 VR](http://app.mi.com/details?id=com.bobo.splayer)
+## ~~暴風魔鏡~~/[橙子 VR](http://app.mi.com/details?id=com.chengzivr.android)/[3D 播播 VR](http://app.mi.com/details?id=com.bobo.splayer)
 
 [![](07e559437ea5a42021924d889faec4a695f25e520.png)](07e559437ea5a42021924d889faec4a695f25e520.png) [![](0375c950281bc4eeb3205193480eb9399f64ecf21.png)](0375c950281bc4eeb3205193480eb9399f64ecf21.png) [![](00f454aefe63a98d52644986495b61a84f7402e7b.png)](00f454aefe63a98d52644986495b61a84f7402e7b.png)
 
@@ -80,7 +80,7 @@ VeeR VR 比較著重在社群的部分，來源都是使用者上傳，也是少
 <figcaption>此為普通平面影片飛屏串流，上為在Cardboard模式觀賞，下為原片播放可見到畫面精細，目測沒有明顯掉幀情況，就算沒有VR眼鏡，一般串流播放也是表現優異順帶一提，這是個23分鐘1.7GB的H264 FLACx2 MKV檔案</figcaption>
 </figure>
 
-### [VaR's VR Video Player](https://play.google.com/store/apps/details?id=com.abg.VRVideoPlayer\&hl=zh%5FTW)
+## [VaR's VR Video Player](https://play.google.com/store/apps/details?id=com.abg.VRVideoPlayer\&hl=zh%5FTW)
 
 <aside>
 {{ image(url="unnamed2.png", no_hover=true) }}
@@ -93,7 +93,7 @@ VeeR VR 比較著重在社群的部分，來源都是使用者上傳，也是少
 <figcaption>除了基本的影片模式選擇，他還能調整視距、變形、尺寸等</figcaption>
 </figure>
 
-### [Trinus VR](https://play.google.com/store/apps/details?id=com.loxai.trinus.full\&hl=en%5FUS)
+## [Trinus VR](https://play.google.com/store/apps/details?id=com.loxai.trinus.full\&hl=en%5FUS)
 
 <aside>
 {{ image(url="F7AAIXFIPY0L5D3.LARGE.jpg", no_hover=true) }}
