@@ -310,7 +310,24 @@ show_repo = false
 # For local files use same link format as in Markdown,
 # i.e. "@/blog/_index.md".
 # See https://www.getzola.org/documentation/content/linking/#internal-links
-links = [{ url = "https://github.com/jim60105", name = "GitHub" }]
+links = [
+    { name = "Categories", menu = [
+        { url = "@/AI/_index.md", name = "AI" },
+        { url = "@/Backend/_index.md", name = "Backend" },
+        { url = "@/Blockchain/_index.md", name = "Blockchain" },
+        { url = "@/Cloudflare/_index.md", name = "Cloudflare" },
+        { url = "@/Container/_index.md", name = "Container" },
+        { url = "@/Database/_index.md", name = "Database" },
+        { url = "@/Frontend/_index.md", name = "Frontend" },
+        { url = "@/Koikatu/_index.md", name = "Koikatu" },
+        { url = "@/Livestream/_index.md", name = "Livestream" },
+        { url = "@/Mobile/_index.md", name = "Mobile" },
+        { url = "@/SideProject/_index.md", name = "SideProject" },
+        { url = "@/Unboxing/_index.md", name = "Unboxing" },
+        { url = "@/Uncategorized/_index.md", name = "Uncategorized" },
+    ] },
+    { url = "https://github.com/jim60105", name = "GitHub" },
+]
 
 [extra.footer]
 # Links used in the footer.

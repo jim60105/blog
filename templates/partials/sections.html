@@ -1,0 +1,16 @@
+<p>
+	<ul class="tags">
+		{% set sections = get_section(path="_index.md") %}
+		{%- for url in sections.subsections -%}
+			{% set section = get_section(path=url) %}
+			<li>
+				<small>
+					<a href="{{ section.path }}">
+						<span class="tag">{{ section.title }}</span>
+						<span class="count">{{ section.pages | length }}</span>
+					</a>
+				</small>
+			</li>
+		{%- endfor -%}
+	</ul>
+</p>
