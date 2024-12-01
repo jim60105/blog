@@ -44,7 +44,7 @@
 						</time>
 						{%- if page.authors -%}
 							<span>
-								•
+								{{ config.extra.separator | default(value="•") }}
 								{% include "partials/authors.html" -%}</span>
 						{%- endif -%}
 					</small>

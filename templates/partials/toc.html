@@ -12,7 +12,7 @@
 
 {%- if page.extra.toc or section.extra.toc or config.extra.toc -%}
 	{%- if toc and toc | length > 0 -%}
-		<h2>{{ macros_translate::translate(key="toc", default="Table of Contents", language_strings=language_strings) }}</h2>
+		<h2>{{ macros_translate::translate(key="table_of_contents", default="Table of Contents", language_strings=language_strings) }}</h2>
 		<{{list_element}}>
 			{%- for h1 in toc -%}
 				<li>

@@ -270,6 +270,11 @@ toc_inline = true
 # Can be set per page/section.
 # toc_ordered = true
 #
+# Custom separator used across the theme.
+# separator = "•"
+# Custom separator used in title tag and posts metadata.
+# title_separator = "-"
+#
 # Whether to use Content Security Policy.
 # Keep in mind that although this can potentially increase security,
 # it can break some stuff, in which case you will need to set custom policy.
@@ -290,10 +295,6 @@ toc_inline = true
 # 	{ directive = "base-uri", domains = ["'none'"] },
 # 	{ directive = "form-action", domains = ["'none'"] }
 # ]
-# Display outlines around all elements for debugging purposes
-# debug_layout = true
-# Don't load any styles for debugging purposes
-# debug_no_styles = true
 
 likerid = "jim60105"
 
@@ -369,3 +370,9 @@ host = "liker.social"
 user = "jim60105"
 # Whether to show the QR code to Mastodon post
 show_qr = true
+
+[extra.debug]
+# Display outlines around all elements for debugging purposes
+layout = false
+# Don't load any styles for debugging purposes
+no_styles = false
