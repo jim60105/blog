@@ -86,6 +86,7 @@
         "OTOTOY",
         "outdir",
         "pacman",
+        "Pastebin",
         "privatebin",
         "Proxied",
         "pyannote",
@@ -118,7 +119,8 @@
         "whisperx",
         "whois",
         "ytarchive",
-        "ytdlp"
+        "ytdlp",
+        "ZODGAME"
     ],
     "cSpell.ignorePaths":[
         "package-lock.json",
