@@ -16,7 +16,7 @@ tags = [ "bananapi" ]
 
 [![](IMG_20160323_091652.jpg)](IMG%5F20160323%5F091652.jpg)
 
-之前寫了這篇： [Bananapi 香蕉派 M3 ArchLinux 支援 BPI 7 吋 LCD 輸出之鏡像](@/Uncategorized/bananapi-m3-archlinux-7lcd/index.md)  
+之前寫了這篇： [Bananapi 香蕉派 M3 ArchLinux 支援 BPI 7 吋 LCD 輸出之鏡像](@/SideProject/bananapi-m3-archlinux-7lcd/index.md)  
 想想還是要把步驟記錄下來，不然很快就會忘了 (´-ω-｀)
 
 先展示下我的系統配置：
