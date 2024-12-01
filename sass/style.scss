@@ -33,12 +33,6 @@ h6 {
   font-family: var(--font-antique), var(--font-system-ui);
 }
 
-header#site-nav {
-  position: fixed;
-  margin-top: 0;
-  width: fit-content;
-}
-
 main {
   box-shadow: 0px 0px 25px 40px var(--bg-overlay);
   background: var(--bg-overlay);
