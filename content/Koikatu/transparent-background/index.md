@@ -56,7 +56,7 @@ banner = "../demo17.jpg"
 
 ## 銘謝
 
-**kirurobo** @ Github:  
+**kirurobo** @ GitHub:  
 感謝他的 **UniWinApi** 和 **CSharpWinApi** 專案  
 這些是透明視窗所用到的核心技術  
 <https://github.com/kirurobo/UniWinApiAsset>  

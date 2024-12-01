@@ -42,7 +42,7 @@ featured = true
 * Angular 14 前端專案
   * OIDC 僅使用 Google 官方的 [Google Sign-In](https://developers.google.com/identity/gsi/web/guides/client-library) 客戶端套件
 
-> 本文 Github 專案
+> 本文 GitHub 專案
 >
 > ---
 > [jim60105/GoogleOIDC\_Angular\_ASPNETWebAPI\_Auth\_Code\_Flow](https://github.com/jim60105/GoogleOIDC%5FAngular%5FASPNETWebAPI%5FAuth%5FCode%5FFlow)
