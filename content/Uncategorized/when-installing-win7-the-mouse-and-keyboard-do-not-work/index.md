@@ -7,7 +7,7 @@ draft = false
 aliases = [ "/2017/02/win7.html" ]
 
 [taxonomies]
-tags = [ ]
+tags = [ "System Admin" ]
 
 [extra]
 card = "16462979_1440769079276032_4799561238389875984_o.jpg"

@@ -7,7 +7,7 @@ draft = false
 aliases = [ "/2017/10/windows-7.html" ]
 
 [taxonomies]
-tags = [ ]
+tags = [ "System Admin" ]
 +++
 Win+R: Regedit  
 HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon  

@@ -7,7 +7,7 @@ draft = false
 aliases = [ "/2020/12/wsl.html" ]
 
 [taxonomies]
-tags = [ ]
+tags = [ "System Admin" ]
 
 [extra]
 poor = true

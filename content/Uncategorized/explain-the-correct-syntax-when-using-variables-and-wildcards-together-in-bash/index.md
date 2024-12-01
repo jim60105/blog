@@ -9,7 +9,7 @@ aliases = [
 ]
 
 [taxonomies]
-tags = [ ]
+tags = [ "System Admin" ]
 
 [extra]
 banner = "preview.png"

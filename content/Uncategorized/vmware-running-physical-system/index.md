@@ -11,7 +11,7 @@ featured = true
 banner = "2015-02-28 07 35 58.png"
 
 [taxonomies]
-tags = [ "Linux" ]
+tags = [ "Linux", "System Admin" ]
 +++
 
 [![](2015-02-28%2007%2035%2058.png)](2015-02-28%2007%2035%2058.png)
