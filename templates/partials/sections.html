@@ -1,7 +1,7 @@
 <p>
 	<ul class="tags">
 		{% set sections = get_section(path="_index.md") %}
-		{%- for url in sections.subsections -%}
+		{%- for url in sections.subsections | sort -%}
 			{% set section = get_section(path=url) %}
 			<li>
 				<small>
