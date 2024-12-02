@@ -1,5 +1,6 @@
 function toggleLanguage(lan) {
   var toggled = false;
+
   var es = document.getElementsByName("languagePanel");
   es.forEach(function (element) {
     if (element.getAttribute("lan") == lan) {
@@ -13,6 +14,7 @@ function toggleLanguage(lan) {
       element.style.width = "0%";
     }
   });
+
   var flips = Array.prototype.slice.call(document.getElementsByName("flip"));
   for (var j = 0; j < 2; j++) {
     var flip = flips.slice(
@@ -32,7 +34,7 @@ function toggleLanguage(lan) {
         element.style.width = "20%";
         element.style.zIndex = 10 - Math.abs(i - index);
       }
-      if (element.getAttribute("lan") == "jp") {
+      if (element.getAttribute("lan") == "ja") {
         if (lan == "zh") {
           element.style.left = "55%";
         } else {
@@ -44,6 +46,7 @@ function toggleLanguage(lan) {
   window.location.hash = "#" + lan;
   return toggled;
 }
+
 addEventListener("DOMContentLoaded", function () {
   var toggled = false;
   if (window.location.hash != "" && window.location.hash != "#") {
