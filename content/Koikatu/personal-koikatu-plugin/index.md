@@ -12,8 +12,7 @@ tags = [ "Koikatsu Sunshine", "Koikatu", "C#" ]
 banner = "CharaStudio-2019-12-22-14-45-35-Render.JPG"
 featured = true
 scripts = [
-  "Koikatu/personal-koikatu-plugin/load-language.js",
-  "Koikatu/personal-koikatu-plugin/flip-button.js"
+  "Koikatu/personal-koikatu-plugin/index.js",
 ]
 hot = true
 +++
