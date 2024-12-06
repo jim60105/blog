@@ -31,7 +31,7 @@ archive = "我已經全面改用另一套工具——[「筆韻智匠 Quill Sage
 
 > ~~請搭配本文的成品閱讀~~
 >
-> ~~---~~
+> ---
 > ~~[\[個人專案\] Recorder.moe 錄影服務，讓你再也不會錯過 Vtuber 直播](@/SideProject/Recorder-moe/index.md)~~  
 > 因為專案服務調整，這篇文章已移除
 <!--more-->
