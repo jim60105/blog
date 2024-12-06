@@ -39,7 +39,7 @@ iscn = "iscn://likecoin-chain/B0HqE3UCC1IwAvozc0YYnBqy4YO4CI8ZJHYYsu4UxAs/1"
 
 ## 前言
 
-我一直在思考如何把我的專業和興趣結合。我是個軟體工程師，我喜歡 ACG、我喜歡 Vtuber。[Koikatu 插件](/2020/05/personal-koikatu-plugin.html)、[截選歌單](/2020/12/userscript-youtube-clip-playlist.html)都是成果；而這也是。
+我一直在思考如何把我的專業和興趣結合。我是個軟體工程師，我喜歡 ACG、我喜歡 Vtuber。[Koikatu 插件](@/Koikatu/personal-koikatu-plugin/index.md)、[截選歌單](@/SideProject/chrome-extension-youtube-clip-playlist/index.md)都是成果；而這也是。
 
 今年 (2021) 年後轉職為網站後端工程師，加入了 多奇 —— 一間以技術為主的專案公司。  
 Sound Buttons 專案算是我的個人練習台，練習的同時我也盡力要求自己按照標準實做。Angular 規定很多，要求你把 code 寫在對應的地方。很繁瑣難學，但這就是它的價值。當你的 code 都能寫在預期的位置，其它寫 Angular 的工程師就能容易讀懂你的專案。
@@ -222,7 +222,7 @@ ngx-translate 和我的自製 i18n 相比之最大好處在於它有[工具](htt
 ##### [YoutubeDLSharp](https://github.com/Bluegrams/YoutubeDLSharp)
 
 這是一個 C# 的 youtube-dl wrapper。寫法算直覺，內建不少 snippet 可以抄。  
-我對 youtube-dl 略懂略懂，在以前的[這個專案](/2020/11/docker-youtube-dl-auto-recording-live-dl.html)使用過，之後可能會寫一篇專文介紹?
+我對 youtube-dl 略懂略懂，在以前的[這個專案](@/Livestream/youtube-dl-auto-recording-live-dl/index.md)使用過，之後可能會寫一篇專文介紹?
 
 另外一提，youtube-dl 的 windows binary 使用的是舊版 python 打包，有個[已被關閉但未修復](https://github.com/ytdl-org/youtube-dl/issues/10766)的 issue  
 有以下方式解決

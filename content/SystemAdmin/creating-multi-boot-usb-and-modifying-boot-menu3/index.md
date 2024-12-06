@@ -17,9 +17,28 @@ card = "2017-07-12%2021%2029%2017.png"
 
 [![](2017-07-12%2022%2041%2045.png)](2017-07-12%2022%2041%2045.png)
 
-## 前言
+## 步驟大綱
 
-本系列分成上下兩篇，請先閱讀[上篇](https://blog.maki0419.com/2017/07/usb-usb.html)
+本系列分成上下兩篇，請先閱讀上篇
+
+[上篇 - 建立開機 USB](@/SystemAdmin/creating-multi-boot-usb-and-modifying-boot-menu/index.md):
+
+1. 處理磁碟分割及引導
+2. 安裝 Base 模式 (8G)
+3. 安裝 Add 模式 (16G)
+4. 安裝 Add\_xp 模式 (32G)
+5. 安裝 Tools
+6. 測試成果
+7. 注意事項
+
+[下篇 - 加入 Windows To Go 系統](@/SystemAdmin/creating-multi-boot-usb-and-modifying-boot-menu3/index.md):
+
+1. 製作 Win10 VHD
+2. 設置 BCD 引導
+3. 安裝 EWF 影子系統
+4. TroubleShooting
+
+## 前言
 
 使用 PE 的時候一直有點困擾
 
@@ -42,7 +61,7 @@ WTG 本身是不難做，但是要跟我們的多重開機合併就會遇到幾�
 
 系列分成兩篇敘述，上篇老少皆宜，下篇屬於困難級，請適當斟酌
 
-[上篇 - 建立開機 USB](/2017/07/usb-usb.html):
+[上篇 - 建立開機 USB](@/SystemAdmin/creating-multi-boot-usb-and-modifying-boot-menu/index.md):
 
 1. 處理磁碟分割及引導
 2. 安裝 Base 模式 (8G)
@@ -52,7 +71,7 @@ WTG 本身是不難做，但是要跟我們的多重開機合併就會遇到幾�
 6. 測試成果
 7. 注意事項
 
-[下篇 - 加入 Windows To Go 系統](/2017/07/usb3.html):
+[下篇 - 加入 Windows To Go 系統](@/SystemAdmin/creating-multi-boot-usb-and-modifying-boot-menu3/index.md):
 
 1. 製作 Win10 VHD
 2. 設置 BCD 引導

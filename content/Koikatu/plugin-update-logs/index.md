@@ -25,7 +25,7 @@ tags = [ "Koikatu", "Koikatsu Sunshine" ]
   此頁只做Log記錄用，請到下方鏈結尋找下載和其它資訊。<br />このページはロギング専用です。<br />ダウンロードやその他の詳細については、このリンクにアクセスしてください。<br />This
   page is only for logging, please go to this link for download and other
   details.<br />
-  <font size="6"><a href="/2020/05/personal-koikatu-plugin.html">&gt;&gt;&gt; コイカツ！個人插件介紹匯整 &lt;&lt;&lt;</a></font>
+  <font size="6"><a href="@/Koikatu/personal-koikatu-plugin/index.md">&gt;&gt;&gt; コイカツ！個人插件介紹匯整 &lt;&lt;&lt;</a></font>
 </div>
 <!-- more -->
 ---

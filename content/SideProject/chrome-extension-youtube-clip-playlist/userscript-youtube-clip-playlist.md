@@ -17,7 +17,7 @@ tags = [ "JavaScript", "Livestream" ]
 
 ![](preview.png)
 
-> 此專案已重寫為[Chrome擴充功能](/2022/06/chrome-extension-youtube-clip-playlist.html)
+> 此專案已重寫為[Chrome擴充功能](@/SideProject/chrome-extension-youtube-clip-playlist/index.md)
 
 ![GitHub tag](https://img.shields.io/github/tag/jim60105/YoutubeClipPlaylist?style=for-the-badge) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/jim60105/Playlists/minify?label=PLAYLIST%20UPDATE&style=for-the-badge) ![GitHub](https://img.shields.io/github/license/jim60105/YoutubeClipPlaylist?style=for-the-badge) ![Tampermonkey](https://img.shields.io/static/v1?style=for-the-badge&message=Tampermonkey&color=00485B&logo=Tampermonkey&logoColor=FFFFFF&label=) ![YouTube](https://img.shields.io/static/v1?style=for-the-badge&message=YouTube&color=FF0000&logo=YouTube&logoColor=FFFFFF&label=) ![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
 
@@ -47,7 +47,7 @@ tags = [ "JavaScript", "Livestream" ]
 <!-- more -->
 ## 安裝步驟
 
-1. 參照[這篇文章](https://blog.maki0419.com/2022/01/media-autoplay-on-browser.html)，設定下方三個網域的允許自動播放  
+1. 參照[這篇文章](@/Frontend/media-autoplay-on-browser/index.md)，設定下方三個網域的允許自動播放  
    * `https://www.youtube.com:443`  
    * `https://gothuedutw-my.sharepoint.com:443`  
    * `https://twitcasting.tv:443`  
@@ -178,7 +178,7 @@ tags = [ "JavaScript", "Livestream" ]
 Youtube:OneDrive:TwitCasting ツイキャス:
 
 > 對於有密碼鎖的影片，請延伸閱讀  
-> [TwitCasting每次播放都要求輸入密碼？不要一直問我！](/2022/01/twitcasting-cookie.html)
+> [TwitCasting每次播放都要求輸入密碼？不要一直問我！](@/Livestream/twitcasting-cookie.md)
 
 ## 字幕
 

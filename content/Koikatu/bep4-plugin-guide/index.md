@@ -108,17 +108,17 @@ archive = """
 注意: 所有版本號以對應Darkness程式為基準  
 
 * [jim60105/KK](https://github.com/jim60105/KK) ~~首先，我要安麗我自己寫的東西ww~~
-  * [Koikatu StudioCoordinateLoadOption v3.0.2](/2019/03/koikatustudiostudio-coordinate-load.html) Studio載入服裝卡片時，可以選擇要載入的細項，包括飾品個別選擇  
+  * [Koikatu StudioCoordinateLoadOption v3.0.2](@/Koikatu/coordinate-load-option/index.md) Studio載入服裝卡片時，可以選擇要載入的細項，包括飾品個別選擇  
    [![](../demo1.gif)](../demo1.gif)
-  * [Koikatu StudioAllGirlsPlugin v1.3.1](/2019/04/koikatu-studio-studio-all-girls-plugin.html) 這會將Studio SceneData內所有男性以女性讀入，實現跨性別替換角色功能  
+  * [Koikatu StudioAllGirlsPlugin v1.3.1](@/Koikatu/studio-transgender-loading/index.md) 這會將Studio SceneData內所有男性以女性讀入，實現跨性別替換角色功能  
    [![](../demo2.gif)](../demo2.gif)
-  * [Koikatu StudioSimpleColorOnGirls v1.0.4](/2019/04/koikatu-studiostudio-simple-color-on.html) 使女性支持單色化功能，用意在於彌補全女插件所造成的限制  
+  * [Koikatu StudioSimpleColorOnGirls v1.0.4](@/Koikatu/studio-simple-color-on-girls/index.md) 使女性支持單色化功能，用意在於彌補全女插件所造成的限制  
    [![](../demo3.gif)](../demo3.gif)
-  * [Koikatu StudioCharaOnlyLoadBody v1.3.4](/2019/05/koikatu-studio-chara-only-load-body.html) 保留衣服和飾品，只替換人物  
+  * [Koikatu StudioCharaOnlyLoadBody v1.3.4](@/Koikatu/studio-chara-only-load-body/index.md) 保留衣服和飾品，只替換人物  
    [![](../demo4.gif)](../demo4.gif)
-  * [Koikatu StudioReflectFKFix v1.0.2](/2019/05/koikatu-studio-reflect-fk-fix.html) 改造了「IK→FK」按鈕的功能，並增加了一個複製當前脖子方向到FK「→FK(首)」的功能
-  * [Koikatu StudioTextPlugin v1.1.0](/2019/06/koikatu-studio-text-plugin.html) 在Studio內添加文字物件
-  * [Koikatu StudioAutoCloseLoadingSceneWindow v1.0.0](/2019/07/koikatu-studioscene-studio-auto-close.html) Studio Load Scene視窗處，在Import或Load後自動關閉視窗  
+  * [Koikatu StudioReflectFKFix v1.0.2](@/Koikatu/studio-reflect-fk-fix/index.md) 改造了「IK→FK」按鈕的功能，並增加了一個複製當前脖子方向到FK「→FK(首)」的功能
+  * [Koikatu StudioTextPlugin v1.1.0](@/Koikatu/studio-text-plugin/index.md) 在Studio內添加文字物件
+  * [Koikatu StudioAutoCloseLoadingSceneWindow v1.0.0](@/Koikatu/studio-auto-close-loading-scene-window/index.md) Studio Load Scene視窗處，在Import或Load後自動關閉視窗  
    [![](../demo7.png)](../demo7.png)
 * [KKAPI v1.5.1](https://github.com/ManlyMarco/KKAPI/releases/tag/v1.5.1) 先裝這個再裝下面幾個常用MOD  
   (MakerAPI.dll已經過時，立刻給我把他丟了)

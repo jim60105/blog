@@ -87,7 +87,7 @@ banner = "preview.jpg"
 
 ## 流程簡述
 
-1. [Linux 主機之 Docker 安裝和 ReverseProxy 建置](/2020/11/linux-docker-setup-revese-proxy.html)
+1. [Linux 主機之 Docker 安裝和 ReverseProxy 建置](@/Container/linux-docker-setup-reverse-proxy/index.md)
 2. git clone 下來 docker-compose 建置檔案和 config 檔案
 3. 密碼類的個別設定
 4. docker-compose up -d

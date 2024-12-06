@@ -84,7 +84,7 @@ featured = true
 > 專文介紹
 >
 > ---
-> [琳的備忘手札: Youtube 影片截選播放清單 (Youtube Clip Playlist)](/2022/06/chrome-extension-youtube-clip-playlist.html#more)
+> [琳的備忘手札: Youtube 影片截選播放清單 (Youtube Clip Playlist)](@/SideProject/chrome-extension-youtube-clip-playlist/index.md)
 
 ### UserScript 腳本
 
@@ -252,7 +252,7 @@ Holodex 可以做到複雜的版面設定，而且還能做音訊管理。
 > 專文介紹
 >
 > ---
-> [琳的備忘手札: 影片下載轉檔筆記 (Youtube 、 Twitch 、 TwitCasting 、 Twitter Spaces 音訊空間 、 ffmpeg、yt-dlp)](/2022/01/youtube-download-ytdlp-ffmpeg.html)
+> [琳的備忘手札: 影片下載轉檔筆記 (Youtube 、 Twitch 、 TwitCasting 、 Twitter Spaces 音訊空間 、 ffmpeg、yt-dlp)](@/Livestream/youtube-download-ytdlp-ffmpeg/index.md)
 
 | | |
 | ------- | ---------------------------------------------------------------------------------- |
@@ -267,21 +267,21 @@ Holodex 可以做到複雜的版面設定，而且還能做音訊管理。
 > 專文介紹
 >
 > ---
-> [琳的備忘手札: \[Docker\] Youtube 直播錄影伺服器建置](/2020/11/docker-youtube-dl-auto-recording-live-dl.html)
+> [琳的備忘手札: \[Docker\] Youtube 直播錄影伺服器建置](@/Livestream/youtube-dl-auto-recording-live-dl/index.md)
 
 ### 備份 Youtube 影片至 Azure Blob Storage
 
 > 專文介紹
 >
 > ---
-> [琳的備忘手札: \[Docker\] Backup-dl - 備份 Youtube 影片至 Azure Blob Storage](/2021/06/backup-dl.html)
+> [琳的備忘手札: \[Docker\] Backup-dl - 備份 Youtube 影片至 Azure Blob Storage](@/Livestream/backup-dl/index.md)
 
 ### 監控 Twitch、TwitCasting、Twitter Spaces
 
 > 專文介紹
 >
 > ---
-> [琳的備忘手札: \[Docker\] 直播監控、自動影片下載筆記 (Youtube、Twitch、TwitCasting、Twitter Spaces 音訊空間)](/2022/01/auto-monitor-youtube-download.html)
+> [琳的備忘手札: \[Docker\] 直播監控、自動影片下載筆記 (Youtube、Twitch、TwitCasting、Twitter Spaces 音訊空間)](@/Livestream/auto-monitor-youtube-download.md)
 
 ## 小工具
 
@@ -314,7 +314,7 @@ PowerToys 是很強大的工具包，其它的功能也推薦嘗試。
 > 專文介紹
 >
 > ---
-> [琳的備忘手札: \[Excel & VBA\] Youtube 歌單產生工具 (Youtube Timeline Builder)](/2022/09/youtube-timeline-builder.html)
+> [琳的備忘手札: \[Excel & VBA\] Youtube 歌單產生工具 (Youtube Timeline Builder)](@/SideProject/youtube-timeline-builder/index.md)
 
 這是用來編輯 Youtube 歌枠時間軸用的 Excel 工具。  
 給幫忙寫歌枠歌單的人使用。

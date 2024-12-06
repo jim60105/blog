@@ -41,7 +41,7 @@ featured = true
 <!-- more -->
 ## 安裝方法
 
-* 參照[這篇文章](https://blog.maki0419.com/2022/01/media-autoplay-on-browser.html)，設定下方網域的{{cg(body="允許自動播放")}}
+* 參照[這篇文章](@/Frontend/media-autoplay-on-browser/index.md)，設定下方網域的{{cg(body="允許自動播放")}}
 
   * `https://www.youtube.com:443`
   * `https://onedrive.live.com:443`

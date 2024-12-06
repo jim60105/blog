@@ -46,7 +46,7 @@ banner = "OcuxIZ.jpg"
 
 請注意，這些經過轉換吐出的插件檔案，{{cr(body="切勿再分享出去")}}，也{{cr(body="不適合再另外備份保留")}}，請備份 backup 資料夾裡的原始插件。這是為了不要在網路上造成混淆，且將來若 BepIn4Patcher 有修改升級，這些產出檔案就應該要再被重新轉換。[IPALoaderX](https://github.com/BepInEx/IPALoaderX/releases/latest) 也是同理。
 
-## BepInEx v5.X 之資料夾結構說明
+## BepInEx v5.X 之資料夾結構說明 {#bepinex5-folder-structure}
 
 這些 \*.exe 檔案所在的最外層位置稱為「遊戲根目錄」，圖中路徑為遊戲預設安裝目錄「C:\illusion\Koikatu」，若使用原版コイカツ！ 安裝光碟以預設值安裝就會在此位置
 
@@ -78,10 +78,10 @@ banner = "OcuxIZ.jpg"
 ## BepInEx v4.X→v5.X 升級方法
 
 1. 把舊的「BepInEx」資料夾重命名為「BepInEx\_bak」，或是其他名稱
-2. 參考 [\[BepInEx v5.X\] コイカツ！ 主程式 + mod + plugin 安裝指南](https://blog.maki0419.com/2020/09/koikatu-bep5-plugin-guide.html#necessary%5Fplugins)安裝{{cr(body="所有")}}必裝插件
+2. 參考 [\[BepInEx v5.X\] コイカツ！ 主程式 + mod + plugin 安裝指南](@/Koikatu/bep5-plugin-guide/index.md#necessary_plugins)安裝{{cr(body="所有")}}必裝插件
 3. 啟動 Koikatu 遊戲運行一次至主畫面 (或 CharaStudio 至編輯器加載結束) ，確認 Console 無報錯  
-   (若有問題請參考[コイカツ! 插件安裝方式、問題判斷及排除指南](https://blog.maki0419.com/2019/07/koikatu-install-and-debug-guide.html))
-4. 參考 [\[BepInEx v5.X\] コイカツ！ 主程式 + mod + plugin 安裝指南](https://blog.maki0419.com/2020/09/koikatu-bep5-plugin-guide.html#other%5Fplugins)安裝**所需**之其他插件
+   (若有問題請參考[コイカツ! 插件安裝方式、問題判斷及排除指南](@/Koikatu/install-and-debug-guide/index.md))
+4. 參考 [\[BepInEx v5.X\] コイカツ！ 主程式 + mod + plugin 安裝指南](@/Koikatu/bep5-plugin-guide/index.md#other_plugins)安裝**所需**之其他插件
 5. 啟動 Koikatu 遊戲運行，確認 Console
 6. 用文字編輯器打開「BepInEx\_bak/config.ini」，檢視有無需要拷貝過去「BepInEx/config」下和「BepInEx/config.ini」的設定
 7. 重啟遊戲

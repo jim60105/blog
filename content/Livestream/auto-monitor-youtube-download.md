@@ -37,21 +37,21 @@ iscn = "iscn://likecoin-chain/Zyffo_xXdY9tey8jRREjFiwTdw8rntU6nCsa3t60rRk/1"
 >
 > ---
 > 本文的專案都是建立在前篇介紹過的工具之上  
-> [影片下載、轉檔筆記 (Youtube 、 Twitch 、 TwitCasting 、 Twitter Spaces 音訊空間 、 ffmpeg)](/2022/01/youtube-download-ytdlp-ffmpeg.html)
+> [影片下載、轉檔筆記 (Youtube 、 Twitch 、 TwitCasting 、 Twitter Spaces 音訊空間 、 ffmpeg)](@/Livestream/youtube-download-ytdlp-ffmpeg/index.md)
 
 > 延伸閱讀
 >
 > ---
 > 如果要租 VPS 主機，請參考這篇的前半部份  
-> [\[Docker\] Linux 主機之 Docker 安裝和 ReverseProxy 建置](/Container/linux-docker-setup-reverse-proxy)
+> [\[Docker\] Linux 主機之 Docker 安裝和 ReverseProxy 建置](@/Container/linux-docker-setup-reverse-proxy/index.md)
 <!--more-->
 ## Youtube 監控 - live-dl
 
 專案: [jim60105/live-dl](https://github.com/jim60105/live-dl)  
 Docker Compose: [jim60105/docker-youtube-dl](https://github.com/jim60105/docker-youtube-dl)
 
-Youtube 監控我使用自己魔改過的 live-dl 專案，我曾寫過[專文](/2020/11/docker-youtube-dl-auto-recording-live-dl.html)介紹  
-這個 Docker Compose 中還附帶有 WebUI 和 [backup-dl](/2021/06/backup-dl.html) (備份影片至 Azure Storage 的專案)
+Youtube 監控我使用自己魔改過的 live-dl 專案，我曾寫過[專文](@/Livestream/youtube-dl-auto-recording-live-dl/index.md)介紹  
+這個 Docker Compose 中還附帶有 WebUI 和 [backup-dl](@/Livestream/backup-dl/index.md) (備份影片至 Azure Storage 的專案)
 
 ## Youtube 備份 - backup-dl
 
@@ -59,7 +59,7 @@ Youtube 監控我使用自己魔改過的 live-dl 專案，我曾寫過[專文](
 Docker Compose: [jim60105/docker-youtube-dl](https://github.com/jim60105/docker-youtube-dl)
 
 此程式可以檢查 Youtube 頻道、播放清單，並備份影片至 Azure Blob Storage  
-詳見此專文介紹: [\[Docker\] Backup-dl - 備份 Youtube 影片至 Azure Blob Storage](/2021/06/backup-dl.html)
+詳見此專文介紹: [\[Docker\] Backup-dl - 備份 Youtube 影片至 Azure Blob Storage](@/Livestream/backup-dl/index.md)
 
 ## Twitch 監控 - Ancalentari Twitch Stream Recorder
 

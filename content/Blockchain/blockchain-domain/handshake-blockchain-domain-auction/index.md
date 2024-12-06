@@ -83,7 +83,7 @@ Namebase 同時是競標 Handshake 網域的兩個管道之一，它把所有東
 | 附加價值          | 內建域名伺服器 自動在 Open Auction 後出價 自動在揭示期披露 每兩年自動 Renewal 網域 | 可在應用程式內運行 HSD full node，或可使用外部的 node   | 擁有整個區塊鏈數據，同時是錢包、是 DNS 解析器、是 HNS 挖礦程式   |
 | 連結            | <https://www.namebase.io/>                             | <https://github.com/kyokan/bob-wallet> | <https://github.com/handshake-org/hsd> |
 
-## Handshake 網域的競標規則
+## Handshake 網域的競標規則 {#auction-rule}
 
 > 原文規則說明  
 > [Name minting auction - Namebase Learning Center](https://learn.namebase.io/about-handshake/handshake-auction)

@@ -411,7 +411,7 @@ rename 邏輯
 
 {% end %}
 
-## img 圖片縮址
+## img 圖片縮址 {#img-router}
 
 ### img 網域的縮址如下
 

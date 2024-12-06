@@ -23,7 +23,7 @@ archive = "我已經全面改用另一套工具——[「筆韻智匠 Quill Sage
 
 ## 前言
 
-我最近完成了第一篇 AI 協助下的部落格文章—《[Recorder.moe 錄影服務，讓你再也不會錯過 Vtuber 直播](/2023/04/Recorder-moe-Never-miss-a-Vtuber-stream-again.html)》。這次的寫作經驗讓我大開眼界，我想與讀者們分享這次的寫作過程。這篇文章是我第一次使用 AI 生成的初稿作為基礎，進行修改而完成的。我使用的 AI 寫作工具是 [Claude](https://www.anthropic.com/product)，它在處理程式碼方面表現稍遜，但是在自然語言生成上有出色的表現。
+我最近完成了第一篇 AI 協助下的部落格文章—《[Recorder.moe 錄影服務，讓你再也不會錯過 Vtuber 直播](@/SideProject/Recorder-moe/index.md)》。這次的寫作經驗讓我大開眼界，我想與讀者們分享這次的寫作過程。這篇文章是我第一次使用 AI 生成的初稿作為基礎，進行修改而完成的。我使用的 AI 寫作工具是 [Claude](https://www.anthropic.com/product)，它在處理程式碼方面表現稍遜，但是在自然語言生成上有出色的表現。
 
 使用 Claude 產生的文章初稿，為我的寫作節省了不少時間。我只需要對文章進行輕微的潤飾修改，就能產生流暢而清晰的用詞，避免了我一開始面對空白頁面的尷尬。雖然人類作者的才華與創造力是 AI 無法代替的，但是~~藉由與 AI 的合作，我可以專注在高階的寫作部分，讓 AI 支援我處理基礎而枯燥的文章框架定稿。這种人機合作的模式，讓我在寫作上獲得全新的體驗與收穫。~~
 
@@ -32,7 +32,7 @@ archive = "我已經全面改用另一套工具——[「筆韻智匠 Quill Sage
 > ~~請搭配本文的成品閱讀~~
 >
 > ~~---~~
-> ~~[\[個人專案\] Recorder.moe 錄影服務，讓你再也不會錯過 Vtuber 直播](/2023/04/Recorder-moe-Never-miss-a-Vtuber-stream-again.html)~~  
+> ~~[\[個人專案\] Recorder.moe 錄影服務，讓你再也不會錯過 Vtuber 直播](@/SideProject/Recorder-moe/index.md)~~  
 > 因為專案服務調整，這篇文章已移除
 <!--more-->
 ## 開工

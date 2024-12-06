@@ -42,7 +42,7 @@ iscn = "iscn://likecoin-chain/OkHAhjNWyZppmCu3ffbFJpRV2x33dNoiqkBNFyIzmec/1"
 ### 本文適合對象
 
 * 初級以上的 linux 操作基礎
-* 有自己的主機或 NAS，沒有可以[現在租](/2020/11/linux-docker-setup-revese-proxy.html#DigitalOcean) (不然你東西想放哪裡?)
+* 有自己的主機或 NAS，沒有可以[現在租](@/Container/linux-docker-setup-reverse-proxy/index.md#DigitalOcean) (不然你東西想放哪裡?)
 
 ### 功能說明
 
@@ -53,7 +53,7 @@ iscn = "iscn://likecoin-chain/OkHAhjNWyZppmCu3ffbFJpRV2x33dNoiqkBNFyIzmec/1"
 
 ## 流程簡述
 
-1. [Linux 主機之 Docker 安裝和 ReverseProxy 建置](/2020/11/linux-docker-setup-revese-proxy.html)
+1. [Linux 主機之 Docker 安裝和 ReverseProxy 建置](@/Container/linux-docker-setup-reverse-proxy/index.md)
 2. git clone 下來 docker-compose 建置檔案和 config 檔案
 3. 設定要自動錄影的直播頻道
 4. docker-compose up -d

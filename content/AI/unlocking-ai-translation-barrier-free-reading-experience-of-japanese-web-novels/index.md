@@ -46,7 +46,7 @@ hot = true
 > 延伸閱讀
 >
 > ---
-> [琳的備忘手札: 我的日文輕小說書單](/2017/10/novelList.html)
+> [琳的備忘手札: 我的日文輕小說書單](@/Uncategorized/my-novel-list.md)
 
 ## 事前準備
 

@@ -19,7 +19,7 @@ card = "main.png"
 
 ## 前言
 
-\~ 本系列分成上中下三篇，請先閱讀[上篇](/2017/07/usb.html)\~
+\~ 本系列分成上中下三篇，請先閱讀[上篇](@/SystemAdmin/creating-multi-boot-usb-and-modifying-boot-menu/index.md)\~
 
 Windows7 和 Windows10 透過 Grub4Dos 引導十分的麻煩
 
@@ -40,7 +40,7 @@ Windows7 和 Windows10 透過 Grub4Dos 引導十分的麻煩
 [![](真是夠噁心的.JPG)](真是夠噁心的.JPG)
 
 是的，Windows7 沒有 3.0 驅動  
-而現在新的電腦有些沒有 2.0 插槽，像是[這台](/2017/02/win7.html)
+而現在新的電腦有些沒有 2.0 插槽，像是[這台](@/SystemAdmin/when-installing-win7-the-mouse-and-keyboard-do-not-work/index.md)
 
 於是我們就要開工了...
 <!-- more -->
@@ -48,21 +48,25 @@ Windows7 和 Windows10 透過 Grub4Dos 引導十分的麻煩
 
 本系列分成三篇敘述，上篇老少皆宜，中下篇屬於困難級，請適當斟酌
 
-上篇 - 建立開機 USB＆PE 系統: \</2017/07/usb.html>
+[上篇 - 建立開機 USB](@/SystemAdmin/creating-multi-boot-usb-and-modifying-boot-menu/index.md):
 
 1. 安裝 SuperUSB\_v6
 2. 刪除 SuperUSB\_v6 多餘部分
 3. 增加 Win10 PE
-   中篇 - 引導重灌 ISO: \</2017/07/usb2.html>
-4. 製作並增加安裝 OS 選單: Windows XP
-5. 製作並增加安裝 OS 選單: Windows 7
-6. 製作並增加安裝 OS 選單: Windows 10
-7. 製作並增加安裝 OS 選單: Ubuntu 16.04
-   下篇 - 加入 Windows To Go 系統: \</2017/07/usb3.html>
-8. 製作 Win10 VHD
-9. 設置 BCD 引導
-10. 安裝 EWF 影子系統
-11. TroubleShooting
+
+[中篇 - 引導重灌 ISO](@/SystemAdmin/creating-multi-boot-usb-and-modifying-boot-menu2/index.md):
+
+1. 製作並增加安裝 OS 選單: Windows XP
+2. 製作並增加安裝 OS 選單: Windows 7
+3. 製作並增加安裝 OS 選單: Windows 10
+4. 製作並增加安裝 OS 選單: Ubuntu 16.04
+
+[下篇 - 加入 Windows To Go 系統](@/SystemAdmin/creating-multi-boot-usb-and-modifying-boot-menu3/index.md):
+
+1. 製作 Win10 VHD
+2. 設置 BCD 引導
+3. 安裝 EWF 影子系統
+4. TroubleShooting
 
 ## 正文
 
@@ -321,6 +325,6 @@ initrd (hd0,0)/ISO/ubuntu-16.04.2-desktop-amd64/initrd.lz
 
 ## 參考資料
 
-* SuperUSB v6 – 電腦維護的利器 | 格雷資訊，格雷，2013-09-04， <https://www.grayfree.tw/archives/716>
-* 隨身碟 G4D 單一 ISO 安裝 WIN7、8..(PART2) #12，2567288，2013-02-27， <http://nonameteam.cc/forum.php?mod=redirect&goto=findpost&ptid=1143&pid=8923&fromuid=29234>
-* 琳的備忘手札: 灌 Win7 時滑鼠鍵盤無法使用，陳鈞，2017-02-04， [/2017/02/win7.html](/2017/02/win7.html)
+- SuperUSB v6 – 電腦維護的利器 | 格雷資訊，格雷，2013-09-04， <https://www.grayfree.tw/archives/716>
+- 隨身碟 G4D 單一 ISO 安裝 WIN7、8..(PART2) #12，2567288，2013-02-27， <http://nonameteam.cc/forum.php?mod=redirect&goto=findpost&ptid=1143&pid=8923&fromuid=29234>
+- 琳的備忘手札: 灌 Win7 時滑鼠鍵盤無法使用，陳鈞，2017-02-04， [/SystemAdmin/when-installing-win7-the-mouse-and-keyboard-do-not-work/](@/SystemAdmin/when-installing-win7-the-mouse-and-keyboard-do-not-work/index.md)

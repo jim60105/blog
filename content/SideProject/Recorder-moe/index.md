@@ -54,7 +54,7 @@ Recorder.moe 曾經是面向一般使用者的付費錄影服務平台，自 202
 
 在最近幾年，Vtuber 成為了我最主要的娛樂興趣。我對 Vtuber 的直播影片充滿熱情，特別是唱歌主題的直播影片。但是，{{cr(body="Youtube 對音樂版權的限制使得這些影片很容易遭到刪除。")}}
 
-作為一名軟體工程師，[我研究過各種錄影方法](/2022/01/youtube-download-ytdlp-ffmpeg.html)並開發過一些工具，例如 [live-dl](/2020/11/docker-youtube-dl-auto-recording-live-dl.html) 和 [backup-dl](/2021/06/backup-dl.html)。但是，{{cr(body="這些工具主要面向工程師使用，普通人並不容易操作。")}}
+作為一名軟體工程師，[我研究過各種錄影方法](@/Livestream/youtube-dl-auto-recording-live-dl/index.md) 和 [backup-dl](@/Livestream/backup-dl/index.md)。但是，{{cr(body="這些工具主要面向工程師使用，普通人並不容易操作。")}}
 
 我注意到許多 Vtuber 粉絲也有相同的困擾，但是他們沒有足夠的技術去解決這個問題，大多數現有的工具也不夠易用。每個人自行錄影造成效能與資源的浪費，集中在同一個平台進行錄影，然後提供給需要的人會更加節省成本。
 

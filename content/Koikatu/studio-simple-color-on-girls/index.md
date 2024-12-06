@@ -4,7 +4,10 @@ description = "使女性支持單色化功能"
 date = 2019-04-18T15:58:00.011Z
 updated = 2021-10-31T11:19:16.334Z
 draft = false
-aliases = [ "/2019/04/koikatu-studio-simple-color-on-girls.html", "/2019/04/koikatu-studiostudio-simple-color-on.html" ]
+aliases = [
+  "/2019/04/koikatu-studio-simple-color-on-girls.html",
+  "/2019/04/koikatu-studiostudio-simple-color-on.html"
+]
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]

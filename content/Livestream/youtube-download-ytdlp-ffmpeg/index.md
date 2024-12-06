@@ -26,11 +26,11 @@ hot = true
 >
 > ---
 > 關於 **監控、自動下載** 請見這篇  
-> [\[Docker\] 直播監控、自動影片下載筆記 ( Youtube 、 Twitch 、 TwitCasting 、 Twitter Spaces 音訊空間)](/2022/01/auto-monitor-youtube-download.html)
+> [\[Docker\] 直播監控、自動影片下載筆記 ( Youtube 、 Twitch 、 TwitCasting 、 Twitter Spaces 音訊空間)](@/Livestream/auto-monitor-youtube-download.md)
 >
 > ---
 > 你可能也想看  
-> [讓軟體工程師告訴你，我如何讓我的 V 豚 DD 生活更加舒適](/2022/12/my-vtuber-dd-life.html)
+> [讓軟體工程師告訴你，我如何讓我的 V 豚 DD 生活更加舒適](@/Livestream/my-vtuber-dd-life/index.md)
 <!-- more -->
 ## 下載: yt-dlp
 
@@ -426,7 +426,7 @@ ffmpeg -i in.mp4 -map 0 -map -0:2 -c copy out.mp4
 > * [How to remove one track from video file using ffmpeg? - Stack Overflow](https://stackoverflow.com/a/38162168)
 > * [ffmpeg Documentation](https://ffmpeg.org/ffmpeg.html#Advanced-options)
 
-### mp4 faststart
+### mp4 faststart {#mp4-faststart}
 
 mp4 檔案的 moov atom (內包含了影片的索引) 預設是放在影片的最末尾。這不利於網路串流，無法查找索引，你必需從頭下載檔案才能播放。使用 `-movflags faststart` 參數以把 moov atom 移至片頭以解決這個問題。
 
@@ -552,5 +552,5 @@ mkclean in.mkv out.mkv
 >
 > ---
 >
-> * [雲端硬碟影片檔串流播放之研究手札 (OneDrive 、 Google Drive 、 MEGA)](/2022/09/streaming-video-files-in-network-space.html)
-> * [\[Docker\] 直播監控、自動影片下載筆記 ( Youtube 、 Twitch 、 TwitCasting 、 Twitter Spaces 音訊空間)](/2022/01/auto-monitor-youtube-download.html)
+> * [雲端硬碟影片檔串流播放之研究手札 (OneDrive 、 Google Drive 、 MEGA)](@/Livestream/streaming-video-files-in-network-space/index.md)
+> * [\[Docker\] 直播監控、自動影片下載筆記 ( Youtube 、 Twitch 、 TwitCasting 、 Twitter Spaces 音訊空間)](@/Livestream/auto-monitor-youtube-download.md)

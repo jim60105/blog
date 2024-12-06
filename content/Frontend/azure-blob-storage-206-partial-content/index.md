@@ -92,11 +92,11 @@ az storage account blob-service-properties update --default-service-version 2021
 > 延伸閱讀
 >
 > ---
-> [影片下載轉檔筆記 ( Youtube 、 Twitch 、 TwitCasting 、 Twitter Spaces 音訊空間 、 ffmpeg、yt-dlp )](/2022/01/youtube-download-ytdlp-ffmpeg.html#mp4-faststart)
+> [影片下載轉檔筆記 ( Youtube 、 Twitch 、 TwitCasting 、 Twitter Spaces 音訊空間 、 ffmpeg、yt-dlp )](@/Livestream/youtube-download-ytdlp-ffmpeg/index.md)
 
 ## 參考資料
 
 * [Versioning for the Azure Storage services | Microsoft Learn](https://learn.microsoft.com/en-us/rest/api/storageservices/Versioning-for-the-Azure-Storage-Services?redirectedfrom=MSDN#for-general-purpose-storage-accounts)
 * [video streaming - Does Azure Blob Storage supports partial content 206 by default... - Stack Overflow](https://stackoverflow.com/a/74650457/8706033)
 * [206 Partial Content - HTTP | MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/206)
-* [琳的備忘手札: 雲端硬碟影片檔串流播放之研究手札 ( OneDrive 、 Google Drive 、 MEGA ) #附錄: mp4 faststart、mkv cues\_to\_front (mkclean)](https://blog.maki0419.com/2022/09/streaming-video-files-in-network-space.html#%E9%99%84%E9%8C%84-mp4-faststart%E3%80%81mkv%C2%A0cues%5Fto%5Ffront-mkclean)
+* [琳的備忘手札: 雲端硬碟影片檔串流播放之研究手札 ( OneDrive 、 Google Drive 、 MEGA ) #附錄: mp4 faststart、mkv cues\_to\_front (mkclean)](@/Livestream/streaming-video-files-in-network-space/index.md#mp4-faststart)

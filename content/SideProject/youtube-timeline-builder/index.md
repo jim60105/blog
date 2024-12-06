@@ -30,7 +30,7 @@ end 參數用於標記歌曲結束時間
 它可以用在 Discord 內的預覧播放，這是 Discord 特別做的  
 {{cr(body="它在原生 Youtube 沒有功能")}}
 
-> 請安裝 Chrome 擴充 [Youtube 影片截選播放清單 (Youtube Clip Playlist)](/2022/06/chrome-extension-youtube-clip-playlist.html) 以便在 Youtube 網頁上處理此參數
+> 請安裝 Chrome 擴充 [Youtube 影片截選播放清單 (Youtube Clip Playlist)](@/SideProject/chrome-extension-youtube-clip-playlist/index.md) 以便在 Youtube 網頁上處理此參數
 
 [![](1.png)](1.png)
 

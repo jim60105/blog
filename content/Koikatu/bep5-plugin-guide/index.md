@@ -111,16 +111,13 @@ Darkness 必須要最後安裝，且 Darkness 被諸多插件列為依賴
 </figure>
 {% end %}
 
-## 必裝外掛介紹
+## 必裝外掛介紹 {#necessary_plugins}
 
 > 特別注意: 如果你從 BepInEx 4.X 要升級上來，請參考這篇  
-> [コイカツ! BepInEx 框架 v4.X→v5.X 升級指南](/2019/11/koikatsu-bepinex-upgrade-guide.html)
+> [コイカツ! BepInEx 框架 v4.X→v5.X 升級指南](@/Koikatu/bepinex-upgrade-guide/index.md)
 >
 > 如果遇到安裝問題，請參考這篇  
-> [コイカツ! 插件安裝方式、問題判斷及排除指南](/2019/07/koikatu.html)
-
-> 如果想知道我個人使用的插件清單和版本號，[請在這裡取得](https://cloud.maki0419.com/s/i7Q9aBNWx9SPiw6)  
-> 這是以 Plugin List Tool 所產生，並即時同步
+> [コイカツ! 插件安裝方式、問題判斷及排除指南](@/Koikatu/install-and-debug-guide/index.md)
 
 * [BepInEx v5.4.18](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.18): 這是最基礎的外掛框架，有了它其他東西才會生效  
   這裡下載 BepInEx\_x64\_5.4.\*.zip 回來，把所有東西解壓進遊戲根目錄  
@@ -164,7 +161,7 @@ Darkness 必須要最後安裝，且 Darkness 被諸多插件列為依賴
   3. 找到 \[TextFrameworks] 段落，將其下的選項全部改成 False  
      [![image](2019-11-03%2021%2035%2052.png)](2019-11-03%2021%2035%2052.png)
 
-## 其他外掛介紹
+## 其他外掛介紹 {#other_plugins}
 
 {% alert(important=true) %}
 以下所有版本號以對應 Darkness 程式為基準，且必須安裝上列必裝外掛
@@ -187,58 +184,58 @@ Darkness 必須要最後安裝，且 Darkness 被諸多插件列為依賴
 
 所有在 2019/10/23 以前發布的 BepInEx 插件皆是 BepInEx 4 插件，而在那之後的請參考各插件 Readme。 本文將三種插件分別標示，請**特別注意插件種類**
 
-> 更多詳細敘述請參考[コイカツ！ BepInEx v5.X 之資料夾結構說明](/2019/11/koikatsu-bepinex-upgrade-guide.html#details)
+> 更多詳細敘述請參考[コイカツ！ BepInEx v5.X 之資料夾結構說明](@/Koikatu/bepinex-upgrade-guide/index.md#bepinex5-folder-structure)
 
 ### BepInEx 5 插件
 
-* [jim60105/KK](/2020/05/personal-koikatu-plugin.html) {{ch(body="對，這些是我寫 der")}}
+* [jim60105/KK](@/Koikatu/personal-koikatu-plugin/index.md) {{ch(body="對，這些是我寫 der")}}
 
-  > 請到 [\[Koikatu\] コイカツ！ ( Koikatu / Koikatsu / 戀愛活動 ) 個人插件介紹匯整](/2020/05/personal-koikatu-plugin.html)  
+  > 請到 [\[Koikatu\] コイカツ！ ( Koikatu / Koikatsu / 戀愛活動 ) 個人插件介紹匯整](@/Koikatu/personal-koikatu-plugin/index.md)  
   > 閱讀專門介紹頁
   
-  * [Koikatu Coordinate Load Option v1.1.8.1](/2019/03/koikatu-coordinate-load-option.html)  
+  * [Koikatu Coordinate Load Option v1.1.8.1](@/Koikatu/coordinate-load-option/index.md)  
     載入服裝卡片時，可以選擇要載入的細項，包括飾品個別選擇。取代 KK\_ClothesLoadOption
-  * [Koikatu Studio Transgender Loading v1.0.1](/2019/04/koikatu-studio-transgender-loading.html)  
+  * [Koikatu Studio Transgender Loading v1.0.1](@/Koikatu/studio-transgender-loading/index.md)  
     實現 Studio 跨性別替換角色功能，取代 Studio All Girls Plugin
-  * ☆[Koikatu Studio Simple Color On Girls v1.1.0](/2019/04/koikatu-studio-simple-color-on-girls.html)  
+  * ☆[Koikatu Studio Simple Color On Girls v1.1.0](@/Koikatu/studio-simple-color-on-girls/index.md)  
     使女性支持單色化功能
-  * [Koikatu Studio Chara Only Load Body v1.3.9](/2019/05/koikatu-studio-chara-only-load-body.html)  
+  * [Koikatu Studio Chara Only Load Body v1.3.9](@/Koikatu/studio-chara-only-load-body/index.md)  
     保留衣服和飾品，只替換人物
-  * [Koikatu Studio Reflect FK Fix v1.0.4](/2019/05/koikatu-studio-reflect-fk-fix.html)  
+  * [Koikatu Studio Reflect FK Fix v1.0.4](@/Koikatu/studio-reflect-fk-fix/index.md)  
     修正「IK→FK」功能會重置手勢和脖子的問題，並增加了一個複製當前脖子方向到 FK「→FK (首)」的功能
-  * ☆[Koikatu Studio Text Plugin v1.1.6](/2019/06/koikatu-studio-text-plugin.html)  
+  * ☆[Koikatu Studio Text Plugin v1.1.6](@/Koikatu/studio-text-plugin/index.md)  
     在 Studio 內添加文字物件
-  * [Koikatu Studio Auto Close Loading Scene Window v1.0.4](/2019/07/koikatu-studio-auto-close-loading-scene-window.html)  
+  * [Koikatu Studio Auto Close Loading Scene Window v1.0.4](@/Koikatu/studio-auto-close-loading-scene-window/index.md)  
     Studio Load Scene 視窗處，在 Import 或 Load 後可以自動關閉視窗
-  * [Plugin List Tool v1.1.0](/2020/01/koikatu-plugin-list-tool.html)  
+  * [Plugin List Tool v1.1.0](@/Koikatu/plugin-list-tool/index.md)  
     導出當前遊戲中**已加載的** BepInEx 插件和 IPA 插件清單
-  * [Koikatu FBI Open Up v1.1.3](/2020/01/koikatu-fbi-open-up.html)  
+  * [Koikatu FBI Open Up v1.1.3](@/Koikatu/fbi-open-up/index.md)  
     此插件可依照原始角色，將她們向模板角色轉變。預設為蘿化，也可以用來做三頭身化。
-  * ~~[Koikatu Chara Overlays Based On Coordinate v1.3.8](/2020/01/koikatu-chara-overlays-based-on-coordinate.html)~~  
+  * ~~[Koikatu Chara Overlays Based On Coordinate v1.3.8](@/Koikatu/chara-overlays-based-on-coordinate/index.md)~~  
     ~~讓所有角色 Overlay (Iris、Face、Body Overlay) 隨著服裝變更，反映在人物存檔和服裝存檔上~~  
     被 Overlay Mods v6.0 實作部份功能，並被標為不相容。我對此有點意見，可點連結看看八卦。
-  * [Koikatu PNG Capture Size Modifier v1.5.5](/2020/02/koikatu-png-capture-size-modifier.html)  
+  * [Koikatu PNG Capture Size Modifier v1.5.5](@/Koikatu/png-capture-size-modifier/index.md)  
     可調所有 PNG 存檔的拍照尺寸、調整 Maker 中的檔案選擇器顯示列數、放大 Studio SceneData 選擇器的選中預覧、給 PNG 存檔加上浮水印角標
-  * [Koikatu Studio Chika Replacer v1.1.1](/2020/02/koikatu-studio-chika-replacer.html)  
+  * [Koikatu Studio Chika Replacer v1.1.1](@/Koikatu/studio-chika-replacer/index.md)  
     一鍵把 Studio 內的所有女角色都換成千佳 (預設角色)，並保留原始人物的身形數據
-  * [Koikatu Studio Chara Light Linked To Camera v1.1.7](/2020/03/koikatu-studio-chara-light-linked-to-camera.html)  
-    將 Studio 角色光和視角間之旋轉值連動，詳見[預覧](/2020/03/koikatu-studio-chara-light-linked-to-camera.html)對比
-  * [Koikatu Studio Dual Screen v1.1.1](/2020/03/koikatu-studio-dual-screen.html)  
+  * [Koikatu Studio Chara Light Linked To Camera v1.1.7](@/Koikatu/studio-chara-light-linked-to-camera/index.md)  
+    將 Studio 角色光和視角間之旋轉值連動，詳見[預覧](@/Koikatu/studio-chara-light-linked-to-camera/index.md)對比
+  * [Koikatu Studio Dual Screen v1.1.1](@/Koikatu/studio-dual-screen/index.md)  
     啟用 Studio 的第二顯示器功能，**必需要有實體雙顯示器才能使用**
-  * [Koikatu Studio Save Workspace Order Fix v1.0.1](/2020/05/koikatu-studio-save-workspace-order-fix.html)  
+  * [Koikatu Studio Save Workspace Order Fix v1.0.1](@/Koikatu/studio-save-workspace-order-fix/index.md)  
     以 Studio 的存檔邏輯，工作區中，在第一層之物件排序是以加入順序儲存 → 修改為以實際順序儲存
-  * [Koikatu Studio Body Overwrite Script v1.0.0.1](/2020/05/koikatu-studio-body-overwrite-script.html)  
+  * [Koikatu Studio Body Overwrite Script v1.0.0.1](@/Koikatu/studio-body-overwrite-script/index.md)  
     一鍵覆寫角色身體
-  * [Koikatu Transparent Background v1.0.1](/2020/05/koikatu-transparent-background.html)  
+  * [Koikatu Transparent Background v1.0.1](@/Koikatu/transparent-background/index.md)  
     透明視窗和背景，可顯示和點擊視窗下的東西
-  * ☆[Koikatu Save Load Compression v1.4.0](/2020/06/koikatu-save-load-compression.html)  
+  * ☆[Koikatu Save Load Compression v1.4.0](@/Koikatu/save-load-compression/index.md)  
     使用 LZMA 對 CharaFile、CoordinateFile、Studio SceneData 存檔做壓縮  
     提供網頁版壓縮 / 解壓縮工具: <https://slcweb.maki0419.com>
-  * [Koikatu Coordinate Capture Pose Unlock v1.0.1](/2020/06/koikatu-coordinate-capture-pose-unlock.html)  
+  * [Koikatu Coordinate Capture Pose Unlock v1.0.1](@/Koikatu/coordinate-capture-pose-unlock/index.md)  
     解除拍照服裝存檔時的姿勢限制
-  * [Koikatu Studio Menu Scrolling Text v1.2.1](/2020/09/koikatu-studio-menu-scrolling-text.html)  
+  * [Koikatu Studio Menu Scrolling Text v1.2.1](@/Koikatu/studio-menu-scrolling-text/index.md)  
     在 Studio 的添加物品清單添加滾動顯示功能，並在分類清單顯示自訂文字
-  * [Koikatu What are you saying? Script v1.0.0](/2020/09/koikatu-what-are-you-saying.html)  
+  * [Koikatu What are you saying? Script v1.0.0](@/Koikatu/what-are-you-saying/index.md)  
     本年度最無用作品，核心功能是讓你看不懂他們在說啥
 * ☆立體步兵補丁和動態開合 (騎兵有馬，步兵 (ry))  
   和 kPlug 衝突
@@ -459,7 +456,7 @@ Darkness 必須要最後安裝，且 Darkness 被諸多插件列為依賴
 * ☆[Koikatu VN\_Game\_Engine(VNGE) v33](https://mega.nz/folder/oiB2wAQK#ojGIzlAN-1B-263uUDEalQ/folder/Jm5xAIbA)  VN 引擎，用來做文字選項遊戲和寫 Script，語言是 Python。  
   相關插件: 將相關插件檔案 (應為 \*.py 和一些附加內容) 放入 VNGE 的「Console\Lib\」目錄下
   * Scene Save State ([使用教學](https://mega.nz/#F!U2wADQRD!7Qzfk4D3qoU%5FZ0P26cgLLg)) 在 Scene 裡儲存角色狀態，讓你用同一個人物去改變動作、位置等，取代複數的同一人物，以減輕電腦負擔。
-  * VNText 這是 [Koikatu Studio Text Plugin](/2019/06/koikatu-studio-text-plugin.html) 的 VN Port
+  * VNText 這是 [Koikatu Studio Text Plugin](@/Koikatu/studio-text-plugin/index.md) 的 VN Port
   * VNAnime 制作關鍵幀動畫
   * VNScene 制作 VN (Virtual Novel)
   * Pose, Face, Status, Hands libraries 以標籤、群組分類保存 Pose 等等
@@ -513,7 +510,7 @@ Darkness 必須要最後安裝，且 Darkness 被諸多插件列為依賴
 * ~~[Koikatu Bra\_Push-Up\_Mod(KK\_Kiyase)\_v0.2.1](https://ux.getuploader.com/56e4%5FxXVv/download/97) 穿奶罩時會把奶子往內擠一些，奶罩不是裝飾品惹。~~  
   被 Pushup plugin 取代
 * ~~[KK\_ClothesLoadOption v0.2.2](https://ux.getuploader.com/56e4%5FxXVv/download/94) 載入服裝卡片時，可以選擇要載入的細項，並不處理包括 Material Editor 在內的所有插件資料~~  
-  被 [Koikatu Coordinate Load Option](/2019/03/koikatu-coordinate-load-option.html) 取代
+  被 [Koikatu Coordinate Load Option](@/Koikatu/coordinate-load-option/index.md) 取代
 * ~~[KK\_MoreAccessoryParents v1.2.0.0](https://www.patreon.com/posts/kk-v1-1-24129495) 更多的裝飾品安裝基準點，需要 More\_Accessories~~  
   被 SMAP 取代
 * ~~[KK\_SliderHighlight v2.1.1](https://www.patreon.com/posts/kk-v2-0-44119450) 在捏人中高亮現正調整的滑桿位置，能清楚的知道你正在調整什麼部位。~~  
@@ -572,11 +569,11 @@ Darkness 必須要最後安裝，且 Darkness 被諸多插件列為依賴
 * ☆[Koikatu KKManager v0.18](https://www.patreon.com/posts/kkmanager-v0-14-41869238) Koikatu 的人物卡和 mod 管理器，支援 sideloader mod 的自動更新
 * [Plugin Data Reader](https://plugindatareader.maki0419.com/)  
   [![](PluginDataReader.png)](PluginDataReader.png)  
-  此工具網站可以檢查角色卡所使用的 plugin 和 mod，[這裡有說明書](/2021/11/plugin-data-reader.html)。 {{ch(body="這是我寫 der")}}
+  此工具網站可以檢查角色卡所使用的 plugin 和 mod，[這裡有說明書](@/Koikatu/plugin-data-reader/index.md)。 {{ch(body="這是我寫 der")}}
 * [fix registry & start.bat](https://mega.nz/file/JxxSVbrB#ENq3QFi%5FoWUittxqtuZu5ilvDkdRAF5AwV0Xpt2JG%5FY) ([英 Discord 發布](https://discordapp.com/channels/447114928785063977/447115303449657354/506071304726642706)) 註冊表修理 batch。移動遊戲目錄後，務必將它放在目錄下執行一次
 * [Koikatu 100% SaveData](http://www.mediafire.com/file/wqmi262icfp1q1v/Koikatu%5F-%5F100%2525%5FSave.rar/file) 100% 存檔，覆蓋注意
 * [IllusionLaunchers v3.0.0](https://github.com/IllusionMods/IllusionLaunchers/releases/tag/v3.2.0) 佬外做的啟動器，可方便的開啟遊戲資料夾，帶有註冊表修理功能。除此之外沒什麼用，建議用原版那個就夠了。
-* [Card Image Replacer v1.0](https://www.patreon.com/posts/32927543) PNG 存檔圖面替換器。如果你只是想要讓它變高畫質，請改用 [Koikatu PNG Capture Size Modifier](/2020/02/koikatu-png-capture-size-modifier.html)
+* [Card Image Replacer v1.0](https://www.patreon.com/posts/32927543) PNG 存檔圖面替換器。如果你只是想要讓它變高畫質，請改用 [Koikatu PNG Capture Size Modifier](@/Koikatu/png-capture-size-modifier/index.md)
 * [KK キャラ抽出改変 ver1.2.3](https://mega.nz/folder/Fx5ikKzR#KsrxZ2VN939UHukgHKqeCA) ([uppervolta 發布](http://uppervolta-3d.net/illu/upload.php?id=0550)) Scene 中 Chara 之複數提取器
 * ~~[KoikatuCharaReader](https://cdn.discordapp.com/attachments/519705409486061588/520094678864101398/KoikatuCharaReader.rar) Scene 中 Chara 之提取器~~，建議用上面這個取代
 * ~~[KoikatuSaveDataEdit-v16](https://github.com/kiletw/KoikatuSaveDataEdit/releases) 主遊戲存檔修改器~~，有已知問題

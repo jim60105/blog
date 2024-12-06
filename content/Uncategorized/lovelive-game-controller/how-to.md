@@ -18,7 +18,7 @@ featured = true
 經過修改後的較佳的製作流程  
 想要看我的製作流程的人請參考我的另一篇文章  
 踩著我的屍體前進吧\~\~\~  
-</2014/05/lovelive.html>
+[/Uncategorized/lovelive-game-controller/](@/Uncategorized/lovelive-game-controller/index.md)
 
 ---
 

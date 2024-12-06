@@ -15,7 +15,7 @@ iscn = "iscn://likecoin-chain/rtxrL8i4xKTDgZw8blO709mJWa-KdzDxwEkVnG1xpIM/1"
 trigger = "由於 イリュージョン 收攤，本文的官網連結已全數死去"
 archive = """
 本文已停更多年且不計劃再更新<br>
-就結論來說，前作 <a href="/2020/09/koikatu-bep5-plugin-guide.html">《コイカツ！》</a> 的熱度明顯高於本作品<br>
+就結論來說，前作 <a href="@/Koikatu/bep5-plugin-guide/index.md">《コイカツ！》</a> 的熱度明顯高於本作品<br>
 請優先考慮體驗前作"""
 featured = true
 hot = true
@@ -81,7 +81,7 @@ hot = true
 ## 必裝外掛介紹
 
 > 如果遇到安裝問題，請參考這篇  
-> [コイカツ! 插件安裝方式、問題判斷及排除指南](/2019/07/koikatu.html)
+> [コイカツ! 插件安裝方式、問題判斷及排除指南](@/Koikatu/install-and-debug-guide/index.md)
 
 * [BepInEx v5.4.15](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.15): 這是最基礎的外掛框架，有了它其他東西才會生效  
   這裡下載 BepInEx\_x64\_5.\*.zip 回來，把所有東西解壓進遊戲根目錄  
@@ -135,43 +135,43 @@ hot = true
 > ※標有 ☆ 符號者為推薦外掛，如果想要正常讀別人的存檔，你最好安裝他們  
 > (請善用 Ctrl+F 搜尋 ☆ 符號)
 
-* [jim60105/KK](/2020/05/personal-koikatu-plugin.html) {{ch(body="對，這些是我寫 der")}}
+* [jim60105/KK](@/Koikatu/personal-koikatu-plugin/index.md) {{ch(body="對，這些是我寫 der")}}
 
-  > 請到 [\[Koikatu\] コイカツ！ ( Koikatu / Koikatsu / 戀愛活動 ) 個人插件介紹匯整](/2020/05/personal-koikatu-plugin.html)  
+  > 請到 [\[Koikatu\] コイカツ！ ( Koikatu / Koikatsu / 戀愛活動 ) 個人插件介紹匯整](@/Koikatu/personal-koikatu-plugin/index.md)  
   > 閱讀專門介紹頁
   
-  * [Coordinate Load Option v1.3.1](/2019/03/koikatu-coordinate-load-option.html)  
+  * [Coordinate Load Option v1.3.1](@/Koikatu/coordinate-load-option/index.md)  
     載入服裝卡片時，可以選擇要載入的細項，包括飾品個別選擇
-  * [Studio Transgender Loading v1.1.0](/2019/04/koikatu-studio-transgender-loading.html)  
+  * [Studio Transgender Loading v1.1.0](@/Koikatu/studio-transgender-loading/index.md)  
     實現 Studio 跨性別替換角色功能
-  * ☆[Studio Simple Color On Girls v1.3.0](/2019/04/koikatu-studio-simple-color-on-girls.html)  
+  * ☆[Studio Simple Color On Girls v1.3.0](@/Koikatu/studio-simple-color-on-girls/index.md)  
     使女性支持單色化功能
-  * [Studio Chara Only Load Body v1.4.2](/2019/05/koikatu-studio-chara-only-load-body.html)  
+  * [Studio Chara Only Load Body v1.4.2](@/Koikatu/studio-chara-only-load-body/index.md)  
     保留衣服和飾品，只替換人物
-  * [Studio Reflect FK Fix v1.1.0](/2019/05/koikatu-studio-reflect-fk-fix.html)  
+  * [Studio Reflect FK Fix v1.1.0](@/Koikatu/studio-reflect-fk-fix/index.md)  
     修正「IK→FK」功能會重置手勢和脖子的問題，並增加了一個複製當前脖子方向到 FK「→FK (首)」的功能
-  * ☆[Studio Text Plugin v1.2.0](/2019/06/koikatu-studio-text-plugin.html)  
+  * ☆[Studio Text Plugin v1.2.0](@/Koikatu/studio-text-plugin/index.md)  
     在 Studio 內添加文字物件
-  * [Studio Auto Close Loading Scene Window v1.1.1](/2019/07/koikatu-studio-auto-close-loading-scene-window.html)  
+  * [Studio Auto Close Loading Scene Window v1.1.1](@/Koikatu/studio-auto-close-loading-scene-window/index.md)  
     Studio Load Scene 視窗處，在 Import 或 Load 後可以自動關閉視窗
-  * [Plugin List Tool v1.1.0](/2020/01/koikatu-plugin-list-tool.html)  
+  * [Plugin List Tool v1.1.0](@/Koikatu/plugin-list-tool/index.md)  
     導出當前遊戲中**已加載的** BepInEx 插件和 IPA 插件清單
-  * [FBI Open Up v1.2.1](/2020/01/koikatu-fbi-open-up.html)  
+  * [FBI Open Up v1.2.1](@/Koikatu/fbi-open-up/index.md)  
     此插件可依照原始角色，將她們向模板角色轉變。預設為蘿化，也可以用來做三頭身化。
-  * [PNG Capture Size Modifier v1.6.1](/2020/02/koikatu-png-capture-size-modifier.html)  
+  * [PNG Capture Size Modifier v1.6.1](@/Koikatu/png-capture-size-modifier/index.md)  
     可調所有 PNG 存檔的拍照尺寸、調整 Maker 中的檔案選擇器顯示列數、放大 Studio SceneData 選擇器的選中預覧、給 PNG 存檔加上浮水印角標
-  * [Studio Chika Replacer v1.2.0](/2020/02/koikatu-studio-chika-replacer.html)  
+  * [Studio Chika Replacer v1.2.0](@/Koikatu/studio-chika-replacer/index.md)  
     一鍵把 Studio 內的所有女角色都換成千佳 (預設角色)，並保留原始人物的身形數據
-  * [Studio Chara Light Linked To Camera v1.2.0](/2020/03/koikatu-studio-chara-light-linked-to-camera.html)  
-    將 Studio 角色光和視角間之旋轉值連動，詳見[預覧](/2020/03/koikatu-studio-chara-light-linked-to-camera.html)對比
-  * [Studio Dual Screen v1.2.0](/2020/03/koikatu-studio-dual-screen.html)  
+  * [Studio Chara Light Linked To Camera v1.2.0](@/Koikatu/studio-chara-light-linked-to-camera/index.md)  
+    將 Studio 角色光和視角間之旋轉值連動，詳見[預覧](@/Koikatu/studio-chara-light-linked-to-camera/index.md)對比
+  * [Studio Dual Screen v1.2.0](@/Koikatu/studio-dual-screen/index.md)  
     啟用 Studio 的第二顯示器功能，**必需要有實體雙顯示器才能使用**
-  * [Studio Save Workspace Order Fix v1.1.0](/2020/05/koikatu-studio-save-workspace-order-fix.html)  
+  * [Studio Save Workspace Order Fix v1.1.0](@/Koikatu/studio-save-workspace-order-fix/index.md)  
     以 Studio 的存檔邏輯，工作區中，在第一層之物件排序是以加入順序儲存 → 修改為以實際順序儲存
-  * ☆[Save Load Compression v1.5.0](/2020/06/koikatu-save-load-compression.html)  
+  * ☆[Save Load Compression v1.5.0](@/Koikatu/save-load-compression/index.md)  
     使用 LZMA 對 CharaFile、CoordinateFile、Studio SceneData 存檔做壓縮  
     提供網頁版壓縮 / 解壓縮工具:<https://slcweb.maki0419.com>
-  * [Coordinate Capture Pose Unlock v1.1.0](/2020/06/koikatu-coordinate-capture-pose-unlock.html)  
+  * [Coordinate Capture Pose Unlock v1.1.0](@/Koikatu/coordinate-capture-pose-unlock/index.md)  
     解除拍照服裝存檔時的姿勢限制
 * ☆[KKS\_UncensorSelector v3.11.4](https://github.com/IllusionMods/KK%5FPlugins#uncensorselector)
   (立體步兵補丁): 騎兵有馬，步兵 (ry)，和 kPlug 衝突
@@ -282,7 +282,7 @@ hot = true
 * ☆[VN\_Game\_Engine(VNGE) v32](https://mega.nz/#F!oiB2wAQK!ojGIzlAN-1B-263uUDEalQ!Jm5xAIbA)  VN 引擎，用來做文字選項遊戲和寫 Script，語言是 Python。  
   相關插件: 將相關插件檔案 (應為 \*.py 和一些附加內容) 放入 VNGE 的「Console\Lib\」目錄下
   * Scene Save State ([使用教學](https://mega.nz/#F!U2wADQRD!7Qzfk4D3qoU%5FZ0P26cgLLg)) 在 Scene 裡儲存角色狀態，讓你 \*\*\*\* 用同一個人物去改變動作、位置等，取代複數的同一人物，以減輕電腦負擔 \*\*。
-  * VNText 這是 [Studio Text Plugin](/2019/06/koikatu-studio-text-plugin.html) 的 VN Port
+  * VNText 這是 [Studio Text Plugin](@/Koikatu/studio-text-plugin/index.md) 的 VN Port
   * VNAnime 制作關鍵幀動畫
   * VNScene 制作 VN (Virtual Novel)
   * Pose, Face, Status, Hands libraries 以標籤、群組分類保存 Pose 等等

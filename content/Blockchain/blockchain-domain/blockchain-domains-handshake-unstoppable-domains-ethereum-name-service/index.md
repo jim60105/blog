@@ -115,7 +115,7 @@ IPFS 上的網頁和鏈上的 IPFS CID 一定是由網站擁有者上傳，而�
 * <span class="success">契合現有的 DNS 系統</span>，只需要把 resolver 換掉
 * <span class="danger">不完全去中心化</span>，但已把最重要的部份上鏈
 * 在鏈上寫 TXT、NS、DS records，<span class="danger">指向外部</span>個人域名伺服器
-* 網域取得是採用[競標，第二高價者得標](/2022/01/handshake-blockchain-domain-auction.html#handshake%E7%B6%B2%E5%9F%9F%E7%9A%84%E7%AB%B6%E6%A8%99%E8%A6%8F%E5%89%87)，一次性付費
+* 網域取得是採用[競標，第二高價者得標](@/Blockchain/blockchain-domain/handshake-blockchain-domain-auction/index.md#auction-rule)，一次性付費
 
 > 基本上，以夠高的價格下標不太熱門的網域就很少有人來搶，就有機會以 0 元得標 (因為沒有第二高價者)
 

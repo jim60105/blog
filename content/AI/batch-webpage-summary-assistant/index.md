@@ -25,7 +25,7 @@ banner = "preview.png"
 
 ## 前言
 
-正如其名，這個助手的主要功能是**批次處理大量網頁，為每個網頁生成精簡而全面的摘要**。它是我在設計[「摘要索引與全文參考方法」](/2024/08/say-goodbye-to-ai-hallucinations-a-simple-method-to-Improve-the-accuracy-of-your-rag-system.html)時製作的輔助工具。
+正如其名，這個助手的主要功能是**批次處理大量網頁，為每個網頁生成精簡而全面的摘要**。它是我在設計[「摘要索引與全文參考方法」](@/AI/say-goodbye-to-ai-hallucinations-a-simple-method-to-Improve-the-accuracy-of-your-rag-system/index.md)時製作的輔助工具。
 
 使用 Batch Webpage Summary Assistant 非常簡單。只需要輸入多行網頁 URL，它就會自動抓取這些網頁的內容，生成摘要，並返回包含 URL 和摘要的 json 輸出。在處理大量網頁資料的場景，這個工具能極大地簡化了摘要索引的知識庫建立過程。
 

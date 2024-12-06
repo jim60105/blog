@@ -19,7 +19,7 @@ disclaimer = "本文於 2021 年撰寫時是使用 Service Workers 格式，[現
 
 ## 前言
 
-去年我曾寫過一支 Cloudflare worker，[用做 Nextcloud 的 img 網域縮址](/2020/07/docker-nextcloud.html#img%E5%9C%96%E7%89%87%E7%B8%AE%E5%9D%80)  
+去年我曾寫過一支 Cloudflare worker，[用做 Nextcloud 的 img 網域縮址](@/Container/nextcloud/index.md#img-router)  
 當時是初探，純粹採用線上編輯器撰寫，功能只是簡單的 routing
 
 這幾天我寫了個[新的 random 功能](https://github.com/jim60105/worker-img%5Frouter#%E9%9A%A8%E6%A9%9F%E5%9C%96%E7%89%87%E5%8A%9F%E8%83%BD)，並趁這個機會把專案做了重構；改寫為 TypeScript；切割檔案，以 Webpack 打包部屬；將可變更的設定值改以環境變數傳遞，增加專案重用性

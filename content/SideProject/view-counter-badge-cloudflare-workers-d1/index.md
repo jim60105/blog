@@ -120,4 +120,4 @@ iscn = "iscn://likecoin-chain/QtqpvBsnP3QM8w-GOALiQOHdgZzkY52bd1vg73Gj3D4/"
 > 延伸閱讀
 >
 > ---
-> [琳的備忘手札: Cloudflare Workers入門 ─ 簡介](/2021/02/cloudflare-workers-introduction.html)
+> [琳的備忘手札: Cloudflare Workers入門 ─ 簡介](@/Cloudflare/cloudflare-workers-introduction/index.md)

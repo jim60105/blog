@@ -46,7 +46,7 @@ card = "2018-08-06%2017%2055%2037.png"
 
 本系列分成兩篇敘述，上篇老少皆宜，下篇屬於困難級，請適當斟酌
 
-[上篇 - 建立開機 USB](/2017/07/usb-usb.html):
+[上篇 - 建立開機 USB](@/SystemAdmin/creating-multi-boot-usb-and-modifying-boot-menu/index.md):
 
 1. 處理磁碟分割及引導
 2. 安裝 Base 模式 (8G)
@@ -56,7 +56,7 @@ card = "2018-08-06%2017%2055%2037.png"
 6. 測試成果
 7. 注意事項
 
-[下篇 - 加入 Windows To Go 系統](/2017/07/usb3.html):
+[下篇 - 加入 Windows To Go 系統](@/SystemAdmin/creating-multi-boot-usb-and-modifying-boot-menu3/index.md):
 
 1. 製作 Win10 VHD
 2. 設置 BCD 引導
@@ -207,7 +207,7 @@ Base + Add + Add\_xp + Tools(All) + VHD
 * XP 安裝完成後會跳出一個亂碼視窗提到「Firadisk」字眼，此為「引導安裝光碟時所需要的驅動」的刪除程式，輸入 Y 即可執行刪除
 * **請切記一定要注意：勿遺漏隱藏文件**
 
-本系列分成上下兩篇，請接著閱讀[下篇](/2017/07/usb3.html)
+本系列分成上下兩篇，請接著閱讀[下篇](/SystemAdmin/creating-multi-boot-usb-and-modifying-boot-menu3/index.md)
 
 ## 檔案來源
 
