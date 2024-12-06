@@ -26,7 +26,7 @@ hot = true
 >
 > ---
 > 關於 **監控、自動下載** 請見這篇  
-> [\[Docker\] 直播監控、自動影片下載筆記 ( Youtube 、 Twitch 、 TwitCasting 、 Twitter Spaces 音訊空間)](@/Livestream/auto-monitor-youtube-download.md)
+> [\[Docker\] 直播監控、自動影片下載筆記 ( Youtube 、 Twitch 、 TwitCasting 、 Twitter Spaces 音訊空間)](@/Livestream/auto-monitor-youtube-download/index.md)
 >
 > ---
 > 你可能也想看  
@@ -553,4 +553,4 @@ mkclean in.mkv out.mkv
 > ---
 >
 > * [雲端硬碟影片檔串流播放之研究手札 (OneDrive 、 Google Drive 、 MEGA)](@/Livestream/streaming-video-files-in-network-space/index.md)
-> * [\[Docker\] 直播監控、自動影片下載筆記 ( Youtube 、 Twitch 、 TwitCasting 、 Twitter Spaces 音訊空間)](@/Livestream/auto-monitor-youtube-download.md)
+> * [\[Docker\] 直播監控、自動影片下載筆記 ( Youtube 、 Twitch 、 TwitCasting 、 Twitter Spaces 音訊空間)](@/Livestream/auto-monitor-youtube-download/index.md)

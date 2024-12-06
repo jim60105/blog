@@ -18,9 +18,10 @@ tags = [
 
 [extra]
 iscn = "iscn://likecoin-chain/Zyffo_xXdY9tey8jRREjFiwTdw8rntU6nCsa3t60rRk/1"
+card = "preview.png"
 +++
 
-![container](../auto-monitor-youtube-download.png)
+![container](preview.png)
 
 ## 前言
 

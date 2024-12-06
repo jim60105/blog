@@ -281,7 +281,7 @@ Holodex 可以做到複雜的版面設定，而且還能做音訊管理。
 > 專文介紹
 >
 > ---
-> [琳的備忘手札: \[Docker\] 直播監控、自動影片下載筆記 (Youtube、Twitch、TwitCasting、Twitter Spaces 音訊空間)](@/Livestream/auto-monitor-youtube-download.md)
+> [琳的備忘手札: \[Docker\] 直播監控、自動影片下載筆記 (Youtube、Twitch、TwitCasting、Twitter Spaces 音訊空間)](@/Livestream/auto-monitor-youtube-download/index.md)
 
 ## 小工具
 
