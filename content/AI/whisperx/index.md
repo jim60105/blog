@@ -10,17 +10,16 @@ aliases = [ "/2023/10/whisperx-ai.html" ]
 tags = [ "AI" ]
 
 [extra]
-iscn = """
-iscn://likecoin-chain/i6XMdfLq3nGAU_inrEqxpsDKOlCbHyUkwJZLl-U1aXk
-"""
+iscn = "iscn://likecoin-chain/i6XMdfLq3nGAU_inrEqxpsDKOlCbHyUkwJZLl-U1aXk/1"
 hot = true
+banner = "preview.png"
 
   [extra.comments]
   id = "111330195388066336"
 +++
 ## 前言
 
-![WhisperX](../whisperx.png)
+![WhisperX](preview.png)
 
 上個月買遊戲拿到了 FANZA 的折抵金，為了花掉它買了平常沒在聽的 ASMR，然後發現
 

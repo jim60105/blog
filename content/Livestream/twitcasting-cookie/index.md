@@ -11,8 +11,9 @@ tags = [ "Livestream", "TwitCasting" ]
 
 [extra]
 poor = true
+banner = "preview.png"
 +++
-[![](../twitcasting-cookie.png)](../twitcasting-cookie.png)
+[![](preview.png)](preview.png)
 
 {{ch(body="其實上圖就是一切了....")}}
 

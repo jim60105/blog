@@ -179,7 +179,7 @@ tags = [ "JavaScript", "Livestream" ]
 Youtube:OneDrive:TwitCasting ツイキャス:
 
 > 對於有密碼鎖的影片，請延伸閱讀  
-> [TwitCasting每次播放都要求輸入密碼？不要一直問我！](@/Livestream/twitcasting-cookie.md)
+> [TwitCasting每次播放都要求輸入密碼？不要一直問我！](@/Livestream/twitcasting-cookie/index.md)
 
 ## 字幕
 
