@@ -13,7 +13,7 @@ tags = [ "Koikatu", "Koikatsu Sunshine" ]
 banner = "../preview/demo4.gif"
 +++
 
-[![image](../preview/demo4.gif)](../preview/demo4.gif)
+[![image](/Koikatu/preview/demo4.gif)](/Koikatu/preview/demo4.gif)
 
 保留衣服和飾品，只替換人物
 

@@ -16,7 +16,7 @@ tags = [ "Koikatu", "Koikatsu Sunshine" ]
 banner = "../preview/demo3.gif"
 +++
 
-[![](../preview/demo3-1.gif)](../preview/demo3-1.gif)
+[![](/Koikatu/preview/demo3-1.gif)](/Koikatu/preview/demo3-1.gif)
 
 使女性支持單色化功能
 

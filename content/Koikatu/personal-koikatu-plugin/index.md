@@ -1,8 +1,8 @@
 +++
-title = "[Koikatu] コイカツ！ 個人插件介紹匯整 (Koikatsu Sunshine / 戀愛活動) "
+title = "[Koikatu] コイカツ！ 個人插件介紹匯整 (Koikatsu Sunshine/戀愛活動) "
 description = "此文列出我所有的 Koikatu 插件作品。"
 date = 2020-07-28T19:44:00.072Z
-updated = 2023-05-19T14:01:59.489Z
+updated = "2024-12-06T22:48:44.889Z"
 aliases = [ "/2020/05/personal-koikatu-plugin.html" ]
 
 [taxonomies]
@@ -11,9 +11,7 @@ tags = [ "Koikatsu Sunshine", "Koikatu", "C#" ]
 [extra]
 banner = "preview.jpg"
 featured = true
-scripts = [
-  "Koikatu/personal-koikatu-plugin/index.js",
-]
+scripts = [ "Koikatu/personal-koikatu-plugin/index.js" ]
 hot = true
 +++
 

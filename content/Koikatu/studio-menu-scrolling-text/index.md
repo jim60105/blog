@@ -13,7 +13,7 @@ tags = [ "Koikatu" ]
 card = "../preview/demo20.png"
 +++
 
-{{ video(url="../preview/demo20.mp4", alt="Studio Menu Scrolling Text video", controls=true, loop=true, autoplay=true, muted=true) }}
+{{ video(url="/Koikatu/preview/demo20.mp4", alt="Studio Menu Scrolling Text video", controls=true, loop=true, autoplay=true, muted=true) }}
 
 * 在 Studio 的添加物品內，群組清單和分類清單文字添加滾動顯示功能
 * 滾動速度可在 Config 調節
@@ -21,7 +21,7 @@ card = "../preview/demo20.png"
 
 ## 自訂文字之說明
 
-[![](../preview/demo20-1.png)](../preview/demo20-1.png)
+[![](/Koikatu/preview/demo20-1.png)](/Koikatu/preview/demo20-1.png)
 
 * 撰寫 `.csv` 文件，名稱隨意
 * 預設存放在 `根目錄\BepInEx\plugins\jim60105\KK_StudioMenuScrollingText` 之下，此路徑可在 Config 更改

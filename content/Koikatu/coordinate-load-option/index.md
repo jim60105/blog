@@ -19,7 +19,7 @@ iscn = "iscn://likecoin-chain/cdlnJ1pUNVS0PN3RI3I_D2twlb5ezIL4JqTGb5i2BtM/1"
 featured = true
 hot = true
 +++
-{{ video(url="../preview/demo1.mp4", alt="Coordinate Load Option video", controls=true, loop=true, autoplay=true, muted=true) }}
+{{ video(url="preview/demo1.mp4", alt="Coordinate Load Option video", controls=true, loop=true, autoplay=true, muted=true) }}
 
 ## 主要功能
 

@@ -13,11 +13,11 @@ tags = [ "Koikatu", "C#" ]
 card = "../preview/demo21.png"
 poor = true
 +++
-[![](../preview/demo21.png)](../preview/demo21.png)
+[![](/Koikatu/preview/demo21.png)](/Koikatu/preview/demo21.png)
 
-[![](../preview/demo21-1.png)](../preview/demo21-1.png)
+[![](/Koikatu/preview/demo21-1.png)](/Koikatu/preview/demo21-1.png)
 
-[![](../preview/demo21-2.png)](../preview/demo21-2.png)
+[![](/Koikatu/preview/demo21-2.png)](/Koikatu/preview/demo21-2.png)
 
 > 這個不是 Plugin 而是 Script，**請用 [ScriptLoader](https://github.com/denikson/BepInEx.ScriptLoader) 載入執行**
 

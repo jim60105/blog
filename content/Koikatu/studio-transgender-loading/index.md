@@ -18,7 +18,7 @@ banner = "../preview/demo2.gif"
 hot = true
 +++
 
-[![](../preview/demo2.gif)](../preview/demo2.gif)
+[![](/Koikatu/preview/demo2.gif)](/Koikatu/preview/demo2.gif)
 
 以此插件可以實現跨性別替換角色功能
 

@@ -98,9 +98,9 @@ Mega 如果不會下載，我應該幫不到你
 > ---
 > [コイカツ！ BepInEx框架 v4.X→v5.X升級指南](@/Koikatu/bepinex-upgrade-guide/index.md)
 
-[![](../bepinex-upgrade-guide/1.png)](../bepinex-upgrade-guide/1.png)
+[![](/Koikatu/bepinex-upgrade-guide/1.png)](/Koikatu/bepinex-upgrade-guide/1.png)
 
-[![](../bepinex-upgrade-guide/2.png)](../bepinex-upgrade-guide/2.png)
+[![](/Koikatu/bepinex-upgrade-guide/2.png)](/Koikatu/bepinex-upgrade-guide/2.png)
 
 ### \*.zip
 

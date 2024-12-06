@@ -16,7 +16,7 @@ tags = [ "Koikatu", "Koikatsu Sunshine" ]
 banner = "../preview/demo8.png"
 +++
 
-[![image](../preview/demo8.png)](../preview/demo8.png)
+[![image](/Koikatu/preview/demo8.png)](/Koikatu/preview/demo8.png)
 
 * 此工具可導出當前遊戲中已加載的 BepInEx 插件和 IPA 插件
 * 格式為 Json 和 CSV

@@ -16,7 +16,7 @@ tags = [ "Koikatu", "Koikatsu Sunshine" ]
 card = "../preview/demo19.jpg"
 +++
 
-[![](../preview/demo19.jpg)](../preview/demo19.jpg)
+[![](/Koikatu/preview/demo19.jpg)](/Koikatu/preview/demo19.jpg)
 
 解除拍照服裝存檔時的姿勢限制<!--more-->
 

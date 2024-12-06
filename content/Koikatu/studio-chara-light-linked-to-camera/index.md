@@ -16,7 +16,7 @@ tags = [ "Koikatu", "Koikatsu Sunshine" ]
 card = "../preview/demo13.jpg"
 +++
 
-{{ video(url="../preview/demo13.mp4", alt="Studio Chara Light Linked To Camera Video", controls=true, loop=true, autoplay=true, muted=true) }}
+{{ video(url="/Koikatu/preview/demo13.mp4", alt="Studio Chara Light Linked To Camera Video", controls=true, loop=true, autoplay=true, muted=true) }}
 
 * 將 Studio 角色光和視角間之旋轉值連動
 * 鎖定狀態能隨著 SceneData 儲存

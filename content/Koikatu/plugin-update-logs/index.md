@@ -13,21 +13,23 @@ tags = [ "Koikatu", "Koikatsu Sunshine" ]
 +++
 [![](banner.png)](banner.png)
 
+{% alert(important=true) %}
+此頁只做記錄用，請到此鏈結尋找下載和其它資訊。
+
+このページはロギング専用です。  
+ダウンロードやその他の詳細については、このリンクにアクセスしてください。
+
+This page is only for logging, please go to this link for download and other details.
+
+[>> コイカツ！個人插件介紹匯整 <<](@/Koikatu/personal-koikatu-plugin/index.md)
+{% end %}<!-- more -->
+
 ---
 
-<div style="text-align: center;">
-  <a href="https://github.com/jim60105/KK/commits/KKSunshine" target="_blank">GitHub Commit History</a>
-</div>
+{% alert(note=true) %}
+[GitHub Commit History](https://github.com/jim60105/KK/commits/KKSunshine)
+{% end %}
 
----
-
-<div style="text-align: center;">
-  此頁只做Log記錄用，請到下方鏈結尋找下載和其它資訊。<br />このページはロギング専用です。<br />ダウンロードやその他の詳細については、このリンクにアクセスしてください。<br />This
-  page is only for logging, please go to this link for download and other
-  details.<br />
-  <font size="6"><a href="@/Koikatu/personal-koikatu-plugin/index.md">&gt;&gt;&gt; コイカツ！個人插件介紹匯整 &lt;&lt;&lt;</a></font>
-</div>
-<!-- more -->
 ---
 
 <div class="container">

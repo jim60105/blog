@@ -17,7 +17,7 @@ card = "../preview/demo18.png"
 featured = true
 +++
 
-[![](../preview/demo18.png)](../preview/demo18.png)
+[![](/Koikatu/preview/demo18.png)](/Koikatu/preview/demo18.png)
 
 {% alert(caution=true) %}
 經過壓縮的檔案不能在無此插件的遊戲中讀取
@@ -50,11 +50,11 @@ featured = true
 
 ## 網頁版工具
 
-[![](../preview/demo18_3.png)](../preview/demo18%5F3.png)
+[![](/Koikatu/preview/demo18_3.png)](/Koikatu/preview/demo18%5F3.png)
 
-[![](../preview/demo18_1.png)](../preview/demo18%5F1.png)
+[![](/Koikatu/preview/demo18_1.png)](/Koikatu/preview/demo18%5F1.png)
 
-[![](../preview/demo18_2.png)](../preview/demo18%5F2.png)
+[![](/Koikatu/preview/demo18_2.png)](/Koikatu/preview/demo18%5F2.png)
 
 我以 Blazor wasm 技術撰寫了網頁版工具: <https://slcweb.maki0419.com>
 

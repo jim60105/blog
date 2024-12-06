@@ -13,8 +13,8 @@ tags = [ "Koikatu", "Koikatsu Sunshine" ]
 banner = "../preview/demo5-3.png"
 +++
 
-{{ video(url="../preview/demo5-1.mp4", alt="Studio Reflect FK Fix video1", controls=true, loop=true, autoplay=true, muted=true) }}
-{{ video(url="../preview/demo5-2.mp4", alt="Studio Reflect FK Fix video2", controls=true, loop=true, autoplay=true, muted=true) }}
+{{ video(url="/Koikatu/preview/demo5-1.mp4", alt="Studio Reflect FK Fix video1", controls=true, loop=true, autoplay=true, muted=true) }}
+{{ video(url="/Koikatu/preview/demo5-2.mp4", alt="Studio Reflect FK Fix video2", controls=true, loop=true, autoplay=true, muted=true) }}
 
 修改兩個功能:
 

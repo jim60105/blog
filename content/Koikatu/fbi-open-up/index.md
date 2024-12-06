@@ -18,8 +18,8 @@ iscn = "iscn://likecoin-chain/QEHgpUPrvtcteiTiKfw0x5XpaECGGnHYzCjbgwsy9uw/1"
 hot = true
 +++
 
-[![](../preview/demo9.png)](../preview/demo9.png)
-{{ video(url="../preview/demo9.mp4", alt="FBI Open Up video", controls=true, loop=true, autoplay=true, muted=true) }}
+[![](/Koikatu/preview/demo9.png)](/Koikatu/preview/demo9.png)
+{{ video(url="/Koikatu/preview/demo9.mp4", alt="FBI Open Up video", controls=true, loop=true, autoplay=true, muted=true) }}
 
 * 此插件可依照原始角色，將她們轉變為小蘿莉
 * **支援替換模板角色**，例如:
@@ -32,7 +32,7 @@ hot = true
 
 ## 使用說明
 
-[![](../preview/demo9-1.png)](../preview/demo9-1.png)
+[![](/Koikatu/preview/demo9-1.png)](/Koikatu/preview/demo9-1.png)
 
 1. 功能觸發圖標為一{{cr(body="紅色書包")}}，位置紀錄如下
    * Studio: 位在「Add」→「女角色」

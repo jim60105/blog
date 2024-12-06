@@ -13,7 +13,7 @@ tags = [ "C#", "Koikatu", "Koikatsu Sunshine" ]
 card = "../PluginDataReader.png"
 featured = true
 +++
-[![](../PluginDataReader.png)](../PluginDataReader.png)
+[![](/Koikatu/PluginDataReader.png)](/Koikatu/PluginDataReader.png)
 
 * 讀出 png 文件中的所有 ExtendedSave 插件數據
 * 非常適合檢查使用的 Sideloader mods

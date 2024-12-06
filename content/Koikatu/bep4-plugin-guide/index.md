@@ -14,7 +14,7 @@ banner = "preview.jpg"
 archive = """
 這篇指南是BepInEx v4.X的最後版本  
 資料已過時, 僅留給考古學家參考  
-請前往[對應BepInEx v5.X之安裝指南](../bep5-plugin-guide)"""
+請前往[對應BepInEx v5.X之安裝指南](/Koikatu/bep5-plugin-guide)"""
 +++
 文章最後更新時間: 2019/10/24  
 
@@ -109,17 +109,17 @@ archive = """
 
 * [jim60105/KK](https://github.com/jim60105/KK) ~~首先，我要安麗我自己寫的東西ww~~
   * [Koikatu StudioCoordinateLoadOption v3.0.2](@/Koikatu/coordinate-load-option/index.md) Studio載入服裝卡片時，可以選擇要載入的細項，包括飾品個別選擇  
-   [![](../preview/demo1.gif)](../preview/demo1.gif)
+   [![](/Koikatu/preview/demo1.gif)](/Koikatu/preview/demo1.gif)
   * [Koikatu StudioAllGirlsPlugin v1.3.1](@/Koikatu/studio-transgender-loading/index.md) 這會將Studio SceneData內所有男性以女性讀入，實現跨性別替換角色功能  
-   [![](../preview/demo2.gif)](../preview/demo2.gif)
+   [![](/Koikatu/preview/demo2.gif)](/Koikatu/preview/demo2.gif)
   * [Koikatu StudioSimpleColorOnGirls v1.0.4](@/Koikatu/studio-simple-color-on-girls/index.md) 使女性支持單色化功能，用意在於彌補全女插件所造成的限制  
-   [![](../preview/demo3.gif)](../preview/demo3.gif)
+   [![](/Koikatu/preview/demo3.gif)](/Koikatu/preview/demo3.gif)
   * [Koikatu StudioCharaOnlyLoadBody v1.3.4](@/Koikatu/studio-chara-only-load-body/index.md) 保留衣服和飾品，只替換人物  
-   [![](../preview/demo4.gif)](../preview/demo4.gif)
+   [![](/Koikatu/preview/demo4.gif)](/Koikatu/preview/demo4.gif)
   * [Koikatu StudioReflectFKFix v1.0.2](@/Koikatu/studio-reflect-fk-fix/index.md) 改造了「IK→FK」按鈕的功能，並增加了一個複製當前脖子方向到FK「→FK(首)」的功能
   * [Koikatu StudioTextPlugin v1.1.0](@/Koikatu/studio-text-plugin/index.md) 在Studio內添加文字物件
   * [Koikatu StudioAutoCloseLoadingSceneWindow v1.0.0](@/Koikatu/studio-auto-close-loading-scene-window/index.md) Studio Load Scene視窗處，在Import或Load後自動關閉視窗  
-   [![](../preview/demo7.png)](../preview/demo7.png)
+   [![](/Koikatu/preview/demo7.png)](/Koikatu/preview/demo7.png)
 * [KKAPI v1.5.1](https://github.com/ManlyMarco/KKAPI/releases/tag/v1.5.1) 先裝這個再裝下面幾個常用MOD  
   (MakerAPI.dll已經過時，立刻給我把他丟了)
   * [Koikatsu ABMX V3.3](https://github.com/ManlyMarco/KKABMX/releases/tag/v3.3) 增加更多的捏角選項

@@ -16,7 +16,7 @@ tags = [ "C#", "Koikatu" ]
 card = "../preview/demo15.jpg"
 +++
 
-{{ video(url="../preview/demo15.mp4", alt="Studio Body Overwrite Script video", controls=true, loop=true, autoplay=true, muted=true) }}
+{{ video(url="/Koikatu/preview/demo15.mp4", alt="Studio Body Overwrite Script video", controls=true, loop=true, autoplay=true, muted=true) }}
 
 這個不是 Plugin 而是 Script，**請用 [ScriptLoader](https://github.com/denikson/BepInEx.ScriptLoader) 載入執行**
 
