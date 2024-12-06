@@ -14,11 +14,11 @@ aliases = [
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
 
 [extra]
-banner = "../demo2.gif"
+banner = "../preview/demo2.gif"
 hot = true
 +++
 
-[![](../demo2.gif)](../demo2.gif)
+[![](../preview/demo2.gif)](../preview/demo2.gif)
 
 以此插件可以實現跨性別替換角色功能
 

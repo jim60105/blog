@@ -8,13 +8,13 @@ aliases = [ "/2015/02/VMwareRunningPhysicalSystem.html" ]
 
 [extra]
 featured = true
-banner = "2015-02-28 07 35 58.png"
+banner = "preview.png"
 
 [taxonomies]
 tags = [ "Linux", "System Admin" ]
 +++
 
-[![](2015-02-28%2007%2035%2058.png)](2015-02-28%2007%2035%2058.png)
+[![](preview.png)](preview.png)
 
 ## 寫作緣由
 

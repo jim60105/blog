@@ -10,10 +10,10 @@ aliases = [ "/2019/05/koikatu-studio-chara-only-load-body.html" ]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
 
 [extra]
-banner = "../demo4.gif"
+banner = "../preview/demo4.gif"
 +++
 
-[![image](../demo4.gif)](../demo4.gif)
+[![image](../preview/demo4.gif)](../preview/demo4.gif)
 
 保留衣服和飾品，只替換人物
 

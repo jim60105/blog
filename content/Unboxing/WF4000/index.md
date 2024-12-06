@@ -10,12 +10,12 @@ aliases = ["/2014/08/WF4000.html"]
 tags = ["開箱文"]
 
 [extra]
-card = "IMG_20140816_224013.jpg"
+card = "preview.jpg"
 +++
 
 ## 購入緣由
 
-[![](IMG_20140816_224013.jpg)](IMG%5F20140816%5F224013.jpg)
+[![](preview.jpg)](preview.jpg)
 
 2014/6/24 我裝了 RAM 車架，裝了 RAM-B-202U (手機架)  
 這天我會永遠記得.... 因為那是我第一次車禍的日子  
@@ -55,7 +55,7 @@ WF4000 讓我看上的優點主要是它是使用 GoPro 式的夾具，RAM 有�
 
 本體正面
 
-[![](IMG_20140816_224013.jpg)](IMG%5F20140816%5F224013.jpg)
+[![](preview.jpg)](preview.jpg)
 
 本體上方有按鍵 \* 3
 

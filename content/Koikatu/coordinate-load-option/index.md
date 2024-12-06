@@ -14,12 +14,12 @@ aliases = [
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
 
 [extra]
-card = "../demo1-2.png"
+card = "../preview/demo1-2.png"
 iscn = "iscn://likecoin-chain/cdlnJ1pUNVS0PN3RI3I_D2twlb5ezIL4JqTGb5i2BtM/1"
 featured = true
 hot = true
 +++
-{{ video(url="../demo1.mp4", alt="Coordinate Load Option video", controls=true, loop=true, autoplay=true, muted=true) }}
+{{ video(url="../preview/demo1.mp4", alt="Coordinate Load Option video", controls=true, loop=true, autoplay=true, muted=true) }}
 
 ## 主要功能
 

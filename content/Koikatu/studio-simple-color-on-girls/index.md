@@ -13,10 +13,10 @@ aliases = [
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
 
 [extra]
-banner = "../demo3.gif"
+banner = "../preview/demo3.gif"
 +++
 
-[![](../demo3-1.gif)](../demo3-1.gif)
+[![](../preview/demo3-1.gif)](../preview/demo3-1.gif)
 
 使女性支持單色化功能
 

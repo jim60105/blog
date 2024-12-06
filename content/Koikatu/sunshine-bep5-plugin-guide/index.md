@@ -10,7 +10,7 @@ aliases = [ "/2021/08/koikatsu-sunshine-bep5-plugin-guide.html" ]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
 
 [extra]
-card = "kks_main0827b.png"
+card = "preview.png"
 iscn = "iscn://likecoin-chain/rtxrL8i4xKTDgZw8blO709mJWa-KdzDxwEkVnG1xpIM/1"
 trigger = "由於 イリュージョン 收攤，本文的官網連結已全數死去"
 archive = """
@@ -22,7 +22,7 @@ hot = true
 +++
 
 <figure>
-{{ image(url="kks_main0827b.png", alt="官圖") }}
+{{ image(url="preview.png", alt="官圖") }}
 <figcaption>(官圖)</figcaption>
 </figure>
 

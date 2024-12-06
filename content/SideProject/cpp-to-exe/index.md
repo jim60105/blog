@@ -10,7 +10,7 @@ aliases = ["/2013/04/c-usbggww-c-1.html"]
 tags = []
 
 [extra]
-banner = "1.png"
+banner = "preview.png"
 +++
 
 有鑑於老師教的那一大串好麻煩，就做了這個東西。一樣是用 C++ 做的喔\~\~  
@@ -34,7 +34,7 @@ banner = "1.png"
 1\. 把檔案解壓開來會得到一個 exe 檔 & 一個資料夾  
 那個資料夾正如所說不要改名或刪除
 
-![](1.png)
+![](preview.png)
 
 2\. 將你要編譯的 cpp 檔案丟進來  
 然後執行 exe 檔

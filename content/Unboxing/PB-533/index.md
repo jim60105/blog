@@ -9,7 +9,7 @@ aliases = [ ]
 tags = [ "開箱文" ]
 
 [extra]
-card = "DSCN1793.JPG"
+card = "preview.jpg"
 +++
 
 然後，三號現身了\~\~
@@ -26,7 +26,7 @@ card = "DSCN1793.JPG"
 
 它連一次電都沒有充滿過..
 
-[![](DSCN1793.JPG)](DSCN1793.JPG)
+[![](preview.jpg)](preview.jpg)
 <!-- more -->
 後來上 BESTA 官網竟然找不到這款，卻找到這個
 

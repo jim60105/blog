@@ -10,10 +10,10 @@ aliases = ["/2018/08/vr.html"]
 tags = ["開箱文"]
 
 [extra]
-banner = "DSC06969.JPG"
+banner = "preview.jpg"
 +++
 
-[![](DSC06969.JPG)](DSC06969.JPG)
+[![](preview.jpg)](preview.jpg)
 
 ## 前言
 

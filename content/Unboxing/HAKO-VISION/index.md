@@ -9,9 +9,9 @@ aliases = [ ]
 tags = [ "開箱文" ]
 
 [extra]
-card = "IMG_20140821_195014.jpg"
+card = "preview.jpg"
 +++
-[![](IMG_20140821_195014.jpg)](IMG%5F20140821%5F195014.jpg)
+[![](preview.jpg)](preview.jpg)
 
 ## 購入緣由
 
@@ -32,7 +32,7 @@ card = "IMG_20140821_195014.jpg"
 首先是外觀  
 我是在沒屋頂網購的，兩個含運NT350
 
-[![](IMG_20140821_195014.jpg)](IMG%5F20140821%5F195014.jpg)
+[![](preview.jpg)](preview.jpg)
 
 Tell Your World / 二次元ドリームフィーバー  
 

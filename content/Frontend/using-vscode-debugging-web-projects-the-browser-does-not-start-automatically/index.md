@@ -12,10 +12,10 @@ aliases = [
 tags = [ ]
 
 [extra]
-banner = "VSCode-debugging-Web-projects.jpg"
+banner = "preview.jpg"
 +++
 
-![VSCode偵錯Web專案時，瀏覧器未自動啟動](VSCode-debugging-Web-projects.jpg)
+![VSCode偵錯Web專案時，瀏覧器未自動啟動](preview.jpg)
 
 ## 本文
 

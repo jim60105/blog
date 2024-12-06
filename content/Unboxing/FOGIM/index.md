@@ -9,9 +9,9 @@ aliases = [ ]
 tags = [ "開箱文" ]
 
 [extra]
-card = "IMG_20141028_192213.jpg"
+card = "preview.jpg"
 +++
-[![](IMG_20141028_192213.jpg)](IMG%5F20141028%5F192213.jpg)
+[![](preview.jpg)](preview.jpg)
 
 雙螢幕超爽拉wwwwwwwwww  
   <!-- more -->
@@ -71,7 +71,7 @@ card = "IMG_20141028_192213.jpg"
 整個設計得十分牢固，價格也可接受  
 24" 螢幕裝上去完全沒問題  
   
-[![](IMG_20141028_192213.jpg)](IMG%5F20141028%5F192213.jpg)
+[![](preview.jpg)](preview.jpg)
 
 最後我要說  
   

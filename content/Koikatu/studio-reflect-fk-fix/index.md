@@ -10,11 +10,11 @@ aliases = [ "/2019/05/koikatu-studio-reflect-fk-fix.html" ]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
 
 [extra]
-banner = "../demo5-3.png"
+banner = "../preview/demo5-3.png"
 +++
 
-{{ video(url="../demo5-1.mp4", alt="Studio Reflect FK Fix video1", controls=true, loop=true, autoplay=true, muted=true) }}
-{{ video(url="../demo5-2.mp4", alt="Studio Reflect FK Fix video2", controls=true, loop=true, autoplay=true, muted=true) }}
+{{ video(url="../preview/demo5-1.mp4", alt="Studio Reflect FK Fix video1", controls=true, loop=true, autoplay=true, muted=true) }}
+{{ video(url="../preview/demo5-2.mp4", alt="Studio Reflect FK Fix video2", controls=true, loop=true, autoplay=true, muted=true) }}
 
 修改兩個功能:
 

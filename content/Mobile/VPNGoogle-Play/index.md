@@ -9,7 +9,7 @@ aliases = [ ]
 tags = [ ]
 
 [extra]
-card = "2014-06-13%2001%2011%2048.png"
+card = "preview.png"
 archive = "明顯地已失效。"
 +++
 
@@ -18,7 +18,7 @@ archive = "明顯地已失效。"
 1. 在此下載 SoftEther VPN Client + VPN Gate Client 插件:  
   <http://www.vpngate.net/cn/download.aspx>
 
-    [![](2014-06-13%2001%2011%2048.png)](2014-06-13%2001%2011%2048.png)
+    [![](preview.png)](preview.png)
 
 2. 安裝他，其中注意這裡選擇第一項
 

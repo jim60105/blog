@@ -13,13 +13,14 @@ extra = { }
 [taxonomies]
 tags = [ "JavaScript", "Livestream" ]
 +++
-## 前言
-
-![](preview.png)
 
 > 此專案已重寫為[Chrome擴充功能](@/SideProject/chrome-extension-youtube-clip-playlist/index.md)
 
-![GitHub tag](https://img.shields.io/github/tag/jim60105/YoutubeClipPlaylist?style=for-the-badge) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/jim60105/Playlists/minify?label=PLAYLIST%20UPDATE&style=for-the-badge) ![GitHub](https://img.shields.io/github/license/jim60105/YoutubeClipPlaylist?style=for-the-badge) ![Tampermonkey](https://img.shields.io/static/v1?style=for-the-badge&message=Tampermonkey&color=00485B&logo=Tampermonkey&logoColor=FFFFFF&label=) ![YouTube](https://img.shields.io/static/v1?style=for-the-badge&message=YouTube&color=FF0000&logo=YouTube&logoColor=FFFFFF&label=) ![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=)
+![GitHub tag](https://img.shields.io/github/tag/jim60105/YoutubeClipPlaylist?style=for-the-badge#badge) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/jim60105/Playlists/minify?label=PLAYLIST%20UPDATE&style=for-the-badge#badge) ![GitHub](https://img.shields.io/github/license/jim60105/YoutubeClipPlaylist?style=for-the-badge#badge) ![Tampermonkey](https://img.shields.io/static/v1?style=for-the-badge&message=Tampermonkey&color=00485B&logo=Tampermonkey&logoColor=FFFFFF&label=#badge) ![YouTube](https://img.shields.io/static/v1?style=for-the-badge&message=YouTube&color=FF0000&logo=YouTube&logoColor=FFFFFF&label=#badge) ![JavaScript](https://img.shields.io/static/v1?style=for-the-badge&message=JavaScript&color=222222&logo=JavaScript&logoColor=F7DF1E&label=#badge)
+
+## 前言
+
+![](preview.png)
 
 這是截選播放清單功能，專門設計來聽Vtuber的歌枠
 

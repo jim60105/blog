@@ -10,7 +10,7 @@ aliases = [ "/2014/03/nexg-max200.html" ]
 tags = [ ]
 
 [extra]
-card = "DSCN2899.JPG"
+card = "preview.jpg"
 +++
 
 後面圖片手機渣畫質見諒 Orz
@@ -36,7 +36,7 @@ G-MAX150 新版後土除 \* 1
 收到網購的土除  
 新版水冷 G-MAX 後土除要 200 元
 
-[![](DSCN2899.JPG)](DSCN2899.JPG)
+[![](preview.jpg)](preview.jpg)
 
 [![](DSCN2893.JPG)](DSCN2893.JPG)
 

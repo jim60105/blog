@@ -9,7 +9,7 @@ aliases = [ ]
 tags = [ "開箱文" ]
 
 [extra]
-card = "DSC_0020.jpg"
+card = "preview.jpg"
 +++
 ## FREEing No.168a QUEEN'S BLADE 女皇之刃 冥土誘惑者 艾莉
   
@@ -20,7 +20,7 @@ card = "DSC_0020.jpg"
 手機渣畫質我就不詳細開箱了  
 以下純粹自爽wwwwww  
 <!-- more -->
-[![](DSC_0020.jpg)](DSC%5F0020.jpg)
+[![](preview.jpg)](preview.jpg)
 
 [![](DSC_0021.jpg)](DSC%5F0021.jpg)
 
@@ -38,7 +38,7 @@ card = "DSC_0020.jpg"
 
 ↑支撐架神難用
 
-[![](DSC_00200.jpg)](DSC%5F00200.jpg)
+[![](preview0.jpg)](preview0.jpg)
 
 ↑以後這裡就是你家了喔wwwww  
 請多指教((鞠躬

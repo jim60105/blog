@@ -10,13 +10,13 @@ aliases = [ "/2022/01/youtube-download-ytdlp-ffmpeg.html" ]
 tags = [ "Livestream", "TwitCasting", "Twitch", "Youtube", "yt-dlp" ]
 
 [extra]
-card = "ytdlp.png"
+card = "preview.png"
 iscn = "iscn://likecoin-chain/69fa80Yx0lIjGsTIh4_3tbyd836EYAW2649Tngv8DUo/1"
 featured = true
 hot = true
 +++
 
-![yt-dlp](ytdlp.png)
+![yt-dlp](preview.png)
 
 ## 序言
 

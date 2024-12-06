@@ -12,7 +12,7 @@ aliases = [
 tags = [ "AI" ]
 
 [extra]
-banner = "book.png"
+banner = "preview.png"
 iscn = "iscn://likecoin-chain/glaRLMBBdqLeNQDKZFhhfLHA0aeZxUDYqpWwHs79_vc/2"
 featured = true
 
@@ -21,7 +21,7 @@ featured = true
 +++
 <figure>
 
-  ![a book](book.png)
+  ![a book](preview.png)
   <figcaption><a href="https://civitai.com/images/27051549">Made with Flux.1-dev</a></figcaption>
 </figure>
 

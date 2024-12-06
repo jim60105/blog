@@ -10,14 +10,14 @@ aliases = [ "/2019/01/android-app-pm25-airbox-lass.html" ]
 tags = [ "Android" ]
 
 [extra]
-card = "lung.png"
+card = "preview.png"
 featured = true
 +++
 
 ## 前言
 
 <aside>
-{{ image(url="lung.png", no_hover=true, transparent=true) }}
+{{ image(url="preview.png", no_hover=true, transparent=true) }}
 </aside>
 
 2018 年底寫了一個手機 App，專門用來看我家窗外的 PM 測站。功能很簡單，用 App Inventor 兩天就寫完了。  

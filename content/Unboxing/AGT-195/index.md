@@ -10,7 +10,7 @@ aliases = [ ]
 tags = [ "開箱文" ]
 
 [extra]
-card = "DSC_0138.jpg"
+card = "preview.jpg"
 +++
 昨天去巨匠報名了JAVA+Android APP+IOS APP課程  
 然後周年慶送了這個w  
@@ -20,7 +20,7 @@ card = "DSC_0138.jpg"
 不廢話上圖/  
 外盒  
   
-[![](DSC_0138.jpg)](DSC%5F0138.jpg)
+[![](preview.jpg)](preview.jpg)
   
 打開來就放在正中間  
   

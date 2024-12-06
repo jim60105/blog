@@ -14,7 +14,7 @@ aliases = [
 tags = [ "Koikatu" ]
 
 [extra]
-card = "CharaStudio-2020-02-04-03-45-01-Render.JPG"
+card = "preview.jpg"
 trigger = "由於 イリュージョン 收攤，本文的官網連結已全數死去"
 archive = """
 本篇指南為對應 MoreAccessories **v1.1.0** 的最終版本號<br>
@@ -34,7 +34,7 @@ hot = true
 +++
 
 <figure>
-{{ image(url="CharaStudio-2020-02-04-03-45-01-Render.JPG", alt="(角色是我家的，但是原始Scene不是我做的)") }}
+{{ image(url="preview.jpg", alt="(角色是我家的，但是原始Scene不是我做的)") }}
 <figcaption>(角色是我家的，但是原始Scene不是我做的)</figcaption>
 </figure>
 
@@ -440,7 +440,7 @@ Darkness 必須要最後安裝，且 Darkness 被諸多插件列為依賴
 * [StudioCameraObjectTweaks v1.0](https://www.patreon.com/posts/studiocameraobje-44720834) 修改 Studio 中的 Camera (透過 camera 按鈕添加的那一個)，讓它初始在當前視角而不是游標處，並初始為隱藏。
 * [KK\_OrthographicCamera v1.1.2](https://www.patreon.com/posts/31909622) 按鍵 I 切換至平行視角相機
 * ☆[KK\_NightDarkener v1.2](https://www.patreon.com/posts/25922951) 讓夜晚濾鏡變得更黑  
-  [![](preview.png)](preview.png)
+  [![](dark.png)](dark.png)
 * [KK\_UniformUniforms v1.1](https://github.com/ManlyMarco/KK%5FUniformUniforms/releases/tag/v1.1) 本篇遊戲內的制服更換器，一鍵幫大家穿校服
 * [Koikatu Gamepad Support v2.0.2](https://www.patreon.com/posts/41364207) 添加搖桿支持
 * [KK\_WarpToCharacters v1.1.1](https://www.patreon.com/posts/kk-v1-0-39735695) 在校園中的角色名簿添加「跳躍至她身旁」的按鈕，取代 KK\_MoveMapFromCharaList

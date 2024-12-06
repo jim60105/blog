@@ -10,10 +10,10 @@ aliases = [ "/2020/11/github-verified-gpg-commit.html" ]
 tags = [ ]
 
 [extra]
-card = "gpg.png"
+card = "preview.png"
 +++
 
-[![](gpg.png)](gpg.png)
+[![](preview.png)](preview.png)
 
 最近我重新深入學習了 git，並好好檢視了自己的 GitHub 頁面  
 以前就注意到了這個酷炫的 Verified 標誌，在 GitHub 線上改 README 時會被自動加上，在本地 commit 就沒有  

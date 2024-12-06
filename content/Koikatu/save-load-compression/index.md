@@ -13,11 +13,11 @@ aliases = [
 tags = [ "Koikatsu Sunshine", "Koikatu", "C#" ]
 
 [extra]
-card = "../demo18.png"
+card = "../preview/demo18.png"
 featured = true
 +++
 
-[![](../demo18.png)](../demo18.png)
+[![](../preview/demo18.png)](../preview/demo18.png)
 
 {% alert(caution=true) %}
 經過壓縮的檔案不能在無此插件的遊戲中讀取
@@ -50,11 +50,11 @@ featured = true
 
 ## 網頁版工具
 
-[![](../demo18_3.png)](../demo18%5F3.png)
+[![](../preview/demo18_3.png)](../preview/demo18%5F3.png)
 
-[![](../demo18_1.png)](../demo18%5F1.png)
+[![](../preview/demo18_1.png)](../preview/demo18%5F1.png)
 
-[![](../demo18_2.png)](../demo18%5F2.png)
+[![](../preview/demo18_2.png)](../preview/demo18%5F2.png)
 
 我以 Blazor wasm 技術撰寫了網頁版工具: <https://slcweb.maki0419.com>
 

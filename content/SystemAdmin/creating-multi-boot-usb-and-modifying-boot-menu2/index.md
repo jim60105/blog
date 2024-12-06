@@ -10,10 +10,10 @@ aliases = [ "null" ]
 tags = [ "System Admin" ]
 
 [extra]
-card = "main.png"
+card = "preview.png"
 +++
 
-[![](main.png)](main.png)
+[![](preview.png)](preview.png)
 
 [![](%25E5%25AE%2589%25E8%25A3%259DOS.png)](%25E5%25AE%2589%25E8%25A3%259DOS.png)
 

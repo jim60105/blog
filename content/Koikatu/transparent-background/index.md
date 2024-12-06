@@ -13,9 +13,8 @@ aliases = [
 tags = [ "Koikatu" ]
 
 [extra]
-banner = "../demo17.jpg"
+banner = "../preview/demo17.jpg"
 +++
-
 {{ youtube(id="1ooTUL_F4_s") }}
 
 * 透明視窗和背景，可顯示和點擊視窗下的東西 (Click Through 功能)

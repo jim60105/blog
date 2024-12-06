@@ -9,9 +9,9 @@ aliases = [ ]
 tags = [ ]
 
 [extra]
-card = "image.png"
+card = "preview.png"
 +++
-[![](image.png)](image.png)
+[![](preview.png)](preview.png)
 
 ## 創作緣由
 

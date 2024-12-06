@@ -10,11 +10,11 @@ aliases = [ "/2019/06/koikatu-studio-text-plugin.html" ]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
 
 [extra]
-banner = "../demo6-2.JPG"
+banner = "../preview/demo6-2.JPG"
 featured = true
 +++
 
-{{ video(url="../demo6.mp4", alt="Studio Text Plugin video", controls=true, loop=true, autoplay=true, muted=true) }}
+{{ video(url="../preview/demo6.mp4", alt="Studio Text Plugin video", controls=true, loop=true, autoplay=true, muted=true) }}
 
 * 從「add→アイテム→**2D 効果→文字 Text**」加載，右側選中後在 anim 選單編輯
 * 文字物件可修改字體、大小、樣式、顏色、錨點位置、對齊 (換行後顯示選項)

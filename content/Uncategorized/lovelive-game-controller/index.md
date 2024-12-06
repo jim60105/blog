@@ -10,11 +10,11 @@ aliases = [ "/2014/05/lovelive.html" ]
 tags = [ ]
 
 [extra]
-banner = "IMG_20140528_040854.jpg"
+banner = "preview.jpg"
 featured = true
 +++
 
-[![](IMG_20140528_040854.jpg)](IMG%5F20140528%5F040854.jpg)
+[![](preview.jpg)](IMG%5F20140528%5F040854.jpg)
 
 前幾天半夜看到了這位大大的影片
 
@@ -339,7 +339,7 @@ VPN 啥的我不講
 
 結束\~\~((灑花✧\*｡٩(ˊᗜˋ\*)و✧\*｡
 
-[![](IMG_20140528_040854.jpg)](IMG%5F20140528%5F040854.jpg)
+[![](preview.jpg)](IMG%5F20140528%5F040854.jpg)
 
 ---
 

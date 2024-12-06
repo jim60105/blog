@@ -9,14 +9,14 @@ aliases = [ ]
 tags = [ "開箱文" ]
 
 [extra]
-card = "DSCN1778.JPG"
+card = "preview.jpg"
 +++
 **首先，我買這個沒有做過功課，而且還是網購。((←根本找死www**
 
 直接上圖，這是我在良興購物網上看到的角度(的另一側)  
 <http://www.eclife.com.tw/payeasy/moreinfo%5F69049.htm>
 
-[![](DSCN1778.JPG)](DSCN1778.JPG)
+[![](preview.jpg)](preview.jpg)
 <!-- more -->
 塑膠膜別在意我怕之後要退沒有撕
 

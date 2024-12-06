@@ -13,10 +13,10 @@ aliases = [
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
 
 [extra]
-card = "../demo16.png"
+card = "../preview/demo16.png"
 +++
 
-[![](../demo16.png)](../demo16.png)
+[![](../preview/demo16.png)](../preview/demo16.png)
 
 * 以 Studio 的存檔邏輯，工作區中，在第一層之物件排序是以加入順序儲存  
   → 修改為以實際順序儲存

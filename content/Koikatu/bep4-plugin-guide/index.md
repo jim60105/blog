@@ -10,7 +10,7 @@ aliases = [ "/2018/10/koikatu-bep4-plugin-guide.html" ]
 tags = [ "Koikatu" ]
 
 [extra]
-banner = "lpmyY7.jpg"
+banner = "preview.jpg"
 archive = """
 這篇指南是BepInEx v4.X的最後版本  
 資料已過時, 僅留給考古學家參考  
@@ -19,7 +19,7 @@ archive = """
 文章最後更新時間: 2019/10/24  
 
 <figure>
-{{ image(url="lpmyY7.jpg") }}
+{{ image(url="preview.jpg") }}
 <figcaption>Amazon JP直送¥18369，真香</figcaption>
 </figure>
 
@@ -109,17 +109,17 @@ archive = """
 
 * [jim60105/KK](https://github.com/jim60105/KK) ~~首先，我要安麗我自己寫的東西ww~~
   * [Koikatu StudioCoordinateLoadOption v3.0.2](@/Koikatu/coordinate-load-option/index.md) Studio載入服裝卡片時，可以選擇要載入的細項，包括飾品個別選擇  
-   [![](../demo1.gif)](../demo1.gif)
+   [![](../preview/demo1.gif)](../preview/demo1.gif)
   * [Koikatu StudioAllGirlsPlugin v1.3.1](@/Koikatu/studio-transgender-loading/index.md) 這會將Studio SceneData內所有男性以女性讀入，實現跨性別替換角色功能  
-   [![](../demo2.gif)](../demo2.gif)
+   [![](../preview/demo2.gif)](../preview/demo2.gif)
   * [Koikatu StudioSimpleColorOnGirls v1.0.4](@/Koikatu/studio-simple-color-on-girls/index.md) 使女性支持單色化功能，用意在於彌補全女插件所造成的限制  
-   [![](../demo3.gif)](../demo3.gif)
+   [![](../preview/demo3.gif)](../preview/demo3.gif)
   * [Koikatu StudioCharaOnlyLoadBody v1.3.4](@/Koikatu/studio-chara-only-load-body/index.md) 保留衣服和飾品，只替換人物  
-   [![](../demo4.gif)](../demo4.gif)
+   [![](../preview/demo4.gif)](../preview/demo4.gif)
   * [Koikatu StudioReflectFKFix v1.0.2](@/Koikatu/studio-reflect-fk-fix/index.md) 改造了「IK→FK」按鈕的功能，並增加了一個複製當前脖子方向到FK「→FK(首)」的功能
   * [Koikatu StudioTextPlugin v1.1.0](@/Koikatu/studio-text-plugin/index.md) 在Studio內添加文字物件
   * [Koikatu StudioAutoCloseLoadingSceneWindow v1.0.0](@/Koikatu/studio-auto-close-loading-scene-window/index.md) Studio Load Scene視窗處，在Import或Load後自動關閉視窗  
-   [![](../demo7.png)](../demo7.png)
+   [![](../preview/demo7.png)](../preview/demo7.png)
 * [KKAPI v1.5.1](https://github.com/ManlyMarco/KKAPI/releases/tag/v1.5.1) 先裝這個再裝下面幾個常用MOD  
   (MakerAPI.dll已經過時，立刻給我把他丟了)
   * [Koikatsu ABMX V3.3](https://github.com/ManlyMarco/KKABMX/releases/tag/v3.3) 增加更多的捏角選項
@@ -205,7 +205,7 @@ archive = """
 * [Koikatu Image\_Series\_Recorder\_v1.0](https://www.patreon.com/posts/22927657) 按Left Shift + R打開視窗，連續拍圖功能，用來製作GIF用  
 ※小心使用，用高設定值會直接讓電腦當機※
 * [KK\_NightDarkener v1.1.1](https://github.com/ManlyMarco/Koikatu-Gameplay-Mod/releases/tag/v1.4.2) 讓夜晚濾鏡變得更黑  
-[![](preview.png)](preview.png)
+[![](dark.png)](dark.png)
 * [Koikatu Gameplay Mod v1.4.2](https://github.com/ManlyMarco/Koikatu-Gameplay-Mod/releases/tag/v1.4.2) 對主遊戲增加一些功能
 * [KK\_OrthographicCamera v1.0](https://github.com/ManlyMarco/Koikatu-Gameplay-Mod/releases/tag/o1.0) 按鍵I切換至平行視角相機
 * [Koikatu Gampad Support v1.0.1](https://github.com/ManlyMarco/KK%5FGamepadSupport/releases/tag/v1.0.1) 添加搖桿支持

@@ -13,7 +13,7 @@ aliases = [
 tags = [ "Koikatu" ]
 
 [extra]
-banner = "../demo10.gif"
+banner = "../preview/demo10.gif"
 archive = """
 KSOX自v6.0起將此插件標為不相容<br>
 它重新實作了此插件的主要功能，但沒有做「存入衣裝存檔」功能，並且沒有任何向後兼容方案<br>
@@ -32,7 +32,7 @@ KSOX自v6.0起將此插件標為不相容<br>
 > 在這 8 個月的缺口內，你在 KSOX v6.0\~v6.0.5 所做的修改或許會出問題  
 > 去檢查下你的老婆變成什麼模樣了吧！
 
-{{ video(url="../demo10-2.mp4", alt="Chara Overlays Based On Coordinate video", controls=true, loop=true, autoplay=true, muted=true) }}
+{{ video(url="../preview/demo10-2.mp4", alt="Chara Overlays Based On Coordinate video", controls=true, loop=true, autoplay=true, muted=true) }}
 
 * 讓所有角色 Overlay (Iris、Face、Body Overlay) 隨著服裝變更，反映在人物存檔和服裝存檔上
 * 此插件在「讀存」跟「切換服裝」時覆蓋 Overlay，依賴 KSOX 運作

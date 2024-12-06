@@ -10,7 +10,7 @@ aliases = ["/2013/04/win7ap.html"]
 tags = []
 
 [extra]
-card = "5.jpg"
+card = "preview.jpg"
 +++
   
 會去搞這個其實是因為我想要給PSV上網，又不想用手機開熱點。畢竟T1的宿網就在面前，玩PSO2不給他用下去實在是非常浪費呢\~\~然後上網估狗找到了Connectify，不過PSV死活就是連不上。用cmd執行"netsh wlan set hostednetwork"的話就可以，後來我有找到問題所在!!!(第6點注目\~\~)
@@ -38,7 +38,7 @@ card = "5.jpg"
 1.將載下來的東西解壓縮  
 以系統管理員身分運行"開無線分享(以管理員身分運行).exe"這個程式
   
-![](5.jpg)
+![](preview.jpg)
   
 2.請依照提示依序輸入欲設定的無線AP帳號密碼(下圖為成功運行的狀態)
   

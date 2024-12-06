@@ -10,11 +10,11 @@ aliases = ["/2019/11/koikatsu-bepinex-upgrade-guide.html"]
 tags = ["Koikatu"]
 
 [extra]
-banner = "OcuxIZ.jpg"
+banner = "preview.jpg"
 +++
 
 <figure>
-{{ image(url="OcuxIZ.jpg") }}
+{{ image(url="preview.jpg") }}
 <figcaption>(角色是我家的，但是原始Scene不是我做的)</figcaption>
 </figure>
 

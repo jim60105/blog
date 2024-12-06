@@ -10,7 +10,7 @@ aliases = [ "/2022/06/chrome-extension-youtube-clip-playlist.html" ]
 tags = [ "JavaScript", "Livestream", "Youtube", "TwitCasting" ]
 
 [extra]
-card = "ChromeWebStore/preview.png"
+card = "preview.png"
 iscn = "iscn://likecoin-chain/2fdhShCP5c6UejXKF9ZOwwl4v1cZPyp8RrbzcYpjt_o/1"
 featured = true
 
@@ -20,13 +20,11 @@ featured = true
 
 {{ youtube(id="xuc4Buob22o") }}
 
-## 前言
-
-![](ChromeWebStore/preview.png)
-
 ![GitHub tag](https://img.shields.io/github/tag/jim60105/YoutubeClipPlaylist?style=for-the-badge#badge) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/jim60105/YoutubeClipPlaylist?style=for-the-badge#badge) ![LICENSE](https://img.shields.io/github/license/jim60105/YoutubeClipPlaylist?style=for-the-badge#badge)  
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/kdlhjpdoaabhpolkaghkjklfcdfjapkh?style=for-the-badge#badge)](https://chrome.google.com/webstore/detail/youtube-clip-playlist/kdlhjpdoaabhpolkaghkjklfcdfjapkh#badge) ![Chrome Web Store](https://img.shields.io/chrome-web-store/users/kdlhjpdoaabhpolkaghkjklfcdfjapkh?style=for-the-badge#badge) ![Bootstrap](https://img.shields.io/static/v1?style=for-the-badge\&message=Bootstrap\&color=7952B3\&logo=Bootstrap\&logoColor=FFFFFF\&label=#badge) ![TypeScript](https://img.shields.io/static/v1?style=for-the-badge\&message=TypeScript\&color=3178C6\&logo=TypeScript\&logoColor=FFFFFF\&label=#badge) ![Webpack](https://img.shields.io/static/v1?style=for-the-badge\&message=Webpack\&color=222222\&logo=Webpack\&logoColor=8DD6F9\&label=#badge)  
 ![Google Chrome](https://img.shields.io/static/v1?style=for-the-badge\&message=Google+Chrome\&color=4285F4\&logo=Google+Chrome\&logoColor=FFFFFF\&label=#badge) ![YouTube](https://img.shields.io/static/v1?style=for-the-badge\&message=YouTube\&color=FF0000\&logo=YouTube\&logoColor=FFFFFF\&label=#badge) ![Microsoft OneDrive](https://img.shields.io/static/v1?style=for-the-badge\&message=Microsoft+OneDrive\&color=0078D4\&logo=Microsoft+OneDrive\&logoColor=FFFFFF\&label=#badge) ![Google Drive](https://img.shields.io/static/v1?style=for-the-badge\&message=Google+Drive\&color=4285F4\&logo=Google+Drive\&logoColor=FFFFFF\&label=#badge)
+
+## 前言
 
 這是截選播放清單擴充功能，在 Youtube/OneDrive/GoogleDrive/TwitCasting 上直接播放「起始\~ 結束時間」影片片段。  
 此工具專門設計來聽 Vtuber 的歌枠，這是我對於歌回烤肉的程式解
@@ -65,9 +63,9 @@ featured = true
 * 單擊中間的紅色播放按鈕，播放**所有**播放清單
 * 單擊播放清單列表，播放**單一**播放清單
 
-[![](ChromeWebStore/UI.png)](ChromeWebStore/UI.png)
+[![](UI.png)](UI.png)
 
-[![](ChromeWebStore/UI2.png)](ChromeWebStore/UI2.png)
+[![](UI2.png)](UI2.png)
 
 ### 禁用歌單功能
 
@@ -113,17 +111,17 @@ featured = true
 > 若發現歌詞有錯誤，請在[這裡](https://github.com/jim60105/Lyrics/issues/new/choose)回報。  
 > 請務必提供該歌曲的 Share 連結，以便我能夠快速修正錯誤歌曲
 
-[![](ChromeWebStore/lyric.png)](ChromeWebStore/lyric.png)
+[![](lyric.png)](lyric.png)
 
 ↓啟用後↓
 
-[![](ChromeWebStore/play.png)](ChromeWebStore/play.png)
+[![](play.png)](play.png)
 
 ### ASS 字幕功能
 
 此工具支援載入 WebVTT 字幕 (.vtt)、ASS 字幕 (.ass)、lrc 歌詞 (.lrc)，可將字幕直鏈傳入歌單之 SubSrc 欄位
 
-[![](ChromeWebStore/Sub.png)](ChromeWebStore/Sub.png)
+[![](Sub.png)](Sub.png)
 
 ## 參數說明
 

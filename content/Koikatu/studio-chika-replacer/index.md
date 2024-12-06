@@ -13,10 +13,10 @@ aliases = [
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
 
 [extra]
-banner = "../demo12.gif"
+banner = "../preview/demo12.gif"
 +++
 
-[![](../demo12.gif)](../demo12.gif)
+[![](../preview/demo12.gif)](../preview/demo12.gif)
 
 * 一鍵把 Studio 內的所有女角色都換成千佳 (預設角色)，並保留原始人物的身形數據
 * 或可自訂要用來替換的角色

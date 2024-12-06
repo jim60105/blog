@@ -13,10 +13,10 @@ aliases = [
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
 
 [extra]
-card = "../demo19.jpg"
+card = "../preview/demo19.jpg"
 +++
 
-[![](../demo19.jpg)](../demo19.jpg)
+[![](../preview/demo19.jpg)](../preview/demo19.jpg)
 
 解除拍照服裝存檔時的姿勢限制<!--more-->
 

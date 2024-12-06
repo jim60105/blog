@@ -10,11 +10,11 @@ aliases = [ ]
 tags = [ ]
 
 [extra]
-card = "IMG_20140616_171103.jpg"
+card = "preview.jpg"
 poor = true
 +++
 
-[![](IMG_20140616_171103.jpg)](IMG%5F20140616%5F171103.jpg)
+[![](preview.jpg)](preview.jpg)
 
 網購了這個  
 花了一兩個小時設定，試用了 5 分鐘  

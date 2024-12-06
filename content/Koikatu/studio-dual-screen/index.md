@@ -13,7 +13,7 @@ aliases = [
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
 
 [extra]
-card = "../demo14.png"
+card = "../preview/demo14.png"
 +++
 
 {{ youtube(id="zrIIoW44bsQ") }}

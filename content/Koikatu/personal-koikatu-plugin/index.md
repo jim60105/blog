@@ -9,7 +9,7 @@ aliases = [ "/2020/05/personal-koikatu-plugin.html" ]
 tags = [ "Koikatsu Sunshine", "Koikatu", "C#" ]
 
 [extra]
-banner = "CharaStudio-2019-12-22-14-45-35-Render.JPG"
+banner = "preview.jpg"
 featured = true
 scripts = [
   "Koikatu/personal-koikatu-plugin/index.js",
@@ -18,7 +18,7 @@ hot = true
 +++
 
 <figure>
-{{ image(url="CharaStudio-2019-12-22-14-45-35-Render.JPG") }}
+{{ image(url="preview.jpg") }}
 <figcaption>(角色是我家的，但是原始Scene不是我做的)</figcaption>
 </figure>
 

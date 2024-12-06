@@ -10,11 +10,11 @@ aliases = [ "/2024/01/cloudflare-pages.html" ]
 tags = [ "JavaScript", "Cloudflare" ]
 
 [extra]
-card = "card.jpg"
+card = "preview.jpg"
 +++
 <figure>
 
-![以 Cloudflare Pages 打造低成本高流量的即時投票系統](card.jpg)
+![以 Cloudflare Pages 打造低成本高流量的即時投票系統](preview.jpg)
 <figcaption>Image Generated with Microsoft Bing Designer</figcaption>
 </figure>
 
