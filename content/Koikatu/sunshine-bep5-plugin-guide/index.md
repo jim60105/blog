@@ -63,7 +63,7 @@ hot = true
   <https://mega.nz/folder/98YkVTpa#6tzx99sDwQbcTw929uLG1w>  
 
   <figure>
-  {{ image(url="UNInhXC.jpg", alt="使用方法") }}
+  {{ image(url="/Koikatu/bep5-plugin-guide/UNInhXC.jpg", alt="使用方法") }}
   <figcaption>使用方法，圖片點擊放大</figcaption>
   </figure>
 
