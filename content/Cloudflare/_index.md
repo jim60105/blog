@@ -60,7 +60,7 @@ transparent = true
 
 # Use aliases if you are moving content but want to redirect previous URLs to the
 # current one. This takes an array of paths, not URLs.
-aliases = []
+aliases = ["/search/label/Cloudflare"]
 
 # If set to "true", feed files will be generated for this section at the
 # section's root path. This is independent of the site-wide variable of the same
