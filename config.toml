@@ -240,7 +240,7 @@ source_url = "https://github.com/jim60105/blog"
 #
 # Additional JavaScript scripts; expects them to be in the "./static/" directory.
 #
-scripts = ["mastodon-embed.js", "copy-to-clipboard.js"]
+scripts = ["tracking.js", "mastodon-embed.js", "copy-to-clipboard.js"]
 #
 # Whether to show "copy code" button on all code blocks
 # that have the language set.
@@ -383,3 +383,11 @@ show_qr = true
 layout = false
 # Don't load any styles for debugging purposes
 no_styles = false
+
+[extra.tracking]
+# Enable
+enable = true
+# Google Analytics tracking ID
+ga = "G-306HHXMK36"
+# Microsoft Clarity tracking ID
+clarity = "jndqift7sy"
