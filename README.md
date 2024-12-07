@@ -17,5 +17,5 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 
 | File | Description |
 | --- | --- |
-| `article.html` | Add likecoin iframe |
+| `article.html` | - Add likecoin iframe<br>- Add iscn badge |
 | `partials/nav.html` | Change the Feed button to copy to clipboard: Add onclick event |

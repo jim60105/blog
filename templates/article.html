@@ -61,6 +61,14 @@
 								</span>
 							{%- endif -%}
 						{%- endif -%}
+
+						{%- if page.extra.iscn -%}
+							<a href="https://app.like.co/view/{{ page.extra.iscn | urlencode_strict }}" target="_blank" rel="noopener noreferrer">
+								<img id="iscn" src="https://static.like.co/badge/iscn/{{ page.extra.iscn }}.svg?dark=1&responsive=1#no-hover#pixels#badge" alt="View counter badge"/></a>
+							<span>
+								{{ config.extra.separator | default(value="•") }}
+							</span>
+						{%- endif %}
 					</small>
 				</p>
 			{%- endif -%}
@@ -76,6 +84,7 @@
 					</ul>
 				{%- endfor -%}
 			{%- endif %}
+
 		</div>
 
 		<div id="buttons-container">

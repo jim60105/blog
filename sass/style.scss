@@ -55,6 +55,14 @@ main {
   // Fix content width
   width: min(var(--container-width), 90vw);
 
+  #heading #iscn {
+    vertical-align: middle;
+    margin: 0;
+    box-shadow: none;
+    padding: 0;
+    height: 2em;
+  }
+
   & > h1 {
     border-width: 0px;
     background: transparent;
