@@ -353,7 +353,7 @@ show_powered_by = true
 show_source = false
 # Custom copyright text
 #
-copyright = "Copyright © by 琳(jim60105) Since 2010."
+copyright = "Copyright © by 琳(jim60105) Since 2010. <img id=\"counter\" src=\"https://view-counter.jim60105.workers.dev/?style=classic&labelColor=141414&color=555&scale=1#no-hover#pixels#badge\" alt=\"View counter badge\"/>"
 
 # Based on https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/
 #
