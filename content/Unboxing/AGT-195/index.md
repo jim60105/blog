@@ -7,7 +7,8 @@ draft = false
 aliases = [ ]
 
 [taxonomies]
-tags = [ "開箱文" ]
+tags = [ ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 card = "preview.jpg"

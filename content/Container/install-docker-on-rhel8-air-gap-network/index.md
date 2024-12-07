@@ -8,6 +8,7 @@ aliases = [ "/2024/07/install-docker-on-rhel8-air-gap-network.html" ]
 
 [taxonomies]
 tags = [ "Docker", "Linux", "RHEL/Fedora" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.png"

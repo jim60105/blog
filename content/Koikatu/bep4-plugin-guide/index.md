@@ -8,6 +8,7 @@ aliases = [ "/2018/10/koikatu-bep4-plugin-guide.html" ]
 
 [taxonomies]
 tags = [ "Koikatu" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.jpg"

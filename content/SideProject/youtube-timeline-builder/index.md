@@ -8,6 +8,7 @@ aliases = [ "/2022/09/youtube-timeline-builder.html" ]
 
 [taxonomies]
 tags = [ "Excel/SpreadSheets", "Livestream", "Youtube" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.png"

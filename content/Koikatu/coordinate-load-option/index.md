@@ -12,6 +12,7 @@ aliases = [
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "../preview/demo1-2.png"

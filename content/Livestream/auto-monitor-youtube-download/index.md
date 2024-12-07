@@ -15,6 +15,7 @@ tags = [
   "Youtube",
   "yt-dlp"
 ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 iscn = "iscn://likecoin-chain/Zyffo_xXdY9tey8jRREjFiwTdw8rntU6nCsa3t60rRk/1"

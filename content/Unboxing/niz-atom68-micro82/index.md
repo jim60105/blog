@@ -10,7 +10,8 @@ aliases = [
 ]
 
 [taxonomies]
-tags = [ "開箱文" ]
+tags = [ ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 banner = "preview.JPG"

@@ -8,6 +8,7 @@ aliases = [ "/2020/11/docker-youtube-dl-auto-recording-live-dl.html" ]
 
 [taxonomies]
 tags = [ "Container", "Livestream", "Youtube", "yt-dlp" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"

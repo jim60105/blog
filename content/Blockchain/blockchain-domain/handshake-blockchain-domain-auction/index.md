@@ -8,6 +8,7 @@ aliases = [ "/2022/01/handshake-blockchain-domain-auction.html" ]
 
 [taxonomies]
 tags = [ "區塊鏈", "Blockchain Domain" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"

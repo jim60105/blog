@@ -8,6 +8,7 @@ aliases = [ "/2024/01/cloudflare-pages.html" ]
 
 [taxonomies]
 tags = [ "JavaScript", "Cloudflare" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.jpg"

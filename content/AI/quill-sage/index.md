@@ -8,6 +8,7 @@ aliases = [ "/2024/09/ai-quill-sage.html" ]
 
 [taxonomies]
 tags = [ "AI" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "cover.png"

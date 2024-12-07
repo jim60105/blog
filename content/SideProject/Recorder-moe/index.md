@@ -21,6 +21,7 @@ tags = [
   "yt-dlp",
   "TwitCasting"
 ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.png"

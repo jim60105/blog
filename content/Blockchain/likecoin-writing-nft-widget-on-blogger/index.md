@@ -10,6 +10,7 @@ aliases = [ "/2022/12/likecoin-writing-nft-widget-on-blogger.html" ]
 
 [taxonomies]
 tags = [ "區塊鏈", "WritingNFT" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"

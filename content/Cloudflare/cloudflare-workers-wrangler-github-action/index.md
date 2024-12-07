@@ -5,11 +5,11 @@ date = 2021-10-31T11:01:00.000Z
 updated = 2024-01-04T04:02:39.168Z
 draft = true
 aliases = [ ]
+extra = { }
 
 [taxonomies]
 tags = [ "JavaScript", "Cloudflare" ]
-
-[extra]
+licenses = [ "GFDL 1.3" ]
 +++
 
 ## 簡介wrangler

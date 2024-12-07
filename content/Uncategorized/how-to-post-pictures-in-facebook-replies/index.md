@@ -7,6 +7,7 @@ aliases = [ ]
 
 [taxonomies]
 tags = [ ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 archive = "明顯地早已過時。"

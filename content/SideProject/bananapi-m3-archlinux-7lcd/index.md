@@ -8,6 +8,7 @@ aliases = [ "/2016/03/bananapi-m3-archlinux-7lcd.html" ]
 
 [taxonomies]
 tags = [ "bananapi" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.jpg"

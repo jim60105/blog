@@ -9,6 +9,8 @@ taxonomies:
     - Container
     - Linux
     - RHEL/Fedora
+  licenses:
+    - GFDL 1.3
 ---
 ## Install Podman Compose
 

@@ -8,6 +8,7 @@ aliases = [ "/2021/11/plugin-data-reader.html" ]
 
 [taxonomies]
 tags = [ "C#", "Koikatu", "Koikatsu Sunshine" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "../PluginDataReader.png"

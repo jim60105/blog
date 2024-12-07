@@ -8,6 +8,7 @@ aliases = [ "/2017/07/usb3.html" ]
 
 [taxonomies]
 tags = [ "System Admin" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"

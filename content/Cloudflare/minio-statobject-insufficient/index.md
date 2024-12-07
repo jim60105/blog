@@ -8,6 +8,7 @@ aliases = [ "/2023/07/minio-statobject-insufficient.html" ]
 
 [taxonomies]
 tags = [ "Cloudflare", "MinIO", "S3" ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 banner = "preview.webp"

@@ -8,6 +8,7 @@ aliases = [ ]
 
 [taxonomies]
 tags = [ ]
+licenses = [ "All Rights Reserved" ]
 +++
 最近迷上玩Osu!...
 

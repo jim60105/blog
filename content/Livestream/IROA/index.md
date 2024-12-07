@@ -7,6 +7,7 @@ aliases = [ "/2021/12/iroa-kuma.html" ]
 
 [taxonomies]
 tags = [ "Livestream", "Youtube" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.png"

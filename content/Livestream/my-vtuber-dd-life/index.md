@@ -10,6 +10,7 @@ aliases = [ "/2022/12/my-vtuber-dd-life.html" ]
 
 [taxonomies]
 tags = [ "Livestream", "Youtube", "yt-dlp" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.jpg"

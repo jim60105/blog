@@ -10,6 +10,7 @@ description = "本文使用 Angular + ASP.NET Web API，示範如何在前後端
 
 [taxonomies]
 tags = [ ".NET Core", "C#", "JavaScript", "Google" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.png"

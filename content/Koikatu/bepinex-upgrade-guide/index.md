@@ -4,10 +4,11 @@ description = "[Koikatu] コイカツ！ ( Koikatu / Koikatsu / 戀愛活動 ) B
 date = 2019-11-04T06:54:00.020Z
 updated = 2021-10-31T11:16:06.841Z
 draft = false
-aliases = ["/2019/11/koikatsu-bepinex-upgrade-guide.html"]
+aliases = [ "/2019/11/koikatsu-bepinex-upgrade-guide.html" ]
 
 [taxonomies]
-tags = ["Koikatu"]
+tags = [ "Koikatu" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.jpg"

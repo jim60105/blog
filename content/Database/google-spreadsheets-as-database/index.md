@@ -17,6 +17,7 @@ tags = [
   "JavaScript",
   "Excel/SpreadSheets"
 ]
+licenses = [ "GFDL 1.3" ]
 +++
 
 ## 前言

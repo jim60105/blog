@@ -8,6 +8,7 @@ aliases = [ "/2014/05/lovelive.html" ]
 
 [taxonomies]
 tags = [ ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 banner = "preview.jpg"

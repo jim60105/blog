@@ -11,6 +11,7 @@ aliases = [
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "../preview/demo9.png"

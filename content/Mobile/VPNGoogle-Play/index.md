@@ -7,6 +7,7 @@ aliases = [ ]
 
 [taxonomies]
 tags = [ ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 card = "preview.png"

@@ -4,10 +4,11 @@ description = "[開箱] iRocks x 小魔女諾貝塔 PBT熱昇華鍵帽組"
 date = 2020-08-31T04:31:00.017Z
 updated = 2021-10-31T11:08:01.812Z
 draft = false
-aliases = ["/2020/08/irocks-keycaps-little-witch-nobeta.html"]
+aliases = [ "/2020/08/irocks-keycaps-little-witch-nobeta.html" ]
 
 [taxonomies]
-tags = ["開箱文"]
+tags = [ ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 banner = "preview.PNG"

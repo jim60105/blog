@@ -4,13 +4,14 @@ description = "PADS LAYOUT 複雜板框繪製 - 從 AutoCAD 導入"
 date = 2013-10-09T00:50:00.004Z
 updated = 2013-10-09T00:50:00.004Z
 draft = false
-aliases = ["/2013/10/pads-layout-autocad.html"]
+aliases = [ "/2013/10/pads-layout-autocad.html" ]
 
 [taxonomies]
-tags = []
+tags = [ ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
-card="使用說明.jpg"
+card = "使用說明.jpg"
 +++
 
 這是教學文兼說明文，免得將來自己忘記 \_(-ω-\`\_)⌒)\_

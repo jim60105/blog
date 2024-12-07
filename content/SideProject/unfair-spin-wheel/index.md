@@ -8,6 +8,7 @@ aliases = [ "/2023/10/unfair-spin-wheel.html" ]
 
 [taxonomies]
 tags = [ "JavaScript", "Vue.js" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.png"

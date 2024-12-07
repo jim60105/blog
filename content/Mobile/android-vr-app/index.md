@@ -8,6 +8,7 @@ aliases = [ "/2018/08/android-vr-app.html" ]
 
 [taxonomies]
 tags = [ "Android" ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 archive = "資訊過時，數款 App 已不存在了"

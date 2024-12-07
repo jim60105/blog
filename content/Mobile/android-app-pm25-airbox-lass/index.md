@@ -8,6 +8,7 @@ aliases = [ "/2019/01/android-app-pm25-airbox-lass.html" ]
 
 [taxonomies]
 tags = [ "Android" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"

@@ -8,6 +8,7 @@ aliases = [ "null" ]
 
 [taxonomies]
 tags = [ "System Admin" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"

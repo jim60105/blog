@@ -8,6 +8,7 @@ aliases = [ "/2022/03/net-coreserilog.html" ]
 
 [taxonomies]
 tags = [ ".NET Core", "C#" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"

@@ -7,6 +7,7 @@ aliases = [ ]
 
 [taxonomies]
 tags = [ ]
+licenses = [ "All Rights Reserved" ]
 +++
 
 彰師機電面試，感覺還不賴  

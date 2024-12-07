@@ -8,6 +8,7 @@ aliases = [ "/2015/12/blog-post.html" ]
 
 [taxonomies]
 tags = [ "JavaScript" ]
+licenses = [ "GFDL 1.3" ]
 +++
 
 ## 發現問題

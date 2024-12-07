@@ -6,10 +6,11 @@ updated = 2014-10-05T08:17:00.000Z
 aliases = [ ]
 
 [taxonomies]
-tags = [ "開箱文" ]
+tags = [ ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
-card="BxzVHrqCQAAlUym.jpg"
+card = "BxzVHrqCQAAlUym.jpg"
 +++
 [![](BxzVHrqCQAAlUym.jpg)](BxzVHrqCQAAlUym.jpg)
 

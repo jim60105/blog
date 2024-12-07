@@ -8,6 +8,7 @@ aliases = [ "/2023/12/argocd-configmap.html" ]
 
 [taxonomies]
 tags = [ "Container", "K8s" ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 card = "preview.png"

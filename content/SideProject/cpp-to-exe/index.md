@@ -4,10 +4,11 @@ description = "cpp 轉 exe程式"
 date = 2013-04-24T06:22:00.003Z
 updated = 2013-05-10T06:22:00.003Z
 draft = false
-aliases = ["/2013/04/c-usbggww-c-1.html"]
+aliases = [ "/2013/04/c-usbggww-c-1.html" ]
 
 [taxonomies]
-tags = []
+tags = [ ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.png"

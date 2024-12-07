@@ -8,6 +8,7 @@ aliases = [ "/2019/05/koikatu-studio-chara-only-load-body.html" ]
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "../preview/demo4.gif"

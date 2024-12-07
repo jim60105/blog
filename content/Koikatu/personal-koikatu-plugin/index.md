@@ -7,6 +7,7 @@ aliases = [ "/2020/05/personal-koikatu-plugin.html" ]
 
 [taxonomies]
 tags = [ "Koikatsu Sunshine", "Koikatu", "C#" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.jpg"

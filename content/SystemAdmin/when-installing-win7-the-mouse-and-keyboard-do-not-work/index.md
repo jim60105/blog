@@ -8,6 +8,7 @@ aliases = [ "/2017/02/win7.html" ]
 
 [taxonomies]
 tags = [ "System Admin" ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 card = "preview.jpg"

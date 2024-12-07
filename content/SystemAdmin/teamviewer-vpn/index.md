@@ -8,6 +8,7 @@ extra = { }
 
 [taxonomies]
 tags = [ ]
+licenses = [ "All Rights Reserved" ]
 +++
 
 ## 學網開 MC 伺服計畫 ─ Teamviewer 開 VPN

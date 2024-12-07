@@ -7,7 +7,8 @@ draft = false
 aliases = [ ]
 
 [taxonomies]
-tags = [ "開箱文" ]
+tags = [ ]
+licenses = [ "All Rights Reserved" ]
 +++
 
 [![](IMG_20141011_074730.jpg)](IMG%5F20141011%5F074730.jpg)

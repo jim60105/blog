@@ -8,6 +8,7 @@ aliases = [ "/2019/06/koikatu-studio-text-plugin.html" ]
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "../preview/demo6-2.JPG"

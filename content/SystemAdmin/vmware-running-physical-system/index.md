@@ -12,6 +12,7 @@ banner = "preview.png"
 
 [taxonomies]
 tags = [ "Linux", "System Admin" ]
+licenses = [ "GFDL 1.3" ]
 +++
 
 [![](preview.png)](preview.png)

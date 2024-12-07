@@ -8,6 +8,7 @@ aliases = [ "/2020/08/docker-opencart.html" ]
 
 [taxonomies]
 tags = [ "Container" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.jpg"

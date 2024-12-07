@@ -8,6 +8,7 @@ aliases = [ "/2020/09/koikatu-studio-menu-scrolling-text.html" ]
 
 [taxonomies]
 tags = [ "Koikatu" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "../preview/demo20.png"

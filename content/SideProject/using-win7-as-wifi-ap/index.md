@@ -4,10 +4,11 @@ description = "以 WIN7 做為無線分享 AP 讓 PSV &手機上網"
 date = 2013-04-23T00:02:00.009Z
 updated = 2013-05-21T00:00:00.000Z
 draft = false
-aliases = ["/2013/04/win7ap.html"]
+aliases = [ "/2013/04/win7ap.html" ]
 
 [taxonomies]
-tags = []
+tags = [ ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.jpg"

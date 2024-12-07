@@ -5,11 +5,11 @@ date = 2016-03-22T18:47:00.002Z
 updated = 2020-11-24T14:56:53.456Z
 draft = false
 aliases = [ "/2016/03/bananapi-m3-cross-compile.html" ]
+extra = { }
 
 [taxonomies]
 tags = [ "bananapi" ]
-
-[extra]
+licenses = [ "GFDL 1.3" ]
 +++
 
 ## 前言

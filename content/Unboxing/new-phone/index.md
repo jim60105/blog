@@ -7,6 +7,7 @@ aliases = [ ]
 
 [taxonomies]
 tags = [ ]
+licenses = [ "All Rights Reserved" ]
 +++
 幾天前我換手機了  
   

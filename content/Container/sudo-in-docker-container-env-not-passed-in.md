@@ -9,6 +9,7 @@ extra = { }
 
 [taxonomies]
 tags = [ "Container", "Linux" ]
+licenses = [ "All Rights Reserved" ]
 +++
 
 這是一篇備忘，其實標題就是關鍵了  

@@ -8,6 +8,7 @@ aliases = [ "/2023/10/whisperx-ai.html" ]
 
 [taxonomies]
 tags = [ "AI" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 iscn = "iscn://likecoin-chain/i6XMdfLq3nGAU_inrEqxpsDKOlCbHyUkwJZLl-U1aXk/1"

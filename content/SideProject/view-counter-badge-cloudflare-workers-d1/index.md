@@ -8,6 +8,7 @@ aliases = [ "/2023/11/view-counter-badge-cloudflare-workers-d1.html" ]
 
 [taxonomies]
 tags = [ "JavaScript", "Cloudflare" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.png"

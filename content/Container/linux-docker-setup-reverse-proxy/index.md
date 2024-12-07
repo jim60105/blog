@@ -8,6 +8,7 @@ aliases = [ "/2020/11/linux-docker-setup-revese-proxy.html" ]
 
 [taxonomies]
 tags = [ "Docker", "Container", "Linux" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"

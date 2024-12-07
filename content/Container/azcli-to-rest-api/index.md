@@ -8,6 +8,7 @@ aliases = [ "/2024/01/azcli-to-rest-api.html" ]
 
 [taxonomies]
 tags = [ "Azure", "Container" ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 iscn = "iscn://likecoin-chain/3DGNu2HPD0tXzVjLqRmyoOBljyl707TKim_yh4XU2S8/1"

@@ -8,6 +8,7 @@ aliases = [ "/2021/08/koikatsu-sunshine-bep5-plugin-guide.html" ]
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"

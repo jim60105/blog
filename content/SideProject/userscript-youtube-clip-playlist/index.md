@@ -12,6 +12,7 @@ extra = { }
 
 [taxonomies]
 tags = [ "JavaScript", "Livestream" ]
+licenses = [ "GFDL 1.3" ]
 +++
 
 > 此專案已重寫為[Chrome擴充功能](@/SideProject/chrome-extension-youtube-clip-playlist/index.md)

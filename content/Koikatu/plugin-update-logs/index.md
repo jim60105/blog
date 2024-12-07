@@ -5,11 +5,11 @@ date = 2022-12-04T12:36:00.004Z
 updated = 2023-09-30T18:12:35.830Z
 draft = false
 aliases = [ "/2020/05/koikatu-update-log.html" ]
+extra = { }
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
-
-[extra]
+licenses = [ "GFDL 1.3" ]
 +++
 [![](banner.png)](banner.png)
 

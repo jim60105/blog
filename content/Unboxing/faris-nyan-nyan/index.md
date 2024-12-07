@@ -7,7 +7,8 @@ aliases = [ ]
 extra = { }
 
 [taxonomies]
-tags = [ "開箱文" ]
+tags = [ ]
+licenses = [ "All Rights Reserved" ]
 +++
 
 今天去安利美特買我妹的生日禮物，順便就敗了一包，想說不管抽到哪個都可以接受

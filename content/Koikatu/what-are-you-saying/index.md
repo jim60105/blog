@@ -8,6 +8,7 @@ aliases = [ "/2020/09/koikatu-what-are-you-saying.html" ]
 
 [taxonomies]
 tags = [ "Koikatu", "C#" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "../preview/demo21.png"

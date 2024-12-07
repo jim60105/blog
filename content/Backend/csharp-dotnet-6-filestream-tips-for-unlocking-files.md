@@ -5,11 +5,11 @@ date = 2023-02-28T22:22:00.001Z
 updated = 2023-02-28T22:22:07.825Z
 draft = true
 aliases = [ ]
+extra = { }
 
 [taxonomies]
 tags = [ ".NET Core", "C#" ]
-
-[extra]
+licenses = [ "GFDL 1.3" ]
 +++
 
 > System.IO.IOException: The process cannot access the file 'ooxx' because it is being used by another process.

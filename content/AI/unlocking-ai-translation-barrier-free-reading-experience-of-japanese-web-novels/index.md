@@ -12,6 +12,7 @@ aliases = [
 
 [taxonomies]
 tags = [ "AI", "Novel" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.jpg"

@@ -8,6 +8,7 @@ aliases = [ "/2024/01/cloudflare-worker-ddos.html" ]
 
 [taxonomies]
 tags = [ "Cloudflare" ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 card = "preview.png"

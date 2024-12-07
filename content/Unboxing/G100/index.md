@@ -8,6 +8,7 @@ aliases = [ "/2011/11/blog-post.html" ]
 
 [taxonomies]
 tags = [ ]
+licenses = [ "All Rights Reserved" ]
 +++
 Yes!曬物!曬鍵盤!曬滑鼠!曬鍵鼠組!!  
 今日入手:**羅技G100遊戲鍵盤滑鼠組**&**羅技MK100鍵盤滑鼠組**

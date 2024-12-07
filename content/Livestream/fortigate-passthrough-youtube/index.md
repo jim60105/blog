@@ -8,6 +8,7 @@ aliases = [ "/2021/12/fortigate-passthrough-youtube.html" ]
 
 [taxonomies]
 tags = [ "Youtube", "FortiGate" ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 card = "preview.jpg"

@@ -10,6 +10,7 @@ aliases = [
 
 [taxonomies]
 tags = [ "AI" ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 banner = "preview.jpg"

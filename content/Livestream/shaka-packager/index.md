@@ -8,6 +8,7 @@ aliases = [ "/2024/07/shaka-packager.html" ]
 
 [taxonomies]
 tags = [ "Livestream" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.png"

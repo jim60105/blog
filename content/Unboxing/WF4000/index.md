@@ -4,10 +4,11 @@ description = "行車紀錄器 WF4000 不專業開箱"
 date = 2014-08-16T16:40:00.001Z
 updated = 2014-09-13T22:09:17.347Z
 draft = false
-aliases = ["/2014/08/WF4000.html"]
+aliases = [ "/2014/08/WF4000.html" ]
 
 [taxonomies]
-tags = ["開箱文"]
+tags = [ ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 card = "preview.jpg"

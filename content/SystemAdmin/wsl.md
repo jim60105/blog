@@ -8,6 +8,7 @@ aliases = [ "/2020/12/wsl.html" ]
 
 [taxonomies]
 tags = [ "System Admin" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 poor = true

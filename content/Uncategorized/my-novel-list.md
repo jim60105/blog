@@ -8,6 +8,7 @@ aliases = [ "/2017/10/novelList.html" ]
 
 [taxonomies]
 tags = [ "Novel" ]
+licenses = [ "All Rights Reserved" ]
 
 [extra.comments]
 id = "113283714264162209"

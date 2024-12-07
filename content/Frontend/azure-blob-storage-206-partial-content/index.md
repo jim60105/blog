@@ -8,6 +8,7 @@ aliases = [ "/2023/01/azure-blob-storage-206-partial-content.html" ]
 
 [taxonomies]
 tags = [ "Azure" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"

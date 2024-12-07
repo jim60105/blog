@@ -8,6 +8,7 @@ aliases = [ "/2014/03/nexg-max200.html" ]
 
 [taxonomies]
 tags = [ ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 card = "preview.jpg"

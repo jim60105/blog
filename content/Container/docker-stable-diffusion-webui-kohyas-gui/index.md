@@ -8,6 +8,7 @@ aliases = [ "/2024/03/docker-stable-diffusion-webui-kohyas-gui.html" ]
 
 [taxonomies]
 tags = [ "AI", "Container" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.jpg"

@@ -8,6 +8,7 @@ aliases = [ "/2022/12/archive-page-for-writing-nft.html" ]
 
 [taxonomies]
 tags = [ "區塊鏈", "WritingNFT" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 iscn = "iscn://likecoin-chain/0TcWBncBjI36FAfqcjQnRpSnzVYMEJy56YD7fOCq--M/1"

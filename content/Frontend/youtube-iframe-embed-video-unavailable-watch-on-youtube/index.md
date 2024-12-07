@@ -10,6 +10,7 @@ aliases = [
 
 [taxonomies]
 tags = [ "Azure", "Youtube" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"

@@ -7,6 +7,7 @@ aliases = [ ]
 
 [taxonomies]
 tags = [ ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"

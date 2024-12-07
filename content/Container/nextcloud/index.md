@@ -8,6 +8,7 @@ aliases = [ "/2020/07/docker-nextcloud.html" ]
 
 [taxonomies]
 tags = [ "Container" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.jpg"

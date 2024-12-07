@@ -7,7 +7,8 @@ draft = false
 aliases = [ "/2016/03/banana-pi-m3.html" ]
 
 [taxonomies]
-tags = [ "開箱文", "bananapi" ]
+tags = [ "bananapi" ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 card = "preview.jpg"

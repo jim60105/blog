@@ -8,6 +8,7 @@ aliases = [ "/2022/01/media-autoplay-on-browser.html" ]
 
 [taxonomies]
 tags = [ "JavaScript" ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 card = "preview.png"

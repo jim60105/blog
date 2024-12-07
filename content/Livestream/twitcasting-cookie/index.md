@@ -8,6 +8,7 @@ aliases = [ "/2022/01/twitcasting-cookie.html" ]
 
 [taxonomies]
 tags = [ "Livestream", "TwitCasting" ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 poor = true

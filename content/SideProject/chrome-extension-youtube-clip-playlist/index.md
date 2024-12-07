@@ -8,6 +8,7 @@ aliases = [ "/2022/06/chrome-extension-youtube-clip-playlist.html" ]
 
 [taxonomies]
 tags = [ "JavaScript", "Livestream", "Youtube", "TwitCasting" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"

@@ -9,7 +9,8 @@ aliases = [
 ]
 
 [taxonomies]
-tags = [ ]
+tags = [ ".NET Core", "C#" ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 banner = "preview.jpg"

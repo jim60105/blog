@@ -8,6 +8,7 @@ aliases = [ ]
 
 [taxonomies]
 tags = [ ]
+licenses = [ "GFDL 1.3" ]
 +++
 ## 出處:<http://www.dzjs.net/html/PCBjishu/2008/0923/3375.html>
 <!-- more -->

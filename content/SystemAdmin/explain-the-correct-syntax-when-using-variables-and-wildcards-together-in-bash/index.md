@@ -10,6 +10,7 @@ aliases = [
 
 [taxonomies]
 tags = [ "System Admin" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.png"

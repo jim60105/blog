@@ -8,6 +8,7 @@ aliases = [ "/2022/01/youtube-download-ytdlp-ffmpeg.html" ]
 
 [taxonomies]
 tags = [ "Livestream", "TwitCasting", "Twitch", "Youtube", "yt-dlp" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"

@@ -8,6 +8,7 @@ aliases = [ "/2019/05/koikatu-studio-reflect-fk-fix.html" ]
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "../preview/demo5-3.png"

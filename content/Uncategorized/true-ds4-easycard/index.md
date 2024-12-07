@@ -8,6 +8,7 @@ aliases = [ "/2020/06/ds4.html" ]
 
 [taxonomies]
 tags = [ ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 banner = "preview.jpg"

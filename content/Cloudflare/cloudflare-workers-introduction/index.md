@@ -8,6 +8,7 @@ aliases = [ "/2021/02/cloudflare-workers-introduction.html" ]
 
 [taxonomies]
 tags = [ "JavaScript", "Cloudflare" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.png"

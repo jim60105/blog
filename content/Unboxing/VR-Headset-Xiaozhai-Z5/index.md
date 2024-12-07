@@ -4,10 +4,11 @@ description = "[開箱] VR眼鏡 小宅Z5 青春版2018新款"
 date = 2018-08-27T13:42:00.003Z
 updated = 2018-08-27T13:42:00.003Z
 draft = false
-aliases = ["/2018/08/vr.html"]
+aliases = [ "/2018/08/vr.html" ]
 
 [taxonomies]
-tags = ["開箱文"]
+tags = [ ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 banner = "preview.jpg"

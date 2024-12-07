@@ -17,6 +17,7 @@ tags = [
   "Livestream",
   "Youtube"
 ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "homepage_preview.png"

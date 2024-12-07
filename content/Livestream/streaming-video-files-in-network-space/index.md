@@ -8,6 +8,7 @@ aliases = [ "/2022/09/streaming-video-files-in-network-space.html" ]
 
 [taxonomies]
 tags = [ "Livestream" ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 card = "preview.png"

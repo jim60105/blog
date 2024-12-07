@@ -7,10 +7,11 @@ draft = false
 aliases = [ ]
 
 [taxonomies]
-tags = [ "開箱文" ]
+tags = [ ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
-card="IMG_20140506_203412.jpg"
+card = "IMG_20140506_203412.jpg"
 +++
 前兩天入的新玩具
 

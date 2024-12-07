@@ -8,6 +8,7 @@ aliases = [ "/2020/11/github-verified-gpg-commit.html" ]
 
 [taxonomies]
 tags = [ ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"

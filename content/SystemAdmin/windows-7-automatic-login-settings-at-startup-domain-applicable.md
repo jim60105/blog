@@ -8,6 +8,7 @@ aliases = [ "/2017/10/windows-7.html" ]
 
 [taxonomies]
 tags = [ "System Admin" ]
+licenses = [ "GFDL 1.3" ]
 +++
 Win+R: Regedit  
 HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon  

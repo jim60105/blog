@@ -6,7 +6,8 @@ updated = 2013-05-11T14:08:00.001Z
 aliases = [ ]
 
 [taxonomies]
-tags = [ "開箱文" ]
+tags = [ ]
+licenses = [ "All Rights Reserved" ]
 
 [extra]
 card = "preview.jpg"
