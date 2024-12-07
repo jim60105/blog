@@ -8,6 +8,7 @@ aliases = [ "/2024/09/ai-automated-prompt-engineering.html" ]
 
 [taxonomies]
 tags = [ "AI" ]
+licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.png"

@@ -58,6 +58,11 @@
               "title": "Tags",
               "name": "tags",
               "type": "tags"
+            },
+            {
+              "title": "Licenses",
+              "name": "licenses",
+              "type": "categories"
             }
           ]
         },

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+	{%- set date_format = macros_translate::translate(key="date_format", default="%B %d, %Y", language_strings=language_strings) -%}
+	{%- set date_locale = macros_translate::translate(key="date_locale", default="en_US", language_strings=language_strings) -%}
+	{%- set number_of_posts = term.pages | length -%}
+
+	{%- set term_name = "“" ~ term.name ~ "”" -%}
+	{%- set default_post_text = "Posts with " ~ taxonomy.name | trim_end_matches(pat="s") -%}
+	<h1>{{ macros_translate::translate(key="posts_with_" ~ taxonomy.name, default= default_post_text ~ " $TAG", language_strings=language_strings) | replace(from="$TAG", to=term_name)}}</h1>
+
+	<p>
+		<small>
+			<a href="{{ get_url(path=taxonomy.name, lang=lang) }}">
+				{{ macros_translate::translate(key="all_" ~ taxonomy.name, default="See all " ~ taxonomy.name, language_strings=language_strings) }}
+			</a>
+			<br/>
+			{{ macros_translate::translate(key="posts", number=number_of_posts, default="$NUMBER posts", language_strings=language_strings) }}
+		</small>
+	</p>
+
+	{% include "partials/articles.html" %}
+{% endblock content %}
