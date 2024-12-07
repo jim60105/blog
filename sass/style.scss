@@ -22,6 +22,20 @@ body {
   background: center / cover no-repeat fixed url("/card.webp");
 }
 
+#site-nav nav #feed {
+  cursor: copy;
+  a {
+    pointer-events: none;
+    color: var(--fg-muted-4);
+
+    &:hover {
+      box-shadow: var(--edge-highlight);
+      background-color: var(--fg-muted-1);
+      color: var(--fg-muted-5);
+    }
+  }
+}
+
 h1,
 h2,
 h3,
