@@ -17,6 +17,7 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 
 | File | Description |
 | --- | --- |
+| `base.html` | - Add Google Analytics and Microsoft Clarity tracking code |
 | `article.html` | - Add likecoin iframe<br>- Add iscn badge |
 | `taxonomy_list.html` | Make it work with different taxonomies |
 | `taxonomy_single.html` | Make it work with different taxonomies |
