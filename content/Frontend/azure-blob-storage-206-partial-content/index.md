@@ -12,7 +12,7 @@ licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"
-iscn = "iscn://likecoin-chain/DRhAnHi6Vd38TifJUX0HTnBBg9JywfCa_JvFp1HrS-E"
+iscn = "iscn://likecoin-chain/DRhAnHi6Vd38TifJUX0HTnBBg9JywfCa_JvFp1HrS-E/1"
 +++
 ![在 Azure Blob Storage 啟用 206 Partial Content 以支援 mp4 串流播放](preview.png)
 

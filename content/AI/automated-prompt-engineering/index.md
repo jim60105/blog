@@ -12,7 +12,7 @@ licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.png"
-iscn = "iscn://likecoin-chain/KiZc2G9UmmW17_mYPhEh_CnnS_odvEiojeUuxxumqOc"
+iscn = "iscn://likecoin-chain/KiZc2G9UmmW17_mYPhEh_CnnS_odvEiojeUuxxumqOc/1"
 featured = true
 
   [extra.comments]

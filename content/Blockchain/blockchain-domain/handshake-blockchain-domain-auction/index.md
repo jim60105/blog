@@ -12,7 +12,7 @@ licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"
-iscn = "iscn://likecoin-chain/q70w15kLnLQmvfUdXjgNgdNQpV2H2c6t1_7GJhv0LBA/11"
+iscn = "iscn://likecoin-chain/q70w15kLnLQmvfUdXjgNgdNQpV2H2c6t1_7GJhv0LBA/1"
 
   [extra.comments]
   id = "109433206136042137"
