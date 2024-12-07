@@ -360,7 +360,7 @@ show_powered_by = true
 show_source = false
 # Custom copyright text
 #
-copyright = "<img id=\"counter\" src=\"https://view-counter.jim60105.workers.dev/?style=classic&labelColor=141414&color=555&scale=1#no-hover#pixels#badge\" alt=\"View counter badge\"/><p><small>Copyright © by 陳鈞 (jim60105) Since 2010.<br>Articles marked as GFDL-1.3 are licensed accordingly; otherwise, all rights reserved.</small></p>"
+copyright = "<img id=\"counter\" src=\"https://view-counter.jim60105.workers.dev/?style=classic&labelColor=141414&color=555&scale=1#no-hover#pixels#badge\" alt=\"View counter badge\"/><p><small>Copyright © by 陳鈞 (jim60105) Since 2010. <a href=\"/privacy-policy\">Privacy Policy.</a><br>Articles marked as GFDL-1.3 are licensed accordingly; otherwise, all rights reserved.</small></p>"
 
 # Based on https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/
 #
