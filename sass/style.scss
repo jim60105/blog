@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "../themes/duckquill/sass/mods/modern-hr";
+// @use "../themes/duckquill/sass/mods/modern-hr";
 @import "../themes/duckquill/sass/style.scss";
 @import "hide-scroll-bar";
 @import "likecoin";
@@ -24,6 +24,7 @@ body {
 
 #site-nav nav #feed {
   cursor: copy;
+
   a {
     pointer-events: none;
     color: var(--fg-muted-4);
@@ -92,8 +93,8 @@ main {
     }
   }
 
-  hr {
-    margin: 0.5em auto;
+  article hr {
+    margin: 1em auto;
   }
 
   aside {

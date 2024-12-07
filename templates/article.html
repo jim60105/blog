@@ -150,13 +150,15 @@
 		{%- endif -%}
 
 		{{ page.content | safe }}
-		{%- if config.extra.likerid or page.extra.iscn -%}
-			{% include "partials/likecoin.html" %}
-		{%- endif -%}
 	</article>
 
 	{%- if page.extra.comments.id -%}
 		{%- include "partials/comments.html" -%}
+	{%- endif -%}
+
+	{%- if config.extra.likerid or page.extra.iscn -%}
+		<hr/>
+		{% include "partials/likecoin.html" %}
 	{%- endif -%}
 
 	{%- if page.lower or page.higher -%}
