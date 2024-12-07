@@ -15,7 +15,7 @@ licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "../preview/demo9.png"
-iscn = "iscn://likecoin-chain/QEHgpUPrvtcteiTiKfw0x5XpaECGGnHYzCjbgwsy9uw/1"
+iscn = "iscn://likecoin-chain/QEHgpUPrvtcteiTiKfw0x5XpaECGGnHYzCjbgwsy9uw/2"
 hot = true
 +++
 

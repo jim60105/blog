@@ -29,7 +29,7 @@ MoreAcc v2.0 是 jalil49 違反原作者 Joan6694 的 License 所做出的山寨
 請注意所有標註的版本號和連結，它們是能配合運作的版本號<br>
 <br>
 Koikatu 已經是四年前的老遊戲了，讓它留在穩定版本吧！"""
-iscn = "iscn://likecoin-chain/wNXXrjwe_0oKckEePztstQcK8ywEuL4XXbJRttN598Q/1"
+iscn = "iscn://likecoin-chain/wNXXrjwe_0oKckEePztstQcK8ywEuL4XXbJRttN598Q/2"
 featured = true
 hot = true
 +++

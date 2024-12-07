@@ -12,7 +12,7 @@ licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.png"
-iscn = "iscn://likecoin-chain/rtxrL8i4xKTDgZw8blO709mJWa-KdzDxwEkVnG1xpIM/1"
+iscn = "iscn://likecoin-chain/rtxrL8i4xKTDgZw8blO709mJWa-KdzDxwEkVnG1xpIM/2"
 trigger = "由於 イリュージョン 收攤，本文的官網連結已全數死去"
 archive = """
 本文已停更多年且不計劃再更新<br>

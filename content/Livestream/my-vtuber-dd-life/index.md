@@ -14,7 +14,7 @@ licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.jpg"
-iscn = "iscn://likecoin-chain/fZaY2PGwsp6QR3iaS14KrvL1OygyQyhFUY46TnuYqyE/1"
+iscn = "iscn://likecoin-chain/fZaY2PGwsp6QR3iaS14KrvL1OygyQyhFUY46TnuYqyE/2"
 featured = true
 
   [extra.comments]
