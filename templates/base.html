@@ -1,8 +1,19 @@
 {% extends "duckquill/templates/base.html" %}
-{% block custom %}
-	<script>
-		setTimeout(() => {
-tracking("{{ config.extra.tracking.ga }}", "{{ config.extra.tracking.clarity }}");
-}, 500);
-	</script>
-{% endblock %}
+{% block body %}
+	{%- if config.extra.nav.links %}
+		{% include "partials/nav.html" %}
+	{%- endif %}
+	{%- if config.extra.toc_sidebar or page.extra.toc_sidebar or section.extra.toc_sidebar -%}
+		<div id="sidebar">
+			<div>
+				{%- include "partials/toc.html" -%}
+			</div>
+		</div>
+	{%- endif -%}
+	<main id="main-content">
+		{% block custom %}{% endblock custom %}
+		{% block content %}{% endblock content %}
+		{% include "partials/extra_features.html" %}
+	</main>
+	{% include "partials/footer.html" %}
+{% endblock body %}

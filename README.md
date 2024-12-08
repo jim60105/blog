@@ -22,14 +22,14 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 | --- | --- |
 | `article_list.html` | - Bug fix: `number_of_posts` can be zero.<br>- Remove `Filter by tag`<br>- Add `partials/sections.html` at the end of the article list.  |
 | `article.html` | - Add likecoin iframe `partials/likecoin.html`<br>- Add iscn badge<br>- Use `config.extra.toc` to always display the in-page TOC. The default template only uses `page.extra.toc`, which must be defined in each article.<br>- Add `partials/sections.html` at the end of the article list. |
-| └`partials/toc.html` | - Use `config.extra.toc` to always display the in-page TOC. Only display in-page TOC when there is any TOC. |
+| └`partials/toc.html` | - Use `config.extra.toc` to always display the toc. |
 | └`partials/likecoin.html` | Add [liker land WritingNFT badge](https://xn--jgy.tw/Blockchain/likecoin-writing-nft-widget-on-blogger/) to the end of the article. |
-| `base.html` (extend) | - Add Google Analytics and Microsoft Clarity tracking code |
+| `base.html` | - Use `config.extra.toc_sidebar` to always display sidebar toc. |
 | `taxonomy_list.html` | Make it work with different taxonomies |
 | `taxonomy_single.html` | Make it work with different taxonomies |
 | `partials/articles.html` | - Make different taxonomies list together<br>- Remove blur thumbnail |
 | `partials/default_theme.html` | Use dark theme (The intention of not using `config.extra.default_theme` is to use the dark theme and not enable the theme switcher.) |
-| `partials/head.html` | - Rearrange the order of meta tags and extract them to `partials/open_graph.html`. According to best practices, all meta og tags should be placed at the very beginning of the webpage, sorted by importance, while `<style>` and `<script>` should be placed later. This is because og parsers only read a fixed length (not very long) and discard any content after encountering any error.<br>-  Add link preconnect.<br>- Add my fonts from CDN. |
+| `partials/head.html` | - Rearrange the order of meta tags and extract them to `partials/open_graph.html`. According to best practices, all meta og tags should be placed at the very beginning of the webpage, sorted by importance, while `<style>` and `<script>` should be placed later. This is because og parsers only read a fixed length (not very long) and discard any content after encountering any error.<br>-  Add link preconnect.<br>- Add my fonts from CDN.<br>- Add Google Analytics and Microsoft Clarity tracking code. |
 | └`partials/open_graph.html` (new) | - Extracted og tags from `partials/head.html`<br>- Add twitter meta tags.<br>- Add ld+json script tags. |
 | `partials/nav.html` | Change the Feed button to copy to clipboard. |
 | `partials/sections.html` (new) | List all the sections just like tags. (Copy from `taxonomy_list.html`) |

@@ -129,5 +129,9 @@
 		{%- endfor %}
 	{%- endif %}
 
-
+	<script>
+		setTimeout(() => {
+tracking("{{ config.extra.tracking.ga }}", "{{ config.extra.tracking.clarity }}");
+}, 500);
+	</script>
 </head>
