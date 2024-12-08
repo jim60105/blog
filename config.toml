@@ -331,6 +331,7 @@ links = [
 		{ url = "@/Unboxing/_index.md", name = "Unboxing" },
 		{ url = "@/Uncategorized/_index.md", name = "Uncategorized" },
 	] },
+	{ url = "@/archive.md", name = "Archive" },
 	{ url = "https://github.com/jim60105", name = "GitHub" },
 ]
 

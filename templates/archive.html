@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+	{% set sections = get_section(path="_index.md") %}
+	{% for year, posts in sections.pages | group_by(attribute="year") %}
+		{% if year == "0" %}
+			{% continue %}
+		{% endif %}
+		<h2>{{ year }}</h2>
+
+		<ul>
+			{% for post in posts %}
+				<li>
+					<a href="{{ post.permalink }}">{{ post.title }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	{% endfor %}
+
+{% endblock content %}
