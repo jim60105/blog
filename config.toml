@@ -267,7 +267,8 @@ toc = true
 # Whether to render inline table of contents at the top of all pages,
 # in addition to floating quick navigation buttons.
 # Can be set per page/section.
-toc_inline = true
+toc_inline = false
+toc_sidebar = true
 #
 # Whether to use numbered (ordered) list for table of contents.
 # Can be set per page/section.
