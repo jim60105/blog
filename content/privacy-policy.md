@@ -1,7 +1,7 @@
 +++
 title = "Privacy Policy"
 description = "Privacy Policy"
-date = "2010-01-01T00:00:00.000Z"
+date = "0000-01-01T00:00:00.000Z"
 updated = "2024-12-07T09:07:11.794Z"
 +++
 Blog 琳.tw takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used.

@@ -1,8 +1,7 @@
 +++
 title = "GNU Free Documentation License"
 description = "GNU Free Documentation License"
-date = "2010-01-01T00:00:00.000Z"
-updated = "2024-12-07T06:07:07.289Z"
+date = "0000-01-01T00:00:00.000Z"
 
 [taxonomies]
 licenses = [ "GFDL 1.3" ]
