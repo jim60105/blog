@@ -28,7 +28,9 @@ featured = true
 
 > 本文重點主要是在於實作，而非 OAuth 2.0 的流程講解  
 > 如果想要深入學習，請參考保哥的課程 [《精通 OAuth 2.0 授權框架》](https://www.accupass.com/event/2207070432471635037675)
-<!--more-->
+
+<!-- more -->
+
 ## 介紹
 
 使用 Angular 實現 OpenID Connect (OIDC) 登入，網路上的教學大都是使用隱含流程 (Implicit flow)。  

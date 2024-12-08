@@ -27,7 +27,9 @@ card = "preview.png"
 之前就有想寫這個，不過實在是太忙沒空研究
 
 前段時間花了大概半天時間把她生了出來，順便練習忘光的C++
+
 <!-- more -->
+
 ## 載點
 
 <https://dl.dropboxusercontent.com/u/7450906/%E6%96%87%E5%AD%97%E8%BD%89%E6%8F%9B.exe>

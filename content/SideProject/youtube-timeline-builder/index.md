@@ -19,6 +19,8 @@ banner = "preview.png"
 原本只能產出給我另一個專案 Youtube Clip Playlist 專用的 json 格式，現在加上了產出 **「Google Sheet」、「Youtube 留言」** 兩種格式  
 我將它公開出來，希望它能提供各位便利{{ch(body="，讓我有更多的曲目可以白嫖")}}
 
+<!--more-->
+
 ## 打軸時推薦一起製作歌曲結束時間
 
 這能讓播放清單一類的程式{{cg(body="自動產生曲目")}}  

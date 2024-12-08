@@ -20,6 +20,8 @@ banner = "preview.PNG"
 整組 NT599，在[這裡](https://www.pcstore.com.tw/i-rocks/M70788634.htm)賣  
 真心不貴，手刀下單
 
+<!--more-->
+
 PBT 質感不用贅述，表面的些微顆粒感摸起來很棒  
 耐磨度不明也不在意，反正我是要進收藏的
 

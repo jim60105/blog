@@ -29,7 +29,9 @@ iscn = "iscn://likecoin-chain/FtSKInk6bfr_5iDfLV6sxSCCAJIzQAYFC_9weWdgywY/1"
 
 這次中雷的前提是「使用 **Cloudflare** 做為 MinIO 的網域 **Proxy**，並開啟 **Cache** 功能」。
 
-我不知道其它的 S3-like storage 會不會發生，但既然 [MinIO SDK 上的 issue](https://github.com/minio/minio-js/issues/842) 因「Our sdks are validated for highest s3 compatibility so it does not require any fix in the SDK.」而關閉，應該是都會發生吧...<!--more-->
+我不知道其它的 S3-like storage 會不會發生，但既然 [MinIO SDK 上的 issue](https://github.com/minio/minio-js/issues/842) 因「Our sdks are validated for highest s3 compatibility so it does not require any fix in the SDK.」而關閉，應該是都會發生吧...
+
+<!-- more -->
 
 ## TL;DR 先說結論
 

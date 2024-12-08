@@ -18,7 +18,9 @@ wrangler是Cloudflare Workers專用的CLI工具。
 
 它讓你可以用你慣用的編輯器寫code，在線下做開發、測試、部屬、收log。  
 除此之外，它也支援以webpack打包，**讓你可以用上ES6、讓你可以寫TypeScript**。
+
 <!-- more -->
+
 ## 安裝
 
 安裝方式有兩種，npm或手動  

@@ -21,7 +21,9 @@ card = "preview.png"
 這個標誌能顯示此 commit 確實是由我做出，並不是別人冒名而做
 
 這次我好好研究了下 gpg 金鑰的設定方法，並把流程記錄在此
+
 <!-- more -->
+
 ## 安裝 GPG 軟體
 
 > Chocolatey GnuPG `choco install gnupg`

@@ -34,7 +34,9 @@ iscn = "iscn://likecoin-chain/q70w15kLnLQmvfUdXjgNgdNQpV2H2c6t1_7GJhv0LBA/3"
 > 這是好事，你現在可以用很便宜的價格買到一大堆 HNS！  
 > **區塊鏈專案不會因為價格下跌而失敗，反而會因為價格高昂無人使用而死去**  
 > 請放心的買下你需要的數量，我們購買 HNS 不是為了投資，而是為了競標網域
-<!--more-->
+
+<!-- more -->
+
 ## HNS 的交易所 {#hns-exchange}
 
 * Namebase: <https://www.namebase.io/pro>

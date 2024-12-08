@@ -25,7 +25,9 @@ featured = true
 建議分享 Scene 時一併分享使用的 Font  
 (It is recommended to share the Fonts used when sharing Scene.)
 {% end %}
-<!--more-->
+
+<!-- more -->
+
 ## 注意事項
 
 * Fonts 會列出 OS 內安裝，支援 Unity 動態生成的所有字體，字體總數在 500 以下時可以顯示預覽

@@ -22,7 +22,9 @@ banner = "../preview/demo3.gif"
 使女性支持單色化功能
 
 可以在讀入人物或 Scene 時統一所有角色的單色顏色 (此功能需至 Config 啟用)
-<!--more-->
+
+<!-- more -->
+
 ## 需求依賴
 
 ### Koikatu

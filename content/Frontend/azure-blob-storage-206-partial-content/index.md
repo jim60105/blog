@@ -18,7 +18,9 @@ iscn = "iscn://likecoin-chain/DRhAnHi6Vd38TifJUX0HTnBBg9JywfCa_JvFp1HrS-E/1"
 
 在這篇文章中，我將解釋 Azure Blob Storage 預設使用舊的規格版本導致無法支援206 Partial Content 並無法達到 mp4 串流播放的問題，並提供解決方案。
 
-206 Partial Content 是 HTTP 協定中的一項功能，允許客戶端只請求並下載特定範圍的內容，而不是整個檔案。本文將提供 Azure CLI 指令，讓你可以在 Azure Blob Storage 中適當地設定預設版本，啟用 206 Partial Content 使其能夠支援 mp4 串流播放，解決影片無法串流的問題。<!--more-->
+206 Partial Content 是 HTTP 協定中的一項功能，允許客戶端只請求並下載特定範圍的內容，而不是整個檔案。本文將提供 Azure CLI 指令，讓你可以在 Azure Blob Storage 中適當地設定預設版本，啟用 206 Partial Content 使其能夠支援 mp4 串流播放，解決影片無法串流的問題。
+
+<!-- more -->
 
 ## 先說結論
 

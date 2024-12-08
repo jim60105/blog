@@ -28,7 +28,9 @@ trigger = "本站已於 2024 年年底由 Blogger 遷離。雖然本文內容依
 
 這篇文章教各位在 Blogger 每篇文的文末自動產生 LikeCoin Button ，並且，只要在文章中加入 ISCN ，LikeCoin Button 就會變成 Writing NFT widget！
 
-所謂的「半自動化」，是指**你需要手動為文章產生 ISCN 並加入文章內**，其餘都是自動化的喔！<!--more-->
+所謂的「半自動化」，是指**你需要手動為文章產生 ISCN 並加入文章內**，其餘都是自動化的喔！
+
+<!-- more -->
 
 ## Widget 外觀
 

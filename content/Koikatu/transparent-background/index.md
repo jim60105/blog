@@ -23,7 +23,9 @@ banner = "../preview/demo17.jpg"
 * 有 Coinfig 選項可以禁用「Click Through」功能，用在像捏人對照這種只需要看的場合。
 * 會隱藏不在 CharaLayer 的東西 (像官方 Map 和某些 Studio 中的家具)
 * 可調的 UI 透明功能
-<!--more-->
+
+<!-- more -->
+
 ## 注意
 
 * **預設快捷鍵為「未設定」**，到 Config 設定後才能使用

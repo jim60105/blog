@@ -44,7 +44,9 @@ Windows7 和 Windows10 透過 Grub4Dos 引導十分的麻煩
 而現在新的電腦有些沒有 2.0 插槽，像是[這台](@/SystemAdmin/when-installing-win7-the-mouse-and-keyboard-do-not-work/index.md)
 
 於是我們就要開工了...
+
 <!-- more -->
+
 ## 步驟大綱
 
 本系列分成三篇敘述，上篇老少皆宜，中下篇屬於困難級，請適當斟酌

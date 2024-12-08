@@ -21,7 +21,9 @@ card = "使用說明.jpg"
 
 部分工具取自: <http://blog.yam.com/jack60455867/article/20814657>  
 若作者覺得不妥我會拿掉
+
 <!-- more -->
+
 ---
 
 在開始前  

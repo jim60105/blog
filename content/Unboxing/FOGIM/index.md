@@ -14,8 +14,10 @@ card = "preview.jpg"
 +++
 [![](preview.jpg)](preview.jpg)
 
-雙螢幕超爽拉wwwwwwwwww  
-  <!-- more -->
+雙螢幕超爽拉wwwwwwwwww
+
+<!-- more -->
+
 ## 開箱開始
   
 [![](IMG_20141028_162424.jpg)](IMG%5F20141028%5F162424.jpg)

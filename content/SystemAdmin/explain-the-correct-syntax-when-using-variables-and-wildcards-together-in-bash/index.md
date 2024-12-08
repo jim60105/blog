@@ -23,7 +23,9 @@ poor = true
 
 我在 [live-dl](https://github.com/jim60105/live-dl) 專案中，想要清除 yt-dlp 在 `--live-from-start` 時會殘留下的碎片檔案  
 路徑和檔名被儲存在變數中，中段的 format 和碎片編號是未知的，得以萬用字元匹配，而最後以 part 結尾
+
 <!-- more -->
+
 bash 變數如下
 
 ```bash

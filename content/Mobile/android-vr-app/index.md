@@ -19,7 +19,9 @@ archive = "資訊過時，數款 App 已不存在了"
 ## 前言
 
 上禮拜買了 VR 眼鏡後 ([VR 眼鏡 小宅 Z5 青春版 2018 新款 開箱](@/Unboxing/VR-Headset-Xiaozhai-Z5/index.md))，安裝了一堆 APP 嘗鮮，結果留下來的就只有圖中這些。其他的不是不能看，就是體驗比別人差。特別強調一下，很多 APP 沒中選並不是做得不好，而是在台灣觀看會 LAG 或沒影像，估計是跨海和版權鎖區的關係 (?)。評語非常主觀請不要太認真\~
-<!--more-->
+
+<!-- more -->
+
 ## [Fulldive VR](https://play.google.com/store/apps/details?id=in.fulldive.shell)
 
 <aside>

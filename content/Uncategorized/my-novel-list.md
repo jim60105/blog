@@ -17,7 +17,9 @@ id = "113283714264162209"
 
 評級僅供參考，完全是個人主觀評價  
 {{cg(body="評級 5 強推薦")}}，{{color(body="評級 3 中等", color="orange")}}，再低不推  
-評級空白為未讀，同一評級內依名稱排序<!--more-->
+評級空白為未讀，同一評級內依名稱排序
+
+<!-- more -->
 
 ## [Google Sheet](https://docs.google.com/spreadsheets/d/1h5U5rwzgxjzQbcRhPESf313GPUnzguQIQV3%5Fvet096w/edit?usp=sharing)
 

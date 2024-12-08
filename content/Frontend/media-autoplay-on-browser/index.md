@@ -22,7 +22,9 @@ iscn = "iscn://likecoin-chain/bc90szsMlh6oskq44wAPlhoXk5Ja_s3HilwziYp5irM/1"
 
 我在做[影片截選播放清單](@SideProject/userscript-youtube-clip-playlist/index.md)時，遇到播放時會停住的問題，並發現在各瀏覽器、各網站的表現不同，用戶回報給我的狀況也都不同。我對這件事做了些研究，並撰寫下此文記錄。為了改善用戶體驗，瀏覽器正朝著更嚴格的自動播放政策發展。它的目的是讓用戶對播放有更大的控制權，並 ([Chrome 稱](https://developer.chrome.com/blog/autoplay/#new-behaviors)) 讓有合法用途的出版商受益。
 
-這篇文章會提及 Chrome、Firefox 的自動播放規則，身為*網站開發者*我們該怎麼處理前端；身為*用戶*我們該怎麼手動允許特定網站的自動播放。<!--more-->
+這篇文章會提及 Chrome、Firefox 的自動播放規則，身為*網站開發者*我們該怎麼處理前端；身為*用戶*我們該怎麼手動允許特定網站的自動播放。
+
+<!-- more -->
 
 ## 「阻擋自動播放」行為的明確定義
 

@@ -17,7 +17,9 @@ card = "preview.jpg"
 然後周年慶送了這個w  
 但是我不會畫畫所以就OSU(ry  
 官網:<http://www.bravod.com/product/agt195%5Fzh.html>  
-  
+
+<!--more-->
+
 不廢話上圖/  
 外盒  
   

@@ -22,7 +22,9 @@ licenses = [ "GFDL 1.3" ]
 This page is only for logging, please go to this link for download and other details.
 
 [>> コイカツ！個人插件介紹匯整 <<](@/Koikatu/personal-koikatu-plugin/index.md)
-{% end %}<!-- more -->
+{% end %}
+
+<!-- more -->
 
 ---
 

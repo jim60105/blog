@@ -31,7 +31,9 @@ hot = true
 **アップデートログ**はこちら  
 Click here for **update logs**  
 [>> コイカツ！ 個人插件更新記錄 <<](@/Koikatu/plugin-update-logs/index.md)
-{% end %}<!--more-->
+{% end %}
+
+<!-- more -->
 
 <style type="text/css">
   .animate {

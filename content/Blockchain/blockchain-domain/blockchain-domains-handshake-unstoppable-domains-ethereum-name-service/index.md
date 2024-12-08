@@ -32,7 +32,9 @@ featured = true
 
 我個人並不是區塊鏈工程師，我不了解技術細節，本文也不會探討那些東西。我會以一個業餘網管的視角出發，就 Handshake、Unstoppable Domains、Ethereum Name Service 三個當紅的區塊鏈網域專案作介紹，描述它們有何不同，而你應該怎麼選。
 
-喔對了，我現在手上有 20 個 Handshake domains，以及兩個 Unstoppable Domains.<!--more-->
+喔對了，我現在手上有 20 個 Handshake domains，以及兩個 Unstoppable Domains.
+
+<!-- more -->
 
 ## 傳統 Domain Name System
 

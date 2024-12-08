@@ -31,7 +31,9 @@ disclaimer = """
 * 你可以在網頁中播放影片
 * 影片使用 [shaka-packager](https://github.com/shaka-project/shaka-packager) 技術加密
 * 你能取得 License Server 的 Clear Key Response 內容
-<!--more-->
+
+<!-- more -->
+
 ## Before Start: 如何得知影片是以 shaka-packager 加密
 
 [![hex](1.png)](1.png)

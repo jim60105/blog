@@ -21,7 +21,9 @@ banner = "../preview/demo7.png"
 
 Load Scene 視窗處，在 Import 或 Load 後自動關閉視窗  
 可以使用 Configuration Manager 個別設定 Import/Load 是否啟用 (預設皆啟用)
-<!--more-->
+
+<!-- more -->
+
 #### 需求依賴
 
 ##### Koikatu

@@ -18,7 +18,9 @@ card = "preview.jpg"
 <http://www.eclife.com.tw/payeasy/moreinfo%5F69049.htm>
 
 [![](preview.jpg)](preview.jpg)
+
 <!-- more -->
+
 塑膠膜別在意我怕之後要退沒有撕
 
 **申明:這東西NT299，感覺"不愧是299。"的樣子**

@@ -37,7 +37,9 @@ featured = true
 * 因為沒有轉載、修改原影片，不會有版權爭議
 
 > 此專案曾是個油猴腳本 (UserScript)，現已重寫為擴充功能
+
 <!-- more -->
+
 ## 安裝方法
 
 * 參照[這篇文章](@/Frontend/media-autoplay-on-browser/index.md)，設定下方網域的{{cg(body="允許自動播放")}}

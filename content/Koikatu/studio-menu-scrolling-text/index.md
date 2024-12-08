@@ -20,6 +20,8 @@ card = "../preview/demo20.png"
 * 滾動速度可在 Config 調節
 * 可在分類清單前後顯示自訂文字，此功能設計讓 modder 顯示自訂訊息
 
+<!--more-->
+
 ## 自訂文字之說明
 
 [![](/Koikatu/preview/demo20-1.png)](/Koikatu/preview/demo20-1.png)

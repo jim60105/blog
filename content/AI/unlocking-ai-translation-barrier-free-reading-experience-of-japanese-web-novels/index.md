@@ -43,7 +43,9 @@ hot = true
 * [小説家になろう (成為小說家吧)](https://syosetu.com/)
 * [カクヨム (KAKUYOMU)](https://kakuyomu.jp/)
 * [アルファポリス - 電網浮遊都市 - (AlphaPolis)](https://www.alphapolis.co.jp/)
-<!--more-->
+
+<!-- more -->
+
 > 延伸閱讀
 >
 > ---

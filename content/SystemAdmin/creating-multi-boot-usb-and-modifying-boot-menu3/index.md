@@ -48,7 +48,9 @@ card = "preview.png"
 
 這時候就會想，何不在 USB 裡面灌個一般系統呢? →得到的解答: {{cg(body="Windows To Go")}}  
 WTG 本身是不難做，但是要跟我們的多重開機合併就會遇到幾個瓶頸
+
 <!-- more -->
+
 1. Windows C 槽結構固定，無法安裝在特定資料夾
    * 灌進 VHD 裡面，然後使用 Grub4Dos→BCD 引導
 2. 灌起來以後效能不佳

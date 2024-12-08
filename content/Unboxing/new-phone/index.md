@@ -17,7 +17,9 @@ licenses = [ "All Rights Reserved" ]
   
 雖然很貴但是比其它同等的便宜  
   
-嗯，非常喜歡  <!-- more -->
+嗯，非常喜歡
+
+<!-- more -->
   
 尤其是可以設隨機桌布，  
   

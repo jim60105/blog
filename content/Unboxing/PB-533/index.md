@@ -28,7 +28,9 @@ card = "preview.jpg"
 它連一次電都沒有充滿過..
 
 [![](preview.jpg)](preview.jpg)
+
 <!-- more -->
+
 後來上 BESTA 官網竟然找不到這款，卻找到這個
 
 我阿姨一定是從這入手的..

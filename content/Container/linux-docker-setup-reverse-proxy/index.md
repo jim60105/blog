@@ -34,7 +34,9 @@ Reverse Proxy (反向代理)，可以比喻為一棟樓的大門管理員
 使用 docker 技術，能在同一台機器上配置多個伺服器，且不會互相干擾
 
 此套 ReverseProxy 可在 docker compose up 時建立路由，自動申請及 Renew SSL 證書  
-我個人的所有網路服務都是配合此套 ReverseProxy 做建置，特撰此文以做前導<!--more-->
+我個人的所有網路服務都是配合此套 ReverseProxy 做建置，特撰此文以做前導
+
+<!-- more -->
 
 ## 流程簡述
 

@@ -11,7 +11,9 @@ tags = [ ]
 licenses = [ "GFDL 1.3" ]
 +++
 ## 出處:<http://www.dzjs.net/html/PCBjishu/2008/0923/3375.html>
+
 <!-- more -->
+
 怕文章丟失故轉載，若有任何問題立刻刪除
 
 步驟二使用合併而不是閉合

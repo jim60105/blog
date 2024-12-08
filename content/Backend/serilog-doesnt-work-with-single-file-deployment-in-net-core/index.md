@@ -29,7 +29,9 @@ poor = true
 > * 單一檔案部署 (Single file application)
 > * Serilog
 > * 以 appsettings.json 來定義 log 規則
-<!--more-->
+
+<!-- more -->
+
 如果滿足上述條件，記得 json 中要加上這一段  
 參考專案檔內安裝的 Serilog 套件來寫
 

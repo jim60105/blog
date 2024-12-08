@@ -19,8 +19,10 @@ card = "preview.jpg"
 我的艾莉到了wwwwww
 
 手機渣畫質我就不詳細開箱了  
-以下純粹自爽wwwwww  
+以下純粹自爽wwwwww
+
 <!-- more -->
+
 [![](preview.jpg)](preview.jpg)
 
 [![](DSC_0021.jpg)](DSC%5F0021.jpg)

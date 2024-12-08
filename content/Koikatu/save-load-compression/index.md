@@ -39,7 +39,9 @@ featured = true
   * CharacterReplacer v1.6.2
 * Koikatsu Sunshine:  
   支援遊戲啟動時的「由 Koikatu 升級存檔至 Sunshine」功能，安裝插件後如常操作即可
+
 <!-- more -->
+
 ## **注意**
 
 * 要啟動儲存功能，必須要在 Config 中開啟兩個 Enable

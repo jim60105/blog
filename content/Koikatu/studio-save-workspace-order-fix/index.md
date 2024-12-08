@@ -25,7 +25,9 @@ card = "../preview/demo16.png"
 > 因為存這些 TreeNode 的時候是塞在一個 Dictionary 裡面，Save\&Load 的時候依序讀  
 > 而 Dictionary 之排序順序就是 Add 進去的順序，也就是所有物件建立的順序  
 > 這插件做的事就是在 Save 前按照實際 TreeNode 順序重新建立這個 Dictionary
+
 <!-- more -->
+
 ## 需求依賴
 
 ### Koikatu

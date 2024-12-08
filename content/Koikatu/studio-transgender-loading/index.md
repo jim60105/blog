@@ -24,7 +24,9 @@ hot = true
 以此插件可以實現跨性別替換角色功能
 
 POSE 解鎖性別限制，男女都可讀取
-<!--more-->
+
+<!-- more -->
+
 > 這是 Studio All Girls 的替代，請移除 KK\_StudioAllGirlsPlugin.dll
 
 ## 需求依賴

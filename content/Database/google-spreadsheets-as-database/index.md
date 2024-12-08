@@ -35,7 +35,9 @@ licenses = [ "GFDL 1.3" ]
 上: [資料庫的建立及寫入 (本篇)](@/Database/google-spreadsheets-as-database/index.md)
 
 下: [資料庫的讀取](@/Database/google-spreadsheets-as-database2/index.md)
+
 <!-- more -->
+
 **※圖片若不易閱讀請點擊放大※**
 
 ## 工具

@@ -29,7 +29,9 @@ iscn = "iscn://likecoin-chain/OkHAhjNWyZppmCu3ffbFJpRV2x33dNoiqkBNFyIzmec/1"
 
 此專案目標為 **「自動化影片備份」**，盡量保存最好的影片，若砍檔我還有一份錄播的  
 記錄下我推的每分每秒
-<!--more-->
+
+<!-- more -->
+
 ## 概觀
 
 ### 本專案核心目標

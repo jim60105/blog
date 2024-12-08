@@ -16,7 +16,9 @@ banner = "preview.JPG"
 
 [![](preview.JPG)](preview.JPG)
 
-此方法使用 [ABMX 插件](https://github.com/ManlyMarco/KKABMX/releases)，快速的教你如何製作圖中的效果<!--more-->
+此方法使用 [ABMX 插件](https://github.com/ManlyMarco/KKABMX/releases)，快速的教你如何製作圖中的效果
+
+<!-- more -->
 
 因為可以做出此效果的 Bone，其相對於襪子的高度是固定的，只有一部份的襪子能吻合  
 在開始調整前必須先換上可對應的過膝襪，包括但不限於圖中這雙

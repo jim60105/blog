@@ -18,8 +18,10 @@ card = "preview.jpg"
   
 算了就這樣  
 以下正文  
-全部點開都有大圖  
+全部點開都有大圖
+
 <!-- more -->
+
 ---
 
 [![](preview.jpg)](preview.jpg)

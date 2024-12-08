@@ -21,7 +21,9 @@ poor = true
 
 我的 [YoutubeLiveChatToDiscord](https://github.com/jim60105/YoutubeLiveChatToDiscord) 可以監控會員限定的直播，它是使用 yt-dlp 實作的，驗證方式是通過 Netscape Cookie file。我的是用 ArgoCD 部署，將文字塞入 Application Parameters 後寫到 Configmap，再掛載進去為 cookies.txt 檔案。
 
-Netscape Cookie file 的關鍵是它吃斷行，我最終 Pod 內的文字檔需要是 LF 斷行。<!--more-->
+Netscape Cookie file 的關鍵是它吃斷行，我最終 Pod 內的文字檔需要是 LF 斷行。
+
+<!-- more -->
 
 我試著從網頁上的 Parameters 頁籤去改它，它是單行 input textbox，但不論用什麼方式填進去都會無法保留斷行，包括斷行符、\\n、\\\\n、\\r\\n 什麼都不行。
 
