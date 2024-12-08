@@ -10,6 +10,7 @@ tags = [ ]
 
 [extra]
 card = "preview.png"
+iscn = "iscn://likecoin-chain/5eVo7Oyp780kXYXk14RZLf9rijMdh84tzSd0ZssrKzY/1"
 +++
 > 本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作
 
@@ -148,7 +149,7 @@ Zola 的靈活性允許我為不同的 Taxonomy 使用不同的範本。這意�
 
 ### ISCN 識別碼以及 Writing NFT Widget
 
-> 什麼是 ISCN？
+> <a rel="noopener noreferrer" href="https://app.like.co/view/iscn%3A%2F%2Flikecoin%2Dchain%2F5eVo7Oyp780kXYXk14RZLf9rijMdh84tzSd0ZssrKzY%2F1" target="_blank"> <img alt="View counter badge" src="https://static.like.co/badge/iscn/iscn://likecoin-chain/5eVo7Oyp780kXYXk14RZLf9rijMdh84tzSd0ZssrKzY/1.svg?dark=1&amp;responsive=0#no-hover#pixels#badge#transparent"></a>
 >
 > ---
 > ISCN 全寫 International Standard Content Number，是每筆內容在 LikeCoin chain 區塊鏈上註冊的元數據。
@@ -156,7 +157,7 @@ Zola 的靈活性允許我為不同的 Taxonomy 使用不同的範本。這意�
 > ISCN  的用途有如書籍出版所用的國際書號 ISBN，把內容出版到 LikeCoin chain 區塊鏈的概念也相似，註冊獨一無二的 ISCN，附帶包括作者、日期、授權方式、內容指紋等元數據。因為區塊鏈的特性，ISCN 和元數據不可篡改。  
 > —— [ISCN | LikeCoin](https://docs.like.co/zh/depub/what-is-iscn)
 
-> 什麼是 Writing NFT?
+> <div style="margin:2rem auto" id="likerContainer"><iframe sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://button.like.co/in/embed/iscn/button?iscn_id=iscn://likecoin-chain/5eVo7Oyp780kXYXk14RZLf9rijMdh84tzSd0ZssrKzY/1" class="writingNFT" frameborder="0" scrolling="no"></iframe></div>
 >
 > ---
 > 顧名思義，Writing NFT 是一種非同質化代幣 (NFT)，代表著某篇文字作品的所有權，像是文章或任何其他形式的文字，無論附帶插圖與否。換句話說，它是證明某段數位文字內容所有權的證據。  
@@ -166,16 +167,12 @@ Zola 的靈活性允許我為不同的 Taxonomy 使用不同的範本。這意�
 
 ### View Counter
 
-<div>
-{{ image(url="//view-counter.jim60105.workers.dev/?style=classic&labelColor=141414&color=555&scale=1#badge", alt="View counter badge", no_hover=true, pixels=true, badge=true) }}
-</div>
-
-這次我也將這個計數器加入到了我的部落格中，你可以在每一頁的最下方找到這個小小的計數器。
-
-> 延伸閱讀
+> <div> {{ image(url="//view-counter.jim60105.workers.dev/?style=classic&labelColor=141414&color=555&scale=1#badge", alt="View counter badge", no_hover=true, pixels=true, badge=true) }} </div>
 >
 > ---
 > [\[個人專案\] 網頁計數器徽章 View Counter Badge —— 瀏覧數別再送人啦！以 Cloudflare Workers D1 實作適合純前端網頁的計數器](@/SideProject/view-counter-badge-cloudflare-workers-d1/index.md)
+
+這次我也將這個計數器加入到了我的部落格中，你可以在每一頁的最下方找到這個小小的計數器。
 
 ### 重構 \<head\> 元素
 
