@@ -18,7 +18,7 @@ disclaimer = """
 +++
 <figure>
 {{ image(url="preview.png") }}
-<figcaption><a href="https://civitai.com/posts/6321883" target="_blank">Made with Flux.1-dev</figcaption>
+<figcaption><a href="https://civitai.com/posts/6321883" target="_blank">Made with Flux.1-dev</a></figcaption>
 </figure>
 
 ## 前言
