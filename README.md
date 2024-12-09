@@ -27,6 +27,7 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 | `base.html` | - Use `config.extra.toc_sidebar` to always display sidebar toc. |
 | `taxonomy_list.html` | Make it work with different taxonomies |
 | `taxonomy_single.html` | Make it work with different taxonomies |
+| `sitemap.xml` | - Filter non-canonical pages<br>- Remove <lastmod> date that is 0000-01-01 which I used for non-article content. |
 | `partials/articles.html` | - Make different taxonomies list together<br>- Remove blur thumbnail |
 | `partials/default_theme.html` | Use dark theme (The intention of not using `config.extra.default_theme` is to use the dark theme and not enable the theme switcher.) |
 | `partials/head.html` | - Rearrange the order of meta tags and extract them to `partials/open_graph.html`. According to best practices, all meta og tags should be placed at the very beginning of the webpage, sorted by importance, while `<style>` and `<script>` should be placed later. This is because og parsers only read a fixed length (not very long) and discard any content after encountering any error.<br>-  Add link preconnect.<br>- Add my fonts from CDN.<br>- Add Google Analytics and Microsoft Clarity tracking code. |
@@ -85,6 +86,17 @@ Some green text
 Some hidden text
 {% end %}
 ```
+
+## Notes
+
+A workaround in the `sitemap.xml` that filters out non-canonical pages has been fixed in Zola (see <https://github.com/getzola/zola/issues/2527>), but it hasn't been released yet. This workaround should be removed when upgrading to the next Zola release. It's 0.19.2 now.
+
+## Links
+
+- [Zola Documentation](https://www.getzola.org/documentation)
+- [Duckquill](https://duckquill.daudix.one/)
+- [Tera documentation](https://keats.github.io/tera/docs/)
+- [Zola built-in templates](https://github.com/getzola/zola/tree/master/components/templates/src/builtins)
 
 ## LICENSE
 
