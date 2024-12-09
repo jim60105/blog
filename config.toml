@@ -6,7 +6,7 @@ title = "琳的備忘手札"
 description = "軟體工程師是一種懶惰的生物，\n我們是為了未來的懶惰而努力。"
 
 # The default language; used in feeds.
-default_language = "zh"
+default_language = "zh-Hant"
 
 # The site theme to use.
 theme = "duckquill"
@@ -332,7 +332,7 @@ links = [
 		{ url = "@/Unboxing/_index.md", name = "Unboxing" },
 		{ url = "@/Uncategorized/_index.md", name = "Uncategorized" },
 	] },
-	{ url = "@/archive.md", name = "Archive" },
+	{ url = "@/archive.md", name = "archived" },
 ]
 
 [extra.footer]
@@ -361,7 +361,7 @@ show_powered_by = true
 show_source = false
 # Custom copyright text
 #
-copyright = "<a href='/SideProject/view-counter-badge-cloudflare-workers-d1'><img id='counter' src='https://view-counter.jim60105.workers.dev/?style=classic&labelColor=141414&color=555&scale=1#no-hover#pixels#badge' alt='View counter badge'/></a><p><small>Copyright © by 陳鈞 (jim60105) Since 2010. <a href='/privacy-policy'>Privacy Policy.</a><br><a href='/licenses/gfdl-1-3/'>Articles marked as GFDL-1.3 are licensed accordingly</a>; otherwise, all rights reserved.</small></p>"
+copyright = "<a href='/SideProject/view-counter-badge-cloudflare-workers-d1'><img id='counter' src='https://view-counter.jim60105.workers.dev/?style=classic&labelColor=141414&color=555&scale=1#no-hover#pixels#badge' alt='View counter badge'/></a><p><small>Copyright © 2010 陳鈞 (jim60105) | <a href='/privacy-policy'>隱私權政策</a><br><a href='/licenses/gfdl-1-3/'>標示為 GFDL-1.3 之文章依此條款授權</a>；其它文章保留所有權利。</small></p>"
 
 # Based on https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/
 #
