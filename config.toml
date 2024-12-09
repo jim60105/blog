@@ -227,9 +227,9 @@ fix_contrast_dark = true
 emoji_favicon = "🚀"
 #
 # URL to website's issue tracker
-issues_url = "https://github.com/jim60105/blog/issues"
+issues_url = "https://github.com/jim60105/blog"
 # URL to website's source code
-source_url = "https://github.com/jim60105/blog"
+source_url = "https://github.com/jim60105"
 # Additional CSS styles; expects them to be in the "./static/" directory.
 # If you are using Sass it will be generated there automatically.
 #
@@ -251,9 +251,9 @@ show_reading_time = true
 #
 # Whether to show a share button in article's quick actions.
 # Uses https://shareopenly.org.
-show_share_button = true
+show_share_button = false
 # Whether to show the backlinks button for linked articles in the article's quick actions
-show_backlinks = false
+show_backlinks = true
 # Whether to enable the KaTeX library for rendering LaTeX.
 # Note: This will make your page significantly heavier.
 # Instead, consider enabling it per page/section.
@@ -310,7 +310,7 @@ show_feed = true
 # Whether to show the manual theme switcher in the nav
 show_theme_switcher = false
 # Whether to show the link to the source repository in the nav
-show_repo = false
+show_repo = true
 # Links used in the nav.
 # For local files use same link format as in Markdown,
 # i.e. "@/blog/_index.md".
@@ -333,7 +333,6 @@ links = [
 		{ url = "@/Uncategorized/_index.md", name = "Uncategorized" },
 	] },
 	{ url = "@/archive.md", name = "Archive" },
-	{ url = "https://github.com/jim60105", name = "GitHub" },
 ]
 
 [extra.footer]
