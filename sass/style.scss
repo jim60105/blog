@@ -19,7 +19,12 @@
 }
 
 body {
-  background: center / cover no-repeat fixed url("/card.webp");
+  background: center / cover no-repeat fixed url("/card.png");
+  background-image: image-set(
+    url("/card.avif") type("image/avif"),
+    url("/card.webp") type("image/webp"),
+    url("/card.png") type("image/png")
+  );
 }
 
 #site-nav nav #feed {
