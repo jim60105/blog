@@ -37,6 +37,8 @@ $HOME/.config/containers/containers.conf
 
 ## Install NVIDIA Driver
 
+<https://rpmfusion.org/Howto/NVIDIA#Installing_the_drivers>
+
 ## Install NVIDIA Container Toolkit
 
 <https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installing-with-yum-or-dnf>
