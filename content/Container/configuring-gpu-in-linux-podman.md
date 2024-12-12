@@ -37,7 +37,10 @@ $HOME/.config/containers/containers.conf
 
 ## Install NVIDIA Driver
 
+<https://rpmfusion.org/Howto/OSTree>
+
 <https://rpmfusion.org/Howto/NVIDIA#Installing_the_drivers>
+
 
 ## Install NVIDIA Container Toolkit
 
