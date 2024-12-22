@@ -11,6 +11,10 @@ taxonomies:
     - Docker
   licenses:
     - GFDL 1.3
+extra:
+  iscn: iscn://likecoin-chain/LJx_mG7rlrm4mxdFaZI76qVzYqWPERhCAA8NdHFbC_o/1
+  comments:
+    id: "113694165566370607"
 ---
 ## 前言
 
