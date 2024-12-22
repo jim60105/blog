@@ -1,24 +1,22 @@
----
-title: Fedora/RHEL 的 Podman GPU 設定手札
-date: 2024-12-22T01:56:24.474Z
-updated: 2024-12-22T01:56:24.914Z
-description: 本指南詳細介紹如何在 Fedora 系統中為 Podman 配置 GPU 支援。從 Podman 和相關工具的安裝，到 NVIDIA 驅動程式與 Container Toolkit 的設定，文章提供了完整的步驟說明。特別強調了 Container Device Interface (CDI) 的重要性，並提供測試方法驗證 GPU 運作。文末介紹了 Stable Diffusion WebUI 和 WhisperX 兩個實際應用範例，展示 GPU 容器化的優勢。無論您是 Linux 新手還是經驗開發者，本文都能助您充分發揮 Fedora 上 Podman 和 GPU 的潛力。
-taxonomies:
-  tags:
-    - Container
-    - Linux
-    - RHEL/Fedora
-    - Docker
-  licenses:
-    - GFDL 1.3
-extra:
-  iscn: iscn://likecoin-chain/LJx_mG7rlrm4mxdFaZI76qVzYqWPERhCAA8NdHFbC_o/1
-  comments:
-    id: "113694165566370607"
----
++++
+title = "Fedora/RHEL 的 Podman GPU 設定手札"
+date = "2024-12-22T01:56:24.474Z"
+updated = "2024-12-22T15:34:01.584Z"
+description = "本指南詳細介紹如何在 Fedora 系統中為 Podman 配置 GPU 支援。從 Podman 和相關工具的安裝，到 NVIDIA 驅動程式與 Container Toolkit 的設定，文章提供了完整的步驟說明。特別強調了 Container Device Interface (CDI) 的重要性，並提供測試方法驗證 GPU 運作。文末介紹了 Stable Diffusion WebUI 和 WhisperX 兩個實際應用範例，展示 GPU 容器化的優勢。無論您是 Linux 新手還是經驗開發者，本文都能助您充分發揮 Fedora 上 Podman 和 GPU 的潛力。"
+
+[taxonomies]
+tags = [ "Container", "Linux", "RHEL/Fedora", "Docker" ]
+licenses = [ "GFDL 1.3" ]
+
+[extra]
+iscn = "iscn://likecoin-chain/LJx_mG7rlrm4mxdFaZI76qVzYqWPERhCAA8NdHFbC_o/1"
+
+  [extra.comments]
+  id = "113694165566370607"
++++
 ## 前言
 
-在上個月我從 Windows 跳槽到了 Fedora，並深入研究「如何在 Linux 環境設定 Podman」這個課題。以前[在寫個人專案文件](https://github.com/jim60105/docker-stable-diffusion-webui?tab=readme-ov-file#-get-your-docker-ready-for-gpu-support)時，碰到 Linux 總是輕輕帶過，「Linux 使用者知道自己在做什麼😉」，放個連結交差了事。然而實際輪到自己在安裝時，果然還是會遇到一些值得記錄下來的小挑戰{{ch(body="地雷")}}。
+上個月我從 Windows 跳槽到了 Fedora 重裝系統時深入研究了「如何在 Linux 環境設定 Podman」這個課題。以前在寫[個人專案文件](https://github.com/jim60105/docker-stable-diffusion-webui?tab=readme-ov-file#-get-your-docker-ready-for-gpu-support)時碰到 Linux 總是輕輕帶過，「Linux 使用者知道自己在做什麼😉」，放個連結交差了事。然而實際輪到自己安裝時果然還是會遇到值得記錄下來的小挑戰{{ch(body="小地雷")}}。
 
 這篇文章將講述如何設定 [Podman](https://podman.io/)、[Podman Compose](https://github.com/containers/podman-compose)、[NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/index.html)、[Container Device Interface (CDI)](https://github.com/cncf-tags/container-device-interface)，以便能夠在容器中使用 GPU。我會詳細介紹從安裝到設定的所有步驟，並分享一些實際應用的例子。無論你是初學者還是有經驗的使用者，希望這篇文章能為你在 Podman 容器的探索中提供幫助。
 
@@ -103,7 +101,7 @@ Podman 作為一個開源專案，提供了更安全、更靈活的容器管理�
 
 不過，如果出於某些原因你的系統上沒有 Podman，或者你想確保使用的是最新版本，你可以使用以下指令輕鬆安裝：
 
-```
+```bash
 sudo dnf -y install podman
 ```
 
@@ -245,9 +243,7 @@ nvidia.com/gpu=all
 
 ## 測試 Podman 和 GPU 設定
 
-在完成 Podman 和 GPU 的設定後，進行以下測試以確保一切設置正確。本章將介紹如何運行 GPU 測試容器並解讀測試結果。
-
-### 運行 GPU 測試容器
+在完成 Podman 和 GPU 的設定後，進行以下測試以確保一切設置正確。
 
 我們可以使用一個簡單的指令來測試 Podman 是否能夠正確地訪問 GPU：
 
@@ -308,6 +304,6 @@ WhisperX 是一個革命性的自動語音識別工具，提供高速轉錄、�
 
 通過運行這兩個 GPU 容器應用，不僅可以驗證我們之前的 Podman 和 GPU 設定是否正確，還可以親身體驗 GPU 給這些 AI 應用帶來的巨大性能提升。在容器中運行這些應用能讓你更靈活地管理依賴關係，並在不同環境間輕鬆遷移。
 
-另外，如果你在實作過程中遇到什麼問題，歡迎在下方留言討論。說不定你踩到的地雷，其他人已經踩過一次了。大家一起討論，可能會激發出更多有趣的想法和解決方案。
+另外，如果你在實作過程中遇到什麼問題歡迎在下方留言討論。說不定你踩到的地雷其他人已經踩過一次了。
 
 總之，希望這篇文章對你有幫助。容器化的 GPU 應用確實帶來了很多便利，期待看到更多人在這個領域發揮創意，做出有趣的東西！
