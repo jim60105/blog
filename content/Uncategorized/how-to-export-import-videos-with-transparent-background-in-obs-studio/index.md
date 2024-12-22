@@ -3,7 +3,6 @@ title = "如何在 OBS Studio 錄製和匯入透明背景影片"
 description = "想在 OBS Studio 中使用透明背景影片嗎？本文深入探討如何在 OBS 中錄製和匯入帶有 Alpha 通道的影片。從基本概念到實際操作，一步步揭開這個有趣技術的神秘面紗。你將學到 Alpha 通道的原理、OBS Studio 的錄製設定，以及如何輕鬆匯入透明背景影片。"
 date = "2024-12-22T16:00:03.816Z"
 updated = "2024-12-22T16:00:04.169Z"
-draft = true
 
 [taxonomies]
 tags = [ "Livestream" ]
