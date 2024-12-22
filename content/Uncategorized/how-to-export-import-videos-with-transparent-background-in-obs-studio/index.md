@@ -7,6 +7,12 @@ updated = "2024-12-22T16:00:04.169Z"
 [taxonomies]
 tags = [ "Livestream" ]
 licenses = [ "All Rights Reserved" ]
+
+[extra]
+iscn = "iscn://likecoin-chain/8353EziYokYoeU6oc8fSCwbGsqDcI8ZsGBSWK2R-EX4/1"
+
+  [extra.comments]
+  id = "113698906788022929"
 +++
 <figure>
 {{ video(url="transparent_vp9.webm", alt="A video without background", controls=true, loop=true, muted=true, autoplay=true) }}
