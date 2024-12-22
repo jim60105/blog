@@ -18,7 +18,7 @@ taxonomies:
 
 這篇文章將講述如何設定 [Podman](https://podman.io/)、[Podman Compose](https://github.com/containers/podman-compose)、[NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/index.html)、[Container Device Interface (CDI)](https://github.com/cncf-tags/container-device-interface)，以便能夠在容器中使用 GPU。我會詳細介紹從安裝到設定的所有步驟，並分享一些實際應用的例子。無論你是初學者還是有經驗的使用者，希望這篇文章能為你在 Podman 容器的探索中提供幫助。
 
-## 1. Podman 簡介
+## Podman 簡介
 
 ### Podman 是什麼?
 
@@ -87,7 +87,7 @@ Podman 作為一個開源專案，提供了更安全、更靈活的容器管理�
 <figcaption>你可以兩個都裝，它們不衝突</figcaption>
 </figure>
 
-## 2. 安裝必要組件
+## 安裝必要組件
 
 ### 安裝 Podman
 
@@ -169,7 +169,7 @@ sudo dnf -y install podman-compose
 
 這個設定是確保我們能夠順利使用 Podman 與 GPU 的關鍵步驟。在下一章節中，我將深入探討如何設定 Podman 以使用 GPU。
 
-## 3. 設定 Podman 以使用 GPU
+## 設定 Podman 以使用 GPU
 
 在這個章節中，我將詳細介紹如何設定 Podman 來使用 GPU。這個過程包括安裝 NVIDIA 驅動、NVIDIA Container Toolkit，以及設置 CDI（Container Device Interface）。
 
@@ -239,7 +239,7 @@ nvidia.com/gpu=all
 
 > 運行這兩個指令時如果看見任何的紅字，請回頭檢查你的 NVIDIA 驅動和 NVIDIA Container Toolkit 是否正確安裝。
 
-## 4. 測試 Podman 和 GPU 設定
+## 測試 Podman 和 GPU 設定
 
 在完成 Podman 和 GPU 的設定後，進行以下測試以確保一切設置正確。本章將介紹如何運行 GPU 測試容器並解讀測試結果。
 
@@ -272,7 +272,7 @@ GPU 0: NVIDIA GeForce RTX 3060 (UUID: GPU-6e9cf2fe-a071-933b-32ff-388b189925ec)
 
 如果你看到了類似上面的輸出，那麼恭喜你！這意味著你的 Podman 和 GPU 設定已經成功了。在下一章中，我將介紹兩個需要 GPU 的容器化應用，來體驗一下 GPU 容器化的樂趣。
 
-## 5. GPU 容器應用實例
+## GPU 容器應用實例
 
 在確認 Podman 能夠正確訪問 GPU 後，我們可以開始運行一些實際的 GPU 容器應用。本章將介紹兩個流行的 AI 工具：Stable Diffusion WebUI 和 WhisperX，它們都能夠充分利用 GPU 來提高性能。
 
