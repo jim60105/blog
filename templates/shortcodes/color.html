@@ -1,9 +1,11 @@
-{%- if element -%}
-	<{{element}} style="color: {{ color }}">
+{%- set ele = element | default(value="span") -%}
+
+{%- if halo -%}
+	<{{ele}} style="color: white; text-shadow: 0 0 5px {{ color }}, 0 0 8px {{ color }}, 0 0 10px {{ color }}, 0 0 15px {{ color }}, 0 0 40px {{ color }}, 0 0 70px {{ color }};">
 		{{ body }}
-	</{{element}}>
+	</{{ele}}>
 {%- else -%}
-	<span style="color: {{ color }}">
+	<{{ele}} style="color: {{ color }}">
 		{{ body }}
-	</span>
+	</{{ele}}>
 {%- endif -%}
