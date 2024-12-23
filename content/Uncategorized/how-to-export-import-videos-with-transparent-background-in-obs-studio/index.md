@@ -34,6 +34,8 @@ iscn = "iscn://likecoin-chain/8353EziYokYoeU6oc8fSCwbGsqDcI8ZsGBSWK2R-EX4/1"
 
 > 朋友使用 Wondershare Filmora 14 & Adobe Premiere 製作字幕影片，這兩款軟體我都沒有，所以這部份不在本篇討論範圍內。
 
+<!-- more -->
+
 ## 影片/圖片是怎麼能「去背」的?
 
 在深入探討 OBS Studio 的操作之前，讓我們先來了解一下「去背」這個概念的本質。
