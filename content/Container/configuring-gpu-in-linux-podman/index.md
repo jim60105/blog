@@ -309,3 +309,24 @@ WhisperX 是一個革命性的自動語音識別工具，提供高速轉錄、�
 另外，如果你在實作過程中遇到什麼問題歡迎在下方留言討論。說不定你踩到的地雷其他人已經踩過一次了。
 
 總之，希望這篇文章對你有幫助。容器化的 GPU 應用確實帶來了很多便利，期待看到更多人在這個領域發揮創意，做出有趣的東西！
+
+## 附錄: 設定 Docker 以使用 GPU
+
+Fedora 按照上面的步驟設定好了 CDI 之後，若想要在 「Docker」 使用 GPU 仍會有一些小問題。
+
+### Rootless Docker 版本
+
+在 Rootless docker 中透過 CDI 使用 GPU 時，Docker Engine 必須要安裝版本 `v27.4.0` 以上  
+否則會遇到 [issue #47676](https://github.com/moby/moby/issues/47676)
+
+### 啟用 CDI
+
+需要在 `daemon.json` 中啟用 cdi: [ref][enable-cdi-devices]
+
+```json
+"features": {
+  "cdi": true
+}
+```
+
+[enable-cdi-devices]: <https://docs.docker.com/reference/cli/dockerd/#enable-cdi-devices>
