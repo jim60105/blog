@@ -310,7 +310,7 @@ WhisperX 是一個革命性的自動語音識別工具，提供高速轉錄、�
 
 總之，希望這篇文章對你有幫助。容器化的 GPU 應用確實帶來了很多便利，期待看到更多人在這個領域發揮創意，做出有趣的東西！
 
-## 附錄: 設定 Docker 以使用 GPU
+<!-- ## 附錄: 設定 Docker 以使用 GPU
 
 Fedora 按照上面的步驟設定好了 CDI 之後，若想要在 「Docker」 使用 GPU 仍會有一些小問題。
 
@@ -329,4 +329,4 @@ Fedora 按照上面的步驟設定好了 CDI 之後，若想要在 「Docker」 
 }
 ```
 
-[enable-cdi-devices]: <https://docs.docker.com/reference/cli/dockerd/#enable-cdi-devices>
+[enable-cdi-devices]: <https://docs.docker.com/reference/cli/dockerd/#enable-cdi-devices> -->
