@@ -16,7 +16,7 @@ iscn = "iscn://likecoin-chain/rtxrL8i4xKTDgZw8blO709mJWa-KdzDxwEkVnG1xpIM/2"
 trigger = "由於 イリュージョン 收攤，本文的官網連結已全數死去"
 archive = """
 本文已停更多年且不計劃再更新<br>
-就結論來說，前作 <a href="@/Koikatu/bep5-plugin-guide/index.md">《コイカツ！》</a> 的熱度明顯高於本作品<br>
+就結論來說，前作 <a href="/Koikatu/bep5-plugin-guide">《コイカツ！》</a> 的熱度明顯高於本作品<br>
 請優先考慮體驗前作"""
 featured = true
 hot = true
