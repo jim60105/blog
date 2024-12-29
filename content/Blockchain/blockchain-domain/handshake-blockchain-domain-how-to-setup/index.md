@@ -57,7 +57,7 @@ iscn = "iscn://likecoin-chain/TW11huUVHy5Bsg0S3prnXNNYKzj0iabfmREUOaGla1w/1"
 * 開一台 VPS
 
 > 請參考本文建置主機，安裝 Docker 環境  
-> [琳的備忘手札: \[Docker\] Linux 主機之 Docker 安裝和 ReveseProxy 建置](@/Container/linux-docker-setup-reverse-proxy/index.md)  
+> [琳的備忘手札: \[Docker\] Linux 主機之 Docker 安裝和 ReverseProxy 建置](@/Container/linux-docker-setup-reverse-proxy/index.md)  
 > 配置新主機請參考此設定  
 > [![](/Blockchain/blockchain-domain/handshake/setup/5.png)](/Blockchain/blockchain-domain/handshake/setup/5.png)
 
