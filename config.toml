@@ -301,8 +301,10 @@ csp = [
 		"data:",
 	] },
 	{ directive = "script-src", domains = [
-		"'self'",
 		"'unsafe-inline'",
+		"https://www.googletagmanager.com",
+		"https://www.clarity.ms",
+		"https://platform.twitter.com",
 	] },
 	{ directive = "media-src", domains = [
 		"'self'",
@@ -313,13 +315,16 @@ csp = [
 		"'unsafe-inline'",
 	] },
 	{ directive = "connect-src", domains = [
-		"'self'",
+		"https://stats.g.doubleclick.net",
+		"https://s.clarity.ms",
 	] },
 	{ directive = "frame-src", domains = [
 		"https://player.vimeo.com",
 		"https://www.youtube-nocookie.com",
 		"https://button.like.co",
 		"https://liker.social",
+		"https://www.facebook.com",
+		"https://platform.twitter.com",
 	] },
 	{ directive = "base-uri", domains = [
 		"'none'",

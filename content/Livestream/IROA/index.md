@@ -68,7 +68,8 @@ IROA 擁有另一個 VTuber 身份，[久遠たま](https://www.youtube.com/c/Qu
 * 2021/10/31  
   在推特不小心公開生日年，還被薬袋アルマ截圖  
   <https://twitter.com/MinaiAlma/status/1454808711612878851>  
-  [![](kusa.png)](kusa.png)
+  <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">画像が出なかった…Ꮚˊ•⌔•ˋᏊ <a href="https://t.co/Hq1PioJmEU">pic.twitter.com/Hq1PioJmEU</a></p>&mdash; 薬袋アルマ🌿🧪Minai Aruma 🐏 1/4 21:00 3DLive (@MinaiAlma) <a href="https://twitter.com/MinaiAlma/status/1454808711612878851?ref_src=twsrc%5Etfw">October 31, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <!-- [![](kusa.png)](kusa.png) -->
 * 2021/11/1  
   在 Youtube 發佈第一支 Cover 影片  
   <https://youtu.be/NIS1CFTQ5W0>

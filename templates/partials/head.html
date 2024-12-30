@@ -6,9 +6,6 @@
 	{%- if config.extra.accent_color_dark %}
 		<meta name="theme-color" content="{{ config.extra.accent_color_dark | safe }}" media="(prefers-color-scheme:dark)"/>
 	{%- endif %}
-	{%- if config.extra.csp %}
-		{%- include "partials/csp.html" %}
-	{%- endif %}
 	<title>{% include "partials/title.html" %}</title>
 	<meta name="description" content="{{ config.description }}"/>
 	<link rel="canonical" href="{{ current_url | default(value='/') | safe }}"/>
@@ -34,16 +31,20 @@
 		{% endfor %}
 	{% endif %}
 
+	{%- if config.extra.csp %}
+		{%- include "partials/csp.html" %}
+	{%- endif %}
+
+	<meta name="referrer" content="strict-origin-when-cross-origin"/>
+
 	<link href='https://www.gstatic.com' rel='preconnect'/>
 	<link href='https://www.googletagmanager.com' rel='preconnect'/>
 	<link href='https://fonts.cdnfonts.com' rel='preconnect'/>
 	<link href='https://fonts.googleapis.com' rel='preconnect'/>
 	<link crossorigin='' href='https://fonts.gstatic.com' rel='preconnect'/>
 	<link href='https://liker.social' rel='preconnect'/>
-	<link href='https://button.like.co' rel='preconnect'/>
-
-	<meta
-	name="referrer" content="strict-origin-when-cross-origin"/>
+	<link
+	href='https://button.like.co' rel='preconnect'/>
 
 	<!-- Style -->
 	{%- include "partials/variables.html" %}
