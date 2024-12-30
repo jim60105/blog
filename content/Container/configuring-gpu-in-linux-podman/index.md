@@ -87,7 +87,7 @@ Podman 作為一個開源專案，提供了更安全、更靈活的容器管理�
 但如果你是在 RHEL/Fedora 上運行容器，我誠摯的推薦你嘗試 Podman。萬一遇到了 Podman 無法解決的問題時，請記得
 
 <figure>
-{{ image(url="我全都要.webp", alt="我全都要", no_hover=true, raw_path=true) }}
+{{ image(url="我全都要.webp", alt="我全都要", no_hover=true, no_srcset=true) }}
 <figcaption>你可以兩個都裝，它們不衝突</figcaption>
 </figure>
 

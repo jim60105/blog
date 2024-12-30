@@ -31,7 +31,7 @@ archive = "IROA 身份長期處於未活動狀態"
 ### 簡介
 
 <aside>
-{{ image(url="RGB.webp", no_hover=true, transparent=true, raw_path=true) }}
+{{ image(url="RGB.webp", no_hover=true, transparent=true, no_srcset=true) }}
 </aside>
 
 IROA 是 2021 年 11 月出道的音樂人。她在 Youtube 發表 Cover 曲；在 twitcasting 平台唱歌直播；在 twitter 分享生活點滴；在 Instagram 分享... 她的狗。  
