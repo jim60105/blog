@@ -108,10 +108,10 @@ Some hidden text
 - `no_hover`: Removes zoom on hover.
 - `spoiler`: Blurs image until hovered over/pressed on, useful for plot rich game screenshots.
 - `spoiler` with `solid`: Ditto, but makes the image completely hidden.
-- `raw_path`: Passing `raw_path=true` will not generate `srcset`.
+- `no_srcset`: Passing `no_srcset=true` will not generate `srcset`.
 
 > [!WARNING]
-> Since the [zola built-in resize_image()](https://www.getzola.org/documentation/content/image-processing/) does not seems to support resizing animated images, the `raw_path` parameter _SHOULD_ be used to bypass the image processing.
+> Since the [zola built-in resize_image()](https://www.getzola.org/documentation/content/image-processing/) does not seems to support resizing animated images, the `no_srcset` parameter _SHOULD_ be used to bypass the image processing.
 
 ```
 {{ image(url="preview.jpg", alt="Some preview image", no_hover=true) }}

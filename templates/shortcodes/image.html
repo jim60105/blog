@@ -29,13 +29,13 @@
 
 {%- set image_classes = image_classes | join(sep=" ") -%}
 
-{#- Set raw_path to true if the image is an SVG, a remote image, or if config doesn't specify image sizes -#}
-{%- set raw_path = raw_path 
+{#- Set no_srcset to true if the image is an SVG, a remote image, or if config doesn't specify image sizes -#}
+{%- set no_srcset = no_srcset 
                     or url is ending_with("svg") 
                     or url is starting_with("http") 
                     or not config.extra.images.sizes -%}
 
-{%- if raw_path -%}
+{%- if no_srcset -%}
 	{#- Display the image as it is -#}
 	<img class="{{ image_classes }}" {%- if alt -%} alt="{{ alt }}" {%- endif -%} src="{{ url }}" {%- if config.markdown.lazy_async_image -%} decoding="async" loading="lazy" {%- endif -%}/>
 {%- else -%}
