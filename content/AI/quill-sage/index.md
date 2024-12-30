@@ -13,13 +13,12 @@ licenses = [ "GFDL 1.3" ]
 [extra]
 banner = "cover.png"
 iscn = "iscn://likecoin-chain/rkWkfxsXyWuM5BDzf1V_nsFob7Bldl-gFUeqQke1uNc/1"
+withAI = "本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作"
 
   [extra.comments]
   id = "113154728161931893"
 +++
 ![quill sage](cover.png)
-
-> 本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作
 
 ## 前言：AI 輔助寫作的價值
 

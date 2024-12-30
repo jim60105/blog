@@ -14,13 +14,12 @@ licenses = [ "GFDL 1.3" ]
 banner = "preview.png"
 iscn = "iscn://likecoin-chain/KiZc2G9UmmW17_mYPhEh_CnnS_odvEiojeUuxxumqOc/1"
 featured = true
+withAI = "本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作"
 
   [extra.comments]
   id = "113187155039935632"
 +++
 {{ image(url="APE.png", alt="Automated Prompt Engineering") }}
-
-> 本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作
 
 ## 前言：創造 AI 助手的 AI 助手
 

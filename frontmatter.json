@@ -126,6 +126,12 @@
               "type": "string"
             },
             {
+              "title": "With AI",
+              "description": "AI used in the post.",
+              "name": "withAI",
+              "type": "string"
+            },
+            {
               "title": "ISCN",
               "description": "ISCN of the writing NFT.",
               "name": "iscn",
