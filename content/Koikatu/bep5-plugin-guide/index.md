@@ -103,16 +103,14 @@ hot = true
     * コイカツ！ 追加性格＋コンバートセット (几帳面 + 一堆新服裝)
     * チャイナ服追加データセット (旗袍，這個一起打包在コンバートセット裡面)
 
-{% alert(important=true) %}
-Darkness 必須要最後安裝，且 Darkness 被諸多插件列為依賴  
-意即若未安裝 Darkness，以下許多插件就不會正常運作  
-我們沒什麼理由不從最完整的版本開始開發
-
-<figure>
-{{ image(url="2019-12-08%2004%2016%2045.png", alt="Darkness主程式資訊") }}
-<figcaption>Darkness主程式資訊</figcaption>
-</figure>
-{% end %}
+> Darkness 必須要最後安裝，且 Darkness 被諸多插件列為依賴  
+> 意即若未安裝 Darkness，以下許多插件就不會正常運作  
+> 我們沒什麼理由不從最完整的版本開始開發
+>
+> <figure>
+> {{ image(url="2019-12-08 04 16 45.png", alt="Darkness主程式資訊") }}
+> <figcaption>Darkness主程式資訊</figcaption>
+> </figure>
 
 ## 必裝外掛介紹 {#necessary_plugins}
 
@@ -125,16 +123,16 @@ Darkness 必須要最後安裝，且 Darkness 被諸多插件列為依賴
 * [BepInEx v5.4.18](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.18): 這是最基礎的外掛框架，有了它其他東西才會生效  
   這裡下載 BepInEx\_x64\_5.4.\*.zip 回來，把所有東西解壓進遊戲根目錄  
   然後在遊戲根目錄新增一個資料夾叫做 "mods"，裡面放後述的 sideloader mod  
-  [![image](2019-12-01%2016%2002%2032.png)](2019-12-01%2016%2002%2032.png)
+  [![image](2019-12-01 16 02 32.png)](2019-12-01 16 02 32.png)
 
   [![image](38600782_2052356328117301_4461874492536258560_o.jpg)](38600782%5F2052356328117301%5F4461874492536258560%5Fo.jpg)
 
 * [BepisPlugins.r16.8.1](https://github.com/IllusionMods/BepisPlugins/releases/tag/r16.8.1): 搭配上面這個外掛的基礎外掛包  
   下載 KK\_BepisPlugins\_r\*.zip 回來後整個解壓進遊戲根目錄，建議參考壓縮檔資料夾結構放置，依賴後面提到的 XUnity.AutoTranslator  
-  [![image](2019-11-03%2020%2019%2006.png)](2019-11-03%2020%2019%2006.png)
+  [![image](2019-11-03 20 19 06.png)](2019-11-03 20 19 06.png)
 * [BepInEx.BepInEx4Upgrader v1.0.0.0](https://github.com/BepInEx/BepInEx.BepInEx4Upgrader/releases/tag/v1.0.0.0): BepInEx v4 插件的自動升級器  
   將 BepInEx.BepIn4Patcher.dll 放在「根目錄 \BepInEx\patchers」，注意路徑  
-  [![image](2019-12-01%2016%2056%2004.png)](2019-12-01%2016%2056%2004.png)
+  [![image](2019-12-01 16 56 04.png)](2019-12-01 16 56 04.png)
 * [BepInEx.MessageCenter v1.1.1](https://github.com/BepInEx/BepInEx.Utility/releases/tag/r5): 將重要度為「Message」的訊息顯示在遊戲畫面頂端  
   將 BepInEx.MessageCenter\_v\*.zip 載回來以後解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置
 * [BepInEx.ConfigurationManager v16.4](https://github.com/BepInEx/BepInEx.ConfigurationManager/releases/tag/v16.4): 遊戲內設定修改器  
@@ -150,11 +148,11 @@ Darkness 必須要最後安裝，且 Darkness 被諸多插件列為依賴
   他可以是「.zipmod」或「.zip」格式，並可以被各種壓縮軟體打開  
   如果這個壓縮檔裡包含了 manifest.xml，那他就是一個 zipmod，把他放到 mods 文件夾下，不要解開  
   直接放置如圖左，可使用子資料夾  
-  [![image](2019-01-06%2021%2006%2008.png)](2019-01-06%2021%2006%2008.png)
+  [![image](2019-01-06 21 06 08.png)](2019-01-06 21 06 08.png)
 
 * [KKAPI v1.25](https://github.com/IllusionMods/IllusionModdingAPI/releases/tag/v1.25): 超級多插件的依賴，他是一個程序 API 接口  
   將 KKAPI\_1.25.zip 載回來以後解壓縮丟進遊戲根目錄，建議參考壓縮檔資料夾結構放置  
-  [![image](2019-11-03%2020%2025%2037.png)](2019-11-03%2020%2025%2037.png)
+  [![image](2019-11-03 20 25 37.png)](2019-11-03 20 25 37.png)
 * [XUnity.AutoTranslator 4.21.0](https://github.com/bbepis/XUnity.AutoTranslator/releases/tag/v4.21.0): 機器翻譯  
   **就算不啟用也一定要安裝**，BepisPlugins/Sideloader 對他有依賴  
   下載 XUnity. AutoTranslator-BepIn-5x-\*.zip，解壓縮丟進遊戲根目錄  
@@ -162,7 +160,7 @@ Darkness 必須要最後安裝，且 Darkness 被諸多插件列為依賴
   1. 啟動一次遊戲，讓插件產生 ini 設定檔案，進到主畫面後再關閉遊戲
   2. 用文字編輯器開啟「根目錄 \BepInEx\config\AutoTranslatorConfig.ini」
   3. 找到 \[TextFrameworks] 段落，將其下的選項全部改成 False  
-     [![image](2019-11-03%2021%2035%2052.png)](2019-11-03%2021%2035%2052.png)
+     [![image](2019-11-03 21 35 52.png)](2019-11-03 21 35 52.png)
 
 ## 其他外掛介紹 {#other_plugins}
 
@@ -250,7 +248,7 @@ Darkness 必須要最後安裝，且 Darkness 被諸多插件列為依賴
     [![image](uncensor.png)](uncensor.png)
   * 在 CharaMaker 裡的「身體 > 全體」選單下方可以選擇模組，設定完記得儲存卡片
   * 在 F1 裡可以設定「當角色 Uncensor 未設定」時要顯示的預設模組，也可以選擇「隨機 (Random)」選項  
-    [![image](2019-03-16%2018%2051%2040.png)](2019-03-16%2018%2051%2040.png)
+    [![image](2019-03-16 18 51 40.png)](2019-03-16 18 51 40.png)
 * [DeathWeasel1337/KK\_Plugins](https://github.com/IllusionMods/KK%5FPlugins/tree/b9c5d78b3cc26c5107a78b40e24d7977e66fec6f):
   * [CharaMakerLoadedSound v1.0](https://github.com/IllusionMods/KK%5FPlugins/releases/tag/v210) 載入完成時跳音效
   * [StudioSceneLoadedSound v1.1](https://github.com/IllusionMods/KK%5FPlugins/releases/tag/v132) 載入完成時跳音效
@@ -633,4 +631,4 @@ Darkness 必須要最後安裝，且 Darkness 被諸多插件列為依賴
 
 ## 人權
 
-[![](2019-10-13%2020%2027%2016.png)](2019-10-13%2020%2027%2016.png)
+[![](2019-10-13 20 27 16.png)](2019-10-13 20 27 16.png)

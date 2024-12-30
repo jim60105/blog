@@ -109,14 +109,14 @@ Alpha 通道是除了{{color(body="紅 (R)", color="red", halo="true")}}、{{col
 
 1. 在 OBS Studio 的右下角找到並點擊設定按鈕。
 
-   ![OBS設定](OBS設定.png#transparent)
+   {{ image(url="OBS設定.png", alt="OBS設定", transparent=true) }}
 
 2. 在設定視窗中，選擇「進階」頁。
    - 色彩格式：BGRA
    - 色彩空間：Rec. 709
    - 色彩範圍：完整
 
-   ![進階](進階.png#transparent)
+   {{ image(url="進階.png", alt="進階", transparent=true) }}
 
 3. 接下來，切換到「輸出」頁。在這裡，你需要：
    - 將輸出模式設定為「進階」
@@ -125,7 +125,7 @@ Alpha 通道是除了{{color(body="紅 (R)", color="red", halo="true")}}、{{col
    - 封裝格式選擇 「mov」
    - 影像編碼器選擇 「prores_aw」
 
-   ![輸出](輸出.png#transparent)
+   {{ image(url="輸出.png", alt="輸出", transparent=true) }}
 
 完成這些設定後，你就可以開始錄製了。使用這些設定錄製出來的影片將會包含 Alpha channel，實現透明背景的效果。
 

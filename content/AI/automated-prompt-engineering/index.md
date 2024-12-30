@@ -18,7 +18,7 @@ featured = true
   [extra.comments]
   id = "113187155039935632"
 +++
-![Automated Prompt Engineering](APE.png)
+{{ image(url="APE.png", alt="Automated Prompt Engineering") }}
 
 > 本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作
 
@@ -81,7 +81,7 @@ featured = true
 
 此助手使用以下三個快捷指令操作：
 
-![shortcuts](shortcuts.png)
+{{ image(url="shortcuts.png", alt="shortcuts") }}
 
 1. New run 新任務：用於開始一個新的提示詞優化任務。當你想要啟動一個新的優化過程時使用它。
 2. Continue task 繼續任務：允許你在之前執行的結果基礎上繼續疊代。由於 Coze Workflow 有單次執行 node 數量上限，我設計了在此輸入 Run ID 接續執行前面的任務。
@@ -93,7 +93,7 @@ featured = true
 
 使用「**New run**」快捷指令來開始一個新的優化過程。在這一步，你需要：
 
-![new run](new_run.png)
+{{ image(url="new_run.png", alt="new run") }}
 
 * 明確定義你的目標 goal
 * 提供一個初始提示詞 prompt (或選擇讓系統生成)

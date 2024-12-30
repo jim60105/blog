@@ -302,6 +302,11 @@ toc_sidebar = true
 
 likerid = "jim60105"
 
+[extra.images]
+format = ["webp"]
+default_size = 720
+sizes = [240, 360]
+
 [extra.nav]
 # Whether to automatically hide nav when not hovered or focused
 auto_hide = false

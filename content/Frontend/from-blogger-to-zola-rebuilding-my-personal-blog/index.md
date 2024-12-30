@@ -17,7 +17,7 @@ iscn = "iscn://likecoin-chain/5eVo7Oyp780kXYXk14RZLf9rijMdh84tzSd0ZssrKzY/1"
 +++
 > 本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作
 
-![preview](preview.png)
+{{ image(url="preview.png", alt="preview", no_hover=true) }}
 
 ## 本站由 Blogger 遷移至 Zola 啦
 
@@ -178,7 +178,7 @@ Zola 的靈活性允許我為不同的分類使用不同的範本。這意味著
 
 ### View Counter
 
-> <div> {{ image(url="//view-counter.jim60105.workers.dev/?style=classic&labelColor=141414&color=555&scale=1#badge", alt="View counter badge", no_hover=true, pixels=true, badge=true) }} </div>
+> <div> {{ image(url="https://view-counter.jim60105.workers.dev/?style=classic&labelColor=141414&color=555&scale=1#badge", alt="View counter badge", no_hover=true, pixels=true, badge=true) }} </div>
 >
 > ---
 > [\[個人專案\] 網頁計數器徽章 View Counter Badge —— 瀏覧數別再送人啦！以 Cloudflare Workers D1 實作適合純前端網頁的計數器](@/SideProject/view-counter-badge-cloudflare-workers-d1/index.md)
