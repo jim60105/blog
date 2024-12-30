@@ -75,6 +75,8 @@
 		{%- set trimmed_url = default_resized.url | trim_start_matches(pat="https:") | trim_start_matches(pat="http:") | replace(from=" ", to="%20")-%}
 		{%- set element = trimmed_url ~ " " ~ image_default_size ~ "w" -%}
 		{%- set_global srcset_list = srcset_list | concat(with=[element]) -%}
+	{%- else -%}
+		{%- set image_default_size = width -%}
 	{%- endif -%}
 
 	{#- Generate original size srcset -#}
