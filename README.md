@@ -35,6 +35,7 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 | `partials/nav.html` | Change the Feed button to copy to clipboard. |
 | `partials/sections.html` (new) | List all the sections just like tags. (Copy from `taxonomy_list.html`) |
 | `shortcodes/image.html` | Generate `srcset` to support responsive images. |
+| `shortcodes/youtube.html` |  Add credentialless, sandbox, and title property to youtube embed. |
 
 ## Shortcodes
 
