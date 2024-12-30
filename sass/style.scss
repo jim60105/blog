@@ -6,6 +6,7 @@
 @import "color";
 @import "badge";
 @import "mastodon-fix";
+@import "with-ai";
 
 :root {
   --font-system-ui: Noto Sans TC, Noto Sans JP, Noto Sans SC, Noto Sans,
@@ -159,5 +160,9 @@ footer {
 
   a {
     color: unset;
+  }
+
+  #socials > li {
+    z-index: -1;
   }
 }

@@ -1,0 +1,59 @@
+.with-ai-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+
+  .ai-badge {
+    width: max(5vw, 50px);
+    height: auto;
+    position: absolute;
+    bottom: calc(5vw / 4);
+    right: calc(5vw / 4);
+  }
+
+  .tooltip {
+    visibility: hidden;
+    position: fixed;
+    width: fit-content;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 0.5em;
+    z-index: 1;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+
+    p {
+      margin: 0;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 5vw;
+      z-index: -1;
+    }
+
+    &::before {
+      left: 98%;
+      background: linear-gradient(to left, transparent, black 50%);
+    }
+
+    &::after {
+      right: 98%;
+      background: linear-gradient(to right, transparent, black 50%);
+    }
+  }
+
+  &:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+}
