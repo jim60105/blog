@@ -16,6 +16,7 @@ licenses = [ "All Rights Reserved" ]
 banner = "preview.png"
 iscn = "iscn://likecoin-chain/glaRLMBBdqLeNQDKZFhhfLHA0aeZxUDYqpWwHs79_vc/2"
 featured = true
+withAI = "本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作"
 
   [extra.comments]
   id = "113057619098316466"
@@ -25,8 +26,6 @@ featured = true
   ![a book](preview.png)
   <figcaption><a href="https://civitai.com/images/27051549">Made with Flux.1-dev</a></figcaption>
 </figure>
-
-> 本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作
 
 ## 前言：RAG 技術的應用與挑戰
 

@@ -10,6 +10,7 @@ licenses = [ "All Rights Reserved" ]
 
 [extra]
 iscn = "iscn://likecoin-chain/8353EziYokYoeU6oc8fSCwbGsqDcI8ZsGBSWK2R-EX4/1"
+withAI = "本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作"
 
   [extra.comments]
   id = "113698906788022929"

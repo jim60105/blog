@@ -16,6 +16,7 @@ licenses = [ "All Rights Reserved" ]
 banner = "preview.jpg"
 iscn = "iscn://likecoin-chain/vgNJmLaPB-XlXYNcVy62ln2ogNtfJgyfdSGfSaAxuH0/1"
 archive = "我已經全面改用另一套工具——[「筆韻智匠 Quill Sage🖋️✨」](/AI/quill-sage/)"
+withAI = "本篇文章和 Claude 聯合創作"
 
   [extra.comments]
   id = "110193869467649564"

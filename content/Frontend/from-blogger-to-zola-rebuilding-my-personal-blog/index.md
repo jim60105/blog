@@ -11,12 +11,11 @@ tags = [ ]
 [extra]
 card = "preview.png"
 iscn = "iscn://likecoin-chain/5eVo7Oyp780kXYXk14RZLf9rijMdh84tzSd0ZssrKzY/1"
+withAI = "本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作"
 
   [extra.comments]
   id = "113619523325348567"
 +++
-> 本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作
-
 {{ image(url="preview.png", alt="preview", no_hover=true) }}
 
 ## 本站由 Blogger 遷移至 Zola 啦
