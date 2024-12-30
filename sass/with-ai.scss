@@ -12,7 +12,6 @@
   }
 
   .tooltip {
-    visibility: hidden;
     position: fixed;
     width: fit-content;
     background-color: black;
@@ -20,12 +19,10 @@
     text-align: center;
     padding: 0.5em;
     z-index: 1;
-    bottom: 10px;
+    bottom: -13em;
     left: 50%;
     transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    white-space: nowrap;
+    transition: bottom 1s;
 
     p {
       margin: 0;
@@ -53,7 +50,7 @@
   }
 
   &:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
+    bottom: 10px;
+    transition: bottom 0.3s;
   }
 }
