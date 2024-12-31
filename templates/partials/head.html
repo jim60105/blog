@@ -44,8 +44,9 @@
 
 	<!-- Preload LCP images -->
 	<link rel="preload" href="/card.avif" as="image" type="image/avif"/>
-	<link
-	rel="preload" href="{% include 'partials/card.html' %}" as="image" type="image/webp"/>
+	{%- if page.extra.banner -%}
+		<link rel="preload" href="{% include 'partials/banner.html' %}" as="image" type="image/webp"/>
+	{%- endif -%}
 
 	<!-- Preconnect critical resources -->
 	<link href='https://www.gstatic.com' rel='preconnect'/>

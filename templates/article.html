@@ -14,7 +14,7 @@
 	<article>
 		{%- if page.extra.banner -%}
 			<div id="banner-container">
-				<img id="banner" class="full-bleed{% if page.extra.banner_pixels %} pixels{% endif %}" src="{{ current_url ~ page.extra.banner }}" {% if config.markdown.lazy_async_image %} decoding="async" loading="lazy" {% endif %}/>
+				<img id="banner" class="full-bleed{% if page.extra.banner_pixels %} pixels{% endif %}" src="{% include 'partials/banner.html' %}" {% if config.markdown.lazy_async_image %} decoding="async" loading="lazy" {% endif %}/>
 			</div>
 		{%- endif -%}
 
