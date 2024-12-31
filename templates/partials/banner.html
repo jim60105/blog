@@ -1,0 +1,15 @@
+{#- Get image metadata -#}
+{%- set colocated_path = page.colocated_path | default(value="") -%}
+{%- set relative_path = colocated_path ~ page.extra.banner -%}
+{%- set meta = get_image_metadata(path=relative_path, allow_missing=true) -%}
+{%- if meta -%}
+	{%- set image_url = "/" ~ relative_path -%}
+{%- else -%}
+	{#- Fallback to absolute path if relative path doesn't work -#}
+	{%- set meta = get_image_metadata(path=page.extra.banner, allow_missing=true) -%}
+{%- endif -%}
+
+{%- set width = meta.width -%}
+{%- set origin_resized = resize_image(path=image_url, width=width, op="fit_width", format="webp", quality=100) -%}
+{%- set trimmed_url = origin_resized.url | trim_start_matches(pat="https:") | trim_start_matches(pat="http:") | replace(from=" ", to="%20")-%}
+{{ trimmed_url }}
