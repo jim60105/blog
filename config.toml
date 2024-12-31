@@ -219,7 +219,7 @@ fix_contrast_dark = true
 # Whether to use fonts bundled with Duckquill instead of system ones.
 # Keep in mind that it also changes the style of headings.
 #
-# bundled_fonts = true
+bundled_fonts = true
 #
 # Use emoji as a favicon.
 # Only one emoji is being rendered, everything else is truncated.
@@ -331,6 +331,9 @@ csp = [
 	] },
 	{ directive = "form-action", domains = [
 		"'none'",
+	] },
+	{ directive = "manifest-src", domains = [
+		"'self'",
 	] },
 ]
 
