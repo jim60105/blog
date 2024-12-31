@@ -11,6 +11,7 @@
 		{%- set list_element = "ul" -%}
 	{%- endif -%}
 
+	{%- include "partials/prompt_injection.html" -%}
 	<article>
 		{%- if page.extra.banner -%}
 			<div id="banner-container">
