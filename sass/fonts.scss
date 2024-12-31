@@ -1,0 +1,27 @@
+:root {
+  --font-system-ui: Noto Sans TC, Noto Sans JP, Noto Sans SC, Noto Sans,
+    Microsoft JhengHei, Heiti TC, system-ui, sans-serif;
+  --font-antique: Iansui, Superclarendon, "Bookman Old Style", "URW Bookman",
+    "URW Bookman L", "Georgia Pro", Georgia, serif;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/Iansui-Regular.woff2") format("woff2"),
+    url("fonts/Iansui-Regular.woff") format("woff"),
+    url("fonts/Iansui-Regular.ttf") format("truetype");
+  font-family: "Iansui";
+  font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  line-height: normal;
+  font-family: var(--font-antique), var(--font-system-ui);
+}

@@ -31,13 +31,15 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 | `sitemap.xml` | - Filter non-canonical pages<br>- Remove <lastmod> date that is 0000-01-01 which I used for non-article content. |
 | `partials/articles.html` | - Make different taxonomies list together<br>- Remove blur thumbnail |
 | `partials/default_theme.html` | Use dark theme (The intention of not using `config.extra.default_theme` is to use the dark theme and not enable the theme switcher.) |
-| `partials/head.html` | - Rearrange the order of meta tags and extract them to `partials/open_graph.html`. According to best practices, all meta og tags should be placed at the very beginning of the webpage, sorted by importance, while `<style>` and `<script>` should be placed later. This is because og parsers only read a fixed length (not very long) and discard any content after encountering any error.<br>-  Add link preconnect.<br>- Add my fonts from CDN.<br>- Add Google Analytics and Microsoft Clarity tracking code. |
+| `partials/head.html` | - Rearrange the order of meta tags and extract them to `partials/open_graph.html`. According to best practices, all meta og tags should be placed at the very beginning of the webpage, sorted by importance, while `<style>` and `<script>` should be placed later. This is because og parsers only read a fixed length (not very long) and discard any content after encountering any error.<br>-  Add link preconnect.<br>- Add my fonts from CDN.<br>- Add Google Analytics and Microsoft Clarity tracking code and remove goat counter for clarity. |
 | └`partials/open_graph.html` (new) | - Extracted og tags from `partials/head.html`<br>- Add twitter meta tags.<br>- Add ld+json script tags. |
+| └`partials/cards.html` | Use webp format for cards. |
 | `partials/nav.html` | Change the Feed button to copy to clipboard. |
 | `partials/sections.html` (new) | List all the sections just like tags. (Copy from `taxonomy_list.html`) |
 | `partials/prompt-injection.html` (new) | Injecting prompt to AI search engine. Not really sure if it works, but it's worth a try.😎 |
 | `shortcodes/image.html` | Generate `srcset` to support responsive images. |
 | `shortcodes/youtube.html` |  Add credentialless, sandbox, and title property to youtube embed. |
+| `scss/fonts.scss` | Use my own fonts. |
 
 ## Shortcodes
 

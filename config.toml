@@ -240,7 +240,7 @@ source_url = "https://github.com/jim60105"
 #
 # Additional JavaScript scripts; expects them to be in the "./static/" directory.
 #
-scripts = ["tracking.js", "mastodon-embed.js", "copy-to-clipboard.js"]
+scripts = ["mastodon-embed.js", "copy-to-clipboard.js"]
 #
 # Whether to show "copy code" button on all code blocks
 # that have the language set.
