@@ -13,9 +13,6 @@ licenses = [ "GFDL 1.3" ]
 [extra]
 card = "preview.png"
 +++
-
-[![](preview.png)](preview.png)
-
 最近我重新深入學習了 git，並好好檢視了自己的 GitHub 頁面  
 以前就注意到了這個酷炫的 Verified 標誌，在 GitHub 線上改 README 時會被自動加上，在本地 commit 就沒有  
 這個標誌能顯示此 commit 確實是由我做出，並不是別人冒名而做

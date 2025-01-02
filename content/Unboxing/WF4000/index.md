@@ -13,10 +13,7 @@ licenses = [ "All Rights Reserved" ]
 [extra]
 card = "preview.jpg"
 +++
-
 ## 購入緣由
-
-[![](preview.jpg)](preview.jpg)
 
 2014/6/24 我裝了 RAM 車架，裝了 RAM-B-202U (手機架)  
 這天我會永遠記得.... 因為那是我第一次車禍的日子  

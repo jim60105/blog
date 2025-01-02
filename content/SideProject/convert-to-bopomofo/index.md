@@ -12,8 +12,6 @@ licenses = [ "GFDL 1.3" ]
 [extra]
 card = "preview.png"
 +++
-[![](preview.png)](preview.png)
-
 ## 創作緣由
 
 常常在打字的時候都會忘記切換輸入法

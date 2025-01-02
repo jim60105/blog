@@ -21,8 +21,6 @@ hot = true
 
 ## 前言
 
-![My Nextcloud](preview.jpg)
-
 > Nextcloud 是一套用於建立網路硬碟的客戶端－伺服器軟體。其功能與 Dropbox 相近，但 Nextcloud 是自由及開放原始碼軟體，每個人都可以在私人伺服器上安裝並執行它。
 >
 > —— [維基百科](https://zh.wikipedia.org/zh-tw/Nextcloud)

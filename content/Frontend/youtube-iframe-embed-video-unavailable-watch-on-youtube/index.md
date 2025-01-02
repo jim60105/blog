@@ -19,8 +19,6 @@ iscn = "iscn://likecoin-chain/ri4TS9iFmP3Tzs_JyBE0vKXB5eQk6Nk7MJi7AAlqYeY/1"
   [extra.comments]
   id = "109456089331773003"
 +++
-![「無法播放影片 在 YouTube 上觀看」](preview.png)
-
 > 這個錯誤的英文訊息為「Video unavailable Watch on YouTube」
 
 ## Youtube iframe嵌入錯誤: 「無法播放影片 在 YouTube 上觀看」

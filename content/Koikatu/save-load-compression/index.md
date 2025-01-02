@@ -17,9 +17,6 @@ licenses = [ "GFDL 1.3" ]
 card = "../preview/demo18.png"
 featured = true
 +++
-
-[![](/Koikatu/preview/demo18.png)](/Koikatu/preview/demo18.png)
-
 {% alert(caution=true) %}
 經過壓縮的檔案不能在無此插件的遊戲中讀取
 {% end %}

@@ -16,9 +16,6 @@ licenses = [ "GFDL 1.3" ]
 [extra]
 card = "../preview/demo16.png"
 +++
-
-[![](/Koikatu/preview/demo16.png)](/Koikatu/preview/demo16.png)
-
 * 以 Studio 的存檔邏輯，工作區中，在第一層之物件排序是以加入順序儲存  
   → 修改為以實際順序儲存
 

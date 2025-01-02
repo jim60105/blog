@@ -19,8 +19,6 @@ iscn = "iscn://likecoin-chain/BWUPj2auEdhCyjxSlZLITl4hEvRxPdMB1nkHjyS6wGs/1"
 hot = true
 +++
 
-[![](preview.png)](preview.png)
-
 「大佬，為什麼我安裝了 ☆☆☆ 以後都沒有反應啊?」  
 「請問進遊戲在 @%@% 處白屏了怎麼辦」  
 「求救，我安裝了超級無敵終極霹靂宇宙第一天上天下唯我獨尊整合包，加上了不知道哪裡來的一堆插件，然後遊戲打不開」

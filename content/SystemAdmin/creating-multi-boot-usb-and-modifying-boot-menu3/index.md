@@ -13,9 +13,6 @@ licenses = [ "GFDL 1.3" ]
 [extra]
 card = "preview.png"
 +++
-
-[![](preview.png)](preview.png)
-
 [![](2017-07-12%2022%2041%2045.png)](2017-07-12%2022%2041%2045.png)
 
 ## 步驟大綱

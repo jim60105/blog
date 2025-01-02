@@ -17,8 +17,6 @@ iscn = "iscn://likecoin-chain/q70w15kLnLQmvfUdXjgNgdNQpV2H2c6t1_7GJhv0LBA/3"
   [extra.comments]
   id = "109433206136042137"
 +++
-![preview](preview.png)
-
 > 前篇  
 > [區塊鏈網域簡介 —— Handshake 、 Unstoppable Domains 、 Ethereum Name Service](/Blockchain/blockchain-domain/blockchain-domains-handshake-unstoppable-domains-ethereum-name-service)
 

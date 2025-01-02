@@ -13,9 +13,6 @@ licenses = [ "GFDL 1.3" ]
 [extra]
 card = "preview.jpg"
 +++
-
-[![](preview.jpg)](preview.jpg)
-
 香蕉派 M3，硬體夠強但是官方系統支援現在還不夠  
 爬了一下文決定自己搞w
 

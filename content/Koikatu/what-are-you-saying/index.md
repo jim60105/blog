@@ -14,8 +14,6 @@ licenses = [ "GFDL 1.3" ]
 card = "../preview/demo21.png"
 poor = true
 +++
-[![](/Koikatu/preview/demo21.png)](/Koikatu/preview/demo21.png)
-
 [![](/Koikatu/preview/demo21-1.png)](/Koikatu/preview/demo21-1.png)
 
 [![](/Koikatu/preview/demo21-2.png)](/Koikatu/preview/demo21-2.png)

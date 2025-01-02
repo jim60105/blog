@@ -21,9 +21,6 @@ licenses = [ "GFDL 1.3" ]
 iscn = "iscn://likecoin-chain/Zyffo_xXdY9tey8jRREjFiwTdw8rntU6nCsa3t60rRk/1"
 card = "preview.png"
 +++
-
-![container](preview.png)
-
 ## 前言
 
 我平時使用數個監控服務，在指定的頻道直播時自動啟動錄影，以防直播主突襲又刪檔，使我錯過直播。此文將會列出這些我使用的服務，供各位參考。

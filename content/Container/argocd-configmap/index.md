@@ -15,8 +15,6 @@ card = "preview.png"
 iscn = "iscn://likecoin-chain/AjK-ggg_eC-h34r9lN9oQwsUKPm4_9ovcwmK51DHJq8/1"
 poor = true
 +++
-![在 ArgoCD Configmap 插入斷行符的方式](preview.png#full-bleed)
-
 記一下今天拆的地雷。
 
 我的 [YoutubeLiveChatToDiscord](https://github.com/jim60105/YoutubeLiveChatToDiscord) 可以監控會員限定的直播，它是使用 yt-dlp 實作的，驗證方式是通過 Netscape Cookie file。我的是用 ArgoCD 部署，將文字塞入 Application Parameters 後寫到 Configmap，再掛載進去為 cookies.txt 檔案。

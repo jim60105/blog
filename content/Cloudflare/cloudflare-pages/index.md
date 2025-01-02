@@ -13,11 +13,7 @@ licenses = [ "GFDL 1.3" ]
 [extra]
 card = "preview.jpg"
 +++
-<figure>
-
-![以 Cloudflare Pages 打造低成本高流量的即時投票系統](preview.jpg)
-<figcaption>Image Generated with Microsoft Bing Designer</figcaption>
-</figure>
+Image Generated with Microsoft Bing Designer
 
 元旦假期做了一個新的專案 —— <mark>Simple Poll System 簡易投票系統</mark>  
 <https://github.com/jim60105/simple-poll-system>

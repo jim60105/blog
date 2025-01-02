@@ -12,8 +12,6 @@ licenses = [ "All Rights Reserved" ]
 [extra]
 card = "BxzVHrqCQAAlUym.jpg"
 +++
-[![](BxzVHrqCQAAlUym.jpg)](BxzVHrqCQAAlUym.jpg)
-
 標題這行日文直翻就是  
 DRAGON MAGAZINE 11月號 +  
 "惡魔高校D×D"歐派書套  

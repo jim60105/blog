@@ -14,9 +14,6 @@ licenses = [ "All Rights Reserved" ]
 card = "preview.jpg"
 poor = true
 +++
-
-[![](preview.jpg)](preview.jpg)
-
 網購了這個  
 花了一兩個小時設定，試用了 5 分鐘  
 然後收回盒子裡。  

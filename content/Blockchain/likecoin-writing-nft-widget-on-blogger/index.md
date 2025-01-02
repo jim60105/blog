@@ -20,8 +20,6 @@ trigger = "本站已於 2024 年年底由 Blogger 遷離。雖然本文內容依
   [extra.comments]
   id = "109512278874620729"
 +++
-![likecoin-writing-nft-widget-on-blogger](preview.png)
-
 ## 前言
 
 我也加入 Writing NFT 的作者行列了！

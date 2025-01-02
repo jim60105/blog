@@ -20,9 +20,6 @@ featured = true
   [extra.comments]
   id = "109587905347725076"
 +++
-
-![Everyone is my waifu](preview.jpg)
-
 ## 前言
 
 這個主題想寫很久了，我有不少小玩具可以分享 ww

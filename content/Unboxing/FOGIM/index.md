@@ -12,8 +12,6 @@ licenses = [ "All Rights Reserved" ]
 [extra]
 card = "preview.jpg"
 +++
-[![](preview.jpg)](preview.jpg)
-
 雙螢幕超爽拉wwwwwwwwww
 
 <!-- more -->

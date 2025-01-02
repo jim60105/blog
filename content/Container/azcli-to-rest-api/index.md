@@ -14,8 +14,6 @@ licenses = [ "All Rights Reserved" ]
 iscn = "iscn://likecoin-chain/3DGNu2HPD0tXzVjLqRmyoOBljyl707TKim_yh4XU2S8/1"
 card = "preview.png"
 +++
-![從 azure-cli 到 REST API：我的 Azure Blob Storage 上傳優化之旅](preview.png)
-
 在這篇文章中，我要分享在 Recorder.moe 專案中，如何從使用肥大的 azure-cli 轉變到使用簡潔的 REST API 來上傳影片到 Azure Blob Storage。你將看到我如何發現 azure-cli 的官方 docker image 體積過大，並且自己動手優化 Dockerfile，最後改變解決方案，成功<span class="success">將 image 降低到只有 36.4 MB</span>。
 
 這是一個關於優化 Dockerfile 和 Azure Blob Storage 上傳流程的實戰故事，希望能對你有所啟發。

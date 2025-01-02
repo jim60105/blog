@@ -16,9 +16,6 @@ iscn = "iscn://likecoin-chain/69fa80Yx0lIjGsTIh4_3tbyd836EYAW2649Tngv8DUo/1"
 featured = true
 hot = true
 +++
-
-![yt-dlp](preview.png)
-
 ## 序言
 
 本文記述下載 Youtube 、 Twitch 、 TwitCasting 、 Twitter Spaces 音訊空間，和影片轉檔的幾個常用工具和指令

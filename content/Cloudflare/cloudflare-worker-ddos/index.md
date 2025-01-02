@@ -14,9 +14,6 @@ licenses = [ "All Rights Reserved" ]
 card = "preview.png"
 poor = true
 +++
-
-[![](preview.png)](preview.png)
-
 1/3 下午我收到了三封 email 來自 Cloudflare，**警告我 Workers 的用量被耗盡。**  
 每日十萬次在下午兩點被用完？我的用量沒這麼狂，肯定有事情發生了。
 

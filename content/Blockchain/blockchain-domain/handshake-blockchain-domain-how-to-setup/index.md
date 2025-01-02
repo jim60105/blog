@@ -17,9 +17,6 @@ iscn = "iscn://likecoin-chain/TW11huUVHy5Bsg0S3prnXNNYKzj0iabfmREUOaGla1w/1"
   [extra.comments]
   id = "109447665515037253"
 +++
-
-![preview](preview.png)
-
 > 前篇  
 > [Handshake domain 區塊鏈網域 —— 如何訪問網域](/Blockchain/blockchain-domain/handshake-blockchain-domain-how-to-access)
 

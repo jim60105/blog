@@ -17,8 +17,6 @@ card = "preview.png"
   [extra.comments]
   id = "109532306623570043"
 +++
-![archive-page-for-writing-nft](preview.png)
-
 ## 前言
 
 透過 [NFT Portal](https://app.like.co/nft/url) 出版 Writing NFT 時，我發現它的網頁爬蟲功能有一點點的不完美。

@@ -21,11 +21,7 @@ archive = """
 featured = true
 hot = true
 +++
-
-<figure>
-{{ image(url="preview.png", alt="官圖") }}
-<figcaption>(官圖)</figcaption>
-</figure>
+(官圖)
 
 ## 序言
 

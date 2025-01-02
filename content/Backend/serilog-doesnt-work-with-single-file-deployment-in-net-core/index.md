@@ -18,9 +18,6 @@ disclaimer = """
 參考: <https://github.com/serilog/serilog-settings-configuration/pull/353>"""
 poor = true
 +++
-
-![](preview.png)
-
 > 操你媽的大地雷，氣到我來發一篇文
 
 > 寫在最前面，本文觸發的條件:

@@ -13,9 +13,6 @@ licenses = [ "All Rights Reserved" ]
 [extra]
 card = "preview.jpg"
 +++
-
-[![](preview.jpg)](preview.jpg)
-
 ## 先講結論
 
 * 有買 [Bpi 官方 7 吋 LCD 螢幕](http://www.banana-pi.com/acp%5Fview.asp?id=83)?  

@@ -16,8 +16,6 @@ withAI = "本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.c
   [extra.comments]
   id = "113619523325348567"
 +++
-{{ image(url="preview.png", alt="preview", no_hover=true) }}
-
 ## 本站由 Blogger 遷移至 Zola 啦
 
 身為一名網頁開發者，我長期以來都有個心願：將我的部落格從 Blogger 平台遷移到一個更適合我需求的地方。這個想法在我腦海中盤旋多年，卻一直沒有付諸行動。直到最近，我發現了一個讓我眼前一亮的**部落格範本**，這成為了我最終下定決心進行搬遷的契機。

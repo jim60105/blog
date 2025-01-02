@@ -13,8 +13,6 @@ licenses = [ "All Rights Reserved" ]
 [extra]
 card = "preview.jpg"
 +++
-[![](preview.jpg)](preview.jpg)
-
 跑去買了一台 Intel 便當盒準系統，照往常作法準備灌 Win7 → 啟用 → 升 Win10，結果發現 USB 鍵鼠插上去沒跑出來.....
 
 Google了一下，貌似是Win7沒有USB3.0驅動，而這台又沒有USB2.0插

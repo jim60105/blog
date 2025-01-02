@@ -16,9 +16,6 @@ licenses = [ "GFDL 1.3" ]
 [extra]
 card = "../preview/demo11.png"
 +++
-
-[![](/Koikatu/preview/demo11.png)](/Koikatu/preview/demo11.png)
-
 [![](/Koikatu/preview/demo11-1.png)](/Koikatu/preview/demo11-1.png)
 
 > 這個插件會給你更大的預覧圖像，預設值每個存檔將會增加約 1.5MB  

@@ -12,8 +12,6 @@ licenses = [ "All Rights Reserved" ]
 [extra]
 card = "preview.jpg"
 +++
-[![](preview.jpg)](preview.jpg)
-
 ## 購入緣由
 
 前兩天上班的時候右手一滑就(ry

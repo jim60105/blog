@@ -13,9 +13,6 @@ licenses = [ "All Rights Reserved" ]
 [extra]
 card = "preview.jpg"
 +++
-
-![](preview.jpg)
-
 ## 前言
 
 ![](fortigate.jpg)

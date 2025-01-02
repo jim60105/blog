@@ -20,8 +20,6 @@ featured = true
   [extra.comments]
   id = "109420959355542822"
 +++
-![區塊鏈網域簡介 —— Handshake 、 Unstoppable Domains 、 Ethereum Name Service](preview.png)
-
 ## 前言
 
 在網路世界中，我們每台裝置都擁有 IP 以代表自己的網路位置。人們難以記住一串數字，於是發明了 DNS 系統來<span class="success">將 IP 對應到有意義的字串</span>。這是一個很棒的發明，也是現今的主流技術，但他有著<span class="danger">高度中心化</span>的特性。

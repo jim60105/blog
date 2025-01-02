@@ -33,11 +33,7 @@ iscn = "iscn://likecoin-chain/wNXXrjwe_0oKckEePztstQcK8ywEuL4XXbJRttN598Q/2"
 featured = true
 hot = true
 +++
-
-<figure>
-{{ image(url="preview.jpg", alt="(角色是我家的，但是原始Scene不是我做的)") }}
-<figcaption>(角色是我家的，但是原始Scene不是我做的)</figcaption>
-</figure>
+(角色是我家的，但是原始Scene不是我做的)
 
 ## 序言
 

@@ -17,10 +17,6 @@ featured = true
 
 ## 前言
 
-<aside>
-{{ image(url="preview.png", no_hover=true, transparent=true) }}
-</aside>
-
 2018 年底寫了一個手機 App，專門用來看我家窗外的 PM 測站。功能很簡單，用 App Inventor 兩天就寫完了。  
 後來想想，既然參與了 LASS 這個開源專案，就讓我也做點貢獻吧！  
 就把 App 補齊了一些地圖功能，還有針對不知道測站名稱的一般使用者做了一些調整。  

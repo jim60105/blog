@@ -18,8 +18,6 @@ iscn = "iscn://likecoin-chain/OkHAhjNWyZppmCu3ffbFJpRV2x33dNoiqkBNFyIzmec/1"
 
 ## 前言
 
-[![](preview.png)](preview.png)
-
 本文希望建置起能{{cg(body="永久自動運作")}}的 Youtube 直播備份機  
 本專案包含三個部份:
 
