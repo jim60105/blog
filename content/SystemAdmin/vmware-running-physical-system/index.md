@@ -14,9 +14,6 @@ banner = "preview.png"
 tags = [ "Linux", "System Admin" ]
 licenses = [ "GFDL 1.3" ]
 +++
-
-[![](preview.png)](preview.png)
-
 ## 寫作緣由
 
 跟辦公室環境有關，個人每天有數小時必須使用公司的公用電腦。那台電腦大家都在用，桌面堆滿不知名連結 / 資料夾~~，就像肉O器的正正正正正一樣~~  

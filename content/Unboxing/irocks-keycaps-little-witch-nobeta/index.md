@@ -13,9 +13,6 @@ licenses = [ "All Rights Reserved" ]
 [extra]
 banner = "preview.PNG"
 +++
-
-[![](preview.PNG)](preview.PNG)
-
 前幾天看到 iRocks 的推文，ㄌㄌ真香  
 整組 NT599，在[這裡](https://www.pcstore.com.tw/i-rocks/M70788634.htm)賣  
 真心不貴，手刀下單

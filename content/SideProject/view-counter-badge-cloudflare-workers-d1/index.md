@@ -17,11 +17,7 @@ iscn = "iscn://likecoin-chain/QtqpvBsnP3QM8w-GOALiQOHdgZzkY52bd1vg73Gj3D4/2"
   [extra.comments]
   id = "111355087211175088"
 +++
-<figure>
-
-![view-counter-badge](preview.png)
-<figcaption>Image Creator from Microsoft Bing DALL•E 3</figcaption>
-</figure>
+Image Creator from Microsoft Bing DALL•E 3
 
 > ![View counter badge](https://view-counter.jim60105.workers.dev/?style=flat&labelColor=141414&color=orange&scale=2#no-hover)  
 > 網頁計數器是一個電腦程式，可以顯示特定網頁瀏覽的次數。  

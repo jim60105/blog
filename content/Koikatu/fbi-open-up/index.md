@@ -18,8 +18,6 @@ banner = "../preview/demo9.png"
 iscn = "iscn://likecoin-chain/QEHgpUPrvtcteiTiKfw0x5XpaECGGnHYzCjbgwsy9uw/2"
 hot = true
 +++
-
-[![](/Koikatu/preview/demo9.png)](/Koikatu/preview/demo9.png)
 {{ video(url="/Koikatu/preview/demo9.mp4", alt="FBI Open Up video", controls=true, loop=true, autoplay=true, muted=true) }}
 
 * 此插件可依照原始角色，將她們轉變為小蘿莉

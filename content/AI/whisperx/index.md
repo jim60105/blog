@@ -20,8 +20,6 @@ banner = "preview.png"
 +++
 ## 前言
 
-![WhisperX](preview.png)
-
 上個月買遊戲拿到了 FANZA 的折抵金，為了花掉它買了平常沒在聽的 ASMR，然後發現
 
 嗯，我 N87 聽不懂日文...

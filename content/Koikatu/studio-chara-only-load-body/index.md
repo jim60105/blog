@@ -13,9 +13,6 @@ licenses = [ "GFDL 1.3" ]
 [extra]
 banner = "../preview/demo4.gif"
 +++
-
-[![image](/Koikatu/preview/demo4.gif)](/Koikatu/preview/demo4.gif)
-
 保留衣服和飾品，只替換人物
 
 在 Config 中可以修改在觸發時要載入的 ExtendedData，以「;」分隔

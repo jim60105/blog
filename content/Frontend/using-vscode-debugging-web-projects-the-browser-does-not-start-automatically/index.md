@@ -15,9 +15,6 @@ licenses = [ "All Rights Reserved" ]
 [extra]
 banner = "preview.jpg"
 +++
-
-![VSCode偵錯Web專案時，瀏覧器未自動啟動](preview.jpg)
-
 ## 本文
 
 今天在公司開了新的 .NET 6 MVC 專案設定好 Program.cs，加上套件 Serilog (Logger)、EF Core 6 (ORM) 後，發現 VSCode 無法在 F5 後自動開啟瀏覧器。針對這個問題查了一下，查出問題是源自我設定 LogLevel 時把 Microsoft 覆寫為了 Fatal。

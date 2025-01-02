@@ -13,11 +13,7 @@ licenses = [ "GFDL 1.3" ]
 [extra]
 banner = "preview.jpg"
 +++
-
-<figure>
-{{ image(url="preview.jpg") }}
-<figcaption>(角色是我家的，但是原始Scene不是我做的)</figcaption>
-</figure>
+(角色是我家的，但是原始Scene不是我做的)
 
 2019/10/23 經歷了一次 BepInEx 4→5 的重要框架升級，在插件安裝位置方面做了很大的變更  
 另外因為此版本內部變動很大，對開發者來說有些插件得要重寫  

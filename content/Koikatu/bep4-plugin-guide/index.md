@@ -17,12 +17,7 @@ archive = """
 資料已過時, 僅留給考古學家參考  
 請前往[對應BepInEx v5.X之安裝指南](/Koikatu/bep5-plugin-guide)"""
 +++
-文章最後更新時間: 2019/10/24  
-
-<figure>
-{{ image(url="preview.jpg") }}
-<figcaption>Amazon JP直送¥18369，真香</figcaption>
-</figure>
+Amazon JP直送¥18369，真香
 
 ## 簡單說一下Koikatu怎麼裝起來，首先你要找齊這些東西
 <!-- more -->

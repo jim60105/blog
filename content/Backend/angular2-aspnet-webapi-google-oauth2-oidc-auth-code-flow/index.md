@@ -16,9 +16,6 @@ licenses = [ "GFDL 1.3" ]
 banner = "preview.png"
 featured = true
 +++
-
-[![](preview.png)](preview.png)
-
 > Demo site
 >
 > ---

@@ -13,10 +13,7 @@ licenses = [ "GFDL 1.3" ]
 [extra]
 banner = "preview.jpg"
 +++
-
 ## 前言
-
-![Opencart preview](preview.jpg)
 
 <aside>
 {{ image(url="opencart-logo.jpg", alt="Opencart logo") }}

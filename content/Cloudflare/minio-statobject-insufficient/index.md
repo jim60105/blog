@@ -17,12 +17,6 @@ iscn = "iscn://likecoin-chain/FtSKInk6bfr_5iDfLV6sxSCCAJIzQAYFC_9weWdgywY/1"
   [extra.comments]
   id = "110813859486445588"
 +++
-<figure>
-
-[![A man using computer](preview.webp)](preview.webp)
-<figcaption>(AIGC, PNG Info^)</figcaption>
-</figure>
-
 ## 前言
 
 程序猿: 今天天氣晴朗，是個適合在家踩地雷的好日子😎

@@ -17,9 +17,7 @@ licenses = [ "All Rights Reserved" ]
 banner = "preview.JPG"
 featured = true
 +++
-<figure>
-{{ image(url="preview.JPG") }}
-<figcaption>NIZ MICRO82 靜電容鍵盤 + SA 午夜鍵帽</figcaption></figure>
+NIZ MICRO82 靜電容鍵盤 + SA 午夜鍵帽
 
 我身為程式設計師，每天會在電腦前坐 12 小時以上，敲著鍵盤累積指關節的疲勞  
 滑鼠換成軌跡球，擺脫了腕隧道症候群的困擾，那麼手指關節怎麼辦呢?  

@@ -18,8 +18,6 @@ withAI = "本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.c
   [extra.comments]
   id = "113154728161931893"
 +++
-![quill sage](cover.png)
-
 ## 前言：AI 輔助寫作的價值
 
 在上個月，我的部落格多了一個~~不為人知的~~秘密武器 —— [筆韻智匠 Quill Sage](https://www.coze.com/s/Zs8knDBEX/)。這個 Coze AI 寫作助手不僅為我節省了大量時間，更重要的是，它幫助我以更精準、更流暢的方式表達我的想法。然而，<span class="danger">我知道有些人可能會對 AI 生成的內容持懷疑態度</span>，認為這些文章不過是大量產出的垃圾內容，缺乏價值和深度。但我要說，**這種看法其實是一種誤解**。

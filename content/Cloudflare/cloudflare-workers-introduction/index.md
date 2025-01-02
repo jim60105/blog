@@ -15,9 +15,6 @@ banner = "preview.png"
 iscn = "iscn://likecoin-chain/YikXnx1yEVJvfIlh1SvhvwGomCk1rJQ4d3Jw1YnRiaA/1"
 disclaimer = "本文於 2021 年撰寫時是使用 Service Workers 格式，[現在請一律改用 ES Modules 格式](https://developers.cloudflare.com/workers/learning/migrate-to-module-workers/)"
 +++
-
-[![](preview.png)](preview.png)
-
 ## 前言
 
 去年我曾寫過一支 Cloudflare worker，[用做 Nextcloud 的 img 網域縮址](@/Container/nextcloud/index.md#img-router)  

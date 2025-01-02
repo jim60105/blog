@@ -14,9 +14,6 @@ licenses = [ "All Rights Reserved" ]
 banner = "preview.jpg"
 featured = true
 +++
-
-[![](preview.jpg)](IMG%5F20140528%5F040854.jpg)
-
 前幾天半夜看到了這位大大的影片
 
 {{youtube(id="GMdS6m_vSYg")}}

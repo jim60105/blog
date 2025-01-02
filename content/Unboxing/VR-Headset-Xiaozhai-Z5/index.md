@@ -13,9 +13,6 @@ licenses = [ "All Rights Reserved" ]
 [extra]
 banner = "preview.jpg"
 +++
-
-[![](preview.jpg)](preview.jpg)
-
 ## 前言
 
 最近迷上了一款幻影社的新遊戲──コイカツ！(Koikatu)，實在很想要看立體版的妹子跳舞，於是開始物色 VR 眼鏡 {{ch (body="(結論是手機 VR 眼鏡不能玩此遊戲)")}}。查了一下正規的 VR 設備都是數萬元起跳，窮肥宅實在是負擔不起，轉而看向了便宜實惠的手機 VR 眼鏡。想說就算不能玩 Koikatu，體驗看看也好，畢竟真的很便宜。玩不到 Koikatu 也有現成的影片能看嘛。

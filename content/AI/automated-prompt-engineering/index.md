@@ -19,8 +19,6 @@ withAI = "本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.c
   [extra.comments]
   id = "113187155039935632"
 +++
-{{ image(url="APE.png", alt="Automated Prompt Engineering") }}
-
 ## 前言：創造 AI 助手的 AI 助手
 
 在現今的 AI 時代，提示詞工程已成為 AI 應用開發中不可或缺的關鍵環節。身為一個熟悉 AI 助手的開發者兼使用者，我深刻了解一個優質的提示詞 (prompt) 能夠將一個笨 AI 轉變為專業的問題解決專家。在創造了一大堆的 AI 助手之後，我萌生了一個想法：

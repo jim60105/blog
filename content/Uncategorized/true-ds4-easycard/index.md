@@ -14,9 +14,6 @@ licenses = [ "All Rights Reserved" ]
 banner = "preview.jpg"
 poor = true
 +++
-
-[![](preview.jpg)](preview.jpg)
-
 排到 {{cr(body="2022 年")}}出貨的悠遊卡讓你買不下手?
 
 [![](pchome.png)](pchome.png)

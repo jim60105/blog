@@ -12,8 +12,6 @@ licenses = [ "All Rights Reserved" ]
 [extra]
 banner = "preview.jpg"
 +++
-[![](preview.jpg)](IMG%5F20150207%5F091420.jpg)
-
 ## 購入緣由
 
 自從成為LLer以後，緣由神馬的就（ry  

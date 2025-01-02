@@ -18,8 +18,6 @@ featured = true
   [extra.comments]
   id = "111325748147311930"
 +++
-[![](preview.png)](preview.png)
-
 > 世界是不公平的，轉盤也是如此。
 >
 > [](https://unfair.spin-wheel.click)<https://unfair.spin-wheel.click>

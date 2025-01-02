@@ -13,8 +13,6 @@ licenses = [ "GFDL 1.3" ]
 [extra]
 banner = "preview.png"
 +++
-![](preview.png)
-
 這是用來編輯 Youtube 歌枠時間軸用的 Excel 工具  
 原本只能產出給我另一個專案 Youtube Clip Playlist 專用的 json 格式，現在加上了產出 **「Google Sheet」、「Youtube 留言」** 兩種格式  
 我將它公開出來，希望它能提供各位便利{{ch(body="，讓我有更多的曲目可以白嫖")}}

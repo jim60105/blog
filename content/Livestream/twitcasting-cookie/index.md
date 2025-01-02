@@ -14,8 +14,6 @@ licenses = [ "All Rights Reserved" ]
 poor = true
 banner = "preview.png"
 +++
-[![](preview.png)](preview.png)
-
 {{ch(body="其實上圖就是一切了....")}}
 
 TwitCasting 允許直播主將過往存檔上鎖，觀眾需輸入密碼才能觀看。  

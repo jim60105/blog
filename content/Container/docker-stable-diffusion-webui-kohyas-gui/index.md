@@ -17,11 +17,7 @@ iscn = "iscn://likecoin-chain/0h24v4SruVIWAdylo-36nDR6gqP4kVaNIaCjTHDsa9U/2"
   [extra.comments]
   id = "112078051106293040"
 +++
-<figure>
-
-  ![一行指令運行 Stable Diffusion WebUI 和 Kohya's GUI](preview.jpg)
-  <figcaption>↑ Stable Diffusion 最有名的圖片是<a href="https://zh.wikipedia.org/zh-tw/File:A%5Fphotograph%5Fof%5Fan%5Fastronaut%5Friding%5Fa%5Fhorse%5F2022-08-28.png" target="_blank">一個太空人騎馬</a>。我們用 Docker，讓他騎個鯨魚🐋！</figcaption>
-</figure>
+↑ Stable Diffusion 最有名的圖片是<a href="https://zh.wikipedia.org/zh-tw/File:A%5Fphotograph%5Fof%5Fan%5Fastronaut%5Friding%5Fa%5Fhorse%5F2022-08-28.png" target="_blank">一個太空人騎馬</a>。我們用 Docker，讓他騎個鯨魚🐋！
 
 每次只要遇到 Python 專案，我在運行前一定先看**有沒有提供 Dockerfile**。
 

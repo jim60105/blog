@@ -13,11 +13,7 @@ licenses = [ "GFDL 1.3" ]
 [extra]
 banner = "preview.png"
 +++
-<figure>
-
-  ![ai-batch-webpage-summary-assistant](138fd91c-a403-4117-a039-407a42d624d1.jpg)
-  <figcaption><a href="https://civitai.com/images/25902592">Made with Flux.1-dev</a></figcaption>
-</figure>
+<a href="https://civitai.com/images/25902592">Made with Flux.1-dev</a>
 
 > 🗃️ 一次性將大量的網頁做摘要，方便製作 LLM 外部知識庫 🧠
 >

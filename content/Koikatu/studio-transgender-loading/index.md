@@ -18,9 +18,6 @@ licenses = [ "GFDL 1.3" ]
 banner = "../preview/demo2.gif"
 hot = true
 +++
-
-[![](/Koikatu/preview/demo2.gif)](/Koikatu/preview/demo2.gif)
-
 以此插件可以實現跨性別替換角色功能
 
 POSE 解鎖性別限制，男女都可讀取

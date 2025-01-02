@@ -16,10 +16,7 @@ disclaimer = """
 此筆記沒有任何「破解」要素<br>
 我只是說明如何用你手上的鑰匙把鎖打開，<b>沒有鑰匙的人打不開鎖</b>"""
 +++
-<figure>
-{{ image(url="preview.png") }}
-<figcaption><a href="https://civitai.com/posts/6321883" target="_blank">Made with Flux.1-dev</a></figcaption>
-</figure>
+<a href="https://civitai.com/posts/6321883" target="_blank">Made with Flux.1-dev</a>
 
 ## 前言
 

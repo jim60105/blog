@@ -21,8 +21,6 @@ withAI = "本篇文章和 Claude 聯合創作"
   [extra.comments]
   id = "110193869467649564"
 +++
-![robot writing](preview.jpg)
-
 ## 前言
 
 我最近完成了第一篇 AI 協助下的部落格文章—《[Recorder.moe 錄影服務，讓你再也不會錯過 Vtuber 直播](@/SideProject/Recorder-moe/index.md)》。這次的寫作經驗讓我大開眼界，我想與讀者們分享這次的寫作過程。這篇文章是我第一次使用 AI 生成的初稿作為基礎，進行修改而完成的。我使用的 AI 寫作工具是 [Claude](https://www.anthropic.com/product)，它在處理程式碼方面表現稍遜，但是在自然語言生成上有出色的表現。

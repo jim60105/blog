@@ -16,9 +16,6 @@ licenses = [ "GFDL 1.3" ]
 banner = "preview.png"
 poor = true
 +++
-
-[![](preview.png)](preview.png)
-
 ## 情境
 
 我在 [live-dl](https://github.com/jim60105/live-dl) 專案中，想要清除 yt-dlp 在 `--live-from-start` 時會殘留下的碎片檔案  

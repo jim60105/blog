@@ -13,11 +13,7 @@ licenses = [ "GFDL 1.3" ]
 [extra]
 banner = "preview.png"
 +++
-<figure>
-
-![在 RHEL 8.8 離線安裝 Docker](preview.png)
-<figcaption><a href="https://civitai.com/images/28256320" target="_blank">Made with Flux.1-dev</a></figcaption>
-</figure>
+<a href="https://civitai.com/images/28256320" target="_blank">Made with Flux.1-dev</a>
 
 ## 前言
 
