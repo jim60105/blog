@@ -22,11 +22,7 @@ hot = true
   [extra.comments]
   id = "110440637831102537"
 +++
-<figure>
-
-![robot with books](preview.jpg)
-<figcaption>圖片出處: <a target="_blank" href="https://arthub.ai/art/10458">arthub.ai</a></figcaption>
-</figure>
+圖片出處: <a target="_blank" href="https://arthub.ai/art/10458">arthub.ai</a>
 
 ## 前言
 

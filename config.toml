@@ -319,18 +319,24 @@ csp = [
 		"https://s.clarity.ms",
 	] },
 	{ directive = "frame-src", domains = [
+		"'self'",
 		"https://player.vimeo.com",
 		"https://www.youtube-nocookie.com",
 		"https://button.like.co",
 		"https://liker.social",
 		"https://www.facebook.com",
 		"https://platform.twitter.com",
+		"https://ototoy.jp",
+		"https://docs.google.com/",
 	] },
 	{ directive = "base-uri", domains = [
 		"'none'",
 	] },
 	{ directive = "form-action", domains = [
 		"'none'",
+	] },
+	{ directive = "object-src", domains = [
+		"'self'",
 	] },
 	{ directive = "manifest-src", domains = [
 		"'self'",

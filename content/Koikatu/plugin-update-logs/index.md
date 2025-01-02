@@ -7,7 +7,7 @@ draft = false
 aliases = [ "/2020/05/koikatu-update-log.html" ]
 
 [extra]
-banner = "banner.png"
+card = "banner.png"
 
 [taxonomies]
 tags = [ "Koikatu", "Koikatsu Sunshine" ]

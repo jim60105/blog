@@ -11,7 +11,7 @@ tags = [ "C#", "Koikatu", "Koikatsu Sunshine" ]
 licenses = [ "GFDL 1.3" ]
 
 [extra]
-card = "../PluginDataReader.png"
+card = "../preview/PluginDataReader.png"
 featured = true
 +++
 * 讀出 png 文件中的所有 ExtendedSave 插件數據
