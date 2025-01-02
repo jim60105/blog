@@ -161,6 +161,12 @@
 			{%- include "partials/toc.html" -%}
 		{%- endif -%}
 
+		{%- if page.extra.banner -%}
+			<img alt="{{ page.title }}" class="no-hover{% if page.extra.banner_pixels %} pixels{% endif %}" src="{% include 'partials/banner.html' %}" {% if config.markdown.lazy_async_image %} decoding="async" loading="lazy" {% endif %}/>
+		{%- elif page.extra.card -%}
+			<img alt="{{ page.title }}" class="no-hover" src="{% include 'partials/card.html' %}" {% if config.markdown.lazy_async_image %} decoding="async" loading="lazy" {% endif %}/>
+		{%- endif -%}
+
 		{{ page.content | safe }}
 
 		{%- include "partials/prompt_injection.html" -%}
