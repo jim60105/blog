@@ -177,6 +177,8 @@ INPUT="in.mov" OUTPUT="out.webm" CRF=45 EFFORT="good" bash -c 'ffmpeg -y -i "$IN
 
 - [Video with alpha transparency on the web - JakeArchibald.com](https://jakearchibald.com/2024/video-with-transparency/)
 - [List of Video/Image Formats Supporting Alpha Channels | pixelbakery.com](https://pixelbakery.com/recipes/video-image-formats)
+- [Encode/VP9 - FFmpeg](https://trac.ffmpeg.org/wiki/Encode/VP9)
+- [Media | Google for Developers](https://developers.google.com/media/vp9/bitrate-modes)
 
 > 延伸閱讀
 >
