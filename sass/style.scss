@@ -49,14 +49,7 @@ main {
   // Fix content width
   width: min(var(--container-width), 90vw);
 
-  #heading #iscn {
-    vertical-align: middle;
-    margin: 0;
-    box-shadow: none;
-    padding: 0;
-    height: 2em;
-  }
-
+  // For Blog title 琳的備忘手札
   & > h1 {
     border-width: 0px;
     background: transparent;
@@ -65,6 +58,18 @@ main {
     text-align: center;
     text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff,
       0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff;
+  }
+
+  #heading > h1 {
+    color: rgb(197 197 197 / 82%);
+  }
+
+  #heading #iscn {
+    vertical-align: middle;
+    margin: 0;
+    box-shadow: none;
+    padding: 0;
+    height: 2em;
   }
 
   .align-right {
