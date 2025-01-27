@@ -12,13 +12,14 @@ licenses = [ "GFDL 1.3" ]
 featured = true
 withAI = "本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作"
 banner = "preview.png"
+previewUrl = "https://civitai.com/images/54120637"
+previewDescription = "Made with Flux.1-dev"
+previewWithAI = true
 iscn = "iscn://likecoin-chain/22YZLbu1c1lsPQIkrWFXxUg0HEozy_gjx3MUE2-zV00/1"
 
   [extra.comments]
   id = "113898088032194569"
 +++
-[Made with Flux.1-dev](https://civitai.com/images/54120637)
-
 ## 引言
 
 你是否曾經夢想過與動漫中的角色進行對話？或者渴望與歷史名人展開一場跨越時空的交談？在近兩年，隨著人工智慧技術的飛速發展，這些曾經只存在於想像中的情景正在成為現實。

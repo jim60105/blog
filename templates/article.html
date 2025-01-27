@@ -63,7 +63,7 @@
 						{%- endif -%}
 
 						{%- if page.extra.iscn -%}
-							<a href="https://app.like.co/view/{{ page.extra.iscn | urlencode_strict }}" target="_blank" rel="noopener noreferrer">
+							<a href="https://app.like.co/view/{{ page.extra.iscn | urlencode_strict }}" target="_blank" rel="{{ rel_attributes }}">
 								<img id="iscn" src="https://static.like.co/badge/iscn/{{ page.extra.iscn }}.svg?dark=1&responsive=1#no-hover#pixels#badge" alt="View counter badge"/></a>
 							<span>
 								{{ config.extra.separator | default(value="•") }}
@@ -161,11 +161,7 @@
 			{%- include "partials/toc.html" -%}
 		{%- endif -%}
 
-		{%- if page.extra.banner -%}
-			<img alt="{{ page.title }}" class="no-hover{% if page.extra.banner_pixels %} pixels{% endif %}" src="{% include 'partials/banner.html' %}" {% if config.markdown.lazy_async_image %} decoding="async" loading="lazy" {% endif %}/>
-		{%- elif page.extra.card -%}
-			<img alt="{{ page.title }}" class="no-hover" src="{% include 'partials/card.html' %}" {% if config.markdown.lazy_async_image %} decoding="async" loading="lazy" {% endif %}/>
-		{%- endif -%}
+		{%- include "partials/preview_image.html" -%}
 
 		{{ page.content | safe }}
 
