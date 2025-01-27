@@ -15,5 +15,5 @@
 		{%- if page.extra.preview.url -%}
 		</a>
 	{%- endif -%}
-	<figcaption>{{ page.extra.preview.description | default(value="") }}</figcaption>
+	<figcaption>{{ page.extra.preview.description | default(value="") | safe }}</figcaption>
 </figure>
