@@ -132,28 +132,35 @@
               "type": "string"
             },
             {
-              "title": "Preview With AI",
-              "description": "AI used in the preview image.",
-              "name": "previewWithAI",
-              "type": "boolean"
-            },
-            {
-              "title": "Preview Url",
-              "description": "Url for the preview image.",
-              "name": "previewUrl",
-              "type": "string"
-            },
-            {
-              "title": "Preview Description",
-              "description": "Description for the preview image.",
-              "name": "previewDescription",
-              "type": "string"
-            },
-            {
               "title": "ISCN",
               "description": "ISCN of the writing NFT.",
               "name": "iscn",
               "type": "string"
+            },
+            {
+              "title": "preview",
+              "name": "preview",
+              "type": "fields",
+              "fields": [
+                {
+                  "title": "Preview With AI",
+                  "description": "AI used in the preview image.",
+                  "name": "withAI",
+                  "type": "boolean"
+                },
+                {
+                  "title": "Preview Url",
+                  "description": "Url for the preview image.",
+                  "name": "url",
+                  "type": "string"
+                },
+                {
+                  "title": "Preview Description",
+                  "description": "Description for the preview image.",
+                  "name": "description",
+                  "type": "string"
+                }
+              ]
             },
             {
               "title": "comments",
