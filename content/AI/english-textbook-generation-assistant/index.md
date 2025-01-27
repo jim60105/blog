@@ -5,7 +5,7 @@ date = "2025-01-27T23:14:42.442Z"
 updated = "2025-01-27T23:14:43.178Z"
 
 [taxonomies]
-licenses = [ "All Rights Reserved" ]
+licenses = [ "GFDL 1.3" ]
 tags = [ "AI" ]
 
 [extra]
