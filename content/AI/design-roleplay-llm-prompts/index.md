@@ -12,10 +12,12 @@ licenses = [ "GFDL 1.3" ]
 featured = true
 withAI = "本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作"
 banner = "preview.png"
-previewUrl = "https://civitai.com/images/54120637"
-previewDescription = "Made with Flux.1-dev"
-previewWithAI = true
 iscn = "iscn://likecoin-chain/22YZLbu1c1lsPQIkrWFXxUg0HEozy_gjx3MUE2-zV00/1"
+
+  [extra.preview]
+  url = "https://civitai.com/images/54120637"
+  description = "Made with Flux.1-dev"
+  withAI = true
 
   [extra.comments]
   id = "113898088032194569"
