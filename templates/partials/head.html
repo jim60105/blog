@@ -78,7 +78,7 @@
 
 	<!-- Style -->
 	{%- include "partials/variables.html" %}
-	{%- set styles = [ "style.css" ] %}
+	{%- set styles = [ "style.css?cache=" ~ now(timestamp=true) ] %}
 	{%- if config.extra.bundled_fonts %}
 		{%- set styles = styles | concat(with=["fonts.css"]) %}
 	{%- endif %}
