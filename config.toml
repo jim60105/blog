@@ -316,7 +316,8 @@ csp = [
 	] },
 	{ directive = "connect-src", domains = [
 		"https://stats.g.doubleclick.net",
-		"https://s.clarity.ms",
+		"https://*.clarity.ms",
+		"https://c.bing.com",
 	] },
 	{ directive = "frame-src", domains = [
 		"'self'",
