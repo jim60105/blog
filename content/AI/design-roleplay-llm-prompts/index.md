@@ -2,7 +2,7 @@
 title = "🤖 AI 也能 cosplay？從零開始的 LLM 角色扮演指南"
 description = "揭秘 LLM 角色扮演：本文詳解 AI 人格塑造流程，從資料收集、提示詞設計到模型選擇等關鍵步驟。特別探討 Claude 3.5 Sonnet 在中文角色扮演中的優勢，並提供一個 AI agent 成品實例。適合 AI agent 開發者及角色扮演愛好者。內含實用提示詞範本和優化技巧，助你打造專屬 AI 角色。"
 date = "2025-01-27T02:43:00.155Z"
-updated = "2025-01-27T02:43:14.563Z"
+updated = "2025-01-27T03:02:07.292Z"
 
 [taxonomies]
 tags = [ "AI" ]
@@ -12,6 +12,10 @@ licenses = [ "GFDL 1.3" ]
 featured = true
 withAI = "本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作"
 banner = "preview.png"
+iscn = "iscn://likecoin-chain/22YZLbu1c1lsPQIkrWFXxUg0HEozy_gjx3MUE2-zV00/1"
+
+  [extra.comments]
+  id = "113898088032194569"
 +++
 [Made with Flux.1-dev](https://civitai.com/images/54120637)
 
