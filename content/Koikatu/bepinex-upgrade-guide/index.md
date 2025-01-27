@@ -12,9 +12,10 @@ licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.jpg"
-+++
-(角色是我家的，但是原始Scene不是我做的)
 
+  [extra.preview]
+  description = "(角色是我家的，但是原始Scene不是我做的)"
++++
 2019/10/23 經歷了一次 BepInEx 4→5 的重要框架升級，在插件安裝位置方面做了很大的變更  
 另外因為此版本內部變動很大，對開發者來說有些插件得要重寫  
 像我 8 個插件死了 4 個....  

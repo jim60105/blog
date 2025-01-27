@@ -17,6 +17,10 @@ withAI = "本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.c
 
   [extra.comments]
   id = "113146735399825887"
+
+  [extra.preview]
+  withAI = true
+  url = "https://civitai.com/images/33836772"
 +++
 ## 前言
 

@@ -16,9 +16,10 @@ archive = """
 這篇指南是BepInEx v4.X的最後版本  
 資料已過時, 僅留給考古學家參考  
 請前往[對應BepInEx v5.X之安裝指南](/Koikatu/bep5-plugin-guide)"""
-+++
-Amazon JP直送¥18369，真香
 
+  [extra.preview]
+  description = "Amazon JP直送¥18369，真香"
++++
 ## 簡單說一下Koikatu怎麼裝起來，首先你要找齊這些東西
 <!-- more -->
 * 主程式 + 付費DLC: [官方DL版](https://dlshop.illu-member.jp/products/detail.php?product%5Fid=201) (下載版、數位版)  

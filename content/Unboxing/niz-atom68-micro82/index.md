@@ -16,9 +16,10 @@ licenses = [ "All Rights Reserved" ]
 [extra]
 banner = "preview.JPG"
 featured = true
-+++
-NIZ MICRO82 靜電容鍵盤 + SA 午夜鍵帽
 
+  [extra.preview]
+  description = "NIZ MICRO82 靜電容鍵盤 + SA 午夜鍵帽"
++++
 我身為程式設計師，每天會在電腦前坐 12 小時以上，敲著鍵盤累積指關節的疲勞  
 滑鼠換成軌跡球，擺脫了腕隧道症候群的困擾，那麼手指關節怎麼辦呢?  
 答案就是 ── 靜電容軸!  

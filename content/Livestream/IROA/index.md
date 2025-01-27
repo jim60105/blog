@@ -12,9 +12,10 @@ licenses = [ "GFDL 1.3" ]
 [extra]
 banner = "preview.png"
 archive = "IROA 身份長期處於未活動狀態"
-+++
-<a href="https://twitter.com/millet030/status/1454877885555265537" rel="noopener" target="_blank">圖源來自Millet</a>，由 IROA 加字作為youtube橫幅
 
+  [extra.preview]
+  description = '<a href="https://twitter.com/millet030/status/1454877885555265537" rel="noopener" target="_blank">圖源來自Millet</a>，由 IROA 加字作為youtube橫幅'
++++
 > IROA channel - YouTube  
 > <https://www.youtube.com/channel/UCO3RDKQclxKAb3CxNq0MOsQ>
 

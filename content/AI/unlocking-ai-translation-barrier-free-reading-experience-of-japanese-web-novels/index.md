@@ -21,9 +21,12 @@ hot = true
 
   [extra.comments]
   id = "110440637831102537"
-+++
-圖片出處: <a target="_blank" href="https://arthub.ai/art/10458">arthub.ai</a>
 
+  [extra.preview]
+  description = "圖片出處 arthub.ai"
+  withAI = true
+  url = "https://arthub.ai/art/10458"
++++
 ## 前言
 
 已試過 AI 翻譯但並不滿意？  

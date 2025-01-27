@@ -20,9 +20,12 @@ withAI = "本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.c
 
   [extra.comments]
   id = "113057619098316466"
-+++
-<a href="https://civitai.com/images/27051549">Made with Flux.1-dev</a>
 
+  [extra.preview]
+  url = "https://civitai.com/images/27051549"
+  description = "Made with Flux.1-dev"
+  withAI = true
++++
 ## 前言：RAG 技術的應用與挑戰
 
 嘿，各位開發者和 AI 愛好者們！今天我要聊聊 [RAG (Retrieval-Augmented Generation)](https://en.wikipedia.org/wiki/Retrieval-augmented%5Fgeneration) 技術。相信大家對這個名詞不陌生吧？ RAG 已經成為 AI 應用中不可或缺的一部分，特別是在需要大量精確資訊的場景中。

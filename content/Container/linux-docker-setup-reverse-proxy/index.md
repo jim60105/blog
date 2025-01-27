@@ -16,9 +16,10 @@ iscn = "iscn://likecoin-chain/_zmSdL8lQdrPnP5LurJlWdK6WsCzRksqbRzk-UJKr4c/1"
 
   [extra.comments]
   id = "113300757885315845"
-+++
-<a href="https://webapplicationconsultant.com/scalability/nginx-reverse-proxy-for-scalability/">圖源</a>
 
+  [extra.preview]
+  description = '<a href="https://webapplicationconsultant.com/scalability/nginx-reverse-proxy-for-scalability/">圖源</a>'
++++
 ## 前言
 
 此篇文章由零開始設定 Linux 主機、安裝 Docker，並設定 Reverse Proxy

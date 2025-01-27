@@ -32,9 +32,10 @@ Koikatu 已經是四年前的老遊戲了，讓它留在穩定版本吧！"""
 iscn = "iscn://likecoin-chain/wNXXrjwe_0oKckEePztstQcK8ywEuL4XXbJRttN598Q/2"
 featured = true
 hot = true
-+++
-(角色是我家的，但是原始Scene不是我做的)
 
+  [extra.preview]
+  description = "(角色是我家的，但是原始Scene不是我做的)"
++++
 ## 序言
 
 此篇文章旨在列出所有 Koikatu 的插件清單，文章最後更新時間: 2022/02/09

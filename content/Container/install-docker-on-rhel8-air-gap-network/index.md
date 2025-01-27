@@ -12,9 +12,12 @@ licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.png"
-+++
-<a href="https://civitai.com/images/28256320" target="_blank">Made with Flux.1-dev</a>
 
+  [extra.preview]
+  withAI = true
+  url = "https://civitai.com/images/28256320"
+  description = "Made with Flux.1-dev"
++++
 ## 前言
 
 最近從公司接下了一個輔導客戶導入容器化的案子，其中一項任務是幫他們新採購的伺服器安裝容器運行環境。

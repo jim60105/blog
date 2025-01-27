@@ -16,6 +16,11 @@ iscn = "iscn://likecoin-chain/YBFzpFI86kKaDC4aYgU5t9hd1nLmqDvHVhS5h5W-VaA/1"
 
   [extra.comments]
   id = "113760486776375260"
+
+  [extra.preview]
+  withAI = true
+  url = "https://civitai.com/images/49113018"
+  description = "i2i with Flux1.D from the original image created by ChatGPT DALL-E"
 +++
 ## 嗶嗶 🤖 機油好難喝
 

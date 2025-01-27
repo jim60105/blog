@@ -17,6 +17,10 @@ withAI = "本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.c
 
   [extra.comments]
   id = "113154728161931893"
+
+  [extra.preview]
+  withAI = true
+  url = "https://civitai.com/images/27058335"
 +++
 ## 前言：AI 輔助寫作的價值
 

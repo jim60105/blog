@@ -16,6 +16,10 @@ iscn = "iscn://likecoin-chain/FtSKInk6bfr_5iDfLV6sxSCCAJIzQAYFC_9weWdgywY/1"
 
   [extra.comments]
   id = "110813859486445588"
+
+  [extra.preview]
+  description = "(AIGC, PNG Info^)"
+  withAI = true
 +++
 ## 前言
 

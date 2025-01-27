@@ -12,8 +12,12 @@ licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.png"
+
+  [extra.preview]
+  url = "https://civitai.com/images/25902592"
+  withAI = true
+  description = "Made with Flux.1-dev"
 +++
-<a href="https://civitai.com/images/25902592">Made with Flux.1-dev</a>
 
 > 🗃️ 一次性將大量的網頁做摘要，方便製作 LLM 外部知識庫 🧠
 >

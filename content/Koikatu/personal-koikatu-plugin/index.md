@@ -14,9 +14,10 @@ banner = "preview.jpg"
 featured = true
 scripts = [ "Koikatu/personal-koikatu-plugin/index.js" ]
 hot = true
-+++
-(角色是我家的，但是原始Scene不是我做的)
 
+  [extra.preview]
+  description = "(角色是我家的，但是原始Scene不是我做的)"
++++
 {% alert (tip=true) %}
 以下所有插件皆為 **BepInEx 5** 插件，且以 **Darkness** 為基準程式碼開發
 

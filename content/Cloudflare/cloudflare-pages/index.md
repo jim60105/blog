@@ -12,9 +12,11 @@ licenses = [ "GFDL 1.3" ]
 
 [extra]
 card = "preview.jpg"
-+++
-Image Generated with Microsoft Bing Designer
 
+  [extra.preview]
+  description = "Image Generated with Microsoft Bing Designer"
+  withAI = true
++++
 元旦假期做了一個新的專案 —— <mark>Simple Poll System 簡易投票系統</mark>  
 <https://github.com/jim60105/simple-poll-system>
 

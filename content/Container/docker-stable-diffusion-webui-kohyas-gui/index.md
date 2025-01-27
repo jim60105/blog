@@ -12,13 +12,12 @@ licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.jpg"
-iscn = "iscn://likecoin-chain/0h24v4SruVIWAdylo-36nDR6gqP4kVaNIaCjTHDsa9U/2"
 
-  [extra.comments]
-  id = "112078051106293040"
+  [extra.preview]
+  description = '↑ Stable Diffusion 最有名的圖片是<a href="https://zh.wikipedia.org/zh-tw/File:A%5Fphotograph%5Fof%5Fan%5Fastronaut%5Friding%5Fa%5Fhorse%5F2022-08-28.png" target="_blank">一個太空人騎馬</a>。我們用 Docker，讓他騎個鯨魚🐋！'
+  url = "https://civitai.com/images/7792500"
+  withAI = true
 +++
-↑ Stable Diffusion 最有名的圖片是<a href="https://zh.wikipedia.org/zh-tw/File:A%5Fphotograph%5Fof%5Fan%5Fastronaut%5Friding%5Fa%5Fhorse%5F2022-08-28.png" target="_blank">一個太空人騎馬</a>。我們用 Docker，讓他騎個鯨魚🐋！
-
 每次只要遇到 Python 專案，我在運行前一定先看**有沒有提供 Dockerfile**。
 
 Why?

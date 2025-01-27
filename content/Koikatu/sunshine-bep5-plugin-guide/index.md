@@ -20,9 +20,10 @@ archive = """
 請優先考慮體驗前作"""
 featured = true
 hot = true
-+++
-(官圖)
 
+  [extra.preview]
+  description = "(官圖)"
++++
 ## 序言
 
 此篇文章旨在列出所有 Koikatsu Sunshine 的插件清單  
