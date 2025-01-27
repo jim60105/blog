@@ -11,10 +11,14 @@ tags = [ "AI" ]
 [extra]
 banner = "preview.png"
 withAI = "本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作"
+iscn = "iscn://likecoin-chain/rz7P_N3CtgK0Cj1FzHqIcl1nwhxE4cabkLAArLgFplc/1"
 
   [extra.preview]
   withAI = true
   url = "https://civitai.com/images/54269254"
+
+  [extra.comments]
+  id = "113902916679881262"
 +++
 ## ChatGPT 🤖 幫我產生一份英文教材
 
