@@ -3,7 +3,7 @@
 	{%- if page.extra.iscn -%}
 		<figure>
 			<iframe class="writingNFT" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" scrolling="no" src="https://button.like.co/in/embed/iscn/button?iscn_id={{ page.extra.iscn | safe }}" title="Liker Land"></iframe>
-			<figcaption>本文章 NFT 限量發售中！ 起價 $0.5 USD！<br>歡迎收藏給我一個鼓勵！ 👀✨</figcaption>
+			<figcaption>本文章已出版至 LikeCoin 讚賞幣網路<br>NFT 限量發售中，起價 $0.5 USD！<br>歡迎收藏給我一個鼓勵 👀✨</figcaption>
 		</figure>
 	{%- else -%}
 		<iframe class="likecoin" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" scrolling="no" src="https://button.like.co/in/embed/{{ likerid }}/button?referrer={{ current_url | urlencode_strict }}" title="Liker Land"></iframe>
