@@ -292,6 +292,7 @@ csp = [
 		"'self'",
 		"https:",
 		"data:",
+		"www.googletagmanager.com",
 	] },
 	{ directive = "script-src", domains = [
 		"'unsafe-inline'",
@@ -311,6 +312,7 @@ csp = [
 		"https://stats.g.doubleclick.net",
 		"https://*.clarity.ms",
 		"https://c.bing.com",
+		"www.googletagmanager.com",
 	] },
 	{ directive = "frame-src", domains = [
 		"'self'",
