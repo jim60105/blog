@@ -168,13 +168,14 @@
 		{%- include "partials/prompt_injection.html" -%}
 	</article>
 
-	{%- if page.extra.comments.id -%}
-		{%- include "partials/comments.html" -%}
-	{%- endif -%}
-
 	{%- if config.extra.likerid or page.extra.iscn -%}
 		<hr/>
 		{% include "partials/likecoin.html" %}
+	{%- endif -%}
+
+	{%- if page.extra.comments.id -%}
+		<hr/>
+		{%- include "partials/comments.html" -%}
 	{%- endif -%}
 
 	{%- if page.lower or page.higher -%}
