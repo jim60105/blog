@@ -275,69 +275,8 @@ toc_sidebar = true
 # Whether to use Content Security Policy.
 # Keep in mind that although this can potentially increase security,
 # it can break some stuff, in which case you will need to set custom policy.
-csp = [
-	{ directive = "font-src", domains = [
-		"'self'",
-		"data:",
-		"https://fonts.gstatic.com",
-		"https://fonts.cdnfonts.com",
-	] },
-	{ directive = "style-src-elem", domains = [
-		"'self'",
-		"https://fonts.cdnfonts.com",
-		"https://fonts.googleapis.com",
-		"'unsafe-inline'",
-	] },
-	{ directive = "img-src", domains = [
-		"'self'",
-		"https:",
-		"data:",
-		"www.googletagmanager.com",
-	] },
-	{ directive = "script-src", domains = [
-		"'unsafe-inline'",
-		"https://www.googletagmanager.com",
-		"https://www.clarity.ms",
-		"https://platform.twitter.com",
-	] },
-	{ directive = "media-src", domains = [
-		"'self'",
-		"https:",
-	] },
-	{ directive = "style-src", domains = [
-		"'self'",
-		"'unsafe-inline'",
-	] },
-	{ directive = "connect-src", domains = [
-		"https://stats.g.doubleclick.net",
-		"https://*.clarity.ms",
-		"https://c.bing.com",
-		"www.googletagmanager.com",
-	] },
-	{ directive = "frame-src", domains = [
-		"'self'",
-		"https://player.vimeo.com",
-		"https://www.youtube-nocookie.com",
-		"https://button.like.co",
-		"https://liker.social",
-		"https://www.facebook.com",
-		"https://platform.twitter.com",
-		"https://ototoy.jp",
-		"https://docs.google.com/",
-	] },
-	{ directive = "base-uri", domains = [
-		"'none'",
-	] },
-	{ directive = "form-action", domains = [
-		"'none'",
-	] },
-	{ directive = "object-src", domains = [
-		"'self'",
-	] },
-	{ directive = "manifest-src", domains = [
-		"'self'",
-	] },
-]
+#! Do not use CSP as it actually breaks GA in some cases that's not able to reproduce locally.
+# csp = []
 
 likerid = "jim60105"
 
