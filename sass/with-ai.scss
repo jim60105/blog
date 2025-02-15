@@ -2,6 +2,7 @@
   position: fixed;
   bottom: 10px;
   right: 10px;
+  z-index: 10;
 
   .ai-badge {
     width: max(5vw, 50px);
