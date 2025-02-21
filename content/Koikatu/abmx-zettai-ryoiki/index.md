@@ -12,6 +12,7 @@ licenses = [ "GFDL 1.3" ]
 
 [extra]
 banner = "preview.JPG"
+hot = true
 +++
 此方法使用 [ABMX 插件](https://github.com/ManlyMarco/KKABMX/releases)，快速的教你如何製作圖中的效果
 

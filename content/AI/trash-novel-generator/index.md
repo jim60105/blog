@@ -14,6 +14,7 @@ licenses = [ "GFDL 1.3" ]
 banner = "banner.png"
 iscn = "iscn://likecoin-chain/CZQlYkJAHJ8aJ6F-1V6YnLlaBze4qZDKD_lGtdPjKNo/1"
 withAI = "本篇文章透過「[筆韻智匠 Quill Sage🖋️✨](https://www.coze.com/s/Zs8k6GASu/)」和 Claude 3.5 Sonnet 聯合創作"
+hot = true
 
   [extra.comments]
   id = "113146735399825887"

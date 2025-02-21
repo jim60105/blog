@@ -14,6 +14,7 @@ licenses = [ "GFDL 1.3" ]
 banner = "preview.png"
 iscn = "iscn://likecoin-chain/TN9L2gESOgpnhq7nrU3HvZ5UT9BimIn0fTxo-e27ZaE/1"
 featured = true
+hot = true
 
   [extra.comments]
   id = "111325748147311930"

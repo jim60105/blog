@@ -16,6 +16,7 @@ archive = """
 這篇指南是BepInEx v4.X的最後版本  
 資料已過時, 僅留給考古學家參考  
 請前往[對應BepInEx v5.X之安裝指南](/Koikatu/bep5-plugin-guide)"""
+hot = true
 
   [extra.preview]
   description = "Amazon JP直送¥18369，真香"
