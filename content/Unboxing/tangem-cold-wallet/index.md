@@ -34,6 +34,8 @@ iscn = "iscn://likecoin-chain/CimnIWTuV4YB9Us_J1Tzzsv9CzvTUvG_5Z4VUP_W9bE/1"
 
 這次藉由收到這筆款項的機會，再加上閱讀了 [高重建的《每天買一百元比特幣——我的定額定投四年戰績實錄》](https://liker.land/zh-Hant/nft/class/likenft1dpegnjnklnh5g66nn06gz64wv0ec6k04f4v5lx69qlv6xlh493eqdq454j)，讓我決定終於該好好的開始持有一些加密貨幣了。
 
+<!-- more -->
+
 {{ image(url="IMG_20250206_223328.jpg") }}
 
 Tangem 冷錢包跟其它的硬體錢包有些不同，它是一張 NFC 卡片 —— 噢，應該說是三張卡片，並不像其它的錢包要嘛是一個「USB 隨身碟」，要嘛是一台「機器」。
