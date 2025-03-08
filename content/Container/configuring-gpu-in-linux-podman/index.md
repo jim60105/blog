@@ -218,6 +218,10 @@ sudo dnf install -y nvidia-container-toolkit
 
 ### 設定 CDI (Container Device Interface)
 
+{% alert(warning=true) %}
+在每次更新 NVIDIA 驅動後都需要重新執行此指令生成新的 CDI 規範文件。
+{% end %}
+
 CDI 允許容器管理器以標準化的方式將設備（如 GPU）暴露給容器。這裡是 [NVIDIA 提供的說明文件](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/cdi-support.html)。設定它其實蠻簡單的，總共只有一條指令，生成 CDI 規範文件：
 
 ```bash
