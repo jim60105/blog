@@ -1,11 +1,14 @@
 # Blog [琳.tw](https://琳.tw)
 
-![Health Check](https://cronitor.io/badges/iZnpfC/production/Q90Ln0QlxPPwcWipMHw3TrKN8Bw.svg) ![Website](https://img.shields.io/website?url=https%3A%2F%2Fxn--jgy.tw%2F)
- ![GitHub branch check runs](https://img.shields.io/github/check-runs/jim60105/blog/master?label=Deploy)
+![Health Check](https://cronitor.io/badges/iZnpfC/production/Q90Ln0QlxPPwcWipMHw3TrKN8Bw.svg) ![Website](https://img.shields.io/website?url=https%3A%2F%2Fxn--jgy.tw%2F) ![GitHub branch check runs](https://img.shields.io/github/check-runs/jim60105/blog/master?label=Deploy)
 
 ## Introduction
 
 This is the blog [琳.tw](https://琳.tw), created with [Zola](https://www.getzola.org/), a modern static site generator, and the impressive Zola theme [Duckquill](https://duckquill.daudix.one/).
+
+## Dependencies
+
+This blog requires [Zola](https://www.getzola.org/) 0.20.0 or higher. Please follow the [official installation guide](https://www.getzola.org/documentation/getting-started/installation/) to install Zola on your system.
 
 ## Hotlink Protection
 
@@ -18,6 +21,7 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 
 ## Theme Overwrite
 
+<!-- prettier-ignore-start -->
 | File | Description |
 | --- | --- |
 | `article_list.html` | - Bug fix: `number_of_posts` can be zero.<br>- Remove `Filter by tag`<br>- Add `partials/sections.html` at the end of the article list.  |
@@ -41,6 +45,7 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 | `shortcodes/image.html` | Generate `srcset` to support responsive images. |
 | `shortcodes/youtube.html` |  Add credentialless, sandbox, and title property to youtube embed. |
 | `scss/fonts.scss` | Use my own fonts. |
+<!-- prettier-ignore-end -->
 
 ## Shortcodes
 
