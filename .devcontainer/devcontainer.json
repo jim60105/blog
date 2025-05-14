@@ -13,7 +13,7 @@
 
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": {
-    "zola": "wget -O /tmp/zola.deb https://github.com/barnumbirr/zola-debian/releases/download/v0.19.2-1/zola_0.19.2-1_amd64_bookworm.deb && sudo dpkg -i /tmp/zola.deb",
+    "zola": "wget -O /tmp/zola.deb https://github.com/barnumbirr/zola-debian/releases/download/v0.20.0-1/zola_0.20.0-1_amd64_bookworm.deb && sudo dpkg -i /tmp/zola.deb",
     "git_submodule": "git submodule init && git submodule update"
   },
   "postStartCommand": "nohup bash -c 'zola serve --drafts --interface 0.0.0.0 --base-url 127.0.0.1 &'",
