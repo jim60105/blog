@@ -137,6 +137,7 @@ When upgrading Zola version, remember to update the following:
    - Go to Settings → Variables and Secrets
    - Update `ZOLA_VERSION` to the new version
    - Update `UNSTABLE_PRE_BUILD` which also contains the version number
+3. Check the [Zola configuration documentation](https://www.getzola.org/documentation/getting-started/configuration/) for any new features.
 
 ## Links
 
