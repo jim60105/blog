@@ -105,7 +105,7 @@ highlight_theme = "visual-studio-dark"
 render_emoji = false
 
 # CSS class to add to external links (e.g. "external-link")
-# external_links_class = 
+external_links_class = "external"
 
 # Whether external links are to be opened in a new tab
 # If this is true, a `rel="noopener"` will always automatically be added for security reasons
