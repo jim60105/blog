@@ -132,6 +132,16 @@ Some hidden text
 
 A workaround in the `sitemap.xml` that filters out non-canonical pages has been fixed in Zola (see <https://github.com/getzola/zola/issues/2527>), but it hasn't been released yet. This workaround should be removed when upgrading to the next Zola release. It's 0.19.2 now.
 
+### Upgrading Zola
+
+When upgrading Zola version, remember to update the following:
+
+1. Update the version in `.devcontainer/devcontainer.json` for local development
+2. Update Cloudflare Workers & Pages settings:
+   - Go to Settings → Variables and Secrets
+   - Update `ZOLA_VERSION` to the new version
+   - Update `UNSTABLE_PRE_BUILD` which also contains the version number
+
 ## Links
 
 - [Zola Documentation](https://www.getzola.org/documentation)
