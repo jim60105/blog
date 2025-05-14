@@ -1,4 +1,4 @@
-#preview-container a {
+#preview-container > div:first-child {
   position: relative;
 
   .preview-image {
@@ -9,9 +9,9 @@
 
   .ai-badge {
     position: absolute;
-    bottom: 0;
     right: 0;
-    width: max(5%, 25px);
+    bottom: 0;
     transform: translate(-12px, -12px);
+    width: max(5%, 25px);
   }
 }

@@ -1,19 +1,21 @@
 <figure id="preview-container">
-	{%- if page.extra.preview.url -%}
-		<a href="{{ page.extra.preview.url }}" target="_blank" rel="{{ rel_attributes }}">
-		{%- endif -%}
-		{%- if page.extra.banner -%}
-			<img alt="{{ page.title }}" class="no-hover preview-image{% if page.extra.banner_pixels %} pixels{% endif %}" src="{% include 'partials/banner.html' %}" {% if config.markdown.lazy_async_image %} decoding="async" loading="lazy" {% endif %}/>
-		{%- elif page.extra.card -%}
-			<img alt="{{ page.title }}" class="no-hover preview-image" src="{% include 'partials/card.html' %}" {% if config.markdown.lazy_async_image %} decoding="async" loading="lazy" {% endif %}/>
-		{%- endif -%}
-		{%- if page.extra.preview.withAI -%}
-			<svg class="ai-badge" viewbox="0 0 24 24">
-				<image href="/ai-badge/made-with-ai-grayscale-translucent.svg" width="100%" height="100%"/>
-			</svg>
-		{%- endif -%}
+	<div>
 		{%- if page.extra.preview.url -%}
-		</a>
-	{%- endif -%}
+			<a href="{{ page.extra.preview.url }}" target="_blank" rel="{{ rel_attributes }}">
+			{%- endif -%}
+			{%- if page.extra.banner -%}
+				<img alt="{{ page.title }}" class="no-hover preview-image{% if page.extra.banner_pixels %} pixels{% endif %}" src="{% include 'partials/banner.html' %}" {% if config.markdown.lazy_async_image %} decoding="async" loading="lazy" {% endif %}/>
+			{%- elif page.extra.card -%}
+				<img alt="{{ page.title }}" class="no-hover preview-image" src="{% include 'partials/card.html' %}" {% if config.markdown.lazy_async_image %} decoding="async" loading="lazy" {% endif %}/>
+			{%- endif -%}
+			{%- if page.extra.preview.withAI -%}
+				<svg class="ai-badge" viewbox="0 0 24 24">
+					<image href="/ai-badge/made-with-ai-grayscale-translucent.svg" width="100%" height="100%"/>
+				</svg>
+			{%- endif -%}
+			{%- if page.extra.preview.url -%}
+			</a>
+		{%- endif -%}
+	</div>
 	<figcaption>{{ page.extra.preview.description | default(value="") | safe }}</figcaption>
 </figure>
