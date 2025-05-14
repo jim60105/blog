@@ -128,11 +128,7 @@ Some hidden text
 {{ image(url="preview.jpg", alt="Some preview image", no_hover=true) }}
 ```
 
-## Notes
-
-A workaround in the `sitemap.xml` that filters out non-canonical pages has been fixed in Zola (see <https://github.com/getzola/zola/issues/2527>), but it hasn't been released yet. This workaround should be removed when upgrading to the next Zola release. It's 0.19.2 now.
-
-### Upgrading Zola
+## Upgrading Zola
 
 When upgrading Zola version, remember to update the following:
 
