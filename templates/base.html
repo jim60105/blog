@@ -12,6 +12,13 @@
 	{%- endif -%}
 	<main id="main-content">
 		{% block custom %}{% endblock custom %}
+		{%- if page.extra.go_to_top or section.extra.go_to_top -%}
+			<div id="buttons-container">
+				<a id="go-to-top" href="#top" title="{{ macros_translate::translate(key='go_to_top', default='Go to Top', language_strings=language_strings) }}">
+					<i class="icon"></i>
+				</a>
+			</div>
+		{%- endif -%}
 		{% block content %}{% endblock content %}
 		{% include "partials/extra_features.html" %}
 	</main>

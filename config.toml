@@ -298,6 +298,9 @@ toc_sidebar = true
 #! Do not use CSP as it actually breaks GA in some cases that's not able to reproduce locally.
 # csp = []
 
+# Uncomment this to disable the card displayed in share previews
+# card = false
+
 likerid = "jim60105"
 
 [extra.images]

@@ -76,7 +76,7 @@
 			{%- if page.taxonomies -%}
 				{%- for name, taxon in page.taxonomies %}
 					<ul class="tags">
-						{%-for item in taxon -%}
+						{%- for item in taxon -%}
 							<li>
 								<a class="tag" href="{{ get_taxonomy_url(kind=name, name=item, lang=lang) }}">{{ item }}</a>
 							</li>
