@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "eliostruyf.vscode-front-matter",
+        "karunamurti.tera",
+        "doggy8088.markdown-extension-pack",
+        "tamasfe.even-better-toml",
+        "streetsidesoftware.code-spell-checker"
+    ]
+}

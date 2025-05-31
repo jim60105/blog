@@ -25,7 +25,8 @@
         "doggy8088.markdown-extension-pack",
         "GitHub.copilot",
         "eamodio.gitlens",
-        "tamasfe.even-better-toml"
+        "tamasfe.even-better-toml",
+        "streetsidesoftware.code-spell-checker"
       ]
     }
   },

@@ -21,5 +21,8 @@
         "!**/vendor",
         "!**/.git",
         "!**/themes"
-    ]
+    ],
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    }
 }
