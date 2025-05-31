@@ -9,7 +9,18 @@
         "karunamurti",
         "likecoin",
         "tera",
+        "Uncategorized",
+        "webm",
         "webp"
+    ],
+    "cSpell.ignorePaths":[
+        "package-lock.json",
+        "node_modules",
+        "vscode-extension",
+        ".git/objects",
+        ".vscode",
+        ".vscode-insiders",
+        "**/demo.md"
     ],
     "markdownlint.config": {
         "MD033": false,

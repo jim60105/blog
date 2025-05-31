@@ -299,7 +299,7 @@ likerid = "jim60105"
 
 [extra.nav]
 # Whether to automatically hide nav when not hovered or focused
-auto_hide = true
+auto_hide = false
 # Whether to show the Atom/RSS feed button in the nav
 show_feed = true
 # Whether to show the manual theme switcher in the nav
