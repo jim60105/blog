@@ -34,6 +34,7 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 | └`partials/open_graph.html` (new) | - Extracted og tags from `partials/head.html`<br>- Add twitter meta tags.<br>- Add ld+json script tags. |
 | `partials/nav.html` | Change the Feed button to copy to clipboard. |
 | `partials/sections.html` (new) | List all the sections just like tags. (Copy from `taxonomy_list.html`) |
+| `shortcodes/image.html` | Generate `srcset` to support responsive images. |
 
 ## Shortcodes
 
@@ -85,6 +86,35 @@ Some green text
 {% ch() %}
 Some hidden text
 {% end %}
+```
+
+### image (Overwrite Duckquill)
+
+> [!NOTE]  
+> Differences to the original `image` in Duckquill:
+>
+> - Discard `url-min` design.
+> - Generate `srcset` for responsive images.
+
+- `url`: URL to an image.
+- ~~`url_min`: URL to compressed version of an image, original can be opened by clicking on the image.~~
+- `alt`: Alt text, same as if the text were inside square brackets in Markdown.
+- `full`: Forces image to be full-width.
+- `full_bleed`: Forces image to fill all the available screen width. Removes shadow, rounded corners and zoom on hover.
+- `start`: Float image to the start of paragraph and scale it down.
+- `end`: Float image to the end of paragraph and scale it down.
+- `pixels`: Uses nearest neighbor algorithm for scaling, useful for keeping pixel-art sharp.
+- `transparent`: Removes rounded corners and shadow, useful for images with transparency.
+- `no_hover`: Removes zoom on hover.
+- `spoiler`: Blurs image until hovered over/pressed on, useful for plot rich game screenshots.
+- `spoiler` with `solid`: Ditto, but makes the image completely hidden.
+- `raw_path`: Passing `raw_path=true` will not generate `srcset`.
+
+> [!WARNING]
+> Since the [zola built-in resize_image()](https://www.getzola.org/documentation/content/image-processing/) does not seems to support resizing animated images, the `raw_path` parameter _SHOULD_ be used to bypass the image processing.
+
+```
+{{ image(url="preview.jpg", alt="Some preview image", no_hover=true) }}
 ```
 
 ## Notes

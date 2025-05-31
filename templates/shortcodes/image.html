@@ -1,0 +1,90 @@
+{%- set image_classes = [] -%}
+{%- if full -%}
+	{%- set image_classes = image_classes | concat(with="full") -%}
+{%- endif -%}
+{%- if full_bleed -%}
+	{%- set image_classes = image_classes | concat(with="full-bleed") -%}
+{%- endif -%}
+{%- if start -%}
+	{%- set image_classes = image_classes | concat(with="start") -%}
+{%- endif -%}
+{%- if end -%}
+	{%- set image_classes = image_classes | concat(with="end") -%}
+{%- endif -%}
+{%- if pixels -%}
+	{%- set image_classes = image_classes | concat(with="pixels") -%}
+{%- endif -%}
+{%- if transparent -%}
+	{%- set image_classes = image_classes | concat(with="transparent") -%}
+{%- endif -%}
+{%- if no_hover -%}
+	{%- set image_classes = image_classes | concat(with="no-hover") -%}
+{%- endif -%}
+{%- if spoiler -%}
+	{%- set image_classes = image_classes | concat(with="spoiler") -%}
+{%- endif -%}
+{%- if spoiler and solid -%}
+	{%- set image_classes = image_classes | concat(with="solid") -%}
+{%- endif -%}
+
+{%- set image_classes = image_classes | join(sep=" ") -%}
+
+{#- Set raw_path to true if the image is an SVG, a remote image, or if config doesn't specify image sizes -#}
+{%- set raw_path = raw_path 
+                    or url is ending_with("svg") 
+                    or url is starting_with("http") 
+                    or not config.extra.images.sizes -%}
+
+{%- if raw_path -%}
+	{#- Display the image as it is -#}
+	<img class="{{ image_classes }}" {%- if alt -%} alt="{{ alt }}" {%- endif -%} src="{{ url }}" {%- if config.markdown.lazy_async_image -%} decoding="async" loading="lazy" {%- endif -%}/>
+{%- else -%}
+	{%- set image_url = url -%}
+
+	{#- Get image metadata -#}
+	{%- set colocated_path = page.colocated_path | default(value="") -%}
+	{%- set relative_path = colocated_path ~ url -%}
+	{%- set meta = get_image_metadata(path=relative_path, allow_missing=true) -%}
+	{%- if meta -%}
+		{%- set image_url = "/" ~ relative_path -%}
+	{%- else -%}
+		{#- Fallback to absolute path if relative path doesn't work -#}
+		{%- set meta = get_image_metadata(path=url, allow_missing=true) -%}
+	{%- endif -%}
+
+	{%- set width = meta.width -%}
+	{%- set srcset_list = [] -%}
+	{%- set formats = config.extra.images.format | default (value=["webp"]) -%}
+
+	{#- Generate srcset -#}
+	{%- for s in config.extra.images.sizes -%}
+		{%- if width >= s -%}
+			{%- for format in formats -%}
+				{%- set resized = resize_image(path=image_url, width=s, op="fit_width", format=format, quality=100) -%}
+				{%- set trimmed_url = resized.url | trim_start_matches(pat="https:") | trim_start_matches(pat="http:") | replace(from=" ", to="%20")-%}
+				{%- set element = trimmed_url ~ " " ~ s ~ "w" -%}
+				{%- set_global srcset_list = srcset_list | concat(with=[element]) -%}
+			{%- endfor -%}
+		{%- endif -%}
+	{%- endfor -%}
+
+	{#- Generate default srcset -#}
+	{%- set image_default_size = config.extra.images.default_size | default (value=width) -%}
+	{%- if width > image_default_size -%}
+		{%- set default_resized = resize_image(path=image_url, width=image_default_size, op="fit_width", format="webp", quality=100) -%}
+		{%- set trimmed_url = default_resized.url | trim_start_matches(pat="https:") | trim_start_matches(pat="http:") | replace(from=" ", to="%20")-%}
+		{%- set element = trimmed_url ~ " " ~ image_default_size ~ "w" -%}
+		{%- set_global srcset_list = srcset_list | concat(with=[element]) -%}
+	{%- endif -%}
+
+	{#- Generate original size srcset -#}
+	{%- set origin_resized = resize_image(path=image_url, width=width, op="fit_width", format="webp", quality=100) -%}
+	{%- set trimmed_url = origin_resized.url | trim_start_matches(pat="https:") | trim_start_matches(pat="http:") | replace(from=" ", to="%20")-%}
+	{%- set element = trimmed_url ~ " " ~ width ~ "w" -%}
+	{%- set_global srcset_list = srcset_list | concat(with=[element]) -%}
+
+	{#- Display the image -#}
+	<a href="{{ image_url }}" target="_blank">
+		<img class="{{ image_classes }}" {%- if alt -%} alt="{{ alt }}" {%- endif -%} src="{{ url }}" srcset="{{ srcset_list | join(sep=", ") | safe }}" sizes="(max-width: {{ image_default_size }}px) 100vw, {{ image_default_size }}px" {%- if config.markdown.lazy_async_image -%} decoding="async" loading="lazy" {%- endif -%}/>
+	</a>
+{%- endif -%}
