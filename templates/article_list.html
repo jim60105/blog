@@ -21,7 +21,7 @@ language_strings=language_strings) -%}
 </p>
 {%- else -%}
 {% include "partials/articles.html" %}
-<small class="float-right">
+<small class="align-right">
   {{ macros_translate::translate(key="posts", number=number_of_posts,
   default="$NUMBER posts", language_strings=language_strings) }}
 </small>
