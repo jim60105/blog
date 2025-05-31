@@ -1,0 +1,18 @@
+#preview-container a {
+  position: relative;
+  display: block;
+
+  .preview-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .ai-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: max(5%, 25px);
+    transform: translate(-12px, -12px);
+  }
+}
