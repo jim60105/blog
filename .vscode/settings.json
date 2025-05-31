@@ -1,21 +1,41 @@
 {
     "cSpell.words": [
+        "backlink",
+        "backlinks",
+        "Civitai",
         "devcontainers",
         "duckquill",
+        "elasticlunr",
         "elif",
         "eliostruyf",
         "endfor",
         "esbenp",
+        "gfdlv1.3",
+        "gplv3",
         "Heiti",
         "iscn",
         "karunamurti",
+        "lastmod",
         "likecoin",
+        "pubdate",
+        "tabindex",
         "tera",
         "Uncategorized",
+        "urlencode",
+        "urlset",
+        "viewbox",
         "webm",
         "webp"
     ],
-    "cSpell.ignorePaths":[
+    "cSpell.customDictionaries": {
+        "blogWords": {
+            "name": "blogWords",
+            "path": "${workspaceFolder}/content/cspell-words.txt",
+            "scope": "folder",
+            "addWords": true
+        }
+    },
+    "cSpell.ignorePaths": [
         "package-lock.json",
         "node_modules",
         "vscode-extension",
