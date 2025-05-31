@@ -100,7 +100,7 @@ A workaround in the `sitemap.xml` that filters out non-canonical pages has been 
 
 ## LICENSE
 
-Since this repository contains two different aspects of content, "blog articles" and "blog website," it is licensed in two ways with three methods:
+Since this repository contains two different aspects of content, "blog articles" and "blog website," it is licensed under two types of licenses in three ways:
 
 - Article content (text and image files located in the `content` and `static` folders, excluding script files)
   - Articles marked with GFDL-1.3 are licensed under GFDL-1.3
@@ -112,7 +112,7 @@ Configuration files, styles, templates of the blog website are licensed under GP
 
 ---
 
-由於此儲存庫包含「部落格文章」以及「部落格網站」兩種不同面向的內容，此儲存連以兩種許可證；三種方式授權：
+由於此儲存庫包含「部落格文章」以及「部落格網站」兩種不同面向的內容，此儲存庫以兩種授權條款；三種方式授權：
 
 - 文章內容 (位於 `content`, `static` 資料夾內的文字和圖片檔案且不包含腳本檔案)
   - 以 GFDL-1.3 標示者以 GFDL-1.3 授權

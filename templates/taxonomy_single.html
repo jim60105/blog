@@ -7,7 +7,7 @@
 
 	{%- set term_name = "“" ~ term.name ~ "”" -%}
 	{%- set default_post_text = "Posts with " ~ taxonomy.name | trim_end_matches(pat="s") -%}
-	<h1>{{ macros_translate::translate(key="posts_with_" ~ taxonomy.name, default= default_post_text ~ " $TAG", language_strings=language_strings) | replace(from="$TAG", to=term_name)}}</h1>
+	<h1>{{ macros_translate::translate(key="posts_with_" ~ taxonomy.name | trim_end_matches(pat="s"), default= default_post_text ~ " $TAG", language_strings=language_strings) | replace(from="$TAG", to=term_name)}}</h1>
 
 	<p>
 		<small>
@@ -19,5 +19,6 @@
 		</small>
 	</p>
 
+	{% block details %}{% endblock details %}
 	{% include "partials/articles.html" %}
 {% endblock content %}
