@@ -24,7 +24,7 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 <!-- prettier-ignore-start -->
 | File | Description |
 | --- | --- |
-| `article_list.html` | - Bug fix: `number_of_posts` can be zero.<br>- Remove `Filter by tag`<br>- Add `partials/sections.html` at the end of the article list.  |
+| `article_list.html` | - Remove `Filter by tag`<br>- Add `partials/sections.html` at the end of the article list.  |
 | `article.html` | - Add likecoin iframe `partials/likecoin.html`<br>- Add iscn badge<br>- Use `config.extra.toc` to always display the in-page TOC. The default template only uses `page.extra.toc`, which must be defined in each article.<br>- Add `partials/sections.html` at the end of the article list.<br>- Add made with AI badge. |
 | └`partials/toc.html` | - Use `config.extra.toc` to always display the toc. |
 | └`partials/likecoin.html` (new) | Add [liker land WritingNFT badge](https://xn--jgy.tw/Blockchain/likecoin-writing-nft-widget-on-blogger/) to the end of the article. |
