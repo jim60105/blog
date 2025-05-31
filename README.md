@@ -12,3 +12,9 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 - `cover`
 - `banner`
 - `favicon`
+
+## Theme Overwrite
+
+| File | Description |
+| --- | --- |
+| `partials/nav.html` | Change the Feed button to copy to clipboard: Add onclick event |
