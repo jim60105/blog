@@ -17,6 +17,7 @@
 
 	{%- include "partials/favicon.html" %}
 
+	<!-- Open Graph should be placed as high as possible in the head -->
 	{%- include "partials/open_graph.html" %}
 
 	{%- if config.generate_feeds and config.feed_filenames %}
@@ -35,32 +36,48 @@
 		{%- include "partials/csp.html" %}
 	{%- endif %}
 
-	<meta name="referrer" content="strict-origin-when-cross-origin"/>
+	<meta
+	name="referrer" content="strict-origin-when-cross-origin"/>
 
-	<link href='https://www.gstatic.com' rel='preconnect'/>
-	<link href='https://www.googletagmanager.com' rel='preconnect'/>
-	<link href='https://fonts.cdnfonts.com' rel='preconnect'/>
-	<link href='https://fonts.googleapis.com' rel='preconnect'/>
-	<link crossorigin='' href='https://fonts.gstatic.com' rel='preconnect'/>
-	<link href='https://liker.social' rel='preconnect'/>
+	<!-- Preload LCP images -->
+	<link rel="preload" href="/card.avif" as="image" type="image/avif"/>
 	<link
-	href='https://button.like.co' rel='preconnect'/>
+	rel="preload" href="{% include 'partials/card.html' %}" as="image" type="image/webp"/>
+
+	<!-- Preconnect critical resources -->
+	<link href='https://www.gstatic.com' rel='preconnect'/>
+	<link href='https://www.gstatic.com' rel='dns-prefetch'/>
+	<link href='https://www.googletagmanager.com' rel='preconnect'/>
+	<link href='https://www.googletagmanager.com' rel='dns-prefetch'/>
+	<link href='https://fonts.cdnfonts.com' rel='preconnect'/>
+	<link href='https://fonts.cdnfonts.com' rel='dns-prefetch'/>
+	<link href='https://fonts.googleapis.com' rel='preconnect'/>
+	<link href='https://fonts.googleapis.com' rel='dns-prefetch'/>
+	<link crossorigin='' href='https://fonts.gstatic.com' rel='preconnect'/>
+	<link
+	crossorigin='' href='https://fonts.gstatic.com' rel='dns-prefetch'/>
+
+	<!-- DNS prefetch non-critical resources -->
+	<link href='https://liker.social' rel='dns-prefetch'/>
+	<link
+	href='https://button.like.co' rel='dns-prefetch'/>
+
+	<!-- Fonts for title is mandatory -->
+	<link
+	rel="preload" href="/fonts/Iansui-Regular.woff2" as="font" type="font/woff2" crossorigin/>
+	<!-- Fonts for body text is secondary -->
+	<link
+	href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;family=Noto+Sans+SC:wght@400;700&amp;family=Noto+Sans+TC:wght@400;700&amp;display=swap' rel='stylesheet' type='text/css'/>
+	<!-- Fonts for code block is last important -->
+	<link rel="preload" href="https://fonts.cdnfonts.com/css/cascadia-code" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.cdnfonts.com/css/cascadia-code"></noscript>
 
 	<!-- Style -->
 	{%- include "partials/variables.html" %}
 	{%- set styles = [ "style.css" ] %}
-
-	<!-- Preload background image -->
-	<link
-	rel="preload" href="/card.avif" as="image" type="image/avif"/>
-
-	<!-- Fonts -->
 	{%- if config.extra.bundled_fonts %}
 		{%- set styles = styles | concat(with=["fonts.css"]) %}
 	{%- endif %}
-	<link href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;family=Noto+Sans+SC:wght@400;700&amp;family=Noto+Sans+TC:wght@400;700&amp;display=swap' rel='stylesheet' type='text/css'/>
-	<link rel="preload" href="https://fonts.cdnfonts.com/css/cascadia-code" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="https://fonts.cdnfonts.com/css/cascadia-code"></noscript>
 
 	{%- if page.extra.katex or section.extra.katex or config.extra.katex %}
 		{%- set styles = styles | concat(with=["katex.css"]) %}
@@ -97,10 +114,6 @@
 		{%- set scripts = scripts | concat(with=["copy-button.js"]) %}
 	{%- endif %}
 
-	{%- if config.extra.goatcounter %}
-		{%- set scripts = scripts | concat(with=["count.js"]) %}
-	{%- endif %}
-
 	{%- if page.extra.katex or section.extra.katex or config.extra.katex %}
 		{%- set scripts = scripts | concat(with=["katex.min.js", "auto-render.min.js", "katex-init.js"]) %}
 	{%- endif %}
@@ -133,13 +146,16 @@
 
 	{%- if scripts | length > 0 %}
 		{%- for script in scripts %}
-			<script type="text/javascript" defer {% if script=="count.js" %} data-goatcounter="https://{{ config.extra.goatcounter.user }}.{{ config.extra.goatcounter.host | default(value='goatcounter.com') }}/count" {% endif %} src="{{ get_url(path=script) | safe }}"></script>
+			<script type="text/javascript" defer src="{{ get_url(path=script) | safe }}"></script>
 		{%- endfor %}
 	{%- endif %}
 
+	<script src="/tracking.js"></script>
 	<script>
 		setTimeout(() => {
+if (tracking) {
 tracking("{{ config.extra.tracking.ga }}", "{{ config.extra.tracking.clarity }}");
+}
 }, 500);
 	</script>
 </head>

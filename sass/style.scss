@@ -10,10 +10,6 @@
 @import "prompt-injection";
 
 :root {
-  --font-system-ui: Noto Sans TC, Noto Sans JP, Noto Sans SC, Noto Sans,
-    Microsoft JhengHei, Heiti TC, system-ui, sans-serif;
-  --font-antique: Iansui, Superclarendon, "Bookman Old Style", "URW Bookman",
-    "URW Bookman L", "Georgia Pro", Georgia, serif;
   --color-opacity: 0.2;
 
   --bg-overlay: rgb(255 255 255 / 87%);
@@ -31,16 +27,6 @@ body {
   );
 }
 
-@font-face {
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/Iansui-Regular.woff2") format("woff2"),
-    url("fonts/Iansui-Regular.woff") format("woff"),
-    url("fonts/Iansui-Regular.ttf") format("truetype");
-  font-family: "Iansui";
-  font-display: swap;
-}
-
 #site-nav nav #feed {
   cursor: copy;
 
@@ -54,17 +40,6 @@ body {
       color: var(--fg-muted-5);
     }
   }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
-  line-height: normal;
-  font-family: var(--font-antique), var(--font-system-ui);
 }
 
 main {
