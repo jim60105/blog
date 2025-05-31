@@ -1,0 +1,11 @@
+// https://stackoverflow.com/a/49278385/8706033
+html {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+html::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
+}

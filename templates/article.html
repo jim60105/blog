@@ -80,12 +80,13 @@ macros_rel_attributes::rel_attributes() | trim -%}
     {%- endfor -%} {%- endif %}
   </div>
 
-  {%- include "partials/statements.html" -%} {{ page.content | safe }}
+  {%- include "partials/statements.html" -%} {{ page.content | safe }} {%- if
+  config.extra.likerid or page.extra.iscn -%} {% include
+  "partials/likecoin.html" %} {%- endif -%}
 </article>
 
 {%- if page.extra.comments.id -%} {% include "partials/comments.html" %} {%-
 endif -%}
-
 <div id="buttons-container">
   {%- if page.extra.toc -%}
   <details id="toc" class="closable">

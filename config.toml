@@ -262,6 +262,8 @@ show_share_button = true
 # Display outlines around all elements for debugging purposes
 # debug_layout = true
 
+likerid = "jim60105"
+
 [extra.nav]
 # Whether to show the Atom/RSS feed button in the nav
 show_feed = true
