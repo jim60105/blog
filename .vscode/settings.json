@@ -10,5 +10,8 @@
         "likecoin",
         "tera",
         "webp"
-    ]
+    ],
+    "markdownlint.config": {
+        "MD033": false
+    }
 }
