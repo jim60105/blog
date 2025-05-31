@@ -209,13 +209,6 @@ accent_color = "navy"
 # Ditto but for the dark theme.
 # If not set regular variant will be used.
 accent_color_dark = "lightcyan"
-# Whether to fix low contrast in text selection, checkboxes, etc.
-# Use only if the default doesn't provide enough contrast, e.g. the accent color is set to yellow.
-#
-# fix_contrast = true
-#
-# Ditto but for the dark theme.
-fix_contrast_dark = true
 # Whether to use fonts bundled with Duckquill instead of system ones.
 # Keep in mind that it also changes the style of headings.
 #
