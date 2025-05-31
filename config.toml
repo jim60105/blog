@@ -30,7 +30,11 @@ minify_html = true
 # copied over to the `public` directory.
 # Example:
 #     ignored_content = ["*.{graphml,xlsx}", "temp.*", "**/build_folder"]
-ignored_content = ["**/cspell-words.txt"]
+ignored_content = [
+	"**/cspell-words.txt",
+	"**/content/README.md",
+	"**/content/LICENSE",
+]
 
 # Similar to ignored_content, a list of glob patterns specifying asset files to
 # ignore when the static directory is processed. Defaults to none, which means
