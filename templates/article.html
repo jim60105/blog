@@ -28,7 +28,7 @@
 						</time>
 						{%- if page.updated -%}
 							<span>
-								•
+								{{ config.extra.separator | default(value="•") }}
 							</span>
 							<time datetime="{{ page.updated | date(format=' %+') }}">
 								{{- macros_translate::translate(key="updated", default="Updated on", language_strings=language_strings) }}
@@ -48,7 +48,7 @@
 							<span>{% include "partials/authors.html" -%}</span>
 							{%- if config.extra.show_reading_time -%}
 								<span>
-									•
+									{{ config.extra.separator | default(value="•") }}
 								</span>
 							{%- endif -%}
 						{%- endif -%}
@@ -57,7 +57,7 @@
 							<span>{{ macros_translate::translate(key="minutes_read", number=page.reading_time, default="$NUMBER minute read", language_strings=language_strings) }}</span>
 							{%- if page.taxonomies -%}
 								<span>
-									•
+									{{ config.extra.separator | default(value="•") }}
 								</span>
 							{%- endif -%}
 						{%- endif -%}

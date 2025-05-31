@@ -68,7 +68,7 @@
 		{%- set styles = styles | concat(with=section.extra.styles) %}
 	{%- endif %}
 
-	{%- if not config.extra.debug_no_styles %}
+	{%- if not config.extra.debug.no_styles %}
 		{%- for style in styles %}
 			<link type="text/css" rel="stylesheet" href="{{ get_url(path=style) | safe }}"/>
 		{%- endfor %}
