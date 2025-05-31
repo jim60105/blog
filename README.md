@@ -31,9 +31,8 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 | └`partials/with_ai.html` (new) | Add [made with AI badge](https://aibadge.org/) to the right bottom corner. |
 | └`partials/preview_image.html` (new) | Add preview image with AI badge support. |
 | `base.html` | - Use `config.extra.toc_sidebar` to always display sidebar toc. |
-| `taxonomy_list.html` | Make it work with different taxonomies |
-| `taxonomy_single.html` | Make it work with different taxonomies |
-| `sitemap.xml` | - Filter non-canonical pages<br>- Remove <lastmod> date that is 0000-01-01 which I used for non-article content. |
+| `taxonomy_single.html` | Add display of detailed content for this taxonomy. |
+| `sitemap.xml` | - Remove <lastmod> date that is 0000-01-01 which I used for non-article content. |
 | `partials/articles.html` | - Make different taxonomies list together<br>- Remove blur thumbnail |
 | `partials/default_theme.html` | Use dark theme (The intention of not using `config.extra.default_theme` is to use the dark theme and not enable the theme switcher.) |
 | `partials/head.html` | - Rearrange the order of meta tags and extract them to `partials/open_graph.html`. According to best practices, all meta og tags should be placed at the very beginning of the webpage, sorted by importance, while `<style>` and `<script>` should be placed later. This is because og parsers only read a fixed length (not very long) and discard any content after encountering any error.<br>-  Add link preconnect.<br>- Add my fonts from CDN.<br>- Add Google Analytics and Microsoft Clarity tracking code and remove goat counter for clarity.<br>- Bust cache with timestamp query for style.css loading. |

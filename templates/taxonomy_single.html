@@ -4,15 +4,18 @@
 	{%- set date_format = macros_translate::translate(key="date_format", default="%B %d, %Y", language_strings=language_strings) -%}
 	{%- set date_locale = macros_translate::translate(key="date_locale", default="en_US", language_strings=language_strings) -%}
 	{%- set number_of_posts = term.pages | length -%}
+	{%- set taxon_name = taxonomy.name -%}
+	{%- set taxon_name_i18n = macros_translate::translate(key=taxonomy.name, default=taxonomy.name, language_strings=language_strings) -%}
 
 	{%- set term_name = "“" ~ term.name ~ "”" -%}
 	{%- set default_post_text = "Posts with " ~ taxonomy.name | trim_end_matches(pat="s") -%}
-	<h1>{{ macros_translate::translate(key="posts_with_" ~ taxonomy.name | trim_end_matches(pat="s"), default= default_post_text ~ " $TAG", language_strings=language_strings) | replace(from="$TAG", to=term_name)}}</h1>
+	<h1>{{- macros_translate::translate(key='posts_with_taxon', default='Posts with $TAXON $TERM', language_strings=language_strings) | replace(from="$TAXON", to=taxon_name_i18n) | replace(from="$TERM", to=term_name) -}}
+	</h1>
 
 	<p>
 		<small>
-			<a href="{{ get_url(path=taxonomy.name, lang=lang) }}">
-				{{ macros_translate::translate(key="all_" ~ taxonomy.name, default="See all " ~ taxonomy.name, language_strings=language_strings) }}
+			<a href="{{- get_url(path=taxonomy.name, lang=lang) | lower -}}">
+				{{- macros_translate::translate(key="all_taxa", default="See all $TAXON", language_strings=language_strings) | replace(from="$TAXON", to=taxon_name_i18n) -}}
 			</a>
 			<br/>
 			{{ macros_translate::translate(key="posts", number=number_of_posts, default="$NUMBER posts", language_strings=language_strings) }}
