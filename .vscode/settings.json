@@ -12,7 +12,8 @@
         "webp"
     ],
     "markdownlint.config": {
-        "MD033": false
+        "MD033": false,
+        "MD040": false
     },
     "markdownlint.lintWorkspaceGlobs": [
         "**/*.{md,mkd,mdwn,mdown,markdown,markdn,mdtxt,mdtext,workbook}",
@@ -22,7 +23,17 @@
         "!**/.git",
         "!**/themes"
     ],
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
-    }
+    "editor.formatOnSave": true,
+    "files.associations": {
+        "*.html": "twig"
+    },
+    "emmet.includeLanguages": {
+        "twig": "html"
+    },
+    "[twig]": {
+        "editor.defaultFormatter": "mblode.twig-language-2",
+        "editor.detectIndentation": false,
+        "editor.tabSize": 4
+    },
+    "twig-language-2.spaceClose": true
 }

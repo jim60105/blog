@@ -1,17 +1,8 @@
 <div id="likerContainer">
-  {% set likerid = config.extra.likerid %} {%- if page.extra.iscn -%}
-  <iframe
-          class="writingNFT"
-          frameborder="0"
-          sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-          scrolling="no"
-          src="https://button.like.co/in/embed/iscn/button?iscn_id={{ page.extra.iscn | safe }}"></iframe>
-  {%- else -%}
-  <iframe
-          class="likecoin"
-          frameborder="0"
-          sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-          scrolling="no"
-          src="https://button.like.co/in/embed/{{ likerid }}/button?referrer={{ current_url | urlencode_strict }}"></iframe>
-  {%- endif -%}
+	{% set likerid = config.extra.likerid %}
+	{%- if page.extra.iscn -%}
+		<iframe class="writingNFT" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" scrolling="no" src="https://button.like.co/in/embed/iscn/button?iscn_id={{ page.extra.iscn | safe }}"></iframe>
+	{%- else -%}
+		<iframe class="likecoin" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" scrolling="no" src="https://button.like.co/in/embed/{{ likerid }}/button?referrer={{ current_url | urlencode_strict }}"></iframe>
+	{%- endif -%}
 </div>

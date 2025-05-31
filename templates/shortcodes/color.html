@@ -1,5 +1,9 @@
 {%- if element -%}
-<{{ element }} style="color: {{ color }}">{{ body }}</{{ element }}>
+	<{{element}} style="color: {{ color }}">
+		{{ body }}
+	</{{element}}>
 {%- else -%}
-<span style="color: {{ color }}">{{ body }}</span>
+	<span style="color: {{ color }}">
+		{{ body }}
+	</span>
 {%- endif -%}

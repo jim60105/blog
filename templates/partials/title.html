@@ -1,7 +1,11 @@
 {%- if page.title -%}
-{{- page.title }} - {{ config.title -}}
+	{{- page.title }}
+	-
+	{{ config.title -}}
 {%- elif section.title and section.title != config.title -%}
-{{- section.title }} - {{ config.title -}}
+	{{- section.title }}
+	-
+	{{ config.title -}}
 {%- else -%}
-{{- config.title -}}
+	{{- config.title -}}
 {%- endif -%}
