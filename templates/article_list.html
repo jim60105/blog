@@ -14,7 +14,25 @@ language_strings=language_strings) -%}
 	<h1>{{ section.title }}</h1>
 
 	{{ section.content | safe }}
+
+	{# <div class="sparkline">
+		{%- if paginator.pages -%}
+			{%- set pages = paginator.pages -%}
+		{%- elif section.pages -%}
+			{%- set pages = section.pages -%}
+		{%- else -%}
+			{%- set pages = term.pages -%}
+		{%- endif -%}
+	
+		{%- for month, pages in pages | group_by(attribute="month") -%}
+			{%- set posts_per_bar = pages | length -%}
+			{%- set bar_height = pages | length * 10 -%}
+			<div style="--bar-height: {{ bar_height ~ '%' }}" title="{{ macros_translate::translate(key='posts', number=posts_per_bar, default='$NUMBER posts in total', language_strings=language_strings) }}"></div>
+		{%- endfor -%}
+	</div> #}
+
 	{% include "partials/tags.html" %}
+
 	{%- if number_of_posts == 0%}
 		<p>
 			{{ macros_translate::translate(key="no_posts", default="No posts", language_strings=language_strings) }}
@@ -22,7 +40,7 @@ language_strings=language_strings) -%}
 	{%- else -%}
 		{% include "partials/articles.html" %}
 		<small class="align-right">
-			{{ macros_translate::translate(key="posts", number=number_of_posts, default="$NUMBER posts", language_strings=language_strings) }}
+			{{ macros_translate::translate(key="posts", number=number_of_posts, default="$NUMBER posts in total", language_strings=language_strings) }}
 		</small>
 		{%- if paginator.pages -%}
 			<nav id="paginator">

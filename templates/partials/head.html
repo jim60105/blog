@@ -15,6 +15,7 @@
 
 	{%- if config.extra.comments %}
 		<link rel="me" href="https://{{ config.extra.comments.host }}/@{{ config.extra.comments.user }}"/>
+		<meta name="fediverse:creator" content="@{{ config.extra.comments.user }}@{{ config.extra.comments.host }}"/>
 	{%- endif %}
 
 	{%- include "partials/favicon.html" %}
@@ -67,57 +68,49 @@
 		{%- set styles = styles | concat(with=section.extra.styles) %}
 	{%- endif %}
 
-	{%- for style in styles %}
-		<link type="text/css" rel="stylesheet" href="{{ get_url(path=style) | safe }}"/>
-	{%- endfor %}
+	{%- if not config.extra.debug_no_styles %}
+		{%- for style in styles %}
+			<link type="text/css" rel="stylesheet" href="{{ get_url(path=style) | safe }}"/>
+		{%- endfor %}
 
-	{%- if config.markdown.highlight_code and config.markdown.highlight_theme == "css" %}
-		{%- if config.markdown.highlight_themes_css | length > 0 %}
-			<link type="text/css" rel="stylesheet" href="{{ get_url(path='syntax-theme-light.css') }}" media="(prefers-color-scheme: light)"/>
-			<link type="text/css" rel="stylesheet" href="{{ get_url(path='syntax-theme-dark.css') }}" media="(prefers-color-scheme: dark)"/>
-		{%- else %}
-			<link type="text/css" rel="stylesheet" href="{{ get_url(path='syntax-theme.css') }}"/>
+		{%- if config.markdown.highlight_code and config.markdown.highlight_theme == "css" %}
+			{%- if config.markdown.highlight_themes_css | length > 0 %}
+				<link type="text/css" rel="stylesheet" href="{{ get_url(path='syntax-theme-light.css') }}" media="(prefers-color-scheme: light)"/>
+				<link type="text/css" rel="stylesheet" href="{{ get_url(path='syntax-theme-dark.css') }}" media="(prefers-color-scheme: dark)"/>
+			{%- else %}
+				<link type="text/css" rel="stylesheet" href="{{ get_url(path='syntax-theme.css') }}"/>
+			{%- endif %}
 		{%- endif %}
 	{%- endif %}
 
-	{%- if config.extra.show_copy_button %}
-		{%- include "partials/copy_button.html" %}
-	{%- endif %}
-
 	{%- set scripts = ["closable.js"] %}
+
+	{%- if config.extra.show_copy_button %}
+		{%- set scripts = scripts | concat(with=["copy-button.js"]) %}
+	{%- endif %}
 
 	{%- if config.extra.goatcounter %}
 		{%- set scripts = scripts | concat(with=["count.js"]) %}
 	{%- endif %}
 
 	{%- if page.extra.katex or section.extra.katex or config.extra.katex %}
-		{%- set scripts = scripts | concat(with=["katex.min.js", "auto-render.min.js"]) %}
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-renderMathInElement(document.body, {
-delimiters: [
-{
-left: "$$",
-right: "$$",
-display: true
-}, {
-left: "$",
-right: "$",
-display: false
-},
-]
-});
-});
-		</script>
+		{%- set scripts = scripts | concat(with=["katex.min.js", "auto-render.min.js", "katex-init.js"]) %}
 	{%- endif %}
 
 	{%- if config.build_search_index %}
-		{%- include "partials/search.html" %}
-		{%- set scripts = scripts | concat(with=["elasticlunr.min.js"]) %}
+		{%- if config.search.index_format == "elasticlunr_json" -%}
+			{%- set scripts = scripts | concat(with=["elasticlunr.min.js", "search-elasticlunr.js"]) %}
+		{%- elif config.search.index_format == "fuse_json" -%}
+			{%- set scripts = scripts | concat(with=["fuse.js", "search-fuse.js"]) %}
+		{%- endif -%}
 	{%- endif %}
 
 	{%- if config.extra.nav.show_theme_switcher %}
 		{%- set scripts = scripts | concat(with=["theme-switcher.js"]) %}
+	{%- endif %}
+
+	{%- if page.extra.comments.id %}
+		{%- set scripts = scripts | concat(with=["comments.js"]) %}
 	{%- endif %}
 
 	{%- if config.extra.scripts %}

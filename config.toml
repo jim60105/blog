@@ -71,7 +71,7 @@ taxonomies = [{ name = "tags", feed = false }]
 
 # When set to "true", a search index is built from the pages and section
 # content for `default_language`.
-build_search_index = false
+build_search_index = true
 
 # When set to "false", Sitemap.xml is not generated
 generate_sitemap = true
@@ -161,7 +161,7 @@ include_content = true
 # Accepted values:
 # - "elasticlunr_javascript", "elasticlunr_json"
 # - "fuse_javascript", "fuse_json"
-index_format = "elasticlunr_javascript"
+index_format = "fuse_json"
 
 # Optional translation object for the default language
 # Example:
@@ -237,24 +237,20 @@ source_url = "https://github.com/jim60105/blog"
 #
 # Additional JavaScript scripts; expects them to be in the "./static/" directory.
 #
-# scripts = [
-#   "YOUR_SCRIPT.js",
-#   "ALSO_YOUR_SCRIPT.js"
-# ]
+scripts = ["mastodon-embed.js"]
 #
 # Whether to show "copy code" button on all code blocks
 # that have the language set.
 # See https://www.getzola.org/documentation/content/syntax-highlighting/
 show_copy_button = true
 # Whether to show estimated read time in posts.
-# Calculated using the simple math: number of words ÷ words per minute.
-show_read_time = false
+show_reading_time = true
 #
-# words_per_minute = 200
-#
-# Whether to show a share button in articles.
+# Whether to show a share button in article's quick actions.
 # Uses https://shareopenly.org.
 show_share_button = true
+# Whether to show the backlinks button for linked articles in the article's quick actions
+show_backlinks = false
 # Whether to enable the KaTeX library for rendering LaTeX.
 # Note: This will make your page significantly heavier.
 # Instead, consider enabling it per page/section.
@@ -278,42 +274,32 @@ toc_inline = true
 # Keep in mind that although this can potentially increase security,
 # it can break some stuff, in which case you will need to set custom policy.
 # csp = [
-#     { directive = "font-src", domains = [
-#         "'self'",
-#         "data:",
-#     ] },
-#     { directive = "img-src", domains = [
-#         "'self'",
-#         "https:",
-#         "data:",
-#     ] },
-#     { directive = "media-src", domains = [
-#         "'self'",
-#         "https:",
-#         "data:",
-#     ] },
-#     { directive = "script-src", domains = [
-#         "'self'",
-#         "'unsafe-inline'",
-#     ] },
-#     { directive = "style-src", domains = [
-#         "'self'",
-#         "'unsafe-inline'",
-#     ] },
-#     { directive = "frame-src", domains = [
-#         "https://player.vimeo.com",
-#         "https://www.youtube-nocookie.com",
-#     ] },
-#     { directive = "connect-src", domains = [
-#         "https:",
-#     ] },
+# 	{ directive = "font-src", domains = ["'self'", "data:"] },
+# 	{ directive = "font-src", domains = ["'self'"] },
+# 	{ directive = "img-src", domains = ["'self'", "https:", "data:"] },
+# 	{ directive = "media-src", domains = ["'self'", "https:", "data:"] },
+# 	{ directive = "script-src", domains = ["'self'", "'unsafe-inline'"] },
+# 	{ directive = "media-src", domains = ["'self'", "https:"] },
+# 	{ directive = "script-src", domains = ["'self'"] },
+# 	{ directive = "style-src", domains = ["'self'", "'unsafe-inline'"] },
+# 	{ directive = "frame-src", domains = ["https://player.vimeo.com", "https://www.youtube-nocookie.com"] },
+# 	{ directive = "connect-src", domains = ["https:"] },
+# 	{ directive = "frame-src", domains = ["https://player.vimeo.com", "https://www.youtube-nocookie.com", "https://toot.community"] },
+# 	{ directive = "connect-src", domains = ["https://toot.community"] },
+# 	{ directive = "frame-ancestors", domains = ["'none'"] },
+# 	{ directive = "base-uri", domains = ["'none'"] },
+# 	{ directive = "form-action", domains = ["'none'"] }
 # ]
 # Display outlines around all elements for debugging purposes
 # debug_layout = true
+# Don't load any styles for debugging purposes
+# debug_no_styles = true
 
 likerid = "jim60105"
 
 [extra.nav]
+# Whether to automatically hide nav when not hovered or focused
+auto_hide = true
 # Whether to show the Atom/RSS feed button in the nav
 show_feed = true
 # Whether to show the manual theme switcher in the nav
@@ -324,7 +310,7 @@ show_repo = false
 # For local files use same link format as in Markdown,
 # i.e. "@/blog/_index.md".
 # See https://www.getzola.org/documentation/content/linking/#internal-links
-links = []
+links = [{ url = "https://github.com/jim60105", name = "GitHub" }]
 
 [extra.footer]
 # Links used in the footer.
