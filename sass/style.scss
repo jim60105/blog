@@ -1,6 +1,6 @@
 @use "sass:color";
 // @use "../themes/duckquill/sass/mods/modern-hr";
-@import "../themes/duckquill/sass/style.scss";
+@use "../themes/duckquill/sass/style.scss";
 @import "hide-scroll-bar";
 @import "likecoin";
 @import "color";
@@ -10,6 +10,8 @@
 :root {
   --font-system-ui: Noto Sans TC, Noto Sans JP, Noto Sans SC, Noto Sans,
     Microsoft JhengHei, Heiti TC, system-ui, sans-serif;
+  --font-antique: Iansui, Superclarendon, "Bookman Old Style", "URW Bookman",
+    "URW Bookman L", "Georgia Pro", Georgia, serif;
   --color-opacity: 0.2;
 
   --bg-overlay: rgb(255 255 255 / 87%);
@@ -25,6 +27,16 @@ body {
     url("/card.webp") type("image/webp"),
     url("/card.png") type("image/png")
   );
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/Iansui-Regular.woff2") format("woff2"),
+    url("fonts/Iansui-Regular.woff") format("woff"),
+    url("fonts/Iansui-Regular.ttf") format("truetype");
+  font-family: "Iansui";
+  font-display: swap;
 }
 
 #site-nav nav #feed {
@@ -72,7 +84,7 @@ main {
     border-width: 0px;
     background: transparent;
     color: black;
-    font-family: var(--font-system-ui);
+    // font-family: var(--font-system-ui);
     text-align: center;
     text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff,
       0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff;
@@ -132,6 +144,10 @@ main {
       rgb(0 0 0 /60%) 70%,
       rgb(0 0 0 / 0%)
     );
+  }
+
+  #article-list article h3 {
+    font-family: var(--font-antique), var(--font-system-ui);
   }
 }
 
