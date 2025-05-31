@@ -1,0 +1,17 @@
+img[src*="#badge"],
+img.badge {
+  border-radius: unset;
+  display: inline;
+  background-color: transparent;
+  cursor: unset;
+
+  &:hover {
+    position: relative;
+    transform: unset;
+    box-shadow: unset;
+  }
+
+  :has(> &) {
+    text-align: center;
+  }
+}

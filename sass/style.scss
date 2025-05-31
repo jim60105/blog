@@ -5,6 +5,7 @@
 @import "hide-scroll-bar";
 @import "likecoin";
 @import "color";
+@import "badge";
 
 @include theme-variables using ($theme) {
   @if $theme == "dark" {
