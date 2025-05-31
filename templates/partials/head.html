@@ -49,14 +49,15 @@
 
 	<!-- Preload background image -->
 	<link
-	rel="preload" href="card.avif" as="image" type="image/avif"/>
+	rel="preload" href="/card.avif" as="image" type="image/avif"/>
 
 	<!-- Fonts -->
 	{%- if config.extra.bundled_fonts %}
 		{%- set styles = styles | concat(with=["fonts.css"]) %}
 	{%- endif %}
 	<link href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;family=Noto+Sans+SC:wght@400;700&amp;family=Noto+Sans+TC:wght@400;700&amp;display=swap' rel='stylesheet' type='text/css'/>
-	<link href='https://fonts.cdnfonts.com/css/cascadia-code' rel='stylesheet' type='text/css'/>
+	<link rel="preload" href="https://fonts.cdnfonts.com/css/cascadia-code" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.cdnfonts.com/css/cascadia-code"></noscript>
 
 	{%- if page.extra.katex or section.extra.katex or config.extra.katex %}
 		{%- set styles = styles | concat(with=["katex.css"]) %}
