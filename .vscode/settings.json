@@ -13,5 +13,13 @@
     ],
     "markdownlint.config": {
         "MD033": false
-    }
+    },
+    "markdownlint.lintWorkspaceGlobs": [
+        "**/*.{md,mkd,mdwn,mdown,markdown,markdn,mdtxt,mdtext,workbook}",
+        "!**/bower_components",
+        "!**/node_modules",
+        "!**/vendor",
+        "!**/.git",
+        "!**/themes"
+    ]
 }
