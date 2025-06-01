@@ -127,14 +127,17 @@ Some hidden text
 
 ## Upgrading Zola
 
-When upgrading Zola version, remember to update the following:
+When upgrading Zola version, remember to follow these steps:
 
-1. Update the version in `.devcontainer/devcontainer.json` for local development
-2. Update Cloudflare Workers & Pages settings:
-   - Go to Settings → Variables and Secrets
+1. Update the version in `.devcontainer/devcontainer.json`.
+2. Update Cloudflare Workers settings:
+   - [Go to Settings → Build → Variables and Secrets](https://dash.cloudflare.com/6489b5132bc0104a8348d01f728a0bed/workers/services/view/blog/production/settings#builds)
    - Update `ZOLA_VERSION` to the new version
-   - Update `UNSTABLE_PRE_BUILD` which also contains the version number
-3. Check the [Zola configuration documentation](https://www.getzola.org/documentation/getting-started/configuration/) for any new features.
+3. Update GitHub Actions variables for `blog-content` repository:
+   - [Go to Settings → Secrets and variables → Actions → Variables](https://github.com/jim60105/blog-content/settings/variables/actions)
+   - Update `ZOLA_VERSION` to the new version
+4. Check the [Zola changelog](https://github.com/getzola/zola/blob/master/CHANGELOG.md) for any new features.
+5. Update the version number [in this `README.md` file.](#dependencies)
 
 ## Links
 
