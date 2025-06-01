@@ -4,17 +4,8 @@
   "build": {
     "command": "zola build"
   },
-  "observability": {
-    "enabled": true,
-    "head_sampling_rate": 1
-  },
-  "placement": {
-    "mode": "smart"
-  },
   "assets": {
     "directory": "./public/",
     "not_found_handling": "404-page"
-  },
-  "workers_dev": true,
-  "preview_urls": true
+  }
 }
