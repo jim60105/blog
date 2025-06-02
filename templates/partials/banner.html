@@ -12,4 +12,4 @@
 {%- set width = meta.width -%}
 {%- set origin_resized = resize_image(path=image_url, width=width, op="fit_width", format="webp", quality=100) -%}
 {%- set trimmed_url = origin_resized.url | trim_start_matches(pat="https:") | trim_start_matches(pat="http:") | replace(from=" ", to="%20")-%}
-{{ trimmed_url }}
+{{- trimmed_url -}}
