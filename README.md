@@ -40,7 +40,6 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 | `partials/sections.html` (new) | List all the sections just like tags. (Copy from `taxonomy_list.html`) |
 | `partials/prompt-injection.html` (new) | Injecting prompt to AI search engine. Not really sure if it works, but it's worth a try.😎 |
 | `shortcodes/image.html` | Generate `srcset` to support responsive images. |
-| `shortcodes/youtube.html` |  Add credentialless, sandbox, and title property to youtube embed. |
 | `scss/fonts.scss` | Use my own fonts. |
 <!-- prettier-ignore-end -->
 
