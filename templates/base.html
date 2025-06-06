@@ -1,4 +1,28 @@
 {% extends "duckquill/templates/base.html" %}
+
+{% block head %}
+	<!-- {{ now() | date(format='%F %a %R') }} -->
+
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+	<meta name="apple-mobile-web-app-title" content="琳.tw"/>
+	<link rel="manifest" href="/site.webmanifest"/>
+
+	{%- if page.extra.banner -%}
+		<link rel="preload" href="{%- include 'partials/banner.html' -%}" as="image"/>
+	{%- endif -%}
+
+	{% include "partials/head.html" %}
+
+	<script src="/tracking.js"></script>
+	<script>
+		setTimeout(() => {
+if (tracking) {
+tracking("{{ config.extra.tracking.ga }}", "{{ config.extra.tracking.clarity }}");
+}
+}, 500);
+	</script>
+{% endblock head %}
+
 {% block body %}
 	{%- if config.extra.nav.links %}
 		{% include "partials/nav.html" %}
