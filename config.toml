@@ -285,6 +285,9 @@ toc = true
 # in addition to floating quick navigation buttons.
 # Can be set per page/section.
 toc_inline = false
+# Whether to render table of contents in the sidebar on all pages.
+# Will create a floating sidebar with table of contents that appears on larger screens.
+# Can be set per page/section.
 toc_sidebar = true
 #
 # Whether to use numbered (ordered) list for table of contents.

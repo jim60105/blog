@@ -25,12 +25,11 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 | File | Description |
 | --- | --- |
 | `article_list.html` | - Remove `Filter by tag`<br>- Add `partials/sections.html` at the end of the article list.  |
-| `article.html` | - Add likecoin iframe `partials/likecoin.html`<br>- Add iscn badge<br>- Use `config.extra.toc` to always display the in-page TOC. The default template only uses `page.extra.toc`, which must be defined in each article.<br>- Add `partials/sections.html` at the end of the article list.<br>- Add made with AI badge. |
-| └`partials/toc.html` | - Use `config.extra.toc` to always display the toc. |
+| `article.html` | - Add likecoin iframe `partials/likecoin.html`<br>- Add iscn badge<br>- Add `partials/sections.html` at the end of the article list.<br>- Add made with AI badge. |
 | └`partials/likecoin.html` (new) | Add [liker land WritingNFT badge](https://xn--jgy.tw/Blockchain/likecoin-writing-nft-widget-on-blogger/) to the end of the article. |
 | └`partials/with_ai.html` (new) | Add [made with AI badge](https://aibadge.org/) to the right bottom corner. |
 | └`partials/preview_image.html` (new) | Add preview image with AI badge support. |
-| `base.html` | - Use `config.extra.toc_sidebar` to always display sidebar toc.<br>- Add my custom head tags.<br>- Add Google Analytics and Microsoft Clarity tracking code. |
+| `base.html` | - Add my custom head tags.<br>- Add Google Analytics and Microsoft Clarity tracking code. |
 | `sitemap.xml` | - Remove <lastmod> date that is 0000-01-01 which I used for non-article content. |
 | `partials/articles.html` | - Make different taxonomies list together<br>- Remove blur thumbnail |
 | `partials/nav.html` | Change the Feed button to copy to clipboard. |
