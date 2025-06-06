@@ -1,0 +1,31 @@
+name: Deploy Worker
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: jim60105/blog
+          ref: master
+          submodules: true
+
+      - name: Checkout `content` submodule to master
+        run: git -C content checkout origin/master
+
+      - name: Install asdf & tools
+        uses: asdf-vm/actions/install@v4
+        with:
+          tool_versions: zola ${{ vars.ZOLA_VERSION }}
+
+      - name: Build & Deploy Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "latest"
