@@ -90,7 +90,8 @@
 		{#- Hide the buttons-container -#}
 		{%- if false -%}
 			<div id="buttons-container">
-				{%- if config.extra.toc or config.extra.toc and page.toc | length > 0 -%}
+				{%- set show_toc = page.extra.toc | default(value=config.extra.toc | default(value=false)) -%}
+				{%- if show_toc and page.toc | length > 0 -%}
 					<details id="toc" class="closable">
 						<summary title="{{ macros_translate::translate(key='table_of_contents', default='Table of Contents', language_strings=language_strings) }}">
 							<i class="icon"></i>
