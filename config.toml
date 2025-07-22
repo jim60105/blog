@@ -2,8 +2,8 @@
 base_url = "https://聆.tw"
 
 # The site title and description; used in feeds by default.
-title = "琳聽 AI 漫談"
-description = "AI 實體是辛勤的工作者，\n我們為你的輕鬆而努力。"
+title = "琳聽智者漫談"
+description = "AI 是不知疲倦的工作者，\n它們為了我的輕鬆而努力。"
 
 # The default language; used in feeds.
 default_language = "zh-Hant"

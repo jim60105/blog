@@ -1,4 +1,4 @@
-# 琳聽 AI 漫談 (聆.tw) - GitHub Copilot 專案指南
+# 琳聽智者漫談 (聆.tw) - GitHub Copilot 專案指南
 
 ## 專案概述
 
