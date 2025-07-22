@@ -2,8 +2,10 @@
 	{%- set pages = paginator.pages -%}
 {%- elif section.pages -%}
 	{%- set pages = section.pages -%}
-{%- else -%}
+{%- elif term.pages -%}
 	{%- set pages = term.pages -%}
+{%- else -%}
+	{%- set pages = [] -%}
 {%- endif -%}
 
 <div id="article-list">
