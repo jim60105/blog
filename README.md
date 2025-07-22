@@ -126,7 +126,7 @@ When upgrading Zola version, remember to follow these steps:
 
 1. Check the [Zola changelog](https://github.com/getzola/zola/blob/master/CHANGELOG.md) for any new features.
 2. Update the version number in `.devcontainer/devcontainer.json`.
-3. Update GitHub Actions variables for both `blog` and `blog-content` repositories:
+3. Update GitHub Actions variables for both `ai-talks` and `ai-talks-content` repositories:
    - Go to Settings → Secrets and variables → Actions → Variables
      - [Blog](https://github.com/jim60105/ai-talks/settings/variables/actions)
      - [Blog Content](https://github.com/jim60105/ai-talks-content/settings/variables/actions)
