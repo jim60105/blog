@@ -3,4 +3,4 @@
 	url = https://codeberg.org/jim60105/duckquill.git
 [submodule "content"]
 	path = content
-	url = https://github.com/jim60105/blog-content.git
+	url = https://github.com/jim60105/ai-talks-content.git
