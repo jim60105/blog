@@ -424,7 +424,7 @@ show_powered_by = true
 show_source = false
 # Custom copyright text
 #
-copyright = "<a href='/SideProject/view-counter-badge-cloudflare-workers-d1'><img id='counter' src='https://view-counter.jim60105.workers.dev/?style=classic&labelColor=141414&color=555&scale=1#no-hover#pixels#badge' alt='View counter badge'/></a><p><small>Copyright © 2010 陳鈞 (jim60105) | <a href='/privacy-policy'>隱私權政策</a><br><a href='/licenses/gfdl-1-3/'>標示為 GFDL-1.3 之文章依此條款授權</a>；其它文章保留所有權利。</small></p>"
+copyright = "<a href='/SideProject/view-counter-badge-cloudflare-workers-d1'><img id='counter' src='https://view-counter.jim60105.workers.dev/?style=classic&labelColor=141414&color=555&scale=1#no-hover#pixels#badge' alt='View counter badge'/></a><p><small>Copyright © 2010 Jim Chen <Jim@ChenJ.im> | <a href='/privacy-policy'>隱私權政策</a><br><a href='/licenses/gfdl-1-3/'>標示為 GFDL-1.3 之文章依此條款授權</a>；其它文章保留所有權利。</small></p>"
 
 # Based on https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/
 #
