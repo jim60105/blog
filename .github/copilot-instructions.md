@@ -1,8 +1,8 @@
-# 琳的備忘手札 (琳.tw) - GitHub Copilot 專案指南
+# 琳聽 AI 漫談 (聆.tw) - GitHub Copilot 專案指南
 
 ## 專案概述
 
-這是一個使用 **Zola** (靜態網站產生器) 建構的個人技術部落格，採用 **Duckquill** 主題。網站託管在 Cloudflare Workers 上，提供正體中文的技術文章分享。專案的文章內容儲存在 [jim60105/blog-content](https://github.com/jim60105/blog-content) 獨立儲存庫中。
+這是一個使用 **Zola** (靜態網站產生器) 建構的個人技術部落格，採用 **Duckquill** 主題。網站託管在 Cloudflare Workers 上，提供正體中文的技術文章分享。專案的文章內容儲存在 [jim60105/ai-talks-content](https://github.com/jim60105/ai-talks-content) 獨立儲存庫中。
 
 ### 技術架構
 
@@ -41,7 +41,7 @@
 ### 檔案組織結構
 
 ```
-├── content/          # 文章內容 (來自 blog-content 儲存庫)
+├── content/          # 文章內容 (來自 ai-talks-content 儲存庫)
 ├── templates/        # Tera 範本檔案
 ├── sass/            # SCSS 樣式檔案
 ├── static/          # 靜態資源
@@ -99,12 +99,7 @@
 
 ### 分類系統
 
-文章按主題分類在 `content/` 下的子目錄：
-
-- `AI/`, `Backend/`, `Frontend/`, `Blockchain/`
-- `Container/`, `Database/`, `Cloudflare/`
-- `Koikatu/`, `Livestream/`, `Mobile/`
-- `SideProject/`, `SystemAdmin/`, `Unboxing/`
+文章按主題分類在 `content/` 下的子目錄，目前只有 `Uncategorized` 一個分類，我們會逐步擴展。
 
 ### Front Matter 必要欄位
 

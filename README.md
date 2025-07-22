@@ -1,10 +1,10 @@
-# Blog [琳.tw](https://琳.tw)
+# Blog [聆.tw](https://聆.tw)
 
-![Health Check](https://cronitor.io/badges/iZnpfC/production/Q90Ln0QlxPPwcWipMHw3TrKN8Bw.svg) ![Website](https://img.shields.io/website?url=https%3A%2F%2Fxn--jgy.tw%2F) ![GitHub branch check runs](https://img.shields.io/github/check-runs/jim60105/blog/master?label=Deploy)
+![Health Check](https://cronitor.io/badges/iZnpfC/production/Q90Ln0QlxPPwcWipMHw3TrKN8Bw.svg) ![Website](https://img.shields.io/website?url=https%3A%2F%2Fxn--uy0a.tw%2F) ![GitHub branch check runs](https://img.shields.io/github/check-runs/jim60105/ai-talks/master?label=Deploy)
 
 ## Introduction
 
-This is the blog [琳.tw](https://琳.tw), created with [Zola](https://www.getzola.org/), a modern static site generator, and the impressive Zola theme [Duckquill](https://duckquill.daudix.one/). The content of this blog is stored separately in the [jim60105/blog-content repository](https://github.com/jim60105/blog-content).
+This is the blog [聆.tw](https://聆.tw), created with [Zola](https://www.getzola.org/), a modern static site generator, and the impressive Zola theme [Duckquill](https://duckquill.daudix.one/). The content of this blog is stored separately in the [jim60105/ai-talks-content repository](https://github.com/jim60105/ai-talks-content).
 
 ## Dependencies
 
@@ -26,7 +26,7 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 | --- | --- |
 | `article_list.html` | - Remove `Filter by tag`<br>- Add `partials/sections.html` at the end of the article list.  |
 | `article.html` | - Add likecoin iframe `partials/likecoin.html`<br>- Add iscn badge<br>- Add `partials/sections.html` at the end of the article list.<br>- Add made with AI badge. |
-| └`partials/likecoin.html` (new) | Add [liker land WritingNFT badge](https://xn--jgy.tw/Blockchain/likecoin-writing-nft-widget-on-blogger/) to the end of the article. |
+| └`partials/likecoin.html` (new) | Add [liker land WritingNFT badge](https://xn--uy0a.tw/Blockchain/likecoin-writing-nft-widget-on-blogger/) to the end of the article. |
 | └`partials/with_ai.html` (new) | Add [made with AI badge](https://aibadge.org/) to the right bottom corner. |
 | └`partials/preview_image.html` (new) | Add preview image with AI badge support. |
 | `base.html` | - Add my custom head tags.<br>- Add Google Analytics and Microsoft Clarity tracking code. |
@@ -128,8 +128,8 @@ When upgrading Zola version, remember to follow these steps:
 2. Update the version number in `.devcontainer/devcontainer.json`.
 3. Update GitHub Actions variables for both `blog` and `blog-content` repositories:
    - Go to Settings → Secrets and variables → Actions → Variables
-     - [Blog](https://github.com/jim60105/blog/settings/variables/actions)
-     - [Blog Content](https://github.com/jim60105/blog-content/settings/variables/actions)
+     - [Blog](https://github.com/jim60105/ai-talks/settings/variables/actions)
+     - [Blog Content](https://github.com/jim60105/ai-talks-content/settings/variables/actions)
    - Update `ZOLA_VERSION` to the new version
 4. Update the version number in [this `README.md` file.](#dependencies)
 
