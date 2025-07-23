@@ -1,0 +1,54 @@
+{%- set speaker_config = {
+  "chatgpt": {
+    "name": "ChatGPT",
+    "avatar": "/avatars/chatgpt.svg",
+    "align": "left",
+    "color": "var(--green-fg)"
+  },
+  "claude": {
+    "name": "Claude",
+    "avatar": "/avatars/claude.svg", 
+    "align": "left",
+    "color": "var(--accent-color)"
+  },
+  "gemini": {
+    "name": "Gemini",
+    "avatar": "/avatars/gemini.svg",
+    "align": "left", 
+    "color": "var(--blue-fg)"
+  },
+  "copilot": {
+    "name": "GitHub Copilot",
+    "avatar": "/avatars/copilot.svg",
+    "align": "left",
+    "color": "var(--fg-color)"
+  },
+  "user": {
+    "name": "User",
+    "avatar": "/avatars/user.svg",
+    "align": "right",
+    "color": "var(--yellow-fg)"
+  },
+  "jim": {
+    "name": "Jim Chen",
+    "avatar": "/avatars/jim.svg",
+    "align": "right", 
+    "color": "var(--accent-color)"
+  }
+} -%}
+
+{%- set current_speaker = speaker_config[speaker] | default(value=speaker_config["user"]) -%}
+
+<div class="chat-message chat-message--{{ current_speaker.align }}" role="article" aria-labelledby="chat-speaker-{{ loop.index0 | default(value="0") }}">
+  <div class="chat-message__avatar">
+    <img src="{{ current_speaker.avatar }}" alt="{{ current_speaker.name }} avatar" class="chat-avatar" width="40" height="40" loading="lazy" decoding="async" />
+  </div>
+  <div class="chat-message__content">
+    <div class="chat-speaker" id="chat-speaker-{{ loop.index0 | default(value="0") }}" style="color: {{ current_speaker.color }}">
+      {{ current_speaker.name }}
+    </div>
+    <div class="chat-bubble chat-bubble--{{ current_speaker.align }}">
+      {{ body | trim | safe }}
+    </div>
+  </div>
+</div>
