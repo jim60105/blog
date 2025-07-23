@@ -41,6 +41,40 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 
 ## Shortcodes
 
+### chat (Chat Dialogue Box)
+
+Display a chat-style dialogue box between different speakers, ideal for showcasing conversations with AI tools (e.g., ChatGPT, Claude, Gemini, Copilot) or users. This shortcode provides clear speaker identification, avatar, and responsive message bubbles, fully styled to match the site theme and supporting both light/dark modes.
+
+**Usage Example:**
+
+```markdown
+{% chat(speaker="chatgpt") %}
+Hello! I am ChatGPT, happy to help. What would you like to ask?
+{% end %}
+
+{% chat(speaker="user") %}
+Can you explain what machine learning is?
+{% end %}
+
+{% chat(speaker="claude") %}
+Machine learning is a branch of AI that enables computer systems to learn and improve from data...
+{% end %}
+```
+
+**Speaker Options:**
+
+- `chatgpt` — ChatGPT (OpenAI logo)
+- `claude` — Claude (Anthropic logo)
+- `gemini` — Gemini (Google logo)
+- `copilot` — GitHub Copilot (GitHub logo)
+- `user` — Generic user (default avatar)
+- `jim` — Blog author (custom avatar)
+
+**Customization:**
+
+- Avatars are stored in `static/avatars/`
+- Styles are defined in `sass/chat.scss`
+
 ### color
 
 Wrap the content with a element tag with a color attribute. The default element is `span`.
