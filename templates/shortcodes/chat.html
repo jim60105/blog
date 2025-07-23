@@ -32,7 +32,7 @@
 
 <div class="chat-message chat-message--{{ speaker_align }}" role="article" aria-labelledby="chat-speaker-{{ loop.index0 | default(value=" 0") }}">
 	<div class="chat-message__avatar">
-		<img src="{{ speaker_avatar }}" alt="{{ speaker_name }} avatar" class="chat-avatar" width="40" height="40" loading="lazy" decoding="async"/>
+		<img src="{{ speaker_avatar }}" alt="{{ speaker_name }} avatar" class="chat-avatar no-hover" width="40" height="40" loading="lazy" decoding="async"/>
 	</div>
 	<div class="chat-message__content">
 		<div class="chat-speaker" id="chat-speaker-{{ loop.index0 | default(value=" 0") }}" style="color: {{ speaker_color }}">
