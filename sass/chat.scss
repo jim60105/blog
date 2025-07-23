@@ -71,17 +71,27 @@
 }
 
 .chat-avatar {
+  // filter: drop-shadow(0px 0px 4px black) drop-shadow(0px 0px 5px white);
+  animation: chat-avatar-alive 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   margin: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 2px solid var(--fg-muted-2);
-  border-radius: 50%;
+  box-shadow: unset;
+  background-color: unset;
   width: 2.5rem;
   height: 2.5rem;
-  object-fit: cover;
+}
 
-  // Dark theme adjustment
-  :not([data-theme="light"]) & {
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+@keyframes chat-avatar-alive {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.13);
+  }
+  60% {
+    transform: scale(1.13);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
