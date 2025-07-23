@@ -75,6 +75,27 @@ Machine learning is a branch of AI that enables computer systems to learn and im
 - Avatars are stored in `static/avatars/`
 - Styles are defined in `sass/chat.scss`
 
+### editor_note (Editorial Note)
+
+Display an editorial note or remark from the editor, useful for data update notices, version change notes, or editorial supplements. The shortcode displays a fixed "編按" (Editorial Note) label in Chinese, making it clear that this is an editorial remark.
+
+**Usage Example:**
+
+```markdown
+{% editor_note() %}
+This article is based on 2024 data, some information may have changed.
+{% end %}
+
+{% editor_note() %}
+The code examples in this section have been updated to the latest API version.
+{% end %}
+```
+
+**Customization:**
+
+- Styles are defined in `sass/editor-note.scss`
+- Uses CSS custom properties for theming
+
 ### color
 
 Wrap the content with a element tag with a color attribute. The default element is `span`.

@@ -1,0 +1,17 @@
+blockquote {
+  &.editor-note {
+    --editor-note-color: #38bdf8;
+    border-inline-start: 0.25rem solid var(--editor-note-color);
+    color: var(--fg-color);
+
+    .alert-title,
+    li::marker {
+      color: var(--editor-note-color);
+    }
+
+    .alert-title .icon {
+      -webkit-mask-image: var(--icon-pencil);
+      mask-image: var(--icon-pencil);
+    }
+  }
+}

@@ -10,6 +10,7 @@
 @import "prompt-injection";
 @import "preview-image";
 @import "chat";
+@import "editor-note";
 
 :root {
   --color-opacity: 0.2;
@@ -108,7 +109,7 @@ main {
     font-size: var(--font-size-large);
   }
 
-  blockquote:not(.note, .tip, .important, .warning, .caution) {
+  blockquote:not(.note, .tip, .important, .warning, .caution, .editor-note) {
     margin: 1em 2em;
     border: 0.25rem solid var(--accent-color);
     border-radius: 0.5em;
