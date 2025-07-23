@@ -2,22 +2,22 @@
 	{%- set speaker_name = "ChatGPT" -%}
 	{%- set speaker_avatar = "/avatars/chatgpt.svg" -%}
 	{%- set speaker_align = "left" -%}
-	{%- set speaker_color = "var(--green-fg)" -%}
+	{%- set speaker_color = "white" -%}
 {%- elif speaker == "claude" -%}
 	{%- set speaker_name = "Claude" -%}
 	{%- set speaker_avatar = "/avatars/claude.svg" -%}
 	{%- set speaker_align = "left" -%}
-	{%- set speaker_color = "var(--accent-color)" -%}
+	{%- set speaker_color = "#DE7356" -%}
 {%- elif speaker == "gemini" -%}
 	{%- set speaker_name = "Gemini" -%}
 	{%- set speaker_avatar = "/avatars/gemini.svg" -%}
 	{%- set speaker_align = "left" -%}
-	{%- set speaker_color = "var(--blue-fg)" -%}
+	{%- set speaker_color = "#4796E3" -%}
 {%- elif speaker == "copilot" -%}
 	{%- set speaker_name = "GitHub Copilot" -%}
 	{%- set speaker_avatar = "/avatars/copilot.svg" -%}
 	{%- set speaker_align = "left" -%}
-	{%- set speaker_color = "var(--fg-color)" -%}
+	{%- set speaker_color = "white" -%}
 {%- elif speaker == "felo" -%}
 	{%- set speaker_name = "Felo Search" -%}
 	{%- set speaker_avatar = "/avatars/felo.svg" -%}
@@ -27,12 +27,12 @@
 	{%- set speaker_name = "Jim Chen" -%}
 	{%- set speaker_avatar = "/avatars/jim.jpg" -%}
 	{%- set speaker_align = "right" -%}
-	{%- set speaker_color = "var(--accent-color)" -%}
+	{%- set speaker_color = "white" -%}
 {%- else -%}
 	{%- set speaker_name = "User" -%}
 	{%- set speaker_avatar = "/avatars/user.svg" -%}
 	{%- set speaker_align = "right" -%}
-	{%- set speaker_color = "var(--yellow-fg)" -%}
+	{%- set speaker_color = "white" -%}
 {%- endif -%}
 
 <div class="chat-message chat-message--{{ speaker_align }}" role="article" aria-labelledby="chat-speaker-{{ loop.index0 | default(value=" 0") }}">
