@@ -1,4 +1,4 @@
-name: Deploy Worker
+name: Deploy Dual Sites
 on:
   push:
     branches:
@@ -8,6 +8,18 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        site:
+          - name: "琳.tw"
+            display_name: "琳.tw"
+            worker_name: "blog"
+          - name: "聆.tw"
+            display_name: "聆.tw"
+            worker_name: "ai-talks"
+
+    name: Deploy ${{ matrix.site.display_name }}
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -16,14 +28,24 @@ jobs:
           submodules: true
 
       - name: Checkout `content` submodule to master
-        run: git -C content checkout origin/master
+        run: |
+          git -C "琳.tw/content" checkout origin/master && \
+          git -C "聆.tw/content" checkout origin/master
 
       - name: Install asdf & tools
         uses: asdf-vm/actions/install@v4
         with:
           tool_versions: zola ${{ vars.ZOLA_VERSION }}
 
-      - name: Build & Deploy Worker
+      - name: Switch to ${{ matrix.site.name }} site
+        run: |
+          chmod +x ./switch-site.sh
+          ./switch-site.sh "${{ matrix.site.name }}"
+
+      - name: Build ${{ matrix.site.name }} site
+        run: zola build
+
+      - name: Deploy ${{ matrix.site.name }} to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
