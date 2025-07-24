@@ -1,12 +1,29 @@
 #!/bin/bash
-
+# Copyright (C) 2025 Jim Chen <Jim@ChenJ.im>, licensed under GPL-3.0-or-later
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# ==================================================================
+#
 # Dual Site Mode Switcher for Zola Blog
 # Switches between 琳.tw and 聆.tw site configurations
 # 
 # Usage: 
+#   ./switch-site.sh           # Interactive mode - choose site from menu
 #   ./switch-site.sh 琳.tw     # Switch to 琳.tw site mode
 #   ./switch-site.sh 聆.tw     # Switch to 聆.tw site mode  
-#   ./switch-site.sh clean    # Remove all hard links and restore original state
+#   ./switch-site.sh clean     # Remove all hard links and restore original state
+#   ./switch-site.sh status    # Check current site status
 
 set -euo pipefail
 
@@ -28,17 +45,23 @@ print_error() { echo -e "${RED}[ERROR]${NC} $1"; }
 
 # Show usage
 usage() {
-    echo "Usage: $0 <site_name|clean>"
+    echo "Usage: $0 [site_name|command]"
     echo ""
     echo "Commands:"
     echo "  琳.tw     Switch to 琳.tw site mode (技術部落格)"
     echo "  聆.tw     Switch to 聆.tw site mode (AI 對話)"
-    echo "  clean    Remove all hard links and restore original state"
+    echo "  clean     Remove all hard links and restore original state"
+    echo "  status    Check current site status"
+    echo ""
+    echo "Interactive mode:"
+    echo "  $0        # Run without parameters for interactive site selection"
     echo ""
     echo "Examples:"
-    echo "  $0 琳.tw     # Switch to technical blog mode"
-    echo "  $0 聆.tw     # Switch to AI talks mode"
-    echo "  $0 clean    # Clean up and restore original state"
+    echo "  $0            # Interactive mode"
+    echo "  $0 琳.tw      # Switch to technical blog mode"
+    echo "  $0 聆.tw      # Switch to AI talks mode"
+    echo "  $0 clean      # Clean up and restore original state"
+    echo "  $0 status     # Check current site status"
 }
 
 # Check if we're in a git repository
@@ -47,6 +70,54 @@ check_git_repo() {
         print_error "Not in a git repository!"
         exit 1
     fi
+}
+
+# Interactive site selection
+interactive_site_selection() {
+    print_info "Dual Site Mode Switcher"
+    echo ""
+    echo "Please select a site to switch to:"
+    echo ""
+    echo "1) 琳.tw - 琳的備忘手札 (技術部落格)"
+    echo "2) 聆.tw - 琳聽智者漫談 (AI 對話)"
+    echo "3) Clean up and restore original state"
+    echo "4) Check current status"
+    echo "5) Exit"
+    echo ""
+    
+    while true; do
+        read -rp "Enter your choice (1-5): " choice
+        case $choice in
+            1)
+                echo ""
+                switch_to_site "琳.tw"
+                break
+                ;;
+            2)
+                echo ""
+                switch_to_site "聆.tw"
+                break
+                ;;
+            3)
+                echo ""
+                clean_mode
+                break
+                ;;
+            4)
+                echo ""
+                check_status
+                break
+                ;;
+            5)
+                echo ""
+                print_info "Goodbye!"
+                exit 0
+                ;;
+            *)
+                print_error "Invalid choice. Please enter 1-5."
+                ;;
+        esac
+    done
 }
 
 # Clean up existing hard links
@@ -77,6 +148,21 @@ cleanup_hardlinks() {
             print_info "Removing hard linked content directory"
             rm -rf "content"
         fi
+    fi
+    
+    # Remove hard linked files from static directory (but keep the directory and shared files)
+    if [[ -d "static" ]]; then
+        print_info "Cleaning up hard linked files from static directory"
+        # Find and remove only hard linked files in static
+        find static -type f -links +1 2>/dev/null | while read -r hardlinked_file; do
+            print_info "Removing hard linked static file: $hardlinked_file"
+            rm -f "$hardlinked_file"
+        done
+        
+        # Remove empty directories in static (but keep static itself)
+        find static -type d -empty -not -path "static" 2>/dev/null | while read -r empty_dir; do
+            rmdir "$empty_dir" 2>/dev/null || true
+        done
     fi
     
     print_success "Cleanup completed"
@@ -130,6 +216,56 @@ create_content_hardlink() {
     fi
 }
 
+# Create hard link for static directory
+create_static_hardlink() {
+    local source_dir="$1"
+    local source_static="$source_dir/static"
+    local target_static="static"
+    
+    print_info "Creating hard links for static files from $source_dir..."
+    
+    if [[ -d "$source_static" ]]; then
+        # Create the static directory if it doesn't exist
+        [[ ! -d "$target_static" ]] && mkdir -p "$target_static"
+        
+        # Create hard links for all files in the static directory
+        find "$source_static" -type f | while read -r source_file; do
+            local relative_path="${source_file#$source_static/}"
+            local target_file="$target_static/$relative_path"
+            local target_dir
+            target_dir="$(dirname "$target_file")"
+            
+            # Create target directory if it doesn't exist
+            [[ ! -d "$target_dir" ]] && mkdir -p "$target_dir"
+            
+            # Remove existing file if it exists (only if it's a hard link from previous sites)
+            if [[ -f "$target_file" ]]; then
+                local link_count
+                link_count=$(stat -c '%h' "$target_file" 2>/dev/null)
+                if [[ $link_count -gt 1 ]]; then
+                    print_info "Replacing hard linked file: $target_file"
+                    rm -f "$target_file"
+                elif [[ ! -f "$target_file" ]]; then
+                    # File doesn't exist, safe to create hard link
+                    :
+                else
+                    # File exists but is not hard linked (shared file), skip it
+                    print_info "Skipping shared file: $target_file (already exists)"
+                    continue
+                fi
+            fi
+            
+            # Create hard link
+            ln "$source_file" "$target_file"
+            print_info "Created hard link: $source_file -> $target_file"
+        done
+        
+        print_success "Created hard links for static files from: $source_static"
+    else
+        print_warning "Source static directory not found: $source_static"
+    fi
+}
+
 # Update .gitignore to ignore hard linked files
 update_gitignore() {
     local gitignore_file=".gitignore"
@@ -138,6 +274,8 @@ update_gitignore() {
         "config.toml"
         "wrangler.jsonc"
         "content/"
+        # Don't ignore entire static/ directory since it contains shared files
+        # Individual hard linked files will be managed by the script
     )
     
     print_info "Updating .gitignore..."
@@ -173,7 +311,7 @@ cleanup_gitignore() {
     
     print_info "Cleaning up .gitignore..."
     
-    # Remove dual site related patterns
+    # Remove dual site related patterns (but keep static/ since it's shared)
     if [[ -f "$gitignore_file" ]]; then
         grep -v -E "^# Dual site mode|^config\.toml$|^wrangler\.jsonc$|^content/$" "$gitignore_file" > "$temp_file" || true
         mv "$temp_file" "$gitignore_file"
@@ -200,15 +338,17 @@ switch_to_site() {
     # Create new hard links
     create_file_hardlinks "$site_dir"
     create_content_hardlink "$site_dir"
+    create_static_hardlink "$site_dir"
     
     # Update .gitignore
     update_gitignore
     
     print_success "Successfully switched to $site_name mode!"
-    print_info "Hard linked files:"
+    print_info "Hard linked files and directories:"
     echo "  - config.toml"
     echo "  - wrangler.jsonc" 
     echo "  - content/ (directory)"
+    echo "  - static/ (site-specific files only)"
     echo ""
     print_info "You can now run 'zola serve' to start the development server"
 }
@@ -262,6 +402,23 @@ check_status() {
     else
         print_warning "No content directory found"
     fi
+    
+    if [[ -d "static" ]]; then
+        local static_files
+        static_files=$(find static -type f 2>/dev/null | wc -l)
+        echo "  Static files: $static_files"
+        
+        # Check if static contains hard links
+        local hardlinked_static_files
+        hardlinked_static_files=$(find static -type f -links +1 2>/dev/null | wc -l)
+        if [[ $hardlinked_static_files -gt 0 ]]; then
+            echo "  Static status: Hard linked files + shared files ✓"
+        else
+            echo "  Static status: Shared files only (no site-specific files)"
+        fi
+    else
+        print_warning "No static directory found"
+    fi
 }
 
 # Main script logic
@@ -282,10 +439,8 @@ main() {
             usage
             ;;
         "")
-            print_error "No command provided!"
-            echo ""
-            usage
-            exit 1
+            # Interactive mode when no parameters provided
+            interactive_site_selection
             ;;
         *)
             print_error "Unknown command: $1"

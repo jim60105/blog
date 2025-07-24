@@ -27,7 +27,4 @@ dist/
 .wrangler/
 
 
-# Dual site mode - hard linked files
-config.toml
-wrangler.jsonc
-content/
+
