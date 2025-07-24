@@ -1,14 +1,85 @@
-# Blog [琳.tw](https://琳.tw)
+# Dual Site Blog Project [琳.tw](https://琳.tw) & [聆.tw](https://聆.tw)
 
-![Health Check](https://cronitor.io/badges/iZnpfC/production/Q90Ln0QlxPPwcWipMHw3TrKN8Bw.svg) ![Website](https://img.shields.io/website?url=https%3A%2F%2Fxn--jgy.tw%2F) ![GitHub branch check runs](https://img.shields.io/github/check-runs/jim60105/blog/master?label=Deploy)
+![琳.tw Health Check](https://cronitor.io/badges/iZnpfC/production/Q90Ln0QlxPPwcWipMHw3TrKN8Bw.svg) ![琳.tw Website](https://img.shields.io/website?url=https%3A%2F%2Fxn--jgy.tw%2F&label=琳.tw) ![聆.tw Website](https://img.shields.io/website?url=https%3A%2F%2Fxn--uy0a.tw%2F&label=聆.tw) ![GitHub Deploy](https://img.shields.io/github/check-runs/jim60105/blog/master?label=Deploy)
 
 ## Introduction
 
-This is the blog [琳.tw](https://琳.tw), created with [Zola](https://www.getzola.org/), a modern static site generator, and the impressive Zola theme [Duckquill](https://duckquill.daudix.one/). The content of this blog is stored separately in the [jim60105/blog-content repository](https://github.com/jim60105/blog-content).
+This is a dual-site blog project that hosts two distinct websites using [Zola](https://www.getzola.org/), a modern static site generator, with the impressive [Duckquill](https://duckquill.daudix.one/) theme:
+
+- **[琳.tw](https://琳.tw)** - 琳的備忘手札 (Technical Blog): Programming tutorials, system administration, and development insights
+- **[聆.tw](https://聆.tw)** - 琳聽智者漫談 (AI Conversations): AI-assisted content, conversations, and explorations
+
+The content for each site is stored separately in the [jim60105/blog-content repository](https://github.com/jim60105/blog-content) and the [jim60105/ai-talks-content repository](https://github.com/jim60105/ai-talks-content).
+
+## Dual Site Architecture
+
+The project uses a dual site mode where:
+
+- **Shared Resources**: Templates, themes, styles, and most static assets are shared between both sites
+- **Site-Specific Configurations**: Each site has its own `config.toml`, `wrangler.jsonc`, `content/` directory, and site-specific static files stored in dedicated folders:
+  - `琳.tw/` - Configuration and content for the technical blog
+  - `聆.tw/` - Configuration and content for the AI conversations site
+
+### Static Folder Handling
+
+When switching sites, the `static/` folder is processed **file by file**:
+
+- **Common static files** (e.g. `copy-to-clipboard.js`) are always preserved and never deleted.
+- **Site-specific static files** (e.g. `favicon.svg`, `apple-touch-icon.png`) are hard linked from the selected site folder to the project root, overwriting only those files.
+- The script will only remove hard links for site-specific files during cleanup, so shared files remain untouched.
+
+This ensures that switching between sites will not accidentally delete or overwrite shared static assets.
+
+### Site Switching
+
+Use the provided `switch-site.sh` script to switch between development modes:
+
+```bash
+# Switch to technical blog mode (琳.tw)
+./switch-site.sh 琳.tw
+
+# Switch to AI conversations mode (聆.tw)
+./switch-site.sh 聆.tw
+
+# Check current site status
+./switch-site.sh status
+
+# Clean up and restore original state
+./switch-site.sh clean
+```
+
+The script creates hard links for site-specific files to the project root:
+
+- `config.toml` - Site configuration
+- `wrangler.jsonc` - Cloudflare deployment configuration
+- `content/` - Site content directory
+- Site-specific files in `static/` (e.g. favicons, banners)
+
+## Development Workflow
+
+1. **Choose your site**: Run `./switch-site.sh 琳.tw` or `./switch-site.sh 聆.tw`
+2. **Start development**: Run `zola serve --drafts` to start the development server
+3. **Make changes**: Edit content, templates, or styles as needed
+4. **Switch sites**: Use the script to switch between sites during development
+5. **Clean up**: Run `./switch-site.sh clean` when finished to restore the original state
 
 ## Dependencies
 
 This blog requires [Zola](https://www.getzola.org/) 0.20.0 or higher. Please follow the [official installation guide](https://www.getzola.org/documentation/getting-started/installation/) to install Zola on your system.
+
+## Site Configuration Differences
+
+### 琳.tw (Technical Blog)
+
+- **Focus**: Programming tutorials, system administration, development insights
+- **Base URL**: `https://琳.tw`
+- **Title**: 琳的備忘手札
+
+### 聆.tw (AI Conversations)
+
+- **Focus**: AI-assisted content, conversations, and explorations
+- **Base URL**: `https://聆.tw`
+- **Title**: 琳聽智者漫談
 
 ## Hotlink Protection
 
@@ -67,6 +138,7 @@ Machine learning is a branch of AI that enables computer systems to learn and im
 - `claude` — Claude (Anthropic logo)
 - `gemini` — Gemini (Google logo)
 - `copilot` — GitHub Copilot (GitHub logo)
+- `felo` - Felo Search (Felo logo)
 - `user` — Generic user (default avatar)
 - `jim` — Blog author (custom avatar)
 

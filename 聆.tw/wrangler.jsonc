@@ -1,0 +1,11 @@
+{
+  "name": "ai-talks",
+  "compatibility_date": "2025-06-01",
+  "build": {
+    "command": "zola build"
+  },
+  "assets": {
+    "directory": "./public/",
+    "not_found_handling": "404-page"
+  }
+}
