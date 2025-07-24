@@ -17,11 +17,11 @@
 #
 # Dual Site Mode Switcher for Zola Blog
 # Switches between 琳.tw and 聆.tw site configurations
-# 
-# Usage: 
+#
+# Usage:
 #   ./switch-site.sh           # Interactive mode - choose site from menu
 #   ./switch-site.sh 琳.tw     # Switch to 琳.tw site mode
-#   ./switch-site.sh 聆.tw     # Switch to 聆.tw site mode  
+#   ./switch-site.sh 聆.tw     # Switch to 聆.tw site mode
 #   ./switch-site.sh clean     # Remove all hard links and restore original state
 #   ./switch-site.sh status    # Check current site status
 
@@ -92,30 +92,30 @@ interactive_site_selection() {
                 echo ""
                 switch_to_site "琳.tw"
                 break
-                ;;
+            ;;
             2)
                 echo ""
                 switch_to_site "聆.tw"
                 break
-                ;;
+            ;;
             3)
                 echo ""
                 clean_mode
                 break
-                ;;
+            ;;
             4)
                 echo ""
                 check_status
                 break
-                ;;
+            ;;
             5)
                 echo ""
                 print_info "Goodbye!"
                 exit 0
-                ;;
+            ;;
             *)
                 print_error "Invalid choice. Please enter 1-5."
-                ;;
+            ;;
         esac
     done
 }
@@ -245,7 +245,7 @@ create_static_hardlink() {
                 if [[ $link_count -gt 1 ]]; then
                     print_info "Replacing hard linked file: $target_file"
                     rm -f "$target_file"
-                elif [[ ! -f "$target_file" ]]; then
+                    elif [[ ! -f "$target_file" ]]; then
                     # File doesn't exist, safe to create hard link
                     :
                 else
@@ -340,13 +340,10 @@ switch_to_site() {
     create_content_hardlink "$site_dir"
     create_static_hardlink "$site_dir"
     
-    # Update .gitignore
-    update_gitignore
-    
     print_success "Successfully switched to $site_name mode!"
     print_info "Hard linked files and directories:"
     echo "  - config.toml"
-    echo "  - wrangler.jsonc" 
+    echo "  - wrangler.jsonc"
     echo "  - content/ (directory)"
     echo "  - static/ (site-specific files only)"
     echo ""
@@ -358,7 +355,6 @@ clean_mode() {
     print_info "Cleaning up all hard links and restoring original state..."
     
     cleanup_hardlinks
-    cleanup_gitignore
     
     print_success "Cleanup completed! Original state restored."
     print_info "All hard links have been removed from the project root."
@@ -428,26 +424,26 @@ main() {
     case "${1:-}" in
         "琳.tw"|"聆.tw")
             switch_to_site "$1"
-            ;;
+        ;;
         "clean")
             clean_mode
-            ;;
+        ;;
         "status")
             check_status
-            ;;
+        ;;
         "-h"|"--help")
             usage
-            ;;
+        ;;
         "")
             # Interactive mode when no parameters provided
             interactive_site_selection
-            ;;
+        ;;
         *)
             print_error "Unknown command: $1"
             echo ""
             usage
             exit 1
-            ;;
+        ;;
     esac
 }
 
