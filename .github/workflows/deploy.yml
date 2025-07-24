@@ -32,10 +32,20 @@ jobs:
           git -C "琳.tw/content" checkout origin/master && \
           git -C "聆.tw/content" checkout origin/master
 
-      - name: Install asdf & tools
-        uses: asdf-vm/actions/install@v4
-        with:
-          tool_versions: zola ${{ vars.ZOLA_VERSION }}
+      - name: Download and Install Zola
+        run: |
+          # Download zola binary from GitHub releases
+          wget -O zola.tar.gz "https://github.com/getzola/zola/releases/download/v${{ vars.ZOLA_VERSION }}/zola-v${{ vars.ZOLA_VERSION }}-x86_64-unknown-linux-musl.tar.gz"
+
+          # Extract the tar.gz
+          tar -xzf zola.tar.gz
+
+          # Move zola to /usr/local/bin and make it executable
+          sudo mv zola /usr/local/bin/
+          sudo chmod +x /usr/local/bin/zola
+
+          # Verify installation
+          zola --version
 
       - name: Switch to ${{ matrix.site.name }} site
         run: |
