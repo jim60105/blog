@@ -16,19 +16,7 @@ The content for each site is stored separately in the [jim60105/blog-content rep
 The project uses a dual site mode where:
 
 - **Shared Resources**: Templates, themes, styles, and most static assets are shared between both sites
-- **Site-Specific Configurations**: Each site has its own `config.toml`, `wrangler.jsonc`, `content/` directory, and site-specific static files stored in dedicated folders:
-  - `琳.tw/` - Configuration and content for the technical blog
-  - `聆.tw/` - Configuration and content for the AI conversations site
-
-### Static Folder Handling
-
-When switching sites, the `static/` folder is processed **file by file**:
-
-- **Common static files** (e.g. `copy-to-clipboard.js`) are always preserved and never deleted.
-- **Site-specific static files** (e.g. `favicon.svg`, `apple-touch-icon.png`) are hard linked from the selected site folder to the project root, overwriting only those files.
-- The script will only remove hard links for site-specific files during cleanup, so shared files remain untouched.
-
-This ensures that switching between sites will not accidentally delete or overwrite shared static assets.
+- **Site-Specific Configurations**: Each site has its own `config.toml`, `wrangler.jsonc`, `content/` directory, and site-specific static files stored in `琳.tw/` and `聆.tw/` folders.
 
 ### Site Switching
 
@@ -62,24 +50,6 @@ The script creates hard links for site-specific files to the project root:
 3. **Make changes**: Edit content, templates, or styles as needed
 4. **Switch sites**: Use the script to switch between sites during development
 5. **Clean up**: Run `./switch-site.sh clean` when finished to restore the original state
-
-## Dependencies
-
-This blog requires [Zola](https://www.getzola.org/) 0.20.0 or higher. Please follow the [official installation guide](https://www.getzola.org/documentation/getting-started/installation/) to install Zola on your system.
-
-## Site Configuration Differences
-
-### 琳.tw (Technical Blog)
-
-- **Focus**: Programming tutorials, system administration, development insights
-- **Base URL**: `https://琳.tw`
-- **Title**: 琳的備忘手札
-
-### 聆.tw (AI Conversations)
-
-- **Focus**: AI-assisted content, conversations, and explorations
-- **Base URL**: `https://聆.tw`
-- **Title**: 琳聽智者漫談
 
 ## Hotlink Protection
 
@@ -247,16 +217,18 @@ Some hidden text
 {{ image(url="preview.jpg", alt="Some preview image", no_hover=true) }}
 ```
 
+## Dependencies
+
+This blog requires [Zola](https://www.getzola.org/) 0.20.0 or higher. Please follow the [official installation guide](https://www.getzola.org/documentation/getting-started/installation/) to install Zola on your system.
+
 ## Upgrading Zola
 
 When upgrading Zola version, remember to follow these steps:
 
 1. Check the [Zola changelog](https://github.com/getzola/zola/blob/master/CHANGELOG.md) for any new features.
 2. Update the version number in `.devcontainer/devcontainer.json`.
-3. Update GitHub Actions variables for both `blog` and `blog-content` repositories:
-   - Go to Settings → Secrets and variables → Actions → Variables
-     - [Blog](https://github.com/jim60105/blog/settings/variables/actions)
-     - [Blog Content](https://github.com/jim60105/blog-content/settings/variables/actions)
+3. Update GitHub Actions variables for `blog` repositories:
+   - Go to Settings → [Secrets and variables → Actions → Variables](https://github.com/jim60105/blog/settings/variables/actions)
    - Update `ZOLA_VERSION` to the new version
 4. Update the version number in [this `README.md` file.](#dependencies)
 
