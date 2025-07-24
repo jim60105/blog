@@ -1,5 +1,7 @@
 name: Deploy Dual Sites
 on:
+  repository_dispatch:
+    types: ["deploy"]
   push:
     branches:
       - master
