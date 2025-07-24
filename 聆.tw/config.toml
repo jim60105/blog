@@ -1,0 +1,444 @@
+# The URL the site will be built for
+base_url = "https://聆.tw"
+
+# The site title and description; used in feeds by default.
+title = "琳聽智者漫談"
+description = "AI 是不知疲倦的工作者，\n它們為了我的輕鬆而努力。"
+
+# The default language; used in feeds.
+default_language = "zh-Hant"
+
+# The site theme to use.
+theme = "duckquill"
+
+# For overriding the default output directory `public`, set it to another value (e.g.: "docs")
+output_dir = "public"
+
+# Whether dotfiles at the root level of the output directory are preserved when (re)building the site.
+# Enabling this also prevents the deletion of the output folder itself on rebuilds.
+preserve_dotfiles_in_output = false
+
+# When set to "true", the Sass files in the `sass` directory in the site root are compiled.
+# Sass files in theme directories are always compiled.
+compile_sass = true
+
+# When set to "true", the generated HTML files are minified.
+minify_html = true
+
+# A list of glob patterns specifying asset files to ignore when the content
+# directory is processed. Defaults to none, which means that all asset files are
+# copied over to the `public` directory.
+# Example:
+#     ignored_content = ["*.{graphml,xlsx}", "temp.*", "**/build_folder"]
+ignored_content = [
+	"**/cspell-words.txt",
+	"**/content/README.md",
+	"**/content/LICENSE",
+]
+
+# Similar to ignored_content, a list of glob patterns specifying asset files to
+# ignore when the static directory is processed. Defaults to none, which means
+# that all asset files are copied over to the `public` directory
+ignored_static = []
+
+# When set to "true", a feed is automatically generated.
+generate_feeds = true
+
+# When set to "all", paginated pages are not a part of the sitemap, default is "none"
+exclude_paginated_pages_in_sitemap = "all"
+
+# The filenames to use for the feeds. Used as the template filenames, too.
+# Defaults to ["atom.xml"], which has a built-in template that renders an Atom 1.0 feed.
+# There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
+feed_filenames = ["atom.xml"]
+
+# The number of articles to include in the feed. All items are included if
+# this limit is not set (the default).
+feed_limit = 20
+
+# When set to "true", files in the `static` directory are hard-linked. Useful for large
+# static files. Note that for this to work, both `static` and the
+# output directory need to be on the same filesystem. Note that the theme's `static`
+# files are always copied, regardless of this setting.
+hard_link_static = false
+
+# The default author for pages
+author = "陳鈞"
+
+# The taxonomies to be rendered for the site and their configuration of the default languages
+# Example:
+#     taxonomies = [
+#       {name = "tags", feed = true}, # each tag will have its own feed
+#       {name = "tags"}, # you can have taxonomies with the same name in multiple languages
+#       {name = "categories", paginate_by = 5},  # 5 items per page for a term
+#       {name = "authors"}, # Basic definition: no feed or pagination
+#     ]
+#
+taxonomies = [
+	{ name = "tags", feed = false },
+	{ name = "licenses", feed = false },
+]
+
+# When set to "true", a search index is built from the pages and section
+# content for `default_language`.
+build_search_index = true
+
+# When set to "false", Sitemap.xml is not generated
+generate_sitemap = true
+
+# When set to "false", robots.txt is not generated
+generate_robots_txt = true
+
+# Configuration of the Markdown rendering
+[markdown]
+# When set to "true", all code blocks are highlighted.
+highlight_code = true
+
+# When set to "true", missing highlight languages are treated as errors. Defaults to false.
+error_on_missing_highlight = false
+
+# A list of directories used to search for additional `.sublime-syntax` and `.tmTheme` files.
+extra_syntaxes_and_themes = []
+
+# The theme to use for code highlighting.
+# See below for list of allowed values.
+highlight_theme = "visual-studio-dark"
+
+# When set to "true", emoji aliases translated to their corresponding
+# Unicode emoji equivalent in the rendered Markdown files. (e.g.: :smile: => 😄)
+render_emoji = false
+
+# CSS class to add to external links (e.g. "external-link")
+external_links_class = "external"
+
+# Whether external links are to be opened in a new tab
+# If this is true, a `rel="noopener"` will always automatically be added for security reasons
+external_links_target_blank = true
+
+# Whether to set rel="nofollow" for all external links
+external_links_no_follow = false
+
+# Whether to set rel="noreferrer" for all external links
+external_links_no_referrer = false
+
+# Whether smart punctuation is enabled (changing quotes, dashes, dots in their typographic form)
+# For example, `...` into `…`, `"quote"` into `“curly”` etc
+smart_punctuation = false
+
+# Whether parsing of definition lists is enabled
+definition_list = false
+
+# Whether to set decoding="async" and loading="lazy" for all images
+# When turned on, the alt text must be plain text.
+# For example, `![xx](...)` is ok but `![*x*x](...)` isn’t ok
+lazy_async_image = false
+
+# Whether footnotes are rendered in the GitHub-style (at the bottom, with back references) or plain (in the place, where they are defined)
+bottom_footnotes = false
+
+# This determines whether to insert a link for each header like the ones you can see on this site if you hover over
+# a header.
+# The default template can be overridden by creating an `anchor-link.html` file in the `templates` directory.
+# This value can be "left", "right", "heading" or "none".
+# "heading" means the full heading becomes the text of the anchor.
+# See "Internal links & deep linking" in the documentation for more information.
+insert_anchor_links = "none"
+
+# Configuration of the link checker.
+[link_checker]
+# Skip link checking for external URLs that start with these prefixes
+skip_prefixes = []
+
+# Skip anchor checking for external URLs that start with these prefixes
+skip_anchor_prefixes = []
+
+# Treat internal link problems as either "error" or "warn", default is "error"
+internal_level = "error"
+
+# Treat external link problems as either "error" or "warn", default is "error"
+external_level = "warn"
+
+# Various slugification strategies, see below for details
+# Defaults to everything being a slug
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+# Whether to remove date prefixes for page path slugs.
+# For example, content/posts/2016-10-08_a-post-with-dates.md => posts/a-post-with-dates
+# When true, content/posts/2016-10-08_a-post-with-dates.md => posts/2016-10-08-a-post-with-dates
+paths_keep_dates = true
+
+[search]
+# Whether to include the title of the page/section in the index
+include_title = true
+# Whether to include the description of the page/section in the index
+include_description = true
+# Whether to include the RFC3339 datetime of the page in the search index
+include_date = true
+# Whether to include the path of the page/section in the index (the permalink is always included)
+include_path = true
+# Whether to include the rendered content of the page/section in the index
+include_content = true
+# At which code point to truncate the content to. Useful if you have a lot of pages and the index would
+# become too big to load on the site. Defaults to not being set.
+# truncate_content_length = 100
+
+# Wether to produce the search index as a javascript file or as a JSON file
+# Accepted values:
+# - "elasticlunr_javascript", "elasticlunr_json"
+# - "fuse_javascript", "fuse_json"
+index_format = "fuse_json"
+
+# Optional translation object for the default language
+# Example:
+#     default_language = "fr"
+#
+#     [translations]
+#     title = "Un titre"
+#
+[translations]
+
+# Additional languages definition
+# You can define language specific config values and translations: 
+# title, description, generate_feeds, feed_filenames, taxonomies, build_search_index
+# as well as its own search configuration and translations (see above for details on those)
+[languages]
+# For example
+# [languages.fr]
+# title = "Mon blog"
+# generate_feeds = true
+# taxonomies = [
+#    {name = "auteurs"},
+#    {name = "tags"},
+# ]
+# build_search_index = false
+
+# You can put any kind of data here. The data
+# will be accessible in all templates
+# Example:
+#     [extra]
+#     author = "Famous author"
+#
+# author value will be available using {{ config.extra.author }} in templates
+#
+[extra]
+# Which theme should be used by default (light/dark).
+#
+default_theme = "dark"
+#
+# Sets theme and browser theme color.
+# See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
+accent_color = "navy"
+# Ditto but for the dark theme.
+# If not set regular variant will be used.
+accent_color_dark = "lightcyan"
+# Whether to use fonts bundled with Duckquill instead of system ones.
+# Keep in mind that it also changes the style of headings.
+#
+bundled_fonts = true
+#
+# Use emoji as a favicon.
+# Only one emoji is being rendered, everything else is truncated.
+#
+emoji_favicon = "🍵"
+#
+# URL to website's issue tracker
+issues_url = "https://github.com/jim60105/ai-talks"
+# URL to website's source code
+source_url = "https://github.com/jim60105"
+# Additional CSS styles; expects them to be in the "./static/" directory.
+# If you are using Sass it will be generated there automatically.
+#
+# styles = [
+#   "YOUR_STYLE.css",
+#   "ALSO_YOUR_STYLE.css"
+# ]
+#
+# Additional JavaScript scripts; expects them to be in the "./static/" directory.
+#
+scripts = ["mastodon-embed.js", "copy-to-clipboard.js"]
+#
+# Whether to show "copy code" button on all code blocks
+# that have the language set.
+# See https://www.getzola.org/documentation/content/syntax-highlighting/
+show_copy_button = true
+# Whether to show estimated read time in posts.
+show_reading_time = true
+#
+# Whether to show a share button in article's quick actions.
+# Uses https://shareopenly.org.
+show_share_button = false
+# Whether to show the backlinks button for linked articles in the article's quick actions
+show_backlinks = true
+# Whether to enable the KaTeX library for rendering LaTeX.
+# Note: This will make your page significantly heavier.
+# Instead, consider enabling it per page/section.
+# katex = true
+#
+# Whether to render table of contents on all pages.
+# Will not be rendered if page doesn't have any headings.
+# Can be set per page/section.
+toc = true
+#
+# Whether to render inline table of contents at the top of all pages,
+# in addition to floating quick navigation buttons.
+# Can be set per page/section.
+toc_inline = false
+# Whether to render table of contents in the sidebar on all pages.
+# Will create a floating sidebar with table of contents that appears on larger screens.
+# Can be set per page/section.
+toc_sidebar = true
+#
+# Whether to use numbered (ordered) list for table of contents.
+# Can be set per page/section.
+# toc_ordered = true
+#
+# Custom separator used across the theme.
+# separator = "•"
+# Custom separator used in title tag and posts metadata.
+# title_separator = "-"
+#
+# Whether to use Content Security Policy.
+# Keep in mind that although this can potentially increase security,
+# it can break some stuff, in which case you will need to set custom policy.
+#! Do not use CSP as it actually breaks GA in some cases that's not able to reproduce locally.
+# csp = []
+
+# Uncomment this to disable the card displayed in share previews
+# card = false
+
+likerid = "jim60105"
+
+[extra.optimization]
+# LCP (Largest Contentful Paint) images
+# These images will be preloaded right at the beginning of the page load.
+# Typically, these are the background images if you have any.
+# Note: Only include it here if it is used on ALL pages.
+# The banner image on the content page will be preloaded automatically.
+preload_lcp_images = [{ url = "/card.avif", type = "image/avif" }]
+
+# Critical resource domains for preconnect + dns-prefetch
+# Often used for fonts, cross-site images, and other critical resources.
+preconnect_domains = [
+	"https://www.gstatic.com",
+	"https://www.googletagmanager.com",
+	"https://fonts.cdnfonts.com",
+	"https://fonts.googleapis.com",
+]
+
+# Additional dns-prefetch domains (non-critical resources)
+# These will be dns-prefetched to speed up loading of external resources afterwards.
+dns_prefetch_domains = [
+	"https://liker.social",
+	"https://button.like.co",
+	"https://www.youtube-nocookie.com",
+]
+
+# Custom fonts configuration
+# There are three methods of loading fonts:
+# - "preload" - preloads the font at the very start of the page load
+# - "stylesheet" - loads the font via a stylesheet link
+# - "preload_async" - preloads the font asynchronously after the page load
+[extra.custom_fonts]
+fonts = [
+	# The "preload" method should be used for the most important fonts that appear first during initial loading, such as headline fonts.
+	{ method = "preload", url = "/fonts/Iansui-Regular.woff2", format = "font/woff2" },
+	# The "stylesheet" method is used for secondary fonts that are not as critical, such as body text.
+	{ method = "stylesheet", url = "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" },
+	# The "preload_async" method is used for the least important fonts, such as code block fonts.
+	{ method = "preload_async", url = "https://fonts.cdnfonts.com/css/cascadia-code" },
+]
+
+# Social media handles
+[extra.seo]
+# This is used in twitter:card and twitter:creator meta tags.
+# https://developer.x.com/en/docs/x-for-websites/cards/guides/getting-started
+twitter_handle = "@jim60105"
+
+# Structured data (JSON-LD)
+# https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
+enable_structured_data = true
+
+[extra.images]
+format = ["avif"]
+default_size = 720
+sizes = [240, 360]
+
+[extra.nav]
+# Whether to automatically hide nav when not hovered or focused
+auto_hide = false
+# Whether to show the Atom/RSS feed button in the nav
+show_feed = true
+# Whether to show the manual theme switcher in the nav
+show_theme_switcher = false
+# Whether to show the link to the source repository in the nav
+show_repo = true
+# Links used in the nav.
+# For local files use same link format as in Markdown,
+# i.e. "@/blog/_index.md".
+# See https://www.getzola.org/documentation/content/linking/#internal-links
+links = [
+	{ name = "Categories", menu = [
+		{ url = "@/Uncategorized/_index.md", name = "Uncategorized" },
+	] },
+	{ url = "@/archive.md", name = "archived" },
+]
+
+[extra.footer]
+# Links used in the footer.
+# Same as the nav ones.
+links = []
+# Social links in the footer.
+# Any URL-encoded SVG can be used as an icon.
+# https://simpleicons.org is the recommended source of SVG icons.
+# For URL encoding use https://yoksel.github.io/url-encoder/.
+# Make sure that "external quotes" are set to "double".
+socials = [
+	{ url = "https://github.com/jim60105", name = "GitHub", icon = "%3Csvg role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EGitHub%3C/title%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E" },
+	{ url = "https://liker.social/@jim60105", name = "Mastodon", icon = "%3Csvg role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EMastodon%3C/title%3E%3Cpath d='M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.01 20.282 20.282 0 0 1-4.709.545c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054c1.517.363 3.072.546 4.632.546.376 0 .75 0 1.125-.01 1.57-.044 3.224-.124 4.768-.422.038-.008.077-.015.11-.024 2.435-.464 4.753-1.92 4.989-5.604.008-.145.03-1.52.03-1.67.002-.512.167-3.63-.024-5.545zm-3.748 9.195h-2.561V8.29c0-1.309-.55-1.976-1.67-1.976-1.23 0-1.846.79-1.846 2.35v3.403h-2.546V8.663c0-1.56-.617-2.35-1.848-2.35-1.112 0-1.668.668-1.67 1.977v6.218H4.822V8.102c0-1.31.337-2.35 1.011-3.12.696-.77 1.608-1.164 2.74-1.164 1.311 0 2.302.5 2.962 1.498l.638 1.06.638-1.06c.66-.999 1.65-1.498 2.96-1.498 1.13 0 2.043.395 2.74 1.164.675.77 1.012 1.81 1.012 3.12z'/%3E%3C/svg%3E" },
+	{ url = "https://twitter.com/jim60105", name = "Twitter", icon = "%3Csvg role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3ETwitter%3C/title%3E%3Cpath d='M21.543 7.104c.015.211.015.423.015.636 0 6.507-4.954 14.01-14.01 14.01v-.003A13.94 13.94 0 0 1 0 19.539a9.88 9.88 0 0 0 7.287-2.041 4.93 4.93 0 0 1-4.6-3.42 4.916 4.916 0 0 0 2.223-.084A4.926 4.926 0 0 1 .96 9.167v-.062a4.887 4.887 0 0 0 2.235.616A4.928 4.928 0 0 1 1.67 3.148 13.98 13.98 0 0 0 11.82 8.292a4.929 4.929 0 0 1 8.39-4.49 9.868 9.868 0 0 0 3.128-1.196 4.941 4.941 0 0 1-2.165 2.724A9.828 9.828 0 0 0 24 4.555a10.019 10.019 0 0 1-2.457 2.549z'/%3E%3C/svg%3E" },
+	{ url = "https://www.facebook.com/jim60105", name = "Facebook", icon = "%3Csvg role='img' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Efacebook%3C/title%3E%3Cpath d='M30.996 16.091c-0.001-8.281-6.714-14.994-14.996-14.994s-14.996 6.714-14.996 14.996c0 7.455 5.44 13.639 12.566 14.8l0.086 0.012v-10.478h-3.808v-4.336h3.808v-3.302c-0.019-0.167-0.029-0.361-0.029-0.557 0-2.923 2.37-5.293 5.293-5.293 0.141 0 0.281 0.006 0.42 0.016l-0.018-0.001c1.199 0.017 2.359 0.123 3.491 0.312l-0.134-0.019v3.69h-1.892c-0.086-0.012-0.185-0.019-0.285-0.019-1.197 0-2.168 0.97-2.168 2.168 0 0.068 0.003 0.135 0.009 0.202l-0.001-0.009v2.812h4.159l-0.665 4.336h-3.494v10.478c7.213-1.174 12.653-7.359 12.654-14.814v-0z'%3E%3C/path%3E%3C/svg%3E" },
+	{ url = "https://civitai.com/user/jim60105", name = "Civitai", icon = "%3Csvg role='img' fill='currentColor' fill-rule='evenodd' height='1em' style='flex:none;line-height:1' width='1em' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3ECivitai%3C/title%3E%3Cpath d='M22.392 6L12 0 1.608 6v12L12 24l10.392-6V6zm-3.407 1.967L12 3.934 5.015 7.967v8.066L12 20.065l6.985-4.032V7.967z'%3E%3C/path%3E%3Cpath d='M12 6.885l4.43 2.558v1.377h-2.386L12 9.64l-2.044 1.18v2.36L12 14.36l2.044-1.18h2.386v1.377L12 17.115l-4.43-2.558V9.443L12 6.885z'%3E%3C/path%3E%3C/svg%3E" },
+	{ url = "https://www.coze.com/user/7376660011738809345", name = "Coze", icon = "%3Csvg role='img' fill='currentColor' fill-rule='evenodd' height='1em' style='flex:none;line-height:1' viewBox='0 0 24 24' width='1em' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3ECoze%3C/title%3E%3Cpath clip-rule='evenodd' d='M3.908 9.096A8.092 8.092 0 0111.998 1h.006c4.468 0 8.09 3.628 8.09 8.096v3.392h1.942c2.23 0 2.732 3.126.615 3.828l-2.556.85v1.466a1.947 1.947 0 01-2.818 1.742l-1.42-.707c-.067-.03-.149 0-.17.071-1.147 3.587-6.225 3.587-7.373 0a.123.123 0 00-.169-.07l-1.42.706c-1.29.65-2.817-.292-2.817-1.742v-1.466l-2.557-.85c-2.122-.697-1.614-3.828.615-3.828h1.942V9.096zm4.571 2.613a.784.784 0 00-.784.784v1.568a.784.784 0 101.568 0v-1.568a.784.784 0 00-.784-.784zm7.045.779a.784.784 0 100 1.568.784.784 0 000-1.568zm-6.186 3.415a.78.78 0 00.17.254 3.517 3.517 0 004.98 0 .782.782 0 10-1.106-1.107 1.958 1.958 0 01-2.767 0 .78.78 0 00-1.277.254.78.78 0 000 .6z'%3E%3C/path%3E%3C/svg%3E" },
+	{ url = "mailto:Jim@ChenJ.im", name = "Email", icon = "<svg viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><title>mail_open_fill</title><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><g id='Contact' transform='translate(-192.000000, -48.000000)' fill-rule='nonzero'><g id='mail_open_fill' transform='translate(192.000000, 48.000000)'><path d='M24,0 L24,24 L0,24 L0,0 L24,0 Z M12.5934901,23.257841 L12.5819402,23.2595131 L12.5108777,23.2950439 L12.4918791,23.2987469 L12.4918791,23.2987469 L12.4767152,23.2950439 L12.4056548,23.2595131 C12.3958229,23.2563662 12.3870493,23.2590235 12.3821421,23.2649074 L12.3780323,23.275831 L12.360941,23.7031097 L12.3658947,23.7234994 L12.3769048,23.7357139 L12.4804777,23.8096931 L12.4953491,23.8136134 L12.4953491,23.8136134 L12.5071152,23.8096931 L12.6106902,23.7357139 L12.6232938,23.7196733 L12.6232938,23.7196733 L12.6266527,23.7031097 L12.609561,23.275831 C12.6075724,23.2657013 12.6010112,23.2592993 12.5934901,23.257841 L12.5934901,23.257841 Z M12.8583906,23.1452862 L12.8445485,23.1473072 L12.6598443,23.2396597 L12.6498822,23.2499052 L12.6498822,23.2499052 L12.6471943,23.2611114 L12.6650943,23.6906389 L12.6699349,23.7034178 L12.6699349,23.7034178 L12.678386,23.7104931 L12.8793402,23.8032389 C12.8914285,23.8068999 12.9022333,23.8029875 12.9078286,23.7952264 L12.9118235,23.7811639 L12.8776777,23.1665331 C12.8752882,23.1545897 12.8674102,23.1470016 12.8583906,23.1452862 L12.8583906,23.1452862 Z M12.1430473,23.1473072 C12.1332178,23.1423925 12.1221763,23.1452606 12.1156365,23.1525954 L12.1099173,23.1665331 L12.0757714,23.7811639 C12.0751323,23.7926639 12.0828099,23.8018602 12.0926481,23.8045676 L12.108256,23.8032389 L12.3092106,23.7104931 L12.3186497,23.7024347 L12.3186497,23.7024347 L12.3225043,23.6906389 L12.340401,23.2611114 L12.337245,23.2485176 L12.337245,23.2485176 L12.3277531,23.2396597 L12.1430473,23.1473072 Z' id='MingCute' fill-rule='nonzero'></path><path d='M10.8906,2.5378 C11.5144143,2.12193 12.3136092,2.092225 12.9624778,2.448685 L13.1094,2.5378 L21.1094,7.87114 C21.6194333,8.21115917 21.9427569,8.76421396 21.9931023,9.36910549 L22,9.53524 L22,19.0001 C22,20.0543955 21.18415,20.9182591 20.1492661,20.9946139 L20,21.0001 L4,21.0001 C2.94563773,21.0001 2.08183483,20.1841589 2.00548573,19.1493537 L2,19.0001 L2,9.53524 C2,8.92225583 2.28082083,8.34645396 2.75619398,7.96903326 L2.8906,7.87114 L10.8906,2.5378 Z M12,4.2019 L4.80276,9.00006 L12,13.7982 L19.1973,9.00007 L12,4.2019 Z' fill='currentColor'></path></g></g></g></svg>" },
+]
+# Whether to show "© Title, YEAR"
+show_copyright = true
+# Whether to show "Powered by Zola and Duckquill"
+show_powered_by = true
+# Whether to show link to website source
+show_source = false
+# Custom copyright text
+#
+copyright = "<a href='/SideProject/view-counter-badge-cloudflare-workers-d1'><img id='counter' src='https://view-counter.jim60105.workers.dev/?style=classic&labelColor=141414&color=555&scale=1#no-hover#pixels#badge' alt='View counter badge'/></a><p><small>Copyright © 2025 Jim Chen <Jim@ChenJ.im> | <a href='/privacy-policy'>隱私權政策</a><br><a href='/licenses/gfdl-1-3/'>標示為 GFDL-1.3 之文章依此條款授權</a>；其它文章保留所有權利。</small></p>"
+
+# Based on https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/
+#
+# Mastodon-powered commenting.
+# Values can be overridden in the front-matter, e.g.
+# for multi-author blogs or guest posts.
+#
+# These variables are also used for Mastodon verification,
+# the needed rel="me" link is set in the head based on these.
+[extra.comments]
+# Your Mastodon API host; instance that you have an account on.
+host = "liker.social"
+# Your Mastodon username; used to determine who the original poster is.
+user = "jim60105"
+# Whether to show the QR code to Mastodon post
+show_qr = true
+
+[extra.debug]
+# Display outlines around all elements for debugging purposes
+layout = false
+# Don't load any styles for debugging purposes
+no_styles = false
+
+[extra.tracking]
+# Enable
+enable = false
+# Google Analytics tracking ID
+ga = "G-306HHXMK36"
+# Microsoft Clarity tracking ID
+clarity = "jndqift7sy"
