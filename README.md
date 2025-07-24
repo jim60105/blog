@@ -1,6 +1,6 @@
 # Dual Site Blog Project [琳.tw](https://琳.tw) & [聆.tw](https://聆.tw)
 
-![琳.tw Health Check](https://cronitor.io/badges/iZnpfC/production/Q90Ln0QlxPPwcWipMHw3TrKN8Bw.svg) ![琳.tw Website](https://img.shields.io/website?url=https%3A%2F%2Fxn--jgy.tw%2F&label=琳.tw) ![聆.tw Website](https://img.shields.io/website?url=https%3A%2F%2Fxn--uy0a.tw%2F&label=聆.tw) ![GitHub Deploy](https://img.shields.io/github/check-runs/jim60105/blog/master?label=Deploy)
+![琳.tw Health Check](https://cronitor.io/badges/iZnpfC/production/Q90Ln0QlxPPwcWipMHw3TrKN8Bw.svg) ![聆.tw Health Check](https://cronitor.io/badges/IACGl3/production/bAyX1ytA5QNAEkMgSNRqJ7RS5t0.svg) ![GitHub Deploy](https://img.shields.io/github/check-runs/jim60105/blog/master?label=Deploy)
 
 ## Introduction
 
