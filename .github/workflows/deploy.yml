@@ -26,6 +26,9 @@ jobs:
           repository: jim60105/blog
           ref: master
           submodules: true
+          # Workaround for issue "Persisting credentials for submodules" step failed with "Error: ENOENT: no such file or directory" when the submodule name contains non-ASCII characters
+          # https://github.com/actions/checkout/issues/1959
+          persist-credentials: false
 
       - name: Checkout `content` submodule to master
         run: |
