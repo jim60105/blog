@@ -1,14 +1,100 @@
-# Blog [聆.tw](https://聆.tw)
+# Dual Site Blog Project [琳.tw](https://琳.tw) & [聆.tw](https://聆.tw)
 
-![Health Check](https://cronitor.io/badges/iZnpfC/production/Q90Ln0QlxPPwcWipMHw3TrKN8Bw.svg) ![Website](https://img.shields.io/website?url=https%3A%2F%2Fxn--uy0a.tw%2F) ![GitHub branch check runs](https://img.shields.io/github/check-runs/jim60105/ai-talks/master?label=Deploy)
+![琳.tw Health Check](https://cronitor.io/badges/iZnpfC/production/Q90Ln0QlxPPwcWipMHw3TrKN8Bw.svg) ![琳.tw Website](https://img.shields.io/website?url=https%3A%2F%2Fxn--jgy.tw%2F&label=琳.tw) ![聆.tw Website](https://img.shields.io/website?url=https%3A%2F%2Fxn--1st.tw%2F&label=聆.tw) ![GitHub Deploy](https://img.shields.io/github/check-runs/jim60105/blog/master?label=Deploy)
 
 ## Introduction
 
-This is the blog [聆.tw](https://聆.tw), created with [Zola](https://www.getzola.org/), a modern static site generator, and the impressive Zola theme [Duckquill](https://duckquill.daudix.one/). The content of this blog is stored separately in the [jim60105/ai-talks-content repository](https://github.com/jim60105/ai-talks-content).
+This is a dual-site blog project that hosts two distinct websites using [Zola](https://www.getzola.org/), a modern static site generator, with the impressive [Duckquill](https://duckquill.daudix.one/) theme:
+
+- **[琳.tw](https://琳.tw)** - 琳的備忘手札 (Technical Blog): Programming tutorials, system administration, and development insights
+- **[聆.tw](https://聆.tw)** - 琳聽智者漫談 (AI Conversations): AI-assisted content, conversations, and explorations
+
+The content for both sites is stored separately in the [jim60105/blog-content repository](https://github.com/jim60105/blog-content).
+
+## Dual Site Architecture
+
+The project uses a dual site mode where:
+
+- **Shared Resources**: Templates, themes, styles, and static assets are shared between both sites
+- **Site-Specific Configurations**: Each site has its own `config.toml`, `wrangler.jsonc`, and `content/` directory stored in dedicated folders:
+  - `琳.tw/` - Configuration and content for the technical blog
+  - `聆.tw/` - Configuration and content for the AI conversations site
+
+### Site Switching
+
+Use the provided `switch-site.sh` script to switch between development modes:
+
+```bash
+# Switch to technical blog mode (琳.tw)
+./switch-site.sh 琳.tw
+
+# Switch to AI conversations mode (聆.tw)  
+./switch-site.sh 聆.tw
+
+# Check current site status
+./switch-site.sh status
+
+# Clean up and restore original state
+./switch-site.sh clean
+```
+
+The script creates hard links for site-specific files to the project root:
+
+- `config.toml` - Site configuration
+- `wrangler.jsonc` - Cloudflare deployment configuration  
+- `content/` - Site content directory
+
+> [!NOTE]  
+> Hard linked files are automatically added to `.gitignore` to prevent accidentally committing site-specific configurations to the shared repository.
+
+## Development Workflow
+
+1. **Choose your site**: Run `./switch-site.sh 琳.tw` or `./switch-site.sh 聆.tw`
+2. **Start development**: Run `zola serve --drafts` to start the development server
+3. **Make changes**: Edit content, templates, or styles as needed
+4. **Switch sites**: Use the script to switch between sites during development
+5. **Clean up**: Run `./switch-site.sh clean` when finished to restore the original state
+
+### Script Usage
+
+```bash
+# Switch to technical blog mode (琳.tw)
+./switch-site.sh 琳.tw
+
+# Switch to AI conversations mode (聆.tw)  
+./switch-site.sh 聆.tw
+
+# Check current site status
+./switch-site.sh status
+
+# Clean up and restore original state
+./switch-site.sh clean
+
+# Show help
+./switch-site.sh --help
+```
 
 ## Dependencies
 
 This blog requires [Zola](https://www.getzola.org/) 0.20.0 or higher. Please follow the [official installation guide](https://www.getzola.org/documentation/getting-started/installation/) to install Zola on your system.
+
+## Site Configuration Differences
+
+### 琳.tw (Technical Blog)
+
+- **Focus**: Programming tutorials, system administration, development insights
+- **Base URL**: `https://琳.tw`
+- **Title**: 琳的備忘手札
+- **Content Categories**: AI, Backend, Blockchain, Cloudflare, Container, Database, Frontend, etc.
+- **Analytics**: Enabled (Google Analytics & Microsoft Clarity)
+
+### 聆.tw (AI Conversations)
+
+- **Focus**: AI-assisted content, conversations, and explorations
+- **Base URL**: `https://聆.tw`
+- **Title**: 琳聽智者漫談
+- **Content Categories**: Primarily AI conversations and experimental content
+- **Analytics**: Disabled (privacy-focused for AI content)
 
 ## Hotlink Protection
 
@@ -26,7 +112,7 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 | --- | --- |
 | `article_list.html` | - Remove `Filter by tag`<br>- Add `partials/sections.html` at the end of the article list.  |
 | `article.html` | - Add likecoin iframe `partials/likecoin.html`<br>- Add iscn badge<br>- Add `partials/sections.html` at the end of the article list.<br>- Add made with AI badge. |
-| └`partials/likecoin.html` (new) | Add [liker land WritingNFT badge](https://xn--uy0a.tw/Blockchain/likecoin-writing-nft-widget-on-blogger/) to the end of the article. |
+| └`partials/likecoin.html` (new) | Add [liker land WritingNFT badge](https://xn--jgy.tw/Blockchain/likecoin-writing-nft-widget-on-blogger/) to the end of the article. |
 | └`partials/with_ai.html` (new) | Add [made with AI badge](https://aibadge.org/) to the right bottom corner. |
 | └`partials/preview_image.html` (new) | Add preview image with AI badge support. |
 | `base.html` | - Add my custom head tags.<br>- Add Google Analytics and Microsoft Clarity tracking code. |
@@ -181,10 +267,10 @@ When upgrading Zola version, remember to follow these steps:
 
 1. Check the [Zola changelog](https://github.com/getzola/zola/blob/master/CHANGELOG.md) for any new features.
 2. Update the version number in `.devcontainer/devcontainer.json`.
-3. Update GitHub Actions variables for both `ai-talks` and `ai-talks-content` repositories:
+3. Update GitHub Actions variables for both `blog` and `blog-content` repositories:
    - Go to Settings → Secrets and variables → Actions → Variables
-     - [Blog](https://github.com/jim60105/ai-talks/settings/variables/actions)
-     - [Blog Content](https://github.com/jim60105/ai-talks-content/settings/variables/actions)
+     - [Blog](https://github.com/jim60105/blog/settings/variables/actions)
+     - [Blog Content](https://github.com/jim60105/blog-content/settings/variables/actions)
    - Update `ZOLA_VERSION` to the new version
 4. Update the version number in [this `README.md` file.](#dependencies)
 
