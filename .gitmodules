@@ -4,3 +4,6 @@
 [submodule "琳.tw/content"]
 	path = 琳.tw/content
 	url = https://github.com/jim60105/blog-content.git
+[submodule "聆.tw/content"]
+	path = 聆.tw/content
+	url = https://github.com/jim60105/ai-talks-content.git
