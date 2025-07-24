@@ -1,6 +1,6 @@
 [submodule "themes/duckquill"]
 	path = themes/duckquill
 	url = https://codeberg.org/jim60105/duckquill.git
-[submodule "content"]
-	path = content
+[submodule "琳.tw/content"]
+	path = 琳.tw/content
 	url = https://github.com/jim60105/blog-content.git
