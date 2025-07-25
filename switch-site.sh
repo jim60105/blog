@@ -266,59 +266,6 @@ create_static_hardlink() {
     fi
 }
 
-# Update .gitignore to ignore hard linked files
-update_gitignore() {
-    local gitignore_file=".gitignore"
-    local ignore_patterns=(
-        "# Dual site mode - hard linked files"
-        "config.toml"
-        "wrangler.jsonc"
-        "content/"
-        # Don't ignore entire static/ directory since it contains shared files
-        # Individual hard linked files will be managed by the script
-    )
-    
-    print_info "Updating .gitignore..."
-    
-    # Check if our patterns are already in .gitignore
-    local needs_update=false
-    for pattern in "${ignore_patterns[@]}"; do
-        if ! grep -Fxq "$pattern" "$gitignore_file" 2>/dev/null; then
-            needs_update=true
-            break
-        fi
-    done
-    
-    if [[ "$needs_update" == "true" ]]; then
-        # Add patterns to .gitignore
-        echo "" >> "$gitignore_file"
-        for pattern in "${ignore_patterns[@]}"; do
-            if ! grep -Fxq "$pattern" "$gitignore_file" 2>/dev/null; then
-                echo "$pattern" >> "$gitignore_file"
-            fi
-        done
-        print_success "Updated .gitignore with hard link patterns"
-    else
-        print_info ".gitignore already contains necessary patterns"
-    fi
-}
-
-# Clean up .gitignore (remove dual site patterns)
-cleanup_gitignore() {
-    local gitignore_file=".gitignore"
-    local temp_file
-    temp_file=$(mktemp)
-    
-    print_info "Cleaning up .gitignore..."
-    
-    # Remove dual site related patterns (but keep static/ since it's shared)
-    if [[ -f "$gitignore_file" ]]; then
-        grep -v -E "^# Dual site mode|^config\.toml$|^wrangler\.jsonc$|^content/$" "$gitignore_file" > "$temp_file" || true
-        mv "$temp_file" "$gitignore_file"
-        print_success "Cleaned up .gitignore"
-    fi
-}
-
 # Main switch function
 switch_to_site() {
     local site_name="$1"
