@@ -27,20 +27,20 @@ dist/
 .wrangler/
 
 # Dual site mode - hard linked files
-config.toml
-wrangler.jsonc
-.frontmatter/
-content/
-content
+/config.toml
+/wrangler.jsonc
+/.frontmatter/
+/content/
+/content
 # Site-specific static files (hard linked)
-static/.well-known/gpc.json
-static/apple-touch-icon.png
-static/card.avif
-static/card.png
-static/card.webp
-static/favicon.ico
-static/favicon.png
-static/favicon.svg
-static/site.webmanifest
-static/web-app-manifest-192x192.png
-static/web-app-manifest-512x512.png
+/static/.well-known/gpc.json
+/static/apple-touch-icon.png
+/static/card.avif
+/static/card.png
+/static/card.webp
+/static/favicon.ico
+/static/favicon.png
+/static/favicon.svg
+/static/site.webmanifest
+/static/web-app-manifest-192x192.png
+/static/web-app-manifest-512x512.png
