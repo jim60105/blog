@@ -381,6 +381,8 @@ show_repo = true
 # See https://www.getzola.org/documentation/content/linking/#internal-links
 links = [
 	{ name = "Categories", menu = [
+		{ url = "@/AI/_index.md", name = "AI" },
+		{ url = "@/Frontend/_index.md", name = "Frontend" },
 		{ url = "@/Uncategorized/_index.md", name = "Uncategorized" },
 	] },
 	{ url = "@/archive.md", name = "archived" },
