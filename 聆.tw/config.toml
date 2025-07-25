@@ -135,7 +135,7 @@ definition_list = false
 lazy_async_image = false
 
 # Whether footnotes are rendered in the GitHub-style (at the bottom, with back references) or plain (in the place, where they are defined)
-bottom_footnotes = false
+bottom_footnotes = true
 
 # This determines whether to insert a link for each header like the ones you can see on this site if you hover over
 # a header.
