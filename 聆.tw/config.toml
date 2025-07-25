@@ -382,7 +382,10 @@ show_repo = true
 links = [
 	{ name = "Categories", menu = [
 		{ url = "@/AI/_index.md", name = "AI" },
+		{ url = "@/Blockchain/_index.md", name = "Blockchain" },
+		{ url = "@/Container/_index.md", name = "Container" },
 		{ url = "@/Frontend/_index.md", name = "Frontend" },
+		{ url = "@/SystemAdmin/_index.md", name = "SystemAdmin" },
 		{ url = "@/Uncategorized/_index.md", name = "Uncategorized" },
 	] },
 	{ url = "@/archive.md", name = "archived" },
