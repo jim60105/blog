@@ -141,11 +141,11 @@ cleanup_hardlinks() {
         fi
     done
     
-    # Remove content directory if it's a hard link
+    # Remove content directory if it's a symbolic link or contains hard linked files
     if [[ -d "content" ]]; then
         # Check if content is a symbolic link or if it contains hard linked files
         if [[ -L "content" ]] || [[ $(find content -type f -links +1 2>/dev/null | wc -l) -gt 0 ]]; then
-            print_info "Removing hard linked content directory"
+            print_info "Removing symbolic linked content directory"
             rm -rf "content"
         fi
     fi
@@ -174,6 +174,9 @@ create_file_hardlinks() {
     local files=(
         "config.toml"
         "wrangler.jsonc"
+        ".frontmatter/database/mediaDb.json"
+        ".frontmatter/database/pinnedItemsDb.json"
+        ".frontmatter/database/taxonomyDb.json"
     )
     
     print_info "Creating hard links for individual files from $source_dir..."
@@ -187,6 +190,7 @@ create_file_hardlinks() {
             [[ -f "$target_file" ]] && rm -f "$target_file"
             
             # Create hard link
+            mkdir -p "$(dirname "$target_file")"
             ln "$source_file" "$target_file"
             print_success "Created hard link: $source_file -> $target_file"
         else
@@ -195,22 +199,22 @@ create_file_hardlinks() {
     done
 }
 
-# Create hard link for content directory
+# Create symbolic link for content directory
 create_content_hardlink() {
     local source_dir="$1"
     local source_content="$source_dir/content"
     local target_content="content"
     
-    print_info "Creating hard link for content directory from $source_dir..."
+    print_info "Creating symbolic link for content directory from $source_dir..."
     
     if [[ -d "$source_content" ]]; then
         # Remove existing content directory
-        [[ -d "$target_content" ]] && rm -rf "$target_content"
+        [[ -e "$target_content" ]] && rm -rf "$target_content"
         
-        # Create hard link for the entire directory
-        # Note: We use cp -al which creates hard links for all files
-        cp -al "$source_content" "$target_content"
-        print_success "Created hard linked content directory: $source_content -> $target_content"
+        # Create symbolic link for the entire directory
+        # This allows bidirectional synchronization - files added to either location will appear in both
+        ln -s "$(realpath "$source_content")" "$target_content"
+        print_success "Created symbolic linked content directory: $source_content -> $target_content"
     else
         print_warning "Source content directory not found: $source_content"
     fi
@@ -288,12 +292,6 @@ switch_to_site() {
     create_static_hardlink "$site_dir"
     
     print_success "Successfully switched to $site_name mode!"
-    print_info "Hard linked files and directories:"
-    echo "  - config.toml"
-    echo "  - wrangler.jsonc"
-    echo "  - content/ (directory)"
-    echo "  - static/ (site-specific files only)"
-    echo ""
     print_info "You can now run 'zola serve' to start the development server"
 }
 
@@ -334,13 +332,17 @@ check_status() {
         content_files=$(find content -type f 2>/dev/null | wc -l)
         echo "  Content files: $content_files"
         
-        # Check if content contains hard links
-        local hardlinked_files
-        hardlinked_files=$(find content -type f -links +1 2>/dev/null | wc -l)
-        if [[ $hardlinked_files -gt 0 ]]; then
-            echo "  Content status: Hard linked ✓"
+        # Check if content is a symbolic link or contains hard links
+        if [[ -L "content" ]]; then
+            echo "  Content status: Symbolic linked ✓"
         else
-            echo "  Content status: Not hard linked (possible issue)"
+            local hardlinked_files
+            hardlinked_files=$(find content -type f -links +1 2>/dev/null | wc -l)
+            if [[ $hardlinked_files -gt 0 ]]; then
+                echo "  Content status: Hard linked ✓"
+            else
+                echo "  Content status: Not linked (possible issue)"
+            fi
         fi
     else
         print_warning "No content directory found"

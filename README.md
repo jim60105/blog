@@ -36,7 +36,7 @@ Use the provided `switch-site.sh` script to switch between development modes:
 ./switch-site.sh clean
 ```
 
-The script creates hard links for site-specific files to the project root:
+The script creates links for site-specific files to the project root:
 
 - `config.toml` - Site configuration
 - `wrangler.jsonc` - Cloudflare deployment configuration
