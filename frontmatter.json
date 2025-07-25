@@ -182,5 +182,10 @@
   "frontMatter.framework.id": "other",
   "frontMatter.content.publicFolder": "static",
   "frontMatter.preview.host": "http://127.0.0.1:1111",
-  "frontMatter.content.pageFolders": []
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "content",
+      "path": "[[workspace]]/content"
+    }
+  ]
 }

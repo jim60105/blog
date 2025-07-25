@@ -42,3 +42,4 @@ static/favicon.svg
 static/site.webmanifest
 static/web-app-manifest-192x192.png
 static/web-app-manifest-512x512.png
+.frontmatter/
