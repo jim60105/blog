@@ -1,29 +1,71 @@
-# 琳的備忘手札 (琳.tw) - GitHub Copilot 專案指南
+# 雙站模式部落格專案指南（琳.tw & 聆.tw）
 
 ## 專案概述
 
-這是一個使用 **Zola** (靜態網站產生器) 建構的個人技術部落格，採用 **Duckquill** 主題。網站託管在 Cloudflare Workers 上，提供正體中文的技術文章分享。專案的文章內容儲存在 [jim60105/blog-content](https://github.com/jim60105/blog-content) 獨立儲存庫中。
+本專案為「雙站模式」靜態部落格，支援兩個獨立網站：
+
+- **[琳.tw](https://琳.tw)**：技術部落格（程式教學、系統管理、開發心得）
+- **[聆.tw](https://聆.tw)**：AI 對話專區（AI 協作內容、對話、探索）
+
+兩站共用主題、樣式、模板與大部分靜態資源，但各自擁有獨立的內容、設定檔與靜態檔案。內容分別儲存在 [jim60105/blog-content](https://github.com/jim60105/blog-content) 及 [jim60105/ai-talks-content](https://github.com/jim60105/ai-talks-content) 兩個儲存庫。
+
+### 雙站切換與開發流程
+
+請使用 `switch-site.sh` 腳本切換開發模式：
+
+```bash
+# 切換至技術部落格（琳.tw）
+./switch-site.sh 琳.tw
+
+# 切換至 AI 對話站（聆.tw）
+./switch-site.sh 聆.tw
+
+# 查看目前狀態
+./switch-site.sh status
+
+# 清除連結，還原原始狀態
+./switch-site.sh clean
+```
+
+切換時會自動建立對應站點的 `config.toml`、`wrangler.jsonc`、`content/` 目錄與靜態檔案連結到專案根目錄。
 
 ### 技術架構
 
-- **靜態網站產生器**: Zola (需要 0.20.0+)
-- **主題**: Duckquill (基於 MIT 授權)
-- **樣式系統**: Sass/SCSS
-- **範本引擎**: Tera (類似 Jinja2)
-- **託管平台**: Cloudflare Workers
-- **部署配置**: `wrangler.jsonc`
-- **建構程式碼**: `zola build`
+- **靜態網站產生器**：Zola (需 0.20.0+)
+- **主題**：Duckquill（MIT 授權）
+- **樣式系統**：Sass/SCSS
+- **範本引擎**：Tera
+- **託管平台**：Cloudflare Workers
+- **部署配置**：`wrangler.jsonc`
+- **建構指令**：`zola build`
 
-## 程式碼風格與約定
+### 目錄結構與檔案分工
 
-### 語言使用指南
+```
+├── 琳.tw/                # 琳.tw 專屬內容、設定、靜態檔案
+│   ├── config.toml
+│   ├── wrangler.jsonc
+│   ├── content/
+│   └── static/
+├── 聆.tw/                # 聆.tw 專屬內容、設定、靜態檔案
+│   ├── config.toml
+│   ├── wrangler.jsonc
+│   ├── content/
+│   └── static/
+├── content/              # 目前啟用站點的內容（連結自 琳.tw/ 或 聆.tw/）
+├── config.toml           # 目前啟用站點的設定（連結自 琳.tw/ 或 聆.tw/）
+├── wrangler.jsonc        # 目前啟用站點的部署設定（連結自 琳.tw/ 或 聆.tw/）
+├── static/               # 目前啟用站點的靜態資源（連結自 琳.tw/ 或 聆.tw/）
+├── templates/            # 共用 Tera 範本
+├── sass/                 # 共用 SCSS 樣式
+├── public/               # 建構輸出目錄
+└── switch-site.sh        # 站點切換腳本
+```
 
-- **程式碼註解**: 使用英文撰寫
-- **Commit 訊息**: 使用英文撰寫
-- **文件**: 使用正體中文 (zh-TW)
-- **程式碼中的變數名稱**: 使用英文
-
-### HTML 範本 (Tera)
+> [!NOTE]
+>
+> - 琳.tw 內容來自 [jim60105/blog-content](https://github.com/jim60105/blog-content)
+> - 聆.tw 內容來自 [jim60105/ai-talks-content](https://github.com/jim60105/ai-talks-content)
 
 - 使用 Tera 範本語法 (類似 Jinja2)
 - 範本檔案位於 `templates/` 目錄
