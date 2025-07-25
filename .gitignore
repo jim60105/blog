@@ -29,7 +29,9 @@ dist/
 # Dual site mode - hard linked files
 config.toml
 wrangler.jsonc
+.frontmatter/
 content/
+content
 # Site-specific static files (hard linked)
 static/.well-known/gpc.json
 static/apple-touch-icon.png
@@ -42,4 +44,3 @@ static/favicon.svg
 static/site.webmanifest
 static/web-app-manifest-192x192.png
 static/web-app-manifest-512x512.png
-.frontmatter/
