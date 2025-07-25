@@ -76,6 +76,7 @@ author = "陳鈞"
 #
 taxonomies = [
 	{ name = "tags", feed = false },
+	{ name = "providers", feed = false },
 	{ name = "licenses", feed = false },
 ]
 

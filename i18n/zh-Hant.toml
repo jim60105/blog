@@ -92,3 +92,8 @@ licenses = "授權條款"
 licenses_title = "授權條款"
 one_licenses = "共有 $NUMBER 個授權條款"
 many_licenses = "共有 $NUMBER 個授權條款"
+
+providers = "提供者"
+providers_title = "提供者"
+one_providers = "共有 $NUMBER 個提供者"
+many_providers = "共有 $NUMBER 個提供者"
