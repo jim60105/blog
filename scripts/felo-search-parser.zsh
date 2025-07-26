@@ -153,6 +153,8 @@ Based on the following Q&A content, please provide:
 3. Relevant keyword tags (in English, max 5 tags, comma-separated)
 4. An SEO-friendly filename slug. Will be used in part of the url. (in English, lowercase letters, numbers, and hyphens only, 20-50 characters, describing the main topic)
 
+Use full-width punctuation marks for Chinese, and use single-width punctuation marks for other languages.
+Always put a whitespace between Chinese words and English words.
 Your response will be used as meta tags for a webpage, so please follow good SEO practices.
 
 <Q&A_Content>
