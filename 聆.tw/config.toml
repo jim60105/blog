@@ -383,6 +383,7 @@ links = [
 	{ name = "Categories", menu = [
 		{ url = "@/AI/_index.md", name = "AI" },
 		{ url = "@/Blockchain/_index.md", name = "Blockchain" },
+		{ url = "@/Cloudflare/_index.md", name = "Cloudflare" },
 		{ url = "@/Container/_index.md", name = "Container" },
 		{ url = "@/Frontend/_index.md", name = "Frontend" },
 		{ url = "@/SystemAdmin/_index.md", name = "SystemAdmin" },
