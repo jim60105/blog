@@ -34,7 +34,7 @@
 DEBUG_MODE=false
 
 # OpenAI Configuration
-readonly OPENAI_MODEL="moonshotai/kimi-k2"
+readonly OPENAI_MODEL="gpt-4.1"
 
 # Color codes for output
 readonly RED='\033[0;31m'
@@ -147,14 +147,14 @@ Here is the output schema:
 {
     "thinking": string, //Your thought process, deep into the reasoning behind the answer, Tell me how you would answer and explain why
     "title": string, //Title of the article, should be concise and eye-catching in 正體中文zh-tw
-    "description": string, //Brief description summarizing the article, max 150 characters in 正體中文zh-tw
+    "description": string, //Brief description summarizing the article, three sentences and 100~150 characters in 正體中文zh-tw
     "tags": string[], //Relevant keyword tags, max 5 tags, comma-separated, Capitalize, English or 正體中文
     "filename": string //SEO-friendly filename slug for the url, lowercase English and numbers with hyphens only
 }
 '''
 Based on the following Q&A content, please provide:
 1. An Title of this article. Please come up with an eye-catching but not overly exaggerated title. (in 正體中文zh-tw)
-2. A Brief Description Summarizing This Article. Addresses a particular subject while withholding the primary conclusion. The description will be visible to readers before they click the link, thus it must be compelling enough to encourage them to click and delve into the full content of the article. (in 正體中文zh-tw, max 150 characters)
+2. A Brief Description Summarizing This Article. Addresses a particular subject while withholding the primary conclusion. The description will be visible to readers before they click the link, thus it must be compelling enough to encourage them to click and delve into the full content of the article. (three sentences in 正體中文zh-tw, max 150 characters)
 3. Relevant keyword tags (in English, max 5 tags, comma-separated)
 4. An SEO-friendly filename slug. Will be used in part of the url. (in English, lowercase letters, numbers, and hyphens only, 20-50 characters, describing the main topic)
 
