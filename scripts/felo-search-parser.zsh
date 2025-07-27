@@ -140,10 +140,10 @@ call_openai_api() {
 Here is the output schema:
 '''
 {
-    "thinking": string, //Your thought process, deep into the reasoning behind the answer, Tell me how you would answer and explain why, max 100 characters
-    "title": string, //Title of the article, should be concise and eye-catching
-    "description": string, //Brief description summarizing the article, max 150 characters
-    "tags": string[], //Relevant keyword tags, max 5 tags, comma-separated
+    "thinking": string, //Your thought process, deep into the reasoning behind the answer, Tell me how you would answer and explain why
+    "title": string, //Title of the article, should be concise and eye-catching in 正體中文zh-tw
+    "description": string, //Brief description summarizing the article, max 150 characters in 正體中文zh-tw
+    "tags": string[], //Relevant keyword tags, max 5 tags, comma-separated, Capitalize, English or 正體中文
     "filename": string //SEO-friendly filename slug for the url, lowercase English and numbers with hyphens only
 }
 '''
