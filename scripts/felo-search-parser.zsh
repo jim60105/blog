@@ -261,6 +261,28 @@ EOJSON
     return 0
 }
 
+# Check for 403 permission error in API response
+check_api_permission_error() {
+    local content_file="$1"
+    
+    log_debug "Checking for API permission errors"
+    
+    # Check if the response contains permission error JSON
+    if jq -e '.detail.can_read == false and .detail.read_permission == "PRIVATE"' "$content_file" >/dev/null 2>&1; then
+        log_error "Access denied: The Felo search thread is private and cannot be accessed"
+        log_error ""
+        log_error "To fix this issue:"
+        log_error "1. Go to the Felo search thread URL in your browser"
+        log_error "2. Click the 'Share' button to make the thread public"
+        log_error "3. Run this script again with the updated URL"
+        log_error ""
+        log_error "The thread must be publicly accessible for this script to work."
+        return 1
+    fi
+    
+    return 0
+}
+
 # Fetch content from API URL
 fetch_api_content() {
     local thread_id="$1"
@@ -272,38 +294,74 @@ fetch_api_content() {
     local api_url="https://api.felo.ai/search/search/threads/${thread_id}"
     log_debug "API URL: $api_url"
     
-    # Create temporary file to store content
+    # Create temporary files to store content and HTTP status
     local temp_file=$(mktemp)
+    local temp_headers=$(mktemp)
     local user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
     
     log_debug "Created temporary file: $temp_file"
+    log_debug "Created temporary headers file: $temp_headers"
     
     # Use curl first, fallback to wget
     if command -v curl >/dev/null 2>&1; then
         log_debug "Using curl to fetch API content"
-        curl -s -L -A "$user_agent" "$api_url" -o "$temp_file"
+        # Use curl to get both response body and HTTP status code
+        local http_status
+        http_status=$(curl -s -L -A "$user_agent" -w "%{http_code}" -D "$temp_headers" "$api_url" -o "$temp_file")
         local curl_exit_code=$?
         log_debug "curl exit code: $curl_exit_code"
+        log_debug "HTTP status code: $http_status"
         
         if [[ $curl_exit_code -ne 0 ]]; then
             log_error "curl failed with exit code: $curl_exit_code"
-            rm -f "$temp_file"
+            rm -f "$temp_file" "$temp_headers"
             return 1
         fi
+        
+        # Check for 403 Forbidden status
+        if [[ "$http_status" == "403" ]]; then
+            log_warn "Received HTTP 403 Forbidden, checking for permission error..."
+            if check_api_permission_error "$temp_file"; then
+                rm -f "$temp_file" "$temp_headers"
+                return 1
+            else
+                rm -f "$temp_file" "$temp_headers"
+                return 1
+            fi
+        fi
+        
+        # Check for other HTTP error status codes
+        if [[ "$http_status" -lt 200 || "$http_status" -ge 400 ]]; then
+            log_error "API request failed with HTTP status: $http_status"
+            log_debug "Response content: $(cat "$temp_file")"
+            rm -f "$temp_file" "$temp_headers"
+            return 1
+        fi
+        
         elif command -v wget >/dev/null 2>&1; then
         log_debug "Using wget to fetch API content"
-        wget -q -U "$user_agent" "$api_url" -O "$temp_file" 2>/dev/null
+        wget -q -U "$user_agent" "$api_url" -O "$temp_file" -S 2>"$temp_headers"
         local wget_exit_code=$?
         log_debug "wget exit code: $wget_exit_code"
         
         if [[ $wget_exit_code -ne 0 ]]; then
             log_error "wget failed with exit code: $wget_exit_code"
-            rm -f "$temp_file"
+            
+            # Check if it's a 403 error with wget
+            if grep -q "403" "$temp_headers" 2>/dev/null; then
+                log_warn "Received HTTP 403 Forbidden, checking for permission error..."
+                if check_api_permission_error "$temp_file"; then
+                    rm -f "$temp_file" "$temp_headers"
+                    return 1
+                fi
+            fi
+            
+            rm -f "$temp_file" "$temp_headers"
             return 1
         fi
     else
         log_error "Neither curl nor wget is available"
-        rm -f "$temp_file"
+        rm -f "$temp_file" "$temp_headers"
         return 1
     fi
     
@@ -312,11 +370,28 @@ fetch_api_content() {
         local content_length=$(wc -c < "$temp_file")
         log_debug "Content length: $content_length bytes"
         
+        # Clean up headers file
+        rm -f "$temp_headers"
+        
         if [[ "$content_length" -gt 50 ]]; then
-            log_success "API content fetched successfully ($content_length bytes)"
-            log_debug "Content preview (first 200 chars): $(head -c 200 "$temp_file")..."
-            printf '%s' "$temp_file"
-            return 0
+            # Additional check: verify the response contains valid JSON structure
+            if jq -e '.messages' "$temp_file" >/dev/null 2>&1; then
+                log_success "API content fetched successfully ($content_length bytes)"
+                log_debug "Content preview (first 200 chars): $(head -c 200 "$temp_file")..."
+                printf '%s' "$temp_file"
+                return 0
+            else
+                # If it's not valid thread data, check if it's a permission error
+                if check_api_permission_error "$temp_file"; then
+                    rm -f "$temp_file"
+                    return 1
+                else
+                    log_error "API response does not contain valid thread data"
+                    log_debug "Response content: $(cat "$temp_file")"
+                    rm -f "$temp_file"
+                    return 1
+                fi
+            fi
         else
             log_error "API response too short or empty"
             log_debug "File size: $content_length bytes"
@@ -327,6 +402,7 @@ fetch_api_content() {
         fi
     else
         log_error "Failed to create temporary file or fetch content"
+        rm -f "$temp_headers"
         return 1
     fi
 }
