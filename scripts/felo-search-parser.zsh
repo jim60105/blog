@@ -335,9 +335,9 @@ fetch_api_content() {
 prompt_for_url() {
     log_info "Felo Search Parser"
     log_debug "Entering interactive mode for URL input"
-    echo -e "\nPlease enter the Felo.ai search URL:"
-    echo -e "Template: ${GRAY}https://felo.ai/search/mbHKVG9UzZisrxkaHHnSxU?invite=dOLYGeJyZJqVX${RESET}"
-    echo -n "URL: "
+    echo -e "\nPlease enter the Felo.ai search URL:" >&2;
+    echo -e "Template: ${GRAY}https://felo.ai/search/mbHKVG9UzZisrxkaHHnSxU${RESET}" >&2;
+    echo -n "URL: " >&2;
     
     local url
     read -r url
