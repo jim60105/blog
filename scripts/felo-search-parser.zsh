@@ -581,8 +581,10 @@ extract_thread_id_from_url() {
     
     log_debug "extract_thread_id_from_url called with: $url"
     
-    # Basic URL validation
-    if [[ ! "$url" =~ ^https://felo\.ai/search/ ]]; then
+    # Basic URL validation - support both formats:
+    # https://felo.ai/search/{threadId}
+    # https://felo.ai/{lang}/search/{threadId}
+    if [[ ! "$url" =~ ^https://felo\.ai/(search/|[^/]+/search/) ]]; then
         log_error "Invalid URL format. Please provide a valid Felo.ai search URL."
         log_debug "URL validation failed for: $url"
         return 1
@@ -590,9 +592,11 @@ extract_thread_id_from_url() {
     
     log_debug "URL validation passed"
     
-    # Extract thread ID from URL pattern: https://felo.ai/search/{threadId}?...
+    # Extract thread ID from URL patterns:
+    # https://felo.ai/search/{threadId}?...
+    # https://felo.ai/{lang}/search/{threadId}?...
     local thread_id
-    thread_id=$(echo "$url" | sed -E 's|^https://felo\.ai/search/([^?]+).*|\1|')
+    thread_id=$(echo "$url" | sed -E 's|^https://felo\.ai/([^/]+/)?search/([^?]+).*|\2|')
     
     if [[ -z "$thread_id" || "$thread_id" == "$url" ]]; then
         log_error "Could not extract thread ID from URL: $url"
@@ -779,7 +783,7 @@ providers = [ "Felo Search" ]
 licenses = [ "GFDL 1.3" ]
 
 [extra]
-withAI = "<$original_url>"
+withAI = "<$original_url?invite=dOLYGeJyZJqVX>"
 +++
 {% chat(speaker="jim") %}
 $first_question
