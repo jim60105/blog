@@ -124,6 +124,10 @@ call_openai_api() {
     local question="$1"
     local answer="$2"
     
+    # Trim all leading and trailing whitespace and line breaks from answer parameter (zsh native)
+    answer="${answer#"${answer%%[!$' \t\r\n']*}"}"
+    answer="${answer%"${answer##*[!$' \t\r\n']}"}"
+    
     log_info "Calling OpenAI API to generate metadata..."
     log_debug "Question length: ${#question} characters"
     log_debug "Answer length: ${#answer} characters"
@@ -519,6 +523,10 @@ extract_answers() {
         query_text=$(echo "$query_text" | tr '\n' ' ')
         query_text=$(echo "$query_text" | sed 's/[[:space:]]\+/ /g' | sed 's/^[[:space:]]*//' | sed 's/[[:space:]]*$//')
         
+        # Trim all leading and trailing whitespace and line breaks from response_text (zsh native)
+        response_text="${response_text#"${response_text%%[!$' \t\r\n']*}"}"
+        response_text="${response_text%"${response_text##*[!$' \t\r\n']}"}"
+        
         if [[ -n "$response_text" && "$response_text" != "null" ]]; then
             # Apply reference number offset for this message (i * 1000)
             local offset=$((i * 1000))
@@ -537,7 +545,6 @@ extract_answers() {
             
             if [[ -n "$all_answers" ]]; then
                 read -r -d '' all_answers_part << EOM
-
 {% chat(speaker="jim") %}
 $query_text
 {% end %}
@@ -548,7 +555,7 @@ $query_text
 
 $adjusted_answer
 EOM
-                all_answers="$all_answers$all_answers_part"
+                all_answers="$all_answers\n\n$all_answers_part"
             else
                 all_answers="$adjusted_answer"
             fi
