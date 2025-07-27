@@ -34,7 +34,7 @@
 DEBUG_MODE=false
 
 # OpenAI Configuration
-readonly OPENAI_MODEL="gpt-4.1"
+readonly OPENAI_MODEL="moonshotai/kimi-k2"
 
 # Color codes for output
 readonly RED='\033[0;31m'
@@ -129,8 +129,9 @@ call_openai_api() {
     log_debug "Answer length: ${#answer} characters"
     
     # Create prompt for OpenAI
-    local prompt=""
-    read -r -d '' prompt << EOPROMPT
+    local system_prompt=""
+    local user_prompt=""
+    read -r -d '' system_prompt << EOSYSTEMPROMPT
 - Carefully consider the user's question to ensure your answer is logical and makes sense.
 - Make sure your explanation is concise and easy to understand, not verbose.
 - Strictly return the answer in json format.
@@ -156,13 +157,20 @@ Based on the following Q&A content, please provide:
 Use full-width punctuation marks for Chinese, and use single-width punctuation marks for other languages.
 Always put a whitespace between Chinese words and English words.
 Your response will be used as meta tags for a webpage, so please follow good SEO practices.
-
+EOSYSTEMPROMPT
+    
+    read -r -d '' user_prompt << EOUSERPROMPT
 <Q&A_Content>
 Question: $question
 
 Answer: $answer
 </Q&A_Content>
-EOPROMPT
+
+[Restriction]
+- Strictly return the answer in json format.
+- Strictly Ensure that the following answer is in a valid JSON format.
+- The output should be formatted as a JSON instance that conforms to the JSON schema below and do not add comments.
+EOUSERPROMPT
     
     # Create temporary file for API request
     local request_file=$(mktemp)
@@ -174,8 +182,12 @@ EOPROMPT
   "model": "$OPENAI_MODEL",
   "messages": [
     {
+      "role": "system",
+      "content": $(echo "$system_prompt" | jq -Rs .)
+    },
+    {
       "role": "user",
-      "content": $(echo "$prompt" | jq -Rs .)
+      "content": $(echo "$user_prompt" | jq -Rs .)
     }
   ],
   "temperature": 0.3,
