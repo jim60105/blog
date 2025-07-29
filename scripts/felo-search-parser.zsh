@@ -49,6 +49,7 @@ EXTRACTED_QUESTION=""
 EXTRACTED_ANSWER=""
 EXTRACTED_REF_COUNT=0
 EXTRACTED_JSON_FILE=""
+EXTRACTED_CREATION_DATE=""
 
 # Logging functions
 log_info() { echo -e "${BLUE}[INFO]${RESET} $1" >&2; }
@@ -614,6 +615,59 @@ validate_content_file() {
     return 0
 }
 
+# Extract creation date from JSON data with fallback
+extract_creation_date() {
+    local json_file="$1"
+    
+    log_debug "Extracting creation date from JSON file: $json_file"
+    
+    # Try to extract thread-level created_at first
+    local thread_created_at
+    thread_created_at=$(jq -r '.created_at // empty' "$json_file" 2>/dev/null)
+    
+    # If not available, try first message's created_at
+    if [[ -z "$thread_created_at" || "$thread_created_at" == "null" ]]; then
+        thread_created_at=$(jq -r '.messages[0].created_at // empty' "$json_file" 2>/dev/null)
+        log_debug "Thread-level created_at not found, using first message created_at: $thread_created_at"
+    else
+        log_debug "Using thread-level created_at: $thread_created_at"
+    fi
+    
+    # Convert ISO 8601 to Zola-compatible format
+    if [[ -n "$thread_created_at" && "$thread_created_at" != "null" ]]; then
+        # Handle both with/without timezone formats
+        # Input: "2025-03-16T07:14:58.526096" or "2025-03-16T07:14:58.526096Z" or "2025-03-16T07:14:58.526096+08:00"
+        # Output: "2025-03-16T07:14:58Z"
+        
+        # Extract date and time components, remove microseconds
+        local formatted_date
+        formatted_date=$(echo "$thread_created_at" | sed -E 's/(\.[0-9]+)?([+-][0-9]{2}:?[0-9]{2}|Z)?$//')
+        
+        # Handle timezone conversion
+        if [[ "$thread_created_at" =~ [+-][0-9]{2}:?[0-9]{2}$ ]]; then
+            # Convert to UTC using date command if timezone is specified
+            formatted_date=$(date -u -d "$thread_created_at" +"%Y-%m-%dT%H:%M:%SZ" 2>/dev/null || echo "${formatted_date}Z")
+            log_debug "Converted timezone to UTC: $formatted_date"
+        elif [[ "$thread_created_at" =~ Z$ ]]; then
+            # Already has Z, just clean up microseconds
+            formatted_date="$formatted_date"Z
+            log_debug "Already UTC format: $formatted_date"
+        else
+            # Add Z for UTC if no timezone specified (assume UTC)
+            formatted_date="${formatted_date}Z"
+            log_debug "No timezone specified, assuming UTC: $formatted_date"
+        fi
+        
+        log_debug "Final formatted date: $formatted_date"
+        echo "$formatted_date"
+    else
+        # Fallback to current time in UTC if extraction fails
+        local fallback_date=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+        log_debug "Creation date extraction failed, using fallback: $fallback_date"
+        echo "$fallback_date"
+    fi
+}
+
 # Parse content to extract question, answer and references
 parse_content() {
     local content_file="$1"
@@ -645,6 +699,7 @@ parse_content() {
     EXTRACTED_QUESTION=$(extract_questions "$json_file")
     EXTRACTED_ANSWER=$(extract_answers "$json_file")
     EXTRACTED_REF_COUNT=$(extract_references_count "$json_file")
+    EXTRACTED_CREATION_DATE=$(extract_creation_date "$json_file")
     
     log_success "Content parsing completed"
     log_info "Questions extracted"
@@ -856,7 +911,7 @@ create_basic_markdown() {
 +++
 title = "$ai_title"
 description = "$ai_description"
-date = "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+date = "$EXTRACTED_CREATION_DATE"
 updated = "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 draft = false
 
