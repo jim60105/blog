@@ -1,6 +1,6 @@
 strong {
-  color: var(--yellow-fg);
-  font-weight: normal;
+  color: var(--accent-color);
+  font-family: var(--font-antique), var(--font-system-ui);
 }
 
 div.statement-container.disclaimer strong {
