@@ -102,9 +102,9 @@ main {
     text-align: right;
   }
 
-  p,
-  ol,
-  ul,
+  p:not(.footnotes p),
+  ol:not(.footnotes ol),
+  ul:not(.footnotes ul),
   blockquote {
     font-size: var(--font-size-large);
   }
@@ -126,6 +126,35 @@ main {
 
   article hr {
     margin: 1em auto;
+  }
+
+  sup {
+    font-size: var(--font-size-x-small);
+  }
+  section.footnotes {
+    font-size: var(--font-size-small);
+  }
+  // Add a horizontal rule before footnotes section
+  section.footnotes:before {
+    display: block;
+    margin: 2rem auto 1.75rem;
+    border: none;
+    border-block-start: 0.1875rem double var(--fg-muted-2);
+    width: 100%;
+    content: "";
+  }
+  ol.footnotes-list:before {
+    display: block;
+    position: relative;
+    margin-left: -0.75rem;
+    inset-block-start: -3rem;
+    width: 100%;
+    height: 0;
+    overflow: visible;
+    content: "❦";
+    color: var(--fg-muted-4);
+    font-size: var(--font-size-x-large);
+    text-align: center;
   }
 
   aside {
