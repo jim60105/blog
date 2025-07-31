@@ -102,21 +102,63 @@ main {
     text-align: right;
   }
 
-  blockquote {
+  blockquote[class^="markdown-alert"] {
     color: var(--fg-color);
   }
 
   blockquote:not([class^="markdown-alert"]) {
-    margin: 1em 2em;
-    border: 0.25rem solid var(--accent-color);
-    border-radius: 0.5em;
-    background-color: rgba(255, 255, 255, 0.1);
+    margin: 1em auto;
+    border-top: 0.1875rem double var(--fg-muted-2);
+    border-right: none;
+    border-bottom: 0.1875rem double var(--fg-muted-2);
+    border-left: none;
     padding: 1em;
+    color: var(--fg-muted-5);
     text-align: center;
+
+    & hr {
+      border-block-start-width: 0.1875rem;
+      border-block-start-style: revert;
+      border-block-start-color: var(--fg-muted-4);
+      width: 37.5%;
+      &::after {
+        content: "";
+      }
+    }
+
+    & a {
+      color: var(--fg-muted-5);
+    }
 
     & > p {
       margin-block-start: 0.5em;
       margin-block-end: 0.5em;
+    }
+
+    &::before {
+      display: block;
+      position: relative;
+      inset-block-start: -2.25rem;
+
+      width: 100%;
+      height: 0;
+      overflow: visible;
+      content: "❦";
+      color: var(--fg-muted-4);
+      font-size: var(--font-size-x-large);
+    }
+
+    &::after {
+      display: block;
+      position: relative;
+      inset-block-start: -0.075rem;
+
+      width: 100%;
+      height: 0;
+      overflow: visible;
+      content: "❦";
+      color: var(--fg-muted-4);
+      font-size: var(--font-size-x-large);
     }
   }
 
