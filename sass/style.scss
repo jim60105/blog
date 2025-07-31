@@ -102,13 +102,6 @@ main {
     text-align: right;
   }
 
-  p:not(.footnotes p),
-  ol:not(.footnotes ol),
-  ul:not(.footnotes ul),
-  blockquote {
-    font-size: var(--font-size-large);
-  }
-
   blockquote {
     color: var(--fg-color);
   }
