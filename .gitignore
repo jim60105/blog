@@ -29,6 +29,7 @@ dist/
 # Dual site mode - hard linked files
 /config.toml
 /wrangler.jsonc
+/frontmatter.json
 /.frontmatter/
 /content/
 /content

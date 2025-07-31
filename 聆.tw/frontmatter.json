@@ -1,0 +1,191 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string",
+          "required": true
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Modified date",
+          "name": "updated",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isModifiedDate": true
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Slug",
+          "description": "If set, this slug will be used instead of the filename to make the URL. The section path will still be used.",
+          "name": "slug",
+          "type": "slug"
+        },
+        {
+          "title": "Aliases",
+          "name": "aliases",
+          "type": "list"
+        },
+        {
+          "title": "taxonomies",
+          "name": "taxonomies",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Tags",
+              "name": "tags",
+              "type": "tags"
+            },
+            {
+              "title": "Providers",
+              "name": "providers",
+              "type": "categories"
+            }
+          ]
+        },
+        {
+          "title": "extra",
+          "name": "extra",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "katex",
+              "name": "katex",
+              "type": "boolean"
+            },
+            {
+              "title": "Card",
+              "description": "SEO image for the post.",
+              "name": "card",
+              "type": "image"
+            },
+            {
+              "title": "Banner",
+              "description": "Banner image for the post. Also used as the SEO image if Card not set.",
+              "name": "banner",
+              "type": "image",
+              "isPreviewImage": true
+            },
+            {
+              "title": "Is featured",
+              "description": "Make the post visually stand out in the post list.",
+              "name": "featured",
+              "type": "boolean"
+            },
+            {
+              "title": "Is hot",
+              "description": "Make the post visually stand out in the post list.",
+              "name": "hot",
+              "type": "boolean"
+            },
+            {
+              "title": "Is poor",
+              "description": "Make the post visually stand out in the post list.",
+              "name": "poor",
+              "type": "boolean"
+            },
+            {
+              "title": "Archived message",
+              "description": "Displays an archived message",
+              "name": "archive",
+              "type": "string"
+            },
+            {
+              "title": "Trigger Warning message",
+              "description": "Displays a trigger warning message.",
+              "name": "trigger",
+              "type": "string"
+            },
+            {
+              "title": "Disclaimer message",
+              "description": "Displays a disclaimer message.",
+              "name": "disclaimer",
+              "type": "string"
+            },
+            {
+              "title": "With AI",
+              "description": "AI used in the post.",
+              "name": "withAI",
+              "type": "string"
+            },
+            {
+              "title": "ISCN",
+              "description": "ISCN of the writing NFT.",
+              "name": "iscn",
+              "type": "string"
+            },
+            {
+              "title": "preview",
+              "name": "preview",
+              "type": "fields",
+              "fields": [
+                {
+                  "title": "Preview With AI",
+                  "description": "AI used in the preview image.",
+                  "name": "withAI",
+                  "type": "boolean"
+                },
+                {
+                  "title": "Preview Url",
+                  "description": "Url for the preview image.",
+                  "name": "url",
+                  "type": "string"
+                },
+                {
+                  "title": "Preview Description",
+                  "description": "Description for the preview image.",
+                  "name": "description",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "title": "comments",
+              "name": "comments",
+              "type": "fields",
+              "fields": [
+                {
+                  "title": "Mastodon post id",
+                  "name": "id",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "other",
+  "frontMatter.content.publicFolder": "static",
+  "frontMatter.preview.host": "http://127.0.0.1:1111",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "content",
+      "path": "[[workspace]]/content"
+    }
+  ]
+}

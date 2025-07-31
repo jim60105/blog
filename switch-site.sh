@@ -174,6 +174,7 @@ create_file_hardlinks() {
     local files=(
         "config.toml"
         "wrangler.jsonc"
+        "frontmatter.json"
         ".frontmatter/database/mediaDb.json"
         ".frontmatter/database/pinnedItemsDb.json"
         ".frontmatter/database/taxonomyDb.json"
