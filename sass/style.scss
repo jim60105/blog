@@ -109,13 +109,16 @@ main {
     font-size: var(--font-size-large);
   }
 
-  blockquote:not(.note, .tip, .important, .warning, .caution, .editor-note) {
+  blockquote {
+    color: var(--fg-color);
+  }
+
+  blockquote:not([class^="markdown-alert"]) {
     margin: 1em 2em;
     border: 0.25rem solid var(--accent-color);
     border-radius: 0.5em;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 1em;
-    color: var(--fg-color);
     text-align: center;
 
     & > p {

@@ -44,7 +44,8 @@ tracking("{{ config.extra.tracking.ga }}", "{{ config.extra.tracking.clarity }}"
 			</div>
 		{%- endif -%}
 		{% block content %}{% endblock content %}
-		{% include "partials/extra_features.html" %}
 	</main>
 	{% include "partials/footer.html" %}
+	{% include "partials/extra_features.html" %}
+	{% include "partials/strings.html" %}
 {% endblock body %}
