@@ -23,7 +23,6 @@
     "zola": "wget -O /tmp/zola.deb https://github.com/barnumbirr/zola-debian/releases/download/v0.21.0-1/zola_0.21.0-1_amd64_bookworm.deb && sudo dpkg -i /tmp/zola.deb",
     "git_submodule": "git submodule init && git submodule update"
   },
-  "postStartCommand": "nohup bash -c 'zola serve --drafts --interface 0.0.0.0 --base-url 127.0.0.1 &'",
 
   // Configure tool-specific properties.
   "customizations": {
