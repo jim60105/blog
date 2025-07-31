@@ -124,11 +124,11 @@ Display an editorial note or remark from the editor, useful for data update noti
 **Usage Example:**
 
 ```markdown
-{% editor_note() %}
+{% alert(edit=true) %}
 This article is based on 2024 data, some information may have changed.
 {% end %}
 
-{% editor_note() %}
+{% alert(edit=true) %}
 The code examples in this section have been updated to the latest API version.
 {% end %}
 ```

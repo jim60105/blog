@@ -1,0 +1,13 @@
+.markdown-alert-edit {
+  --accent-color: #38bdf8;
+}
+
+.markdown-alert-edit {
+  &::before {
+    content: var(--alert-edit-text);
+  }
+
+  &::after {
+    --icon: var(--icon-info);
+  }
+}
