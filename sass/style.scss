@@ -49,8 +49,14 @@ body {
   display: none !important;
 }
 
-// Fix the sidebar and heading margin top for mobile
 #sidebar {
+  padding: 0rem 2rem 1rem 0.5rem;
+
+  & > div {
+    padding: 0;
+  }
+
+  // Fix the sidebar and heading margin top for mobile
   @media only screen and (max-width: 1200px) {
     display: none;
   }
@@ -102,68 +108,67 @@ main {
     text-align: right;
   }
 
-  blockquote[class^="markdown-alert"] {
-    color: var(--fg-color);
-  }
+  blockquote {
+    margin: 2rem auto;
 
-  blockquote:not([class^="markdown-alert"]) {
-    margin: 1em auto;
-    border-top: 0.1875rem double var(--fg-muted-2);
-    border-right: none;
-    border-bottom: 0.1875rem double var(--fg-muted-2);
-    border-left: none;
-    padding: 1em;
-    color: var(--fg-muted-5);
-    text-align: center;
+    &[class^="markdown-alert"] {
+      color: var(--fg-color);
+    }
 
-    & hr {
-      border-block-start-width: 0.1875rem;
-      border-block-start-style: revert;
-      border-block-start-color: var(--fg-muted-4);
-      width: 37.5%;
+    &:not([class^="markdown-alert"]) {
+      border-top: 0.1875rem double var(--fg-muted-2);
+      border-right: none;
+      border-bottom: 0.1875rem double var(--fg-muted-2);
+      border-left: none;
+      padding: 1em;
+      color: var(--fg-muted-5);
+      text-align: center;
+
+      & hr {
+        border-block-start-width: 0.1875rem;
+        border-block-start-style: revert;
+        border-block-start-color: var(--fg-muted-4);
+        width: 37.5%;
+        &::after {
+          content: "";
+        }
+      }
+
+      & a {
+        color: var(--fg-muted-5);
+      }
+
+      & > p {
+        margin-block-start: 0.5em;
+        margin-block-end: 0.5em;
+      }
+
+      &::before {
+        display: block;
+        position: relative;
+        inset-block-start: -2.25rem;
+
+        width: 100%;
+        height: 0;
+        overflow: visible;
+        content: "❦";
+        color: var(--fg-muted-4);
+        font-size: var(--font-size-x-large);
+      }
+
       &::after {
-        content: "";
+        display: block;
+        position: relative;
+        inset-block-start: -0.075rem;
+
+        width: 100%;
+        height: 0;
+        overflow: visible;
+        content: "❦";
+        color: var(--fg-muted-4);
+        font-size: var(--font-size-x-large);
       }
     }
-
-    & a {
-      color: var(--fg-muted-5);
-    }
-
-    & > p {
-      margin-block-start: 0.5em;
-      margin-block-end: 0.5em;
-    }
-
-    &::before {
-      display: block;
-      position: relative;
-      inset-block-start: -2.25rem;
-
-      width: 100%;
-      height: 0;
-      overflow: visible;
-      content: "❦";
-      color: var(--fg-muted-4);
-      font-size: var(--font-size-x-large);
-    }
-
-    &::after {
-      display: block;
-      position: relative;
-      inset-block-start: -0.075rem;
-
-      width: 100%;
-      height: 0;
-      overflow: visible;
-      content: "❦";
-      color: var(--fg-muted-4);
-      font-size: var(--font-size-x-large);
-    }
-  }
-
-  article hr {
-    margin: 1em auto;
   }
 
   sup {
