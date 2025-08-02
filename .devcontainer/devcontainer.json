@@ -52,6 +52,12 @@
         "onesdev.vscode-paste-image-plus"
       ]
     }
+  },
+
+  "hostRequirements":{
+    "cpus": 4,
+    "memory": "4gb",
+    "storage": "20gb"
   }
 
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
