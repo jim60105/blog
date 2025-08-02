@@ -26,6 +26,16 @@
 
   // Configure tool-specific properties.
   "customizations": {
+    "codespaces": {
+      "repositories": {
+        "jim60105/ai-talks-content": {
+          "permissions": "write-all"
+        },
+        "jim60105/blog-content": {
+          "permissions": "write-all"
+        }
+      }
+    },
     "vscode": {
       "extensions": [
         "esbenp.prettier-vscode",
