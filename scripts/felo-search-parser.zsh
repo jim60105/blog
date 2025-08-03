@@ -348,8 +348,10 @@ extract_answers() {
         return
     fi
     
-    # Extract all answers and combine them with offset reference numbering
+    # Extract all messages and pair them correctly
     local all_answers=""
+    
+    # Process messages in index order to maintain conversation flow
     for ((i=0; i<questions_count; i++)); do
         # Use jq directly to avoid variable assignment in command substitution
         local query_text=$(jq -r ".messages[$i].query // empty" "$json_file" 2>/dev/null)
@@ -362,6 +364,16 @@ extract_answers() {
         # Trim all leading and trailing whitespace and line breaks from response_text (zsh native)
         response_text="${response_text#"${response_text%%[!$' \t\r\n']*}"}"
         response_text="${response_text%"${response_text##*[!$' \t\r\n']}"}"
+        
+        if [[ -n "$query_text" && "$query_text" != "null" ]]; then
+            # Add human message chat block
+            local human_block="{% chat(speaker=\"jim\") %}\n$query_text\n{% end %}"
+            if [[ -n "$all_answers" ]]; then
+                all_answers="$all_answers\n\n$human_block"
+            else
+                all_answers="$human_block"
+            fi
+        fi
         
         if [[ -n "$response_text" && "$response_text" != "null" ]]; then
             # Apply reference number offset for this message (i * 1000)
@@ -379,21 +391,12 @@ extract_answers() {
                 done
             fi
             
+            # Add assistant message chat block
+            local assistant_block="{% chat(speaker=\"felo\") %}\n$adjusted_answer\n{% end %}"
             if [[ -n "$all_answers" ]]; then
-                read -r -d '' all_answers_part << EOM
-{% chat(speaker="jim") %}
-$query_text
-{% end %}
-
-{% chat(speaker="felo") %}
-根據搜尋結果，我將詳細分析相關問題。
-{% end %}
-
-$adjusted_answer
-EOM
-                all_answers="$all_answers\n\n$all_answers_part"
+                all_answers="$all_answers\n\n$assistant_block"
             else
-                all_answers="$adjusted_answer"
+                all_answers="$assistant_block"
             fi
         fi
     done
@@ -403,7 +406,7 @@ EOM
     fi
     
     exec 2>&4  # Restore stderr
-    printf '%s\n' "$all_answers"
+    printf "%b\n" "$all_answers"
 }
 
 # Extract total references count from JSON data

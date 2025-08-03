@@ -314,14 +314,6 @@ providers = [ "$provider_name" ]
 [extra]
 withAI = "<$with_ai_url>"
 +++
-{% chat(speaker="jim") %}
-$first_question
-{% end %}
-
-{% chat(speaker="$assistant_speaker") %}
-根據搜尋結果，我將詳細分析相關問題。
-{% end %}
-
 $clean_answers
 
 EOFMD

@@ -271,72 +271,94 @@ fetch_api_content() {
 # This pattern should be used in ALL similar provider implementations to prevent
 # shell variable assignment trace contamination in command substitution contexts.
 extract_questions() {
+    # Force clean environment but keep stderr for debugging
+    set +x +v +o xtrace +o verbose 2>/dev/null || true
+    
     local json_file="$1"
     
     log_debug "Extracting questions from chat messages"
     
-    # Extract all human messages
-    local questions=""
+    # Check if file exists and validate
+    if [[ ! -f "$json_file" ]]; then
+        echo "Error - JSON file not found"
+        return
+    fi
+    
+    local file_size=$(wc -c < "$json_file")
+    if [[ "$file_size" -lt 100 ]]; then
+        echo "Error - JSON file too small ($file_size bytes)"
+        return
+    fi
+    
     local message_count
     message_count=$(jq '.chat_messages | length' "$json_file" 2>/dev/null || echo "0")
     
-    for ((i=0; i<message_count; i++)); do
-        if [[ "$(jq -r ".chat_messages[$i].sender // empty" "$json_file" 2>/dev/null)" == "human" ]]; then
-            local message_text
-            message_text=$(jq -r ".chat_messages[$i].text // empty" "$json_file" 2>/dev/null)
-            
-            if [[ -n "$message_text" && "$message_text" != "null" ]]; then
-                if [[ -z "$questions" ]]; then
-                    questions="$message_text"
-                else
-                    questions="$questions\n\n---\n\n$message_text"
-                fi
-            fi
-        fi
-    done
-    
-    if [[ -z "$questions" ]]; then
+    if [[ "$message_count" -eq 0 ]]; then
         # Use snapshot name as fallback
-        questions=$(jq -r '.snapshot_name // "Claude Chat Conversation"' "$json_file" 2>/dev/null)
+        jq -r '.snapshot_name // "Claude Chat Conversation"' "$json_file" 2>/dev/null
+        return
     fi
     
-    echo "$questions"
+    # Extract ONLY the first human message for AI metadata generation
+    # This prevents overly long composite questions that confuse AI
+    jq -r '.chat_messages[] | select(.sender == "human") | .text' "$json_file" 2>/dev/null | head -n 1 || echo "Claude Chat Conversation"
 }
 
-# Extract answers from chat messages
-# IMPORTANT: Same contamination fix as extract_questions() - see above comment
-# Use jq directly in conditionals instead of variable assignments to prevent
-# shell trace output from contaminating command substitution results.
 extract_answers() {
+    # Force clean environment and redirect any potential debug output
+    set +x +v +o xtrace +o verbose 2>/dev/null || true
+    exec 4>&2  # Save stderr
+    exec 2>/dev/null  # Redirect stderr to /dev/null
+    
     local json_file="$1"
     
-    log_debug "Extracting answers from chat messages"
-    
-    # Extract all assistant messages
-    local answers=""
     local message_count
     message_count=$(jq '.chat_messages | length' "$json_file" 2>/dev/null || echo "0")
     
+    if [[ "$message_count" -eq 0 ]]; then
+        echo "Answer content not available."
+        exec 2>&4  # Restore stderr
+        return
+    fi
+    
+    # Extract all messages and pair them correctly
+    local all_answers=""
+    local current_human_msg=""
+    
+    # Process messages in index order to maintain conversation flow
     for ((i=0; i<message_count; i++)); do
-        if [[ "$(jq -r ".chat_messages[$i].sender // empty" "$json_file" 2>/dev/null)" == "assistant" ]]; then
-            local message_text
-            message_text=$(jq -r ".chat_messages[$i].text // empty" "$json_file" 2>/dev/null)
-            
-            if [[ -n "$message_text" && "$message_text" != "null" ]]; then
-                if [[ -z "$answers" ]]; then
-                    answers="$message_text"
-                else
-                    answers="$answers\n\n$message_text"
-                fi
+        local sender=$(jq -r ".chat_messages[$i].sender // empty" "$json_file" 2>/dev/null)
+        local message_text=$(jq -r ".chat_messages[$i].text // empty" "$json_file" 2>/dev/null)
+        
+        # Clean up message text
+        message_text="${message_text#"${message_text%%[!$' \t\r\n']*}"}"
+        message_text="${message_text%"${message_text##*[!$' \t\r\n']}"}"
+        
+        if [[ "$sender" == "human" && -n "$message_text" && "$message_text" != "null" ]]; then
+            # Add human message chat block
+            local human_block="{% chat(speaker=\"jim\") %}\n$message_text\n{% end %}"
+            if [[ -n "$all_answers" ]]; then
+                all_answers="$all_answers\n\n$human_block"
+            else
+                all_answers="$human_block"
+            fi
+        elif [[ "$sender" == "assistant" && -n "$message_text" && "$message_text" != "null" ]]; then
+            # Add assistant message chat block
+            local assistant_block="{% chat(speaker=\"claude\") %}\n$message_text\n{% end %}"
+            if [[ -n "$all_answers" ]]; then
+                all_answers="$all_answers\n\n$assistant_block"
+            else
+                all_answers="$assistant_block"
             fi
         fi
     done
     
-    if [[ -z "$answers" ]]; then
-        answers="Answer content not available."
+    if [[ -z "$all_answers" ]]; then
+        all_answers="Answer content not available."
     fi
     
-    echo "$answers"
+    exec 2>&4  # Restore stderr
+    printf "%b\n" "$all_answers"
 }
 
 # Extract creation date from chat snapshot
