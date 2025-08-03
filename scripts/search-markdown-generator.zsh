@@ -310,7 +310,6 @@ draft = false
 [taxonomies]
 tags = $formatted_tags
 providers = [ "$provider_name" ]
-licenses = [ "GFDL 1.3" ]
 
 [extra]
 withAI = "<$with_ai_url>"
