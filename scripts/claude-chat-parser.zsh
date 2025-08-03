@@ -249,10 +249,7 @@ extract_questions() {
     message_count=$(jq '.chat_messages | length' "$json_file" 2>/dev/null || echo "0")
     
     for ((i=0; i<message_count; i++)); do
-        local sender
-        sender=$(jq -r ".chat_messages[$i].sender // empty" "$json_file" 2>/dev/null)
-        
-        if [[ "$sender" == "human" ]]; then
+        if [[ "$(jq -r ".chat_messages[$i].sender // empty" "$json_file" 2>/dev/null)" == "human" ]]; then
             local message_text
             message_text=$(jq -r ".chat_messages[$i].text // empty" "$json_file" 2>/dev/null)
             
@@ -286,10 +283,7 @@ extract_answers() {
     message_count=$(jq '.chat_messages | length' "$json_file" 2>/dev/null || echo "0")
     
     for ((i=0; i<message_count; i++)); do
-        local sender
-        sender=$(jq -r ".chat_messages[$i].sender // empty" "$json_file" 2>/dev/null)
-        
-        if [[ "$sender" == "assistant" ]]; then
+        if [[ "$(jq -r ".chat_messages[$i].sender // empty" "$json_file" 2>/dev/null)" == "assistant" ]]; then
             local message_text
             message_text=$(jq -r ".chat_messages[$i].text // empty" "$json_file" 2>/dev/null)
             
