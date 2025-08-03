@@ -144,6 +144,8 @@ bottom_footnotes = true
 # See "Internal links & deep linking" in the documentation for more information.
 insert_anchor_links = "none"
 
+github_alerts = true
+
 # Configuration of the link checker.
 [link_checker]
 # Skip link checking for external URLs that start with these prefixes
