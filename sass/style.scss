@@ -231,6 +231,12 @@ main {
   code:not(pre code) {
     color: #66d9ff;
   }
+
+  iframe {
+    background: none transparent;
+    width: min(calc(var(--container-width) / 2), 100%);
+    color-scheme: auto;
+  }
 }
 
 footer {
