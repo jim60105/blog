@@ -227,6 +227,10 @@ main {
   #article-list article h3 {
     font-family: var(--font-antique), var(--font-system-ui);
   }
+
+  code:not(pre code) {
+    color: #66d9ff;
+  }
 }
 
 footer {
