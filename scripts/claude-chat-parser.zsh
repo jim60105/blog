@@ -175,22 +175,22 @@ fetch_api_content() {
     # Use curl to fetch content with comprehensive headers
     if command -v curl >/dev/null 2>&1; then
         curl -s -L \
-            -H "User-Agent: $user_agent" \
-            -H "Accept: application/json, text/plain, */*" \
-            -H "Accept-Language: en-US,en;q=0.9" \
-            -H "Accept-Encoding: gzip, deflate, br" \
-            -H "DNT: 1" \
-            -H "Connection: keep-alive" \
-            -H "Upgrade-Insecure-Requests: 1" \
-            -H "Sec-Fetch-Dest: empty" \
-            -H "Sec-Fetch-Mode: cors" \
-            -H "Sec-Fetch-Site: same-origin" \
-            -H "Cache-Control: no-cache" \
-            -H "Pragma: no-cache" \
-            --compressed \
-            -D "$temp_headers" \
-            -o "$temp_file" \
-            "$api_url"
+        -H "User-Agent: $user_agent" \
+        -H "Accept: application/json, text/plain, */*" \
+        -H "Accept-Language: en-US,en;q=0.9" \
+        -H "Accept-Encoding: gzip, deflate, br" \
+        -H "DNT: 1" \
+        -H "Connection: keep-alive" \
+        -H "Upgrade-Insecure-Requests: 1" \
+        -H "Sec-Fetch-Dest: empty" \
+        -H "Sec-Fetch-Mode: cors" \
+        -H "Sec-Fetch-Site: same-origin" \
+        -H "Cache-Control: no-cache" \
+        -H "Pragma: no-cache" \
+        --compressed \
+        -D "$temp_headers" \
+        -o "$temp_file" \
+        "$api_url"
         local curl_exit_code=$?
         
         if [[ $curl_exit_code -ne 0 ]]; then
@@ -255,16 +255,16 @@ fetch_api_content() {
 
 # Extract questions from chat messages
 # IMPORTANT: Avoid variable assignment contamination in command substitution!
-# 
+#
 # BUG FIX NOTE: Previously used pattern like:
 #   local sender
 #   sender=$(jq -r ".chat_messages[$i].sender // empty" "$json_file" 2>/dev/null)
 #   if [[ "$sender" == "human" ]]; then
-# 
+#
 # This caused shell trace output "sender=human" to contaminate the function's
 # return value through command substitution, resulting in markdown content like:
 #   "sender=human\npython how to know..."
-# 
+#
 # SOLUTION: Use jq directly in conditionals to avoid variable assignments:
 #   if [[ "$(jq -r ".chat_messages[$i].sender // empty" "$json_file" 2>/dev/null)" == "human" ]]; then
 #
@@ -526,17 +526,17 @@ main() {
                 DEBUG_MODE=true
                 log_debug "Debug mode enabled"
                 shift
-                ;;
+            ;;
             --test)
                 test_mode=true
                 log_debug "Test mode enabled - using mock data"
                 shift
-                ;;
+            ;;
             https://claude.ai/share/*)
                 url_arg="$1"
                 log_debug "URL argument found: $url_arg"
                 shift
-                ;;
+            ;;
             -h|--help)
                 echo "Usage: $0 [--debug] [--test] [URL]"
                 echo "  URL: Claude chat share URL (https://claude.ai/share/{uuid})"
@@ -544,11 +544,11 @@ main() {
                 echo "  --test: Use mock data for testing"
                 echo "  --help: Show this help message"
                 exit 0
-                ;;
+            ;;
             *)
                 log_error "Unknown argument: $1"
                 exit 1
-                ;;
+            ;;
         esac
     done
     
@@ -614,6 +614,6 @@ if [[ "$0" == */claude-chat-parser.zsh ]]; then
             ;;
         esac
     done
-
+    
     main "$@"
 fi
