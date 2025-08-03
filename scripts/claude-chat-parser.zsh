@@ -345,17 +345,10 @@ extract_creation_date() {
     
     log_debug "Extracting creation date from chat snapshot"
     
-    # Use snapshot created_at first
+    # Use first message time
     local snapshot_created_at
-    snapshot_created_at=$(jq -r '.created_at // empty' "$json_file" 2>/dev/null)
-    
-    # Fallback to first message time if needed
-    if [[ -z "$snapshot_created_at" || "$snapshot_created_at" == "null" ]]; then
-        snapshot_created_at=$(jq -r '.chat_messages[0].created_at // empty' "$json_file" 2>/dev/null)
-        log_debug "Using first message created_at: $snapshot_created_at"
-    else
-        log_debug "Using snapshot created_at: $snapshot_created_at"
-    fi
+    snapshot_created_at=$(jq -r '.chat_messages[0].created_at // empty' "$json_file" 2>/dev/null)
+    log_debug "Using first message created_at: $snapshot_created_at"
     
     # Convert to Zola compatible format
     if [[ -n "$snapshot_created_at" && "$snapshot_created_at" != "null" ]]; then
