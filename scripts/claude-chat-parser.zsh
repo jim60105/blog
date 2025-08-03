@@ -33,6 +33,22 @@
 # - jq
 # - date
 # - search-markdown-generator.zsh (library)
+#
+# CRITICAL IMPLEMENTATION NOTE for similar provider scripts:
+# ========================================================
+# When extracting data from JSON with jq in loops, AVOID this pattern:
+#   local sender
+#   sender=$(jq -r ".messages[$i].sender" "$file")
+#   if [[ "$sender" == "value" ]]; then
+#
+# This can cause shell trace contamination where "sender=value" gets mixed
+# into command substitution output, corrupting extracted content.
+#
+# ALWAYS use jq directly in conditionals instead:
+#   if [[ "$(jq -r ".messages[$i].sender" "$file")" == "value" ]]; then
+#
+# This prevents variable assignment traces from contaminating function returns.
+# See extract_questions() and extract_answers() for proper implementation examples.
 
 # Load markdown generator library
 SCRIPT_DIR="$(dirname "$0")"
@@ -238,6 +254,22 @@ fetch_api_content() {
 }
 
 # Extract questions from chat messages
+# IMPORTANT: Avoid variable assignment contamination in command substitution!
+# 
+# BUG FIX NOTE: Previously used pattern like:
+#   local sender
+#   sender=$(jq -r ".chat_messages[$i].sender // empty" "$json_file" 2>/dev/null)
+#   if [[ "$sender" == "human" ]]; then
+# 
+# This caused shell trace output "sender=human" to contaminate the function's
+# return value through command substitution, resulting in markdown content like:
+#   "sender=human\npython how to know..."
+# 
+# SOLUTION: Use jq directly in conditionals to avoid variable assignments:
+#   if [[ "$(jq -r ".chat_messages[$i].sender // empty" "$json_file" 2>/dev/null)" == "human" ]]; then
+#
+# This pattern should be used in ALL similar provider implementations to prevent
+# shell variable assignment trace contamination in command substitution contexts.
 extract_questions() {
     local json_file="$1"
     
@@ -272,6 +304,9 @@ extract_questions() {
 }
 
 # Extract answers from chat messages
+# IMPORTANT: Same contamination fix as extract_questions() - see above comment
+# Use jq directly in conditionals instead of variable assignments to prevent
+# shell trace output from contaminating command substitution results.
 extract_answers() {
     local json_file="$1"
     
