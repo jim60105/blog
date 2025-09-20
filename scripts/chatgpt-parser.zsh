@@ -70,11 +70,11 @@ log_debug() {
 # Check if required tools are available
 check_dependencies() {
     log_info "Checking dependencies..."
-    log_debug "Checking for required tools: curl, jq, grep, sed"
+    log_debug "Checking for required tools: curl, jq, grep, sed, python3"
     
     local missing_tools=()
     
-    for tool in curl jq grep sed; do
+    for tool in curl jq grep sed python3; do
         if ! command -v "$tool" >/dev/null 2>&1; then
             missing_tools+=("$tool")
             log_debug "$tool: NOT FOUND"
@@ -125,7 +125,7 @@ fetch_html_content() {
     # Use curl with proper headers to fetch the HTML
     local user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
     
-    if ! curl -s -L \
+    if ! curl -s -L --compressed \
         -H "User-Agent: $user_agent" \
         -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" \
         -H "Accept-Language: en-US,en;q=0.5" \
@@ -163,20 +163,250 @@ extract_json_from_html() {
     
     log_info "Extracting conversation data from HTML..."
     log_debug "Processing HTML file: $html_file"
+    local python_debug="false"
+    if [[ "$DEBUG_MODE" == "true" ]]; then
+        local preview="$(head -c 120 "$html_file" | tr '\n' ' ')"
+        log_debug "HTML preview: ${preview}"
+        cp "$html_file" /tmp/chatgpt-parser-debug.html 2>/dev/null || true
+        python_debug="true"
+    fi
     
-    # Extract all streamController.enqueue calls and combine the JSON strings
-    # These calls contain the serialized conversation data
-    grep -o "window\.__reactRouterContext\.streamController\.enqueue([^)]*)" "$html_file" | \
-    sed -E 's/window\.__reactRouterContext\.streamController\.enqueue\(//' | \
-    sed -E 's/\)$//' | \
-    # Combine all JSON chunks into a single array
-    jq -s '.' > "$json_file" 2>/dev/null
-    
-    if [[ ! -s "$json_file" ]]; then
+    if ! CHATGPT_PARSER_DEBUG="$python_debug" python3 - <<'PY' "$html_file" "$json_file"; then
+import json
+import re
+import sys
+from functools import lru_cache
+from pathlib import Path
+import os
+
+html_path, json_path = sys.argv[1:3]
+
+try:
+    text = Path(html_path).read_text(encoding="utf-8", errors="ignore")
+except Exception as exc:  # pragma: no cover - defensive
+    print(f"Failed to read HTML file: {exc}", file=sys.stderr)
+    sys.exit(1)
+
+pattern = re.compile(re.escape('window.__reactRouterContext.streamController.enqueue('))
+chunks = []
+for match in pattern.finditer(text):
+    idx = match.end()
+    if idx >= len(text) or text[idx] != '"':
+        continue
+    idx += 1
+    chunk_chars = ['"']
+    escaped = False
+    while idx < len(text):
+        ch = text[idx]
+        chunk_chars.append(ch)
+        if not escaped and ch == '"':
+            break
+        if escaped:
+            escaped = False
+        elif ch == '\\':
+            escaped = True
+        idx += 1
+    if chunk_chars[-1] != '"':
+        continue
+    chunk = ''.join(chunk_chars)
+    chunks.append(chunk)
+if os.environ.get("CHATGPT_PARSER_DEBUG") == "true":
+    print(f"HTML length: {len(text)} bytes", file=sys.stderr)
+    print(f"Found {len(chunks)} stream chunks", file=sys.stderr)
+if not chunks:
+    print("No React Router stream data found in HTML", file=sys.stderr)
+    sys.exit(1)
+
+try:
+    stream_payload = json.loads(json.loads(chunks[0]))
+except json.JSONDecodeError as exc:
+    print(f"Failed to decode stream payload: {exc}", file=sys.stderr)
+    sys.exit(1)
+
+length = len(stream_payload)
+sentinels = {-5: None, -7: False}
+resolving = set()
+
+
+def decode(value):
+    if isinstance(value, int):
+        return decode_index(value)
+    if isinstance(value, dict):
+        result = {}
+        for key, inner in value.items():
+            if isinstance(key, str) and key.startswith("_") and key[1:].isdigit():
+                resolved_key = decode_index(int(key[1:]))
+            else:
+                resolved_key = decode(key)
+            result[resolved_key] = decode(inner)
+        return result
+    if isinstance(value, list):
+        return [decode(item) for item in value]
+    return value
+
+
+@lru_cache(maxsize=None)
+def decode_index(idx):
+    if idx in sentinels:
+        return sentinels[idx]
+    if not (0 <= idx < length):
+        return idx
+    if idx in resolving:
+        return None
+    resolving.add(idx)
+    try:
+        result = decode(stream_payload[idx])
+    finally:
+        resolving.remove(idx)
+    return result
+
+
+conversation_data = None
+for i in range(length):
+    resolved = decode_index(i)
+    if not isinstance(resolved, dict):
+        continue
+    server_resp = resolved.get("serverResponse")
+    if not isinstance(server_resp, dict):
+        continue
+    data = server_resp.get("data")
+    if isinstance(data, dict) and "mapping" in data:
+        conversation_data = data
+        break
+
+if not conversation_data:
+    print("Failed to locate conversation data in stream payload", file=sys.stderr)
+    sys.exit(1)
+
+simplified = {
+    "title": conversation_data.get("title"),
+    "create_time": conversation_data.get("create_time"),
+    "update_time": conversation_data.get("update_time"),
+    "mapping": {},
+}
+
+mapping = conversation_data.get("mapping", {})
+if not isinstance(mapping, dict):
+    print("Conversation mapping structure is invalid", file=sys.stderr)
+    sys.exit(1)
+
+for key, node in mapping.items():
+    if not isinstance(node, dict):
+        continue
+    entry = {}
+    for field in ("id", "message", "parent", "children"):
+        if field in node:
+            entry[field] = node[field]
+    simplified["mapping"][key] = entry
+
+# Build ordered messages list with reference metadata
+messages_list = []
+for key, node in mapping.items():
+    if not isinstance(node, dict):
+        continue
+    message = node.get("message")
+    if not isinstance(message, dict):
+        continue
+    author = message.get("author") or {}
+    role = author.get("role")
+    if role not in ("user", "assistant"):
+        continue
+
+    content_obj = message.get("content") or {}
+    parts = content_obj.get("parts")
+    if isinstance(parts, list):
+        content = "".join(
+            part if isinstance(part, str) else json.dumps(part, ensure_ascii=False)
+            for part in parts
+        )
+    else:
+        content = ""
+
+    metadata = message.get("metadata") or {}
+    raw_refs = metadata.get("content_references") or []
+    references = []
+    if raw_refs:
+        ref_map = {}
+        for ref in raw_refs:
+            if not isinstance(ref, dict):
+                continue
+            matched_text = ref.get("matched_text") or ""
+            match = re.search(r"【(\d+)", matched_text)
+            if not match:
+                continue
+            number = int(match.group(1))
+            title = ref.get("title") or ref.get("source") or ""
+            url = ref.get("url") or ref.get("link") or ""
+            if not url:
+                continue
+            info = ref_map.setdefault(number, {
+                "number": number,
+                "title": title,
+                "url": url,
+                "attribution": ref.get("attribution") or "",
+                "matched_texts": set(),
+            })
+            if not info["title"] and title:
+                info["title"] = title
+            if not info["url"] and url:
+                info["url"] = url
+            if matched_text:
+                info["matched_texts"].add(matched_text)
+
+        for number in sorted(ref_map):
+            info = ref_map[number]
+            matched_texts = sorted(info["matched_texts"])
+            for matched_text in matched_texts:
+                content = content.replace(matched_text, f"[{number}]")
+            # Collapse consecutive duplicate references like [27][27]
+            content = re.sub(r"\[(\d+)\](\[\1\])+", r"[\1]", content)
+            references.append({
+                "number": number,
+                "title": info["title"],
+                "url": info["url"],
+                "matched_text": matched_texts[0] if matched_texts else "",
+                "matched_texts": matched_texts,
+                "attribution": info["attribution"],
+            })
+
+    normalized_content = content.strip()
+    if normalized_content.lower() == "original custom instructions no longer available":
+        continue
+
+    messages_list.append({
+        "id": node.get("id") or key,
+        "role": role,
+        "content": content,
+        "create_time": message.get("create_time"),
+        "parent": node.get("parent"),
+        "references": references,
+    })
+
+def _sort_key(entry):
+    create_time = entry.get("create_time")
+    try:
+        return (0, float(create_time))
+    except (TypeError, ValueError):
+        return (1, 0.0)
+
+messages_list.sort(key=_sort_key)
+simplified["messages"] = messages_list
+
+try:
+    Path(json_path).write_text(json.dumps(simplified, ensure_ascii=False), encoding="utf-8")
+except Exception as exc:  # pragma: no cover - defensive
+    print(f"Failed to write JSON file: {exc}", file=sys.stderr)
+    sys.exit(1)
+PY
         log_error "Failed to extract JSON data from HTML"
         return 1
     fi
-    
+
+    if [[ ! -s "$json_file" ]]; then
+        log_error "No conversation data extracted from HTML"
+        return 1
+    fi
+
     log_success "Successfully extracted JSON data"
     return 0
 }
@@ -199,7 +429,8 @@ parse_conversation_data() {
                 title: .title,
                 create_time: .create_time,
                 update_time: .update_time,
-                mapping: .mapping
+                mapping: .mapping,
+                messages: (.messages // empty)
             }
         else empty end
     ' "$json_file" 2>/dev/null)
@@ -214,7 +445,8 @@ parse_conversation_data() {
                     title: .title,
                     create_time: .create_time,
                     update_time: .update_time,
-                    mapping: .mapping
+                    mapping: .mapping,
+                    messages: (.messages // empty)
                 }
             else empty end
         ' "$json_file" 2>/dev/null | head -1)
@@ -239,21 +471,34 @@ extract_messages() {
     # Extract messages from the mapping structure
     # The mapping contains message IDs as keys and message objects as values
     echo "$conversation_data" | jq -r '
-        .mapping | to_entries | 
-        # Filter for actual messages (not empty objects)
-        map(select(.value | has("message"))) |
-        # Extract message details
+        if has("messages") then
+            .messages
+        else
+            .mapping
+            | to_entries
+            | map(select(.value | has("message")))
+            | map({
+                id: (.value.id // .key),
+                role: (.value.message.author.role // ""),
+                content: ((.value.message.content.parts // [])
+                    | map(if type == "string" then . else tostring end)
+                    | join("")
+                ),
+                create_time: (.value.message.create_time // null),
+                parent: (.value.parent // null),
+                references: []
+            })
+            | sort_by(.create_time)
+        end |
+        map(select((.role == "user" or .role == "assistant") and (.content | length > 0))) |
         map({
-            id: .key,
-            role: .value.message.author.role,
-            content: (.value.message.content.parts // []) | join(""),
-            create_time: .value.message.create_time,
-            parent: .value.parent
-        }) |
-        # Sort by create_time to get chronological order
-        sort_by(.create_time) |
-        # Filter out system messages and empty content
-        map(select(.role != "system" and (.content | length > 0)))
+            id: .id,
+            role: .role,
+            content: .content,
+            create_time: .create_time,
+            parent: (.parent // null),
+            references: (.references // [])
+        })
     '
 }
 
@@ -322,14 +567,8 @@ extract_answers() {
     echo "$messages" | jq -c '.[]' | while IFS= read -r message; do
         local role=$(echo "$message" | jq -r '.role')
         local content=$(echo "$message" | jq -r '.content')
-        local create_time=$(echo "$message" | jq -r '.create_time')
         
         if [[ -n "$content" && "$content" != "null" ]]; then
-            local formatted_time=""
-            if [[ -n "$create_time" && "$create_time" != "null" ]]; then
-                formatted_time=$(format_timestamp "${create_time%.*}")  # Remove decimal part
-            fi
-            
             local speaker=""
             if [[ "$role" == "user" ]]; then
                 speaker="user"
@@ -340,13 +579,12 @@ extract_answers() {
             fi
             
             # Add message with chat block format
-            local chat_block="{% chat(speaker=\"$speaker\") %}${formatted_time:+ ($formatted_time)}
+            local chat_block="{% chat(speaker=\"$speaker\") %}
 $content
 {% end %}"
             
             # Append to temp file to avoid subshell variable issues
             if [[ -s "$temp_result" ]]; then
-                echo "" >> "$temp_result"
                 echo "" >> "$temp_result"
             fi
             echo "$chat_block" >> "$temp_result"
@@ -433,7 +671,12 @@ parse_content() {
     # Extract data
     EXTRACTED_QUESTION=$(extract_questions "$json_file")
     EXTRACTED_ANSWER=$(extract_answers "$json_file")
-    EXTRACTED_REF_COUNT=0  # ChatGPT conversations typically don't include references
+    local ref_count
+    ref_count=$(jq '[.messages[]? | (.references // [])[]? | .number] | unique | length' "$json_file" 2>/dev/null || echo "0")
+    if [[ -z "$ref_count" || "$ref_count" == "null" ]]; then
+        ref_count=0
+    fi
+    EXTRACTED_REF_COUNT="$ref_count"
     EXTRACTED_CREATION_DATE=$(extract_creation_date "$json_file")
     EXTRACTED_JSON_FILE="$json_file"
     
@@ -483,60 +726,6 @@ process_content_workflow() {
     return 0
 }
 
-# Test mode with mock data
-run_test_mode() {
-    log_info "Running in test mode with mock data"
-    
-    # Create mock JSON data that simulates ChatGPT conversation structure
-    local test_json=$(mktemp)
-    cat > "$test_json" << 'EOJSON'
-{
-  "title": "Ready 金屬卡介紹",
-  "create_time": 1737530602,
-  "update_time": 1737531688,
-  "mapping": {
-    "msg1": {
-      "message": {
-        "author": { "role": "user" },
-        "content": { "parts": ["Introducing the Ready (formerly Argent) metal card and its relative Starknet ecosystem. How does Ready's metal card work, and what are the features that make it unique in the crypto debit card space?"] },
-        "create_time": 1737530539
-      },
-      "parent": null
-    },
-    "msg2": {
-      "message": {
-        "author": { "role": "assistant" },
-        "content": { "parts": ["為了更完整地協助你，請問你希望我針對哪些方面深入說明 Ready 金屬卡與 Starknet 生態系？我可以從以下角度來分析：\n\n## Ready 金屬卡的核心特色\n\n**技術架構**\n- 基於 Starknet Layer 2 解決方案運行\n- 採用零知識證明技術確保交易隱私與安全\n- 支援多種加密貨幣的即時兌換與支付\n\n**實用功能**\n- 全球 ATM 提款支援\n- 線上線下商家消費無縫體驗\n- 即時匯率轉換，無隱藏手續費\n- 完整的消費記錄與分析工具\n\n**獨特優勢**\n- 整合 DeFi 協議，可直接使用 DeFi 收益進行日常消費\n- 支援 Starknet 生態內的 dApp 互動\n- 提供流動性挖礦回饋機制\n\n請讓我知道你最感興趣的是哪個面向，我會提供更詳細的說明！"] },
-        "create_time": 1737530539
-      },
-      "parent": "msg1"
-    }
-  }
-}
-EOJSON
-    
-    # Set up test data
-    EXTRACTED_QUESTION=$(extract_questions "$test_json")
-    EXTRACTED_ANSWER=$(extract_answers "$test_json")
-    EXTRACTED_REF_COUNT=0
-    EXTRACTED_CREATION_DATE=$(extract_creation_date "$test_json")
-    EXTRACTED_JSON_FILE="$test_json"
-    
-    log_success "Test data prepared successfully"
-    log_info "Question: $(echo "$EXTRACTED_QUESTION" | head -c 100)..."
-    log_info "Answer length: $(echo "$EXTRACTED_ANSWER" | wc -c) characters"
-    log_info "Creation date: $EXTRACTED_CREATION_DATE"
-    
-    # Generate markdown file
-    local original_url="https://chatgpt.com/share/test-68ce7802-f13c-8005-99de-7e232493e0d0"
-    local provider_name="ChatGPT"
-    local assistant_speaker="chatgpt"
-    local with_ai_url="$original_url"
-    
-    generate_markdown_file "$original_url" "$EXTRACTED_QUESTION" "$EXTRACTED_ANSWER" "$EXTRACTED_JSON_FILE" "$EXTRACTED_REF_COUNT" "$EXTRACTED_CREATION_DATE" "$provider_name" "$assistant_speaker" "$with_ai_url"
-    
-    log_success "Test completed successfully!"
-}
 prompt_for_url() {
     log_info "ChatGPT Conversation Parser"
     echo -e "\nPlease enter the ChatGPT share URL:" >&2
@@ -565,18 +754,12 @@ prompt_for_url() {
 main() {
     # Parse command line arguments first
     local url_arg=""
-    local test_mode=false
     
     while [[ $# -gt 0 ]]; do
         case $1 in
             --debug)
                 DEBUG_MODE=true
                 log_debug "Debug mode enabled in main"
-                shift
-            ;;
-            --test)
-                test_mode=true
-                log_debug "Test mode enabled"
                 shift
             ;;
             https://*|http://*)
@@ -611,11 +794,6 @@ main() {
         exit 1
     fi
     
-    # Test mode for development
-    if [[ "$test_mode" == "true" ]]; then
-        run_test_mode
-        exit 0
-    fi
     
     # Get URL
     local url

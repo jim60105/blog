@@ -363,41 +363,70 @@ add_reference_data() {
     local used_refs_file="$2"
     local json_file="$3"
     
-    log_debug "Adding reference data to markdown file from all messages with offset numbering"
-    
-    echo "" >> "$output_file"
+    log_debug "Adding reference data to markdown file"
     
     local added_count=0
-    local questions_count
-    questions_count=$(jq '.messages | length' "$json_file" 2>/dev/null || echo "0")
+    local modern_ref_count
+    modern_ref_count=$(jq '[.messages[]? | (.references // [])[]?] | length' "$json_file" 2>/dev/null || echo "0")
     
-    # Process references from all messages with offset numbering
-    for ((i=0; i<questions_count; i++)); do
-        local msg_ref_count
-        msg_ref_count=$(jq ".messages[$i].recall_contexts | length" "$json_file" 2>/dev/null || echo "0")
-        local offset=$((i * 1000))  # Offset for this message
-        
-        for ((j=0; j<msg_ref_count; j++)); do
-            local original_ref_num=$((j + 1))  # Original reference number (1-based)
-            local offset_ref_num=$((original_ref_num + offset))  # Offset reference number
-            
-            # Check if this offset reference number is used
-            if grep -q "^${offset_ref_num}$" "$used_refs_file" 2>/dev/null; then
-                local ref_title=$(jq -r ".messages[$i].recall_contexts[$j].title // empty" "$json_file" 2>/dev/null)
-                local ref_url=$(jq -r ".messages[$i].recall_contexts[$j].link // empty" "$json_file" 2>/dev/null)
-                
-                if [[ -n "$ref_title" && "$ref_title" != "null" && -n "$ref_url" && "$ref_url" != "null" ]]; then
-                    echo "[^${offset_ref_num}]: [$ref_title]($ref_url)" >> "$output_file"
-                    log_debug "Added reference $offset_ref_num: $ref_title (message $i, original ref $original_ref_num)"
-                    ((added_count++))
-                else
-                    log_warn "Could not extract reference data for message $i, reference $j"
-                fi
+    if [[ "$modern_ref_count" -gt 0 ]]; then
+        log_debug "Detected modern reference format with explicit citation metadata"
+        typeset -A seen_refs
+        while IFS=$'\t' read -r ref_num ref_title ref_url; do
+            [[ -z "$ref_num" ]] && continue
+            if ! grep -q "^${ref_num}$" "$used_refs_file" 2>/dev/null; then
+                continue
             fi
-        done
+            if [[ -n "${seen_refs[$ref_num]}" ]]; then
+                continue
+            fi
+            if [[ -z "$ref_title" || "$ref_title" == "null" || -z "$ref_url" || "$ref_url" == "null" ]]; then
+                log_warn "Reference $ref_num is missing title or url"
+                continue
+            fi
+            echo "[^${ref_num}]: [$ref_title]($ref_url)" >> "$output_file"
+            log_debug "Added reference $ref_num: $ref_title"
+            seen_refs[$ref_num]=1
+            ((added_count++))
+            done < <(jq -r '
+            .messages[]? as $msg |
+            ($msg.references // [])[]? |
+            select(.number != null) |
+            [ (.number | tostring), (.title // ""), ((.url // .link) // "") ] | @tsv
+        ' "$json_file")
+    else
+        log_debug "Falling back to legacy reference extraction"
+        local questions_count
+        questions_count=$(jq '.messages | length' "$json_file" 2>/dev/null || echo "0")
         
-        log_success "Added msg_ref_count=$msg_ref_count"
-    done
+        # Process references from all messages with offset numbering
+        for ((i=0; i<questions_count; i++)); do
+            local msg_ref_count
+            msg_ref_count=$(jq ".messages[$i].recall_contexts | length" "$json_file" 2>/dev/null || echo "0")
+            local offset=$((i * 1000))  # Offset for this message
+            
+            for ((j=0; j<msg_ref_count; j++)); do
+                local original_ref_num=$((j + 1))  # Original reference number (1-based)
+                local offset_ref_num=$((original_ref_num + offset))  # Offset reference number
+                
+                # Check if this offset reference number is used
+                if grep -q "^${offset_ref_num}$" "$used_refs_file" 2>/dev/null; then
+                    local ref_title=$(jq -r ".messages[$i].recall_contexts[$j].title // empty" "$json_file" 2>/dev/null)
+                    local ref_url=$(jq -r ".messages[$i].recall_contexts[$j].link // empty" "$json_file" 2>/dev/null)
+                    
+                    if [[ -n "$ref_title" && "$ref_title" != "null" && -n "$ref_url" && "$ref_url" != "null" ]]; then
+                        echo "[^${offset_ref_num}]: [$ref_title]($ref_url)" >> "$output_file"
+                        log_debug "Added reference $offset_ref_num: $ref_title (message $i, original ref $original_ref_num)"
+                        ((added_count++))
+                    else
+                        log_warn "Could not extract reference data for message $i, reference $j"
+                    fi
+                fi
+            done
+            
+            log_success "Added msg_ref_count=$msg_ref_count"
+        done
+    fi
     
     echo "$added_count"
 }
