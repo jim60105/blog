@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 # Copyright (C) 2025 Jim Chen <Jim@ChenJ.im>, licensed under GPL-3.0-or-later
 #
 # This program is free software: you can redistribute it and/or modify
@@ -828,7 +828,5 @@ main() {
     fi
 }
 
-# Run main function if script is executed directly
-if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
-    main "$@"
-fi
+# Run main function if script
+main "$@"
