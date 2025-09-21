@@ -193,7 +193,9 @@ def clean_text(text):
     text = text.encode('utf-8', errors='ignore').decode('utf-8', errors='ignore')
     
     # Replace common corrupted sequences
-    text = re.sub(r'[^\x00-\x7F\u4e00-\u9fff\u3400-\u4dbf\uff00-\uffef]+', '', text)
+    # Include CJK Symbols and Punctuation (\u3000-\u303f) to preserve Chinese punctuation like 。
+    # Include General Punctuation (\u2000-\u206f) to preserve smart quotes and apostrophes
+    text = re.sub(r'[^\x00-\x7F\u2000-\u206f\u3000-\u303f\u3400-\u4dbf\u4e00-\u9fff\uff00-\uffef]+', '', text)
     
     return text.strip()
 
