@@ -34,20 +34,6 @@
 # OpenAI Configuration
 readonly OPENAI_MODEL="gpt-4.1"
 
-# Replace unwanted punctuation characters with ASCII equivalents to keep output consistent
-normalize_punctuation() {
-    local text="$1"
-
-    text="${text//’/'}"
-    text="${text//‘/'}"
-    text="${text//“/\"}"
-    text="${text//”/\"}"
-    text="${text//–/-}"
-    text="${text//—/-}"
-
-    printf '%s' "$text"
-}
-
 # Check OpenAI environment variables
 check_openai_config() {
     log_debug "Checking OpenAI configuration..."
@@ -236,6 +222,20 @@ generate_safe_filename() {
 
     log_debug "Safe filename generated: $safe_filename"
     echo "$safe_filename"
+}
+
+# Replace unwanted punctuation characters with ASCII equivalents to keep output consistent
+normalize_punctuation() {
+    local text="$1"
+
+    text="${text//’/'}"
+    text="${text//‘/'}"
+    text="${text//“/\"}"
+    text="${text//”/\"}"
+    text="${text//–/-}"
+    text="${text//—/-}"
+
+    printf '%s' "$text"
 }
 
 # Sanitize filename to ensure it only contains safe characters
@@ -564,12 +564,8 @@ generate_markdown_file() {
         log_info "OpenAI not configured, using default metadata"
     fi
 
-    ai_title=$(normalize_punctuation "$ai_title")
-    ai_description=$(normalize_punctuation "$ai_description")
-    ai_tags=$(normalize_punctuation "$ai_tags")
     ai_filename=$(normalize_punctuation "$ai_filename")
     extracted_question=$(normalize_punctuation "$extracted_question")
-    extracted_answer=$(normalize_punctuation "$extracted_answer")
 
     # Generate filename with AI-generated filename or fallback
     local safe_filename
