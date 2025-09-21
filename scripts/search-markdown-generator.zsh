@@ -34,6 +34,20 @@
 # OpenAI Configuration
 readonly OPENAI_MODEL="gpt-4.1"
 
+# Replace unwanted punctuation characters with ASCII equivalents to keep output consistent
+normalize_punctuation() {
+    local text="$1"
+
+    text="${text//’/'}"
+    text="${text//‘/'}"
+    text="${text//“/\"}"
+    text="${text//”/\"}"
+    text="${text//–/-}"
+    text="${text//—/-}"
+
+    printf '%s' "$text"
+}
+
 # Check OpenAI environment variables
 check_openai_config() {
     log_debug "Checking OpenAI configuration..."
@@ -275,17 +289,27 @@ create_basic_markdown() {
     local with_ai_url="${11}"
     
     log_debug "Creating basic markdown content for multiple Q&A"
-    log_debug "AI title: '$ai_title'"
-    log_debug "AI description: '$ai_description'"
-    log_debug "AI tags: '$ai_tags'"
+    local sanitized_ai_title
+    local sanitized_ai_description
+    local sanitized_ai_tags
+    local sanitized_answers
+
+    sanitized_ai_title=$(normalize_punctuation "$ai_title")
+    sanitized_ai_description=$(normalize_punctuation "$ai_description")
+    sanitized_ai_tags=$(normalize_punctuation "$ai_tags")
+    sanitized_answers=$(normalize_punctuation "$answers")
+
+    log_debug "AI title: '$sanitized_ai_title'"
+    log_debug "AI description: '$sanitized_ai_description'"
+    log_debug "AI tags: '$sanitized_ai_tags'"
     log_debug "Provider: '$provider_name'"
     log_debug "Assistant speaker: '$assistant_speaker'"
-    
+
     # Format tags for TOML array
     local formatted_tags=""
-    if [[ -n "$ai_tags" ]]; then
+    if [[ -n "$sanitized_ai_tags" ]]; then
         # Convert comma-separated tags to TOML array format
-        formatted_tags=$(echo "$ai_tags" | sed 's/,/, /g' | sed 's/^/[ "/' | sed 's/$/" ]/' | sed 's/, /", "/g')
+        formatted_tags=$(echo "$sanitized_ai_tags" | sed 's/,/, /g' | sed 's/^/[ "/' | sed 's/$/" ]/' | sed 's/, /", "/g')
         log_debug "Formatted tags: $formatted_tags"
     else
         formatted_tags="[ ]"
@@ -297,12 +321,12 @@ create_basic_markdown() {
     # No need for complex filtering since we now return clean question text directly
     
     # Use answers directly
-    local clean_answers="$answers"
-    
+    local clean_answers="$sanitized_answers"
+
     cat > "$output_file" << EOFMD
 +++
-title = "$ai_title"
-description = "$ai_description"
+title = "$sanitized_ai_title"
+description = "$sanitized_ai_description"
 date = "$creation_date"
 updated = "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 draft = false
@@ -384,6 +408,7 @@ add_reference_data() {
                 log_warn "Reference $ref_num is missing title or url"
                 continue
             fi
+            ref_title=$(normalize_punctuation "$ref_title")
             echo "[^${ref_num}]: [$ref_title]($ref_url)" >> "$output_file"
             log_debug "Added reference $ref_num: $ref_title"
             seen_refs[$ref_num]=1
@@ -415,6 +440,7 @@ add_reference_data() {
                     local ref_url=$(jq -r ".messages[$i].recall_contexts[$j].link // empty" "$json_file" 2>/dev/null)
                     
                     if [[ -n "$ref_title" && "$ref_title" != "null" && -n "$ref_url" && "$ref_url" != "null" ]]; then
+                        ref_title=$(normalize_punctuation "$ref_title")
                         echo "[^${offset_ref_num}]: [$ref_title]($ref_url)" >> "$output_file"
                         log_debug "Added reference $offset_ref_num: $ref_title (message $i, original ref $original_ref_num)"
                         ((added_count++))
@@ -519,7 +545,7 @@ generate_markdown_file() {
             ai_description=$(echo "$ai_response" | jq -r '.description // empty' 2>/dev/null)
             ai_tags=$(echo "$ai_response" | jq -r '.tags[]? // empty' 2>/dev/null | tr '\n' ',' | sed 's/,$//')
             ai_filename=$(echo "$ai_response" | jq -r '.filename // empty' 2>/dev/null)
-            
+
             log_debug "Extracted AI metadata:"
             log_debug "  Title: $ai_title"
             log_debug "  Description: $ai_description"
@@ -532,6 +558,13 @@ generate_markdown_file() {
         log_info "OpenAI not configured, using default metadata"
     fi
     
+    ai_title=$(normalize_punctuation "$ai_title")
+    ai_description=$(normalize_punctuation "$ai_description")
+    ai_tags=$(normalize_punctuation "$ai_tags")
+    ai_filename=$(normalize_punctuation "$ai_filename")
+    extracted_question=$(normalize_punctuation "$extracted_question")
+    extracted_answer=$(normalize_punctuation "$extracted_answer")
+
     # Generate filename with AI-generated filename or fallback
     local safe_filename
     if [[ -n "$ai_filename" ]]; then
