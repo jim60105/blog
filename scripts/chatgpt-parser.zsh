@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 # Copyright (C) 2025 Jim Chen <Jim@ChenJ.im>, licensed under GPL-3.0-or-later
 #
 # This program is free software: you can redistribute it and/or modify
@@ -175,14 +175,41 @@ extract_json_from_html() {
 import json
 import re
 import sys
+import unicodedata
 from functools import lru_cache
 from pathlib import Path
 import os
 
+def clean_text(text):
+    """Clean corrupted UTF-8 characters and normalize text"""
+    if not text:
+        return ""
+    
+    # Remove control characters except newlines and tabs
+    text = ''.join(ch for ch in text if unicodedata.category(ch)[0] != 'C' or ch in '\n\t\r')
+    
+    # Fix common UTF-8 encoding issues
+    text = text.encode('utf-8', errors='ignore').decode('utf-8', errors='ignore')
+    
+    # Replace common corrupted sequences
+    text = re.sub(r'[^\x00-\x7F\u4e00-\u9fff\u3400-\u4dbf\uff00-\uffef]+', '', text)
+    
+    return text.strip()
+
 html_path, json_path = sys.argv[1:3]
 
 try:
-    text = Path(html_path).read_text(encoding="utf-8", errors="ignore")
+    # Try UTF-8 first, then fallback to other encodings
+    try:
+        text = Path(html_path).read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        try:
+            text = Path(html_path).read_text(encoding="utf-8", errors="replace")
+        except Exception:
+            # Final fallback - read as binary and decode carefully
+            with open(html_path, "rb") as f:
+                raw_bytes = f.read()
+            text = raw_bytes.decode("utf-8", errors="replace")
 except Exception as exc:  # pragma: no cover - defensive
     print(f"Failed to read HTML file: {exc}", file=sys.stderr)
     sys.exit(1)
@@ -279,11 +306,29 @@ if not conversation_data:
     sys.exit(1)
 
 simplified = {
-    "title": conversation_data.get("title"),
+    "title": clean_text(conversation_data.get("title", "")),
     "create_time": conversation_data.get("create_time"),
     "update_time": conversation_data.get("update_time"),
     "mapping": {},
 }
+
+# Apply aggressive cleaning to all string values in the conversation data
+def deep_clean_object(obj):
+    """Recursively clean all strings in a nested object structure"""
+    if isinstance(obj, dict):
+        return {k: deep_clean_object(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [deep_clean_object(item) for item in obj]
+    elif isinstance(obj, str):
+        # Aggressive cleaning for JSON safety
+        cleaned = clean_text(obj)
+        # Remove all control characters
+        cleaned = ''.join(char for char in cleaned if ord(char) >= 32 or char in '\n\t\r')
+        return cleaned
+    else:
+        return obj
+
+conversation_data = deep_clean_object(conversation_data)
 
 mapping = conversation_data.get("mapping", {})
 if not isinstance(mapping, dict):
@@ -332,10 +377,15 @@ for key, node in mapping.items():
                 continue
             matched_text = ref.get("matched_text") or ""
             match = re.search(r"【(\d+)", matched_text)
-            if not match:
-                continue
-            number = int(match.group(1))
-            title = ref.get("title") or ref.get("source") or ""
+            if match:
+                number = int(match.group(1))
+            else:
+                # Try new format: 27L49-L57
+                match = re.search(r"(\d+)L\d+", matched_text)
+                if not match:
+                    continue
+                number = int(match.group(1))
+            title = clean_text(ref.get("title") or ref.get("source") or "")
             url = ref.get("url") or ref.get("link") or ""
             if not url:
                 continue
@@ -343,7 +393,7 @@ for key, node in mapping.items():
                 "number": number,
                 "title": title,
                 "url": url,
-                "attribution": ref.get("attribution") or "",
+                "attribution": clean_text(ref.get("attribution") or ""),
                 "matched_texts": set(),
             })
             if not info["title"] and title:
@@ -362,13 +412,30 @@ for key, node in mapping.items():
             content = re.sub(r"\[(\d+)\](\[\1\])+", r"[\1]", content)
             references.append({
                 "number": number,
-                "title": info["title"],
+                "title": clean_text(info["title"]),
                 "url": info["url"],
-                "matched_text": matched_texts[0] if matched_texts else "",
-                "matched_texts": matched_texts,
-                "attribution": info["attribution"],
+                "matched_text": clean_text(matched_texts[0] if matched_texts else ""),
+                "matched_texts": [clean_text(t) for t in matched_texts],
+                "attribution": clean_text(info["attribution"]),
             })
 
+    # Clean corrupted UTF-8 characters and normalize content
+    content = clean_text(content)
+    
+    # Apply clean_text to the entire content to ensure no control characters remain
+    if content:
+        # Additional cleaning for JSON safety
+        content = content.replace('\x00', '').replace('\x01', '').replace('\x02', '')
+        content = content.replace('\x03', '').replace('\x04', '').replace('\x05', '')
+        content = content.replace('\x06', '').replace('\x07', '').replace('\x08', '')
+        content = content.replace('\x0B', '').replace('\x0C', '').replace('\x0E', '')
+        content = content.replace('\x0F', '').replace('\x10', '').replace('\x11', '')
+        content = content.replace('\x12', '').replace('\x13', '').replace('\x14', '')
+        content = content.replace('\x15', '').replace('\x16', '').replace('\x17', '')
+        content = content.replace('\x18', '').replace('\x19', '').replace('\x1A', '')
+        content = content.replace('\x1B', '').replace('\x1C', '').replace('\x1D', '')
+        content = content.replace('\x1E', '').replace('\x1F', '')
+    
     normalized_content = content.strip()
     if normalized_content.lower() == "original custom instructions no longer available":
         continue
@@ -536,10 +603,11 @@ extract_questions() {
     local messages
     messages=$(extract_messages "$conversation_data")
     
-    # Get the first user message as the main question
+    # Get the first substantial user message as the main question (skip very short ones)
     echo "$messages" | jq -r '
-        .[] | select(.role == "user") | .content
-    ' | head -1 || echo "ChatGPT Conversation"
+        [.[] | select(.role == "user" and (.content | length) > 10)] | 
+        if length > 0 then .[0].content else empty end
+    ' 2>/dev/null || echo "ChatGPT Conversation"
 }
 
 # Extract answers from conversation data
@@ -548,56 +616,43 @@ extract_answers() {
     
     log_debug "Extracting answers from conversation data"
     
-    # Parse conversation data
-    local conversation_data
-    conversation_data=$(parse_conversation_data "$json_file")
+    # Use Python to extract and format all messages
+    python3 -c "
+import json
+import sys
+
+with open('$json_file', 'r', encoding='utf-8') as f:
+    data = json.load(f)
+
+messages = data.get('messages', [])
+chat_blocks = []
+
+for msg in messages:
+    role = msg.get('role', '')
+    content = msg.get('content', '').strip()
     
-    if [[ -z "$conversation_data" ]]; then
-        echo "Answer content not available."
-        return
-    fi
+    if not content or role not in ['user', 'assistant']:
+        continue
     
-    local messages
-    messages=$(extract_messages "$conversation_data")
-    
-    # Generate chat blocks for all messages
-    local all_answers=""
-    local temp_result=$(mktemp)
-    
-    echo "$messages" | jq -c '.[]' | while IFS= read -r message; do
-        local role=$(echo "$message" | jq -r '.role')
-        local content=$(echo "$message" | jq -r '.content')
+    # Skip very short or system-like messages
+    if len(content) < 10:
+        continue
         
-        if [[ -n "$content" && "$content" != "null" ]]; then
-            local speaker=""
-            if [[ "$role" == "user" ]]; then
-                speaker="user"
-            elif [[ "$role" == "assistant" ]]; then
-                speaker="chatgpt"
-            else
-                continue
-            fi
-            
-            # Add message with chat block format
-            local chat_block="{% chat(speaker=\"$speaker\") %}
-$content
-{% end %}"
-            
-            # Append to temp file to avoid subshell variable issues
-            if [[ -s "$temp_result" ]]; then
-                echo "" >> "$temp_result"
-            fi
-            echo "$chat_block" >> "$temp_result"
-        fi
-    done
+    # Skip JSON-like responses that are system messages
+    if content.startswith('{') and 'task_violates_safety_guidelines' in content:
+        continue
     
-    if [[ -s "$temp_result" ]]; then
-        cat "$temp_result"
-    else
-        echo "Answer content not available."
-    fi
+    speaker = 'user' if role == 'user' else 'chatgpt'
     
-    rm -f "$temp_result"
+    chat_block = f'{{% chat(speaker="{speaker}") %}}\n{content}\n{{% end %}}'
+    
+    chat_blocks.append(chat_block)
+
+if chat_blocks:
+    print('\n\n'.join(chat_blocks))
+else:
+    print('Answer content not available.')
+"
 }
 
 # Extract creation date from conversation data
@@ -619,7 +674,18 @@ extract_creation_date() {
     
     # Extract create_time from conversation data
     local create_time
-    create_time=$(echo "$conversation_data" | jq -r '.create_time // empty')
+    create_time=$(python3 -c "
+import json
+import sys
+
+try:
+    data = json.loads('''$conversation_data''')
+    create_time = data.get('create_time')
+    if create_time:
+        print(create_time)
+except:
+    pass
+" 2>/dev/null)
     
     # Convert to Zola compatible format
     if [[ -n "$create_time" && "$create_time" != "null" ]]; then
@@ -829,6 +895,6 @@ main() {
 }
 
 # Run main function if script is executed directly
-if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+if [[ "${(%):-%N}" == "${0}" ]]; then
     main "$@"
 fi
