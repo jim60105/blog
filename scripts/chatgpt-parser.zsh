@@ -32,6 +32,7 @@
 # - curl
 # - jq
 # - grep, sed
+# - python3
 # - search-markdown-generator.zsh (library)
 
 # Load markdown generator library
@@ -616,79 +617,55 @@ extract_answers() {
     
     log_debug "Extracting answers from conversation data"
     
-    # Use Python to extract and format all messages
-    python3 -c "
-import json
-import sys
-
-with open('$json_file', 'r', encoding='utf-8') as f:
-    data = json.load(f)
-
-messages = data.get('messages', [])
-chat_blocks = []
-
-for msg in messages:
-    role = msg.get('role', '')
-    content = msg.get('content', '').strip()
+    # Use jq to extract and format all messages instead of Python
+    # Handle potential control character issues by using --raw-input with pre-filtering
+    local chat_blocks
+    if command -v rg >/dev/null 2>&1; then
+        # Use ripgrep to pre-filter out control characters if available
+        chat_blocks=$(cat "$json_file" | rg -v '[\x00-\x08\x0B\x0C\x0E-\x1F]' | jq -r '
+            .messages[]? |
+            select(.role == "user" or .role == "assistant") |
+            select(.content | length > 10) |
+            select(.content | startswith("{") and contains("task_violates_safety_guidelines") | not) |
+            (if .role == "user" then "user" else "chatgpt" end) as $speaker |
+            "{% chat(speaker=\"\($speaker)\") %}\n\(.content)\n{% end %}"
+        ' 2>/dev/null | paste -sd '\n\n' -)
+    else
+        # Fallback to tr for basic control character filtering
+        chat_blocks=$(tr -d '\000-\010\013\014\016-\037' < "$json_file" | jq -r '
+            .messages[]? |
+            select(.role == "user" or .role == "assistant") |
+            select(.content | length > 10) |
+            select(.content | startswith("{") and contains("task_violates_safety_guidelines") | not) |
+            (if .role == "user" then "user" else "chatgpt" end) as $speaker |
+            "{% chat(speaker=\"\($speaker)\") %}\n\(.content)\n{% end %}"
+        ' 2>/dev/null | paste -sd '\n\n' -)
+    fi
     
-    if not content or role not in ['user', 'assistant']:
-        continue
-    
-    # Skip very short or system-like messages
-    if len(content) < 10:
-        continue
-        
-    # Skip JSON-like responses that are system messages
-    if content.startswith('{') and 'task_violates_safety_guidelines' in content:
-        continue
-    
-    speaker = 'user' if role == 'user' else 'chatgpt'
-    
-    chat_block = f'{{% chat(speaker="{speaker}") %}}\n{content}\n{{% end %}}'
-    
-    chat_blocks.append(chat_block)
-
-if chat_blocks:
-    print('\n\n'.join(chat_blocks))
-else:
-    print('Answer content not available.')
-"
+    if [[ -n "$chat_blocks" ]]; then
+        echo "$chat_blocks"
+    else
+        echo "Answer content not available."
+    fi
 }
 
-# Extract creation date from conversation data
+# Extract creation date from JSON file
 extract_creation_date() {
     local json_file="$1"
     
-    log_debug "Extracting creation date from conversation data"
+    log_debug "Extracting creation date from JSON file"
     
-    # Parse conversation data
-    local conversation_data
-    conversation_data=$(parse_conversation_data "$json_file")
+    # Extract create_time directly from the JSON file using jq instead of Python
+    # This avoids potential issues with string escaping and control characters
+    local create_time
+    create_time=$(jq -r '.create_time | if . then (. | floor | tostring) else empty end' "$json_file" 2>/dev/null)
     
-    if [[ -z "$conversation_data" ]]; then
-        # Fallback to current time
-        log_warn "No conversation data found, using current time"
-        date -u +"%Y-%m-%dT%H:%M:%SZ"
-        return
+    if [[ "$DEBUG_MODE" == "true" ]]; then
+        log_debug "Extracted create_time value: '$create_time'"
     fi
     
-    # Extract create_time from conversation data
-    local create_time
-    create_time=$(python3 -c "
-import json
-import sys
-
-try:
-    data = json.loads('''$conversation_data''')
-    create_time = data.get('create_time')
-    if create_time:
-        print(create_time)
-except:
-    pass
-" 2>/dev/null)
-    
     # Convert to Zola compatible format
-    if [[ -n "$create_time" && "$create_time" != "null" ]]; then
+    if [[ -n "$create_time" && "$create_time" != "null" && "$create_time" != "" ]]; then
         # Convert Unix timestamp to ISO format
         local formatted_date
         if command -v gdate >/dev/null 2>&1; then
