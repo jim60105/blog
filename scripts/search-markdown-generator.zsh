@@ -463,57 +463,80 @@ add_reference_data() {
     echo "$added_count"
 }
 
-# Process references and add them to markdown for multiple Q&A
-process_references() {
-    local output_file="$1"
-    local original_url="$2"
-    local questions="$3"
-    local answers="$4"
-    local json_file="$5"
-    local ref_count="$6"
-    local ai_title="$7"
-    local ai_description="$8"
-    local ai_tags="$9"
-    local provider_name="${10}"
-    local assistant_speaker="${11}"
-    local creation_date="${12}"
-    local with_ai_url="${13}"
-
+# Preprocess references and fix answer content format
+preprocess_references_and_content() {
+    local answers="$1"
+    local json_file="$2"
+    local ref_count="$3"
+    
+    log_debug "Preprocessing references and content"
+    
+    # If no references, return original content
     if [[ "$ref_count" -le 0 ]]; then
-        log_debug "No references to add"
+        log_debug "No references to preprocess, returning original content"
+        echo "$answers"
         return 0
     fi
-
-    log_info "Processing and fixing reference formats for multiple Q&A..."
+    
+    log_info "Processing and fixing reference formats..."
     log_debug "Processing references from JSON file: $json_file"
-
+    
     # Create temporary file to store used reference numbers
     local used_refs_file=$(mktemp)
-
-    # Extract used references from all answers
+    
+    # Extract used references from answers
     local used_count
     used_count=$(extract_used_references "$answers" "$used_refs_file")
-
+    
     if [[ "$used_count" -gt 0 ]]; then
         # Fix reference format
         local fixed_answers
         fixed_answers=$(fix_reference_format "$answers" "$used_refs_file")
-
-        # Recreate markdown file with fixed content
-        create_basic_markdown "$output_file" "$original_url" "$questions" "$fixed_answers" "$ai_title" "$ai_description" "$ai_tags" "$provider_name" "$assistant_speaker" "$creation_date" "$with_ai_url"
-
-        # Add reference data
-        local added_count
-        added_count=$(add_reference_data "$output_file" "$used_refs_file" "$json_file")
-
-        log_success "Added $added_count footnote references (only used ones)"
+        
+        # Store used_refs_file path for later use
+        echo "$used_refs_file" > /tmp/last_used_refs_file
+        
+        log_debug "Reference format fixed, found $used_count used references"
+        echo "$fixed_answers"
     else
         log_warn "No references found in content"
+        rm -f "$used_refs_file"
+        echo "$answers"
     fi
+    
+    return 0
+}
 
-    # Clean up temporary file
-    rm -f "$used_refs_file"
-
+# Add reference data to existing markdown file
+add_references_to_markdown() {
+    local output_file="$1"
+    local json_file="$2"
+    
+    log_debug "Adding references to markdown file: $output_file"
+    
+    # Check if we have stored used_refs_file from preprocessing
+    if [[ ! -f "/tmp/last_used_refs_file" ]]; then
+        log_warn "No used references file found, skipping reference addition"
+        return 0
+    fi
+    
+    local used_refs_file
+    used_refs_file=$(cat /tmp/last_used_refs_file)
+    
+    if [[ ! -f "$used_refs_file" ]]; then
+        log_warn "Used references file not found: $used_refs_file"
+        return 0
+    fi
+    
+    # Add reference data
+    local added_count
+    added_count=$(add_reference_data "$output_file" "$used_refs_file" "$json_file")
+    
+    log_success "Added $added_count footnote references"
+    
+    # Clean up temporary files
+    rm -f "$used_refs_file" /tmp/last_used_refs_file
+    
     return 0
 }
 
@@ -583,11 +606,17 @@ generate_markdown_file() {
     log_info "Generating markdown file: $output_file"
     log_debug "Output file path: $output_file"
 
-    # Create basic markdown content with AI metadata
-    create_basic_markdown "$output_file" "$original_url" "$extracted_question" "$extracted_answer" "$ai_title" "$ai_description" "$ai_tags" "$provider_name" "$assistant_speaker" "$extracted_creation_date" "$with_ai_url"
+    # 1. Preprocess references and content
+    local processed_answers
+    processed_answers=$(preprocess_references_and_content "$extracted_answer" "$extracted_json_file" "$extracted_ref_count")
 
-    # Process and add references
-    process_references "$output_file" "$original_url" "$extracted_question" "$extracted_answer" "$extracted_json_file" "$extracted_ref_count" "$ai_title" "$ai_description" "$ai_tags" "$provider_name" "$assistant_speaker" "$extracted_creation_date" "$with_ai_url"
+    # 2. Create basic markdown content with processed answers (only create once)
+    create_basic_markdown "$output_file" "$original_url" "$extracted_question" "$processed_answers" "$ai_title" "$ai_description" "$ai_tags" "$provider_name" "$assistant_speaker" "$extracted_creation_date" "$with_ai_url"
+
+    # 3. Add references to markdown file if they exist
+    if [[ "$extracted_ref_count" -gt 0 ]]; then
+        add_references_to_markdown "$output_file" "$extracted_json_file"
+    fi
 
     log_success "Markdown file generated successfully!"
 
