@@ -188,6 +188,12 @@ EOJSON
         return 1
     fi
 
+    # Trim whitespaces and newlines from response file
+    local trimmed_response=$(mktemp)
+    # Remove leading/trailing whitespaces and newlines from each line, then remove empty lines at start/end
+    sed 's/^[[:space:]]*//;s/[[:space:]]*$//' "$response_file" | sed '/./,$!d' | sed ':a;N;$!ba;s/\n*$//' > "$trimmed_response"
+    mv "$trimmed_response" "$response_file"
+
     [[ "$DEBUG_MODE" == "true" ]] && echo "DEBUG: API response preview: $(head -c 200 "$response_file")..." >&2
 
     # Extract content from response
