@@ -30,8 +30,8 @@
 #
 # Dependencies:
 # - curl
+# - rg (ripgrep)
 # - jq
-# - grep, sed
 # - python3
 # - search-markdown-generator.zsh (library)
 
@@ -71,11 +71,11 @@ log_debug() {
 # Check if required tools are available
 check_dependencies() {
     log_info "Checking dependencies..."
-    log_debug "Checking for required tools: curl, jq, grep, sed, python3"
+    log_debug "Checking for required tools: curl, jq, python3"
     
     local missing_tools=()
     
-    for tool in curl jq grep sed python3; do
+    for tool in curl jq python3; do
         if ! command -v "$tool" >/dev/null 2>&1; then
             missing_tools+=("$tool")
             log_debug "$tool: NOT FOUND"
