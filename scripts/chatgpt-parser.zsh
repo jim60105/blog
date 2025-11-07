@@ -379,30 +379,52 @@ for key, node in mapping.items():
             if not isinstance(ref, dict):
                 continue
             matched_text = ref.get("matched_text") or ""
+            
+            # Try to parse citation number from matched_text
+            # Formats: 【1†source】, 27L49-L57, citeturn2view0
             match = re.search(r"【(\d+)", matched_text)
             if match:
                 number = int(match.group(1))
             else:
-                # Try new format: 27L49-L57
                 match = re.search(r"(\d+)L\d+", matched_text)
-                if not match:
-                    continue
-                number = int(match.group(1))
-            title = clean_text(ref.get("title") or ref.get("source") or "")
-            url = ref.get("url") or ref.get("link") or ""
+                if match:
+                    number = int(match.group(1))
+                else:
+                    # Try new format: citeturnXviewY -> extract X as number
+                    match = re.search(r"citeturn(\d+)view", matched_text)
+                    if not match:
+                        continue
+                    number = int(match.group(1))
+            
+            # Extract title, url, and attribution from items array (new format)
+            items = ref.get("items")
+            if items and isinstance(items, list) and len(items) > 0:
+                first_item = items[0]
+                title = clean_text(first_item.get("title") or "")
+                url = first_item.get("url") or ""
+                attribution = clean_text(first_item.get("attribution") or "")
+            else:
+                # Fallback to old format
+                title = clean_text(ref.get("title") or ref.get("source") or "")
+                url = ref.get("url") or ref.get("link") or ""
+                attribution = clean_text(ref.get("attribution") or "")
+            
             if not url:
                 continue
+            
             info = ref_map.setdefault(number, {
                 "number": number,
                 "title": title,
                 "url": url,
-                "attribution": clean_text(ref.get("attribution") or ""),
+                "attribution": attribution,
                 "matched_texts": set(),
             })
             if not info["title"] and title:
                 info["title"] = title
             if not info["url"] and url:
                 info["url"] = url
+            if not info["attribution"] and attribution:
+                info["attribution"] = attribution
             if matched_text:
                 info["matched_texts"].add(matched_text)
 
