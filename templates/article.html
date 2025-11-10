@@ -169,11 +169,6 @@
 		{%- include "partials/prompt_injection.html" -%}
 	</article>
 
-	{%- if config.extra.likerid or page.extra.iscn -%}
-		<hr/>
-		{% include "partials/likecoin.html" %}
-	{%- endif -%}
-
 	{%- if page.extra.comments.id -%}
 		<hr/>
 		{%- include "partials/comments.html" -%}

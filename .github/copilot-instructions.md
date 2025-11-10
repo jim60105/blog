@@ -98,7 +98,7 @@
 
 ### 重要的自訂檔案
 
-- `templates/article.html` - 文章頁面範本 (加入 LikeCoin、AI 標章支援)
+- `templates/article.html` - 文章頁面範本 (加入 AI 標章支援)
 - `templates/partials/head.html` - 重新安排 meta 標籤順序，加入 SEO 優化
 - `templates/partials/open_graph.html` - 獨立的 Open Graph 標籤管理
 - `templates/partials/nav.html` - 修改 Feed 按鈕為複製功能
@@ -106,7 +106,6 @@
 
 ### 新增的功能性檔案
 
-- `templates/partials/likecoin.html` - LikeCoin WritingNFT 整合
 - `templates/partials/with_ai.html` - AI 輔助創作標章
 - `templates/partials/preview_image.html` - 預覽圖片與 AI 標章
 - `templates/partials/prompt_injection.html` - SEO 優化的提示注入
@@ -115,7 +114,6 @@
 
 - `sass/fonts.scss` - 自訂字型 (Iansui + Noto Sans)
 - `sass/color.scss` - 顏色系統 (success, danger, warning 等)
-- `sass/likecoin.scss` - LikeCoin iframe 樣式
 - `sass/with-ai.scss` - AI 標章浮動樣式
 - `sass/badge.scss` - 徽章顯示樣式
 

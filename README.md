@@ -66,8 +66,7 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 | File | Description |
 | --- | --- |
 | `article_list.html` | - Remove `Filter by tag`<br>- Add `partials/sections.html` at the end of the article list.  |
-| `article.html` | - Add likecoin iframe `partials/likecoin.html`<br>- Add iscn badge<br>- Add `partials/sections.html` at the end of the article list.<br>- Add made with AI badge. |
-| └`partials/likecoin.html` (new) | Add [liker land WritingNFT badge](https://xn--jgy.tw/Blockchain/likecoin-writing-nft-widget-on-blogger/) to the end of the article. |
+| `article.html` | - Add iscn badge<br>- Add `partials/sections.html` at the end of the article list.<br>- Add made with AI badge. |
 | └`partials/with_ai.html` (new) | Add [made with AI badge](https://aibadge.org/) to the right bottom corner. |
 | └`partials/preview_image.html` (new) | Add preview image with AI badge support. |
 | `base.html` | - Add my custom head tags.<br>- Add Google Analytics and Microsoft Clarity tracking code. |
