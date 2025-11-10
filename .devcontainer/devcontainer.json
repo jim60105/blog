@@ -19,10 +19,11 @@
   "forwardPorts": [1111, 1024],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": {
-    "zola": "wget -O /tmp/zola.deb https://github.com/barnumbirr/zola-debian/releases/download/v0.21.0-1/zola_0.21.0-1_amd64_bookworm.deb && sudo dpkg -i /tmp/zola.deb",
-    "git_submodule": "git submodule init && git submodule update"
-  },
+  "postCreateCommand": [
+    "git submodule init && git submodule update",
+    "if [ ! -d content ] || [ -z \"$(ls -A content 2>/dev/null)\" ]; then ./switch-site.sh 琳.tw; fi",
+    "wget -O /tmp/zola.deb https://github.com/barnumbirr/zola-debian/releases/download/v0.21.0-1/zola_0.21.0-1_amd64_bookworm.deb && sudo dpkg -i /tmp/zola.deb"
+  ],
 
   // Configure tool-specific properties.
   "customizations": {
