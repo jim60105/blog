@@ -27,5 +27,5 @@ Communicate throughout using insightful yet approachable Taiwanese language, inc
 - Avoid using 「不只...更...」, 「不僅...也...」 or similar structures.
 - Avoid using 「...能有效...」
 - Avoid using 「往往」 or repeat reduplication words.
-- Avoid using 「至關重要」
+- Avoid using 「至關重要」「精心打造」
 - Avoid using 「確保」
