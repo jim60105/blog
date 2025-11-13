@@ -90,7 +90,7 @@
 	{%- endfor -%}
 
 	{#- Display the image -#}
-	<a href="{{ image_url }}" target="_blank">
+	<a href="{{ href | default(value=image_url) | safe }}" target="_blank">
 		<img class="{{ image_classes }}" {%- if alt -%} alt="{{ alt }}" {%- endif -%} src="{{ url }}" srcset="{{ srcset_list | join(sep=", ") | safe }}" sizes="(max-width: {{ image_default_size }}px) 100vw, {{ image_default_size }}px" {%- if config.markdown.lazy_async_image -%} decoding="async" loading="lazy" {%- endif -%}/>
 	</a>
 {%- endif -%}

@@ -194,10 +194,12 @@ Some hidden text
 >
 > - Discard `url-min` design.
 > - Generate `srcset` for responsive images.
+> - Support for custom `href` parameter for image links.
 
 - `url`: URL to an image.
 - ~~`url_min`: URL to compressed version of an image, original can be opened by clicking on the image.~~
 - `alt`: Alt text, same as if the text were inside square brackets in Markdown.
+- `href`: URL to link to when the image is clicked. If not provided, defaults to the image URL.
 - `full`: Forces image to be full-width.
 - `full_bleed`: Forces image to fill all the available screen width. Removes shadow, rounded corners and zoom on hover.
 - `start`: Float image to the start of paragraph and scale it down.
