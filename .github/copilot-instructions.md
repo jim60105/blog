@@ -112,7 +112,6 @@
 
 ### 樣式模組
 
-- `sass/fonts.scss` - 自訂字型 (Iansui + Noto Sans)
 - `sass/color.scss` - 顏色系統 (success, danger, warning 等)
 - `sass/with-ai.scss` - AI 標章浮動樣式
 - `sass/badge.scss` - 徽章顯示樣式

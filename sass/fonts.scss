@@ -7,12 +7,10 @@
 
 @font-face {
   font-style: normal;
-  font-weight: normal;
-  src: url("fonts/Iansui-Regular.woff2") format("woff2"),
-    url("fonts/Iansui-Regular.woff") format("woff"),
-    url("fonts/Iansui-Regular.ttf") format("truetype");
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/l/font?kit=w8gbH2UoTuUp5bOaiDmVOdSWRVQS4VCigLHt7a4VxzGe&skey=2e8b012f7c13371c&v=v7)
+    format("woff2");
   font-family: "Iansui";
-  font-display: swap;
 }
 
 h1,

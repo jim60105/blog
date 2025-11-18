@@ -345,9 +345,9 @@ dns_prefetch_domains = [
 [extra.custom_fonts]
 fonts = [
 	# The "preload" method should be used for the most important fonts that appear first during initial loading, such as headline fonts.
-	{ method = "preload", url = "/fonts/Iansui-Regular.woff2", format = "font/woff2" },
+	{ method = "preload", url = "https://fonts.gstatic.com/l/font?kit=w8gbH2UoTuUp5bOaiDmVOdSWRVQS4VCigLHt7a4VxzGe&skey=2e8b012f7c13371c&v=v7", format = "font/woff2" },
 	# The "stylesheet" method is used for secondary fonts that are not as critical, such as body text.
-	{ method = "stylesheet", url = "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" },
+	{ method = "stylesheet", url = "https://fonts.googleapis.com/css2?family=Iansui&Noto+Sans+JP:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" },
 	# The "preload_async" method is used for the least important fonts, such as code block fonts.
 	{ method = "preload_async", url = "https://fonts.cdnfonts.com/css/cascadia-code" },
 ]
