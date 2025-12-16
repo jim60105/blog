@@ -63,3 +63,7 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+
+# Ensure shell scripts are checked out with LF line endings in the working tree
+*.sh text eol=lf
