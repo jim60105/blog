@@ -410,7 +410,7 @@ function New-ContentSymlink {
         
         # Try symbolic link first (preferred - works with relative paths)
         try {
-            New-Item -ItemType SymbolicLink -Path $targetContent -Target $absoluteSource -Force | Out-Null
+            New-Item -ItemType SymbolicLink -Path $targetContent -Target $absoluteSource -Force -ErrorAction Stop | Out-Null
             Write-Success "Created symbolic linked content directory: $sourceContent -> $targetContent"
             return
         }
@@ -420,7 +420,7 @@ function New-ContentSymlink {
         
         # Fallback: Use Junction (works without admin on NTFS)
         try {
-            New-Item -ItemType Junction -Path $targetContent -Target $absoluteSource -Force | Out-Null
+            New-Item -ItemType Junction -Path $targetContent -Target $absoluteSource -Force -ErrorAction Stop | Out-Null
             Write-Success "Created junction for content directory: $sourceContent -> $targetContent"
             Write-Info "Note: Junction used as fallback. Enable Developer Mode for symbolic links."
         }
