@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://琳.tw"
+base_url = "https://xn--jgy.tw"
 
 # The site title and description; used in feeds by default.
 title = "琳的備忘手札"
