@@ -1,3 +1,5 @@
+{% import "macros/rel_attributes.html" as macros_rel_attributes %}
+{%- set rel_attributes = macros_rel_attributes::rel_attributes() | trim -%}
 <figure id="preview-container">
 	<div>
 		{%- if page.extra.preview.url -%}
