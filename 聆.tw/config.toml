@@ -231,10 +231,10 @@ default_theme = "dark"
 #
 # Sets theme and browser theme color.
 # See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
-accent_color = "navy"
+accent_color = "#97e5ff"
 # Ditto but for the dark theme.
 # If not set regular variant will be used.
-accent_color_dark = "lightcyan"
+accent_color_dark = "#97e5ff"
 # Whether to use fonts bundled with Duckquill instead of system ones.
 # Keep in mind that it also changes the style of headings.
 #
