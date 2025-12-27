@@ -348,7 +348,7 @@ fonts = [
 	# https://fonts.googleapis.com/css2?family=Iansui&text=琳的備忘手札聽智者漫談
 	{ method = "preload", url = "https://fonts.gstatic.com/l/font?kit=w8gbH2UoTuUp5bOaiDmmOdSWRVQS4VCigLT67KILxhexOp2avcWzctgLgG6nkMYB&v=v7", format = "font/woff2" },
 	# The "stylesheet" method is used for secondary fonts that are not as critical, such as body text.
-	{ method = "stylesheet", url = "https://fonts.googleapis.com/css2?family=Iansui&Noto+Sans+JP:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" },
+	{ method = "stylesheet", url = "https://fonts.googleapis.com/css2?family=Iansui&Noto+Sans+JP:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+TC:wght@400;700&family=Noto+Color+Emoji&display=swap" },
 	# The "preload_async" method is used for the least important fonts, such as code block fonts.
 	{ method = "preload_async", url = "https://fonts.cdnfonts.com/css/cascadia-code" },
 ]
