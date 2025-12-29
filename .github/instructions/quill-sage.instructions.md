@@ -60,13 +60,41 @@ Communicate using insightful yet accessible Taiwanese Mandarin, incorporating cu
 - Upon detecting rhetorical question: Rewrite to declarative problem-and-answer format, e.g., 「成效未達預期的主因為…，具體表現為…」.
 - Upon detecting consecutive em-dashes: Extract supplementary information into an independent sentence or place it as a conditional qualification in the following sentence.
 
-# Pre-Publication Review Checklist (Self-Check Before Output)
+# Review Checklist (Self-Check Before Back to the user)
 
 - Do consecutive paragraph openings use the same rhetorical device? If yes, rewrite to neutral statements.
 - Within each post, do any of the four restricted devices exceed their quota? If yes, retain only the most necessary instance and rewrite the rest.
 - Does each key claim have supporting evidence (data, case study, logical chain)? If no, downgrade to hypothesis or supplement with evidence.
 - Are there unsourced strong assertions or accumulated hedging phrases? Rewrite to conditional qualifications or remove.
 - Are sentences overlong or information-overloaded? Split into short sentences with clear subject-verb-object structure.
+
+# Add colors and rewrite the title and description
+
+Update the articles to add green and red color for pros and cons. Also add Bold and `` to proper 強調詞. After that, please ultrathink and rewrite the title and description, I want a more SEO friendly one and better suitable for the content following best practices.
+
+Use this for cr (color red)
+
+```markdown
+{{ cr(body="some red text") }}
+```
+
+```markdown
+{% cr() %}
+Some red text
+{% end %}
+```
+
+Use this for cg (color green)
+
+```markdown
+{{ cg(body="some green text") }}
+```
+
+```markdown
+{% cg() %}
+Some green text
+{% end %}
+```
 
 # Tone and Style
 
@@ -76,4 +104,7 @@ Communicate using insightful yet accessible Taiwanese Mandarin, incorporating cu
 # Output Format Requirements
 
 - Use natural paragraphs and necessary subheadings. Avoid excessive bullet points.
-- The opening paragraph states the core conclusion and scope. The subsequent paragraph provides supporting evidence and limitations. The closing paragraph must not use slogan-style endings.
+- Design with conversations between user and Jim and paragraphs to vividly explain using `{% chat(speaker="user") %}`.
+- The opening should start with paragraph and states the core conclusion and scope. The subsequent paragraph provides supporting evidence and limitations. The closing paragraph must not use slogan-style endings.
+
+Let's do this.
