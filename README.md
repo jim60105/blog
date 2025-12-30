@@ -69,7 +69,7 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 | `article.html` | - Add iscn badge<br>- Add `partials/sections.html` at the end of the article list.<br>- Add made with AI badge. |
 | └`partials/with_ai.html` (new) | Add [made with AI badge](https://aibadge.org/) to the right bottom corner. |
 | └`partials/preview_image.html` (new) | Add preview image with AI badge support. |
-| `base.html` | - Add my custom head tags.<br>- Add Google Analytics and Microsoft Clarity tracking code. |
+| `base.html` | - Add my custom head tags.<br>- Add Google Analytics and Microsoft Clarity tracking code.<br>- Dynamically load mermaid.js only when `<pre class="mermaid">` is found in article. |
 | `sitemap.xml` | - Remove <lastmod> date that is 0000-01-01 which I used for non-article content. |
 | `partials/articles.html` | - Make different taxonomies list together<br>- Remove blur thumbnail |
 | `partials/nav.html` | Change the Feed button to copy to clipboard. |
@@ -217,6 +217,42 @@ Some hidden text
 ```
 {{ image(url="preview.jpg", alt="Some preview image", no_hover=true) }}
 ```
+
+## Mermaid (Diagram)
+
+Render [Mermaid](https://mermaid.js.org/) diagrams directly in your content. The mermaid.js library is **dynamically loaded only when needed** — it will only be fetched when a `<pre class="mermaid">` element is found in the article.
+
+**Usage Example:**
+
+```html
+<pre class="mermaid">
+flowchart LR
+    subgraph Triggers
+        A[🔄 Push to master]
+        B[⏰ Schedule]
+        C[🖱️ Manual]
+    end
+
+    subgraph "GitHub Actions"
+        D[📥 Checkout]
+        E[🦀 Install Zola]
+        F[🔨 Zola Build]
+    end
+
+    G[☁️ Cloudflare Workers]
+
+    A & B & C --> D
+    D --> E --> F
+    F --> G
+</pre>
+```
+
+**Notes:**
+
+- Use raw HTML `<pre class="mermaid">` tags (not markdown code blocks)
+- Supports all Mermaid diagram types: flowchart, sequence, class, state, ER, etc.
+- Uses dark theme by default
+- Library loaded from CDN: `https://cdn.jsdelivr.net/npm/mermaid@11`
 
 ## Dependencies
 
