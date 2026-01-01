@@ -15,9 +15,9 @@
 {%- set date_locale = macros_translate::translate(key="date_locale", default="en-US", language_strings=language_strings) | replace(from="_", to="-") -%}
 
 <span id="blog-post-author-text" class="hidden">{{ macros_translate::translate(key="blog_post_author", default="Blog post author", language_strings=language_strings) }}</span>
-<span id="boosts-from-text" class="hidden">{{ macros_translate::translate(key="boosts_from", default="Boosts from $INSTANCE", language_strings=language_strings) }}</span>
+<span id="renotes-from-text" class="hidden">{{ macros_translate::translate(key="renotes_from", default="Renotes from $INSTANCE", language_strings=language_strings) }}</span>
 <span id="date-locale" class="hidden">{{ date_locale }}</span>
-<span id="faves-from-text" class="hidden">{{ macros_translate::translate(key="faves_from", default="Favorites from $INSTANCE", language_strings=language_strings) }}</span>
+<span id="reactions-from-text" class="hidden">{{ macros_translate::translate(key="reactions_from", default="Reactions from $INSTANCE", language_strings=language_strings) }}</span>
 <span id="host" class="hidden">{{ host }}</span>
 <span id="id" class="hidden">{{ id }}</span>
 <span id="loading-text" class="hidden">{{ macros_translate::translate(key="loading", default="Loading", language_strings=language_strings) }}…</span>
