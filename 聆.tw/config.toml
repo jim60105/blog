@@ -433,18 +433,18 @@ copyright = "<a href='https://琳.tw/SideProject/view-counter-badge-cloudflare-w
 
 # Based on https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/
 #
-# Mastodon-powered commenting.
+# Misskey-powered commenting.
 # Values can be overridden in the front-matter, e.g.
 # for multi-author blogs or guest posts.
 #
-# These variables are also used for Mastodon verification,
+# These variables are also used for Misskey verification,
 # the needed rel="me" link is set in the head based on these.
 [extra.comments]
-# Your Mastodon API host; instance that you have an account on.
-host = "liker.social"
-# Your Mastodon username; used to determine who the original poster is.
-user = "jim60105"
-# Whether to show the QR code to Mastodon post
+# Your Misskey API host; instance that you have an account on.
+host = "友.tw"
+# Your Misskey username; used to determine who the original poster is.
+user = "Jim"
+# Whether to show the QR code to Misskey post
 show_qr = true
 
 [extra.debug]

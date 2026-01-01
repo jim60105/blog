@@ -168,7 +168,7 @@
               "type": "fields",
               "fields": [
                 {
-                  "title": "Mastodon post id",
+                  "title": "Misskey post id",
                   "name": "id",
                   "type": "string"
                 }
