@@ -45,12 +45,12 @@
         <id>{{ page.permalink | safe }}</id>
         {% if page.summary %}
         <summary type="html"><![CDATA[
-          &lt;img src=&quot;{% include 'partials/preview_image.html' %}&quot;/&gt;
+          &lt;img src=&quot;{% include 'partials/card.html' %}&quot;/&gt;
           {{ page.summary | escape_xml | safe -}}
         ]]></summary>
         {% else %}
         <content type="html" xml:base="{{ page.permalink | escape_xml | safe }}"><![CDATA[
-          &lt;img src=&quot;{% include 'partials/preview_image.html' %}&quot;/&gt;
+          &lt;img src=&quot;{% include 'partials/card.html' %}&quot;/&gt;
           {{ page.content | escape_xml | safe -}}
         ]]></content>
         {% endif %}
