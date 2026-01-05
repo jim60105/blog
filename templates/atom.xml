@@ -44,9 +44,15 @@
         <link rel="alternate" type="text/html" href="{{ page.permalink | safe }}"/>
         <id>{{ page.permalink | safe }}</id>
         {% if page.summary %}
-        <summary type="html">{%- include "partials/preview_image.html" -%}{{ page.summary }}</summary>
+        <summary type="html"><![CDATA[
+          &lt;img src=&quot;{% include 'partials/preview_image.html' %}&quot;/&gt;
+          {{ page.summary | escape_xml | safe -}}
+        ]]></summary>
         {% else %}
-        <content type="html" xml:base="{{ page.permalink | escape_xml | safe }}">{%- include "partials/preview_image.html" -%}{{ page.content }}</content>
+        <content type="html" xml:base="{{ page.permalink | escape_xml | safe }}"><![CDATA[
+          &lt;img src=&quot;{% include 'partials/preview_image.html' %}&quot;/&gt;
+          {{ page.content | escape_xml | safe -}}
+        ]]></content>
         {% endif %}
         <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{% include 'partials/card.html' %}" height="72" width="72"/>
     </entry>
