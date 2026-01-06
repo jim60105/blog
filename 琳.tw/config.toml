@@ -458,3 +458,5 @@ enable = true
 ga = "G-306HHXMK36"
 # Microsoft Clarity tracking ID
 clarity = "jndqift7sy"
+# Cloudflare RUM (Real User Measurements) token
+cloudflare_rum = "f5bd74fc76924d13ada80f9f98f526dd"
