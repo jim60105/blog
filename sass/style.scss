@@ -237,6 +237,10 @@ main {
     width: min(calc(var(--container-width) / 2), 100%);
     color-scheme: auto;
   }
+
+  a > img {
+    max-height: 80vh;
+  }
 }
 
 footer {
