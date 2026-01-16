@@ -1,9 +1,9 @@
 {%- if element -%}
 	<{{element}} class="spoiler">
-		{{ body }}
+		{{ body | safe }}
 	</{{element}}>
 {%- else -%}
 	<span class="spoiler">
-		{{ body }}
+		{{ body | safe }}
 	</span>
 {%- endif -%}
