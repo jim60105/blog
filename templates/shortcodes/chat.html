@@ -34,7 +34,7 @@
 	{%- set speaker_align = "left" -%}
 	{%- set speaker_color = "#e34565ff" -%}
 {%- else -%}
-	{%- if speaker is defined -%}
+	{%- if speaker is defined and not "user"-%}
 		{%- set speaker_name = speaker -%}
 	{%- else -%}
 		{%- set speaker_name  = "User" -%}
