@@ -239,7 +239,7 @@ main {
     color-scheme: auto;
   }
 
-  a > img {
+  a > img:not([src*="#full"]) {
     max-height: 80vh;
   }
 }
