@@ -256,7 +256,7 @@ flowchart LR
 
 ## Dependencies
 
-This blog requires [Zola](https://www.getzola.org/) 0.20.0 or higher. Please follow the [official installation guide](https://www.getzola.org/documentation/getting-started/installation/) to install Zola on your system.
+This blog requires [Zola](https://www.getzola.org/) 0.22.0 or higher. Please follow the [official installation guide](https://www.getzola.org/documentation/getting-started/installation/) to install Zola on your system.
 
 ## Upgrading Zola
 
