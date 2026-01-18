@@ -75,6 +75,7 @@ Hotlink protection is setting at Cloudflare level. Put the following terms in th
 | `partials/nav.html` | Change the Feed button to copy to clipboard. |
 | `partials/sections.html` (new) | List all the sections just like tags. (Copy from `taxonomy_list.html`) |
 | `partials/prompt-injection.html` (new) | Injecting prompt to AI search engine. Not really sure if it works, but it's worth a try.😎 |
+| `llms.txt.html` (new) | Generate [llms.txt](https://llmstxt.org/) file following the specification.<br>- Use processing instruction comment `[//]: # (<?llms.txt)` to prevent HTML minification<br>- Output markdown format with site info, sections, and article links<br>- Accessible at `/llms.txt` via `path = "llms.txt"` in content frontmatter |
 | `shortcodes/image.html` | Generate `srcset` to support responsive images. |
 | `scss/fonts.scss` | Use my own fonts. |
 <!-- prettier-ignore-end -->
