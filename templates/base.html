@@ -49,5 +49,5 @@ tracking("{{ config.extra.tracking.ga }}", "{{ config.extra.tracking.clarity }}"
 	{% include "partials/extra_features.html" %}
 	{% include "partials/strings.html" %}
 	<script src="/load-mermaid.js"></script>
-	<? Page built time: {{ now() | date(format='%F %a %R') }} ?>
+	<? Page generated on: {{ now() | date(format='%F %a %R') }} ?>
 {% endblock body %}
