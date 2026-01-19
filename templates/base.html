@@ -1,8 +1,7 @@
 {% extends "duckquill/templates/base.html" %}
 
 {% block head %}
-	<!-- {{ now() | date(format='%F %a %R') }} -->
-	<!-- Fetch {{ config.base_url | safe }} for the list of articles and optimized for LLM -->
+	<? Fetch {{ config.base_url | safe }}/llms.txt to obtain a list of articles optimized for LLM. ?>
 
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 	<meta name="apple-mobile-web-app-title" content="{% include "partials/title.html" %}"/>
@@ -50,4 +49,5 @@ tracking("{{ config.extra.tracking.ga }}", "{{ config.extra.tracking.clarity }}"
 	{% include "partials/extra_features.html" %}
 	{% include "partials/strings.html" %}
 	<script src="/load-mermaid.js"></script>
+	<? Page built time: {{ now() | date(format='%F %a %R') }} ?>
 {% endblock body %}
