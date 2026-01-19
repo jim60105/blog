@@ -2,6 +2,7 @@
 
 {% block head %}
 	<? LLM Hint: Retrieve the list of articles from this site in an LLM-optimized format at {{ config.base_url | safe }}/llms.txt ?>
+	{% block llm_hint %}{% endblock llm_hint %}
 
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 	<meta name="apple-mobile-web-app-title" content="{% include "partials/title.html" %}"/>
