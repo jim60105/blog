@@ -62,6 +62,7 @@ jobs:
 
       - name: Copy markdown files to public
         run: |
+          sudo apt-get update && sudo apt-get install -y zsh
           chmod +x ./scripts/copy-markdown-to-public.zsh
           zsh ./scripts/copy-markdown-to-public.zsh
 
