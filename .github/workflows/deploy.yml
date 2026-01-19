@@ -60,6 +60,11 @@ jobs:
       - name: Build ${{ matrix.site.name }} site
         run: zola build
 
+      - name: Copy markdown files to public
+        run: |
+          chmod +x ./scripts/copy-markdown-to-public.zsh
+          zsh ./scripts/copy-markdown-to-public.zsh
+
       - name: Deploy ${{ matrix.site.name }} to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
         with:

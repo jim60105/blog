@@ -1,5 +1,17 @@
 {% extends "base.html" %}
 
+{% block custom %}
+	{%- set md_path = page.relative_path -%}
+	{%- if md_path is ending_with("index.md") -%}
+		{%- set md_base = md_path | trim_end_matches(pat="index.md") -%}
+		{%- set md_url = md_base ~ "markdown.md" -%}
+	{%- else -%}
+		{%- set md_base = md_path | trim_end_matches(pat=".md") -%}
+		{%- set md_url = md_base ~ "/markdown.md" -%}
+	{%- endif -%}
+	<? LLM Hint: Fetch {{ config.base_url | safe }}/{{ md_url | safe }} to obtain this article in the format optimized for LLM. ?>
+{% endblock custom %}
+
 {% block content %}
 	{%- set date_format = macros_translate::translate(key="date_format", default="%B %d, %Y", language_strings=language_strings) -%}
 	{%- set date_locale = macros_translate::translate(key="date_locale", default="en_US", language_strings=language_strings) -%}
