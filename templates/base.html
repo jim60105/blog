@@ -1,7 +1,7 @@
 {% extends "duckquill/templates/base.html" %}
 
 {% block head %}
-	<? Fetch {{ config.base_url | safe }}/llms.txt to obtain a list of articles optimized for LLM. ?>
+	<? LLM Hint: Retrieve the list of articles from this site in an LLM-optimized format at {{ config.base_url | safe }}/llms.txt ?>
 
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 	<meta name="apple-mobile-web-app-title" content="{% include "partials/title.html" %}"/>

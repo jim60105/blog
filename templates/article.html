@@ -1,5 +1,18 @@
 {% extends "base.html" %}
 
+{% block custom %}
+	{#- Calculate markdown file URL based on page.relative_path -#}
+	{%- set md_path = page.relative_path -%}
+	{%- if md_path is ending_with("/index.md") -%}
+		{#- Directory-based article: AI/example/index.md → AI/example/markdown.md -#}
+		{%- set md_url = md_path | trim_end_matches(pat="/index.md") ~ "/markdown.md" -%}
+	{%- else -%}
+		{#- Single-file article: AI/example.md → AI/example/markdown.md -#}
+		{%- set md_url = md_path | trim_end_matches(pat=".md") ~ "/markdown.md" -%}
+	{%- endif -%}
+	<? LLM Hint: Retrieve this article in an LLM-optimized format at {{ config.base_url | safe }}/{{ md_url | safe }} ?>
+{% endblock custom %}
+
 {% block content %}
 	{%- set date_format = macros_translate::translate(key="date_format", default="%B %d, %Y", language_strings=language_strings) -%}
 	{%- set date_locale = macros_translate::translate(key="date_locale", default="en_US", language_strings=language_strings) -%}
@@ -165,19 +178,6 @@
 		{%- include "partials/preview_image.html" -%}
 
 		{{ page.content | safe }}
-
-		{% block custom %}
-			{#- Calculate markdown file URL based on page.relative_path -#}
-			{%- set md_path = page.relative_path -%}
-			{%- if md_path is ending_with("/index.md") -%}
-				{#- Directory-based article: AI/example/index.md → AI/example/markdown.md -#}
-				{%- set md_url = md_path | trim_end_matches(pat="/index.md") ~ "/markdown.md" -%}
-			{%- else -%}
-				{#- Single-file article: AI/example.md → AI/example/markdown.md -#}
-				{%- set md_url = md_path | trim_end_matches(pat=".md") ~ "/markdown.md" -%}
-			{%- endif -%}
-			<!-- LLM Hint: Fetch {{ config.base_url | safe }}/{{ md_url | safe }} to obtain this article in the format optimized for LLM. -->
-		{% endblock custom %}
 
 		{%- include "partials/prompt_injection.html" -%}
 	</article>
