@@ -57,14 +57,14 @@ jobs:
           chmod +x ./switch-site.sh
           ./switch-site.sh "${{ matrix.site.name }}"
 
-      - name: Build ${{ matrix.site.name }} site
-        run: zola build
-
-      - name: Copy markdown files to public
+      - name: Copy markdown files to static
         run: |
           sudo apt-get update && sudo apt-get install -y zsh
-          chmod +x ./scripts/copy-markdown-to-public.zsh
-          zsh ./scripts/copy-markdown-to-public.zsh
+          chmod +x ./scripts/copy-markdown-to-static.zsh
+          zsh ./scripts/copy-markdown-to-static.zsh
+
+      - name: Build ${{ matrix.site.name }} site
+        run: zola build
 
       - name: Deploy ${{ matrix.site.name }} to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3

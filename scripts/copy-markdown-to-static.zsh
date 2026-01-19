@@ -15,11 +15,11 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ==================================================================
 #
-# Copy Markdown Files to Public Directory
-# Copies markdown files from content/ to public/ directory for LLM crawlers
+# Copy Markdown Files to Static Directory
+# Copies markdown files from content/ to static/ directory for LLM crawlers
 # to access markdown format instead of HTML.
 #
-# Usage: ./copy-markdown-to-public.zsh [OPTIONS]
+# Usage: ./copy-markdown-to-static.zsh [OPTIONS]
 # The script will process all .md files in content subdirectories.
 #
 # Dependencies:
@@ -31,7 +31,7 @@ DEBUG_MODE=false
 DRY_RUN=false
 VERBOSE=false
 CONTENT_DIR="content"
-PUBLIC_DIR="public"
+STATIC_DIR="static"
 
 # Color codes for output
 readonly RED='\033[0;31m'
@@ -68,7 +68,7 @@ show_help() {
     cat << EOF
 Usage: $0 [OPTIONS]
 
-Copy markdown files from content/ to public/ directory for LLM crawler access.
+Copy markdown files from content/ to static/ directory for LLM crawler access.
 
 Options:
   -h, --help       Show this help message
@@ -83,10 +83,10 @@ Examples:
 
 File Path Mapping:
   Single-file articles:
-    content/AI/example.md -> public/AI/example/markdown.md
-  
+    content/AI/example.md -> static/AI/example/markdown.md
+
   Directory-based articles:
-    content/Crypto/example/index.md -> public/Crypto/example/markdown.md
+    content/Crypto/example/index.md -> static/Crypto/example/markdown.md
 
 Notes:
   - Skips _index.md files (section indexes)
@@ -107,12 +107,12 @@ check_directories() {
     fi
     log_debug "Content directory: OK"
     
-    if [[ ! -d "$PUBLIC_DIR" ]]; then
-        log_error "Public directory not found: $PUBLIC_DIR"
-        log_error "Please run 'zola build' first"
+    if [[ ! -d "$STATIC_DIR" ]]; then
+        log_error "Static directory not found: $STATIC_DIR"
+        log_error "Please ensure you are in the project root directory"
         return 1
     fi
-    log_debug "Public directory: OK"
+    log_debug "Static directory: OK"
     
     return 0
 }
@@ -133,17 +133,17 @@ process_file() {
     
     # Calculate target path
     if [[ "$md_file" == */index.md ]]; then
-        # Directory-based article: content/Category/article-name/index.md → public/Category/article-name/markdown.md
+        # Directory-based article: content/Category/article-name/index.md → static/Category/article-name/markdown.md
         local parent_dir="${md_file:h}"  # Get directory part
         parent_dir="${parent_dir#$CONTENT_DIR/}"  # Remove content/ prefix
-        target="$PUBLIC_DIR/${parent_dir}/markdown.md"
+        target="$STATIC_DIR/${parent_dir}/markdown.md"
         log_debug "Directory-based article: $md_file -> $target"
     else
-        # Single-file article: content/Category/article-name.md → public/Category/article-name/markdown.md
+        # Single-file article: content/Category/article-name.md → static/Category/article-name/markdown.md
         local base_name="${md_file:t:r}"  # Get filename without extension
         local parent_dir="${md_file:h}"
         parent_dir="${parent_dir#$CONTENT_DIR/}"
-        target="$PUBLIC_DIR/${parent_dir}/${base_name}/markdown.md"
+        target="$STATIC_DIR/${parent_dir}/${base_name}/markdown.md"
         log_debug "Single-file article: $md_file -> $target"
     fi
     
@@ -221,28 +221,28 @@ while [[ $# -gt 0 ]]; do
         -h|--help)
             show_help
             exit 0
-            ;;
+        ;;
         -d|--debug)
             DEBUG_MODE=true
             log_debug "Debug mode enabled"
             shift
-            ;;
+        ;;
         -n|--dry-run)
             DRY_RUN=true
             log_info "Dry run mode enabled"
             shift
-            ;;
+        ;;
         -v|--verbose)
             VERBOSE=true
             log_verbose "Verbose mode enabled"
             shift
-            ;;
+        ;;
         *)
             log_error "Unknown option: $1"
             echo ""
             show_help
             exit 1
-            ;;
+        ;;
     esac
 done
 
