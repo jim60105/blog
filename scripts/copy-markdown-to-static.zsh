@@ -171,6 +171,13 @@ process_file() {
         return 0
     fi
     
+    # Skip llms.md file (special template file)
+    if [[ "$md_file" == "content/llms.md" ]]; then
+        log_verbose "Skipping special template file: $md_file"
+        SKIPPED_FILES=$((SKIPPED_FILES + 1))
+        return 0
+    fi
+    
     # Skip draft articles
     if is_draft "$md_file"; then
         log_verbose "Skipping draft article: $md_file"
