@@ -86,8 +86,14 @@ main {
     color: black;
     // font-family: var(--font-system-ui);
     text-align: center;
-    text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff,
-      0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff;
+    text-shadow:
+      0px 0px 10px #fff,
+      0px 0px 10px #fff,
+      0px 0px 10px #fff,
+      0px 0px 10px #fff,
+      0px 0px 10px #fff,
+      0px 0px 10px #fff,
+      0px 0px 10px #fff;
   }
 
   #heading > h1 {
@@ -241,6 +247,16 @@ main {
 
   a > img:not([src*="#full"]) {
     max-height: 80vh;
+  }
+
+  #likerContainer {
+    margin: 0 auto;
+    width: fit-content;
+
+    iframe {
+      height: 103vw;
+      max-height: 400px;
+    }
   }
 }
 
