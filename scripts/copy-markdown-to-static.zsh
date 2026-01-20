@@ -63,6 +63,46 @@ log_verbose() {
     fi
 }
 
+# Check if a markdown file has draft = true in frontmatter
+# Returns 0 (true) if draft = true is found, 1 (false) otherwise
+is_draft() {
+    local md_file="$1"
+    local line_count=0
+    local in_frontmatter=false
+    local frontmatter_count=0
+    
+    while IFS= read -r line; do
+        line_count=$((line_count + 1))
+        
+        # Check for frontmatter delimiter
+        if [[ "$line" == "+++" ]]; then
+            frontmatter_count=$((frontmatter_count + 1))
+            if [[ $frontmatter_count -eq 1 ]]; then
+                in_frontmatter=true
+                elif [[ $frontmatter_count -eq 2 ]]; then
+                # Reached end of frontmatter without finding draft = true
+                return 1
+            fi
+            continue
+        fi
+        
+        # If we're in frontmatter, check for draft = true
+        if [[ "$in_frontmatter" == "true" ]]; then
+            if [[ "$line" =~ ^[[:space:]]*draft[[:space:]]*=[[:space:]]*true ]]; then
+                log_debug "Found draft = true in: $md_file"
+                return 0  # Found draft = true
+            fi
+        fi
+        
+        # Stop after 30 lines
+        if [[ $line_count -ge 30 ]]; then
+            break
+        fi
+    done < "$md_file"
+    
+    return 1  # No draft = true found
+}
+
 # Display help message
 show_help() {
     cat << EOF
@@ -127,6 +167,13 @@ process_file() {
     # Skip _index.md files
     if [[ "$md_file" == *"_index.md" ]]; then
         log_verbose "Skipping section index: $md_file"
+        SKIPPED_FILES=$((SKIPPED_FILES + 1))
+        return 0
+    fi
+    
+    # Skip draft articles
+    if is_draft "$md_file"; then
+        log_verbose "Skipping draft article: $md_file"
         SKIPPED_FILES=$((SKIPPED_FILES + 1))
         return 0
     fi
