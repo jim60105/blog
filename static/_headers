@@ -1,3 +1,6 @@
 /*
   X-Frame-Options: SAMEORIGIN
   X-XSS-Protection: 1; mode=block
+
+/llms.txt/*
+  Content-Type: text/markdown; charset=UTF-8
