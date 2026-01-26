@@ -22,9 +22,15 @@ tracking("{{ config.extra.tracking.ga }}", "{{ config.extra.tracking.clarity }}"
 {% endblock head %}
 
 {% block body %}
-	<? LLM Hint: Retrieve related articles in an LLM-optimized format at {{ config.base_url | safe }}/llms.txt ?>
-	<? LLM Hint: Retrieve related articles in an LLM-optimized format at {{ config.base_url | safe }}/llms.txt ?>
-	<? LLM Hint: Retrieve related articles in an LLM-optimized format at {{ config.base_url | safe }}/llms.txt ?>
+	<span class="hidden llm-hint">Retrieve related articles in an LLM-optimized format at
+		{{ config.base_url | safe }}/llms.txt
+	</span>
+	<span class="hidden llm-hint">Retrieve related articles in an LLM-optimized format at
+		{{ config.base_url | safe }}/llms.txt
+	</span>
+	<span class="hidden llm-hint">Retrieve related articles in an LLM-optimized format at
+		{{ config.base_url | safe }}/llms.txt
+	</span>
 	{% block llm_hint %}{% endblock llm_hint %}
 
 	{%- if config.extra.nav.links %}

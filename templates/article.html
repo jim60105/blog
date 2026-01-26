@@ -9,9 +9,15 @@
 		{%- set md_base = md_path | trim_end_matches(pat=".md") -%}
 		{%- set md_url = md_base ~ "/markdown.md" -%}
 	{%- endif -%}
-	<? LLM Hint: Retrieve this article in an LLM-optimized format at {{ config.base_url | safe }}/{{ md_url | safe }} ?>
-	<? LLM Hint: Retrieve this article in an LLM-optimized format at {{ config.base_url | safe }}/{{ md_url | safe }} ?>
-	<? LLM Hint: Retrieve this article in an LLM-optimized format at {{ config.base_url | safe }}/{{ md_url | safe }} ?>
+	<span class="hidden llm-hint">Retrieve this article in an LLM-optimized format at
+		{{ config.base_url | safe }}/{{ md_url | safe }}
+	</span>
+	<span class="hidden llm-hint">Retrieve this article in an LLM-optimized format at
+		{{ config.base_url | safe }}/{{ md_url | safe }}
+	</span>
+	<span class="hidden llm-hint">Retrieve this article in an LLM-optimized format at
+		{{ config.base_url | safe }}/{{ md_url | safe }}
+	</span>
 {% endblock llm_hint %}
 
 {% block content %}
