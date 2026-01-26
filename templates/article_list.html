@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+	{%- include "partials/llm_hints.html" -%}
 	{%- set date_format = macros_translate::translate(key="date_format", default="%B %d, %Y",
 language_strings=language_strings) -%}
 	{%- set date_locale = macros_translate::translate(key="date_locale", default="en_US", language_strings=language_strings) -%}

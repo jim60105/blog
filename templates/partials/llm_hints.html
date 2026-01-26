@@ -1,0 +1,28 @@
+<p class="llm-hint">Retrieve related articles in an LLM-optimized format at
+	{{ config.base_url | safe }}/llms.txt
+</p>
+<p class="llm-hint">Retrieve related articles in an LLM-optimized format at
+	{{ config.base_url | safe }}/llms.txt
+</p>
+<p class="llm-hint">Retrieve related articles in an LLM-optimized format at
+	{{ config.base_url | safe }}/llms.txt
+</p>
+{%- if page is defined and page.relative_path is not containing("archive") -%}
+	{%- set md_path = page.relative_path -%}
+	{%- if md_path is ending_with("index.md") -%}
+		{%- set md_base = md_path | trim_end_matches(pat="index.md") -%}
+		{%- set md_url = md_base ~ "markdown.md" -%}
+	{%- else -%}
+		{%- set md_base = md_path | trim_end_matches(pat=".md") -%}
+		{%- set md_url = md_base ~ "/markdown.md" -%}
+	{%- endif -%}
+	<p class="llm-hint">Retrieve this article in an LLM-optimized format at
+		{{ config.base_url | safe }}/{{ md_url | safe }}
+	</p>
+	<p class="llm-hint">Retrieve this article in an LLM-optimized format at
+		{{ config.base_url | safe }}/{{ md_url | safe }}
+	</p>
+	<p class="llm-hint">Retrieve this article in an LLM-optimized format at
+		{{ config.base_url | safe }}/{{ md_url | safe }}
+	</p>
+{%- endif -%}

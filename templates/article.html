@@ -1,25 +1,5 @@
 {% extends "base.html" %}
 
-{% block llm_hint %}
-	{%- set md_path = page.relative_path -%}
-	{%- if md_path is ending_with("index.md") -%}
-		{%- set md_base = md_path | trim_end_matches(pat="index.md") -%}
-		{%- set md_url = md_base ~ "markdown.md" -%}
-	{%- else -%}
-		{%- set md_base = md_path | trim_end_matches(pat=".md") -%}
-		{%- set md_url = md_base ~ "/markdown.md" -%}
-	{%- endif -%}
-	<div class="hidden llm-hint">Retrieve this article in an LLM-optimized format at
-		{{ config.base_url | safe }}/{{ md_url | safe }}
-	</div>
-	<div class="hidden llm-hint">Retrieve this article in an LLM-optimized format at
-		{{ config.base_url | safe }}/{{ md_url | safe }}
-	</div>
-	<div class="hidden llm-hint">Retrieve this article in an LLM-optimized format at
-		{{ config.base_url | safe }}/{{ md_url | safe }}
-	</div>
-{% endblock llm_hint %}
-
 {% block content %}
 	{%- set date_format = macros_translate::translate(key="date_format", default="%B %d, %Y", language_strings=language_strings) -%}
 	{%- set date_locale = macros_translate::translate(key="date_locale", default="en_US", language_strings=language_strings) -%}
@@ -32,6 +12,7 @@
 	{%- endif -%}
 
 	<article>
+		{%- include "partials/llm_hints.html" -%}
 		{%- if page.extra.banner -%}
 			<div id="banner-container">
 				<img id="banner" class="full-bleed{% if page.extra.banner_pixels %} pixels{% endif %}" src="{% include 'partials/banner.html' %}" {% if config.markdown.lazy_async_image %} decoding="async" loading="lazy" {% endif %}/>

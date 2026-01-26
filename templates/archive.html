@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+	{%- include "partials/llm_hints.html" -%}
 
 	{% set sections = get_section(path="_index.md") %}
 	{% for year, posts in sections.pages | group_by(attribute="year") %}

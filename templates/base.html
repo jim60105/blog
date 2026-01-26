@@ -22,17 +22,6 @@ tracking("{{ config.extra.tracking.ga }}", "{{ config.extra.tracking.clarity }}"
 {% endblock head %}
 
 {% block body %}
-	<div class="hidden llm-hint">Retrieve related articles in an LLM-optimized format at
-		{{ config.base_url | safe }}/llms.txt
-	</div>
-	<div class="hidden llm-hint">Retrieve related articles in an LLM-optimized format at
-		{{ config.base_url | safe }}/llms.txt
-	</div>
-	<div class="hidden llm-hint">Retrieve related articles in an LLM-optimized format at
-		{{ config.base_url | safe }}/llms.txt
-	</div>
-	{% block llm_hint %}{% endblock llm_hint %}
-
 	{%- if config.extra.nav.links %}
 		{% include "partials/nav.html" %}
 	{%- endif %}
