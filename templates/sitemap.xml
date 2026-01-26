@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	{%- for sitemap_entry in entries %}
-		{%- if sitemap_entry.permalink is not containing("llms.txt") %}
-			<url>
-				<loc>{{ sitemap_entry.permalink | escape_xml | safe }}</loc>
-				{%- if sitemap_entry.updated  %}
-					{%- set date_str = sitemap_entry.updated | as_str %}
-					{%- if date_str is not containing("0000-01-01") %}
-						<lastmod>{{ sitemap_entry.updated }}</lastmod>
-					{%- endif %}
+		<url>
+			<loc>{{ sitemap_entry.permalink | escape_xml | safe }}</loc>
+			{%- if sitemap_entry.updated  %}
+				{%- set date_str = sitemap_entry.updated | as_str %}
+				{%- if date_str is not containing("0000-01-01") %}
+					<lastmod>{{ sitemap_entry.updated }}</lastmod>
 				{%- endif %}
-			</url>
-		{%- endif %}
+			{%- endif %}
+		</url>
 	{%- endfor %}
 </urlset>
