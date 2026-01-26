@@ -4,3 +4,6 @@
 
 /llms.txt/*
   Content-Type: text/markdown; charset=UTF-8
+
+/*.md
+  Content-Type: text/markdown; charset=UTF-8
