@@ -1,11 +1,6 @@
 {% extends "duckquill/templates/base.html" %}
 
 {% block head %}
-	<? LLM Hint: Retrieve related articles in an LLM-optimized format at {{ config.base_url | safe }}/llms.txt ?>
-	<? LLM Hint: Retrieve related articles in an LLM-optimized format at {{ config.base_url | safe }}/llms.txt ?>
-	<? LLM Hint: Retrieve related articles in an LLM-optimized format at {{ config.base_url | safe }}/llms.txt ?>
-	{% block llm_hint %}{% endblock llm_hint %}
-
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 	<meta name="apple-mobile-web-app-title" content="{% include "partials/title.html" %}"/>
 	<link rel="manifest" href="/site.webmanifest"/>
@@ -27,6 +22,11 @@ tracking("{{ config.extra.tracking.ga }}", "{{ config.extra.tracking.clarity }}"
 {% endblock head %}
 
 {% block body %}
+	<? LLM Hint: Retrieve related articles in an LLM-optimized format at {{ config.base_url | safe }}/llms.txt ?>
+	<? LLM Hint: Retrieve related articles in an LLM-optimized format at {{ config.base_url | safe }}/llms.txt ?>
+	<? LLM Hint: Retrieve related articles in an LLM-optimized format at {{ config.base_url | safe }}/llms.txt ?>
+	{% block llm_hint %}{% endblock llm_hint %}
+
 	{%- if config.extra.nav.links %}
 		{% include "partials/nav.html" %}
 	{%- endif %}
