@@ -293,4 +293,4 @@ You should have received a copy of the GNU General Public License along with thi
 
 ### Special Authorization
 
-I, 陳鈞, hereby grant explicit permission for anyone to submit the content of this project to the upstream project [Duckquill](https://codeberg.org/daudix/duckquill) without the need to change the MIT license of Duckquill.
+I, Jim Chen, hereby grant explicit permission for anyone to submit the content of this project to the upstream project [Duckquill](https://codeberg.org/daudix/duckquill) without the need to change the MIT license of Duckquill.

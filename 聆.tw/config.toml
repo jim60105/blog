@@ -63,7 +63,7 @@ feed_limit = 20
 hard_link_static = false
 
 # The default author for pages
-author = "陳鈞"
+author = "Jim Chen"
 
 # The taxonomies to be rendered for the site and their configuration of the default languages
 # Example:
