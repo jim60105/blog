@@ -142,10 +142,11 @@
 
 文章按主題分類在 `content/` 下的子目錄：
 
-- `AI/`, `Backend/`, `Frontend/`, `Blockchain/`
-- `Container/`, `Database/`, `Cloudflare/`
-- `Koikatu/`, `Livestream/`, `Mobile/`
-- `SideProject/`, `SystemAdmin/`, `Unboxing/`
+```bash
+ls -d content/*/
+```
+
+Choose the section most related to the topic. If none fits well, use `Uncategorized`.
 
 ### Front Matter 必要欄位
 
