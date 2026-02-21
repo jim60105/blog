@@ -18,7 +18,8 @@ This reference contains the full editorial guidelines for writing blog posts. Re
 - Closing paragraph must not use slogan-style endings
 - Use natural paragraphs with `##` and `###` subheadings
 - Avoid bullet lists unless explicitly requested or justified; prefer prose
-- Use markdown reference-style links when citing sources. But only for external sources, not for internal links. Each reference link must not be used more than once in the article.
+- Use markdown reference-style links for external sources only, not for internal links. Each reference link should appear only once in the article.
+- Format all reference-style links using markdown so they display as "links." Use the webpage title (curl fetch it!) as the link text for each reference-style link.
 
 ## Tone and Style
 
