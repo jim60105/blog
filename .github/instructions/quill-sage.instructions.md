@@ -150,6 +150,7 @@ Some green text
   </pre>
 - Use {# comments #} to add notes visible only during writing, not to end-users. This is useful for sharing remarks with co-authors.
 - Use {# image placement #} to indicate where to insert an image, and describe the image content (as this will be used by a text-to-image service later). This should take higher priority than the mermaid diagram when deciding which to use.
+- Use markdown reference-style links when citing sources. But only for external sources, not for internal links. Each reference link must not be used more than once in the article.
 - Design with conversations between user and Jim and paragraphs to vividly article using {% chat(speaker="user") %} and {% chat(speaker="jim") %}.
 - Use inverted pyramid structure (placing the most important 5W1H at the beginning), emphasizing conciseness, objectivity, and clarity; avoid overly promotional language, use data and case studies to increase persuasiveness, and incorporate attention-grabbing headlines and multimedia.
 - The opening should start with paragraph and states the core conclusion and scope. The subsequent paragraph provides supporting evidence and limitations. The closing paragraph must not use slogan-style endings.
