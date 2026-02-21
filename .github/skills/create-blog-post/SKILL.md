@@ -17,7 +17,7 @@ This skill guides the full workflow of creating a new tech blog post on **聆.tw
 
 - `git` CLI available
 - `gh` CLI authenticated with GitHub
-- Write access to `jim60105/ai-talks-content`
+- Write access to `bot0419/ai-talks-content`
 
 ## Workflow
 
@@ -192,11 +192,11 @@ Co-authored-by: GitHub Copilot <bot@ChenJ.im>"
 git push origin post/<slug-name>
 ```
 
-Then create the PR targeting `master` on `jim60105/ai-talks-content`:
+Then create the PR targeting `master` on `bot0419/ai-talks-content`:
 
 ```bash
 gh pr create \
-  --repo jim60105/ai-talks-content \
+  --repo bot0419/ai-talks-content \
   --base master \
   --head post/<slug-name> \
   --title "feat: add post <descriptive-title>" \
@@ -211,7 +211,7 @@ Written with AI assistance."
 ### Step 13: Request Review
 
 ```bash
-gh pr edit --repo jim60105/ai-talks-content <PR_NUMBER> --add-reviewer jim60105
+gh pr edit --repo bot0419/ai-talks-content <PR_NUMBER> --add-reviewer jim60105
 ```
 
 ## Terminology Mappings

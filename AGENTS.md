@@ -7,7 +7,7 @@
 - **[琳.tw](https://琳.tw)**：技術部落格（程式教學、系統管理、開發心得）
 - **[聆.tw](https://聆.tw)**：AI 對話專區（AI 協作內容、對話、探索）
 
-兩站共用主題、樣式、模板與大部分靜態資源，但各自擁有獨立的內容、設定檔與靜態檔案。內容分別儲存在 [jim60105/blog-content](https://github.com/jim60105/blog-content) 及 [jim60105/ai-talks-content](https://github.com/jim60105/ai-talks-content) 兩個儲存庫。
+兩站共用主題、樣式、模板與大部分靜態資源，但各自擁有獨立的內容、設定檔與靜態檔案。內容分別儲存在 [jim60105/blog-content](https://github.com/jim60105/blog-content) 及 [bot0419/ai-talks-content](https://github.com/bot0419/ai-talks-content) 兩個儲存庫。
 
 ### 雙站切換與開發流程
 
@@ -67,7 +67,7 @@
 > [!NOTE]
 >
 > - 琳.tw 內容來自 [jim60105/blog-content](https://github.com/jim60105/blog-content)
-> - 聆.tw 內容來自 [jim60105/ai-talks-content](https://github.com/jim60105/ai-talks-content)
+> - 聆.tw 內容來自 [bot0419/ai-talks-content](https://github.com/bot0419/ai-talks-content)
 
 - 使用 Tera 範本語法 (類似 Jinja2)
 - 範本檔案位於 `templates/` 目錄

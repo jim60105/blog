@@ -9,7 +9,7 @@ This is a dual-site blog project that hosts two distinct websites using [Zola](h
 - **[琳.tw](https://琳.tw)** - 琳的備忘手札 (Technical Blog): Programming tutorials, system administration, and development insights
 - **[聆.tw](https://聆.tw)** - 琳聽智者漫談 (AI Conversations): AI-assisted content, conversations, and explorations
 
-The content for each site is stored separately in the [jim60105/blog-content repository](https://github.com/jim60105/blog-content) and the [jim60105/ai-talks-content repository](https://github.com/jim60105/ai-talks-content).
+The content for each site is stored separately in the [jim60105/blog-content repository](https://github.com/jim60105/blog-content) and the [bot0419/ai-talks-content repository](https://github.com/bot0419/ai-talks-content).
 
 ## Dual Site Architecture
 

@@ -21,7 +21,7 @@
   "customizations": {
     "codespaces": {
       "repositories": {
-        "jim60105/ai-talks-content": {
+        "bot0419/ai-talks-content": {
           "permissions": "write-all"
         },
         "jim60105/blog-content": {
