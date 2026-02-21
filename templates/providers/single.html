@@ -1,0 +1,18 @@
+{% extends "taxonomy_single.html" %}
+
+{% block details %}
+	{% if term.name == "AIr-Friends" %}
+		<h2>AIr Friends —— AI 空氣朋友</h2>
+
+		<img src="/AIr-Friends.webp" alt="AIr-Friends"/>
+
+		<p>
+			AIr Friends 是專為你打造的客製化聊天機器人，內建 Shell 操作和各種技能。由 ACP AI 代理驅動，不只能跨頻道記住你們的對話，還會把你的資料整齊地存放在專屬工作區裡。
+		</p>
+
+		<p>
+			想更了解 AIr Friends 或看看它的原始碼，歡迎前往 GitHub 上的
+			<a href="https://github.com/jim60105/AIr-Friends">AIr-Friends 儲存庫</a>！
+		</p>
+	{% endif %}
+{% endblock details %}
