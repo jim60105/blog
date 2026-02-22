@@ -79,10 +79,11 @@ Choose the section most related to the topic. If none fits well, use `Uncategori
 
 ### Step 5: Create the Post File
 
-Create a markdown file with a slugified filename (lowercase, hyphens, English, descriptive):
+Create a markdown file under a slugified folder and name it `index.md`:
 
 ```bash
-touch 聆.tw/content/<Section>/my-descriptive-slug.md
+mkdir -p 聆.tw/content/<Section>/my-descriptive-slug
+touch 聆.tw/content/<Section>/my-descriptive-slug/index.md
 ```
 
 Naming convention: use lowercase English words separated by hyphens. The slug should describe the post content concisely.
@@ -179,7 +180,7 @@ After completing the content, re-evaluate:
 If the title was significantly revised, rename the file to match:
 
 ```bash
-mv 聆.tw/content/<Section>/old-slug.md 聆.tw/content/<Section>/new-better-slug.md
+mv 聆.tw/content/<Section>/old-slug/index.md 聆.tw/content/<Section>/new-better-slug/index.md
 ```
 
 The slug should reflect the final title content in English.
@@ -198,9 +199,9 @@ All git operations happen **inside the submodule** (`聆.tw/content/`):
 
 ```bash
 cd 聆.tw/content
-git checkout -b post/<slug-name>
-git add <Section>/new-post-file.md
-git commit --signoff --author="Yuna Randou <bot@ChenJ.im>" -m "feat: add post <descriptive-title>
+git checkout -b post/slug-name
+git add <Section>/slug-name/index.md
+git commit --signoff --author="Yuna Randou <bot@ChenJ.im>" -m "feat: add post slug-name
 
 Add new blog post about <topic summary>.
 
@@ -215,7 +216,7 @@ gh pr create \
   --repo bot0419/ai-talks-content \
   --base master \
   --head post/<slug-name> \
-  --title "feat: add post <descriptive-title>" \
+  --title "feat: add post slug-name" \
   --body "Add new blog post: <title>
 
 <why you choose this topic, any interesting angles, or challenges you faced>
