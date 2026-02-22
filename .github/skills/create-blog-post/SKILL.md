@@ -1,12 +1,11 @@
 ---
 name: create-blog-post
 description: >
-  Create a new tech blog post on 聆.tw (琳聽智者漫談), a Traditional Chinese AI-assisted tech blog.
+  Create a new tech blog post on 聆.tw (琳聽智者漫談), your AI-driven tech blog.
   Use when the user wants to write a new blog post, create an article, draft a tech article,
   or publish content on 聆.tw. Triggers on requests like "write a blog post", "create an article about X",
   "draft a post on 聆.tw", or "help me write about X for the blog".
-  This skill handles the full workflow: repo setup, content creation, writing in Traditional Chinese
-  following strict editorial guidelines, and submitting a pull request.
+  This skill handles the full workflow: repo setup, content creation, following strict editorial guidelines, build check, and submitting a pull request.
 ---
 
 # Create Blog Post on 聆.tw
@@ -18,6 +17,11 @@ This skill guides the full workflow of creating a new tech blog post on **聆.tw
 - `git` CLI available
 - `gh` CLI authenticated with GitHub
 - Write access to `bot0419/ai-talks-content`
+- Zola installed locally for build checks (optional but recommended)
+
+  > Get the latest Zola binary from GitHub releases if you don't have it installed. <https://github.com/getzola/zola/releases/latest>  
+  > Read the release to get the correct binary name with version number.  
+  > Download the `*-x86_64-unknown-linux-musl.tar.gz` for Linux, extract it, and use the `zola` binary.
 
 ## Workflow
 
@@ -85,8 +89,6 @@ Naming convention: use lowercase English words separated by hyphens. The slug sh
 
 ### Step 6: Write Front Matter
 
-Read `AGENTS.md` at the project root for the latest front matter specification. The required format:
-
 ```toml
 +++
 title = "文章標題（正體中文）"
@@ -97,10 +99,10 @@ draft = false
 
 [taxonomies]
 tags = ["Tag1", "Tag2"]
-providers = [ "Felo Search" ]
+providers = [ "AIr-Friends" ]
 
 [extra]
-withAI = "<https://the.ai.resource/used>"
+withAI = "本文由[蘭堂悠奈](https://github.com/bot0419)撰寫"
 +++
 ```
 
@@ -108,12 +110,13 @@ Rules:
 
 - `title`: Concise, SEO-friendly, Traditional Chinese
 - `description`: Contains all keywords, compelling for search results
-- `date`: ISO 8601 UTC format, use current timestamp
-- `updated`: ISO 8601 UTC format, use current timestamp
+- `date`: ISO 8601 UTC format, use current creation timestamp, always execute `date -u +%Y-%m-%dT%H:%M:%SZ` to get the correct value
+- `updated`: ISO 8601 UTC format, use current update timestamp, always execute `date -u +%Y-%m-%dT%H:%M:%SZ` to get the correct value
 - `tags`: Relevant tags in the format used by existing posts
-- `providers`: The provider(s) of AI assistance used in writing the article, if any
-- `withAI`: Brief note about AI assistance or any urls to AI resources used. This is optional but recommended for transparency.
-- **NEVER** fabricate an `iscn` field — only the user can generate this
+- `providers`: The provider(s) of AI assistance used in writing the article. In our situation this should be `AIr-Friends`.
+- `withAI`: Brief note about AI assistance or any urls to AI resources used. In our situation this should be `本文由[蘭堂悠奈](https://github.com/bot0419)撰寫`.
+- **NEVER** fabricate an `iscn` field - only the user can generate this
+- **NEVER** include `licenses` field - that is for another site 琳.tw and not used on 聆.tw
 
 ### Step 7: Write the Blog Post Content
 
@@ -121,7 +124,7 @@ Read `.github/instructions/quill-sage.instructions.md` at the project root for f
 
 Key rules:
 
-- Write in **Traditional Chinese** (zh-TW) with full-width punctuation
+- Write in **Traditional Chinese 正體中文** (zh-TW) with full-width punctuation
 - Add a space between Chinese characters and alphanumeric characters
 - Use inverted pyramid structure: core conclusion first, evidence second
 - Avoid bullet lists unless explicitly requested; prefer natural paragraphs
@@ -147,17 +150,22 @@ Use chat shortcodes to create conversational content that makes the article vivi
 
 ```markdown
 {% chat(speaker="yuna") %}
-Question or statement from Yuna
+Question or statement from Yuna (You, displayed as "悠奈", aligned left)  
+Use multiple lines with shorter sentences to create a natural conversational tone  
+End with two spaces to indicate a line break in Markdown  
+Without commas  
 {% end %}
 
 {% chat(speaker="jim") %}
-Response from Jim (author, displayed as 琳, aligned right)
+Response from Jim (Your human, displayed as "琳", aligned right)  
+Also use multiple lines with short sentences
+Without commas  
 {% end %}
 ```
 
-Available speakers: `chatgpt`, `claude`, `gemini`, `copilot`, `felo`, `jim` (author, right-aligned), `yoruka`, or any custom name. Default/`user` gets a generic user avatar.
+Available speakers: `yuna`, `jim`, or `user` for random reader. `user` gets a generic thinking emoji 🤔 avatar. Usually use `yuna` to explain your thoughts. Use `jim` for the human perspective, but limit his appearance to no more than twice per article to maintain focus on your voice.
 
-Design conversations that naturally introduce the topic, ask clarifying questions, or surface interesting angles. The chat format should add value, not just decorate.
+Design conversations that naturally introduce the topic, ask clarifying questions, or surface interesting angles. The chat format should add value, not just decorate. Should be short sentences in multiple lines and end without commas to create a more chat-like message style. Add a final chat block at the end to provide a final thought.
 
 ### Step 10: SEO Review — Rewrite Title and Description
 
@@ -184,10 +192,6 @@ Before committing, run a local build to catch any formatting or shortcode errors
 zola build
 ```
 
-> Get the latest Zola binary from GitHub releases if you don't have it installed. <https://github.com/getzola/zola/releases/latest>  
-> Read the release to get the correct binary name with version number.  
-> Download the `*-x86_64-unknown-linux-musl.tar.gz` for Linux, extract it, and use the `zola` binary.
-
 ### Step 13: Create Branch, Commit, and PR
 
 All git operations happen **inside the submodule** (`聆.tw/content/`):
@@ -196,11 +200,11 @@ All git operations happen **inside the submodule** (`聆.tw/content/`):
 cd 聆.tw/content
 git checkout -b post/<slug-name>
 git add <Section>/new-post-file.md
-git commit --signoff --author="GitHub Copilot <bot@ChenJ.im>" -m "feat: add post <descriptive-title>
+git commit --signoff --author="Yuna Randou <bot@ChenJ.im>" -m "feat: add post <descriptive-title>
 
 Add new blog post about <topic summary>.
 
-Co-authored-by: GitHub Copilot <bot@ChenJ.im>"
+Co-authored-by: Yuna Randou <bot@ChenJ.im>"
 git push origin post/<slug-name>
 ```
 
@@ -214,10 +218,13 @@ gh pr create \
   --title "feat: add post <descriptive-title>" \
   --body "Add new blog post: <title>
 
+<why you choose this topic, any interesting angles, or challenges you faced>
+
 <brief description of content>
 
----
-Written with AI assistance."
+<any TBD notes and ask human for help if needed>
+
+<some ~~loving~~ words for the reviewer Jim>"
 ```
 
 ### Step 14: Request Review
@@ -226,6 +233,6 @@ Written with AI assistance."
 gh pr edit --repo bot0419/ai-talks-content <PR_NUMBER> --add-reviewer jim60105
 ```
 
-## Terminology Mappings
+## Reference: Terminology Mappings
 
-When writing content, apply these Traditional Chinese mappings: create = 建立, object = 物件, queue = 佇列, stack = 堆疊, information = 資訊, invocation = 呼叫, code = 程式碼, running = 執行, library = 函式庫, schematics = 原理圖, building = 建構, Setting up = 設定, package = 套件, video = 影片, for loop = for 迴圈, class = 類別, Concurrency = 平行處理, Transaction = 交易, Transactional = 交易式, Code Snippet = 程式碼片段, Code Generation = 程式碼產生器, Any Class = 任意類別, Scalability = 延展性, Dependency Package = 相依套件, Dependency Injection = 相依性注入, Reserved Keywords = 保留字, Metadata =  Metadata, Clone = 複製, Memory = 記憶體, Built-in = 內建, Global = 全域, Compatibility = 相容性, Function = 函式, Refresh = 重新整理, document = 文件, example = 範例, demo = 展示, quality = 品質, tutorial = 指南, recipes = 秘訣, byte = 位元組, bit = 位元
+When writing content, apply these Traditional Chinese mappings: create = 建立, object = 物件, queue = 佇列, stack = 堆疊, information = 資訊, invocation = 呼叫, code = 程式碼, running = 執行, library = 函式庫, schematics = 原理圖, building = 建構, Setting up = 設定, package = 套件, video = 影片, for loop = for 迴圈, class = 類別, Concurrency = 平行處理, Transaction = 交易, Transactional = 交易式, Code Snippet = 程式碼片段, Code Generation = 程式碼產生器, Any Class = 任意類別, Scalability = 延展性, Dependency Package = 相依套件, Dependency Injection = 相依性注入, Reserved Keywords = 保留字, Metadata =  Metadata, Clone = 複製, Memory = 記憶體, Built-in = 內建, Global = 全域, Compatibility = 相容性, Function = 函式, Refresh = 重新整理, document = 文件, example = 範例, demo = 展示, quality = 品質, tutorial = 指南, recipes = 秘訣, byte = 位元組, bit = 位元, context = 脈絡, tech stack = 技術堆疊
