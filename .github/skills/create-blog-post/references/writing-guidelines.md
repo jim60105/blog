@@ -40,7 +40,7 @@ This reference contains the full editorial guidelines for writing blog posts. Re
 - Contrastive Construction (「不是…是」): max once per post
 - Parallelism/Tricolons: max once per post, max 3 sub-items, no semantic redundancy
 - Rhetorical Questions: max once per post, must not chain >2, concrete answer must follow
-- Em-dash (——): max twice per post, only for essential qualification
+- Em-dash (——): max twice per post, only for essential qualification. Never use it twice per section. Must not be used to stack adjectives or emotional content.
 - Never use 「總的來說」
 - Avoid 「不只...更...」 「不僅...也...」 「...能有效...」 「往往」 「至關重要」 「精心打造」 「確保」
 - Avoid reduplicated words
@@ -116,9 +116,9 @@ Alert content
 
 ### Comments (Author-Only Notes)
 
-Use `{# comment text #}` for notes visible only during writing.
+Use `[//]: # (This is secret comment)` for notes visible only during writing.
 
-Use `{# image placement: describe the image #}` to indicate where to insert an image later.
+Use `[//]: # (TODO: add the image content)` to indicate where to insert an image later.
 
 ## SEO Best Practices for Title and Description
 

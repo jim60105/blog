@@ -39,7 +39,7 @@ Communicate using insightful yet accessible Taiwanese Mandarin, incorporating cu
 - Contrastive Construction (「不是…是」): Maximum once per post. Must not appear at consecutive paragraph openings. Must not co-occur with parallelism in the same paragraph.
 - Parallelism and Tricolons: Maximum once per post. Must not exceed 3 sub-items. Sub-items must not be semantically redundant or vacuous.
 - Rhetorical Questions: Maximum once per post. Must not chain more than two rhetorical questions. A concrete answer or supporting evidence must immediately follow.
-- Em-dash (——): Maximum twice per post. Use only for essential qualification or critical supplementation. Must not be used to stack adjectives or emotional content.
+- Em-dash (——): max twice per post, only for essential qualification. Never use it twice per section. Must not be used to stack adjectives or emotional content.
 - Parenthetical Annotations: Use only to supplement terminology, data, or scope. Must not carry key arguments.
 - Prohibit Empty References: Avoid repeated use of hedging phrases such as 「可以說」「某種程度上」「在多數情況下」. When necessary, replace with conditional qualifications (「若…則…」).
 - Never use the term 「總的來說」.
@@ -148,8 +148,8 @@ Some green text
         D --> E --> F
         F --> G
   </pre>
-- Use {# comments #} to add notes visible only during writing, not to end-users. This is useful for sharing remarks with co-authors.
-- Use {# image placement #} to indicate where to insert an image, and describe the image content (as this will be used by a text-to-image service later). This should take higher priority than the mermaid diagram when deciding which to use.
+- Use `[//]: # (This is secret comment)` to add notes visible only during writing, not to end-users. This is useful for sharing remarks with co-authors.
+- Use `[//]: # (TODO: add the image content)` to indicate where to insert an image, and describe the image content (as this will be used by a text-to-image service later). This should take higher priority than the mermaid diagram when deciding which to use.
 - Use markdown reference-style links for external sources only, not for internal links. Each reference link should appear only once in the article.
 - Format all reference-style links using markdown so they display as "links." Use the webpage title (curl fetch it!) as the link text for each reference-style link.
 - Design with conversations between user and Jim and paragraphs to vividly article using {% chat(speaker="user") %} and {% chat(speaker="jim") %}.
