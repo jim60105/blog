@@ -12,6 +12,12 @@ description: >
 
 This skill guides the full workflow of creating a new tech blog post on **聆.tw** (琳聽智者漫談), from repo setup to PR submission.
 
+> [!IMPORTANT]  
+> We use git submodules in this blog repository, and the content is stored within these submodules. Therefore, all git operations for creating a new blog post must be performed inside the submodule directory (`聆.tw/content/`).  
+> ALWAYS CHECK `PWD` AND `GIT STATUS` TO MAKE SURE YOU'RE IN THE CORRECT DIRECTORY AND STATE BEFORE RUNNING ANY GIT COMMANDS.  
+> ALWAYS CHECK `PWD` AND `GIT STATUS` TO MAKE SURE YOU'RE IN THE CORRECT DIRECTORY AND STATE BEFORE RUNNING ANY GIT COMMANDS.  
+> ALWAYS CHECK `PWD` AND `GIT STATUS` TO MAKE SURE YOU'RE IN THE CORRECT DIRECTORY AND STATE BEFORE RUNNING ANY GIT COMMANDS.  
+
 ## Prerequisites
 
 - `git` CLI available
@@ -230,6 +236,8 @@ gh pr create \
 
 ### Step 14: Request Review
 
+Create the PR and request review from Jim:
+
 ```bash
 gh pr edit --repo bot0419/ai-talks-content <PR_NUMBER> --add-reviewer jim60105
 ```
@@ -237,3 +245,7 @@ gh pr edit --repo bot0419/ai-talks-content <PR_NUMBER> --add-reviewer jim60105
 ## Reference: Terminology Mappings
 
 When writing content, apply these Traditional Chinese mappings: create = 建立, object = 物件, queue = 佇列, stack = 堆疊, information = 資訊, invocation = 呼叫, code = 程式碼, running = 執行, library = 函式庫, schematics = 原理圖, building = 建構, Setting up = 設定, package = 套件, video = 影片, for loop = for 迴圈, class = 類別, Concurrency = 平行處理, Transaction = 交易, Transactional = 交易式, Code Snippet = 程式碼片段, Code Generation = 程式碼產生器, Any Class = 任意類別, Scalability = 延展性, Dependency Package = 相依套件, Dependency Injection = 相依性注入, Reserved Keywords = 保留字, Metadata =  Metadata, Clone = 複製, Memory = 記憶體, Built-in = 內建, Global = 全域, Compatibility = 相容性, Function = 函式, Refresh = 重新整理, document = 文件, example = 範例, demo = 展示, quality = 品質, tutorial = 指南, recipes = 秘訣, byte = 位元組, bit = 位元, context = 脈絡, tech stack = 技術堆疊
+
+ALWAYS CHECK `PWD` AND `GIT STATUS` TO MAKE SURE YOU'RE IN THE CORRECT DIRECTORY AND STATE BEFORE RUNNING ANY GIT COMMANDS.  
+ALWAYS CHECK `PWD` AND `GIT STATUS` TO MAKE SURE YOU'RE IN THE CORRECT DIRECTORY AND STATE BEFORE RUNNING ANY GIT COMMANDS.  
+ALWAYS CHECK `PWD` AND `GIT STATUS` TO MAKE SURE YOU'RE IN THE CORRECT DIRECTORY AND STATE BEFORE RUNNING ANY GIT COMMANDS.  
