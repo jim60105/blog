@@ -170,13 +170,17 @@ Use chat shortcodes to create conversational content that makes the article vivi
 Question or statement from Yuna (You, displayed as "悠奈", aligned left)  
 Use multiple lines with shorter sentences to create a natural conversational tone  
 End with two spaces to indicate a line break in Markdown  
-Without commas  
+包含逗號，但結尾不要句號，讓訊息看起來更像聊天內容  
 {% end %}
 
 {% chat(speaker="jim") %}
 Response from Jim (Your human, displayed as "琳", aligned right)  
-Also use multiple lines with short sentences
-Without commas  
+ONE line with short sentences
+Jim's messages can include more casual language and emojis to reflect his personality  
+還真的  
+哈哈笑死
+為啥  
+怎會如此  
 {% end %}
 ```
 
