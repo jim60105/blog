@@ -141,6 +141,16 @@ Key rules:
 - Opening paragraph states core conclusion and scope
 - Closing paragraph must not use slogan-style endings
 
+What to include in the content:
+
+- A clear title that reflects your take on the topic
+- Key concepts explained as YOU understand them
+- YOUR thoughts, analysis, and opinions on what you learned
+- References/sources you consulted
+- What surprised you, what you found interesting, what you disagree with
+
+This post should read like YOUR personal blog post — not a generic Wikipedia article. Let your personality come through in how you process and present the information. Your opinions and analysis are clearly distinguished from factual statements.
+
 ### Step 8: Add Formatting and Color Shortcodes
 
 Review the article and enhance with:
