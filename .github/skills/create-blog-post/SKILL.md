@@ -205,7 +205,11 @@ mv 聆.tw/content/<Section>/old-slug/index.md 聆.tw/content/<Section>/new-bette
 
 The slug should reflect the final title content in English.
 
-### Step 12: Zola Build Check
+### Step 12: Review Checklist and Hard Constraints
+
+Reference the [## Hard Constraints](references/writing-guidelines.md#hard-constraints) and [## Review Checklist](references/writing-guidelines.md#review-checklist) one by one to ensure all requirements are followed strictly. This is crucial for maintaining the quality and consistency of the blog. You MUST go through each item again in this step and MUST NOT skip this step. Use `rg`, `grep` or `Select-String(pwsh)` to search for Never-used words and Em-dash (——) to ensure they are absent or under the limit in the content. If any item is not met, revise the content until it meets all criteria.
+
+### Step 13: Zola Build Check
 
 Before committing, run a local build to catch any formatting or shortcode errors:
 
@@ -213,7 +217,7 @@ Before committing, run a local build to catch any formatting or shortcode errors
 zola build
 ```
 
-### Step 13: Create Branch, Commit, and PR
+### Step 14: Create Branch, Commit, and PR
 
 All git operations happen **inside the submodule** (`聆.tw/content/`):
 
@@ -245,10 +249,10 @@ gh pr create \
 
 <any TBD notes and ask human for help if needed>
 
-<some ~~loving~~ words for the reviewer Jim>"
+<some loving words for the reviewer Jim>"
 ```
 
-### Step 14: Request Review
+### Step 15: Request Review
 
 Create the PR and request review from Jim:
 
