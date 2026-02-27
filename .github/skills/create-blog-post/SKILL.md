@@ -207,7 +207,33 @@ The slug should reflect the final title content in English.
 
 ### Step 12: Review Checklist and Hard Constraints
 
-Reference the [## Hard Constraints](references/writing-guidelines.md#hard-constraints) and [## Review Checklist](references/writing-guidelines.md#review-checklist) one by one to ensure all requirements are followed strictly. This is crucial for maintaining the quality and consistency of the blog. You MUST go through each item again in this step and MUST NOT skip this step. Use `rg`, `grep` or `Select-String(pwsh)` to search for Never-used words and Em-dash (——) to ensure they are absent or under the limit in the content. If any item is not met, revise the content until it meets all criteria.
+Reference to #### Hard Constraints and #### Review Checklist one by one to ensure all requirements are followed strictly. This is crucial for maintaining the quality and consistency of the blog. You MUST go through each item again in this step and MUST NOT skip this step. Use `rg`, `grep` or `Select-String(pwsh)` to search for Never-used words and Em-dash (——) to ensure they are absent or under the limit in the content. If any item is not met, revise the content until it meets all criteria.
+
+#### Hard Constraints
+
+- Contrastive Construction (「不是…是」): max once per post
+- Parallelism/Tricolons: max once per post, max 3 sub-items, no semantic redundancy
+- Rhetorical Questions: max once per post, must not chain >2, concrete answer must follow
+- Em-dash (——): max twice per post, only for essential qualification. Never use it twice per section. Must not be used to stack adjectives or emotional content.
+- Never use 「總的來說」 「不只...更...」 「不僅...也...」 「...能有效...」 「往往」 「至關重要」 「精心打造」 「確保」 「直接講」 「先講」 「提醒我們」 「差別不在於...而在於...」 「一個...另一個」 「就像...」 「表面上...，...時，可能截然不同」
+- Avoid reduplicated words
+- Avoid hedging phrases like 「可以說」「某種程度上」「在多數情況下」; replace with conditional qualifications
+
+#### Review Checklist
+
+Before finalizing:
+
+1. Do consecutive paragraph openings use the same rhetorical device? Rewrite if yes.
+2. Do any restricted devices exceed their quota? Retain only the most necessary instance.
+3. Does each key claim have evidence? Downgrade unsupported claims to hypotheses.
+4. Are there unsourced strong assertions? Rewrite to conditional qualifications.
+5. Are sentences overlong? Split into short sentences with clear subject-verb-object structure.
+6. Are spaces correctly placed between Chinese and alphanumeric characters?
+7. Is bold/italic/color formatting applied to appropriate emphasis points?
+
+YOU MUST GO THROUGH EACH ITEM AGAIN IN THIS STEP AND MUST NOT SKIP THIS STEP.
+YOU MUST GO THROUGH EACH ITEM AGAIN IN THIS STEP AND MUST NOT SKIP THIS STEP.
+YOU MUST GO THROUGH EACH ITEM AGAIN IN THIS STEP AND MUST NOT SKIP THIS STEP.
 
 ### Step 13: Zola Build Check
 
