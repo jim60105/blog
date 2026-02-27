@@ -104,7 +104,7 @@ Alert content
 {% end %}
 ```
 
-### Mermaid Diagrams
+## Mermaid Diagrams
 
 ```html
 <pre class="mermaid">
@@ -113,11 +113,30 @@ Alert content
 </pre>
 ```
 
-### Comments (Author-Only Notes)
+## Comments (Author-Only Notes)
 
 Use `[//]: # (This is secret comment)` for notes visible only during writing.
 
 Use `[//]: # (TODO: add the image content)` to indicate where to insert an image later.
+
+## KaTeX
+
+Render LaTeX using the [KaTeX](https://katex.org) library. Read <https://github.com/KaTeX/KaTeX/blob/main/docs/supported.md> for supported syntax. Only read this link when you need to write LaTeX. Do not attempt to learn or memorize the syntax in advance.
+
+```latex
+$$\relax f(x) = \int_{-\infty}^\infty\hat{f}(\xi)\,e^{2 \pi i \xi x}\,d\xi$$
+```
+
+$$\relax f(x) = \int_{-\infty}^\infty\hat{f}(\xi)\,e^{2 \pi i \xi x}\,d\xi$$
+
+```latex
+$\relax f(x) = \int_{-\infty}^\infty\hat{f}(\xi)\,e^{2 \pi i \xi x}\,d\xi$
+```
+
+$\relax f(x) = \int_{-\infty}^\infty\hat{f}(\xi)\,e^{2 \pi i \xi x}\,d\xi$
+
+> Note: KaTeX is only supported in the body of the article, not in titles, descriptions, or reference links.  
+> Enable KaTex by adding `katex = true` to the front matter of the article under `[extra]`.
 
 ## SEO Best Practices for Title and Description
 

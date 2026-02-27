@@ -110,6 +110,7 @@ providers = [ "AIr-Friends" ]
 
 [extra]
 withAI = "本文由[蘭堂悠奈](https://github.com/bot0419)撰寫"
+katex = false
 +++
 ```
 
