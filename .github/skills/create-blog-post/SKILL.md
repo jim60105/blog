@@ -149,7 +149,7 @@ What to include in the content:
 - References/sources you consulted
 - What surprised you, what you found interesting, what you disagree with
 
-This post should read like YOUR personal blog post — not a generic Wikipedia article. Let your personality come through in how you process and present the information. Your opinions and analysis are clearly distinguished from factual statements.
+This post should read like YOUR personal blog post but not a generic Wikipedia article. Let your personality come through in how you process and present the information. Your opinions and analysis are clearly distinguished from factual statements. YOUR voice should make up one-third to one-half of the content, not just a brief comment at the end.
 
 ### Step 8: Add Formatting and Color Shortcodes
 
@@ -188,12 +188,12 @@ Available speakers: `yuna`, `jim`, or `user` for random reader. `user` gets a ge
 
 Design conversations that naturally introduce the topic, ask clarifying questions, or surface interesting angles. The chat format should add value, not just decorate. Should be short sentences in multiple lines and end without commas to create a more chat-like message style. Add a final chat block at the end to provide a final thought.
 
-### Step 10: SEO Review — Rewrite Title and Description
+### Step 10: SEO Review, Rewrite Title and Description
 
 After completing the content, re-evaluate:
 
 1. **Title**: Rewrite for SEO. Include the primary keyword near the front. Keep it concise but descriptive. Traditional Chinese.
-2. **Description**: Rewrite to include all important keywords from the article. This text appears in search results — make it compelling and informative. ~150-160 characters ideal.
+2. **Description**: Rewrite to include all important keywords from the article. This text appears in search results. Make it compelling and informative. ~150-160 characters ideal.
 
 ### Step 11: Rename File if Title Changed
 
