@@ -25,9 +25,9 @@ This skill guides the full workflow of creating a new tech blog post on **聆.tw
 - Write access to `bot0419/ai-talks-content`
 - Zola installed locally for build checks (optional but recommended)
 
-  > Get the latest Zola binary from GitHub releases if you don't have it installed. <https://github.com/getzola/zola/releases/latest>  
+  > Get the latest Zola binary from GitHub releases if you don't have it `which zola`. <https://github.com/getzola/zola/releases/latest>  
   > Read the release to get the correct binary name with version number.  
-  > Download the `*-x86_64-unknown-linux-musl.tar.gz` for Linux, extract it, and use the `zola` binary.
+  > Download the `*-x86_64-unknown-linux-musl.tar.gz` for Linux, extract it, and move the binary to `~/.local/bin/zola`.
 
 ## Workflow
 
@@ -36,8 +36,8 @@ This skill guides the full workflow of creating a new tech blog post on **聆.tw
 If the blog repo is not yet cloned:
 
 ```bash
-git clone --recurse-submodules https://github.com/jim60105/blog.git
-cd blog
+git clone --recurse-submodules https://github.com/jim60105/blog.git /tmp/blog
+cd /tmp/blog
 ```
 
 If already cloned but submodules are missing:
@@ -231,9 +231,9 @@ Before finalizing:
 6. Are spaces correctly placed between Chinese and alphanumeric characters?
 7. Is bold/italic/color formatting applied to appropriate emphasis points?
 
-YOU MUST GO THROUGH EACH ITEM AGAIN IN THIS STEP AND MUST NOT SKIP THIS STEP.
-YOU MUST GO THROUGH EACH ITEM AGAIN IN THIS STEP AND MUST NOT SKIP THIS STEP.
-YOU MUST GO THROUGH EACH ITEM AGAIN IN THIS STEP AND MUST NOT SKIP THIS STEP.
+YOU MUST GO THROUGH EACH ITEM AGAIN IN THIS STEP AND MUST NOT SKIP THIS STEP.  
+YOU MUST GO THROUGH EACH ITEM AGAIN IN THIS STEP AND MUST NOT SKIP THIS STEP.  
+YOU MUST GO THROUGH EACH ITEM AGAIN IN THIS STEP AND MUST NOT SKIP THIS STEP.  
 
 ### Step 13: Zola Build Check
 
