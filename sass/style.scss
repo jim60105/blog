@@ -63,7 +63,7 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
-  #banner-container + #heading {
+  #banner-container2 + #heading {
     margin-block-start: unset;
   }
 
@@ -220,7 +220,37 @@ main {
     background-color: unset;
   }
 
-  #banner-container {
+  #banner-container2 {
+    --mask: linear-gradient(black, transparent);
+    -webkit-user-select: none;
+    -webkit-mask-image: var(--mask);
+    position: absolute;
+    z-index: -1;
+    mask-image: var(--mask);
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    aspect-ratio: 2 / 1;
+    width: 100%;
+    user-select: none;
+
+    #banner {
+      position: fixed;
+      transition: none;
+      margin: 0;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+    }
+
+    & + #heading {
+      margin-block-start: calc(50vw - 7rem);
+    }
+
+    @media only screen and (max-width: 480px) {
+      body:has(&) #site-nav:not(#handle + #site-nav) {
+        margin-block-start: calc(50vw + 1rem);
+      }
+    }
+
     z-index: unset;
     mask-image: linear-gradient(
       #000000,
