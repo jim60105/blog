@@ -238,10 +238,10 @@ YOU MUST GO THROUGH EACH ITEM AGAIN IN THIS STEP AND MUST NOT SKIP THIS STEP.
 
 ### Step 13: Zola Build Check
 
-Before committing, run a local build to catch any formatting or shortcode errors:
+Before committing, run a local check to catch any formatting or shortcode errors:
 
 ```bash
-zola build
+zola check --skip-external-links
 ```
 
 ### Step 14: Create Branch, Commit, and PR
