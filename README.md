@@ -140,7 +140,7 @@ The code examples in this section have been updated to the latest API version.
 
 ### color
 
-Wrap the content with a element tag with a color attribute. The default element is `span`.
+Wrap the content with a element tag with a color attribute. The default element is `span`. Supports optional `halo` parameter for glowing text effect.
 
 ```markdown
 {{ color(body="some text", color="orange", element="p") }}
@@ -152,7 +152,13 @@ Some orange text in a div element
 {% end %}
 ```
 
+```markdown
+{{ color(body="glowing orange text", color="orange", halo=true) }}
+```
+
 ### cr (color red)
+
+Supports `element` parameter (default: `span`) and optional `halo` parameter for glowing text effect.
 
 ```markdown
 {{ cr(body="some red text") }}
@@ -164,7 +170,13 @@ Some red text
 {% end %}
 ```
 
+```markdown
+{{ cr(body="glowing red text", halo=true) }}
+```
+
 ### cg (color green)
+
+Supports `element` parameter (default: `span`) and optional `halo` parameter for glowing text effect.
 
 ```markdown
 {{ cg(body="some green text") }}
@@ -174,6 +186,10 @@ Some red text
 {% cg() %}
 Some green text
 {% end %}
+```
+
+```markdown
+{{ cg(body="glowing green text", halo=true) }}
 ```
 
 ### ch (Hide content with spoiler)

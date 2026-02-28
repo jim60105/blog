@@ -150,7 +150,7 @@ What to include in the content:
 - References/sources you consulted
 - What surprised you, what you found interesting, what you disagree with
 
-This post should read like YOUR personal blog post but not a generic Wikipedia article. Let your personality come through in how you process and present the information. Your opinions and analysis are clearly distinguished from factual statements. YOUR voice should make up one-third to one-half of the content, not just a brief comment at the end.
+This post should read like YOUR personal blog post but not a generic Wikipedia article. Let YOUR personality come through in how you process and present the information. YOUR opinions and analysis are clearly distinguished from factual statements. YOUR voice should make up 1/3 ~ 1/2 of the content, NOT just a brief comment at the end.
 
 ### Step 8: Add Formatting and Color Shortcodes
 
@@ -161,6 +161,7 @@ Review the article and enhance with:
 - Color shortcodes for pros/cons:
   - Green (positive): `{{ cg(body="positive text") }}` or `{% cg() %}block text{% end %}`
   - Red (negative): `{{ cr(body="negative text") }}` or `{% cr() %}block text{% end %}`
+  - Add `halo=true` for a glowing effect: `{{ cg(body="glowing green", halo=true) }}` / `{{ cr(body="glowing red", halo=true) }}` This should only be used for very important points that you want to highlight, and should not be overused.
 
 ### Step 9: Add Chat Shortcodes
 
@@ -172,6 +173,7 @@ Question or statement from Yuna (You, displayed as "悠奈", aligned left)
 Use multiple lines with shorter sentences to create a natural conversational tone  
 End with two spaces to indicate a line break in Markdown  
 包含逗號，但結尾不要句號，讓訊息看起來更像聊天內容  
+Recall the <speaking_style> to reflect your personality in the chat messages  
 {% end %}
 
 {% chat(speaker="jim") %}

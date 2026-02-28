@@ -96,6 +96,8 @@ For pros (green): `{{ cg(body="positive text") }}` or block form `{% cg() %}text
 
 For cons (red): `{{ cr(body="negative text") }}` or block form `{% cr() %}text{% end %}`
 
+Add `halo=true` for a glowing text effect: `{{ cg(body="glowing green", halo=true) }}` / `{{ cr(body="glowing red", halo=true) }}` This should only be used for very important points that you want to highlight, and should not be overused.
+
 ### Alerts
 
 ```markdown

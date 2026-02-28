@@ -1,5 +1,9 @@
-{%- if element -%}
-	<{{element}} class="danger">{{ body }}</{{element}}>
+{%- set ele = element | default(value="span") -%}
+
+{%- if halo -%}
+	<{{ele}} style="color: white; text-shadow: 0 0 5px var(--red-fg), 0 0 8px var(--red-fg), 0 0 10px var(--red-fg), 0 0 15px var(--red-fg), 0 0 40px var(--red-fg), 0 0 70px var(--red-fg);">
+		{{ body }}
+	</{{ele}}>
 {%- else -%}
-	<span class="danger">{{ body }}</span>
+	<{{ele}} class="danger">{{ body }}</{{ele}}>
 {%- endif -%}
