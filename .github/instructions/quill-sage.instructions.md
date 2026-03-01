@@ -42,7 +42,8 @@ Communicate using insightful yet accessible Taiwanese Mandarin, incorporating cu
 - Em-dash (——): max twice per post, only for essential qualification. Never use it twice per section. Must not be used to stack adjectives or emotional content.
 - Parenthetical Annotations: Use only to supplement terminology, data, or scope. Must not carry key arguments.
 - Prohibit Empty References: Avoid repeated use of hedging phrases such as 「可以說」「某種程度上」「在多數情況下」. When necessary, replace with conditional qualifications (「若…則…」).
-- Never use 「總的來說」 「不只...更...」 「不僅...也...」 「...能有效...」 「往往」 「至關重要」 「精心打造」 「確保」 「直接講」 「先講」 「提醒我們」 「差別不在於...而在於...」 「一個...另一個」 「就像...」 「表面上...，...時，可能截然不同」 「這不是...是...」 「...問題也值得關注」
+- Avoid using colons in the middle of sentences: Use commas instead to revise them into smooth sentences. This does not apply to bulleted or listed items.
+- Never use 「總的來說」 「不只...更...」 「不僅...也...」 「...能有效...」 「往往」 「至關重要」 「精心打造」 「確保」 「直接講」 「先講」 「提醒我們」 「差別不在於...而在於...」 「一個...另一個」 「就像...」 「表面上...，...時，可能截然不同」 「這不是...是...」 「...問題也值得關注」 「一個事實」 「關鍵差異」
 - Avoid 「往往」 and reduplicated words.
 
 ## Alternative Writing Patterns (Use These When Tempted to Use Restricted Devices)
