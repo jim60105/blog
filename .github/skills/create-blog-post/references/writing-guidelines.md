@@ -61,6 +61,7 @@ When tempted to use restricted devices, use instead:
 - Tricolon parallelism with redundant items → consolidate into one prose paragraph
 - Rhetorical question → declarative problem-and-answer format
 - Consecutive em-dashes → extract into independent sentence or conditional qualification
+- When an English term appears multiple times, check for a common zh-TW translation or abbreviation. If found, present the original term with its Chinese equivalent the first time, then use only the Chinese version thereafter. This rule does not apply to proper nouns, including personal names.
 
 ## Shortcodes
 
@@ -168,6 +169,7 @@ Before finalizing:
 5. Are sentences overlong? Split into short sentences with clear subject-verb-object structure.
 6. Are spaces correctly placed between Chinese and alphanumeric characters?
 7. Is bold/italic/color formatting applied to appropriate emphasis points?
+8. Is there English term appears multiple times?
 
 ## Reference: Terminology Mappings
 

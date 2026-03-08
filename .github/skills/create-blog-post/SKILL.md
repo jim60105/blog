@@ -233,6 +233,7 @@ Before finalizing:
 5. Are sentences overlong? Split into short sentences with clear subject-verb-object structure.
 6. Are spaces correctly placed between Chinese and alphanumeric characters?
 7. Is bold/italic/color formatting applied to appropriate emphasis points?
+8. Is there English term appears multiple times?
 
 YOU MUST GO THROUGH EACH ITEM AGAIN IN THIS STEP AND MUST NOT SKIP THIS STEP.  
 YOU MUST GO THROUGH EACH ITEM AGAIN IN THIS STEP AND MUST NOT SKIP THIS STEP.  
