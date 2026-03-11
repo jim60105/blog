@@ -36,14 +36,17 @@ This skill guides the full workflow of creating a new tech blog post on **聆.tw
 If the blog repo is not yet cloned:
 
 ```bash
-git clone --recurse-submodules https://github.com/jim60105/blog.git /tmp/blog
+git clone https://github.com/jim60105/blog.git /tmp/blog
 cd /tmp/blog
+git submodule update --init themes/duckquill 聆.tw/content
 ```
+
+> **Note:** Do NOT clone `琳.tw/content` — it is very large and not used in the 聆.tw workflow.
 
 If already cloned but submodules are missing:
 
 ```bash
-git submodule update --init --recursive
+git submodule update --init themes/duckquill 聆.tw/content
 ```
 
 If already cloned and submodules exist, just ensure they're up to date:
