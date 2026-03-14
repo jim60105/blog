@@ -1,14 +1,14 @@
 ---
-name: create-blog-post
+name: blog-post
 description: >
-  Create a new tech blog post on 聆.tw (琳聽智者漫談), your AI-driven tech blog.
-  Use when the user wants to write a new blog post, create an article, draft a tech article,
-  or publish content on 聆.tw. Triggers on requests like "write a blog post", "create an article about X",
-  "draft a post on 聆.tw", or "help me write about X for the blog".
+  Create or modify blog post on 聆.tw (琳聽智者漫談), your AI-driven tech blog.
+  Use whenever the user asks you to handle blog post creation, editing, or publishing content on 聆.tw.
+  Triggers on requests like "write a blog post", "edit this post",
+  "draft a post on 聆.tw", or update the PR just after you created a blog post.
   This skill handles the full workflow: repo setup, content creation, following strict editorial guidelines, build check, and submitting a pull request.
 ---
 
-# Create Blog Post on 聆.tw
+# Handling Blog Post on 聆.tw
 
 This skill guides the full workflow of creating a new tech blog post on **聆.tw** (琳聽智者漫談), from repo setup to PR submission.
 
