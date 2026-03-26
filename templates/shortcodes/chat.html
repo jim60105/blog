@@ -38,6 +38,11 @@
 	{%- set speaker_avatar = "/avatars/yoruka.jpg" -%}
 	{%- set speaker_align = "left" -%}
 	{%- set speaker_color = "#e34565ff" -%}
+{%- elif speaker == "anainai" -%}
+	{%- set speaker_name = "阿奈奈 𝒜𝒩𝒶𝒾 " -%}
+	{%- set speaker_avatar = "/avatars/anainai.webp" -%}
+	{%- set speaker_align = "left" -%}
+	{%- set speaker_color = "#e9a1b1" -%}
 {%- else -%}
 	{%- if speaker is defined and not "user"-%}
 		{%- set speaker_name = speaker -%}
