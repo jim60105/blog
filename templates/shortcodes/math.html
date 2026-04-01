@@ -1,0 +1,5 @@
+{% if display %}
+	<div>$${{ body | safe }}$$</div>
+{% else %}
+	${{ body | safe }}$
+{% endif %}
