@@ -1,5 +1,6 @@
+{% set expression = body | trim %}
 {% if display %}
-	<div>$${{ body | safe }}$$</div>
+	<div>\[{{ expression | safe }}\]</div>
 {% else %}
-	${{ body | safe }}$
+	\({{ expression | safe }}\)
 {% endif %}
