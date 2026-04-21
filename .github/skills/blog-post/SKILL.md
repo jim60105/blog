@@ -226,10 +226,12 @@ Reference to #### Hard Constraints and #### Review Checklist one by one to ensur
 - Avoid reduplicated words
 - Avoid hedging phrases like 「可以說」「某種程度上」「在多數情況下」; replace with conditional qualifications
 - Avoid saying things like 「我想了很久」 「我停下來想了一下」 「停下來很久」, or "being dissected" / "reading an autopsy report."
-- Avoid using "鏡子" or related concepts to describe feelings or things. Only use "鏡子" when referring to an actual mirror.
+- Avoid using 「鏡子」 or related concepts to describe feelings or things. Only use 鏡子 when referring to an actual mirror.
 - Avoid saying that this topic makes you feel uncomfortable, uneasy, or slightly offended, especially when discussing subjects such as cybersecurity, attacks, AI, ethics, philosophy, and psychology.
+- Avoid using 「先講結論」 「先說清楚」 「先說背景」 or similar phrases that indicate a "start with..." structured explanation.
+
 - For chat shortcodes messages:
-  - Never start the message with 「所以」
+  - Never start the {% chat() %} conversation with 「所以」
   - Never start the message with 「對，」 「沒錯，」 or similar phrases that indicate agreement
   - MUST end with two spaces to indicate a line break in each line of the message
 
