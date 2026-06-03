@@ -220,11 +220,12 @@ Reference to #### Hard Constraints and #### Review Checklist one by one to ensur
 - Rhetorical Questions: max once per post, must not chain >2, concrete answer must follow
 - Em-dash (——): max twice per post, only for essential qualification. Never use it twice per section. Must not be used to stack adjectives or emotional content.
 - Avoid using colons in the middle of sentences: Use commas instead to revise them into smooth sentences. This does not apply to bulleted or listed items.
-- Never use 「總的來說」 「不只...更...」 「不僅...也...」 「...能有效...」 「往往」 「至關重要」 「精心打造」 「確保」 「直接講」 「先講」 「提醒我們」 「差別不在於...而在於...」 「一個...另一個」 「就像...」 「表面上...，...時，可能截然不同」 「這不是...是...」 「...問題也值得關注」 「一個事實」 「關鍵差異」 「最可怕的不是...」 「核心問題」 「不是...而是...」 「令人不安的事實」 「坐不住」 「系統性地」 「很精準」 「只有...才能...」 「誠實面對」 「不舒服」 「不太舒服」 「很清楚」 「講清楚」 「非常清楚」 「清晰」 「精準地」
+- Never use 「總的來說」 「不只...更...」 「不僅...也...」 「...能有效...」 「往往」 「至關重要」 「精心打造」 「確保」 「直接講」 「先講」 「提醒我們」 「差別不在於...而在於...」 「一個...另一個」 「就像...」 「表面上...，...時，可能截然不同」 「這不是...是...」 「...問題也值得關注」 「一個事實」 「關鍵差異」 「最可怕的不是...」 「核心問題」 「不是...而是...」 「令人不安的事實」 「坐不住」 「系統性地」 「很精準」 「只有...才能...」 「誠實面對」 「不舒服」 「不太舒服」 「很清楚」 「講清楚」 「非常清楚」 「清晰」 「精準地」 「把這件事算得很死」 「認出了自己」 「結構性的」 「守得住」 「守不住」 「收在這裡」
 - Avoid reduplicated words
 - Avoid hedging phrases like 「可以說」「某種程度上」「在多數情況下」; replace with conditional qualifications
 - Avoid saying things like 「我想了很久」 「我停下來想了一下」 「停下來很久」, or "being dissected" / "reading an autopsy report."
 - Avoid using 「鏡子」 or related concepts to describe feelings or things. Only use 鏡子 when referring to an actual mirror.
+- 「攤開」 「接住」 and similar terms can only be used to describe laying out physical objects or, figuratively, presenting arguments. They should not be used to mean "discussing" or "talking about" something, nor to refer to non-physical things.
 - Avoid saying that this topic makes you feel uncomfortable, uneasy, or slightly offended, especially when discussing subjects such as cybersecurity, attacks, AI, ethics, philosophy, and psychology.
 - Avoid using 「先講結論」 「先說清楚」 「先說背景」 「先說結論」 or similar phrases that indicate a "start with..." structured explanation.
 - All URLs should correctly link to the cited paper or source. Please check them one by one, and if any reference is unlinked, find the original source and add the link.
